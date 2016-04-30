@@ -1,38 +1,61 @@
-<footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
+<footer class="wrap">
+  <div class="grid grid-pad" >
+    <div class="col-1-3">
+      <div class="content">
+        <div class="footer-widget">
+          <h3>About</h3>
+          <div class="textwidget">
+            <p>QWAN is a strategic alliance of independent consultants/developers.</p>
+          </div>
+        </div>
       </div>
     </div>
-
+    <div class="col-1-3" >
+      <div class="content">
+        <div class="footer-widget">
+          <h3>Recent Posts</h3>
+          <div class="fwidget">
+            <ul>
+              <li><a href="#0">Suspendisse nec lectus non</a></li>
+              <li><a href="#0">Phasellus euismod pulvinar</a></li>
+              <li><a href="#0">Aliquam erat volutpat</a></li>
+              <li><a href="#0">Phasellus euismod pulvinar</a></li>
+              <li><a href="#0">Aliquam erat volutpat</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-1-3" >
+      <div class="content">
+        <div class="footer-widget">
+          <h3>More info</h3>
+          <div class="textwidget">
+            <p>QWAN - Quality Without a Name is a registered trade name of Westgeest Consultancy<br>
+            Phone: +31 13 542 1037<br>
+            VAT: NL8204.47.900.B01<br>
+            Chamber of Commerce Tilburg 18071671 </p>
+         </div>
+        </div>
+      </div>
+    </div>
+   </div>
   </div>
-
+  <div class="social-footer">
+    <div class="grid grid-pad">
+      <div class="col-1-1" >
+        <div class="content">
+          <div class="social-set">
+            <a  href="#0"><i class="icon-facebook"></i></a>
+            <a  href="#0"><i class="icon-twitter"></i></a>
+            <a  href="#0"><i class="icon-linkedin2"></i></a>
+            <a  href="#0"><i class="icon-dribbble4"></i></a>
+            <a  href="#0"><i class="icon-instagram"></i></a>
+          </div>
+          <p class="source-org copyright">© 2016 QWAN - Quality Without a Name</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
+

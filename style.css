@@ -1288,6 +1288,13 @@ ul.nested-comments  ul li {
 }
 /* Inputs */
 
+/* input type image: for paypal button */
+input[type=image] {
+  margin-bottom: 25px;
+  padding: 0 15px 2px;
+  border: 2px solid #ebebeb;
+}
+
 input:not([type=submit]):not([type=file]), textarea {
   width: 100% !important;
   height: 50px;
