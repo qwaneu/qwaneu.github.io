@@ -130,71 +130,26 @@ layout: default
   <div class="grid grid-pad">
     <div class="content" >
       <h2>Our Blog</h2>
+
+      {% for post in site.posts %}
       <div class="col-1-2" >
         <article class="post-wrap">
-          <div class="post-img">
+<!--          <div class="post-img">
             <a href="#0"><img src="images/post/post-n1.jpg" alt=""></a>
-          </div>
+          </div>-->
           <div class="post">
-            <h2 class="entry-title"><a href="#0">Drawing hour</a></h2>
+            <h2 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
             <div class="post-meta">
-              <a href="#0">15 Januar, 2015</a> <span class="mid-sep">·</span> <a href="#0">Graphic Design</a>
+              <a href="{{ post.url }}">{{ post.date }}</a> <span class="mid-sep">·</span> <a href="{{ post.url }}">{{ post.title }}</a>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, sequi, quas, assumenda harum nam reiciendis obcaecati maxime <a href="#0">suscipit</a> quibusdam.
-            </p>
-            <a class="btn read-more" href="#0">Read More</a>
+            <p>{{ post.excerpt }}</p>
+            <a class="btn read-more" href="{{ post.url }}">Read More</a>
           </div>
         </article>
       </div>
-      <div class="col-1-2" >
-        <article class="post-wrap">
-          <div class="post-img">
-            <a href="#0"><img src="images/post/post-n2.jpg" alt=""></a>
-          </div>
-          <div class="post">
-            <h2 class="entry-title"><a href="#0">Photography workshop</a></h2>
-            <div class="post-meta">
-              <a href="#0">2 Februar, 2014</a> <span class="mid-sep">·</span> <a href="#0">Photography</a>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, sequi, quas, assumenda harum nam reiciendis obcaecati maxime <a href="#0">suscipit</a> quibusdam.
-            </p>
-            <a class="btn read-more" href="#0">Read More</a>
-          </div>
-        </article>
-      </div>
-      <div class="col-1-2" >
-        <article class="post-wrap">
-          <div class="post-img">
-            <a href="#0"><img src="images/post/post-n3.jpg" alt=""></a>
-          </div>
-          <div class="post">
-            <h2 class="entry-title"><a href="#0">On vacation</a></h2>
-            <div class="post-meta">
-              <a href="#0">26 March, 2014</a> <span class="mid-sep">·</span> <a href="#0">Graphic Design</a>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, sequi, quas, assumenda harum nam reiciendis obcaecati maxime <a href="#0">suscipit</a> quibusdam.
-            </p>
-            <a class="btn read-more" href="#0">Read More</a>
-          </div>
-        </article>
-      </div>
-      <div class="col-1-2" >
-        <article class="post-wrap">
-          <div class="post-img">
-            <a href="#0"><img src="images/post/post-n4.jpg" alt=""></a>
-          </div>
-          <div class="post">
-            <h2 class="entry-title"><a href="#0">You have to take breaks</a></h2>
-            <div class="post-meta">
-              <a href="#0">19 June, 2014</a> <span class="mid-sep">·</span> <a href="#0">Graphic Design</a>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, sequi, quas, assumenda harum nam reiciendis obcaecati maxime <a href="#0">suscipit</a> quibusdam.
-            </p>
-            <a class="btn read-more" href="#0">Read More</a>
-          </div>
-        </article>
-      </div>
-      <div class="col-1-1"><a class="btn" href="blog.html">View All</a></div>
+      {% endfor %}
+
+     <div class="col-1-1"><a class="btn" href="blog.html">View All</a></div>
     </div>
   </div>
 </div>
