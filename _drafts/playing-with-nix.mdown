@@ -1,0 +1,65 @@
+Summary: Managing packages and configurations with Nix 
+Read more: read more on how to manage configurations with Nix
+Date: 2013-10-11
+Author: Marc
+Flags: draft
+
+# Managing packages and configurations with Nix
+
+A few years ago, while doing a project with Stephan Eggermont, we were
+discussing package management and configurations. We were not
+particularly happy with the combination of debian packages, programming
+language specific package managers (in that case pharo smalltalk's monticello, but
+the situation is similar but different for ruby, java, clojure, haskell,
+you name it. and it gets worse the more languages you have. deciding
+whether to take a package from apt or from the programming language,
+C-libraries that are not in apt nor in the language etc.).
+programming language and configuration management tools like chef or
+puppet. I stumbled across Nix, and we thought 'that looks like someone
+really thought long and hard about configuration management and made an
+effort to come up with an elegant solution'. At the time it looked
+interesting, but even for us to researchy, code was in an svn (instead
+of git / github) repository and there was not much in the way of
+installers or documentation. 
+
+That has changed enough for me to make it worth assessing. I also still
+experience some of the same pains. Web applications that need an old
+version of php, along with another that needs a new version. Different versions of Ruby and
+their libraries. Haskell prototypes each in their own little Cabal hell.
+A smalltalk site that requires a custom compiled Nginx, because the apt
+packaged one did not contain some necessary modules etc.
+
+Linux containers and chef helped me out a bit, but the containers are
+too isolated for what I need, and chef does not really raise the level
+of abstraction - it's a more or less handy way to generate config files
+with templates, but none of my colleagues are very keen on it. It just
+seems to add a lot of ceremony in relation to its benefits.
+
+
+
+
+# Further Reading
+
+[Setting up development environments with
+nix](http://zef.me/5966/setting-up-development-environments-with-nix)
+
+[Developing Haskell with
+Nixos](http://ocharles.org.uk/blog/posts/2014-02-04-how-i-develop-with-nixos.html)
+
+
+# Managing Ruby dependency hell with Nix
+I used Ruby since the [Programming Ruby]() came out in 2001 ? . Before
+Rails, life was good. There were few, but very good, libraries, and
+everybody used the same ruby version. After Rails, Ruby became popular, with many more libraries and a plethora of ruby versions in use. I used to use Ruby on a daily basis, but my attention drifted to other things, so keeping up with the flavor of the month just to deploy an application became annoying. It feels like every year there is a different way to manage ruby libraries and versions, each with their own warts. First I used RVM, now Rob started to use chruby, so I follow.
+
+To isolate from all this fashion stuff, I put the ruby apps that power
+qwan.eu in a linux container, so our ruby apps can evolve together, and
+leave everything else alone. Even though linux containers are
+lightweight, I was not interested in all of their features (resource
+isolation), I just wanted to be able to manage ruby versions, their
+packages and the binary dependencies (apt packages) for the
+applications, so if we decided to stop developing, the applications
+continue to run in peace.
+
+
+
