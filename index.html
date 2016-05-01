@@ -107,15 +107,27 @@ layout: default
               <i class="icon-quotes-left"></i>
             </div>
             <p>At your TDD training course, I actually learned something! (comparing with other unit testing courses)</p>
-            <h4>-A happy developer</h4>
+            <h4>-A course participans</h4>
           </div><!-- End of item -->
           <div class="item client-carousel-item"><!-- Start of item -->
             <div class="quotes-icon">
               <i class="icon-quotes-left"></i>
             </div>
-            <p>Goed bezig!</p>
-            <h4>-Marc Evers</h4>
+            <p>Very educational (as I expected); I can definitely apply this in my project</p>
+            <h4>-A course participant</h4>
           </div><!-- End of item -->
+          <div class="item client-carousel-item"><!-- Start of item -->
+            <div class="quotes-icon">
+              <i class="icon-quotes-left"></i>
+            </div>
+            <p>“This was the first training where I had:<br>
+            - no problem to stay awake<br>
+            - no problem with the afternoon "dip"<br>
+            - no problem to stick to the subject<br>
+            - no problem completing the exercises.</p>
+            <h4>-A course participant</h4>
+          </div><!-- End of item -->
+
 
         </div>
       </div>
@@ -132,7 +144,7 @@ layout: default
     <div class="content" >
       <h2>Our Blog</h2>
 
-      {% for post in site.posts %}
+      {% for post in site.posts limit:4 %}
       <div class="col-1-2" >
         <article class="post-wrap">
 <!--          <div class="post-img">
@@ -324,6 +336,22 @@ layout: default
             <a href="http://www.ncim-groep.nl">
               <figure>
                 <img src="images/clients/ncim-groep.gif" alt="" />
+              </figure>
+            </a>
+          </div><!-- End of item -->
+
+          <div class="item"><!-- Start of item -->
+            <a href="http://www.backbase.com">
+              <figure>
+                <img src="images/clients/backbase.png" alt="" />
+              </figure>
+            </a>
+          </div><!-- End of item -->
+
+          <div class="item"><!-- Start of item -->
+            <a href="https://www.evision-software.com">
+              <figure>
+                <img src="images/clients/evision_logo.png" alt="" />
               </figure>
             </a>
           </div><!-- End of item -->
