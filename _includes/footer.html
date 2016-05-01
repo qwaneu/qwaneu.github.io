@@ -16,11 +16,9 @@
           <h3>Recent Posts</h3>
           <div class="fwidget">
             <ul>
-              <li><a href="#0">Suspendisse nec lectus non</a></li>
-              <li><a href="#0">Phasellus euismod pulvinar</a></li>
-              <li><a href="#0">Aliquam erat volutpat</a></li>
-              <li><a href="#0">Phasellus euismod pulvinar</a></li>
-              <li><a href="#0">Aliquam erat volutpat</a></li>
+              {% for post in site.posts limit:5 %}
+                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+              {% endfor %}
             </ul>
           </div>
         </div>
