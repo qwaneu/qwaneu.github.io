@@ -4,6 +4,7 @@ Must have:
 - 1 page met belangrijkste trainingen, agenda, inschrijfformulier
 - linkedin/etc links
 - iets met de getallen op de front page
+- favicon
 
 Nice to have:
 
