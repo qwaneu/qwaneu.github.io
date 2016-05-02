@@ -1,30 +1,18 @@
+Must have:
 
+- toestemming clients
+- 1 page met belangrijkste trainingen, agenda, inschrijfformulier
+- linkedin/etc links
+- iets met de getallen op de front page
 
-Recent work -> Work / THings we've done
+Nice to have:
 
-Plaatje boven blog entry -> drempel?
-
-Optioneel: Twitter widget
-
-Evt upcoming appearances (conferenties, cursussen, ...) 
- -> dynamisch / Jekyll?
-
-Aparte press kit + bio page
-
-1 page met belangrijkste trainingen, agenda, inschrijfformulier
-
-Optioneel: 1 page met cursus modules 
-
-Pages:
-- index
-- blog/blog entries
-- shop
-- trainingen * modules
-  - 
-
-- "Recent work" -> tegels met PMCs?
-
-- NL + EN?
-
-- betere foto's
+- Twitter widget
+- upcoming appearances (conferenties, cursussen, ...) 
+    -> dynamisch / Jekyll?
+- Recent work -> Work / THings we've done
+- 1 page met cursus modules 
+- Plaatje boven blog entry -> drempel?
+- betere mughots
 - scroll up- bio'tje bij
+
