@@ -2,6 +2,7 @@
 layout: post
 title:  An experience in Mass Pairing
 author: Willem
+image: /attachments/blogposts/2015/masspairing-self-facilitation.jpg
 ---
 
 A Mass Pairing is a coding dojo that takes over all sessions for a slot

@@ -2,6 +2,7 @@
 layout: post
 title:  Software Circus conference report
 author: Willem
+image: /attachments/blogposts/2015/software-circus-canal.jpg
 ---
 
 Last week Rob, Marc and I went to [Software Circus](http://softwarecircus.eu/), a

@@ -2,7 +2,10 @@
 layout: post
 title:  QWAN sponsors /dev/summer in Cambridge, July 12
 author: Willem
+image: /attachments/blogposts/dev-summer.png
 ---
+
+![Dev Summer]({{page.image}})
 
 We've always been active in the UK, even more so now Willem has moved to
 the UK (although he is doing work on the continent as well). 
