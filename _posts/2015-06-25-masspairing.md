@@ -31,7 +31,7 @@ code exercise](https://github.com/mostalive/masspairing), so the choice is a bit
 fairly large. I've done the Gilded Rose kata in Haskell a couple of
 times, and it was more interesting than I expected.
 
-## Maximum Participation
+### Maximum Participation
 
 One of the reasons to do a Mass Pairing in a plenary session, is to make
 it very hard for participants to leave without having done a hands-on
@@ -39,7 +39,8 @@ exercise. Talks are great to get some broader insights, but for deeper
 learning writing code while having a discussion with someone else is
 essential. 
 
-## Minimal Facilitation
+### Minimal Facilitation
+
 For a succesful session we need three ingredients:
 
 - Every participant needs to find a partner (or two). This is the
@@ -57,7 +58,7 @@ For /dev/summer last year, we arranged a facilitator in every room. For
 without. 
 
 I was just browsing through photos I took at /dev/winter and found this:
- 
+
 ![Some rooms facilitated themselves by drawing an example game board](/attachments/blogposts/2015/masspairing-self-facilitation.jpg)
 
 In at least one room participants drew a sample gameboard together. That

@@ -906,6 +906,11 @@ blockquote p {
   margin-bottom: .7em;
 }
 
+.post li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
 .post-wrap .post p a {
   padding: 1px 1px 4px;
   border-radius: 3px;

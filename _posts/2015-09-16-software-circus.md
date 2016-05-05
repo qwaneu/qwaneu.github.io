@@ -179,20 +179,4 @@ does make me wonder.
 So there you have it. Software Circus. New answers, new questions. Not
 too shabby for a conference that was put together in a few summer months. Thanks Jamie, Mark and everybody else for making it quite
 enjoyable!
- 
 
-<a href="/feed.xml" class="feed">Subscribe to QWAN's feed - Systemic Thinking for Sustainable Development</a>
-
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-  var disqus_shortname = 'qwanblog'; // required: replace example with your forum shortname
-
-  /* * * DON'T EDIT BELOW THIS LINE * * */
-  (function() {
-   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-   })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
