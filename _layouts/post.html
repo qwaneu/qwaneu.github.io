@@ -8,14 +8,14 @@ layout: default
 <div class="wrap">
   <div class="grid grid-pad">
     <div class="col-1-1">
-      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <article class="post-wrap" itemscope itemtype="http://schema.org/BlogPosting">
 
-        <header class="post-header">
+        <header class="post-header .entry-title">
           <!--    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>-->
           <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
         </header>
 
-        <div class="post-content" itemprop="articleBody">
+        <div class="post" itemprop="articleBody">
           {{ content }}
         </div>
       </article>
@@ -26,7 +26,7 @@ layout: default
 <div class="wrap ">
   <div class="grid grid-pad">
     <div class="col-1-1">
-      <p><a href="/articles.xml" class="feed">Subscribe to QWAN's feed - Systemic Thinking for Sustainable Development</a></p>
+      <p><a href="/feed.xml" class="feed">Subscribe to QWAN's feed - Systemic Thinking for Sustainable Development</a></p>
     </div>
   </div>
 </div>

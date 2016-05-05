@@ -863,6 +863,7 @@ blockquote p {
 
 .post-wrap img {
   width: 100%;
+  margin-bottom: 1.5em;
 }
 
 .post-wrap .post-meta {
@@ -894,9 +895,15 @@ blockquote p {
   margin: 1em 0 .5em;
 }
 
-.post-wrap .post p {
+.post-wrap p {
   text-align: left;
   line-height: 2em;
+}
+
+.post p {
+  text-align: left;
+  line-height: 1.5em;
+  margin-bottom: .7em;
 }
 
 .post-wrap .post p a {
