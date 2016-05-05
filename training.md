@@ -26,13 +26,13 @@ requests from our customers!
 
 <p>By participating in course, you will:
 <ul>
-<li>- learn how to deliver projects on-time and within budget, without compromising on quality
-<li>- see the value of eXtreme Programming principles and practices and how Scrum and eXtreme Programming are complementary
-<li>- understand how agile values, principles and practices relate
-<li>- learn how practices like test driven development, relentless refactoring, incremental design, continuous integration, and pair programming support agile principles and enable to deliver quality software incrementally and how they help to keep on delivering quality software over time
-<li>- learn how one can let quality software evolve iteratively and incrementally
-<li>- experience the role of testing and test driven development in agile development
-<li>- experience how all the different practices work together, through a real mini project
+<li>learn how to deliver projects on-time and within budget, without compromising on quality
+<li>see the value of eXtreme Programming principles and practices and how Scrum and eXtreme Programming are complementary
+<li>understand how agile values, principles and practices relate
+<li>learn how practices like test driven development, relentless refactoring, incremental design, continuous integration, and pair programming support agile principles and enable to deliver quality software incrementally and how they help to keep on delivering quality software over time
+<li>learn how one can let quality software evolve iteratively and incrementally
+<li>experience the role of testing and test driven development in agile development
+<li>experience how all the different practices work together, through a real mini project
 <li><strong>... and you’ll have fun!</strong> We take pride in creating a fun and effective learning environment, mixing presentations with simulations, exercises and hands-on development.
 </ul>
 
@@ -75,11 +75,11 @@ courage to persevere.
 
 <p>If you participate in this course, you will:
 <ul>
-<li>- apply a number of techniques to break unwanted dependencies in code
-<li>- know how to start making changes and adding tests simply responsibly
-<li>- be able to find *seams* in code and use them to break dependencies
-<li>- understand the system dynamics of design debt
-<li>- experience prioritizing, planning, and executing a large refactoring in small steps with a team, on real, representative legacy code.
+<li>apply a number of techniques to break unwanted dependencies in code
+<li>know how to start making changes and adding tests simply responsibly
+<li>be able to find *seams* in code and use them to break dependencies
+<li>understand the system dynamics of design debt
+<li>experience prioritizing, planning, and executing a large refactoring in small steps with a team, on real, representative legacy code.
 <li><strong>...and have fun! </strong>- we take pride in creating a fun and effective learning
  environment, mixing presentations with exercises and hands-development.
 </ul>
@@ -112,11 +112,11 @@ optimizing test scope and performance, and learning techniques and guidelines fo
 
 <p> By participating in this course, you will:
 <ul>
-<li>* apply test driven development and mocking techniques to test code in isolation
-<li>* apply a number of techniques to break unwanted dependencies in code
-<li>* know how to start making changes and adding tests simply and responsibly
-<li>* know how to evaluate and improve your unit tests
-<li>* understand the system dynamics of unit testing and design debt
+<li>apply test driven development and mocking techniques to test code in isolation
+<li>apply a number of techniques to break unwanted dependencies in code
+<li>know how to start making changes and adding tests simply and responsibly
+<li>know how to evaluate and improve your unit tests
+<li>understand the system dynamics of unit testing and design debt
 <li>i<strong>... and have fun!</strong> – we take pride in creating a fun and effective learning environment, mixing presentations with exercises and hands-on development.
 </ul>
 
@@ -124,13 +124,13 @@ optimizing test scope and performance, and learning techniques and guidelines fo
 
 <p>The course consists of a mix of short presentations, live programming demonstrations, and lots of programming exercises.
 <ul>
-<li>* Why Unit Testing? – short and long term systemic effects
-<li>* Test Driven Development
-<li>* Taking Test Driven Development to the extreme
-<li>* Responsibility Driven Design with mocking
-<li>* Interaction based vs. state based testing
-<li>* Mocking Styles – when to use mocks, stubs, fakes, and dummies
-<li>* Getting Your Tests In: Breaking Dependencies in Code
+<li>Why Unit Testing? – short and long term systemic effects
+<li>Test Driven Development
+<li>Taking Test Driven Development to the extreme
+<li>Responsibility Driven Design with mocking
+<li>Interaction based vs. state based testing
+<li>Mocking Styles – when to use mocks, stubs, fakes, and dummies
+<li>Getting Your Tests In: Breaking Dependencies in Code
 </ul>
 
 <h3>Systemic Thinking for Sustainable Delivery (1 day)</h3>
@@ -138,11 +138,11 @@ optimizing test scope and performance, and learning techniques and guidelines fo
 <p>In our work, we have noticed that changing your software development
 method changes your organisation. We have run into questions like:
 <ul>
-<li>- Why can’t the customer keep up with the development team and what can be done about it?
-<li>- Why is it so hard to introduce agile in some organizations?
-<li>- What are common failure modes of agile transitions and what can we do to work around these?
-<li>- How can we get a team to start unit testing (or any other good technical practice)? Is lack of unit testing really the biggest problem?
-<li>- What are the underlying dynamics of adding people to a project and how can we use these to increase project velocity?
+<li>Why can’t the customer keep up with the development team and what can be done about it?
+<li>Why is it so hard to introduce agile in some organizations?
+<li>What are common failure modes of agile transitions and what can we do to work around these?
+<li>How can we get a team to start unit testing (or any other good technical practice)? Is lack of unit testing really the biggest problem?
+<li>What are the underlying dynamics of adding people to a project and how can we use these to increase project velocity?
 </ul>
 
 <p>While several development methodologies describe a recipe for practices
@@ -163,14 +163,14 @@ organizations.
                 which a practice is effective in its context. It also helps your
 organization grow its own way of developing software.
 
-<p>                After participating in this course you will:
+<p>After participating in this course you will:
 <ul>
-<li>                -   view software organizations from a different, systemic perspective
-<li>                -   find root causes for all kinds of persistent, messy team problems
-<li>                -   understand why different software organization work and can work and
-                    why they sometimes stop working effectively
-<li>                    -   adapt your change initiatives to the specific organizational context
-<li>                    -   understand how change happens in individuals and organizations, and
-                        what this means for steering a change process
+<li>view software organizations from a different, systemic perspective
+<li>find root causes for all kinds of persistent, messy team problems
+<li>understand why different software organization work and can work and
+why they sometimes stop working effectively
+<li>adapt your change initiatives to the specific organizational context
+<li>understand how change happens in individuals and organizations, and
+what this means for steering a change process
 </ul>
 
