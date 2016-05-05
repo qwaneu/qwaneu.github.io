@@ -3,6 +3,7 @@ layout: post
 title:  So, how is that lean call for /dev/summer sessions working? 
 author: Willem
 summary: How is that lean call for sessions working
+image: /attachments/blogposts/dev-summer.png
 ---
 
 So we are trying
@@ -40,4 +41,6 @@ The call for sessions is open until tomorrow night, if you [hand
 something in](http://devcycles.net/summer) you have a good chance of
 getting it in - we have a great and somewhat flexible space that makes
 this easy.  
+
+![Dev Summer]({{page.image}})
 
