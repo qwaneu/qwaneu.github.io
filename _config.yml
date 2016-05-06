@@ -9,13 +9,13 @@
 title: QWAN - Quality Without a Name
 email: info@qwan.eu
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  QWAN - Quality Without a Name: development, coaching, consulting, training.
+  Systemic approach to developing software organizations.
+  Experts in Agile Development, Test Driven Development, Refactoring; long time eXtreme Programmers
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://qwan.eu" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://qwan.eu" # the base hostname & protocol for your site
+twitter_username: qwanlc
+github_username:  qwaneu
 
 # Build settings
 markdown: kramdown
