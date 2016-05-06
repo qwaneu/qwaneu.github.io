@@ -14,6 +14,8 @@ requests from our customers!
 <p><a href="attachments/courses_and_workshops_2016.pdf">Download our training & courses brochure</a></p>
 </div>
 
+<img src="images/agile_engineering_wordle.png" style="width: 100%">
+
 <h3>Agile Engineering (2 or 3 days)</h3>
 
 <p>When you have learned the basics of agile software development, you might wonder how to actually get things done and get your software out of the door when you go agile. Scrum focuses on coordination and feedback practices, adding technical practices allows teams to grow systems with confidence and safety.
