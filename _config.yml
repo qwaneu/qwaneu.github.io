@@ -19,3 +19,5 @@ github_username:  qwaneu
 
 # Build settings
 markdown: kramdown
+gems:
+    - jekyll-redirect-from
