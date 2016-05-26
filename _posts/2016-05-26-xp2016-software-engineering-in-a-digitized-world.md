@@ -128,4 +128,4 @@ Do
 
 The end
 
-[www.popendieck.com](www.popendieck.com)
+[www.poppendieck.com](www.poppendieck.com)
