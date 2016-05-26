@@ -79,5 +79,7 @@ Open banking in the EU. Open APIs to all bank acccounts (XS2A). A platform that 
 
 Financial platforms are coming, it will be interesting to see how they survive and where they are coming.
 
+Google deep learning platform.
+
 
 
