@@ -12,6 +12,7 @@ Aliveblog of Mary Poppendieck's xp2016 keynote.
 2. Creativity
 3. Federation of data
 4. Platforms replace products
+5. Antifragile
 
 ## Federate instead of duplicate
 
