@@ -75,7 +75,7 @@ Tractors are completely automated. Any equipment you have can be added onto a Jo
 
 Marshall van Asltyne book: Platforms scale. A platform will beat a pipeline product. The main problem is to get the network effect. The thing scales all by itself with very little effort.
 
-Open banking in the EU. Open APIs to all bank acccounts (XS2A). A platform that shows all your bank accounts can be made by anyone.
+Open banking in the EU. Open APIs to all bank acccounts (XS2A). A platform that shows all your bank accounts can be made by anyone. A trusted vendor should be able to move money between all your accounts. Drop fees with currency transanctions.
 
 
 
