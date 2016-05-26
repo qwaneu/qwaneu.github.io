@@ -10,6 +10,7 @@ Aliveblog of Mary Poppendieck's xp2016 keynote.
 
 1. The Cloud
 2. Creativity
+3. Federation of data
 
 ## Federate instead of duplicate
 
@@ -52,5 +53,7 @@ Test automation is like double entry bookkeeping. The goal is to find integratio
 # Scale is an architecture problem
 
 Google search: federation, let it fail.
+
+Lucene tried to follow along, struggled and finally the team gleaned HDFS and MapReduce from googles' papers.
 
 ![Mary Poppendieck portrait](/attachments/blogposts/2016/mary-poppendieck.png)
