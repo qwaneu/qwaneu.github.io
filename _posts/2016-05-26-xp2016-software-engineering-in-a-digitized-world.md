@@ -43,9 +43,8 @@ References [Marty Cagan](http://www.svpg.com/developer-powered-innovation) . How
 
 A funnel that looks something like this (visual in the slide is better).
 
-* Ideas
-* Discovery
-* Delivery
+![Ideas, Discovery, Delivery](https://pbs.twimg.com/media/CjXqlqAUgAAa_Op.jpg)
+
 
 Test automation is like double entry bookkeeping. The goal is to find integration issues as soon as possible.Production code and tests are two automated views on the same thing. (Willem: so are solid types).
 
