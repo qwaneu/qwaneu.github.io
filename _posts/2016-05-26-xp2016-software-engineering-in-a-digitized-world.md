@@ -9,6 +9,9 @@ Aliveblog of Mary Poppendieck's xp2016 keynote.
 
 ![Mary Poppendieck portrait](/attachments/blogposts/2016/mary-poppendieck.png)
 
+1. The Cloud
+2. Creativity
+
 ## Federate instead of duplicate
 
 Back to the chasm, where agile was in 2004. What is in the chasm now?
@@ -27,7 +30,7 @@ Immediate connection.
 
 Brett Vincent video end.
 
-Mary and Tom have a principle too: teams need an immediate connection with what they are creating.
+Mary and Tom have a principle too: teams need an immediate connection with what they are creating. E.g. continuous deployment.
 
-
+Focus on problems not features. The engineering team works on the problem, not features. Plan with hypotheses, not estimates. What is the hypothesis? What are three hypotheses? Run several experiments. Most will be wrong. If they are not wrong, we are not doing good experiments.
 
