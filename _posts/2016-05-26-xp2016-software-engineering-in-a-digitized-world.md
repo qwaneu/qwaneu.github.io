@@ -90,5 +90,9 @@ Good weather does not make good sails. Fragile -> Robust -> Anti-fragile.
 
 If you take a look at the really robust systems today - they are not trying to be robust, but anti-fragile. Fragile systems built up hidden risk and catastrophic failure.
 
-Wherever you suppress volatility artificially, catastrophic failure will happen (e.g. stock markets).
+Wherever you suppress volatility artificially, risk will build up invisibly, catastrophic failure will happen (e.g. stock markets).
+
+Allow the crash to not spread, make your systems stronger by attacking them, e.g. Netflix simian army. When stuff crasshes, does it not spread, how can we recover, can people still watch videos?
+
+
 
