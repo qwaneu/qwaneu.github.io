@@ -11,6 +11,7 @@ Aliveblog of Mary Poppendieck's xp2016 keynote.
 1. The Cloud
 2. Creativity
 3. Federation of data
+4. Platforms replace products
 
 ## Federate instead of duplicate
 
@@ -52,6 +53,8 @@ Test automation is like double entry bookkeeping. The goal is to find integratio
 
 # Scale is an architecture problem
 
+Federation is the way to scale.
+
 Google search: federation, let it fail.
 
 Lucene tried to follow along, struggled and finally the team gleaned HDFS and MapReduce from googles' papers.
@@ -61,5 +64,9 @@ Story about Gripen fighter, focusing on lower operational and design costs over 
 Integrated Federated Architecture. The planes are like a smartphone platform - trade out any component without effecting flight worthiness and certification. Every single piece can be developed in isolation.
 
 Three week iterations, synchronize across hard and software every quarter. Every year higher level plan for the next year. They integrate every week, even though iterations are three weeks. Hardware simulators allow more frequent integration. Feedback cycle is fundamental to not let badd stuff be built on top of bad stuff.
+
+# Platforms replace products
+
+
 
 ![Mary Poppendieck portrait](/attachments/blogposts/2016/mary-poppendieck.png)
