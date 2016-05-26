@@ -94,5 +94,13 @@ Wherever you suppress volatility artificially, risk will build up invisibly, cat
 
 Allow the crash to not spread, make your systems stronger by attacking them, e.g. Netflix simian army. When stuff crasshes, does it not spread, how can we recover, can people still watch videos?
 
+Simian army:
+
+* Chaos Monkey
+* Latency Monkey
+* Securiity Monkey
+* Janitor Monkey
+* Chaos Gorilla
+
 
 
