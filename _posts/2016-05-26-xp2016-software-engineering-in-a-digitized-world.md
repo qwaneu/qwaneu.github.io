@@ -79,7 +79,13 @@ Open banking in the EU. Open APIs to all bank acccounts (XS2A). A platform that 
 
 Financial platforms are coming, it will be interesting to see how they survive and where they are coming.
 
-Google deep learning platform.
+Google deep learning platform. Bots are coming of age, self-driving cars, soil fertilizing drones.
+
+What does it take to engineer a good platform?
+
+# Antifragile
+
+Good weather does not make good sails. Fragile -> Robust -> Anti-fragile.
 
 
 
