@@ -17,3 +17,11 @@ How Conway's law brought us two the cloud. Amazon two pizza teams: scale with le
 
 Automomous teams that handle their own deployments. This is something new Amazon could sell.
 
+# Software as a creative process
+
+"Creators need a direct connection with what they are creating" - Brett Vincent (Willem - see also Doug Engelbart).
+
+Shows a video by Brett Vincent with direct manipulation of code and graphics.
+
+
+
