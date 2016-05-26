@@ -60,6 +60,6 @@ Story about Gripen fighter, focusing on lower operational and design costs over 
 
 Integrated Federated Architecture. The planes are like a smartphone platform - trade out any component without effecting flight worthiness and certification. Every single piece can be developed in isolation.
 
-
+Three week iterations, synchronize across hard and software every quarter. Every year higher level plan for the next year. They integrate every week, even though iterations are three weeks. Hardware simulators allow more frequent integration. Feedback cycle is fundamental to not let badd stuff be built on top of bad stuff.
 
 ![Mary Poppendieck portrait](/attachments/blogposts/2016/mary-poppendieck.png)
