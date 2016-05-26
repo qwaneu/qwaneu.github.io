@@ -77,5 +77,7 @@ Marshall van Asltyne book: Platforms scale. A platform will beat a pipeline prod
 
 Open banking in the EU. Open APIs to all bank acccounts (XS2A). A platform that shows all your bank accounts can be made by anyone. A trusted vendor should be able to move money between all your accounts. Drop fees with currency transanctions. Currency transactions are funding other bank stuff.
 
+Financial platforms are coming, it will be interesting to see how they survive and where they are coming.
+
 
 
