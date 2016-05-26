@@ -75,4 +75,3 @@ Tractors are completely automated. Any equipment you have can be added onto a Jo
 
 
 
-![Mary Poppendieck portrait](/attachments/blogposts/2016/mary-poppendieck.png)
