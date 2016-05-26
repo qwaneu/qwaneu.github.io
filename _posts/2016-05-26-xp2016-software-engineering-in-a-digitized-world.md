@@ -88,5 +88,5 @@ What does it take to engineer a good platform?
 
 Good weather does not make good sails. Fragile -> Robust -> Anti-fragile.
 
-
+If you take a look at the really robust systems today - they are not trying to be robust, but anti-fragile.
 
