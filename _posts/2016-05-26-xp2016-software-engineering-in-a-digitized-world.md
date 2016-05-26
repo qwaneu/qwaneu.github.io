@@ -51,6 +51,6 @@ Test automation is like double entry bookkeeping. The goal is to find integratio
 
 # Scale is an architecture problem
 
-
+Google search: federation, let it fail.
 
 ![Mary Poppendieck portrait](/attachments/blogposts/2016/mary-poppendieck.png)
