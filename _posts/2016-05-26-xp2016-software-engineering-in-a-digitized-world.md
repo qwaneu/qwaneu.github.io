@@ -86,7 +86,7 @@ What does it take to engineer a good platform?
 
 # Antifragile
 
-Good weather does not make good sails. Fragile -> Robust -> Anti-fragile.
+Good weather does not make good sailorss. Fragile -> Robust -> Anti-fragile.
 
 If you take a look at the really robust systems today - they are not trying to be robust, but anti-fragile. Fragile systems built up hidden risk and catastrophic failure.
 
@@ -102,5 +102,25 @@ Simian army:
 * Janitor Monkey
 * Chaos Gorilla
 
+# Highly succesful digital organizations
 
+Don't do
+
+* Projects
+* Outsourcing
+* Esitmates
+* IT
+* Features
+* Testing at the end
+* Releases
+
+Do
+
+* Constantly evolving products
+* Problems
+* Hypotheses
+* Full stack teams
+* Immediate Connection
+* Deployment pipeline
+* Federated architecture
 
