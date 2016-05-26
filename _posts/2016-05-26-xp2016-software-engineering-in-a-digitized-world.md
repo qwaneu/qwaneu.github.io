@@ -126,3 +126,6 @@ Do
 * Deployment pipeline
 * Federated architecture
 
+The end
+
+www.popendieck.com
