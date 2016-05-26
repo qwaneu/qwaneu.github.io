@@ -121,6 +121,7 @@ Do
 * Hypotheses
 * Full stack teams
 * Immediate Connection
+* Tests as specification
 * Deployment pipeline
 * Federated architecture
 
