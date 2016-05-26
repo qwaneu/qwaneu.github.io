@@ -92,7 +92,7 @@ If you take a look at the really robust systems today - they are not trying to b
 
 Wherever you suppress volatility artificially, risk will build up invisibly, catastrophic failure will happen (e.g. stock markets).
 
-Allow the crash to not spread, make your systems stronger by attacking them, e.g. Netflix simian army. When stuff crasshes, does it not spread, how can we recover, can people still watch videos?
+Allow the crash to not spread, make your systems stronger by attacking them, e.g. Netflix simian army. When stuff crashes, does it not spread, how can we recover, can people still watch videos?
 
 Simian army:
 
