@@ -66,6 +66,12 @@ Three week iterations, synchronize across hard and software every quarter. Every
 
 # Platforms replace products
 
+Some examples of platforms. Then: Smart platforms.
+
+Tractors are completely automated. Any equipment you have can be added onto a John Deere Tractor, and at night you can use the data from the tractor platform to make sense of your farming business.
+
+
+
 
 
 ![Mary Poppendieck portrait](/attachments/blogposts/2016/mary-poppendieck.png)
