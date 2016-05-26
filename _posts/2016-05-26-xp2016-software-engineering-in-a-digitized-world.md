@@ -50,6 +50,8 @@ Test automation is like double entry bookkeeping. The goal is to find integratio
 
 "You know you are doing structured programmin when you don't have integration problems". (I didn't get the source).
 
+# Scale is an architecture problem
+
 
 
 
