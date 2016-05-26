@@ -7,7 +7,6 @@ image: /attachments/blogposts/2016/mary-poppendieck.png
 
 Aliveblog of Mary Poppendieck's xp2016 keynote.
 
-![Mary Poppendieck portrait](/attachments/blogposts/2016/mary-poppendieck.png)
 
 1. The Cloud
 2. Creativity
@@ -54,4 +53,4 @@ Test automation is like double entry bookkeeping. The goal is to find integratio
 
 
 
-
+![Mary Poppendieck portrait](/attachments/blogposts/2016/mary-poppendieck.png)
