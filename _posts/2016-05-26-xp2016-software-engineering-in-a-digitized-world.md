@@ -71,7 +71,9 @@ Some examples of platforms. Then: Smart platforms.
 
 Tractors are completely automated. Any equipment you have can be added onto a John Deere Tractor, and at night you can use the data from the tractor platform to make sense of your farming business.
 
+"Products have features, but platforms create communities".
 
+Marshall van Asltyne book: Platforms scale.
 
 
 
