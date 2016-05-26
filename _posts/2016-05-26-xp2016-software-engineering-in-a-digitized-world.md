@@ -73,7 +73,7 @@ Tractors are completely automated. Any equipment you have can be added onto a Jo
 
 "Products have features, but platforms create communities".
 
-Marshall van Asltyne book: Platforms scale. A platform will beat a pipeline product.
+Marshall van Asltyne book: Platforms scale. A platform will beat a pipeline product. The main problem is to get the network effect.
 
 
 
