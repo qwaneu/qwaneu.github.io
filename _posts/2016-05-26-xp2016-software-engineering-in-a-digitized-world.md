@@ -21,7 +21,13 @@ Automomous teams that handle their own deployments. This is something new Amazon
 
 "Creators need a direct connection with what they are creating" - Brett Vincent (Willem - see also Doug Engelbart).
 
-Shows a video by Brett Vincent with direct manipulation of code and graphics.
+Shows a video by Brett Vincent with direct manipulation of code and graphics. "Much of art is discovery... Having an immediate connection allows discovery that would be impossible before" "If there is any delay in that feedback loop of seeing it and working on it... there is a whole world of ideas that will never be."
+
+Immediate connection.
+
+Brett Vincent video end.
+
+Mary and Tom have a principle too: teams need an immediate connection with what they are creating.
 
 
 
