@@ -60,4 +60,6 @@ Story about Gripen fighter, focusing on lower operational and design costs over 
 
 Integrated Federated Architecture. The planes are like a smartphone platform - trade out any component without effecting flight worthiness and certification. Every single piece can be developed in isolation.
 
+
+
 ![Mary Poppendieck portrait](/attachments/blogposts/2016/mary-poppendieck.png)
