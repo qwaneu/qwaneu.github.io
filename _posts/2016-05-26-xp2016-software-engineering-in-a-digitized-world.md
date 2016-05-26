@@ -45,6 +45,7 @@ A funnel that looks something like this (visual in the slide is better).
 
 ![Ideas, Discovery, Delivery](https://pbs.twimg.com/media/CjXqlqAUgAAa_Op.jpg)
 
+Photo by Andrea Heck (@AndreaHeck)
 
 Test automation is like double entry bookkeeping. The goal is to find integration issues as soon as possible.Production code and tests are two automated views on the same thing. (Willem: so are solid types).
 
