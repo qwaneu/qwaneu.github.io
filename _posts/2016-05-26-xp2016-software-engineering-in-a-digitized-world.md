@@ -35,3 +35,15 @@ Mary and Tom have a principle too: teams need an immediate connection with what 
 Focus on problems not features. The engineering team works on the problem, not features. Plan with hypotheses, not estimates. What is the hypothesis? What are three hypotheses? Run several experiments. Most will be wrong. If they are not wrong, we are not doing good experiments. Only half of what product managers guess would be a good idea is actually a good idea.
 
 Almost half of product ideas are wrong (by product managers), technical people should also add things to develop.
+
+# How the best product teams work
+
+References [Marty Cagan](http://www.svpg.com/developer-powered-innovation) . How the best product teams work:
+
+A funnel that looks something like this (visual in the slide is better).
+
+* Ideas
+* Discovery
+* Delivery
+
+Test automation is like double entry bookkeeping. The goal is to find integration issues as soon as possible.Production code and tests are two automated views on the same thing. (Willem: so are solid types)
