@@ -46,4 +46,10 @@ A funnel that looks something like this (visual in the slide is better).
 * Discovery
 * Delivery
 
-Test automation is like double entry bookkeeping. The goal is to find integration issues as soon as possible.Production code and tests are two automated views on the same thing. (Willem: so are solid types)
+Test automation is like double entry bookkeeping. The goal is to find integration issues as soon as possible.Production code and tests are two automated views on the same thing. (Willem: so are solid types).
+
+"You know you are doing structured programmin when you don't have integration problems". (I didn't get the source).
+
+
+
+
