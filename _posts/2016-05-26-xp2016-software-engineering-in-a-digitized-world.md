@@ -56,4 +56,8 @@ Google search: federation, let it fail.
 
 Lucene tried to follow along, struggled and finally the team gleaned HDFS and MapReduce from googles' papers.
 
+Story about Gripen fighter, focusing on lower operational and design costs over 50+ years with each new generation. Now much cheaper than F-16 (let alone JSF). Federation is essential to keep costs down. How do I create an architecture where things are not integrated, but federated.
+
+Integrated Federated Architecture. The planes are like a smartphone platform - trade out any component without effecting flight worthiness and certification. Every single piece can be developed in isolation.
+
 ![Mary Poppendieck portrait](/attachments/blogposts/2016/mary-poppendieck.png)
