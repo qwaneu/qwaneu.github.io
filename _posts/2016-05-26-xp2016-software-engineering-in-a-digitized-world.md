@@ -122,6 +122,7 @@ Do
 * Full stack teams
 * Immediate Connection
 * Tests as specification
+* Software engineering in profit centres
 * Deployment pipeline
 * Federated architecture
 
