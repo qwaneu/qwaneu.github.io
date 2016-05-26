@@ -75,5 +75,7 @@ Tractors are completely automated. Any equipment you have can be added onto a Jo
 
 Marshall van Asltyne book: Platforms scale. A platform will beat a pipeline product. The main problem is to get the network effect. The thing scales all by itself with very little effort.
 
+Open banking in the EU.
+
 
 
