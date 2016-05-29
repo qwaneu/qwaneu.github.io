@@ -1,0 +1,7 @@
+@import "syntax-highlighting";
+.highlight {
+  .highlighter-rouge & {
+    padding: 0.7em;
+    overflow-x: scroll !important; 
+  }
+}
