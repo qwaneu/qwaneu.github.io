@@ -407,8 +407,8 @@ Now, the test framework is good enough to move our tests to their own
 test module. To do that we run a new test module and move the tests in
 there one by one.
 
-So first we add a call to running the new test module and add an emty one
-and then we move the test one by one to the module. Moving the first
+First we add a call to running the new test module and add an emty one (baby steps).
+Then we move the test one by one to the module. Moving the first
 test would look like:
 
 ~~~bash
