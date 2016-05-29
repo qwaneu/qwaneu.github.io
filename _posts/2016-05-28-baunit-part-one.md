@@ -288,10 +288,9 @@ for loop.
 Making it pass is quite easy, Just make sure the test is run in it's own
 subshell. The failing one will exit that subshell but not the for loop.
 
-In run_tests.sh
 
 ~~~bash
-#!/bin/sh
+#run_tests.sh
 run_tests() {
   local test_module=$1
   source $test_module
