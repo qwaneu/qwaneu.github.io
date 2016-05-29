@@ -61,10 +61,9 @@ The testing terminal runs a simple one-liner script:
   while true; do clear; ./run_tests.sh && echo Success || echo Failed; sleep 2; done
 ~~~
 
-This shows _Success_ continuously, since my *run_tests.sh* is empty. An
-empty script seems successful.
-
-And, since I want to do git commits fast and easy in the session, I run
+This is a simple and effective way to continously run the tests, as long
+as it does not take too long to run. It shows _Success_ continuously, since my *run_tests.sh* is empty. An
+empty script seems successful. And, since I want to do git commits fast and easy in the session, I run
 the following one-liner in the git terminal:
 
 ~~~bash
