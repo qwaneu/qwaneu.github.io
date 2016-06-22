@@ -865,7 +865,8 @@ blockquote p {
 }
 
 .post-wrap img {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   margin-bottom: 1.5em;
 }
 
@@ -944,6 +945,18 @@ blockquote p {
   background: #1abc9c;
   color: #fff;
 }
+
+.feed {
+  vertical-align: middle;
+}
+
+.feed-icon {
+  vertical-align: middle;
+  margin-bottom: 0em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
 
 /* Blog Page & Single */
 
