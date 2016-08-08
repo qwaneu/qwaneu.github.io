@@ -16,7 +16,7 @@ steps I took in 75 minutes of programming.
 This series consist of the following episodes.
 
 * Part one - Running tests
-* Part two - Asserts
+* [Part two - Asserts](/2016/08/08/baunit-part-two.html)
 * Part three - Reporting
 
 I may write more parts, while rehearsing for the session, I did, among
