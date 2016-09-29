@@ -23,3 +23,8 @@ There is a long war on variability:
 
 "But as we know, not all wars are based on sound reasoning"
 
+## Today we like to minimize variability
+
+under commit, pad buffers to reduce variability.
+
+Six Sigma - make choices that have low variability. Innovation introduces uncertainty in outcomes, uncertainty raises variability. It was introduced in 3M. 3M tracked which products were generating revenue. After Six Sigma, annual reports showed a drop from 60 to 40 to 30 percent, and then they stopped reporting, until ... (McErnie?) left.
