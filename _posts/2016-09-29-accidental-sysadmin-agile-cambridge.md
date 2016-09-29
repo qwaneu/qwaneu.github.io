@@ -14,4 +14,6 @@ No staging environment - he refers to the [pot roast story in Steve Mc Connels' 
 
 You can't do everything, but specialization is also painful, so what to do?
 
-
+* In a startup there are not enough people to specialize
+* Agree interfaces
+* Some specialization, some more depth of knowledge
