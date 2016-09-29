@@ -34,3 +34,26 @@ Six Sigma - make choices that have low variability. Innovation introduces uncert
 Don't commit to the expected return, make a different commitment. What currency did you use to pay for that reduction in variability? Ask what it is worth buying the reduction, what did you pay for it? You paid for it with cycle time. There really is an advantage in having a product in the market that nobody else has.
 
 ## Aysmmetric Payoffs and Option Pricing
+
+Expected price / Payoff vs price / Expected payoff.
+
+"Everything in manufacturing applies anywhere else in the world" (not Don's opinion, paraphrasing some consultants who favor manufacturing practices for everything).
+
+## The economic view
+
+* Variability is not good or evil.
+* Has different effects depending on economic payoff function.
+
+## Are other approaches possible
+
+## Nassim Taleb
+
+Most relevanti book of his for product development: Anti-fragility, not a terribly well organised read, but has some important ideas.
+
+A fragile system produces worse outcomes when you perturb it. The more you perturb it, the worse it gets.
+
+If you looked at Microsoft products in the 90s, they would have 20 revlevels of dlls that had dependencies on all other dlls. it was intrinsically an untestable system. What they evented decided to do was realise that most of the cases would never happen in the real world, so they shipped a few million beta copies and see what feedback came back.
+
+
+
+
