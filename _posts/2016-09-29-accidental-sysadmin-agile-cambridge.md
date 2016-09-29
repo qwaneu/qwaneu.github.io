@@ -23,4 +23,5 @@ They are going to hire their first operations person, because there are too many
 (In another startup when my co-cto suggested hiring a tester, that was where I drew the line - the problems we had could be solved without increasing specialisation at that point in time. I would hesitate less on operations).
 
 * Instrument all the things
+* Put instrumentation in from day one
 
