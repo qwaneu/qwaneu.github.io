@@ -112,4 +112,16 @@ Marine corps give guidance: if you have 80% of the information and not made a de
 
 Facebook focus on consequences: why make it live for a billion users? why make it live for a 1000?
 
+### Engineer payoff your functions
 
+At HP every division was self-funding, they did not subsidize unsucessful business units. Unsuccesful paths were automatically shut down.
+
+## A few takeaways
+
+* Don't fear variability
+* Buffer with care
+* Focus on payoff functions not probablities
+* Buy information in small batches
+* Think like a smart gambler
+* Create options
+* Value good economic choices over conformance
