@@ -25,3 +25,6 @@ They are going to hire their first operations person, because there are too many
 * Instrument all the things
 * Put instrumentation in from day one
 
+They use cucumber to specify their infrastructure code.
+
+
