@@ -72,5 +72,23 @@ Fast feedback reduces loss from bad outcomes, fast feedback enables exploitation
 
 Payoff as asymmetries are not accidental, they are the result of deliberate management choices.
 
+### Create fast feedback
+
+Accelerating the feedback loop allows you to exercise options much sooner.
+
+* Buy information in small batches
+  * Enable small batches with low transaction costs
+  * Deploy in small batches (automate deployment flow - deployment in large batches, because cost of 'deploy' transaction is high)
+* Reduce queueus
+  * Queues delay feedback
+  * Control the invisible WIP in the process - our queues in product development are invisible.
+  * Make queues visible, then reduce them
+* Acccelerate the flow of time-critical information
+  * non-homogenous flows. Not all flows have equivalent economic significance ('Move the ambulance faster down the road')
+  * Prioritize flow of certain information
+  * Escalate high-value decisions quickly. Unfortunately most people miss the econmic information/models to make good decisions on this.
+
+
+
 
 
