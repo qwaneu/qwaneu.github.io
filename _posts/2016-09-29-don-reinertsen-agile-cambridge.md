@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Software engineering in a digitized world
+title:  Turning unpredictability into profit.
 author: Willem
 image: /attachments/blogposts/2016/DReinertsen2007a_400x400.jpg
 ---
