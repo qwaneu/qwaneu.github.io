@@ -7,6 +7,18 @@ image: /attachments/blogposts/2016/DReinertsen2007a_400x400.jpg
 
 A liveblog of Don Reinertsens' Agile Cambridge keynote
 
+## Summary
+
+* Don't fear variability
+* Buffer with care
+* Focus on payoff functions not probablities
+* Buy information in small batches
+* Think like a smart gambler
+* Create options
+* Value good economic choices over conformance
+
+## Liveblog continues
+
 "Have you received messages telling you that variabilty is bad?"
 
 There is a tendency in software development to think in binary - either hate variability of love it.
