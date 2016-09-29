@@ -19,3 +19,8 @@ You can't do everything, but specialization is also painful, so what to do?
 * Some specialization, some more depth of knowledge
 
 They are going to hire their first operations person, because there are too many issues there at the moment.
+
+(In another startup when my co-cto suggested hiring a tester, that was where I drew the line - the problems we had could be solved without increasing specialisation at that point in time).
+
+* Instrument all the things
+
