@@ -2,7 +2,7 @@
 layout: post
 title:  Software engineering in a digitized world
 author: Willem
-image: /attachments/blogposts/2016/mary-poppendieck.png
+image: /attachments/blogposts/2016/DReinertsen2007a_400x400.jpg
 ---
 
 A liveblog of Don Reinertsens' Agile Cambridge keynote
@@ -28,3 +28,7 @@ There is a long war on variability:
 under commit, pad buffers to reduce variability.
 
 Six Sigma - make choices that have low variability. Innovation introduces uncertainty in outcomes, uncertainty raises variability. It was introduced in 3M. 3M tracked which products were generating revenue. After Six Sigma, annual reports showed a drop from 60 to 40 to 30 percent, and then they stopped reporting, until ... (McErnie?) left.
+
+### Hiding variability with a buffer
+
+Don't commit to the expected return, make a different commitment.
