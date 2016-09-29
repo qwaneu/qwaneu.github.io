@@ -54,6 +54,10 @@ A fragile system produces worse outcomes when you perturb it. The more you pertu
 
 If you looked at Microsoft products in the 90s, they would have 20 revlevels of dlls that had dependencies on all other dlls. it was intrinsically an untestable system. What they evented decided to do was realise that most of the cases would never happen in the real world, so they shipped a few million beta copies and see what feedback came back.
 
+Anti-fragility behaves like options: increase value by more perturbation.
 
+### How do we create Anti-Fragility
+
+Taleb suggests it is useful, but does not give much guidance on how to get there.
 
 
