@@ -62,7 +62,15 @@ Taleb suggests it is useful, but does not give much guidance on how to get there
 
 #### Can we change payoff functions?
 
-Fast feedback reduces loss from bad outcomes, fast feedback enables exploitation of good outcomes.
+Fast feedback reduces loss from bad outcomes, fast feedback enables exploitation of good outcomes. Venture capitalists exploit this. How do I end up amplifying the payoffs on the positive tail, while reducing the costs on the negative tail?
+
+### Creating asymmetries
+
+* Create fast feedback
+* Enable fast decision-making
+* Engineer payoff functions
+
+Payoff as asymmetries are not accidental, they are the result of deliberate management choices.
 
 
 
