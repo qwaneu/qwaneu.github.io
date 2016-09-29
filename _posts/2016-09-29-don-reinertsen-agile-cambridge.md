@@ -31,4 +31,4 @@ Six Sigma - make choices that have low variability. Innovation introduces uncert
 
 ### Hiding variability with a buffer
 
-Don't commit to the expected return, make a different commitment.
+Don't commit to the expected return, make a different commitment. What currency did you use to pay for that reduction in variability? Ask what it is worth buying the reduction, what did you pay for it? You paid for it with cycle time. There really is an advantage in having a product in the market that nobody else has.
