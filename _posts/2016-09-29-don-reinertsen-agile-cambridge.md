@@ -14,7 +14,7 @@ A liveblog of Don Reinertsens' Agile Cambridge keynote
 * Focus on payoff functions, not probablities
 * Buy information in small batches
 * Think like a smart gambler
-* Create options
+* Create options to recover from bad outcomes quickly and create good ones
 * Value good economic choices over conformance
 
 ## Liveblog continues
