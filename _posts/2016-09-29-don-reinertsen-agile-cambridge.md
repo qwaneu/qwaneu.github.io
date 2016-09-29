@@ -92,7 +92,24 @@ Accelerating the feedback loop allows you to exercise options much sooner.
 
 You don't know which paths are unproductive at beginning. Lean Startup with MVPS is an anti-fragile behaviour. Do MVP, shut down unproductive paths quickly.
 
+### Payload management
 
+Everything we did was more valuable than everything we chose not to do. We exploited all the new information we received during the development process. Throw things under the bus, and put new things on it. Make good economic choices
 
+### Fast decision making
+
+* Decentralize control
+  * Authority
+  * Information
+  * Resources
+
+* Favor decision speed over accuracy
+  * Making it safe to use initiative
+
+* Control exposure by managing consequences instead of frequency of occurence.
+
+Marine corps give guidance: if you have 80% of the information and not made a decision, you have wasted an opportunity.
+
+Facebook focus on consequences: why make it live for a billion users? why make it live for a 1000?
 
 
