@@ -88,6 +88,10 @@ Accelerating the feedback loop allows you to exercise options much sooner.
   * Prioritize flow of certain information
   * Escalate high-value decisions quickly. Unfortunately most people miss the econmic information/models to make good decisions on this.
 
+### Use batch size to create options
+
+You don't know which paths are unproductive at beginning. Lean Startup with MVPS is an anti-fragile behaviour. Do MVP, shut down unproductive paths quickly.
+
 
 
 
