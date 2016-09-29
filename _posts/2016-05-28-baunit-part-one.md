@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  Test Drive a unit testing framework in bash part one
-tags: 
+tags:
   - code
   - bash
 author: Rob Westgeest
-image: /attachments/blogposts/2016/baunit.png
+image: /attachments/blogposts/2016/reading.svg
 ---
 
 I did a public programming session at [XPDays Benelux](http://www.xpday.net/Xpday2015/FrontPage.html) and [XP 2016](http://xp2016.org) in
@@ -31,9 +31,9 @@ others:
 
 Choosing a language for automating small build tasks feels like choosing a problem. For scripting languages like python and ruby you end up learning and polluting your machine with pip, virtualenv, chruby, rubygems and the like. And while bash is always around, it simply is not powerful enough!
 
-Or is it? Am I just overly anxious about doing anything serious in bash? Do I just need a bit of courage to try and express intent in this awkward, inconsequent odd language? 
+Or is it? Am I just overly anxious about doing anything serious in bash? Do I just need a bit of courage to try and express intent in this awkward, inconsequent odd language?
 
-I wanted to learn more about bash as a scripting language. Therefore I decided to bootstrap a test framework, as it is a great way to learn or explore a programming language in baby steps. 
+I wanted to learn more about bash as a scripting language. Therefore I decided to bootstrap a test framework, as it is a great way to learn or explore a programming language in baby steps.
 
 ### The code and video
 
@@ -58,7 +58,7 @@ terminal in three (using iTerm); one in which I have the editor open,
 one in which the tests continuously run to get rich feedback, and one
 for doing git commits.
 
-The testing terminal runs a simple one-liner script: 
+The testing terminal runs a simple one-liner script:
 
 ~~~bash
   while true; do clear; ./run_tests.sh && echo Success || echo Failed; sleep 2; done
@@ -109,7 +109,7 @@ run_tests() {
 [[ "was_run" == $(run_tests) ]]
 ~~~
 
-It still fails, but for another reason. *run_tests* exists. It just  doesn't 
+It still fails, but for another reason. *run_tests* exists. It just  doesn't
 do anything useful. So we'll fake its behaviour by doing:
 
 ~~~bash
@@ -403,7 +403,7 @@ run_tests() {
 
 And green again! It appears that we can do logic and arithmetic expressions using the
 double bracket notation *(( ))*. It is a bit of a silly notation but it
-works. 
+works.
 
 Now, the test framework is good enough to move our tests to their own
 test module. To do that we run a new test module and move the tests in
