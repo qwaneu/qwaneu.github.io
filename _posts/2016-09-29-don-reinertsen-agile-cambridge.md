@@ -58,6 +58,11 @@ Anti-fragility behaves like options: increase value by more perturbation.
 
 ### How do we create Anti-Fragility
 
-Taleb suggests it is useful, but does not give much guidance on how to get there.
+Taleb suggests it is useful, but does not give much guidance on how to get there. You are already doing some things in some form. The ingredients are in the kitchen, you are just not using them yet.
+
+#### Can we change payoff functions?
+
+Fast feedback reduces loss from bad outcomes, fast feedback enables exploitation of good outcomes.
+
 
 
