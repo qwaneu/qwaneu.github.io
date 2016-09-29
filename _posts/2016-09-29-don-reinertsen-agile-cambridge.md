@@ -125,3 +125,7 @@ At HP every division was self-funding, they did not subsidize unsucessful busine
 * Think like a smart gambler
 * Create options
 * Value good economic choices over conformance
+
+## epilogue
+
+The way you become a comfortable speaker is by speaking. Take a subject you are comfortable with, that you believe is important and you believe people want to know. Start with small batches, small audiences, lightning talks.
