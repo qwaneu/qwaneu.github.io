@@ -11,7 +11,7 @@ A liveblog of Don Reinertsens' Agile Cambridge keynote
 
 * Don't fear variability
 * Buffer with care
-* Focus on payoff functions not probablities
+* Focus on payoff functions, not probablities
 * Buy information in small batches
 * Think like a smart gambler
 * Create options
