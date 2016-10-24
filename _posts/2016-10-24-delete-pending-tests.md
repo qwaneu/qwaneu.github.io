@@ -29,6 +29,6 @@ An events' session descriptions
    I can’t stand much more than one failing test, three at a pinch, so this helps keep me on track (getting rid of some ideas that float in my mind while writing tests) while still writing actual tests. Builds also fail without any additional tooling. Simplicity for the win.
 
 ![Traffic sign - 'Pending' with red border and red strike through](
-image: /attachments/blogposts/2016/pending.svg)
+image: http://www.qwan.eu/attachments/blogposts/2016/pending.svg)
 
 
