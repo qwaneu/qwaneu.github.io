@@ -9,17 +9,18 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="744.09448819"
-   height="1052.3622047"
+   width="295.47076"
+   height="289.57584"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 1">
+   sodipodi:docname="pending-inkscape.svg">
   <defs
      id="defs4">
     <filter
        inkscape:collect="always"
-       id="filter3767">
+       id="filter3767"
+       color-interpolation-filters="sRGB">
       <feGaussianBlur
          inkscape:collect="always"
          stdDeviation="0.26461049"
@@ -34,16 +35,20 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="19.092072"
-     inkscape:cy="520"
+     inkscape:cx="1.3273766"
+     inkscape:cy="381.80075"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="2045"
-     inkscape:window-height="1221"
+     inkscape:window-width="2525"
+     inkscape:window-height="1416"
      inkscape:window-x="35"
      inkscape:window-y="24"
-     inkscape:window-maximized="0" />
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -59,18 +64,19 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-297.7647,-664.5871)">
     <flowRoot
        xml:space="preserve"
        id="flowRoot2985"
-       style="fill:#00ff00;stroke:#00ff00;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:ITC Tempus Sans Com;font-style:normal;font-weight:normal;font-size:11px;line-height:125%;letter-spacing:0px;word-spacing:0px;-inkscape-font-specification:ITC Tempus Sans Com;font-stretch:normal;font-variant:normal"><flowRegion
+       style="font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#00ff00;fill-opacity:1;stroke:#00ff00;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:ITC Tempus Sans Com;-inkscape-font-specification:ITC Tempus Sans Com"><flowRegion
          id="flowRegion2987"><rect
            id="rect2989"
            width="410"
            height="208"
            x="128"
            y="492.36218"
-           style="stroke:#00ff00;fill:#00ff00" /></flowRegion><flowPara
+           style="fill:#00ff00;stroke:#00ff00" /></flowRegion><flowPara
          id="flowPara2991"></flowPara></flowRoot>    <path
        sodipodi:type="arc"
        style="fill:#ffffff;fill-opacity:1;stroke:#ff0000;stroke-width:15;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -79,7 +85,7 @@
        sodipodi:cy="816.36218"
        sodipodi:rx="151.5"
        sodipodi:ry="137"
-       d="m 586,816.36218 a 151.5,137 0 1 1 -303,0 151.5,137 0 1 1 303,0 z"
+       d="m 586,816.36218 c 0,75.66301 -67.82886,137 -151.5,137 -83.67114,0 -151.5,-61.33699 -151.5,-137 0,-75.66301 67.82886,-137 151.5,-137 83.67114,0 151.5,61.33699 151.5,137 z"
        transform="matrix(0.92913458,0.00630129,0.00643,1.0019681,36.541817,-11.344602)" />
     <text
        xml:space="preserve"

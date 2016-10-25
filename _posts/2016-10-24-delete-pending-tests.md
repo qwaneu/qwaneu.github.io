@@ -16,7 +16,7 @@ This struck me while Rob and I were reviewing a code base recently. An effort wa
 
 Now this is easy to see in someone else’s code base. To be honest, I’m working on a code base that has that pattern too… I had about twenty pending tests. I deleted all of them today. Several had already been built as tests, but with a description that better matched my current understanding. I spent half an hour or so deleting them, and learning a thing or two about my tests.
 
-Pending tests are a form of Work In Process, and quite often it is better to have a limited quantity of that. The twenty tests I had were not all in one place. It was one here, three there etc. Having only green tests carries less bagage. If the tool you use lists the number of pending tests separately, you can let your build tools check the number of peniding tests, and let the build fail when there are too many.
+Pending tests are a form of Work In Process, and quite often it is better to have a limited quantity of that. The twenty tests I had were not all in one place. It was one here, three there etc. Having only green tests carries less bagage. If the tool you use lists the number of pending tests separately, you can let your build tools check the number of pending tests, and let the build fail when there are too many.
 
 A pattern I sometimes use, and I think will use more often, is, instead of writing a pending test, write one that fails with a string comparison, and the left hand and right hand side together are a message telling me what idea I had for the inside of the test, e.g. this is what my test runner is showing me now:
 
