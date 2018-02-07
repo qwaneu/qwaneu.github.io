@@ -89,4 +89,4 @@ Recreating the setup for this blog post was a bit more work than I hoped, given 
 ## Further reading / doing
 
 - [using parcel to build a web audio player](https://qiita.com/kimagure/items/24e6d3a0f47814c9630b)
-- [upgrade to psc-package from bower](https://https://qiita.com/kimagure/items/0d9354900d7a7dbd3864)
+- [upgrade to psc-package from bower](https://qiita.com/kimagure/items/0d9354900d7a7dbd3864)
