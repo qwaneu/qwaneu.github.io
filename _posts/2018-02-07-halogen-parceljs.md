@@ -76,7 +76,7 @@ if(module.hot) {
 
 ```
 
-The way this works is that you do get a fresh state on each reload. After some discussion and reflection on #purescript on [Slack](functionalprogramming.slack.com), I realized that is not necessarily a bad thing. `@monoidmusication` suggested the state implementation might change, and how would you know. The other thing one can do wit ha setup like this, make a main per component, so there is not that much state to load anyway.
+The way this works is that you do get a fresh state on each reload. After some discussion and reflection on #purescript on [Slack](functionalprogramming.slack.com), I realized that is not necessarily a bad thing. `@monoidmusician` suggested the state implementation might change, and how would you know. The other thing one can do wit ha setup like this, make a main per component, so there is not that much state to load anyway.
 
 I've got an experimental setup where authentication happens before loading Halogen (maybe more on that later), so I stay logged in, even when Halogen reloads.
 
