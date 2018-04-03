@@ -7,7 +7,7 @@ tags:
   - halogen
   - parceljs
 author: Willem van den Ende
-image: /attachments/blogposts/2018/hotreload.png
+image: /attachments/blogposts/2018/hotreload.jpg
 ---
 
 ## TLDR:
