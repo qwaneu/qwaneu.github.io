@@ -5,6 +5,12 @@ author: Willem
 image: /attachments/blogposts/2018/feature-toggles.jpg
 ---
 
+# TLDR
+
+* Experiment
+* Look around
+* Ship
+
 # Revisit your assumptions every once in a while
 
 If you work in IT long enough, all your assumptions are wrong (quote from ...). Also if you work in IT long enough, old ideas come back into fashion,
@@ -81,3 +87,8 @@ If you need something, write it. "We never promised easy, just effective" - Keit
 
 To be effective agile needs a minimum of seriousness. Which means getting things done *and* reflecting deeply.
 
+# TLDR
+
+* Experiment
+* Look around
+* Ship
