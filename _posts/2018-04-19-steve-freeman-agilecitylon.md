@@ -5,6 +5,8 @@ author: Willem
 image: /attachments/blogposts/2018/feature-toggles.jpg
 ---
 
+# Revisit your assumptions every once in a while
+
 If you work in IT long enough, all your assumptions are wrong (quote from ...). Also if you work in IT long enough, old ideas come back into fashion,
 
 # Homeopathic OO
@@ -54,3 +56,28 @@ In the 90s corporate development had devolved into the concept album.
 Large organizations on the whole, apart from the internet unicorns, can not deliver quickly, so they try to bridge the gap between their culture and shipping fast by buying tools. (talks about various scaling frameworks just before).
 
 "Premium Mediocre" - blog post by 'ribbon farm', experiments in refactored perfection.
+
+# Inventing the future
+
+Premium mediocre might be what it takes to get from here to there. Agile Software development gives us a path to get from here to there and at least ship.
+
+Keep going and ship.
+
+# What have I learned from all these years of experience
+
+## Feedback
+
+"There is no substitution for putting things into production"
+
+Continuous deployment is taken as a given in many places. You used to be able to walk around the city and see the sticky notes on the windows.
+
+Crappy phone lines and crappy infrastructure lead to long legalese Jira issues (is that an improvement over long technical legalese specifications).
+
+"I was lucky enough to be part of a subculture that believed more could be done with fewer people and better tools". Those same people can bore you with discussions about kinds of typing and vim vs emacs, but also will split apart your domain to unprecedented levels of detail.
+
+## Grow your own
+
+If you need something, write it. "We never promised easy, just effective" - Keith Braithwaite. Steve sees lots of use of "pragmatic" where pragmatic means "not". e.g. "pragmatic user research". 
+
+To be effective agile needs a minimum of seriousness. Which means getting things done *and* reflecting deeply.
+
