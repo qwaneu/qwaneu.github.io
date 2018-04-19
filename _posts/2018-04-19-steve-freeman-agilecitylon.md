@@ -52,3 +52,5 @@ Consensus of tools is splititng again. "I'm surprised that the kids are going fo
 In the 90s corporate development had devolved into the concept album. 
 
 Large organizations on the whole, apart from the internet unicorns, can not deliver quickly, so they try to bridge the gap between their culture and shipping fast by buying tools. (talks about various scaling frameworks just before).
+
+"Premium Mediocre" - blog post by 'ribbon farm', experiments in refactored perfection.
