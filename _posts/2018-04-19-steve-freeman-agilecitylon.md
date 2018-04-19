@@ -50,3 +50,5 @@ Proof by association "look, these people made loads of money, and they used agil
 Consensus of tools is splititng again. "I'm surprised that the kids are going for VI again". It's a cycle, expect the next generation. Music goes through cycles like this jazz combo -> big band -> stripped back rock -> concept albums -> punk etc.
 
 In the 90s corporate development had devolved into the concept album. 
+
+Large organizations on the whole, apart from the internet unicorns, can not deliver quickly, so they try to bridge the gap between their culture and shipping fast by buying tools. (talks about various scaling frameworks just before).
