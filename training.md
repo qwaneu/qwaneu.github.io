@@ -5,7 +5,7 @@ redirect_from: "/agile-engineering"
 ---
 Our training courses are intensive, hands-on. We work with small groups (up to 14 participants) to ensure an optimal learning experience.
 
-We deliver our courses and workshop in English or Dutch. Together with our German and French partners, we can also deliver in Germand or French.
+We deliver our courses and workshop in English or Dutch. Together with our German and French partners, we can also deliver in German or French.
 
 For the exercises in our hands on development skills courses, we can use Java, C#, Scala, Ruby, or Javascript.
 
