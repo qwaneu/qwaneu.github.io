@@ -13,7 +13,7 @@ We offer both Open Enrollment courses and customized in-company courses. If you 
 to make new ones for you. Our best courses got started by specific 
 requests from our customers!
 
-[Download our training & courses brochure](/attachments/courses_and_workshops_2016.pdf)
+[Download our training & courses brochure](/attachments/courses_and_workshops_2018.pdf)
 
 <img src="images/agile_engineering_wordle.png" style="width: 100%">
 
