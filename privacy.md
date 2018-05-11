@@ -5,7 +5,11 @@ title: Our privacy policy
 
 ### The fine print
 
-We love collaborating with you! In order to work with you, we need to know a few things about you. We collect only the bare minimum needed to interact with you: your name, phone number and email address. To ship refactoring cards and other merchandise to you. we need your address. When we run an on-site course we need to know where to show up and who will be in the course (and a contact phone number will be handy). We will not give or sell your data in any form to other parties for marketing purposes.
+We love collaborating with you!
+
+In order to work with you however, we need to know a few things about you. We collect only the bare minimum needed to interact with you: your name, phone number and email address. To ship refactoring cards and other merchandise to you. we need your address. When we run an on-site course we need to know where to show up and who will be in the course - a contact phone number will be handy as well. 
+
+We will never give or sell your data in any form to other parties for marketing purposes.
 
 Give us a shout if you'd like to update your details or have them removed.
 
