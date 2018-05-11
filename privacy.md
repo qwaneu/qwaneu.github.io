@@ -15,7 +15,7 @@ Give us a shout if you'd like to update your details or have them removed.
 
 ### The finer print
 
-The personal information we collect is used by the partners in QWAN - Piecemeal Growth, Westgeest Consultancy and Living Software Ltd - only for the following purposes:
+The personal information we collect is used by the [partners in QWAN](/about) - _Piecemeal Growth_, _Westgeest Consultancy_ and _Living Software Ltd_ - only for the following purposes:
 
 - coming to an agreement with you about projects and training courses,
 - delivering projects and training courses for you,
@@ -26,12 +26,12 @@ The personal information we collect is used by the partners in QWAN - Piecemeal 
 
 We will not use your personal information for any other purpose.
 
-Data we (possibly) need from you for the purposes stated above: name, affiliation, e-mail address, phone number, address, Twitter handle, bank account data
+Data we (possibly) need from you for the purposes stated above, consists of: name, affiliation, e-mail address, phone number, address, Twitter handle, bank account data
 
 We use a number of third party services for storing the information. All services we use to deliver our services to you comply with the EU's General Data Protection Regulation (GDPR). 
 We will not use your personal information for any other purpose than the ones stated above; we will not sell or transfer your personal information to any other third parties.
 
-You are entitled to request the specific information we keep about you and to have us correct the information if needed. Just let us know by calling us or sending us a message through the contact form or email at info -at- qwan -dot- eu.
+You are entitled to request the specific information we keep about you and to have us correct the information if needed. Just let us know by calling us or sending us a message through the [contact form](/#contact) or email at info -at- qwan -dot- eu.
 
 You are also entitled to have your personal information removed from our systems (except for information we are required to keep by law, like invoice which we need to keep for 7 years for tax purposes).
 
