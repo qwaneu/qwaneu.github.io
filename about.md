@@ -44,21 +44,43 @@ After years of experience with Object Oriented Software Development with UML, se
 
 Rob explains hard problems in a simple way, so the problems and the solutions are easy to fathom. He is able to let others experience what he learned quickly, and so doing guides teams around pitfalls. His enthusiasm and sense of humor makes it a great pleasure to work with Rob.
 
+### QWAN Partners - company info
+
+_Westgeest Consultancy_  
+Elsakkersstraat 25  
+5081 GL Hilvarenbeek  
+The Netherlands  
+Chamber of Commerce Tilburg: 18071671  
+VAT: NL 820447900 B01
+
+_Piecemeal Growth_  
+Weidehoeve 9  
+3438 MD Nieuwegein  
+The Netherlands  
+Chamber of Commerce Utrecht: 30208887  
+VAT: NL 815179248 B01
+
+_Living Software Ltd_  
+The Counting House  
+Church Farm Business Park  
+Corston  
+Bath BA2 9AP  
+United Kingdom  
+Company Registration No: 08849005  
+VAT: GB 179749243
+
 ### Press kit / Logos
 
 ![qwan logo](/images/logos/qwan_logo_small.png)
 
-* [vector format](/images/logos/logo.eps) (EPS)
-
-* [small](/images/logos/qwan_logo_small.png) (PNG, 218×100)
-
-* [regular](/images/logos/qwan_logo_transparant.png) (PNG, 856×393)
+[vector format](/images/logos/logo.eps) (EPS) --
+[small](/images/logos/qwan_logo_small.png) (PNG, 218×100) --
+[regular](/images/logos/qwan_logo_transparant.png) (PNG, 856×393)
 
 ---
 
 ![qwan logo](/images/logos/qwan_only_logo.png)
 
-* [QWAN only, small](/images/logos/qwan_only_logo.png) (PNG, 260×59)
-
-* [QWAN only, large](/images/logos/qwan_only_logo_large.png) (PNG, 1428×370)
+[QWAN only, small](/images/logos/qwan_only_logo.png) (PNG, 260×59) --
+[QWAN only, large](/images/logos/qwan_only_logo_large.png) (PNG, 1428×370)
 
