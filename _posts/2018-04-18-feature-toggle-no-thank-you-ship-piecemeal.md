@@ -2,7 +2,7 @@
 layout: post
 title:  Feature toggles, no thank you, I'd rather ship piecemeal
 author: Willem
-image: /attachments/blogposts/2018/feature-toggles.jpg
+image: /attachments/blogposts/2018/feature-toggle.jpeg
 ---
 
 Feature toggles - no thank you, I would rather ship piecemeal.
