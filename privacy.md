@@ -13,6 +13,10 @@ We will never give or sell your data in any form to other parties for marketing 
 
 Give us a shout if you'd like to update your details or have them removed.
 
+### Cookies
+
+Our website only uses cookies for enabling the Google Forms based contact form and for analytics, so that we can improve our website based on how it is used.
+
 ### The finer print
 
 The personal information we collect is used by the [partners in QWAN](/about) - _Piecemeal Growth_, _Westgeest Consultancy_ and _Living Software Ltd_ - only for the following purposes:
