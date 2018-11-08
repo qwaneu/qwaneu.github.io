@@ -1,0 +1,3 @@
+# What does it feel like to do refactor-red-green-refactor?
+
+I'm doing it now for a product I'm working on that needs a migration - refactoring to reduce the number of places where I depend on the library to migrate, before actually doing the migration. It feels odd. I know from experience that it eventually will work, will save me time, and as opposed to doing a not very valuable migration, I'm improving the design of the system and my understanding of it, which should make modifications easier. Not should, will, Willem! You see how this feeling creeps up.
