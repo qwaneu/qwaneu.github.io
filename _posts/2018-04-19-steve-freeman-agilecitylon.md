@@ -5,7 +5,7 @@ author: Willem
 image: /attachments/blogposts/2018/feature-toggles.jpg
 ---
 
-# TLDR
+# TLDR
 
 * Experiment
 * Look around
@@ -15,13 +15,13 @@ image: /attachments/blogposts/2018/feature-toggles.jpg
 
 If you work in IT long enough, all your assumptions are wrong (quote from ...). Also if you work in IT long enough, old ideas come back into fashion,
 
-# Homeopathic OO
+# Homeopathic OO
 
 "OO is over, because we are all doing functional". Look up google trends. Scrum going up, agile, xp and everything else going down. Except jenkins and selenium. Agile development for most organisations means scrum, what that means for those organisations is anyone's guess.
 
 Eric Hoffer: "Every great cause begins as a movement, becomes a business and turns into a racket" - from The True Believer
 
-# Some things have improved
+# Some things have improved
 
 More teams deliver (even if brittle and hopelessly compromised). Wider spread of iterative development.
 
@@ -47,31 +47,31 @@ The Scrum community was the only one not dissing each other - a world consolidat
 
 "A software system can best be designed if the testing is interlaced with the designing insetead of being used after the design" - Alan Perlis, Nato conference on software engineering 1968
 
-A lot of XP was trying to figure out what Ward Cunningham was doing. The methods that spread are made from scratch. 
+A lot of XP was trying to figure out what Ward Cunningham was doing. The methods that spread are made from scratch.
 
 # internet bubble, 1999
 
-Proof by association "look, these people made loads of money, and they used agile". Consolidation of technical tools. Internet bubble paid for tools like Java, MySql and Ruby on Rails. 
+Proof by association "look, these people made loads of money, and they used agile". Consolidation of technical tools. Internet bubble paid for tools like Java, MySql and Ruby on Rails.
 
-# Growing OO software guided by tests
+# Growing OO software guided by tests
 
 Consensus of tools is splititng again. "I'm surprised that the kids are going for VI again". It's a cycle, expect the next generation. Music goes through cycles like this jazz combo -> big band -> stripped back rock -> concept albums -> punk etc.
 
-In the 90s corporate development had devolved into the concept album. 
+In the 90s corporate development had devolved into the concept album.
 
 Large organizations on the whole, apart from the internet unicorns, can not deliver quickly, so they try to bridge the gap between their culture and shipping fast by buying tools. (talks about various scaling frameworks just before).
 
 "Premium Mediocre" - blog post by 'ribbon farm', experiments in refactored perfection.
 
-# Inventing the future
+# Inventing the future
 
 Premium mediocre might be what it takes to get from here to there. Agile Software development gives us a path to get from here to there and at least ship.
 
 Keep going and ship.
 
-# What have I learned from all these years of experience
+# What have I learned from all these years of experience
 
-## Feedback
+## Feedback
 
 "There is no substitution for putting things into production"
 
@@ -83,11 +83,11 @@ Crappy phone lines and crappy infrastructure lead to long legalese Jira issues (
 
 ## Grow your own
 
-If you need something, write it. "We never promised easy, just effective" - Keith Braithwaite. Steve sees lots of use of "pragmatic" where pragmatic means "not". e.g. "pragmatic user research". 
+If you need something, write it. "We never promised easy, just effective" - Keith Braithwaite. Steve sees lots of use of "pragmatic" where pragmatic means "not". e.g. "pragmatic user research".
 
 To be effective agile needs a minimum of seriousness. Which means getting things done *and* reflecting deeply.
 
-# TLDR
+# TLDR
 
 * Experiment
 * Look around
