@@ -8,9 +8,7 @@ author: Willem van den Ende
 image: /attachments/blogposts/2019/w.png
 ---
 
-# Situated Software  - revisited
-
-I was planning to use my [keys left]() for something different today, but found myself in an associative storm of tweets and possible conference sessions to be written.
+I was planning to use my [keys left](https://keysleft.com) for something different today, but found myself in an associative storm of tweets, possible conference sessions to be proposed and some situated software I've been working on for a few years, intermittently.
 
 Marc Evers pointed me at [Clay Shirky's Situated Software](http://shirky.com/writings/herecomeseverybody/situated_software.html) around the time it came out in 2004. I stumbled across [David R. MacIver's independent reinvention today](https://www.drmaciver.com/2018/11/situated-software/). Both good, and similar in spirit. Waiting for number three, and we have a pattern.
 
@@ -21,3 +19,5 @@ David talks about not necessarily loving the code, but loving the problem it sol
 ## Further reading
 
 I also was reminded of Andy Palmer's' mantra [Strong opinions, weakly held](https://theitriskmanager.com/2011/08/11/id-rather-be-wrong-than-be-right/). Eloquently collected by Chris Matts' who'd rather be wrong than right.
+
+The chapter on [Battle of Wesnoth](http://aosabook.org/en/wesnoth.html) in [The architecture of open source applications](http://aosabook.org/en/index.html) is a great example of explicitly designing for worse is better, in part. It features an extension language that 'real programmers' feel is worse, but levels the playing field for 'regular users' to create extensions.
