@@ -1,8 +1,8 @@
 ---
 title: Training Courses
 layout: other
-redirect_from: "/agile-engineering"
 ---
+
 [Our training courses](#training-courses) are intensive, hands-on. We work with small groups (up to 14 participants) to ensure an optimal learning experience.
 
 We deliver our courses and workshop in English or Dutch. Together with our German and French partners, we can also deliver in German or French.
