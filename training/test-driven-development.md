@@ -24,9 +24,26 @@ The course consists of a mix of short presentations, live programming demonstrat
 
 * Why Unit Testing? – short and long term systemic effects
 * Test Driven Development
-* Taking Test Driven Development to the extreme
 * Responsibility Driven Design with mocking
 * Interaction based vs. state based testing
 * Mocking Styles – when to use mocks, stubs, fakes, and dummies
-* Getting Your Tests In: Breaking Dependencies in Code
 
+### Practical information
+
+* Duration: 2 days
+* Training infrastructure (including laptops) will be taken care of
+* Basic programming skills required
+* This training is available as open enrollment and in-house.
+
+### Register
+
+Please refer to [Test Driven Development in C# on Springest](https://www.springest.nl/qwan/mastering-unit-testing){:target="_blank"} and [Test Driven Development in Java on Springest](https://www.springest.nl/qwan/hands-on-test-driven-development-in-java){:target="_blank"} for dates and registration or [contact us directly](/#contact).
+
+### Our colleagues
+
+Although we think we provide something special with this training, we're not the only supplier. Here's a list of our collegues in the Netherlands:
+
+* [Test driven development at DevOn](https://www.devon.nl/training/certified-agile-test-driven-development)
+* [Test driven development at Alten](https://www.alten.nl/en/training-test-driven-development-tdd/)
+* [Test driven development at Improve](https://www.improveqs.nl/training/test-driven-development-tdd/)
+* [Test driven development at Xebia](https://training.xebia.com/quality-test-automation/test-driven-development-tdd)

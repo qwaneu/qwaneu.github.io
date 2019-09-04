@@ -1,5 +1,5 @@
 ---
-title:  Mastering Legacy Code (2 days)
+title:  Mastering Legacy Code
 layout: other
 ---
 
@@ -59,3 +59,16 @@ Day two is the hands-on day. In two parts we will plan and execute a
  refactorings, seams, and dependencies to co-ordinate, plan and execute a
  large refactoring with a team. And do so safely, even though in the
  beginning no automated tests are present.
+
+ ### Practical information
+
+* Duration: 2 Days
+* Training infrastructure (including laptops) will be taken care of
+* Basic programming skills required
+* This training is available as open enrollment and in-house.
+* This training is available as half day follow up on our [test driven development training](/training/test-driven-development).
+
+
+### Register
+
+Please refer to [Mastering legacy code on Springest](https://www.springest.nl//qwan/mastering-legacy-code){:target="_blank"} for dates and registration or [contact us directly](/#contact).

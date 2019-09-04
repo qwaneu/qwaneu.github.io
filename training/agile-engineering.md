@@ -1,5 +1,5 @@
 ---
-title: Agile Engineering (2 or 3 days)
+title: Agile Engineering
 layout: other
 ---
 When you have learned the basics of agile software development, you might wonder how to actually get things done and get your software out of the door when you go agile. Scrum focuses on coordination and feedback practices, adding technical practices allows teams to grow systems with confidence and safety.
@@ -24,4 +24,15 @@ By participating in course, you will:
 ### Topics
 
 eXtreme Programming – values, principles &amp; practices; user stories &amp; specification by example; test driven development &amp; merciless refactoring; 
-agile architecture &amp; incremental design; responsibility drivend design and CRC cards; bringing it all together, in a 3 iteration micro project
+agile architecture &amp; incremental design; responsibility drivend design and CRC cards; bringing it all together, in a 3 iteration micro project. 
+
+ ### Practical information
+
+* Duration: 3 days (or 2 when skipping the mini project)
+* Training infrastructure (including laptops) will be taken care of
+* Basic programming skills required
+* This training is available as open enrollment and in-house.
+
+### Register
+
+Please refer to [Agile Engineering on Springest](https://www.springest.nl/qwan/agile-engineering){:target="_blank"} for dates and registration or [contact us directly](/#contact).
