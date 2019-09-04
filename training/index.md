@@ -3,17 +3,14 @@ title: Training Courses
 layout: other
 ---
 
-[Our training courses](#training-courses) are intensive, hands-on. We work with small groups (up to 14 participants) to ensure an optimal learning experience.
+[Our training courses](#training-courses) are intensive and hands-on. We work with small groups up to 14 participants to ensure an optimal learning experience.
 
 We deliver our courses and workshop in English or Dutch. Together with our German and French partners, we can also deliver in German or French.
-
-For the exercises in our hands on development skills courses, we can use Java, C#, Scala, Ruby, Python, Javascript, or TypeScript.
+Code examples and programming exercises are available in different programming languages: Java, C#, Scala, Ruby, Python, Javascript, and TypeScript.
 
 We offer both Open Enrollment courses and customized in-company courses. If you have a need that is not covered by an existing course, we are happy 
 to make new ones for you. Our best courses got started by specific 
 requests from our customers!
-
-<img src="/images/agile_engineering_wordle.png" style="width: 100%">
 
 <div class="wrap blog-grid" id="training-courses">
   <div class="grid grid-pad">
@@ -85,4 +82,4 @@ requests from our customers!
   </div>
 </div>
 
- 
+<img src="/images/agile_engineering_wordle.png" style="width: 100%"> 
