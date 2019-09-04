@@ -3,7 +3,7 @@ title: Training Courses
 layout: other
 redirect_from: "/agile-engineering"
 ---
-Our [training courses](#training-courses) are intensive, hands-on. We work with small groups (up to 14 participants) to ensure an optimal learning experience.
+[Our training courses](#training-courses) are intensive, hands-on. We work with small groups (up to 14 participants) to ensure an optimal learning experience.
 
 We deliver our courses and workshop in English or Dutch. Together with our German and French partners, we can also deliver in German or French.
 
@@ -25,10 +25,11 @@ requests from our customers!
           <div class="post">
             <h2 class="entry-title"><a href="/training/agile-engineering">Agile Engineering</a></h2>
             <div class="post-meta">
-            motto!
+            Delivering software with confidence & joy
             </div>
+            
             <p>
-When you have learned the basics of agile software development, you might wonder how to actually get things done and get your software out of the door when you go agile. Scrum focuses on coordination and feedback practices, adding technical practices allows teams to grow systems with confidence and safety.
+            Agile/Scrum provides great focus on delivering in short cycles. To keep on delivering quality software with confidence, you need to master agile engineering principles & practices.
             </p>
             <a class="btn read-more" href="/training/agile-engineering">Read More</a>
           </div>
@@ -38,12 +39,12 @@ When you have learned the basics of agile software development, you might wonder
       <div class="col-1-2">
         <article class="post-wrap">
           <div class="post">
-            <h2 class="entry-title"><a href="/training/test-driven-development">Test Driven Development Hands On</a></h2>
+            <h2 class="entry-title"><a href="/training/test-driven-development">Test Driven Development</a></h2>
             <div class="post-meta">
-            motto!
+            Hands on & interactive
             </div>
             <p>
-In this in depth practical course, you will learn Test Driven Development and master different unit testing techniques, like mocking and unit testing in legacy code.
+            TDD in once sentence: <em>write a failing test, make it pass, refactor and repeat</em> - easier said than done. Take a deep dive in growing your test driven development skills.
             </p>
             <a class="btn read-more" href="/training/test-driven-development">Read More</a>
           </div>
@@ -55,12 +56,10 @@ In this in depth practical course, you will learn Test Driven Development and ma
           <div class="post">
             <h2 class="entry-title"><a href="/training/mastering-legacy-code">Mastering Legacy Code</a></h2>
             <div class="post-meta">
-            motto!
+            Build confindence working with nasty code
             </div>
             <p>
-In this two day training course, you will learn how to improve the
-design of software step by step, while continuing to deliver value to
-your customers.
+            We all know 'em: those areas in your code base that need quite some courage to work on. Join us & learn techniques to make changes in these areas with confidence. 
             </p>
             <a class="btn read-more" href="/training/mastering-legacy-code">Read More</a>
           </div>
@@ -70,13 +69,12 @@ your customers.
       <div class="col-1-2">
         <article class="post-wrap">
           <div class="post">
-            <h2 class="entry-title"><a href="/training/systems-thinking">Systems Thinking for Sustainable Delivery</a></h2>
+            <h2 class="entry-title"><a href="/training/systems-thinking">Systems Thinking</a></h2>
             <div class="post-meta">
-            motto!
+            Deep insights for sustainable delivery
             </div>
             <p>
-In our work, we have noticed that changing your software development
-method changes your organisation. In this training course, you will learn how to use systems thinking
+            Issues in teams and organisations are often tough to tackle. In retrospectives we tend to focus on symptoms. Learn techniques to explore systems behind symptoms and to act effectively. 
             </p>
             <a class="btn read-more" href="/training/mastering-legacy-code">Read More</a>
           </div>
