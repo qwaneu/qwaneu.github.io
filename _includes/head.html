@@ -3,7 +3,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>{{page.title}}</title>
 
-    <!-- Favicon -->
+    {% if page.summary %}
+    <meta name="description" content="{{ page.summary | escape }}">
+    {% endif %}
+
+    {%if page.tags %}
+    <meta name="keywords" content="{{ page.tags | join: ', ' | escape }}"/>
+    {%endif %}
+
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
     <!-- CSS -->

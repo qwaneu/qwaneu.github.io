@@ -1,6 +1,8 @@
 ---
 title: Agile Engineering (2 or 3 days)
 layout: other
+summary: Agile/Scrum provides great focus on delivering in short cycles. To keep on delivering quality software with confidence, you need to master agile engineering principles & practices.
+tags: [agile engineering, extreme programming, test driven development, refactoring, unit testing, scrum developer, ci/cd, continuous integration, continuous delivery]
 ---
 When you have learned the basics of agile software development, you might wonder how to actually get things done and get your software out of the door when you go agile. Scrum focuses on coordination and feedback practices, adding technical practices allows teams to grow systems with confidence and safety.
 

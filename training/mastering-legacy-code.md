@@ -1,6 +1,8 @@
 ---
 title:  Mastering Legacy Code (2 days)
 layout: other
+summary: "We all know 'em: those areas in your code base that need quite some courage to work on. Join us & learn techniques to make changes in these areas with confidence. "
+tags: [legacy code, working effectively with legacy code, agile engineering, extreme programming, test driven development, refactoring, code smells, unit testing]
 ---
 
 In this two day training course, you will learn how to improve the
