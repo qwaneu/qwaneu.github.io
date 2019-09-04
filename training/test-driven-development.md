@@ -1,5 +1,5 @@
 ---
-title:  Test Driven Development Masterclass (2 days)
+title:  Test Driven Development Masterclass
 layout: other
 summary: "TDD in once sentence: write a failing test, make it pass, refactor and repeat - easier said than done. Take a deep dive in growing your test driven development skills."
 tags: [agile engineering, extreme programming, test driven development, refactoring, unit testing, scrum developer, ci/cd, continuous integration, continuous delivery]
