@@ -43,7 +43,7 @@ Please refer to [Test Driven Development in C# on Springest](https://www.springe
 
 Although we think we provide something special with this training, we're not the only supplier. Here's a list of our collegues in the Netherlands:
 
-* [Test driven development at DevOn](https://www.devon.nl/training/certified-agile-test-driven-development)
-* [Test driven development at Alten](https://www.alten.nl/en/training-test-driven-development-tdd/)
-* [Test driven development at Improve](https://www.improveqs.nl/training/test-driven-development-tdd/)
-* [Test driven development at Xebia](https://training.xebia.com/quality-test-automation/test-driven-development-tdd)
+* [Test driven development at DevOn](https://www.devon.nl/training/certified-agile-test-driven-development){:target="_blank"}
+* [Test driven development at Alten](https://www.alten.nl/en/training-test-driven-development-tdd/){:target="_blank"}
+* [Test driven development at Improve](https://www.improveqs.nl/training/test-driven-development-tdd/){:target="_blank"}
+* [Test driven development at Xebia](https://training.xebia.com/quality-test-automation/test-driven-development-tdd){:target="_blank"}
