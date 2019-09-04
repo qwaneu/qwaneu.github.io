@@ -1,5 +1,5 @@
 ---
-title: Systemic Thinking for Sustainable Delivery (1 day)
+title: Systems Thinking for Sustainable Delivery
 layout: other
 summary: "Issues in teams and organisations are often tough to tackle. In retrospectives we tend to focus on symptoms. Learn techniques to explore systems behind symptoms and to act effectively."
 tags: [scrum, retrospectives, systems thinking, diagrams of effects, gerald weinberg, cynefin, sensemaking, wardley mapping, strategy mapping]
@@ -43,4 +43,12 @@ why they sometimes stop working effectively
 * understand how change happens in individuals and organizations, and
 what this means for steering a change process
 
+### Practical information
 
+* Duration: 1 day
+* No laptops required
+* This training is available as open enrollment and in-house.
+
+### Register
+
+Please refer to [Systems Thinking on Springest](https://www.springest.nl/qwan/systems-thinking-making-sense-of-it){:target="_blank"} for dates and registration or [contact us directly](/#contact).

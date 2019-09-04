@@ -1,5 +1,5 @@
 ---
-title: Agile Engineering (2 or 3 days)
+title: Agile Engineering
 layout: other
 summary: Agile/Scrum provides great focus on delivering in short cycles. To keep on delivering quality software with confidence, you need to master agile engineering principles & practices.
 tags: [agile engineering, extreme programming, test driven development, refactoring, unit testing, scrum developer, ci/cd, continuous integration, continuous delivery]
@@ -26,4 +26,15 @@ By participating in course, you will:
 ### Topics
 
 eXtreme Programming – values, principles &amp; practices; user stories &amp; specification by example; test driven development &amp; merciless refactoring; 
-agile architecture &amp; incremental design; responsibility drivend design and CRC cards; bringing it all together, in a 3 iteration micro project
+agile architecture &amp; incremental design; responsibility drivend design and CRC cards; bringing it all together, in a 3 iteration micro project. 
+
+ ### Practical information
+
+* Duration: 3 days (or 2 when skipping the mini project)
+* Training infrastructure (including laptops) will be taken care of
+* Basic programming skills required
+* This training is available as open enrollment and in-house.
+
+### Register
+
+Please refer to [Agile Engineering on Springest](https://www.springest.nl/qwan/agile-engineering){:target="_blank"} for dates and registration or [contact us directly](/#contact).
