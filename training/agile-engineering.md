@@ -2,7 +2,7 @@
 title: Agile Engineering
 layout: other
 summary: Agile/Scrum provides great focus on delivering in short cycles. To keep on delivering quality software with confidence, you need to master agile engineering principles & practices.
-tags: [agile engineering, extreme programming, test driven development, refactoring, unit testing, scrum developer, ci/cd, continuous integration, continuous delivery]
+tags: [agile engineering, extreme programming, XP, TDD, test driven development, refactoring, unit testing, scrum developer, ci/cd, continuous integration, continuous delivery]
 ---
 When you have learned the basics of agile software development, you might wonder how to actually get things done and get your software out of the door when you go agile. Scrum focuses on coordination and feedback practices, adding technical practices allows teams to grow systems with confidence and safety.
 
@@ -21,7 +21,8 @@ By participating in course, you will:
 * learn how one can let quality software evolve iteratively and incrementally
 * experience the role of testing and test driven development in agile development
 * experience how all the different practices work together, through a real mini project
-* **... and you’ll have fun!** We take pride in creating a fun and effective learning environment, mixing presentations with simulations, exercises and hands-on development.
+
+*... and you’ll have fun!* We take pride in creating a fun and effective learning environment, mixing presentations with simulations, exercises and hands-on development.
 
 ### Topics
 
@@ -34,7 +35,9 @@ agile architecture &amp; incremental design; responsibility drivend design and C
 * Training infrastructure (including laptops) will be taken care of
 * Basic programming skills required
 * This training is available as open enrollment and in-house.
+* Programming languages: Java, C#, Python, Ruby, Javascript, TypeScript, Scala
+* We deliver this training in The Netherlands, the UK, and Belgium
 
 ### Register
 
-Please refer to [Agile Engineering on Springest](https://www.springest.nl/qwan/agile-engineering){:target="_blank"} for dates and registration or [contact us directly](/#contact).
+Please see [Agile Engineering on Springest](https://www.springest.nl/qwan/agile-engineering){:target="_blank"} for course schedules and registration or [contact us directly](/#contact).

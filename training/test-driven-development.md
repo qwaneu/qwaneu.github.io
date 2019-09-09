@@ -1,10 +1,10 @@
 ---
-title:  Test Driven Development Masterclass
+title:  TDD - Test Driven Development Hands-on
 layout: other
 summary: "TDD in once sentence: write a failing test, make it pass, refactor and repeat - easier said than done. Take a deep dive in growing your test driven development skills."
-tags: [agile engineering, extreme programming, test driven development, refactoring, unit testing, scrum developer, ci/cd, continuous integration, continuous delivery]
+tags: [agile engineering, extreme programming, XP, TDD, test driven development, refactoring, unit testing, scrum developer, ci/cd, continuous integration, continuous delivery]
 ---
-In this in depth practical course, you will learn Test Driven Development and master different unit testing techniques, like mocking and unit testing in legacy code.
+In this in depth practical course, you will learn Test Driven Development and master different unit testing techniques, like mocking.
 
 The focus of this course is on improving your unit testing skills, getting a better understanding of what a unit test is,
 optimizing test scope and performance, and learning techniques and guidelines for writing and maintaining unit tests.
@@ -18,7 +18,8 @@ By participating in this course, you will:
 * know how to start making changes and adding tests simply and responsibly
 * know how to evaluate and improve your unit tests
 * understand the system dynamics of unit testing and design debt
-* **... and have fun!** – we take pride in creating a fun and effective learning environment, mixing presentations with exercises and hands-on development.
+
+*... and have fun!* – we take pride in creating a fun and effective learning environment, mixing presentations with exercises and hands-on development.
 
 ### Topics
 
@@ -29,6 +30,8 @@ The course consists of a mix of short presentations, live programming demonstrat
 * Responsibility Driven Design with mocking
 * Interaction based vs. state based testing
 * Mocking Styles – when to use mocks, stubs, fakes, and dummies
+* Hexagonal Architecture - a fresh perspective on software dependencies and test architecture
+* Code Smells & Refactorings
 
 ### Practical information
 
@@ -36,10 +39,12 @@ The course consists of a mix of short presentations, live programming demonstrat
 * Training infrastructure (including laptops) will be taken care of
 * Basic programming skills required
 * This training is available as open enrollment and in-house.
+* Programming languages: Java, C#, Python, Ruby, Javascript, TypeScript, Scala
+* We deliver this training in The Netherlands, the UK, and Belgium
 
 ### Register
 
-Please refer to [Test Driven Development in C# on Springest](https://www.springest.nl/qwan/mastering-unit-testing){:target="_blank"} and [Test Driven Development in Java on Springest](https://www.springest.nl/qwan/hands-on-test-driven-development-in-java){:target="_blank"} for dates and registration or [contact us directly](/#contact).
+Please see [Test Driven Development in C# on Springest](https://www.springest.nl/qwan/mastering-unit-testing){:target="_blank"} or [Test Driven Development in Java on Springest](https://www.springest.nl/qwan/hands-on-test-driven-development-in-java){:target="_blank"} for course schedules and registration or [contact us directly](/#contact).
 
 ### Our colleagues
 
