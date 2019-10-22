@@ -28,7 +28,6 @@ We use `jekyll` to generate our html. I found [jekyll-serve](https://github.com/
 
 ```
 exclude: [README.md, vendor]
-
 ```
 
 Only found that out after searching for [an error message and ending in a github issue](https://github.com/jekyll/jekyll/issues/5267). I ended up committing Bret Fishers' `docker-compose.yml` and now have an auto-rebuilding local jekyll that is not to onerous to setup (until next year ;)).
