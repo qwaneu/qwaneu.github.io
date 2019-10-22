@@ -8,11 +8,11 @@ author: Willem van den Ende
 image: /attachments/blogposts/2019/w.png
 ---
 
-To remind myself that I often find it easier to encourage others to change than to change myself, I have been using _change is for other people_ as a mantra, 
+To remind myself that I often find it easier to encourage others to change than to change myself, I have been using _change is for other people_ as a mantra,
 
-[Today](https://keysleft.com). I stumbled across [How to get smart people to learn](https://hbr.org/1991/05/teaching-smart-people-how-to-learn) by Chris Argyris. 
+[Today](https://keysleft.com) I stumbled across [How to get smart people to learn](https://hbr.org/1991/05/teaching-smart-people-how-to-learn) by Chris Argyris.
 
-It has a great story about a consulting firm and its' consultants who can complain about clients, but have a hard time running a reflection session for themselves, let alone learn from it. 
+It has a great story about a consulting firm and its' consultants who can complain about clients, but have a hard time running a reflection session for themselves, let alone learn from it.
 
 When I am consulting, it sometimes appears relatively easy to get other people to change their behaviour. One of our clients had a keynote at an industry vertical conference, and he mentioned they hired some people (us) who could motivate people. We tend to believe one can only demotivate people, so this was odd, but great. For instance, we changed our website a few years ago, but I have a hard time to not curse at the lack of comments. I finally got over it, and started writing publicly again.
 
