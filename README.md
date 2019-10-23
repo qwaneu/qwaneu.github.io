@@ -20,6 +20,7 @@ Blog archief en individuele blog entries hebben wat minder grafische elementen. 
 # TODO
 
 - Pagina van individuele blog entry accessible maken
+- hamburger menu toegankelijk maken - https://www.a11ymatters.com/pattern/mobile-nav/
 
 - #blog pagina accessible maken (zie ook 'grid' to do)
 - CSS Grid uitzoeken/inzetten voor cursus 'grid' (en blog entry grid)
