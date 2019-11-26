@@ -6,7 +6,7 @@ tags:
   - community
   - software architecture
 author: Willem van den Ende
-image: attachments/blogposts/2019/xpdays-benelux.png
+image: /attachments/blogposts/2019/xpdays_be_logo_small.png
 ---
 
 Marc and Rob are running a
