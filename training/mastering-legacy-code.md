@@ -62,7 +62,7 @@ Day two is the hands-on day. In two parts we will plan and execute a
  large refactoring with a team. And do so safely, even though in the
  beginning no automated tests are present.
 
- ### Practical information
+### Practical information
 
 * Duration: 2 Days
 * Training infrastructure (including laptops) will be taken care of
