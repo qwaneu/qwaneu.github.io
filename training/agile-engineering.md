@@ -29,7 +29,7 @@ By participating in course, you will:
 eXtreme Programming – values, principles &amp; practices; user stories &amp; specification by example; test driven development &amp; merciless refactoring; 
 agile architecture &amp; incremental design; responsibility drivend design and CRC cards; bringing it all together, in a 3 iteration micro project. 
 
- ### Practical information
+### Practical information
 
 * Duration: 3 days (or 2 when skipping the mini project)
 * Training infrastructure (including laptops) will be taken care of

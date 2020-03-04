@@ -5,6 +5,12 @@ em {
   font-size: 120%;
   ul {
     margin-bottom: 0.7em;
+    list-style: disc;
+    text-indent: 1em;
+  }
+  ol {
+    list-style: decimal;
+    text-indent: 1em;
   }
   p {
     color: #525252;
@@ -38,6 +44,12 @@ em {
   font-size: 120%;
   ul {
     margin-bottom: 0.7em;
+    list-style: disc;
+    text-indent: 1em;
+  }
+  ol {
+    list-style: decimal;
+    text-indent: 1em;
   }
   a {
     color: #006f33;
