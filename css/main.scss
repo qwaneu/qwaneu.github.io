@@ -34,7 +34,7 @@ Grey #ECF0F1
 */
 
 /* *********************************************************
-  General Styling 
+  General Styling
 ********************************************************* */
 
 *, *:before, *:after {
@@ -162,7 +162,7 @@ blockquote p {
 }
 
 /* *********************************************************
-  Buttons 
+  Buttons
 ********************************************************* */
 
 .btn {
@@ -306,7 +306,7 @@ blockquote p {
 }
 
 /* *********************************************************
-  Header 
+  Header
 ********************************************************* */
 
 #top-header {
@@ -397,7 +397,7 @@ blockquote p {
 }
 
 /* *********************************************************
-  Navigation 
+  Navigation
 ********************************************************* */
 
 .navigation input[type=checkbox] {
@@ -482,7 +482,7 @@ blockquote p {
 }
 
 /* *********************************************************
-  Home Slider 
+  Home Slider
 ********************************************************* */
 
 .header-carousel {
@@ -508,7 +508,7 @@ blockquote p {
 }
 
 /* *********************************************************
-  Parallax 
+  Parallax
 ********************************************************* */
 
 .parallax-section {
@@ -727,7 +727,7 @@ blockquote p {
 }
 
 /* *********************************************************
-  Clients Logos Section 
+  Clients Logos Section
 ********************************************************* */
 
 .cl-logo-carousel .item figure {
@@ -809,7 +809,7 @@ blockquote p {
 }
 
 /* *********************************************************
-  Quotes Section 
+  Quotes Section
 ********************************************************* */
 .quotes-icon {
   color: #1abc9c;
@@ -1236,7 +1236,7 @@ address i {
   color: #484f58;
   font-size: 1.125em;
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-} 
+}
 
 .phone {
   line-height: 30px;
@@ -1244,12 +1244,8 @@ address i {
 
 .box-icon {
   border-right: 2px solid #ebebeb;
-  float: left;
   font-size: 1.4em;
-  height: 45px;
-  line-height: 40px;
-  margin: 0 20px 0 0;
-  width: 40px;
+  margin-left: 2em;
 }
 
 .box-icon i {
@@ -1466,7 +1462,7 @@ footer p, footer a {
   text-align: center;
 }
 
-/*------------------------------------------------------------- 
+/*-------------------------------------------------------------
   Team
 ---------------------------------------------------------------*/
 
@@ -1640,7 +1636,7 @@ footer p, footer a {
   }
 }
 
-/*------------------------------------------------------------- 
+/*-------------------------------------------------------------
   Media queries
 ---------------------------------------------------------------*/
 
@@ -1793,11 +1789,11 @@ footer p, footer a {
     text-indent: -9999px;
     background: url(/images/logo-qwan-only.png) no-repeat;
     background-size: 264px 71px;
-  }  
+  }
 }
 
 @media handheld, only screen and (max-width: 480px) {
-  
+
   .header-carousel {
     height: 620px;
   }
