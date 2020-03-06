@@ -47,36 +47,6 @@ body {
 	padding-right: 20px;
 }
 
-/* Styling based on css grid, should slowly replace the stuff in the rest of the file Author(s) see git log. */
-.anaddress {
-  display: grid;
-  grid-gap: 1em;
-  grid-template-columns: 5em auto;
-  border-right: 2px solid #ebebeb;
-}
-
-.anaddress div {
-  padding-left: 2em;
-  background-color: white;
-}
-
-.blogarchive {
-  grid-column: 1;
-  /* grid-row: 2 / 7; */
-  grid-auto-rows: mincontent maxcontent auto;
-  display: grid; /
-  grid-gap: 1em;
-  grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
-  border-radius: 5px;
-}
-
-.blogarchive div {
-  background-color: white;
-  color: black;
-  border-radius: 3px;
-  border-color: grey;
-}
-/* end new grid styling */
 
 .push-right {
 	float: right;
