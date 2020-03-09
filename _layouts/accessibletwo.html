@@ -1,0 +1,28 @@
+---
+title: QWAN
+---
+<!doctype html>
+<!-- start from scratch, and see what the minimum is we need to make it appear like the rest. -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{page.title}}</title>
+
+    {% if page.summary %}
+    <meta name="description" content="{{ page.summary | escape }}">
+    {% endif %}
+
+    {%if page.tags %}
+    <meta name="keywords" content="{{ page.tags | join: ', ' | escape }}"/>
+    {%endif %}
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body >
+    {{ content }}
+  </body>
+</html>

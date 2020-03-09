@@ -1265,6 +1265,42 @@ address i {
   color: #16a085;
 }
 
+/* blog summary experiment */
+.blogsummary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  row-gap: 2em;
+  column-gap: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.name-plain {
+  background-color: black;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.name-plain a {
+  color: white;
+  style: underline;
+  font-size: 140%;
+}
+
+.mainmenu-plain {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
+  row-gap: 2em;
+  column-gap: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.mainmenu-plain a {
+  color: white;
+  font-size: 120%;
+}
 /* Form, Comments and Contact */
 
 .contactus-grid {
