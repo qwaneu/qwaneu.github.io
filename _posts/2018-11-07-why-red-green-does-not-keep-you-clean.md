@@ -10,8 +10,6 @@ author: Willem van den Ende
 image: /attachments/blogposts/2018/hotreload.jpg
 ---
 
-## TLDR;
-
 Red-Green-Refactor is broken, because the psychological reward happens at green. When you get that reward, you feel the task has been completed, and are inclined to stop. Therefore refactoring is a lot rarer than it should be.
 
 Instead, turn the cycle 120 degrees, start at Refactor and end at Green, so that the short-term psychological reward and the medium to long term effects of well factored code are aligned.
