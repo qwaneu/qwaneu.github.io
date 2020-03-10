@@ -5,8 +5,6 @@ author: Willem
 image: /attachments/blogposts/2018/feature-toggles.jpg
 ---
 
-# TLDR
-
 * Experiment
 * Look around
 * Ship

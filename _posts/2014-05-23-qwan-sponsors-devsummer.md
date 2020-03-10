@@ -5,10 +5,8 @@ author: Willem
 image: /attachments/blogposts/dev-summer.png
 ---
 
-![Dev Summer]({{page.image}})
-
 We've always been active in the UK, even more so now Willem has moved to
-the UK (although he is doing work on the continent as well). 
+the UK (although he is doing work on the continent as well).
 
 So we've decided to sponsor a new one day conference for developers in
 Cambridge, on July 12. It's called /dev/summer . It's held on a
@@ -24,3 +22,5 @@ hands-on tutorial, the [call for sessions](http://devcycles.net/summer/) is open
 We hope to see you there, even if it is just to add some more
 refactoring cards to your collection ;)
 
+
+![Dev Summer]({{page.image}})

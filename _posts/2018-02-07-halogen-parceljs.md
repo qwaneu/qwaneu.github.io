@@ -10,8 +10,7 @@ author: Willem van den Ende
 image: /attachments/blogposts/2018/hotreload.jpg
 ---
 
-## TLDR:
-hot reloading a [Halogen app](https://github.com/slamdata/purescript-halogen) with [Parcel](https://parceljs.org/) requires _almost_ no configuration. [Demo](https://qwaneu.github.com/purescript-halogen-template)
+Hot reloading a [Halogen app](https://github.com/slamdata/purescript-halogen) with [Parcel](https://parceljs.org/) requires _almost_ no configuration. [Demo](https://qwaneu.github.com/purescript-halogen-template)
 
 I'm doing an archtitecural spike with Halogen and Firebase (if you want to know why, see Background near the end, I won't bore you with the details otherwise).
 
