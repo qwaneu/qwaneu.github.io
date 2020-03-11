@@ -981,28 +981,53 @@ blockquote p {
   background-color: black;
   padding-left: 2em;
   padding-right: 2em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+
+.header-plain a {
+  text-decoration: none;
+  color: white;
+}
+
+.header-plain a:hover {
+  text-decoration: underline;
+}
+
+.header-plain a:active {
+  color: lightgrey;
 }
 
 .name-plain a {
-  color: white;
-  style: underline;
   font-size: 140%;
 }
 
+.header-plain {
+  grid-template-columns: 20em auto;
+  display: grid;
+}
+
+body.plain {
+  margin-left: 0em;
+  margin-bottom: 0em;
+  margin-top: 0em;
+  margin-right: 0em;
+}
 .mainmenu-plain {
   background-color: black;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
   row-gap: 2em;
-  column-gap: 2em;
+  column-gap: 3em;
   padding-left: 2em;
   padding-right: 2em;
+  padding-top: 0.5em;
 }
 
 .mainmenu-plain a {
-  color: white;
   font-size: 120%;
 }
+
 
 // https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element
 .blog-summary-img {
