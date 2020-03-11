@@ -998,6 +998,21 @@ blockquote p {
   color: lightgrey;
 }
 
+.header-plain a.current {
+  color: black;
+}
+
+.header-plain div.current {
+  background-color: white;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.header-plain div {
+  align-items: center;
+  justify-content: center;
+  display: grid;
+}
+
 .name-plain a {
   font-size: 140%;
 }
