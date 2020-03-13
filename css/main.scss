@@ -1002,9 +1002,17 @@ blockquote p {
   color: black;
 }
 
-.header-plain div.current {
+.mainmenu-plain li.current {
   background-color: white;
   border-radius: 5px 5px 0px 0px;
+}
+
+.mainmenu-plain li {
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  padding-bottom: 1.5em;
+  padding-top: 1em;
 }
 
 .header-plain div {
@@ -1035,15 +1043,24 @@ body.plain {
     font-weight: normal;
   }
 
-.mainmenu-plain {
+nav.mainmenu-plain  {
+  background-color: black;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.mainmenu-plain ul {
   background-color: black;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
   row-gap: 2em;
   column-gap: 3em;
-  padding-left: 2em;
-  padding-right: 2em;
+  margin-bottom: 0em;
+}
+
+.mainmenu-plain li {
   padding-top: 0.5em;
+  padding-bottom: 1em;
 }
 
 .mainmenu-plain a {
