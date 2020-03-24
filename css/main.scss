@@ -1020,6 +1020,23 @@ blockquote p {
   justify-content: center;
   display: grid;
 }
+// media query for pop-up menu, WIP
+@media (max-width: 630px) {
+
+  .header-plain a.current {
+    color: white;
+  }
+
+  .mainmenu-plain li.current {
+    background-color: inherit;
+  }
+
+  .mainmenu-plain li {
+  }
+  .header-plain div {
+  }
+}
+
 
 .name-plain a {
   font-size: 140%;
@@ -1054,7 +1071,7 @@ nav.mainmenu-plain  {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
   row-gap: 2em;
-  column-gap: 3em;
+  column-gap: 1em;
   margin-bottom: 0em;
 }
 

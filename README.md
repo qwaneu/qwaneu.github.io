@@ -13,14 +13,25 @@ A: current directory is mounted as `./site` so it should be all good.
 
 # IN PROGRESS
 
-- Pagina van lijst van blog entries accessible maken
+## Pagina van lijst van blog entries accessible maken
 
 Blog archief en individuele blog entries hebben wat minder grafische elementen. [Firefox accessibility inspector](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names?utm_source=devtools&utm_medium=a11y-panel-checks-text-label#Content_with_images_must_be_labeled) in developer tools lijkt een redelijk begin te zijn.
+
+### hamburger menu toegankelijk maken
+
+Q: How do we bundle css?
+A: https://jekyllrb.com/docs/assets/
+
+Main.scss already has media queries. This might get messy.
+
+Q: how do we bundle javascript?
+A: not known yet - we push to github and the rest is magic at the moment.
+
+
 
 # TODO
 
 - Pagina van individuele blog entry accessible maken
-- hamburger menu toegankelijk maken - https://www.a11ymatters.com/pattern/mobile-nav/
 
 - #blog pagina accessible maken (zie ook 'grid' to do)
 - CSS Grid uitzoeken/inzetten voor cursus 'grid' (en blog entry grid)
