@@ -999,12 +999,7 @@ blockquote p {
 }
 
 .header-plain a.current {
-  color: black;
-}
-
-.mainmenu-plain li.current {
-  background-color: white;
-  border-radius: 5px 5px 0px 0px;
+  font-weight: bolder;
 }
 
 .mainmenu-plain li {
