@@ -1,0 +1,127 @@
+
+
+
+// Variables
+$c0: #111111;
+$c1: lighten($c0, 5%);
+$c2: lighten($c0, 10%);
+$c3: lighten($c0, 15%);
+$c9: #fff;
+
+h1,
+h3,
+p {
+  margin-top: 2em;
+
+  a {
+    color: $c2;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($c2, 10%);
+      text-decoration: underline;
+    }
+  }
+}
+
+// Ribbon
+.ribbon {
+  display: grid;
+  /*  font-size: 15px;*/
+  background-color: lighten($c0,20%);
+  grid-gap: 1px;
+  grid-template-columns: repeat(3, 1fr) 1em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  width: 100%;
+}
+
+.ribbon__element {
+  background-color: $c1;
+  color: $c9;
+  font-size: 1.2em;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.333em;
+  padding: 0.667em 0.667em 0.667em 1.333em;
+  position: relative;
+  text-decoration: none;
+
+  &:nth-child(1) {
+    background-color: $c1;
+    z-index: 3;
+  }
+
+  &:nth-child(2) {
+    background-color: $c2;
+    z-index: 2;
+  }
+
+  &:nth-child(3) {
+    background-color: $c3;
+    z-index: 1;
+  }
+
+  .ribbon--alpha & {
+    &:before {
+      border-bottom: 1.333em solid transparent;
+      border-left: 0.667em solid $c9;
+      border-top: 1.333em solid transparent;
+      bottom: 0;
+      content: '';
+      height: 0;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 0;
+    }
+
+    &:after {
+      border-bottom: 1.333em solid transparent;
+      border-left: 0.667em solid;
+      border-top: 1.333em solid transparent;
+      bottom: 0;
+      content: '';
+      height: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateX(0.667em);
+      width: 0;
+    }
+
+    &:nth-child(1) {
+      &:after {
+        border-left-color: $c1;
+      }
+    }
+
+    &:nth-child(2) {
+      &:after {
+        border-left-color: $c2;
+      }
+    }
+
+    &:nth-child(3) {
+      &:after {
+        border-left-color: $c3;
+      }
+    }
+  }
+
+  &:hover,
+  &:active {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    box-shadow: 0 -3px 0 0 $c0 inset;
+    outline: none;
+  }
+
+  &:visited {
+    color: $c9;
+  }
+}

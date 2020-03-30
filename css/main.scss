@@ -1984,5 +1984,7 @@ footer p, footer a {
 %vertical-rhythm {
     margin-bottom: 0.7em;
 }
+
+@import "breadcrumbs" ;
 @import "syntax-highlighting-qwan" ;
 @import "qwan-overrides" ;
