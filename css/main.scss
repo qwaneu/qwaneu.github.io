@@ -979,8 +979,8 @@ blockquote p {
 
 .name-plain {
   background-color: black;
-  padding-left: 2em;
-  padding-right: 2em;
+ /*  padding-left: 2em;
+  padding-right: 2em; */
   padding-bottom: 0.5em;
   padding-top: 0.5em;
 }
@@ -1021,9 +1021,8 @@ blockquote p {
 }
 
 .header-plain {
-  /* grid-template-columns: 5em auto;
-   display: grid; */
   background-color: black;
+  align-items: center;
 }
 
 body.plain {
@@ -1041,8 +1040,6 @@ body.plain {
 
 nav.mainmenu-plain  {
   background-color: black;
-  padding-left: 2em;
-  padding-right: 2em;
 }
 
 .mainmenu-plain ul {
@@ -1052,6 +1049,7 @@ nav.mainmenu-plain  {
   row-gap: 2em;
   column-gap: 1em;
   margin-bottom: 0em;
+  padding-left: 0em; /* for some reason it is 40px otherwise, which means the items are not centered properly. The  */
 }
 
 .mainmenu-plain li {
