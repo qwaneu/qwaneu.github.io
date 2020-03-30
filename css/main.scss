@@ -1026,8 +1026,9 @@ blockquote p {
 }
 
 .header-plain {
-  grid-template-columns: 5em auto;
-  display: grid;
+  /* grid-template-columns: 5em auto;
+   display: grid; */
+  background-color: black;
 }
 
 body.plain {
