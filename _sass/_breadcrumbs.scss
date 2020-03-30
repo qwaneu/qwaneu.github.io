@@ -8,22 +8,6 @@ $c2: lighten($c0, 10%);
 $c3: lighten($c0, 15%);
 $c9: #fff;
 
-h1,
-h3,
-p {
-  margin-top: 2em;
-
-  a {
-    color: $c2;
-    text-decoration: none;
-
-    &:hover {
-      color: darken($c2, 10%);
-      text-decoration: underline;
-    }
-  }
-}
-
 // Ribbon
 .ribbon {
   display: grid;
@@ -41,7 +25,7 @@ p {
   background-color: $c1;
   color: $c9;
   font-size: 1.2em;
-  font-weight: 700;
+  /* font-weight: 700; */
   letter-spacing: 0.01em;
   line-height: 1.333em;
   padding: 0.667em 0.667em 0.667em 1.333em;
