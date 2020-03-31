@@ -1015,11 +1015,19 @@ body.plain {
   margin-right: 0em;
 }
 
-.h3-plain {
+h3.plain {
     font-size: 1.4em;
     line-height: inherit;
     font-weight: normal;
-  }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: auto;
+    }
+}
 
 nav.mainmenu-plain  {
   background-color: black;
