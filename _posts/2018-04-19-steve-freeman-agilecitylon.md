@@ -2,7 +2,7 @@
 layout: post
 title:  Liveblog - Steve Freeman, where have we been, where are we going
 author: Willem
-image: /attachments/blogposts/2018/feature-toggles.jpg
+image: /attachments/blogposts/2018/feature-toggle.jpeg
 ---
 
 * Experiment
