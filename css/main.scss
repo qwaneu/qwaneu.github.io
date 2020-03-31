@@ -998,24 +998,6 @@ blockquote p {
   color: lightgrey;
 }
 
-.header-plain a.current {
-  font-weight: bolder;
-}
-
-.mainmenu-plain li {
-  align-items: center;
-  justify-content: center;
-  display: grid;
-  padding-bottom: 1.5em;
-  padding-top: 1em;
-}
-
-.header-plain div {
-  align-items: center;
-  justify-content: center;
-  display: grid;
-}
-
 .name-plain a {
   font-size: 140%;
 }
@@ -1040,24 +1022,18 @@ body.plain {
 
 nav.mainmenu-plain  {
   background-color: black;
-}
-
-.mainmenu-plain ul {
   background-color: black;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(5em, max-content));
   row-gap: 2em;
   column-gap: 1em;
   margin-bottom: 0em;
   padding-left: 0em; /* for some reason it is 40px otherwise, which means the items are not centered properly. The  */
 }
 
-.mainmenu-plain li {
+.mainmenu-plain a {
   padding-top: 0.5em;
   padding-bottom: 1em;
-}
-
-.mainmenu-plain a {
   font-size: 120%;
 }
 
