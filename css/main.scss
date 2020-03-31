@@ -979,8 +979,9 @@ blockquote p {
 
 .name-plain {
   background-color: black;
- /*  padding-left: 2em;
-  padding-right: 2em; */
+  padding-left: 1em;
+  padding-right: 2em;
+  float: left;
   padding-bottom: 0.5em;
   padding-top: 0.5em;
 }
