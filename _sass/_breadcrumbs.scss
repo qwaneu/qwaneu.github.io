@@ -19,15 +19,15 @@ $visited-colour: #eee ;// off-white
   grid-template-columns: repeat(3, 1fr) 1em;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 1em;
+  margin-top: auto;
   width: 100%;
 }
 
 .ribbon__element {
   background-color: $c1;
   color: $breadcrumb-text;
-  font-size: 1.2em;
-  /* font-weight: 700; */
+  font-size: 1.1em;
+  font-weight: 700;
   letter-spacing: 0.01em;
   line-height: 1.333em;
   padding: 0.667em 0.667em 0.667em 1.333em;
