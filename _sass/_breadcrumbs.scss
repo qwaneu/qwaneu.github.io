@@ -1,18 +1,18 @@
 
 
 
-// Variables
+// Colour definitions
 $c0: black;
 $c1: lighten($c0, 5%);
 $c2: lighten($c0, 10%);
 $c3: lighten($c0, 15%);
-$c9: #d1d1d2;
+$triangle-colour: #d1d1d2;
 $breadcrumb-text: white;
+$visited-colour: #eee ;// off-white
 
 // Ribbon
 .ribbon {
   display: grid;
-  /*  font-size: 15px;*/
   background-color: lighten($c0,20%);
   grid-gap: 1px;
   grid-template-columns: repeat(3, max-content) 1em;
@@ -51,7 +51,7 @@ $breadcrumb-text: white;
   .ribbon--alpha & {
     &:before {
       border-bottom: 1.333em solid transparent;
-      border-left: 0.667em solid $c9;
+      border-left: 0.667em solid $triangle-colour;
       border-top: 1.333em solid transparent;
       bottom: 0;
       content: '';
@@ -107,6 +107,6 @@ $breadcrumb-text: white;
   }
 
   &:visited {
-    color: $eee;
+    color: $visited-colour;
   }
 }
