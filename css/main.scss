@@ -52,7 +52,7 @@ Grey #ECF0F1
 }
 
 a {
-  color:#1abc9c;
+  color: #006f33;
 }
 
 a:hover {
@@ -70,7 +70,7 @@ a, img, .overlay, input, textarea, .plan-wrap p, .filters .filter {
 body {
   font-size: 1em;
   line-height: 1.7em;
-  color: #777777;
+  color: #1c1c1c;
   font-weight: normal;
 }
 
@@ -1513,8 +1513,8 @@ footer p, footer a {
 .footer-widget li {
   position: relative;
   padding: .6em 0;
-  color: #1abc9c;
-  list-style-type: disc;
+  color: #20ffd3;
+  list-style-type: none;
 }
 
 .footer-widget li:first-child {
@@ -1974,6 +1974,7 @@ footer p, footer a {
 %vertical-rhythm {
     margin-bottom: 0.7em;
 }
+
 
 @import "breadcrumbs" ;
 @import "syntax-highlighting-qwan" ;
