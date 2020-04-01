@@ -861,48 +861,55 @@ blockquote p {
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
           border-radius: 5px;
-  background: #fff;
+          background: #fff;
+
+   .post-header {
+     margin-left: 2em;
+   }
+   h1 {
+     margin-top: 0em;
+     margin-bottom: 1em;
+   }
+   img {
+     width: auto;
+     max-width: 100%;
+     margin-bottom: 1.5em;
+   }
+
+   .post-meta {
+     margin-bottom: 1.5em;
+   }
+
+   .post-meta li {
+     display: inline-block;
+   }
+
+   .post-meta li a {
+     margin: 0 20px 0 4px;
+   }
+
+   .post-meta li:last-child a {
+     margin-right: 0;
+   }
+
+   .post-meta i {
+     color:#1abc9c;
+   }
+
+   .post {
+     padding: .2em 2em;
+   }
+
+   .entry-title {
+     margin: 1em 0 .5em;
+   }
+
+   p {
+     text-align: left;
+     line-height: 2em;
+   }
 }
 
-.post-wrap img {
-  width: auto;
-  max-width: 100%;
-  margin-bottom: 1.5em;
-}
-
-.post-wrap .post-meta {
-  font-size: .8em;
-  margin-bottom: 1.5em;
-}
-
-.post-wrap .post-meta li {
-  display: inline-block;
-}
-
-.post-wrap .post-meta li a {
-  margin: 0 20px 0 4px;
-}
-
-.post-wrap .post-meta li:last-child a {
-  margin-right: 0;
-}
-
-.post-wrap .post-meta i {
-  color:#1abc9c;
-}
-
-.post-wrap .post {
-  padding: .2em 2em;
-}
-
-.post-wrap .entry-title {
-  margin: 1em 0 .5em;
-}
-
-.post-wrap p {
-  text-align: left;
-  line-height: 2em;
-}
 
 .post p {
   text-align: left;

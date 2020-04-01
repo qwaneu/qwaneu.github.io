@@ -1,21 +1,26 @@
 ---
-layout: default
+layout: accessibletwo
 ---
-{% include header.html baseurl="/" %}
+{% include header_clean.html baseurl="/" %}
 
-{% include other-page-top-section.html %}
 
 <div class="wrap">
   <div class="grid grid-pad">
     <div class="col-1-1">
       <article class="post-wrap" itemscope itemtype="http://schema.org/BlogPosting">
         <header class="post-header .entry-title">
+          <h1>{{ page.title }}</h1>
           <p class="post-meta">
           <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
             {% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <span itemprop="name">{{ page.author }}</span></span>
+                <span itemprop="name">{{ page.author }}.</span></span>
             {% endif %}
-            <span><a href="/feed.xml"><img class="feed-icon" src="/images/feed-icon-24x24.png"></a></span>
+            <div>
+              <a href="/feed.xml">
+                <img class="feed-icon" src="/images/feed-icon-24x24.png" alt="">
+                Subscribe to the RSS feed.
+              </a>
+            </div>
             </p>
         </header>
 
@@ -43,8 +48,9 @@ layout: default
 
     <div class="col-1-1">
       <p class="feed"><br/>
-      <a href="/feed.xml"><img class="feed-icon" src="/images/feed-icon-32x32.png"></a>
-        <a href="/feed.xml"> Subscribe to QWAN's feed - Systemic Thinking for Sustainable Development</a></p>
+      <a href="/feed.xml"><img class="feed-icon" src="/images/feed-icon-32x32.png" alt="">
+      Subscribe to our RSS feed.</a>
+      </p>
     </div>
   </div>
 </div>
