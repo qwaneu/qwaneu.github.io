@@ -984,6 +984,14 @@ blockquote p {
   float: left;
   padding-bottom: 0.5em;
   padding-top: 0.5em;
+  a {
+    font-size: 140%;
+    width: 4em;
+  }
+}
+
+.name-plain img {
+  width: 4em;
 }
 
 .header-plain a {
@@ -999,9 +1007,6 @@ blockquote p {
   color: lightgrey;
 }
 
-.name-plain a {
-  font-size: 140%;
-}
 
 .header-plain {
   background-color: black;
