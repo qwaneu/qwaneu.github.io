@@ -1,28 +1,39 @@
 ---
-layout: other
-title: Systemic Thinking for Sustainable Development - blog
+layout: accessibletwo
+title: Reflections - Blog
 ---
 
-<div class="wrap blog-grid " id="blog">
-  <div class="grid grid-pad">
-    <div class="content" >
-      {% for post in site.posts %}
-      <div class="col-1-2" >
-        <article class="post-wrap">
-<!--          <div class="post-img">
-            <a href="#0"><img src="images/post/post-n1.jpg" alt=""></a>
-          </div>-->
-          <div class="post">
-            <h2 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-            <div class="post-meta">
-              <a href="{{ post.url }}">{{ post.date | date_to_long_string }}</a> <span class="mid-sep">·</span> <a href="{{ post.url }}">{{ post.title }}</a>
-            </div>
-            <p>{{ post.excerpt }}</p>
-            <a class="btn read-more" href="{{ post.url }}">Read More</a>
-          </div>
-        </article>
-      </div>
-      {% endfor %}
-    </div>
+{% include header_clean.html %}
+<div style="margin-left: 2em;">
+  <h1 style="margin-bottom: 0em;">{{page.title}}</h1>
+  <div class="feed"><br/>
+    <a href="/feed.xml"><img class="feed-icon" src="/images/feed-icon-24x24.png" alt="">
+      Subscribe to our RSS feed.</a>
   </div>
 </div>
+<div>
+<div class="content grid-pad contact blogsummary-grid" >
+  {% for post in site.posts %}
+  <div class="anarticle" >
+    <article >
+      <div >
+        <h3 class="plain"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <div class="blog-summary-img">
+            <img src="{{post.image}}" alt="">
+          </div>
+        <div class="post-meta">
+          <a href="{{ post.url }}">{{ post.date | date_to_long_string }}</a></a>
+        </div>
+        <p>{{ post.excerpt }}</p>
+        <a href="{{ post.url }}">Read More</a>
+    </article>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="feed"><br/>
+  <a href="/feed.xml"><img class="feed-icon" src="/images/feed-icon-24x24.png" alt="">
+    Subscribe to our RSS feed.</a>
+</div>
+{% include curvedown.html %}
+{% include footer.html %}
