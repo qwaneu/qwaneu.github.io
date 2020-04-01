@@ -1568,7 +1568,11 @@ footer p, footer a {
 
   a {
     color: white;
-    font-size: 1em;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 
   i {
@@ -1984,7 +1988,7 @@ footer p, footer a {
     margin-bottom: 0.7em;
 }
 
-
+@import "icomoon";
 @import "breadcrumbs" ;
 @import "syntax-highlighting-qwan" ;
 @import "qwan-overrides" ;
