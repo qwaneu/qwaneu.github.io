@@ -21,11 +21,14 @@ mentoring). This seems to be working out well.
 
 QWAN was already distributed, and now work even more asynchnonously.
 
-I'm working half-time, my partner works the other half, scheduling my time
-around her meetings. After my previous large project ended, I decided to spend
-more time with our three year old, before he goes to school in September. I'm
-now spending even more time with him. He misses nursery, like his big sister
-misses school, but he also enjoys spending time with us.
+I'm working half-time, my partner works the other half. I schedule my time
+around her meetings, and she tries to keep the mornings available, because that
+is when I tend to get most things done. After my previous large project ended, I
+decided to spend more time with our three year old, before he goes to school in
+September. I'm now spending even more time with him, and I am not complaining.
+He misses nursery, like his big sister misses school, but he also enjoys
+spending time with us. They are great, occasionaly challenging and fun company
+to have.
 
 Before we went into self-isolation a month ago, I thought about what I wanted,
 and what I could do. I'm still thinking about that, while doing what I came up
