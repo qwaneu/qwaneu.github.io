@@ -1,10 +1,11 @@
 ---
-title: Contact form spike
-layout: accessible
+title: Contact
+layout: default
 ---
-{% include header.html %}
+{% include header_clean.html %}
+<div class="wrap">
 <div class="content contact grid-pad" id="contact">
-    <h2>Contact</h2>
+    <h2>{{page.title}}</h2>
     <h3>Talk to us</h3>
     <p>We’re feedback addicts...let's start a conversation!</p>
     <div class="contactus-grid"  >
@@ -69,5 +70,7 @@ layout: accessible
         </div>
     </div>
 </div>
+</div>
 
+{% include curvedown.html %}
 {% include footer.html %}
