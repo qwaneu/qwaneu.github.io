@@ -12,14 +12,19 @@ layout: accessibletwo
           <h1>{{ page.title }}</h1>
           <p class="post-meta">
           <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
-            {% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          {% if page.author %}
+                • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                 <span itemprop="name">{{ page.author }}.</span></span>
-            {% endif %}
+                {% endif %}
+          {% if page.tags %}
+                • <span>Tags: {{ page.tags | join: ', ' | escape }}</span>
+          {% endif %}
             <div>
               <a href="/feed.xml">
                 <img class="feed-icon" src="/images/feed-icon-24x24.png" alt="">
                 Subscribe to the RSS feed.
               </a>
+              <p>Live reloading</p>
             </div>
             </p>
         </header>
