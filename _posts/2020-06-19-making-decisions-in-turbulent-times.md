@@ -10,7 +10,8 @@ author: Willem van den Ende
 
 I enjoyed watching [Container Solutions](https://www.container-solutions.com/a-pattern-language-for-strategy)' [Jamie Dobson](https://twitter.com/JamieDobson) present an introduction to
 their [pattern language for strategy yesterday](https://www.container-solutions.com/a-pattern-language-for-strategy), titled "A
-framework for strategy, making decisions in turbulent times".
+framework for strategy, making decisions in turbulent times". I recommend [viewing the recording, 'A Pattern Language for Strategy'](https://www.youtube.com/watch?v=a10_sWM_VuI&feature=youtu.be). Below are my main takeaways.
+
 
 # Table of Contents
 
@@ -23,7 +24,6 @@ framework for strategy, making decisions in turbulent times".
 <a id="orgb0e26fc"></a>
 # A framework for strategy
 
-I recommend  [viewing the recording, 'A Pattern Language for Strategy'](https://www.youtube.com/watch?v=a10_sWM_VuI&feature=youtu.be).
 
 At QWAN patterns are in our [DNA](https://wiki.c2.com/?QualityWithoutaName), and I'm learning about strategy, so this talk
 fits.
