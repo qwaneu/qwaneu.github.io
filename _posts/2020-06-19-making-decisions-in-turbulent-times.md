@@ -82,7 +82,7 @@ What hadn't dawned on me, even with the visual, right there, in _each of the pat
 that one can represent [No Regret Moves](http://www.cnpatterns.org/strategy-risk-reduction/no-regret-moves), [Options and Hedges](http://www.cnpatterns.org/strategy-risk-reduction/options-and-hedges) and [Big Bets](http://www.cnpatterns.org/strategy-risk-reduction/big-bet) as a
 funnel.
 
-![img](http://www.cnpatterns.org/assets/images/No%20regret%20move.png)
+![Funnel of gambles, described below](http://www.cnpatterns.org/assets/images/No%20regret%20move.png)
 
 The picture shows a narrowing funnel, with more things done in the earlier
 stages and fewer later:
