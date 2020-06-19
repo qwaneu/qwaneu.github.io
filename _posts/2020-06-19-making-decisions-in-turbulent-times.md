@@ -85,9 +85,13 @@ funnel.
 ![img](http://www.cnpatterns.org/assets/images/No%20regret%20move.png)
 
 The picture shows a narrowing funnel, with more things done in the earlier
-stages and fewer later. Experiments on the left are the mechanism for No Regret Moves,
-Proofs of Concept to execute Options and Hedges, and Minimal Viable Products for
-Big Bets. Each item gets more expensive as one moves to the right.
+stages and fewer later:
+
+- _Experiments_ on the left are the mechanism for No Regret Moves,
+- _Proofs of Concept_ to execute Options and Hedges,
+- and _Minimum Viable Products_ for Big Bets.
+
+Each item gets more expensive as one moves to the right of the narrowing funnel.
 
 The funnel is shown in each pattern. Sometimes I need to
 see, read, and hear things a few times before they settle.
@@ -97,9 +101,9 @@ thing. From there on, we can do small, slightly riskier, investments, with
 Options and Hedges, and then we have to muster our courage, and do a Big Bet.
 
 There is a trap in seeing no regret moves as incremental change only. No regret
-moves also includes work that doesn't increment a thing. An experiment gives us
-information about what is possible, what we or competitors might do in the
-future, and what is around us, but doesn't necessarily move us forward.
+moves also includes work that doesn't increment a thing, or, on the contrary, informs us that we should _not_ do a thing. An experiment gives us
+information about what is possible, what we or our competitors might do in the
+future, and what is around us. It doesn't necessarily move us forward.
 
 <a id="theresalotofopportunity"></a>
 # Don't miss opportunities
@@ -109,4 +113,4 @@ afterwards, Jamie said: "People who are timid favor incremental change, and may
 miss big opportunities."
 
 I have a tendency to be timid, maybe that is why I tend to favor incremental
-change. I've got some work to do.
+change. I've got work to do.
