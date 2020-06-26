@@ -41,5 +41,5 @@ More Knowledge results in more [Proofs of Concept](https://www.cnpatterns.org/or
 ![Diagram of effects, described above](/attachments/blogposts/2020/ExperimentsMove.svg)
 
 There are of course other ways of lowering the cost per experiment, and limiting
-factors. For instance, success is its own worst enemy - do more Proof of
-Concepts, have less time or staff available for experiments.
+factors. For instance, success is its own worst enemy: do more Proof of
+Concepts, have less capacity for experiments.
