@@ -36,7 +36,7 @@ This pattern language is also available as
 There is much to say about it, but following Bias to Action, I've set myself a
 deadline and will post my first takeaways.
 
-Bias to Action was mentioned in the presentation, but [is could not find it as a pattern (yet?)](http://www.cnpatterns.org/strategy-risk-reduction).
+Bias to Action was mentioned in the presentation, but [I could not find it as a pattern (yet?)](http://www.cnpatterns.org/strategy-risk-reduction).
 
 The titles below taken from the presentation slides or the e-book.
 
