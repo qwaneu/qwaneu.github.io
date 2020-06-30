@@ -11,7 +11,7 @@ author: Willem van den Ende
 Even when it doesn't feel like it.
 
 In [the previous post](https://www.qwan.eu/2020/06/19/making-decisions-in-turbulent-times.html), I was wondering where **Bias to Action** was as a pattern.
-While we were discussing experiments in that post, a colleague remarked:
+While we were discussing experiments in that post, Ralph McArdell remarked:
 
 "I would also argue that any decent experiment moves you forward as you gain
 knowledge from the experiment."
