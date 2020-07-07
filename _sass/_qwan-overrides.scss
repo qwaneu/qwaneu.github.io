@@ -39,6 +39,14 @@ em {
     margin-top: 0.8em;
     margin-bottom: 0.5em;
   }
+
+  blockquote > :first-child {
+    margin-top: 0;
+  }
+  blockquote {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
 }
 .accessiblepost {
   font-size: 120%;

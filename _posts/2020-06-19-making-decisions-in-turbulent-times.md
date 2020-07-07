@@ -21,9 +21,7 @@ framework for strategy, making decisions in turbulent times". I recommend [viewi
 4.  [Getting ready to gamble](#org17b59d7)
 5.  [Don't miss opportunities](#theresalotofopportunity)
 
-<a id="orgb0e26fc"></a>
-# A framework for strategy
-
+# <a id="orgb0e26fc"></a>A framework for strategy
 
 At QWAN patterns are in our [DNA](https://wiki.c2.com/?QualityWithoutaName), and I'm learning about strategy, so this talk
 fits.
@@ -40,8 +38,8 @@ Bias to Action was mentioned in the presentation, but [I could not find it as a 
 
 The titles below taken from the presentation slides or the e-book.
 
-<a id="org8d43407"></a>
-# Strategy is a process
+
+# <a id="org8d43407"></a>Strategy is a process
 
 "Strategy is a process, Strategy is not a plan or an edict handed down from on high, but rather the
 cumulative results of many, many actions"
@@ -56,9 +54,7 @@ low.
 I like the focus here, it takes patience and time. And you have to work
 it. Together.
 
-<a id="orgbde66e3"></a>
-
-# Characteristics of the Strategist
+# <a id="orgbde66e3"></a>Characteristics of the Strategist
 
 The strategist has four characteristics:
 
@@ -74,9 +70,7 @@ understanding of reality is food for thought. That was one complex reality.
 Voice: "It’s no good imagining what can be, understanding reality, and
 representing your people if you cannot speak."
 
-
-<a id="org17b59d7"></a>
-# Getting ready to gamble
+# <a id="org17b59d7"></a>Getting ready to gamble
 
 What hadn't dawned on me, even with the visual, right there, in _each of the patterns_, was
 that one can represent [No Regret Moves](http://www.cnpatterns.org/strategy-risk-reduction/no-regret-moves), [Options and Hedges](http://www.cnpatterns.org/strategy-risk-reduction/options-and-hedges) and [Big Bets](http://www.cnpatterns.org/strategy-risk-reduction/big-bet) as a
@@ -105,8 +99,7 @@ moves also includes work that doesn't increment a thing, or, on the contrary, in
 information about what is possible, what we or our competitors might do in the
 future, and what is around us. It doesn't necessarily move us forward.
 
-<a id="theresalotofopportunity"></a>
-# Don't miss opportunities
+# <a id="theresalotofopportunity"></a>Don't miss opportunities
 
 Discussing on the difference between incremental change and No Regret Moves
 afterwards, Jamie said: "People who are timid favor incremental change, and may
