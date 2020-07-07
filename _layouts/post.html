@@ -11,22 +11,21 @@ layout: accessibletwo
         <header class="post-header .entry-title">
           <h1>{{ page.title }}</h1>
           <p class="post-meta">
-          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+            <span><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></span>
           {% if page.author %}
-                • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <span itemprop="name">{{ page.author }}.</span></span>
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">{{ page.author }}</span>
                 {% endif %}
           {% if page.tags %}
-                • <span>Tags: {{ page.tags | join: ', ' | escape }}</span>
+            <span>Tags: {{ page.tags | join: ', ' | escape }}</span>
                 {% endif %}
-
-            <div>
-              <a href="/feed.xml">
-                <img class="feed-icon" src="/images/feed-icon-24x24.png" alt="">
-                Subscribe to the RSS feed.
-              </a>
-            </div>
-            </p>
+            <span>
+                  <a href="/feed.xml">
+                    Subscribe to the RSS feed
+                    <img class="feed-icon" src="/images/feed-icon-24x24.png" alt="">
+                  </a>
+            </span>
+          </p>
         </header>
 
         <div class="post" itemprop="articleBody">

@@ -48,6 +48,19 @@ em {
     margin-bottom: 0.5em;
   }
 }
+
+.post-wrap .post-meta {
+  .feed-icon {
+    vertical-align: top;
+  }
+  span {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+  margin-bottom: 0;
+  line-height: normal;
+}
+
 .accessiblepost {
   font-size: 120%;
   ul {
