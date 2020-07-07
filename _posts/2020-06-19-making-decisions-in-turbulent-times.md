@@ -34,7 +34,7 @@ This pattern language is also available as
 There is much to say about it, but following Bias to Action, I've set myself a
 deadline and will post my first takeaways.
 
-Bias to Action was mentioned in the presentation, but [I could not find it as a pattern (yet?)](http://www.cnpatterns.org/strategy-risk-reduction).
+Bias to Action was mentioned in the presentation, but [I could not find it as a pattern (yet?)](https://www.cnpatterns.org/strategy-risk-reduction).
 
 The titles below taken from the presentation slides or the e-book.
 
@@ -73,10 +73,10 @@ representing your people if you cannot speak."
 # <a id="org17b59d7"></a>Getting ready to gamble
 
 What hadn't dawned on me, even with the visual, right there, in _each of the patterns_, was
-that one can represent [No Regret Moves](http://www.cnpatterns.org/strategy-risk-reduction/no-regret-moves), [Options and Hedges](http://www.cnpatterns.org/strategy-risk-reduction/options-and-hedges) and [Big Bets](http://www.cnpatterns.org/strategy-risk-reduction/big-bet) as a
+that one can represent [No Regret Moves](https://www.cnpatterns.org/strategy-risk-reduction/no-regret-moves), [Options and Hedges](https://www.cnpatterns.org/strategy-risk-reduction/options-and-hedges) and [Big Bets](https://www.cnpatterns.org/strategy-risk-reduction/big-bet) as a
 funnel.
 
-![Funnel of gambles, described below](http://www.cnpatterns.org/assets/images/No%20regret%20move.png)
+![Funnel of gambles, described below](https://www.cnpatterns.org/assets/images/No%20regret%20move.png)
 
 The picture shows a narrowing funnel, with more things done in the earlier
 stages and fewer later:
