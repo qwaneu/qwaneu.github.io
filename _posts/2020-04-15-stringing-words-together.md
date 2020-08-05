@@ -19,7 +19,7 @@ Marc and Rob are working with an existing client, turning everything they did
 on-site into distributed activities (e.g. running a course program, workshops,
 mentoring). This seems to be working out well.
 
-QWAN was already distributed, and now work even more asynchnonously.
+QWAN was already distributed, and now work even more asynchronously.
 
 I'm working half-time, my partner works the other half. I schedule my time
 around her meetings, and she tries to keep the mornings available, because that
@@ -50,8 +50,7 @@ As [Jamie Dobson and Pini Reznik write in a Pattern language for Strategy](https
 > first, highly uncertain moments of new initiatives.
 
 Both writing and working on the QWAN site can be done in small steps, which is
-handy given the blocks available are small, and interruptible, and
-interruptible. My product development work seems to need larger chunks of time,
+handy given the blocks available are small, and interruptible. My product development work seems to need larger chunks of time,
 despite my best efforts to make it not so. That makes it is a less good fit at
 the moment. Work is optional, because I've made it so that, even though it is a
 web service, it keeps humming along without work on my part.

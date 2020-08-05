@@ -59,7 +59,7 @@ a:hover {
   color: #16a085;
 }
 
-a, img, .overlay, input, textarea, .plan-wrap p, .filters .filter {
+img, .overlay, input, textarea, .plan-wrap p, .filters .filter {
 /*transition*/
   -webkit-transition: all .12s linear;
      -moz-transition: all .12s linear;
@@ -184,7 +184,7 @@ blockquote p {
   background: #16a085;
 }
 
-.btn:hover, .social-set a:hover, .team-social a i:hover, .header-carousel .owl-buttons .owl-prev:hover, .header-carousel .owl-buttons .owl-next:hover {
+.social-set a:hover, .team-social a i:hover, .header-carousel .owl-buttons .owl-prev:hover, .header-carousel .owl-buttons .owl-next:hover {
   -webkit-animation: rubberBand .8s 1;
      -moz-animation: rubberBand .8s 1;
        -o-animation: rubberBand .8s 1;
@@ -333,13 +333,6 @@ blockquote p {
   text-indent: -9999px;
   background: url(/images/logo.png) no-repeat;
   background-size: 600px 71px;
-}
-
-.logo:hover, .logo:focus {
-  -webkit-animation: rubberBand 0.5s 1;
-     -moz-animation: rubberBand 0.5s 1;
-       -o-animation: rubberBand 0.5s 1;
-          animation: rubberBand 0.5s 1;
 }
 
 .header-default {
