@@ -6,7 +6,9 @@ em {
   ul {
     margin-bottom: 0.7em;
     list-style: disc;
-    text-indent: 1em;
+  }
+  li {
+    list-style-position: outside;
   }
   ol {
     list-style: decimal;
@@ -53,6 +55,23 @@ em {
   }
   .post-image-50 img {
     width: 50%;
+  }
+
+  aside {
+    border-radius: 10px;
+    background-color: gainsboro;
+    margin: 2em 1em 1em 1em;
+    padding: 1em 1.5em 1em 1.5em;
+  }
+
+  aside a {
+    padding: 0.5em 1.5em;
+    background-color: #1abc9c;
+    text-decoration: none;
+    color: white;
+  }
+  aside a:hover {
+    background-color: #16a085;
   }
 }
 
