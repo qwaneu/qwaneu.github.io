@@ -1,5 +1,5 @@
 ---
-layout: other
+layout: page
 title: Our privacy policy
 ---
 
@@ -15,7 +15,19 @@ Give us a shout if you'd like to update your details or have them removed.
 
 ### Cookies
 
-Our website only uses cookies for enabling the Google Forms based contact form and for analytics, so that we can improve our website based on how it is used.
+Our website only uses cookies for enabling the Google Forms based contact form and for analytics ([Google Analytics](https://policies.google.com/technologies/partner-sites)), so that we can improve our website based on how it is used. The following cookies are used for the stated purposes:
+
+<table class="cookie-table">
+<tr><th class="cookie-table-cell">Cookie name</th><th class="cookie-table-cell">Purpose</th></tr>
+<tr>
+  <td class="cookie-table-cell">cookieconsent_status</td>
+  <td class="cookie-table-cell">track your cookie consent status</td>
+</tr>
+<tr>
+  <td class="cookie-table-cell">_ga<br>_gid<br>_gat_gtag_UA_175095301_1</td>
+  <td class="cookie-table-cell">Google Analytics, collect page view statistics</td>
+</tr>
+</table>
 
 ### The finer print
 
@@ -26,7 +38,7 @@ The personal information we collect is used by the [partners in QWAN](/about) - 
 - providing after-care once a project or training course has been finished,
 - managing your participation in events we organize,
 - handling your orders from our web shop,
-- keeping you up to date about what we're up to and interesting developments and services we have to offer - if you have explicitly granted us permission
+- keeping you up to date about what we're up to - if you have granted us permission
 
 We will not use your personal information for any other purpose.
 
@@ -42,4 +54,3 @@ You are also entitled to have your personal information removed from our systems
 We will keep project & training related personal information up to 2 years after finishing a project, to provide proper after-care. We are required by law to keep contact information for invoicing & orders for 7 years. If you have granted us permission to keep you up to date, we will keep your contact information until you revoke the permission.
 
 We will take care of your personal information by applying appropriate security measures, like password protection and encryption.
-
