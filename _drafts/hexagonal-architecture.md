@@ -93,8 +93,16 @@ Hexagonal Architecture
 
 - Highly recommended: [Growing Object Oriented Software guided by Tests](http://www.growing-object-oriented-software.com/) book by Steve Freeman & Nat Pryce. They use Ports & Adapters.
 - The [original article on Hexagonal Architecture](https://alistair.cockburn.us/hexagonal-architecture/) by Alistair Cockburn
-- An insightful presentation by Alistair Cockburn from 2017, on the history and the considerations that led to the Hexagonal Architecture: [part 1](https://www.youtube.com/watch?v=th4AgBcrEHA&t=4s), [part 2](https://www.youtube.com/watch?v=iALcE8BPs94), [part 3](https://www.youtube.com/watch?v=DAe0Bmcyt-4)
+- Insightful presentation by Alistair Cockburn from 2017, on the history and the considerations that led to the Hexagonal Architecture: [part 1](https://www.youtube.com/watch?v=th4AgBcrEHA&t=4s), [part 2](https://www.youtube.com/watch?v=iALcE8BPs94), [part 3](https://www.youtube.com/watch?v=DAe0Bmcyt-4)
 - Erwan Alliaume, Sébastien Roccaserra, [Hexagonal Architecture: three principles and an implementation example](https://blog.octo.com/en/hexagonal-architecture-three-principles-and-an-implementation-example/)
 - Thomas Pierrain, [Hexagonal architecture: don't get lost on your right-side](https://tpierrain.blogspot.com/2020/03/hexagonal-architecture-dont-get-lost-on.html) 
 - Tobias Goeschel, [Hexagon, Schmexagon? – Part 1](https://blog.codecentric.de/en/2020/07/hexagon-schmexagon-1/) - nice write up about Hexagonal Architecture linking it to Domain Driven Design
 - More on the Repository pattern and more: [David Garlan & Mary Shaw, An Introduction to Software Architecture (1994)](http://www.cs.cmu.edu/afs/cs/project/vit/ftp/pdf/intro_softarch.pdf) (PDF)
+
+<aside>
+  <h3>Want to learn more?</h3>
+  <p>We offer courses and workshops on Agile Engineering, Domain Driven Design and Hexagonal Architecture. </p>
+  <p><div>
+    <a href="/training">Learn more about our courses</a>
+  </div></p>
+</aside>
