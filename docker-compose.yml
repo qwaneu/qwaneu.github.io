@@ -8,4 +8,4 @@ services:
     ports:
       - '8082:4000'
       - '35729:35729'
-    command: bundle exec jekyll s --force-polling -H 0.0.0.0 -P 4000 --livereload
+    command: bundle exec jekyll s --drafts --force-polling -H 0.0.0.0 -P 4000 --livereload

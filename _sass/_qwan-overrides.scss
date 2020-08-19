@@ -6,7 +6,9 @@ em {
   ul {
     margin-bottom: 0.7em;
     list-style: disc;
-    text-indent: 1em;
+  }
+  li {
+    list-style-position: outside;
   }
   ol {
     list-style: decimal;
