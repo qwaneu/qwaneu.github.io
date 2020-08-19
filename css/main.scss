@@ -970,7 +970,7 @@ blockquote p {
 /* blog summary experiment */
 .blogsummary-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
   row-gap: 2em;
   column-gap: 2em;
   padding-left: 2em;
