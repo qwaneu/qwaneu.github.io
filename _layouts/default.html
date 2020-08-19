@@ -7,16 +7,36 @@ title: QWAN
 
   <body id="home">
        {{ content }}
+
+    <!-- Cookie consent - https://www.osano.com/cookieconsent/download/ --> 
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+        window.cookieconsent.initialise({
+         "palette": {
+           "popup": {
+             "background": "#edeff5",
+             "text": "#838391"
+           },
+           "button": {
+             "background": "#4b81e8"
+           }
+         },
+         "type": "opt-out",
+         "content": {
+           "href": "/privacy"
+         }
+       });
+    </script>
   </body>
-                <!-- JS -->
-                <script src="/js/jquery.js"></script>
-                <script src="/js/main.js"></script>
-                <script src="/js/mixitup.js"></script>
-                <script src="/js/smoothscroll.js"></script>
-                <script src="/js/jquery.nav.js"></script>
-                <script src="/js/owl-carousel/owl.carousel.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-                <script src="/js/jquery.counterup.min.js"></script>
-                <script src="/js/lightcase.min.js"></script>
-                <script src="/js/codescroll.js"></script>
+     <!-- JS -->
+     <script src="/js/jquery.js"></script>
+     <script src="/js/main.js"></script>
+     <script src="/js/mixitup.js"></script>
+     <script src="/js/smoothscroll.js"></script>
+     <script src="/js/jquery.nav.js"></script>
+     <script src="/js/owl-carousel/owl.carousel.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+     <script src="/js/jquery.counterup.min.js"></script>
+     <script src="/js/lightcase.min.js"></script>
+     <script src="/js/codescroll.js"></script>
 </html>
