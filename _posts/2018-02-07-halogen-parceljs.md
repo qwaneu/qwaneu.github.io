@@ -57,7 +57,7 @@ It appears I had got it working by accident, and when cleaning it up for this bl
 
 So `Main.purs` now has a `main` and a `rerunUI`, with some console logging so we can see which part is executing. Here is the final entry.js:
 
-```
+```javascript
 if(module.hot) {
   module.hot.accept(function () {
     console.log('hot module accepted');
