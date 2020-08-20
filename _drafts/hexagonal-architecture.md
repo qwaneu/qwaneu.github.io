@@ -22,7 +22,9 @@ We often used a layered architecture, with a small number of layers.  Dependenci
 
 Layers are not the only way to structure systems, but a layered architecture seems to be the default. This has probably its origins in the [ISO OSI model for networked systems](https://en.wikipedia.org/wiki/OSI_model), which has 7 layers from physical wires & waves up to the application.
 
-Layered systems tend to suffer from _gravity_: everything depends directly or transitively on the bottom layer, so we tend to think the bottom layer should be of very high quality. In our consulting practice, we see that in systems with a database or data layer on the bottom, everything tends to depend on the database entities, and the code base is a horror to work on.
+Layered systems can have several undesired consequences. Layered systems tend to suffer from _gravity_: everything depends directly or transitively on the bottom layer, so we tend to think the bottom layer should be very sturdy to carry all the weight of the layers on top. In one project Rob was a member of the 'Shared Code Base (SCB) Team'. The team (Rob included) felt very important. A tremendous amount of energy went in developing SCB features. Other teams had quite some trouble integrating SCB releases. And the SCB contained features that where never used. In hindsight, SCB efforts weren't very effective.
+
+Layered systems tend to suffer from leaking abstractions as well. In our consulting practice, we see that in systems with a database or data layer on the bottom, everything tends to depend on the database entities, and the code base is a horror to work on.
 
 ![Typical 3 layer application architecture with dependencies everywhere](/attachments/blogposts/2020/ef-deps-3.png)
 {: class="post-image" }
