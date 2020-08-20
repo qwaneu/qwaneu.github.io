@@ -11,7 +11,7 @@ Hexagonal Architecture, also known as Ports and Adapters, is getting quite a bit
 
 Hexagonal Architecture or Ports & Adapters is an architectural pattern that guides you in structuring a component/service/application and managing dependencies. **It is not a best practice!** A pattern solves a problem in a context, and therefore it comes with trade-offs. Hexagonal Architecture usually pays off in our experience. We have been applying and teaching it for 10+ years, and it has proved its worth.
 
-There are quite a few good reads about Hexagonal Architecture. We'd like to add our view and some of our experience with it. 
+There are quite a few good reads about Hexagonal Architecture. We'd like to add our view and some of our experience with it.
 
 ## What did we use before hexagons?
 
@@ -22,9 +22,19 @@ We often used a layered architecture, with a small number of layers.  Dependenci
 
 Layers are not the only way to structure systems, but a layered architecture seems to be the default. This has probably its origins in the [ISO OSI model for networked systems](https://en.wikipedia.org/wiki/OSI_model), which has 7 layers from physical wires & waves up to the application.
 
-Layered systems can have several undesired consequences. Layered systems tend to suffer from _gravity_: everything depends directly or transitively on the bottom layer, so we tend to think the bottom layer should be very sturdy to carry all the weight of the layers on top. In one project Rob was a member of the 'Shared Code Base (SCB) Team'. The team (Rob included) felt very important. A tremendous amount of energy went in developing SCB features. Other teams had quite some trouble integrating SCB releases. And the SCB contained features that where never used. In hindsight, SCB efforts weren't very effective.
+Layered systems can have several undesired consequences. Layered systems tend to
+suffer from _gravity_: everything depends directly or transitively on the bottom
+layer. This leads us to believe the bottom layer should be very sturdy to carry all
+the weight of the layers on top. In one project Rob was a member of the 'Shared
+Code Base (SCB) Team'. The team (Rob included) felt very important. A tremendous
+amount of energy went in developing SCB features. Other teams had quite some
+trouble integrating SCB releases. And the SCB contained features that where
+never used. In hindsight, SCB efforts weren't very effective.
 
-Layered systems tend to suffer from leaking abstractions as well. In our consulting practice, we see that in systems with a database or data layer on the bottom, everything tends to depend on the database entities, and the code base is a horror to work on.
+Layered systems tend to suffer from leaking abstractions as well. In our
+consulting practice, we see that in systems with a database or data layer on the
+bottom, everything tends to depend on the database entities, and the code base
+is a horror to work on.
 
 ![Typical 3 layer application architecture with dependencies everywhere](/attachments/blogposts/2020/ef-deps-3.png)
 {: class="post-image" }
@@ -39,7 +49,7 @@ _Our software should be about the business we're in, about the problem domain we
 We still need the technical stuff though. We need to use databases, messaging services, device drivers for lights or motors. We provide graphical user interfaces, external APIs, command line interfaces. So our hexagon with central domain needs to interact with the outside world. It does this via Ports.
 
 A **Port** is a set of interactions with the outside world that share the same intent. We distinguish Primary Ports and Secondary ports:
-* **Primary ports** drive our system, for instance a web interface or an API, 
+* **Primary ports** drive our system, for instance a web interface or an API,
 * **Secondary Ports** are driven by our system, for instance a database or messaging service.
 
 ![ports and adapters](/attachments/blogposts/2020/ports-and-adapters.jpg)
@@ -51,14 +61,14 @@ To connect the domain logic with the outside world, we create **Adapters** that 
 
 For Primary Ports, it is not hard to see that dependencies go from the adapter to the domain. We can introduce an interface or [Facade](https://en.wikipedia.org/wiki/Facade_pattern) in between, so that our primary adapters are only exposed to the specific domain logic they need and nothing else (applying the _interface segregation principle_ - manage dependencies via small, specific interfaces).
 
-How does this work for Secondary Ports, where our domain is in control? 
+How does this work for Secondary Ports, where our domain is in control?
 
 ![zoomed in on an adapter](/attachments/blogposts/2020/adapter-dependencies.jpg)
 {: class="post-image post-image-50" }
 
 There will be a domain concept representing the service or device, often in the form of an interface. An example: in an order processing component, we store orders in a relational database. In the domain, we have an OrderRepository that can store a new order, retrieve all orders, and retrieve a specific order by its id. So the domain does not know about databases, queries, tables. It only knows an abstraction of a repository (the [Repository Pattern](https://www.martinfowler.com/eaaCatalog/repository.html)).
 
-The adapter will implement the interface. In our order processing application, it is a single class that contains the SQL queries and knows the specific database schema used. It can even be responsible for schema migration and evolution. 
+The adapter will implement the interface. In our order processing application, it is a single class that contains the SQL queries and knows the specific database schema used. It can even be responsible for schema migration and evolution.
 
 At compile time dependencies go outside in, at runtime everything will come together. Why is this important? Our domain only knows the essentials of the Order Repository, it is not affected by details about how it is stored, how queries look like, etc. We can work on the domain logic independently from the adapter. We can also have different implementations for the port, as long as they satisfy the port's contract.
 
@@ -80,7 +90,7 @@ Hexagonal Architecture
 - Guides us in **What To Put Where (WTPW)** in the code. WTPW is crucial in making and [keeping our code habitable](http://wirfs-brock.com/blog/2009/06/08/sustainable-design/). Getting something to work is half the effort, finding a good place is the other half.
 - Allows **faster, more focused automated tests** for domain logic, as well as integration with databases and other external services.
 - Guides **structuring dependencies**, resulting in a clutter-free domain model implementation.
-- Allows **independent and incremental evolution of concerns**: we can let our APIs evolve at their own pace, the adapter mapping facilitates decoupling. 
+- Allows **independent and incremental evolution of concerns**: we can let our APIs evolve at their own pace, the adapter mapping facilitates decoupling.
 - Allows **evolution of the domain model** to suit business logic better, without having to break APIs or having to migrate a database on every small refactoring.
 
 ## Trade offs
@@ -97,7 +107,7 @@ Hexagonal Architecture
 - The [original article on Hexagonal Architecture](https://alistair.cockburn.us/hexagonal-architecture/) by Alistair Cockburn
 - Insightful presentation by Alistair Cockburn from 2017, on the history and the considerations that led to the Hexagonal Architecture: [part 1](https://www.youtube.com/watch?v=th4AgBcrEHA&t=4s), [part 2](https://www.youtube.com/watch?v=iALcE8BPs94), [part 3](https://www.youtube.com/watch?v=DAe0Bmcyt-4)
 - Erwan Alliaume, Sébastien Roccaserra, [Hexagonal Architecture: three principles and an implementation example](https://blog.octo.com/en/hexagonal-architecture-three-principles-and-an-implementation-example/)
-- Thomas Pierrain, [Hexagonal architecture: don't get lost on your right-side](https://tpierrain.blogspot.com/2020/03/hexagonal-architecture-dont-get-lost-on.html) 
+- Thomas Pierrain, [Hexagonal architecture: don't get lost on your right-side](https://tpierrain.blogspot.com/2020/03/hexagonal-architecture-dont-get-lost-on.html)
 - Tobias Goeschel, [Hexagon, Schmexagon? – Part 1](https://blog.codecentric.de/en/2020/07/hexagon-schmexagon-1/) - nice write up about Hexagonal Architecture linking it to Domain Driven Design
 - More on the Repository pattern and more: [David Garlan & Mary Shaw, An Introduction to Software Architecture (1994)](http://www.cs.cmu.edu/afs/cs/project/vit/ftp/pdf/intro_softarch.pdf) (PDF)
 
