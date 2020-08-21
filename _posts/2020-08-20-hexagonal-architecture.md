@@ -5,6 +5,7 @@ tags:
   - architecture
   - patterns
 author: Marc Evers, Willem van den Ende, Rob Westgeest
+image: /attachments/blogposts/2020/ports-and-adapters.jpg
 ---
 
 Hexagonal Architecture, also known as Ports and Adapters, is getting quite a bit of (well-deserved!) attention recently, especially in the Domain Driven Design community. Hexagonal Architecture is not a new thing: it was originally thought up by [Alistair Cockburn](https://alistair.cockburn.us/hexagonal-architecture/) (of [Agile Manifesto](https://agilemanifesto.org/) fame) in the 90ies.
