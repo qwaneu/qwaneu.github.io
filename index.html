@@ -6,7 +6,6 @@ layout: default
 
 <!-- Parallax Section -->
 <div class="parallax-section parallax1">
-  <section class="home"></section>
   <div class="grid grid-pad">
     <div class="col-1-1">
       <div class="content content-header" >
@@ -159,33 +158,27 @@ layout: default
 {% include curveup.html %}
 
 <!-- Blog Section -->
-<div class="wrap blog-grid " id="blog">
-  <div class="grid grid-pad">
-    <div class="content" >
-      <h2>Our Blog
-      <a href="/feed.xml"><img class="feed-icon" src="/images/feed-icon-24x24.png"></a></h2>
+<div class="wrap blog-grid" id="blog">
+  <div class="content" >
+    <h2>Our Blog <a href="/feed.xml"><img class="feed-icon" src="/images/feed-icon-24x24.png"></a></h2>
 
+    <div class="content grid-pad contact blogsummary-grid">
       {% for post in site.posts limit:4 %}
-      <div class="col-1-2" >
-        <article class="post-wrap">
-          {% if post.image %}
--          <div class="post-img">
-             <a href="{{ post.url}}"><img src="{{ post.image }}" alt="" style="width: 50%; height: 50%;"></a>
-           </div>
-         {% endif %}
-          <div class="post">
-            <h2 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <div class="anarticle post-summary-wrap">
+        <article >
+          <div >
+            <h3 class="plain"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+              <div class="blog-summary-img">
+                <img src="{{post.image}}" alt="">
+              </div>
             <div class="post-meta">
-              <a href="{{ post.url }}">{{ post.date | date_to_long_string }}</a> <span class="mid-sep">·</span> <a href="{{ post.url }}">{{ post.title }}</a>
+              <a href="{{ post.url }}">{{ post.date | date_to_long_string }}</a></a>
             </div>
             <p>{{ post.excerpt }}</p>
-            <a class="btn read-more" href="{{ post.url }}">Read More</a>
-          </div>
+            <a href="{{ post.url }}">Read More</a>
         </article>
       </div>
       {% endfor %}
-
-     <div class="col-1-1"><a class="btn" href="blog.html">View All</a></div>
     </div>
   </div>
 </div>
@@ -193,63 +186,11 @@ layout: default
 
 {% include curvedown.html %}
 
-<!-- Parallax Section - Counter -->
 <div class="parallax-section parallax2">
-  <div class="wrap">
-    <section class="grid grid-pad callout">
-      <div class="col-1-3">
-        <div class="content" >
-          <div class="info-counter">
-            <div class="info-counter-row">
-              <i class="info-counter-icon icon-mug"></i>
-            </div>
-            <div class="info-counter-content">
-              <h5 class="info-counter-number">
-              <span class="counter">85</span>
-                <span class="info-counter-units">Cups</span>
-              </h5>
-              <div class="info-counter-text">Average weekly coffee drank</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-1-3">
-        <div class="content" >
-          <div class="info-counter">
-            <div class="info-counter-row">
-              <i class="info-counter-icon icon-embed"></i>
-            </div>
-            <div class="info-counter-content">
-              <h5 class="info-counter-number">
-                <span class="counter">50</span>
-                <span class="info-counter-units">Conferences</span>
-              </h5>
-              <div class="info-counter-text">Conferences organized</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-1-3">
-        <div class="content" >
-          <div class="info-counter">
-            <div class="info-counter-row">
-              <i class="info-counter-icon icon-trophy"></i>
-            </div>
-            <div class="info-counter-content">
-              <h5 class="info-counter-number">
-                <span class="counter">10</span>
-                <span class="info-counter-units">Deployments</span>
-              </h5>
-              <div class="info-counter-text">Average weekly go-lives</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <div class="wrap" style="padding: 10em;">
+    &nbsp;
   </div>
 </div>
-<!-- End Parallax Section -->
 
 {% include curveup.html %}
 
@@ -266,7 +207,6 @@ layout: default
               <div class="team-social">
                 <a class="sl-fb" href="http://www.piecemealgrowth.nl"><i class="icon-home2"></i></a>
                 <a class="sl-tw" href="https://twitter.com/marcevers#"><i class="icon-twitter"></i></a>
-                <a class="sl-gp" href="https://plus.google.com/+MarcEvers"><i class="icon-googleplus2"></i></a>
                 <a class="sl-ln" href="https://nl.linkedin.com/in/marcevers"><i class="icon-linkedin"></i></a>
               </div>
             </div>

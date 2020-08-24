@@ -74,6 +74,12 @@ em {
     background-color: #16a085;
   }
 }
+.post-summary-wrap {
+  background-color: #fbfbfb;
+  border: 2px solid #f1f1f1;
+  border-radius: 4px;
+  padding: 0 0.5em;
+}
 
 .post-wrap .post-meta {
   .feed-icon {
@@ -153,4 +159,8 @@ footer .grid {
 
 footer h3 {
   margin: 0.5em 0;
+}
+
+.client-carousel-item {
+  padding-bottom: 1.5em; // temp fix for client carousel height issue
 }
