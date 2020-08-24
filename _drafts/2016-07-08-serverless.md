@@ -1,11 +1,9 @@
 ---
 layout: post
-title:  Seven interesting reads up to June 17 2016.
+title: Worthwile reading for the week up to June 17 2016
 author: Willem
 image: /attachments/blogposts/2016/reading.svg
 ---
-
-## Worthwile reading for the week up to June 17 2016
 
 Here are some things we (re)found worthwile reading this week.
 

@@ -1,11 +1,9 @@
 ---
 layout: post
-title:  Seven interesting reads up to June 17 2016.
-author: Willem
+title:  Head in the cloud - feet on the ground; Setting up https with utility computing
+author: Willem van den Ende
 image: /attachments/blogposts/2016/reading.svg
 ---
-
-## Head in the cloud - feet on the ground; Setting up https with utility computing
 
 We have added https to the [QWAN site](https://www.qwan.eu) and made it the default. We overengineered it in babysteps, so we could experiment with [Terraform and AWS](https://www.terraform.io/docs/providers/aws/index.html).
 
