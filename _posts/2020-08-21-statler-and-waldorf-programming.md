@@ -4,6 +4,7 @@ title: Statler and Waldorf programming
 tags:
   - eXtreme Programming
 author: Willem van den Ende
+image: /attachments/blogposts/2020/statler-waldorf.png
 ---
 
 Us three, having fallen into a conversation with code:
