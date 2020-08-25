@@ -162,7 +162,7 @@ layout: default
   <div class="content" >
     <h2>Our Blog <a href="/feed.xml"><img class="feed-icon" src="/images/feed-icon-24x24.png"></a></h2>
 
-    <div class="content grid-pad contact blogsummary-grid">
+    <div class="content grid-pad blogsummary-grid">
       {% for post in site.posts limit:4 %}
       <div class="anarticle post-summary-wrap">
         <article >
@@ -179,6 +179,9 @@ layout: default
         </article>
       </div>
       {% endfor %}
+    </div>
+    <div class="content grid-pad">
+      <a class="btn read-more" href="blog">Read More</a>
     </div>
   </div>
 </div>
