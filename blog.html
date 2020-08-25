@@ -4,6 +4,8 @@ title: Reflections - Blog
 ---
 
 {% include header_clean.html %}
+
+
 <div style="margin-left: 2em;">
   <h1 style="margin-bottom: 0em;">{{page.title}}</h1>
   <div class="feed"><br/>
@@ -11,13 +13,12 @@ title: Reflections - Blog
       Subscribe to our RSS feed.</a>
   </div>
 </div>
-<div>
 <div class="content grid-pad contact blogsummary-grid" >
   {% for post in site.posts %}
   <div class="anarticle post-summary-wrap">
     <article >
       <div >
-        <h3 class="plain"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <h4 class="plain"><a href="{{ post.url }}">{{ post.title }}</a></h3>
           <div class="blog-summary-img">
             <img src="{{post.image}}" alt="">
           </div>
@@ -30,6 +31,27 @@ title: Reflections - Blog
   </div>
   {% endfor %}
 </div>
+
+
+
+<div style="margin-left: 2em;">
+  <h2>Posts by tag</h2>
+  <ul style="list-style: none;">
+    {% for tag in site.tags %}
+    <li><a href="#{{ tag[0] }}">{{ tag[0] }}</a></li>
+    {% endfor %}
+  </ul>
+
+  {% for tag in site.tags %}
+  <a id="{{ tag[0] }}"/>
+  <h3>{{ tag[0] }} </h3>
+  {% for post in tag[1] %}
+    <h4 class="plain"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+  {% endfor %}
+  
+{% endfor %}
+</div>
+
 
 <div class="feed"><br/>
   <a href="/feed.xml"><img class="feed-icon" src="/images/feed-icon-24x24.png" alt="">
