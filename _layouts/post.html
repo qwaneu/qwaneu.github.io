@@ -3,7 +3,6 @@ layout: accessibletwo
 ---
 {% include header_post.html baseurl="/" %}
 
-
 <div class="wrap">
   <div class="grid grid-pad">
     <div class="col-1-1">
@@ -17,8 +16,14 @@ layout: accessibletwo
             <span itemprop="name">{{ page.author }}</span>
                 {% endif %}
           {% if page.tags %}
-            <span>Tags: {{ page.tags | join: ', ' | escape }}</span>
-                {% endif %}
+            <span>Tags:
+            {% endif %}
+            {% for tag in page.tags %}
+            <a href="/blog.html#{{ tag | escape }}">{{ tag }}</a>,
+            {% else %}
+            none
+            {% endfor %}
+            </span>
             <span>
               <a href="/feed.xml">
                 Subscribe to the RSS feed
