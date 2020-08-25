@@ -13,30 +13,146 @@ Over the years, we have done our share of UI and front end development. Long lon
 Earlier this year we created a front end application with [Vue.js](https://vuejs.org/) and [Vuex](https://vuex.vuejs.org/), for a private [Agile Engineering course](/training/agile-engineering). We created a simple web shop to let participants experience how Test Driven Development (TDD), object oriented design and the [Hexagonal Architecture pattern](/2020/08/20/hexagonal-architecture.html) work out in a front end application.
 
 ![Ports and Adapters in front end with vue.js](/attachments/blogposts/2020/PortsAndAdapters-9.png)
-{: class="post-image" }
+{: class="post-image post-image-50" }
 
 We found that vue.js as a web UI framework and Vuex as a state management library lend themselves reasonably well for working in a test-driven way. We like the fast unit test cycle for Vue components: we can run a suite of component tests in seconds, getting continuous and fast feedback on our work. It facilitates us in going through the TDD cycle: **write a test, see it fail, make it work, and refactor**.
 
 ![test driven development cycle](/attachments/blogposts/2020/tdd-cycle.png)
-{: class="post-image" }
+{: class="post-image post-image-50" }
 
 We also like that Vue.js behaves more like a library than a framework, unlike e.g. Angular. The main difference is a framework is in control, you write your code to fit with the framework; when using a library you are in control. We like to be in control and wire our components together from a proper main.js.
 
 Vuex forces you to think in the pattern of *state - actions - commits*. It also allows to split your state into different modules. This can be helpful to structure your code and separate concerns. It helps in thinking ‘hexagonally’ - separating the view-domain logic from the UI code (the components).
 
+## Second thoughts
+
 We found a number of things that felt awkward, like:
-- The feedback from failing component tests (a unit test for a custom Vue.js based component) can be cryptic or misleading. An mistake within the component sometimes prevents the component from being mounted, resulting in some unhelpful 'undefined' messages.
-@@example
-- Even though Vue.js and Vuex behave mostly like libraries, we found ourselves struggling with some of their idiosyncrasies: you do need to know how it works and adjust your own code accordingly.
-@@example
+- The feedback from failing component tests (a unit test for a custom Vue.js based component) can be cryptic or misleading. An mistake within the component sometimes prevents the component from being mounted, resulting in some unhelpful 'undefined' messages. If I make a typo in my view code, I could get an error message like below, accompanied by impressive stack trace containing the actual error, without a reference to the actual line of source code with the mistake:
+
+```
+  ● The Admin.vue › creating a facilitator › delegates creation to the admin module when all data is correct
+
+    TypeError: Cannot read property 'find' of undefined
+
+      28 |   describe('creating a facilitator', () => {
+      29 |     it('delegates creation to the admin module when all data is correct', async () => {
+    > 30 |       wrapper.find('#create-facilitator-name-input').setValue('John')
+         |               ^
+      31 |       wrapper.find('#create-facilitator-email-input').setValue('john@mail.com')
+
+      at Object.<anonymous> (tests/unit/views/TheAdmin.spec.js:30:15)
+```
+And the actual error, buried in stack traces:
+```
+ TypeError: Cannot read property 'isAdmin' of undefined
+```
+
+**We like our test feedback to be specific so that we quickly know what's wrong and where to fix it. If we need to make sense of message like the one above and start debugging, it will breaks the flow of the TDD cycle.**
+
+- Even though Vue.js and Vuex behave mostly like libraries, we found ourselves struggling with some of their idiosyncrasies: you do need to know how it works and adjust your own code accordingly. An example from an application we are working on:
+
+```javascript
+  // expressing it in Vuex actions and mutations:
+  const actions = {
+    join ({ commit }, { sessionId, joiningId }) {
+      sessionJoiner.join(sessionId, joiningId)
+        .then(session => commit('setSession', session))
+        .catch(error => commit('failed', error.message))
+    },
+  }
+  const mutations = {
+    setSession (state, session) {
+      state._session = session
+    },
+    failed (state, message) {
+      state._message = message
+    }
+  }
+}
+// vs expressing it in a plain JS function
+  ...
+  join (sessionId, joiningId) {
+    return this.sessionJoiner.join(sessionId, joiningId)
+      .then(session => { this._session = session })
+      .catch(error => { this._failed(error.message) })
+  }
+  _failed (message) {
+    this._message = message
+  }
+```
+
 - Although the [Vue Test Utils](https://vue-test-utils.vuejs.org/) library greatly facilitates writing component tests, the tests still feel cumbersome and noisy at times, especially when there is view behaviour we want to test drive. An example of this is a submit button that is only enabled when all validation constraints on the inputs are satisfied:
-@@example test
-- The way Vuex integrates with Vue components becomes noisy and leads to strong coupling between Vuex state objects and UI components. Testing this either means testing the UI component and the Vuex state object in an integrated way (large scope of the test, lower quality of test feedback) or mocking/stubbing the different action and commit functions (leading to tests highly coupled to implementation details, which is not how you're supposed to apply mocking or stubbing).
-@@example code
+
+```javascript
+  it('disables the reset-button after successfully changing password', async () => {
+    wrapper.find('#new-password').setValue('s3cret!')
+    await wrapper.find('#new-password-confirm').setValue('s3cret!')
+    await wrapper.find('#reset-button').trigger('click')
+    expect(wrapper.find('#reset-button').attributes().disabled).toBeTruthy()
+  })
+```
+Although it is short and Vue Test Utils makes it relatively easy to write fast UI component tests, the intent of the test tends to disappear a bit behind the testing mechanisms. We also need some awaits to make sure input changes have been processed fully. **We'd like our test to be _glanceable_: at a glance, we'd to understand the _given_, the _when_ and the _then_ of a test.** Growing our own  higher level DSL (domain specific language) around Vue Test Utils could help here.
+
+- The way Vuex integrates with Vue components becomes noisy and leads to strong coupling between Vuex state objects and UI components. Testing this either means testing the UI component and the Vuex state object in an integrated way (large scope of the test, lower quality of test feedback) or mocking/stubbing the different action and commit functions (leading to tests highly coupled to implementation details, which is not how you're supposed to apply mocking or stubbing). 
+
+```javascript
+// Part of a View component in our application; it is strongly coupled to the Vuex store (this.$store)
+export default {
+  name: 'TheDiagnosticJoiner',
+  computed: {
+    color () {
+      return this.$store.getters['diagnostic/color']
+    },
+    diagnosticSession () {
+      return this.$store.getters['diagnostic/session']
+    },
+    message () {
+      return this.$store.getters['diagnostic/message']
+    },
+    ...
+  },
+  mounted () {
+    this.$store.dispatch('diagnostic/join', { sessionId: this.sessionId, joiningId: this.joiningId })
+  },
+  ...
+}
+// We test it integrated with the Vuex store, because we don't like low level implementation based mocking
+describe('The Diagnostic Joiner.vue', () => {
+  let wrapper, joiner, join
+  beforeEach(() => {
+    joiner = new SessionJoiner()
+  })
+
+  function aDiagnosticJoinerWithSessionJoiner (props) {
+    return mount(TheDiagnosticJoiner, {
+      store: store(undefined, joiner),
+      propsData: props,
+      localVue
+    })
+  }
+
+  describe('when session retrieval succeeds', () => {
+    beforeEach(() => {
+      join = jest.spyOn(joiner, 'join').mockImplementation((sessionId, participantId) =>
+        Promise.resolve(new ParticipantSession(sessionId, 'the-participant-id', 'the-color', 'the facilitator')))
+      wrapper = aDiagnosticJoinerWithSessionJoiner({ sessionId: 'the-session', joiningId: 'the-joining-id' })
+    })
+    it('gets the session', () => {
+      expect(join).toHaveBeenCalledWith('the-session', 'the-joining-id')
+    })
+  })
+})
+```
+
+We test the UI component integrated with the store, and verify effects of its behaviour indirectly, on a third object (the SessionJoiner, which encapsulates a call to a backend API). **We want our test to focus on the behaviour of the object/component, preferably in isolation.**
+
+## A new application
 
 Early spring this year, an opportunity arose: as [Agile Fluency](https://www.agilefluency.org/) facilitators, we were in the middle of running a series of team fluency workshops, when the lockdown hit. We were facilitating these workshops in person. Each workshop has the participants fill in questionnaires, which was done with pen and paper.
 
 We created a first solution based on Google Forms & Sheets for our first remote workshop, but we decided to develop a proper web based application for this, so that we can practice what we preach. After initial successes with a dirt road version, we shared the application with Agile Fluency Project founders Jim Shore (of [Art of Agile Development fame](https://www.jamesshore.com/v2/projects/lunch-and-learn/art-of-agile-development)) and Diana Larsen (of [agile retrospectives fame](https://pragprog.com/titles/dlret/agile-retrospectives/)). We decided to further develop the application for broader use within the Agile Fluency community.
+
+## Discovering better ways...
 
 We intend to share our learnings on hexagonal front end architecture and design in a series of posts, mostly as proto-patterns - remember, **there are no best practices! It is all about trade-offs**.
 
