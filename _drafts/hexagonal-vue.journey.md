@@ -4,6 +4,8 @@ title: TDD & Hexagonal Architecture in front end - a journey
 tags:
   - architecture
   - patterns
+  - front end development
+  - test driven development
 author: Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2020/PortsAndAdapters-9.png
 ---
@@ -22,7 +24,7 @@ We found that vue.js as a web UI framework and Vuex as a state management librar
 
 We also like that Vue.js behaves more like a library than a framework, unlike e.g. Angular. The main difference is a framework is in control, you write your code to fit with the framework; when using a library you are in control. We like to be in control and wire our components together from a proper main.js.
 
-Vuex forces you to think in the pattern of *state - actions - commits*. It also allows to split your state into different modules. This can be helpful to structure your code and separate concerns. It helps in thinking ‘hexagonally’ - separating the view-domain logic from the UI code (the components).
+Vuex forces you to think in the pattern of *state - actions - mutations*. It also allows to split your state into different modules. This can be helpful to structure your code and separate concerns. It helps in thinking ‘hexagonally’ - separating the view-domain logic from the UI code (the components).
 
 ## Second thoughts
 
