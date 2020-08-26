@@ -226,3 +226,16 @@ footer h3 {
   width: 80%;
   margin: 10px auto;
 }
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  row-gap: 0.5em;
+  column-gap: 1em;
+  // padding: 2em;
+
+  .post-meta {
+    padding-bottom: 0.3em;
+    font-style: oblique;
+  }
+}
