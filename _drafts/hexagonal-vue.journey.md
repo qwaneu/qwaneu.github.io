@@ -10,7 +10,7 @@ author: Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2020/PortsAndAdapters-9.png
 ---
 
-Over the years, we have done our share of UI and front end development. Long long time ago with SmallTalk, Visual Basic and Delphi, building web applications with server side rendering and React, and being involved in Angular projects at several clients. Recently we have been building front ends based on Vue.js. In a series of blog posts, we are going to share how we approach (hexagonal) architecture, test driven development, incremental design in the front end.
+Over the years, we have done our share of UI and front end development. Long long time ago with SmallTalk, Visual Basic and Delphi, building web applications with server side rendering and React, and being involved in Angular projects at several clients. Recently we have been building front ends based on Vue.js. In a series of blog posts, we are going to share how we approach (hexagonal) architecture, test driven development, and incremental design in the front end.
 
 Earlier this year we created a front end application with [Vue.js](https://vuejs.org/) and [Vuex](https://vuex.vuejs.org/), for a private [Agile Engineering course](/training/agile-engineering). We created a simple web shop to let participants experience how Test Driven Development (TDD), object oriented design and the [Hexagonal Architecture pattern](/2020/08/20/hexagonal-architecture.html) work out in a front end application.
 
@@ -19,7 +19,7 @@ Earlier this year we created a front end application with [Vue.js](https://vuejs
 
 Early spring this year, an opportunity arose: as [Agile Fluency](https://www.agilefluency.org/) facilitators, we were in the middle of running a series of team fluency workshops, when the lockdown hit. We were facilitating these workshops in person. Each workshop has the participants fill in questionnaires, which was done with pen and paper.
 
-We created a first solution based on Google Forms & Sheets for our first remote workshop, but we decided to develop a proper web based application for this, so that we can practice what we preach. After initial successes with a dirt road version, we shared the application with Agile Fluency Project founders Jim Shore (of [Art of Agile Development fame](https://www.jamesshore.com/v2/projects/lunch-and-learn/art-of-agile-development)) and Diana Larsen (of [agile retrospectives fame](https://pragprog.com/titles/dlret/agile-retrospectives/)). We decided to further develop the application for broader use within the Agile Fluency community.
+We created a first solution based on Google Forms & Sheets for our first remote workshop, but we decided to develop a proper web based application for this, so that we can practice what we preach. After initial successes with a dirt road version, we shared the application with Agile Fluency Project founders Jim Shore (of [Art of Agile Development fame](https://www.jamesshore.com/v2/projects/lunch-and-learn/art-of-agile-development)) and Diana Larsen (of [Agile Retrospectives fame](https://pragprog.com/titles/dlret/agile-retrospectives/)). We decided to further develop the application for broader use within the Agile Fluency community.
 
 ## First impressions
 
@@ -38,7 +38,7 @@ We found a number of things that felt awkward, like:
 
 ### Cryptic feedback breaks the TDD flow
 
-The feedback from failing component tests (a unit test for a custom Vue.js based component) can be cryptic or misleading. An mistake within the component sometimes prevents the component from being mounted, resulting in some unhelpful 'undefined' messages. If I make a typo in my view code, I could get an error message like below, accompanied by impressive stack trace containing the actual error, without a reference to the actual line of source code with the mistake:
+The feedback from failing component tests (a unit test for a custom Vue.js based component) can be cryptic or misleading. A mistake within the component sometimes prevents the component from being mounted, resulting in some unhelpful 'undefined' messages. If I make a typo in my view code, I could get an error message like below, accompanied by impressive stack trace containing the actual error, without a reference to the actual line of source code with the mistake:
 
 ```
   ● The Admin.vue › creating a facilitator › delegates creation to the admin module when all data is correct
@@ -58,7 +58,7 @@ And the actual error, buried in stack traces:
  TypeError: Cannot read property 'isAdmin' of undefined
 ```
 
-**We like our test feedback to be specific so that we quickly know what's wrong and where to fix it. If we need to make sense of message like the one above and start debugging, it will break the flow of the TDD cycle.**
+**We like our test feedback to be specific so that we quickly know what's wrong and where to fix it. If we need to make sense of a message like the one above and start debugging, it will break the flow of the TDD cycle.**
 
 ### Complying with libraries/frameworks
 
@@ -84,7 +84,7 @@ Even though Vue.js and Vuex behave mostly like libraries, we found ourselves str
 }
 ```
 
-We have to _know_ that a commit is needed on the resolving or rejecting a promise, and we have to know that the commits are associated with the mutations. Not only do we have to know this (implicit knowledge), but it also obfuscates our intent. We really just want to save the resulting session in a member variable on the resolving promise, and save the error message on failure. If we would express the same logic in plain javascript, it looks like:
+We have to _know_ that a commit is needed on resolution or rejection of a promise, and we have to know that the commits are associated with the mutations. Not only do we have to know this, which is implicit knowledge, but it also obfuscates our intent. We really just want to save the resulting session in a member variable on the resolving promise, and save the error message on failure. If we would express the same logic in plain javascript, it looks like:
 
 ```javascript
   join (sessionId, joiningId) {
@@ -110,7 +110,7 @@ Although it is short and Vue Test Utils makes it relatively easy to write fast U
 
 ### High coupling
 
-The way Vuex integrates with Vue components becomes noisy and leads to strong coupling between Vuex state objects and UI components. Testing this either means testing the UI component and the Vuex state object in an integrated way (large scope of the test, lower quality of test feedback) or mocking/stubbing the different action and commit functions (leading to tests highly coupled to implementation details, which is not how you're supposed to apply mocking or stubbing). 
+The way Vuex integrates with Vue components becomes noisy and leads to strong coupling between Vuex state objects and UI components. Testing this either means testing the UI component and the Vuex state object in an integrated way (large scope of the test, lower quality of test feedback) or mocking/stubbing the different action and commit functions (leading to tests highly coupled to implementation details, which is not how you're supposed to apply mocking or stubbing).
 
 An example component that is tightly coupled to the Vuex store (this.$store):
 
@@ -139,7 +139,7 @@ export default {
 ![diagnostic-joiner-vuex](/attachments/blogposts/2020/diagnostic-joiner-vuex.jpg)
 {: class="post-image" }
 
-To work around the tight coupling between the Vue view and the Vuex store implementation details, we test the view integrated with the Vuex store and verify effects of its behaviour indirectly, on a third object: the SessionJoiner, which encapsulates a call to a backend API. 
+To work around the tight coupling between the Vue view and the Vuex store implementation details, we test the view integrated with the Vuex store and verify effects of its behaviour indirectly, on a third object: the SessionJoiner, which encapsulates a call to a backend API.
 
 ```javascript
 describe('The Diagnostic Joiner.vue', () => {
@@ -158,13 +158,13 @@ describe('The Diagnostic Joiner.vue', () => {
       joiner = new SessionJoiner()
       join = jest.spyOn(joiner, 'join').mockImplementation((sessionId, participantId) =>
         Promise.resolve(new ParticipantSession(
-          sessionId, 
-          'the-participant-id', 
-          'the-color', 
+          sessionId,
+          'the-participant-id',
+          'the-color',
           'the facilitator')))
-      wrapper = aDiagnosticJoinerWithSessionJoiner({ 
-        sessionId: 'the-session', 
-        joiningId: 'the-joining-id' 
+      wrapper = aDiagnosticJoinerWithSessionJoiner({
+        sessionId: 'the-session',
+        joiningId: 'the-joining-id'
       })
     })
     it('gets the session', () => {
