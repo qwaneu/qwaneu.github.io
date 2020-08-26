@@ -178,3 +178,38 @@ footer h3 {
 .client-carousel-item {
   padding-bottom: 1.5em; // temp fix for client carousel height issue
 }
+
+// Client quotes & logos
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12em, 0.25fr));
+  row-gap: 2em;
+  column-gap: 2em;
+  padding: 2em;
+  
+  img {
+    width: 8em;
+  }
+}
+
+.client-wrap {
+  background-color: #fbfbfb;
+  border: 2px solid #f1f1f1;
+  border-radius: 4px;
+  min-height: 8em;
+  margin: auto;
+  text-align: center;
+}
+
+.client-quotes-list {
+  text-align: center;
+}
+.client-quotes-list .client-quotes-item h4 {
+  font-style: italic;
+}
+.client-quotes-list .client-quotes-item p {
+  line-height: 1.8em;
+  width: 80%;
+  margin: 10px auto;
+}
