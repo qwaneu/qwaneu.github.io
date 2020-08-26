@@ -202,6 +202,8 @@ In the meanwhile, here is some recommended further reading on test driven develo
 - [Josh Justice, Outside-In Frontend Development ](https://outsidein.dev/)
 - [Our recent post on the Hexagonal Architecture pattern](/2020/08/20/hexagonal-architecture.html)
 
+_Many thanks to Willem for reviewing & feedback!_
+
 <aside>
   <h3>Want to learn more?</h3>
   <p>We offer courses and workshops on Agile Engineering, Domain Driven Design and Hexagonal Architecture. </p>
