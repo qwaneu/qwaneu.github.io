@@ -17,6 +17,9 @@ em {
     margin-top: 1.1em;
     margin-bottom: 0.6em;
   }
+  img {
+    margin: 0 0.5em;
+  }
   .post {
     font-size: 120%;
     ul {
@@ -46,10 +49,10 @@ em {
     }
   
     h3 {
-      font-size: 1.2em;
+      font-size: 1.1em;
       line-height: .9em;
-      margin-top: 0.8em;
-      margin-bottom: 0.5em;
+      margin-top: 1em;
+      margin-bottom: 0.2em;
     }
   
     blockquote > :first-child {
@@ -92,15 +95,15 @@ em {
   }
   
   .post-meta {
-    .feed-icon {
-      vertical-align: top;
-    }
-    span {
-      margin-left: 0.5em;
-      margin-right: 0.5em;
-    }
     margin-bottom: 0;
     line-height: normal;
+  }
+  .post-meta-item {
+    margin-right: 0.5em;
+  }
+  .feed-icon {
+    vertical-align: top;
+    margin-bottom: 0.3em;
   }
 }
 
