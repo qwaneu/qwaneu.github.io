@@ -1,79 +1,7 @@
 em {
   font-style: italic;
 }
-.post {
-  font-size: 120%;
-  ul {
-    margin-bottom: 0.7em;
-    list-style: disc;
-  }
-  li {
-    list-style-position: outside;
-  }
-  ol {
-    list-style: decimal;
-    text-indent: 1em;
-  }
-  p {
-    color: #525252;
-    a {
-      text-decoration-line: underline;
-      text-decoration-style: solid;
-    }
-  }
-  h1 {
-    font-size: 2.1em;
-    line-height: 1.2em;
-    margin-top: 1.1em;
-    margin-bottom: 0.6em;
-  }
 
-  h2 {
-    font-size: 1.7em;
-    line-height: 1em;
-    margin-top: 1.1em;
-    margin-bottom: 0.6em;
-  }
-
-  h3 {
-    font-size: 1.5em;
-    line-height: .9em;
-    margin-top: 0.8em;
-    margin-bottom: 0.5em;
-  }
-
-  blockquote > :first-child {
-    margin-top: 0;
-  }
-  blockquote {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-
-  .post-image {
-    text-align: center;
-  }
-  .post-image-50 img {
-    width: 50%;
-  }
-
-  aside {
-    border-radius: 10px;
-    background-color: gainsboro;
-    margin: 2em 1em 1em 1em;
-    padding: 1em 1.5em 1em 1.5em;
-  }
-
-  aside a {
-    padding: 0.5em 1.5em;
-    background-color: #1abc9c;
-    text-decoration: none;
-    color: white;
-  }
-  aside a:hover {
-    background-color: #16a085;
-  }
-}
 .post-summary-wrap {
   background-color: #fbfbfb;
   border: 2px solid #f1f1f1;
@@ -81,16 +9,99 @@ em {
   padding: 0 0.5em;
 }
 
-.post-wrap .post-meta {
-  .feed-icon {
-    vertical-align: top;
+.post-wrap {
+  max-width: 60rem;
+  h1 {
+    font-size: 2.1em;
+    line-height: 1.2em;
+    margin-top: 1.1em;
+    margin-bottom: 0.6em;
   }
-  span {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+  .post {
+    font-size: 120%;
+    ul {
+      margin-bottom: 0.7em;
+      list-style: disc;
+    }
+    li {
+      list-style-position: outside;
+    }
+    ol {
+      list-style: decimal;
+      text-indent: 1em;
+    }
+    p {
+      color: #525252;
+      a {
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+      }
+    }
+    h2 {
+      text-transform: none;
+      font-size: 1.5em;
+      line-height: 1em;
+      margin-top: 1.1em;
+      margin-bottom: 0.6em;
+    }
+  
+    h3 {
+      font-size: 1.2em;
+      line-height: .9em;
+      margin-top: 0.8em;
+      margin-bottom: 0.5em;
+    }
+  
+    blockquote > :first-child {
+      margin-top: 0;
+    }
+
+    blockquote {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+  
+    .post-image {
+      text-align: center;
+    }
+
+    .post-image-50 img {
+      width: 50%;
+    }
+
+    img {
+      margin-bottom: 1.2em;
+    }
+  
+    aside {
+      border-radius: 10px;
+      background-color: gainsboro;
+      margin: 2em 1em 1em 1em;
+      padding: 1em 1.5em 1em 1.5em;
+    }
+  
+    aside a {
+      padding: 0.5em 1.5em;
+      background-color: #1abc9c;
+      text-decoration: none;
+      color: white;
+    }
+    aside a:hover {
+      background-color: #16a085;
+    }
   }
-  margin-bottom: 0;
-  line-height: normal;
+  
+  .post-meta {
+    .feed-icon {
+      vertical-align: top;
+    }
+    span {
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+    }
+    margin-bottom: 0;
+    line-height: normal;
+  }
 }
 
 .post-bottom-navigation {
