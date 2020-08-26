@@ -17,13 +17,11 @@ layout: accessibletwo
                 {% endif %}
           {% if page.tags %}
             <span>Tags:
-            {% endif %}
             {% for tag in page.tags %}
             <a href="/blog.html#{{ tag | escape }}">{{ tag }}</a>,
-            {% else %}
-            none
             {% endfor %}
             </span>
+          {% endif %}
             <span>
               <a href="/feed.xml">
                 Subscribe to the RSS feed
