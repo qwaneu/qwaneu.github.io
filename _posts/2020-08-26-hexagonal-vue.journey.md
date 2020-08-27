@@ -17,7 +17,7 @@ Earlier this year we created a front end application with [Vue.js](https://vuejs
 ![Ports and Adapters in front end with vue.js](/attachments/blogposts/2020/PortsAndAdapters-9.png)
 {: class="post-image post-image-50" }
 
-Early spring this year, an opportunity arose: as [Agile Fluency](https://www.agilefluency.org/) facilitators, we were in the middle of running a series of team fluency workshops, when the lockdown hit. We were facilitating these workshops in person. Each workshop has the participants fill in questionnaires, which was done with pen and paper.
+Early spring this year, an opportunity arose: as [Agile Fluency®](https://www.agilefluency.org/) facilitators, we were in the middle of running a series of team fluency workshops, when the lockdown hit. We were facilitating these workshops in person. Each workshop has the participants fill in questionnaires, which was done with pen and paper.
 
 We created a first solution based on Google Forms & Sheets for our first remote workshop, but we decided to develop a proper web based application for this, so that we can practice what we preach. After initial successes with a dirt road version, we shared the application with Agile Fluency Project founders Jim Shore (of [Art of Agile Development fame](https://www.jamesshore.com/v2/projects/lunch-and-learn/art-of-agile-development)) and Diana Larsen (of [Agile Retrospectives fame](https://pragprog.com/titles/dlret/agile-retrospectives/)). We decided to further develop the application for broader use within the Agile Fluency community.
 
