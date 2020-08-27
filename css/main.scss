@@ -967,16 +967,6 @@ blockquote p {
   margin-top: 1em;
 }
 
-/* blog summary experiment */
-.blogsummary-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
-  row-gap: 2em;
-  column-gap: 2em;
-  padding-left: 2em;
-  padding-right: 2em;
-}
-
 .name-plain {
   background-color: black;
   padding-left: 1em;

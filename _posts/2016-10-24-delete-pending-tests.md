@@ -2,9 +2,8 @@
 layout: post
 title:  Delete pending tests
 tags:
-  - code
   - refactoring
-  - tests
+  - test driven development
   - polyglot
 author: Willem van den Ende
 image: /attachments/blogposts/2016/pending.svg

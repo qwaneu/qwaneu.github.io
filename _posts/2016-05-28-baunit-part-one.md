@@ -2,10 +2,10 @@
 layout: post
 title:  Test Drive a unit testing framework in bash part one
 tags:
-  - code
   - bash
+  - test driven development
 author: Rob Westgeest
-image: /attachments/blogposts/2016/reading.svg
+image: /attachments/blogposts/2016/baunit.png
 ---
 
 I did a public programming session at [XPDays Benelux](http://www.xpday.net/Xpday2015/FrontPage.html) and [XP 2016](http://xp2016.org) in

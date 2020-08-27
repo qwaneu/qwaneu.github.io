@@ -2,8 +2,8 @@
 layout: post
 title:  Test Drive a unit testing framework in bash part two
 tags: 
-  - code
   - bash
+  - test driven development
 author: Rob Westgeest
 image: /attachments/blogposts/2016/baunit.png
 ---

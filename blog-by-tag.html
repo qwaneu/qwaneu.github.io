@@ -1,0 +1,28 @@
+---
+layout: blog-index
+title: Reflections - Blog
+---
+
+<div>
+  {% for tag in site.tags %}
+  <div id="tag-{{ tag[0] | replace: ' ', '-' }}" class="grid-pad-wrapper">
+    <div class="content grid-pad blogsummary-grid" >
+      {% for post in tag[1] %}
+      <div class="post-summary-wrap">
+        <article>
+          <h3 class="plain"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <div class="blog-summary-img">
+            <img src="{{post.image}}" alt="">
+          </div>
+          <div class="post-meta">
+            <a href="{{ post.url }}">{{ post.date | date_to_long_string }}</a></a>
+          </div>
+          <p>{{ post.excerpt }}</p>
+          <a href="{{ post.url }}">Read More</a>
+        </article>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</div>

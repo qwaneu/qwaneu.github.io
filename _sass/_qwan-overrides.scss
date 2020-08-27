@@ -2,6 +2,37 @@ em {
   font-style: italic;
 }
 
+.blogpage-layout {
+  display: grid;
+  grid-template-columns: auto 14em;
+  row-gap: 1em;
+  column-gap: 1em;
+  padding-left: 1em;
+  padding-right: 2em;
+}
+.cat-column {
+  .cat-column-content {
+    position: sticky;
+  }
+  h3 {
+    margin: 1em 0 0.8rem;
+  }
+  ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+  }
+}
+
+/* blog summary experiment */
+.blogsummary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 31em);
+  row-gap: 2em;
+  column-gap: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+} 
+
 .post-summary-wrap {
   background-color: #fbfbfb;
   border: 2px solid #f1f1f1;

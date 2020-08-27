@@ -33,7 +33,7 @@ $visited-colour: #eee ;// off-white
   padding: 0.667em 0.667em 0.667em 1.333em;
   position: relative;
   text-decoration: none;
-
+  
   &:nth-child(1) {
     background-color: $c0;
     z-index: 3;
@@ -98,7 +98,7 @@ $visited-colour: #eee ;// off-white
 
   &:hover,
   &:active {
-    color: inherit;
+    color: $breadcrumb-text;
     text-decoration: underline;
   }
 
