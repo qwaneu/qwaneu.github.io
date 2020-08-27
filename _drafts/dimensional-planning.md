@@ -30,6 +30,26 @@ Koen's intent for Dimensional Planning was to create a planning practice that ma
 Dirt road - cobblestone road - highway
 
 
+Dirt Road
+
+Cobblestone Road
+
+Highway
+
+
+## Value of dimensional planning
+
+Cobblestone: customer realization: "we don't need the Highway"
+
+Looking at Value delivered/return on investment: realize value ealier 
+![plaatje van Yves](/attachments/blogposts/2020/yves-hanoulle-roi-dimensional-planning.png)
+
+**The metaphor provides customer and developers with a language to discuss smaller valuable 'shippables'. It also makes the idea of 'good enough software product' more concrete.**
+
+- Earlier ROI
+- Reduce new product development risk
+- Realize value/reach goals with less effort
+
 ## How does it relate to/mix with other techniques?
 
 Link to User Story Mapping (http://jpattonassociates.com/the-new-backlog/) - link to ‘walking skeleton’ (note: slightly different from dirt road); DP is great way to define/slice releases in USM; helps in general as a decision support method for slicing, planning and finding minimal sets of work that deliver optimal expected value
@@ -37,6 +57,7 @@ Link to User Story Mapping (http://jpattonassociates.com/the-new-backlog/) - lin
 Link to Impact Mapping? - https://www.impactmapping.org/ 
 
 Real Options
+- using Dirt Road to test assumptions quickly; price of 'failure' is low (instead of putting all your bets on the most expensive one, the Highway) 
 
 ## Some of our experiences
 
