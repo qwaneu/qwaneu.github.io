@@ -51,9 +51,14 @@ For the features that we did include, we also tried to scale down the dimensions
 - Workshop rollup views: Dirt - we visualize the aggregated results from the workshop, but we don't store any changes, need to record that by hand (or take a screenshot)
 - Operability: Cobble - running the application on our local machines was not an option, so we needed to deploy it to AWS, in a secure way; we coded our infrastructure in Terraform (will pay off anyway in time and stress reduction later on), we deploy Docker containers using a script, we applied HTTPS/SSL for secure access
 
+This resulted in an application that was just in time good enough to run two diagnostic workshops.
+
+
+## @@Bla
+
 We thought of many more possible features and more shiny versions of features, we parked them on our Miro board under 'Cobblestone' and 'Highway'.
 
-This resulted in an application that was just in time good enough to run two diagnostic workshops.
+@@Some features we removed from Dirt Road scope turned out to be unnecessary (when discussing the next steps for evolving with the Agile Fluency Project). If we would have 'just built it all' we would have wasted time.
 
 ## On to the Cobblestone Road
 
