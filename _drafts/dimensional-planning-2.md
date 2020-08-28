@@ -2,6 +2,7 @@
 layout: post
 title: Dimensions of Dimensional Planning
 tags:
+  - continuous delivery
   - planning
 author: Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2020/Tree-Dirt-Road-Grass-Road-Landscapes-Green-House-2423162.jpg

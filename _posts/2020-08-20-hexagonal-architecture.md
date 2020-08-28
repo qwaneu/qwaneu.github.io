@@ -3,6 +3,7 @@ layout: post
 title: Hexagonal Architecture
 tags:
   - architecture
+  - ports and adapters
   - patterns
 author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: /attachments/blogposts/2020/ports-and-adapters.jpg
