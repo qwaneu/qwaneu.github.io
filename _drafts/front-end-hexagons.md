@@ -24,6 +24,7 @@ Having applied [Hexagonal Architecture](/2020/08/20/hexagonal-architecture) to b
 Another aspect of the Hexagonal Architecture pattern is that it is fractal: we apply it at component or service level, but we can also zoom out and see our application landscape as a network of connected hexagons. This includes front end components, but we can also see a relational database (having constraints, views, possibly stored procedures) as a hexagon on its own.
 
 ![application as a network of hexagons](/attachments/blogposts/2020/hextesting-01.jpg)
+{: class="post-image" }
 
 ## Hexagons applied to front end
 
