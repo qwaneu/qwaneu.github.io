@@ -3,12 +3,13 @@ layout: post
 title: Hexagonal Architecture in the Front End
 tags:
   - architecture
-  - front end development
+  - web development
 author: Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2020/PortsAndAdapters-1.png
 ---
 
 Developing Front end components: UI often tend to start out simple, 'just' a form or a grid representing the data that comes from the backend (in other words, it's 'just' putting a visual layer over backend APIs), but when the front end evolves, they become more complex than that, because of all kinds of concerns (many UX - user experience related):
+
 - we want to guide users through specific flows, e.g. depending on user level (novice vs expert) or variations in the data (simple product vs extensive details)
 - we want to provide quick validation feedback on input, to prevent errors
 - we want to provide all kinds of feedback so that our users know what's happening and know what is expected of them, e.g. provide spinners while waiting, green check marks when some input is correct

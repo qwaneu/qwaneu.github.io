@@ -6,7 +6,7 @@ title: Reflections - Blog
 {% capture tag_names %} 
 {% for tag in site.tags %}{{ tag[0] | replace: ' ', '-' }},{% endfor %}
 {% endcapture %}
-{% assign tag_names = tag_names | strip | split: "," | sort: 'downcase' %}
+{% assign tag_names = tag_names | strip | split: "," | sort  %}
 
 <style>
   #tag-{{ tag_names | join: ", #tag-"}} {

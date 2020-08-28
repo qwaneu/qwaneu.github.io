@@ -4,7 +4,7 @@ title:  Why red-green does not keep you clean
 tags:
   - feedback
   - refactoring
-  - UX
+  - ux
   - task modeling
 author: Willem van den Ende
 image: /attachments/blogposts/2018/hotreload.jpg

@@ -4,7 +4,7 @@ title: TDD & Hexagonal Architecture in front end - a journey
 tags:
   - architecture
   - patterns
-  - front end development
+  - web development
   - test driven development
 author: Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2020/PortsAndAdapters-9.png
