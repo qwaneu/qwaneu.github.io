@@ -4,7 +4,7 @@ title:  Hexagonal architecture at XP Days Benelux
 tags:
   - agile
   - community
-  - software architecture
+  - architecture
 author: Willem van den Ende
 image: /attachments/blogposts/2019/xpdays_be_logo_small.png
 ---
