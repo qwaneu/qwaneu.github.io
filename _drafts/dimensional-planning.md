@@ -16,9 +16,9 @@ For convenience, let's introduce some (not al and not all real) names for the pe
 
 We got involved in the project in february when some of the work was already done. Anton, Diana, Sara and Jelle, had created a user story map. And like often, the goals where set. An initial (beta) market release end of June, and a full release end of september.
 
-We, developers took a week or two to get aquainted with the technology involved (some would call that spint 0) and then it withstarted to itch.
+We, developers took a week or two to get aquainted with the technology involved (some would call that sprint 0) and then it started to itch.
 
-We had dates and lots of ambition, but I had this uncomfortable feeling, that we may not be able to achieve the plan. 
+We had dates and lots of ambition, but I had this uncomfortable feeling that we may not be able to achieve the plan. 
 
 ## problems that are tackled by DP
 
