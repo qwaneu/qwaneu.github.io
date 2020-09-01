@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  Deploy a blank page to production
-author: Willem
+title: Deploy a blank page to production
+tags:
+  - continuous delivery
+author: Willem van den Ende
 ---
-
-## Summary
 
 Continuous delivery is valuable, but where do you start? At the start of
 a greenfield development you have no software, and if you had any
@@ -62,6 +62,14 @@ with less impact.
 
 This is a (proto-)pattern we've used in various contexts since at least 2001, when we
 started doing continuous integration. We probably stole this from
-somewhere else (probably eXtreme Programming explained 1st edition by
+somewhere else (probably [eXtreme Programming explained 1st edition](https://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0201616416) by
 Kent Beck, the
-[c2 wiki](http://wiki.c2.org)  or the XP mailing list).
+[c2 wiki](http://wiki.c2.org) or the XP mailing list).
+
+<aside>
+  <h3>Learning how to get software to production often & early is hard.</h3>
+  <p>Get your software flowing! We have made all the mistakes for you.</p>
+  <p><div>
+    <a href="/consulting">Learn more about our mentoring & consultancy services</a>
+  </div></p>
+</aside>

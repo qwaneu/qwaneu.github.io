@@ -5,7 +5,7 @@ tags:
   - continuous delivery
   - planning
 author: Marc Evers, Rob Westgeest
-image: /attachments/blogposts/2020/Tree-Dirt-Road-Grass-Road-Landscapes-Green-House-2423162.jpg
+image: /attachments/blogposts/2020/cobblestoneroad.jpg
 ---
 
 In the previous post, we introduced the Dimensional Planning technique, and shared how we defined Dirt Road, Cobblestone Road and Asphalt Road versions of a product we worked on - the 'dimensions' of the product.
@@ -70,5 +70,4 @@ What about the next one, the Cobblestone Road version?
 ## References
 
 - [Koen's original slides](https://www.slideshare.net/inxin/dimensional-planning-30790935)
-- [Dirt Road Picture](https://www.maxpixel.net/Tree-Dirt-Road-Grass-Road-Landscapes-Green-House-2423162)
 
