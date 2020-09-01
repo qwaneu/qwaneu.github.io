@@ -5,10 +5,14 @@ tags:
   - continuous delivery
   - planning
 author: Marc Evers, Rob Westgeest
-image: /attachments/blogposts/2020/Tree-Dirt-Road-Grass-Road-Landscapes-Green-House-2423162.jpg
+image: /attachments/blogposts/2020/dirtroad.jpg
 ---
 
-In 2018, we joined a project to develop a new product for one of our customers. In true [agile fluency 'optimizing' style](https://martinfowler.com/articles/agileFluency.html), the team included business, marketing, UX, product vision, and development. We had a simple goal: enter the market with this new product. We had some new insights on @@dimensional planning and estimating and achieving goals. 
+In this post, we will share a story of how we applied Dimensional Planning in a project we were involved in and how it helped us to steer the project towards delivering on its goals in time. We will also summarize Dimensional Planning, a simple but powerful (and not widely known) release planning technique.
+
+## The story
+
+In 2018, we joined a project to develop a new product for one of our customers. In true [agile fluency 'optimizing' style](https://martinfowler.com/articles/agileFluency.html), the team included business, marketing, UX, product vision, and development. We had a simple goal: enter the market with this new product. We had some new insights on dimensional planning and estimating and achieving goals. 
 
 > For obvious reasons, we have to apply some discretion here. We cannot share all the project details, but add some concrete examples from the product we're currently working on, the online Agile fluency Diagnostic application.
 
@@ -23,9 +27,7 @@ We took a week or two to get acquainted with the technology involved (some would
 
 ## Dimensional Planning
 
-We learned Dimensional planning around 2008 from our colleague Koen Van Exem. Dimensional Planning introduces the metaphor of different kinds of roads. This metaphor enables teams to talk about different 'levels' of the software they are building and how well the software meets customer goals. It creates a common language to discuss what's needed and what the customer thinks is worth paying for.
-
-The metaphor defines three types of roads to represent three versions of your software: Dirt Road, Cobblestone Road, and Highway.
+We learned Dimensional planning around 2008 from our colleague Koen Van Exem. Dimensional Planning introduces the metaphor of three different kinds of roads to represent three versions of your software: Dirt Road, Cobblestone Road, and Highway. 
 
 ### Dirt Road
 
@@ -50,7 +52,7 @@ For a Dirt Road version, we set a release goal and a deadline. Then we drive dev
 
 ### Cobblestone Road
 
-A Cobblestone Road version is a complete, usable implementation. It does the job like it should, but without extras, without fancy things.
+A Cobblestone Road version is a complete, usable implementation. It does the job like it should, but without extras, without anything fancy.
 
 ![cobblestone road, by zebulon.walton, "A narrow street in France"](/attachments/blogposts/2020/cobblestoneroad.jpg)
 {: class="post-image post-image-50" }
@@ -69,7 +71,7 @@ For a Cobblestone Road version, we set a release goal and deadline and then we d
 
 ### Highway
 
-A Highway version is a full implementation, with bells & whistles.
+A Highway version is a full blown implementation, with all the bells & whistles and nice-to-haves.
 
 ![highway by USDA NRCS Montana](/attachments/blogposts/2020/highway.jpg)
 {: class="post-image post-image-50" }
@@ -90,11 +92,9 @@ For the Highway version, we set a release goal and deadline and then we drive de
 
 ## Dimensional Planning in practice
 
-In practice, we usually create a story map and assign different stories to the different dimensions. We end up with Dirt Road, Cobblestone Road and Highway slices. This implies we will have at least three releases.
+In practice, we usually create a story map and assign different stories to the different dimensions. We end up with Dirt Road, Cobblestone Road and Highway slices. This implies we will have at least three releases. We can apply the metaphor also to large stories and split them up in different dimensions.
 
-We can split up large stories up in different dimensions.
-
-Using the 3 roads metaphor helps in negotiating an earlier release with customers who want it all: it allows them to agree on a bare minimum version, because they know the bells and whistles won't be forgotten. Along the way, the customer will realize they don't need the full highway.
+Using the metaphor of the three road helps in negotiating an earlier release with customers who want it all: it allows them to agree on a bare minimum version, because they know the bells and whistles won't be forgotten. Along the way, the customer will realize they don't need the full highway.
 
 <div class="shout-out">
   <div>
@@ -123,13 +123,11 @@ Delivering the Dirt Road and Cobblestone Road versions will largely satisfy the 
 
 ## Related techniques
 
-We already mentioned [User Story Mapping](https://jpattonassociates.com/the-new-backlog/). Dimensional Planning works well with user story mapping, as it helps slicing releases and finding release goals.
-User story mapping proposes to start with a ‘walking skeleton’ - a minimal version of the software that spans everything to get architectural feedback. A walking skeleton is not a Dirt Road version: they seek different kinds of feedback. You can still do both, start with a walking skeleton, then do a Dirt Road version.
+Dimensional Planning works well with [User Story Mapping](https://jpattonassociates.com/the-new-backlog/), as it helps slicing releases and finding release goals.
+User story mapping proposes to start with a _walking skeleton_ - a minimal version of the software that spans everything to get architectural feedback. A walking skeleton is not a Dirt Road version: they seek different kinds of feedback. You can still do both, start with a walking skeleton, then do a Dirt Road version.
 
 ![user story mapping + dimensional planning](/attachments/blogposts/2020/storymapping-slices.jpg)
 {: class="post-image" }
-
-Real Options: using Dirt Road to test assumptions quickly; the price of 'failure' is low, instead of putting all your bets on the most expensive one, the Highway.
 
 ## Reading more
 
