@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dimensional Planning
+title: Dimensional Planning - good enough software, early and often
 tags:
   - continuous delivery
   - planning
