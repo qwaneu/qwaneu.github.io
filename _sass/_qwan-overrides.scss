@@ -86,13 +86,18 @@ em {
       margin-bottom: 0.2em;
     }
   
-    blockquote > :first-child {
-      margin-top: 0;
-    }
-
+    
     blockquote {
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
+      > :first-child {
+        margin-top: 0;
+      }
+      width: 70%;
+      border-radius: 10px;
+      border: 3px solid darkgray;
+      background-color: #f6f6f6;
+      margin: 0.3em auto 0.5em auto;
+      padding: 0.3em 1em 0.5em 1em;
+      display: block;
     }
   
     .post-image {
