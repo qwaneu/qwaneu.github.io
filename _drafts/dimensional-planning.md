@@ -10,10 +10,10 @@ image: /attachments/blogposts/2020/dirtroad.jpg
 
 Starting new product development with the question 'What can we leave out?' may
 seem paradoxical. We do this to start a conversation between customers and
-developers, and as we go develop a shared language, so value can be delivered
+developers. As we go we develop a shared language, so that value can be delivered
 early and often. This is called Dimensional Planning.
 
-We will explain how Dimensional Planning can work by telling a story of how we
+We will explain how Dimensional Planning works by telling a story of how we
 applied Dimensional Planning in a project we were involved in and how it helped
 us to steer the project towards delivering its desired outcomes in time.
 
