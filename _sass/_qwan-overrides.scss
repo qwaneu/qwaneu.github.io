@@ -106,7 +106,35 @@ em {
     img {
       margin-bottom: 1.2em;
     }
-  
+
+    .shout-out {
+      width: 70%;
+      border-radius: 10px;
+      border: 3px solid darkgray;
+      background-color: #f6f6f6;
+      margin: 0.3em auto 0.5em auto;
+      padding: 0.3em 1em 0.5em 1em;
+      display: flex;
+      flex-flow: row wrap;
+
+      div:first-of-type {
+        max-width: 30%;
+      }
+      div {
+        padding: 0.3em;
+        margin: auto;
+      }
+      img {
+        margin: 0;
+        padding: 0.1em;
+      }
+      p {
+        font-size: x-large;
+        text-align: center;
+        margin: 0.1em;
+      }
+    }
+
     aside {
       border-radius: 10px;
       background-color: gainsboro;

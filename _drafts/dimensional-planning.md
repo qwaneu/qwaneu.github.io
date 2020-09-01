@@ -8,37 +8,43 @@ author: Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2020/Tree-Dirt-Road-Grass-Road-Landscapes-Green-House-2423162.jpg
 ---
 
-In 2018, we were involved in a project to develop a new product for one of our customers. In true [agile fluency 'optimizing' style](https://martinfowler.com/articles/agileFluency.html), the team included business, marketing, UX, product vision, and development. We had a simple goal: enter the market with this new product. We had some new insights on @@dimensional planning and estimating and achieving goals. 
+In 2018, we joined a project to develop a new product for one of our customers. In true [agile fluency 'optimizing' style](https://martinfowler.com/articles/agileFluency.html), the team included business, marketing, UX, product vision, and development. We had a simple goal: enter the market with this new product. We had some new insights on @@dimensional planning and estimating and achieving goals. 
 
-> For obvious reasons, we have to apply some discretion on the projects story. We cannot share all the details, but we'll try to share our experience as good as possible though and add some concrete examples from our current project, the online Agile fluency Diagnostic.
+> For obvious reasons, we have to apply some discretion here. We cannot share all the project details, but add some concrete examples from the product we're currently working on, the online Agile fluency Diagnostic application.
 
-For convenience, let's introduce some of the people involved (not their real names). Sarah was our ambitious business owner; Rob, Magnus, and Wilbert were the developers, Jelle our UX designer, Diana our our marketeer and Anton was our product owner.
+Let's introduce some of the people involved (not their real names): Sarah was our ambitious business owner; Rob, Magnus, and Wilbert were the developers, Jelle was our UX designer, Diana our marketeer and Anton was our product owner.
 
-We got involved in the project in February when some of the work was already done. Anton, Diana, Sara and Jelle had created a [user story map](https://www.jpattonassociates.com/the-new-backlog/). And like often happens, the goals where set: launch an initial (beta) market release end of June, and do a full release end of September.
+We got involved in the project in February when some of the work had already been done. Anton, Diana, Sara and Jelle had created a [user story map](https://www.jpattonassociates.com/the-new-backlog/). And like often happens, the goals were set: launch an initial (beta) market release by June, launch a full release in September.
 
-We (developers) took a week or two to get acquainted with the technology involved (some would call that sprint 0), but then it started to itch. We had set dates and lots of ambition, but I had this uncomfortable feeling that the plan might not be feasible. 
+We took a week or two to get acquainted with the technology involved (some would call that sprint 0). But then it started to itch. We had set dates the ambition were sky high, but I had this uncomfortable feeling that the plan might not be feasible. 
 
 @@more
 
 
 ## Dimensional Planning
 
-We learned Dimensional planning around 2008 from our colleague Koen Van Exem. Dimensional Planning applies a metaphor of different kinds of roads and this metaphor enables teams to talk about different 'levels' of the software they are building and how well the software meets customer goals. It creates a common language to discuss what's needed and what the customer thinks is worth paying for.
+We learned Dimensional planning around 2008 from our colleague Koen Van Exem. Dimensional Planning introduces the metaphor of different kinds of roads. This metaphor enables teams to talk about different 'levels' of the software they are building and how well the software meets customer goals. It creates a common language to discuss what's needed and what the customer thinks is worth paying for.
 
-The metaphor defines three types of roads to represent three versions of your software, from bare minimal to all the bells & whistles.
+The metaphor defines three types of roads to represent three versions of your software: Dirt Road, Cobblestone Road, and Highway.
 
 ### Dirt Road
 
-A Dirt Road version is a basic, simple, bare minimal solution. It does the job, but nothing more. It can be quick & dirty (from a functional point of view) or it can include manual workarounds.
+A Dirt Road version is a basic, simple, bare minimal solution. It does the job, but nothing more. It can be quick & dirty from a functional point of view and it can include manual workarounds. If you launch for example a new web store for an uncertain market, you can build only the user facing part, while processing incoming orders manually. If it is successful, you can decide to automate order processing, if it fails, you have greatly limited your losses by only investing in the bare minimum.
 
 ![dirt road, by Kristine Pethick, "Dirt Road to Playa Sucia"](/attachments/blogposts/2020/dirtroad.jpg)
 {: class="post-image post-image-50" }
 
 So how do we determine what needs to be in a Dirt Road solution? It should be **good enough to get feedback**.
 
-Guiding question:  
-**What can we leave out?**
-{: class="post-image" }
+<div class="shout-out">
+  <div>
+    <img src="/attachments/blogposts/2020/dirtroad-sketch.png" alt="dirt road">
+  </div>
+  <div>
+    <p>Dirt Road guiding question:<br>
+    <strong>What can we leave out?</strong></p>
+  </div>
+</div>
 
 For a Dirt Road version, we set a release goal and a deadline. Then we drive development with a release burn down, shaving off work so that we deliver to our goal. We continuously ask ourselves: _do we really need this to get the feedback we seek?_
 
@@ -49,9 +55,15 @@ A Cobblestone Road version is a complete, usable implementation. It does the job
 ![cobblestone road, by zebulon.walton, "A narrow street in France"](/attachments/blogposts/2020/cobblestoneroad.jpg)
 {: class="post-image post-image-50" }
 
-Guiding question:  
-**What is good enough?**
-{: class="post-image" }
+<div class="shout-out">
+  <div>
+    <img src="/attachments/blogposts/2020/cobblestoneroad-sketch.png" alt="cobblestone road">
+  </div>
+  <div>
+    <p>Cobblestone Road guiding question:<br>
+    <strong>What is good enough?</strong></p>
+  </div>
+</div>
 
 For a Cobblestone Road version, we set a release goal and deadline and then we drive development with a release burn down. To steer towards the goal and the deadline, we practice "Iceberg change management" - @@
 
@@ -64,9 +76,15 @@ A Highway version is a full implementation, with bells & whistles.
 
 How great should it be? How far do you want/need to go? 
 
-Guiding question:  
-**What do we still want to pay for?**
-{: class="post-image" }
+<div class="shout-out">
+  <div>
+    <img src="/attachments/blogposts/2020/highway-sketch.png" alt="highway">
+  </div>
+  <div>
+    <p>Cobblestone Road guiding question:<br>
+    <strong>What do we still want to pay for?</strong></p>
+  </div>
+</div>
 
 For the Highway version, we set a release goal and deadline and then we drive development with a release burn down. Like for the Cobblestone Road version, we practice Iceberg change management.
 

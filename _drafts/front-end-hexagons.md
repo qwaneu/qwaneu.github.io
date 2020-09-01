@@ -3,6 +3,7 @@ layout: post
 title: Hexagonal Architecture in the Front End
 tags:
   - architecture
+  - ports and adapters
   - web development
 author: Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2020/PortsAndAdapters-1.png
