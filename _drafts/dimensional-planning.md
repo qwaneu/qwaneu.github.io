@@ -94,26 +94,24 @@ In practice, we usually create a story map and assign different stories to the d
 
 We can split up large stories up in different dimensions.
 
+Using the 3 roads metaphor helps in negotiating an earlier release with customers who want it all: it allows them to agree on a bare minimum version, because they know the bells and whistles won't be forgotten. Along the way, the customer will realize they don't need the full highway.
+
+<div class="shout-out">
+  <div>
+    <img src="/attachments/blogposts/2020/roi-dimensional-planning.png" alt="get value early with dimensional planning">
+  </div>
+  <div>
+    <p>Dimensional Planning provides customers and developers a <strong>shared language</strong> to discuss <strong>smaller valuable increments</strong>. <br>
+    It is about <strong>good enough software</strong>.
+    </p>
+  </div>
+</div>
+
 ## Variations on a theme
 
 In the company mentioned in the introduction, they created their own variant of the metaphor: paper cup, coffee mug, silver chalice. So the exact metaphor does not matter, as long as it helps the common understanding between development, business, customers.
 
 You could even use 4 levels if that suits your context better. More than 4 levels would make it complicated and would reduce the power of the metaphor.
-
-## Value of dimensional planning
-
-Cobblestone: customer realization: "we don't need the Highway"
-
-Looking at Value delivered/return on investment: realize value ealier 
-
-![plaatje van Yves](/attachments/blogposts/2020/yves-hanoulle-roi-dimensional-planning.png)
-{: class="post-image post-image-50" }
-
-**The metaphor provides customer and developers with a language to discuss smaller valuable 'shippables'. It also makes the idea of 'good enough software product' more concrete.**
-
-- Earlier ROI
-- Reduce new product development risk
-- Realize value/reach goals with less effort
 
 ## Origins
 
@@ -131,8 +129,7 @@ User story mapping proposes to start with a ‘walking skeleton’ - a minimal v
 ![user story mapping + dimensional planning](/attachments/blogposts/2020/storymapping-slices.jpg)
 {: class="post-image" }
 
-Real Options: 
-- using Dirt Road to test assumptions quickly; price of 'failure' is low (instead of putting all your bets on the most expensive one, the Highway) 
+Real Options: using Dirt Road to test assumptions quickly; the price of 'failure' is low, instead of putting all your bets on the most expensive one, the Highway.
 
 ## Reading more
 
@@ -143,6 +140,15 @@ Real Options:
 
 Picture credits:
 - [Kristine Pethick, "Dirt Road to Playa Sucia"](https://www.flickr.com/photos/159897164@N04/40783372452/in/photolist-258TrL1-Afe78x-2e5fABY-wK1zvu-AAw3gg-FaS4A9-wCH4Hy-HjyqV2-22WokAY-QwHpso-2cvycxd-24wYVLC-AAsydZ-fy1URA-28SRmsL-kyENwx-AAw8XM-gueM6v-nsTvQM-219Whd6-51FcWq-frzDGo-2ecogf6-26KpEaE-5S3U2x-21JB2Pq-ow8ULT-ha2Cr8-2bBiKtr-jjogDL-GmGbtt-AqZPJp-2df496k-TmLvuy-ouhRge-4C37VL-21JEYwC-2e5f6bJ-2c41qqq-2a4XmCv-cU9djQ-2ax4mX7-ha2Fqy-2cL1ERB-219Wh48-tB1sne-2196PmW-21JAZo3-XUYaP8-ow9dTY)
-- [zebulon.walton, "A narrow street in France"](https://www.flickr.com/photos/129869996@N05/16815586995/in/photolist-rBWhaH-5qgr2g-e8wECB-aShcAZ-aekRjc-LXAN49-cCZkkj-9292a5-6j7NA7-f1Wbih-91Q72X-24SCcRY-od5Tk9-5JTGzY-yd8wKp-g6AF97-Ay9rBE-YMnEsM-cCZjBu-arEaAi-2aA7LLB-owu81r-sHyPto-sHyND7-215rrXQ-yJ7KXG-HtZtYD-NjKGD-ySQjM3-xNd7Wa-oyeT6r-yGM23b-oeq3PJ-ysuTmh-yK6vxD-qrPQEU-2fqyUjN-LmZVfy-5GANxN-amymNE-aRPN1i-5JNsFP-5rZobf-8XQ1u1-bLLknX-5uxt8X-5JNrYp-68mpfT-ouGyT3-tnMHPu)
+- [Jeremy Keith, Cobblestones.](https://www.flickr.com/photos/adactio/21557546772/in/photolist-yQY4AU-284v4u3-e5AD2r-23yhTMU-48oKvf-PRwAmq-ZsbxcZ-23DtyTU-L4SLk5-oV9frt-Ay9JYH-27RrjEo-6Ycw9t-nUeGVP-rYBxha-6BBtBe-2T8zHS-29mGNJL-cZxTJA-SUNMGf-B7VPPE-ihoHWV-aaB4Lf-q5cjpV-2T8zQ9-9njqnT-xjb6yw-MGKTfE-KRh4L-GEdREg-dtNcAu-6ZsFyS-itNPDc-4JqniW-7fXmGy-pM6ppn-fAGHdV-EAMDZ3-GEdRnn-JnkRj8-iFhMAJ-26fu2MW-25efAq5-kKrQV8-LEddot-Yp96Aa-qiMxVy-21ZLnQK-iEVm8Q-ohJLSq)
 - [USDA NRCS Montana
 Roads10.tif](https://www.flickr.com/photos/160831427@N06/24195960627/in/photolist-CS7C7X-JKmsWE-4vgo5-pu9JtG-Bwko6v-AKAiop-WcDfnj-atAVun-nvQZPY-x9pXL-28vzsLu-MtbseE-A7JWbG-AJvZpQ-orukdd-5k7aMq-eZpV1-JVcMs-pihYiS-uQ5Tfk-PEpYHo-GyLPDT-6BpjPj-5DSQ5G-8ZNkh-frzDGo-xTL8u2-q9h6Ea-vbRjRF-vRefE8-aiB7mr-ogoG4R-vYpdL-ehUpXY-8RDsQg-gGNuS1-eApn8j-dNTbn4-HDpFNM-dAexNJ-2fBMt7v-5hnrJy-ZnjRne-GHLchu-HAsM7L-8DoSXS-Lqnud2-xDeVre-5Avufr-2SaQ5a)
+
+
+<aside>
+  <h3>Want to apply story mapping and dimensional planning?</h3>
+  <p>These practices are simple and elegant, but not always easy to put into practice. We offer workshops on agile planning techniques and we can mentor your team in applying these techniques successfully.</p>
+  <p><div>
+    <a href="/training">Learn more about our workshops</a>
+  </div></p>
+</aside>
