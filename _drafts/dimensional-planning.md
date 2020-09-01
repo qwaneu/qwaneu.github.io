@@ -8,52 +8,88 @@ author: Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2020/Tree-Dirt-Road-Grass-Road-Landscapes-Green-House-2423162.jpg
 ---
 
-In 2018, we where involved in a project to develop a new product for one of our customers. In true [agile fluency 'optimizing' style](https://martinfowler.com/articles/agileFluency.html), the team, contained business, marketing, ux, product vision, and development. We had a simple goal, enter the market with this new product. We had some new insights on dimensional planning and estimating and achieving goals. 
+In 2018, we were involved in a project to develop a new product for one of our customers. In true [agile fluency 'optimizing' style](https://martinfowler.com/articles/agileFluency.html), the team included business, marketing, UX, product vision, and development. We had a simple goal: enter the market with this new product. We had some new insights on @@dimensional planning and estimating and achieving goals. 
 
-> For obvious reasons, we have to apply some discretion on the projects story. we cannot share all the details. We'll try to share or experience as good as possible though and add some concrete examples from our current agile fluency diagnostic project.
+> For obvious reasons, we have to apply some discretion on the projects story. We cannot share all the details, but we'll try to share our experience as good as possible though and add some concrete examples from our current project, the online Agile fluency Diagnostic.
 
-For convenience, let's introduce some (not al and not all real) names for the people involved. Sarah, was our ambitious business owner, Rob, Magnus, and Wilbert the developers, Jelle our UX designer, Diana our our marketeer and Anton was our product owner.
+For convenience, let's introduce some of the people involved (not their real names). Sarah was our ambitious business owner; Rob, Magnus, and Wilbert were the developers, Jelle our UX designer, Diana our our marketeer and Anton was our product owner.
 
-We got involved in the project in february when some of the work was already done. Anton, Diana, Sara and Jelle, had created a user story map. And like often, the goals where set. An initial (beta) market release end of June, and a full release end of september.
+We got involved in the project in February when some of the work was already done. Anton, Diana, Sara and Jelle had created a [user story map](https://www.jpattonassociates.com/the-new-backlog/). And like often happens, the goals where set: launch an initial (beta) market release end of June, and do a full release end of September.
 
-We, developers took a week or two to get aquainted with the technology involved (some would call that spint 0) and then it withstarted to itch.
+We (developers) took a week or two to get acquainted with the technology involved (some would call that sprint 0), but then it started to itch. We had set dates and lots of ambition, but I had this uncomfortable feeling that the plan might not be feasible. 
 
-We had dates and lots of ambition, but I had this uncomfortable feeling, that we may not be able to achieve the plan. 
-
-## problems that are tackled by DP
-
-The customer wants it all and wants the best; you try to convince them that they will not need all the bells and whistles but the customer won't buy that. And you know only when the customer gets their hands on the software, they will understand what they really need.
-
-A functionality/feature that "just does the job" is harder to sell
+@@more
 
 
-## origins of DP
+## Dimensional Planning
 
-Koen Van Exem; using it to sell fixed scope, fixed budget, fixed time projects 
+We learned Dimensional planning around 2008 from our colleague Koen Van Exem. Dimensional Planning applies a metaphor of different kinds of roads and this metaphor enables teams to talk about different 'levels' of the software they are building and how well the software meets customer goals. It creates a common language to discuss what's needed and what the customer thinks is worth paying for.
 
-Koen's intent for Dimensional Planning was to create a planning practice that makes planning both more predictable and adaptable, and to always have a shippable product on time.
+The metaphor defines three types of roads to represent three versions of your software, from bare minimal to all the bells & whistles.
 
-'scope' is not a long fixed list of functionalities; such a list is usually a proxy for the actual value a customer is seeking, but the functionalities is his/her frame of thinking, much easier to articulate; that's not a customer flaw per se, as developers it is our job to help find the real underlying value
+### Dirt Road
 
-## the metaphor, by example
+A Dirt Road version is a basic, simple, bare minimal solution. It does the job, but nothing more. It can be quick & dirty (from a functional point of view) or it can include manual workarounds.
 
+![dirt road, by Kristine Pethick, "Dirt Road to Playa Sucia"](/attachments/blogposts/2020/dirtroad.jpg)
+{: class="post-image post-image-50" }
 
-Dirt road - cobblestone road - highway
+So how do we determine what needs to be in a Dirt Road solution? It should be **good enough to get feedback**.
 
+Guiding question:  
+**What can we leave out?**
+{: class="post-image" }
 
-Dirt Road
+For a Dirt Road version, we set a release goal and a deadline. Then we drive development with a release burn down, shaving off work so that we deliver to our goal. We continuously ask ourselves: _do we really need this to get the feedback we seek?_
 
-Cobblestone Road
+### Cobblestone Road
 
-Highway
+A Cobblestone Road version is a complete, usable implementation. It does the job like it should, but without extras, without fancy things.
 
+![cobblestone road, by zebulon.walton, "A narrow street in France"](/attachments/blogposts/2020/cobblestoneroad.jpg)
+{: class="post-image post-image-50" }
+
+Guiding question:  
+**What is good enough?**
+{: class="post-image" }
+
+For a Cobblestone Road version, we set a release goal and deadline and then we drive development with a release burn down. To steer towards the goal and the deadline, we practice "Iceberg change management" - @@
+
+### Highway
+
+A Highway version is a full implementation, with bells & whistles.
+
+![highway by USDA NRCS Montana](/attachments/blogposts/2020/highway.jpg)
+{: class="post-image post-image-50" }
+
+How great should it be? How far do you want/need to go? 
+
+Guiding question:  
+**What do we still want to pay for?**
+{: class="post-image" }
+
+For the Highway version, we set a release goal and deadline and then we drive development with a release burn down. Like for the Cobblestone Road version, we practice Iceberg change management.
+
+## Dimensional Planning in practice
+
+In practice, we usually create a story map and assign different stories to the different dimensions. We end up with Dirt Road, Cobblestone Road and Highway slices. This implies we will have at least three releases.
+
+We can split up large stories up in different dimensions.
+
+## Variations on a theme
+
+In the company mentioned in the introduction, they created their own variant of the metaphor: paper cup, coffee mug, silver chalice. So the exact metaphor does not matter, as long as it helps the common understanding between development, business, customers.
+
+You could even use 4 levels if that suits your context better. More than 4 levels would make it complicated and would reduce the power of the metaphor.
 
 ## Value of dimensional planning
 
 Cobblestone: customer realization: "we don't need the Highway"
 
 Looking at Value delivered/return on investment: realize value ealier 
+
 ![plaatje van Yves](/attachments/blogposts/2020/yves-hanoulle-roi-dimensional-planning.png)
+{: class="post-image post-image-50" }
 
 **The metaphor provides customer and developers with a language to discuss smaller valuable 'shippables'. It also makes the idea of 'good enough software product' more concrete.**
 
@@ -61,23 +97,34 @@ Looking at Value delivered/return on investment: realize value ealier
 - Reduce new product development risk
 - Realize value/reach goals with less effort
 
-## How does it relate to/mix with other techniques?
+## Origins
 
-Link to User Story Mapping (http://jpattonassociates.com/the-new-backlog/) - link to ‘walking skeleton’ (note: slightly different from dirt road); DP is great way to define/slice releases in USM; helps in general as a decision support method for slicing, planning and finding minimal sets of work that deliver optimal expected value
+Our colleague Koen Van Exem invented the metaphor and used it to sell fixed scope, fixed budget, fixed time projects - those dreaded "fixed everything" projects.
 
-Link to Impact Mapping? - https://www.impactmapping.org/ 
+The customer wants it all and wants the best; you try to convince them that they will not need all the bells and whistles but the customer won't buy that. And you know only when the customer gets their hands on the software, they will understand what they really need. 
 
-Real Options
+Delivering the Dirt Road and Cobblestone Road versions will largely satisfy the customer's real needs already. This facilitates a conversation about with Highway aspects the customer still finds valuable enough to pay for. Dimensional Planning can help to create space for negotiation even when everything seems to be fixed.
+
+## Related techniques
+
+We already mentioned [User Story Mapping](https://jpattonassociates.com/the-new-backlog/). Dimensional Planning works well with user story mapping, as it helps slicing releases and finding release goals.
+User story mapping proposes to start with a ‘walking skeleton’ - a minimal version of the software that spans everything to get architectural feedback. A walking skeleton is not a Dirt Road version: they seek different kinds of feedback. You can still do both, start with a walking skeleton, then do a Dirt Road version.
+
+![user story mapping + dimensional planning](/attachments/blogposts/2020/storymapping-slices.jpg)
+{: class="post-image" }
+
+Real Options: 
 - using Dirt Road to test assumptions quickly; price of 'failure' is low (instead of putting all your bets on the most expensive one, the Highway) 
-
-## Some of our experiences
-
-a metaphor works well, especially when communicating with business (non-tech people)
-
-you can adapt the metaphor to your own context a bit ("adding your own egg"), e.g. paper cup, coffee mug, silver chalice
 
 ## Reading more
 
 - [Dimensional Planning](http://www.hanoulle.be/2015/07/dimensional-planning/)
 - [Koen's original slides](https://www.slideshare.net/inxin/dimensional-planning-30790935)
 - [Real options by Yves Hanoulle & Geike Hanoulle](https://www.youtube.com/watch?v=YAxUwZzlMJE&feature=youtu.be)
+- [Impact Mapping](https://www.impactmapping.org/) by Gojko Adzic, another useful technique that helps you plan for value
+
+Picture credits:
+- [Kristine Pethick, "Dirt Road to Playa Sucia"](https://www.flickr.com/photos/159897164@N04/40783372452/in/photolist-258TrL1-Afe78x-2e5fABY-wK1zvu-AAw3gg-FaS4A9-wCH4Hy-HjyqV2-22WokAY-QwHpso-2cvycxd-24wYVLC-AAsydZ-fy1URA-28SRmsL-kyENwx-AAw8XM-gueM6v-nsTvQM-219Whd6-51FcWq-frzDGo-2ecogf6-26KpEaE-5S3U2x-21JB2Pq-ow8ULT-ha2Cr8-2bBiKtr-jjogDL-GmGbtt-AqZPJp-2df496k-TmLvuy-ouhRge-4C37VL-21JEYwC-2e5f6bJ-2c41qqq-2a4XmCv-cU9djQ-2ax4mX7-ha2Fqy-2cL1ERB-219Wh48-tB1sne-2196PmW-21JAZo3-XUYaP8-ow9dTY)
+- [zebulon.walton, "A narrow street in France"](https://www.flickr.com/photos/129869996@N05/16815586995/in/photolist-rBWhaH-5qgr2g-e8wECB-aShcAZ-aekRjc-LXAN49-cCZkkj-9292a5-6j7NA7-f1Wbih-91Q72X-24SCcRY-od5Tk9-5JTGzY-yd8wKp-g6AF97-Ay9rBE-YMnEsM-cCZjBu-arEaAi-2aA7LLB-owu81r-sHyPto-sHyND7-215rrXQ-yJ7KXG-HtZtYD-NjKGD-ySQjM3-xNd7Wa-oyeT6r-yGM23b-oeq3PJ-ysuTmh-yK6vxD-qrPQEU-2fqyUjN-LmZVfy-5GANxN-amymNE-aRPN1i-5JNsFP-5rZobf-8XQ1u1-bLLknX-5uxt8X-5JNrYp-68mpfT-ouGyT3-tnMHPu)
+- [USDA NRCS Montana
+Roads10.tif](https://www.flickr.com/photos/160831427@N06/24195960627/in/photolist-CS7C7X-JKmsWE-4vgo5-pu9JtG-Bwko6v-AKAiop-WcDfnj-atAVun-nvQZPY-x9pXL-28vzsLu-MtbseE-A7JWbG-AJvZpQ-orukdd-5k7aMq-eZpV1-JVcMs-pihYiS-uQ5Tfk-PEpYHo-GyLPDT-6BpjPj-5DSQ5G-8ZNkh-frzDGo-xTL8u2-q9h6Ea-vbRjRF-vRefE8-aiB7mr-ogoG4R-vYpdL-ehUpXY-8RDsQg-gGNuS1-eApn8j-dNTbn4-HDpFNM-dAexNJ-2fBMt7v-5hnrJy-ZnjRne-GHLchu-HAsM7L-8DoSXS-Lqnud2-xDeVre-5Avufr-2SaQ5a)
