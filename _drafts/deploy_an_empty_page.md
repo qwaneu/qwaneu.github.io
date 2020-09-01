@@ -4,8 +4,6 @@ title:  Deploy a blank page to production
 author: Willem
 ---
 
-Flags: draft
-
 ## Summary
 
 Continuous delivery is valuable, but where do you start? At the start of
