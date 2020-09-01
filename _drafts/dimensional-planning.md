@@ -8,11 +8,18 @@ author: Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2020/dirtroad.jpg
 ---
 
-In this post, we will share a story of how we applied Dimensional Planning in a project we were involved in and how it helped us to steer the project towards delivering on its goals in time. We will also summarize Dimensional Planning, a simple but powerful (and not widely known) release planning technique.
+Starting new product development with the question 'What can we leave out?' may
+seem paradoxical. We do this to start a conversation between customers and
+developers, and as we go develop a shared language, so value can be delivered
+early and often. This is called Dimensional Planning.
+
+We will explain how Dimensional Planning can work by telling a story of how we
+applied Dimensional Planning in a project we were involved in and how it helped
+us to steer the project towards delivering its desired outcomes in time.
 
 ## The story
 
-In 2018, we joined a project to develop a new product for one of our customers. In true [agile fluency 'optimizing' style](https://martinfowler.com/articles/agileFluency.html), the team included business, marketing, UX, product vision, and development. We had a simple goal: enter the market with this new product. We had some new insights on dimensional planning and estimating and achieving goals. 
+In 2018, we joined a project to develop a new product for one of our customers. In true [agile fluency 'optimizing' style](https://martinfowler.com/articles/agileFluency.html), the team included business, marketing, UX, product vision, and development. We had a simple goal: enter the market with this new product. We had some new insights on dimensional planning and estimating and achieving goals.
 
 > For obvious reasons, we have to apply some discretion here. We cannot share all the project details, but add some concrete examples from the product we're currently working on, the online Agile fluency Diagnostic application.
 
@@ -20,14 +27,14 @@ Let's introduce some of the people involved (not their real names): Sarah was ou
 
 We got involved in the project in February when some of the work had already been done. Anton, Diana, Sara and Jelle had created a [user story map](https://www.jpattonassociates.com/the-new-backlog/). And like often happens, the goals were set: launch an initial (beta) market release by June, launch a full release in September.
 
-We took a week or two to get acquainted with the technology involved (some would call that sprint 0). But then it started to itch. We had set dates the ambition were sky high, but I had this uncomfortable feeling that the plan might not be feasible. 
+We took a week or two to get acquainted with the technology involved (some would call that sprint 0). But then it started to itch. We had set dates the ambition were sky high, but I had this uncomfortable feeling that the plan might not be feasible.
 
 @@more
 
 
 ## Dimensional Planning
 
-We learned Dimensional planning around 2008 from our colleague Koen Van Exem. Dimensional Planning introduces the metaphor of three different kinds of roads to represent three versions of your software: Dirt Road, Cobblestone Road, and Highway. 
+We learned Dimensional planning around 2008 from our colleague Koen Van Exem. Dimensional Planning introduces the metaphor of three different kinds of roads to represent three versions of your software: Dirt Road, Cobblestone Road, and Highway.
 
 ### Dirt Road
 
@@ -76,7 +83,7 @@ A Highway version is a full blown implementation, with all the bells & whistles 
 ![highway by USDA NRCS Montana](/attachments/blogposts/2020/highway.jpg)
 {: class="post-image post-image-50" }
 
-How great should it be? How far do you want/need to go? 
+How great should it be? How far do you want/need to go?
 
 <div class="shout-out">
   <div>
@@ -117,7 +124,7 @@ You could even use 4 levels if that suits your context better. More than 4 level
 
 Our colleague Koen Van Exem invented the metaphor and used it to sell fixed scope, fixed budget, fixed time projects - those dreaded "fixed everything" projects.
 
-The customer wants it all and wants the best; you try to convince them that they will not need all the bells and whistles but the customer won't buy that. And you know only when the customer gets their hands on the software, they will understand what they really need. 
+The customer wants it all and wants the best; you try to convince them that they will not need all the bells and whistles but the customer won't buy that. And you know only when the customer gets their hands on the software, they will understand what they really need.
 
 Delivering the Dirt Road and Cobblestone Road versions will largely satisfy the customer's real needs already. This facilitates a conversation about with Highway aspects the customer still finds valuable enough to pay for. Dimensional Planning can help to create space for negotiation even when everything seems to be fixed.
 
@@ -142,6 +149,7 @@ Picture credits:
 - [USDA NRCS Montana
 Roads10.tif](https://www.flickr.com/photos/160831427@N06/24195960627/in/photolist-CS7C7X-JKmsWE-4vgo5-pu9JtG-Bwko6v-AKAiop-WcDfnj-atAVun-nvQZPY-x9pXL-28vzsLu-MtbseE-A7JWbG-AJvZpQ-orukdd-5k7aMq-eZpV1-JVcMs-pihYiS-uQ5Tfk-PEpYHo-GyLPDT-6BpjPj-5DSQ5G-8ZNkh-frzDGo-xTL8u2-q9h6Ea-vbRjRF-vRefE8-aiB7mr-ogoG4R-vYpdL-ehUpXY-8RDsQg-gGNuS1-eApn8j-dNTbn4-HDpFNM-dAexNJ-2fBMt7v-5hnrJy-ZnjRne-GHLchu-HAsM7L-8DoSXS-Lqnud2-xDeVre-5Avufr-2SaQ5a)
 
+Editing: Willem van den Ende
 
 <aside>
   <h3>Want to apply story mapping and dimensional planning?</h3>
