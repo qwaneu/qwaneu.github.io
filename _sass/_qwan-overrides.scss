@@ -90,7 +90,7 @@ em {
       > :first-child {
         margin-top: 0;
       }
-      width: 70%;
+      width: 85%;
       border-radius: 10px;
       border: 3px solid darkgray;
       background-color: #f6f6f6;
@@ -117,7 +117,7 @@ em {
     }
 
     .shout-out {
-      width: 70%;
+      width: 85%;
       border-radius: 10px;
       border: 3px solid darkgray;
       background-color: #f6f6f6;
@@ -130,6 +130,7 @@ em {
         max-width: 30%;
       }
       div {
+        max-width: 70%;
         padding: 0.3em;
         margin: auto;
       }

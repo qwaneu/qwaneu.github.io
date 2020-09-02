@@ -27,7 +27,7 @@ layout: accessibletwo
           {% if page.tags %}
             <div>Tags:
             {% for tag in page.tags %}
-            <a href="/blog.html#{{ tag | escape }}">{{ tag }}</a>,
+            <a href="/blog-by-tag#tag-{{ tag | replace: ' ', '-' }}">{{ tag }}</a>,
             {% endfor %}
             </div>
           {% endif %}

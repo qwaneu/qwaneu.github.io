@@ -4,7 +4,6 @@ title: Hexagonal perspective on automated tests
 tags:
   - architecture
   - ports and adapters
-  - automated testing
   - continuous delivery
 author: Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2020/hextesting-04.jpg
