@@ -17,7 +17,7 @@ Dimensional Planning was invented by our colleague Koen Van Exem around 2008. He
 
 ## I want it all
 
-The customer wants it all and wants the best; you try to convince them that they will not need all the bells and whistles but the customer won't buy that. And you know only when the customer gets their hands on the software, they will understand what they really need.
+The customer wants it all and wants the best; you try to convince them that they will not need all the bells and whistles but the customer often won't buy that. And you know only when the customer gets their hands on the software, they will understand what they really need. A Dimensional Planning is a way to manage such a catch-22 situation and to facilitate a constructive conversation a goal, and how to get there.
 
 Dimensional Planning is built around a metaphor of road building. Roads can be more or less luxurious. Luxury comes at a cost though. The customer asks for a 6 lane highway, but in our experience delivering a dirt road and maybe a few cobblestone road releases will largely satisfy the customer's real needs already. This facilitates a conversation about which Highway aspects the customer still finds valuable enough to pay for. Dimensional Planning can help to create space for negotiation even when everything seems to be fixed.
 
@@ -51,7 +51,7 @@ A Cobblestone Road version is a complete, usable implementation. It does the job
 
 So how do we determine what needs to be in a Cobblestone Road solution? Or what does not need to be in there? You should be able to stop development after delivering the Cobblestone Road release: it does the job, it is functional, it gets you from A to B but no more. It does not excite, but no one makes a fuss about it either.
 
-The decision criterion here is: if we would leave out this piece, would someone be hindered in doing their work? No? Then it is not part of your Cobblestone Road release.
+Just as with the dirt road release, it helps to set a release goal and a deadline, and use a release burn down to drive development. The decision criterion here is: if we would leave out this piece, would someone be hindered in doing their work? No? Then it is not part of your Cobblestone Road release.
 
 <div class="shout-out">
   <div>
@@ -66,6 +66,8 @@ The decision criterion here is: if we would leave out this piece, would someone 
 ## Highway
 
 A Highway release is a full blown implementation, with all the bells & whistles, luxuries, and nice-to-haves. Striving for perfection finds its place in the Highway release.
+
+Chances are, that by now the customer has learned so much from tangible results delivered as dirt road and cobble stone road releases, that features in highway releases remotely reflect initial highway features.
 
 ![highway by USDA NRCS Montana](/attachments/blogposts/2020/highway.jpg)
 {: class="post-image post-image-50" }
@@ -85,6 +87,8 @@ How great should it be? How far do you want to go? What should be in the Highway
 ## Dimensional Planning in practice
 
 We usually create a story map and assign different stories to the different dimensions. We end up with Dirt Road, Cobblestone Road and Highway slices. This implies we will have at least three releases. We can apply the metaphor also to large stories and split them up in different dimensions.
+
+> In a story map, it is not always as simple as 'story x' is a dirt road story and 'story y' a cobble stone road or highway story. Stories in a story map are often of 'epical' size. They need to be split in smaller stories. The three roads metaphor can facilitate this splitting process as well.
 
 Using the metaphor of the three road helps in negotiating an earlier release with customers who want it all: it allows them to agree on a bare minimum version, because they know the bells and whistles won't be forgotten. Along the way, the customer will realize they don't need the full highway.
 
