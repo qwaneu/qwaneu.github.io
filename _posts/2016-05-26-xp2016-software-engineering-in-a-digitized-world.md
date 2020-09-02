@@ -2,10 +2,12 @@
 layout: post
 title:  Software engineering in a digitized world
 author: Willem
+tags:
+  - liveblog
 image: /attachments/blogposts/2016/mary-poppendieck.png
 ---
 
-Aliveblog of Mary Poppendieck's xp2016 keynote.
+A live blog of Mary Poppendieck's xp2016 keynote.
 
 
 1. The Cloud
@@ -20,7 +22,7 @@ Back to the chasm, where agile was in 2004. What is in the chasm now?
 
 How Conway's law brought us two the cloud. Amazon two pizza teams: scale with less communication by giving up immediate consistency, but going for eventual consistency instead.
 
-Automomous teams that handle their own deployments. This is something new Amazon could sell.
+Autonomous teams that handle their own deployments. This is something new Amazon could sell.
 
 # Software as a creative process
 
@@ -50,7 +52,7 @@ Photo by Andrea Heck (@AndreaHeck)
 
 Test automation is like double entry bookkeeping. The goal is to find integration issues as soon as possible.Production code and tests are two automated views on the same thing. (Willem: so are solid types).
 
-"You know you are doing structured programmin when you don't have integration problems". (I didn't get the source).
+"You know you are doing structured programming when you don't have integration problems". (I didn't get the source).
 
 # Scale is an architecture problem
 
@@ -76,7 +78,7 @@ Tractors are completely automated. Any equipment you have can be added onto a Jo
 
 Marshall van Asltyne book: Platforms scale. A platform will beat a pipeline product. The main problem is to get the network effect. The thing scales all by itself with very little effort.
 
-Open banking in the EU. Open APIs to all bank acccounts (XS2A). A platform that shows all your bank accounts can be made by anyone. A trusted vendor should be able to move money between all your accounts. Drop fees with currency transanctions. Currency transactions are funding other bank stuff.
+Open banking in the EU. Open APIs to all bank accounts (XS2A). A platform that shows all your bank accounts can be made by anyone. A trusted vendor should be able to move money between all your accounts. Drop fees with currency transactions. Currency transactions are funding other bank stuff.
 
 Financial platforms are coming, it will be interesting to see how they survive and where they are coming.
 
@@ -86,7 +88,7 @@ What does it take to engineer a good platform?
 
 # Antifragile
 
-Good weather does not make good sailorss. Fragile -> Robust -> Anti-fragile.
+Good weather does not make good sailors. Fragile -> Robust -> Anti-fragile.
 
 If you take a look at the really robust systems today - they are not trying to be robust, but anti-fragile. Fragile systems built up hidden risk and catastrophic failure.
 
@@ -98,17 +100,17 @@ Simian army:
 
 * Chaos Monkey
 * Latency Monkey
-* Securiity Monkey
+* Security Monkey
 * Janitor Monkey
 * Chaos Gorilla
 
-# Highly succesful digital organizations
+# Highly successful digital organizations
 
 Don't do
 
 * Projects
 * Outsourcing
-* Esitmates
+* Estimates
 * IT
 * Features
 * Testing at the end

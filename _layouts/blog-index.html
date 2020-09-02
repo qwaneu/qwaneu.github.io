@@ -45,7 +45,7 @@ title: Reflections - Blog
       <li><a href="/blog">All</a></li>
 
       {% for tag in tag_names %}
-      <li><a href="/blog-by-tag#tag-{{ tag }}">{{ tag }}</a></li>
+      <li><a href="/blog-by-tag#tag-{{ tag }}">{{ tag | replace: '-', ' ' }}</a></li>
       {% endfor %}
     </ul>
   </div>

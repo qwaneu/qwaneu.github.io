@@ -2,6 +2,8 @@
 layout: post
 title:  Turning unpredictability into profit.
 author: Willem
+tags:
+  - liveblog
 image: /attachments/blogposts/2016/DReinertsen2007a_400x400.jpg
 ---
 
@@ -11,7 +13,7 @@ A liveblog of Don Reinertsens' Agile Cambridge keynote
 
 * Don't fear variability
 * Buffer with care
-* Focus on payoff functions, not probablities
+* Focus on payoff functions, not probabilities
 * Buy information in small batches
 * Think like a smart gambler
 * Create options to recover from bad outcomes quickly and create good ones
@@ -19,11 +21,11 @@ A liveblog of Don Reinertsens' Agile Cambridge keynote
 
 ## Liveblog continues
 
-"Have you received messages telling you that variabilty is bad?"
+"Have you received messages telling you that variability is bad?"
 
 There is a tendency in software development to think in binary - either hate variability of love it.
 
-If I have high variabilty going into the black box, I have low projects coming out.
+If I have high variability going into the black box, I have low projects coming out.
 
 There is a long war on variability:
 
@@ -31,7 +33,7 @@ There is a long war on variability:
 * repeatability in CMMI
 * Lean Manufacturing
 * estimating methods of Scrum
-* Lean Kanbans' interest in Statiscal Process Control
+* Lean Kanban's interest in Statistical Process Control
 
 "But as we know, not all wars are based on sound reasoning"
 
@@ -45,7 +47,7 @@ Six Sigma - make choices that have low variability. Innovation introduces uncert
 
 Don't commit to the expected return, make a different commitment. What currency did you use to pay for that reduction in variability? Ask what it is worth buying the reduction, what did you pay for it? You paid for it with cycle time. There really is an advantage in having a product in the market that nobody else has.
 
-## Aysmmetric Payoffs and Option Pricing
+## Asymmetric Payoffs and Option Pricing
 
 Expected price / Payoff vs price / Expected payoff.
 
@@ -60,11 +62,11 @@ Expected price / Payoff vs price / Expected payoff.
 
 ## Nassim Taleb
 
-Most relevanti book of his for product development: Anti-fragility, not a terribly well organised read, but has some important ideas.
+Most relevant book of his for product development: Anti-fragility, not a terribly well organised read, but has some important ideas.
 
 A fragile system produces worse outcomes when you perturb it. The more you perturb it, the worse it gets.
 
-If you looked at Microsoft products in the 90s, they would have 20 revlevels of dlls that had dependencies on all other dlls. it was intrinsically an untestable system. What they evented decided to do was realise that most of the cases would never happen in the real world, so they shipped a few million beta copies and see what feedback came back.
+If you looked at Microsoft products in the 90s, they would have 20 levels of dlls that had dependencies on all other dlls. it was intrinsically an untestable system. What they eventually decided to do was realise that most of the cases would never happen in the real world, so they shipped a few million beta copies and see what feedback came back.
 
 Anti-fragility behaves like options: increase value by more perturbation.
 
@@ -91,11 +93,11 @@ Accelerating the feedback loop allows you to exercise options much sooner.
 * Buy information in small batches
   * Enable small batches with low transaction costs
   * Deploy in small batches (automate deployment flow - deployment in large batches, because cost of 'deploy' transaction is high)
-* Reduce queueus
+* Reduce queues
   * Queues delay feedback
   * Control the invisible WIP in the process - our queues in product development are invisible.
   * Make queues visible, then reduce them
-* Acccelerate the flow of time-critical information
+* Accelerate the flow of time-critical information
   * non-homogenous flows. Not all flows have equivalent economic significance ('Move the ambulance faster down the road')
   * Prioritize flow of certain information
   * Escalate high-value decisions quickly. Unfortunately most people miss the econmic information/models to make good decisions on this.
@@ -118,7 +120,7 @@ Everything we did was more valuable than everything we chose not to do. We explo
 * Favor decision speed over accuracy
   * Making it safe to use initiative
 
-* Control exposure by managing consequences instead of frequency of occurence.
+* Control exposure by managing consequences instead of frequency of occurrence.
 
 Marine corps give guidance: if you have 80% of the information and not made a decision, you have wasted an opportunity.
 
@@ -126,13 +128,13 @@ Facebook focus on consequences: why make it live for a billion users? why make i
 
 ### Engineer payoff your functions
 
-At HP every division was self-funding, they did not subsidize unsucessful business units. Unsuccesful paths were automatically shut down.
+At HP every division was self-funding, they did not subsidize unsuccessful business units. Unsuccessful paths were automatically shut down.
 
 ## A few takeaways
 
 * Don't fear variability
 * Buffer with care
-* Focus on payoff functions not probablities
+* Focus on payoff functions not probabilities
 * Buy information in small batches
 * Think like a smart gambler
 * Create options
