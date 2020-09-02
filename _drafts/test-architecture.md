@@ -39,23 +39,29 @@ Adapter Integration Tests verify whether the adapter integrates properly with th
 ![Adapter integration tests](/attachments/blogposts/2020/hextesting-03.jpg) @@TODO: highlight scope of test in picture
 {: class="post-image" }
 
-Example: 
+An example: 
 
-> let's say our domain defines a ProductRepository interface having addProduct() and all() functions to add a new product and get a list of all products. We create a PostgresqlBasedProductRepository adapter that implements this and stores the product in a Postgresql database. The Adapter Integration Test for PostgresqlBasedProductRepository uses the addProduct and all functions. 
+Let's say our domain defines a `ProductRepository` interface having `addProduct` and `all` functions to add a new product and get a list of all products. We create a `PostgresqlBasedProductRepository` adapter that implements this and stores the product in a Postgresql database. The Adapter Integration Test for `PostgresqlBasedProductRepository` uses the `addProduct` and `all` functions. 
 
 ```java
 show me some code
 ```
 
-> We can choose how much of the integration we want to (and are able to) cover in the test: our PostgresqlBasedProductRepository test can run against a real test Postgresql database running on your local machine and in the build environment. Or we run the test against an in-memory database, although this introduces a small risk because of potential differences between in-memory and persistent databases.
+> We can choose how much of the integration we cover in the test: our `PostgresqlBasedProductRepository` test can run against a real test database running on your local machine and in the build environment. Or we run the test against an in-memory database, with the risk of differences between the in-memory and real databases.
 
 In the same way, we can write adapter integration tests for our UI components, which test the components in isolation and verify whether it behaves properly (which includes integrating with your UI framework or library).
 
 ## Contract tests
 
-@@TODO
+We can define tests around the contracts between producers and consumers of APIs. 
+
+Recently, contract tests have been given a boost by [Pact](https://docs.pact.io). Pact offers a specific way of contract testing: [Consumer based contract testing](https://martinfowler.com/articles/consumerDrivenContracts.html).
+
+With Consumer based contract testing, all consumers of an API publish examples of how they use that API. In an automated tests, these examples are checked against the producer code implementing the API. In this way, contract testing provides quick feedback on changes in APIs, by checking if all known consumers can still work with the changes.
 
 ![@@TODO plaatje]()
+
+Contract testing offers a more flexible way of securing API contracts than for instance explicitly versioned and checked schemas. Versioned API schemas tend to suffer from long change and feedback cycles.
 
 ## End to end tests
 
@@ -96,9 +102,13 @@ Or test the same through the backend component's API:
 ![end-to-end tests, via API with faked database](/attachments/blogposts/2020/hextesting-11.jpg)
 {: class="post-image" }
 
+So there are many ways of creating end-to-end tests, with different trade-offs.
+
 ## Conclusion
 
-Looking at your application landscape and your services through the Hexagonal lens provides you with useful options on how to design and structure different automated tests. **There is no single right way not best practices for this**, although we have some strong preference:
+Looking at your application landscape and your services through the Hexagonal lens provides you with useful options on how to design and structure different automated tests. It moves away from ideological debate about automated tests and focuses on how you can get useful, fast feedback with a reasonable amount of effort.
+
+**There is no single right way not best practices for this**, but we have  preferences:
 
 - we work test driven; we can test-drive our domain but also our adapters
 - a lot of small, focused, fast unit tests provide us with continuous fast feedback; we try to cover most concerns in unit tests, rather than via end-to-end tests
