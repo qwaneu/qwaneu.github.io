@@ -4,6 +4,7 @@ title: Deploy a blank page to production
 tags:
   - continuous delivery
   - patterns
+image: /attachments/blogposts/2020/deploy-empty-page.png
 author: Willem van den Ende
 ---
 
@@ -79,6 +80,8 @@ probably stole this from somewhere else, probably from [eXtreme Programming
 explained 1st
 edition](https://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0201616416)
 by Kent Beck, the [c2 wiki](http://wiki.c2.org) or the XP mailing list.
+
+Credits: Thanks to Marc Evers for asking if there was value in old drafts, editing and drawing the graphic.
 
 <aside>
   <h3>Learning how to get software to production often & early is hard.</h3>
