@@ -48,11 +48,11 @@ with delivery - e.g. a team can deliver changes only once a week or once every t
 Prefer a technology stack that comes with simple, scripted deployment out of the
 box, or one that makes deployment extremely straightforward. Create that blank page or the 'Hello world!' API and deploy it.
 
-Examples would be Heroku, AWS Amplify, or if you want to self-host, Dokku.
+Examples would be Heroku, AWS Amplify, Dokku if you want to self-host many small experiments on the cheap, or Zapier if you need to glue things together.
 
 ### When you don't take your own advice
 
-Marc dug this posts out of the drafts folder, as we are cleaning house in our writing. It was originally scheduled for September 2014. I was wondering if this still applied. It does. I started on my second architectural spike for a flashcard app for developers last week. The first I discarded, because deployment would be too much work, due to too many moving parts. It was fun hacking, but three or four is a lot if you're spiking on your own, and I was making too many mistakes because of it. The second walking skeleton was a lot faster, I figured a fair few things to leave out in the domain and the tech to get to a walking skeleton. I chose a glorious little monolith for dirt-road deployment.
+Marc dug this posts out of the drafts folder, as we are cleaning house in our writing. It was originally scheduled for September 2014. I was wondering if this still applied. It does. I started on my second architectural spike for a flashcard app for developers last week. I wrote off the first spike, because deployment would be too much work, due to too many moving parts. It was fun hacking, but three or four docker containers is a lot if you're spiking on your own, and I was making too many mistakes in development because of it. Deployment would also be several moving parts and some custom scripting. The second walking skeleton was a lot faster, I figured a fair few things to leave out in the domain and the tech to get to a walking skeleton. I chose a glorious little monolith for dirt-road deployment.
 
 I didn't deploy a blank page to production, but thought once the walking skeleton was done (in slightly under two workdays, so not too much), I'd deploy to a raspberry pi in our home, so that I could defer security until another round, and start testing on multiple devices. When I wanted to do that this morning, I found out that the build tooling I chose doesn't support the pi's ARM processor. I could have found that out two days ago. It is not the end of the world, but an unpleasant surprise none the less.
 
@@ -73,10 +73,12 @@ with less impact.
 
 ## History
 
-This is a (proto-)pattern we've used in various contexts since at least 2001, when we started doing continuous integration. We probably stole this from
-somewhere else, probably from [eXtreme Programming explained 1st edition](https://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0201616416) by
-Kent Beck, the
-[c2 wiki](http://wiki.c2.org) or the XP mailing list.
+This is a (proto-)pattern we've used in various contexts since at least 2001,
+when we started doing continuous integration and later continuous delivery. We
+probably stole this from somewhere else, probably from [eXtreme Programming
+explained 1st
+edition](https://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0201616416)
+by Kent Beck, the [c2 wiki](http://wiki.c2.org) or the XP mailing list.
 
 <aside>
   <h3>Learning how to get software to production often & early is hard.</h3>
