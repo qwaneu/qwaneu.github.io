@@ -109,9 +109,9 @@ Ad Men made us think about the work of writer Willem Elsschot, who was an Ad Men
 Credits: Marc Evers for editing, and also thinking of Willem Elsschot.
 
 <aside>
-  <h3>@@</h3>
-  <p>@@.</p>
+  <h3>Need a trusted advisor?</h3>
+  <p>We are fiercely vendor neutral, have experienced a wide array of technology, and don't mind getting stuck in when needed.</p>
   <p><div>
-    <a href="/training">Learn more about our workshops</a>
+    <a href="/contact">Have a chat with us, the first conversation is always free.</a>
   </div></p>
 </aside>
