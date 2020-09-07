@@ -86,8 +86,10 @@ Simon also talked about DevOps being the New Legacy. We'll cover that in a follo
 
 ## Further reading
 
-In the run-up to this, Steve Freeman shared a few great resources. I'm still mulling over [Communities of Need versus Communities of Practice](https://theitriskmanager.com/2015/04/19/communities-of-need-community-of-solutions/). Chris Matts' talk is based around Geoffry Moore's Chrossing the Chasm.
+In the run-up to this, Steve Freeman shared a few great resources. I'm still mulling over [Communities of Need versus Communities of Practice](https://theitriskmanager.com/2015/04/19/communities-of-need-community-of-solutions/). Chris Matts' talk is based around Geoffry Moore's Chrossing the Chasm. Food for follow up posts.
 
 Jamie prepared the presentation with a [blog post about Cargo Cults and Coconut Headphones](https://blog.container-solutions.com/cloud-native-transformation-and-wishful-thinking). Inspiration for Jamies talk came from a presentation at the SPA Conference in 2006 by Dave Thomas that we both attended, included in Jamies post.
 
 [Cargo Cult Science by Richard P. Feynman, 1974 - pdf](http://calteches.library.caltech.edu/51/02/CargoCult.pdf)
+
+[Steve McConnell applied Cargo Cults to Software Engineering in 2000.](https://stevemcconnell.com/articles/cargo-cult-software-engineering/)
