@@ -5,16 +5,16 @@ tags:
   - strategy
   - DevOps
 author: Willem van den Ende
-image:
+image: /attachments/blogposts/2020/202009-cargo-cult-plane.png
 ---
 
 A couple of days ago, Jamie Dobson and Simon Wardley did a back to back presentation on [Cargo Cults and mapping DevOps and serverless](https://www.youtube.com/watch?v=hlPEeDWHy34&feature=youtu.be). Great athmosphere in the virtual room. My son made a cameo apperance near the end. One can't strategists young enough.
-
+j
 This is a rich vein, it trigges a lot. So in the spirit of glorious [Dirt Roads](http://localhost:8082/2020/09/02/dimensional-planning.html), I'm going to limit myself to writing the things that resonated with me, amended with a few triggers.
 
-Jamie prepared the presentation with a [blog post about Cargo Cults and Coconut Headphones](https://blog.container-solutions.com/cloud-native-transformation-and-wishful-thinking).
+Jamie prepared the presentation with a [blog post about Cloud native and Wishful thinking, or how to avoid buying Coconut Headphones](https://blog.container-solutions.com/cloud-native-transformation-and-wishful-thinking).
 
-I was wondering if Jamie had seen the photos - he had, and put them in the presentation. I was also wondering how not to fall into Cargo Cults. I'm temped by 'the shiny' as much as the next person. I have learnt to try out 'the shiny' on my own first, and then only later contaminate others with it, but still, I don't mind failure but would rather do less of it sometimes.
+I was also wondering how not to fall into Cargo Cults. I'm temped by 'the shiny' as much as the next person. I have learnt to try out 'the shiny' on my own first, and then only later contaminate others with it, but still, I don't mind failure but would rather do less of it sometimes.
 
 After doing a short introduction on Wardley Maps, Simon talked about "No one size fits all" - choose specific methods (XP, agile, lean, ...) for specific contexts. Agile is becoming process over people. Then we made the case that DevOps will be the new legacy.
 
@@ -23,6 +23,8 @@ After doing a short introduction on Wardley Maps, Simon talked about "No one siz
 [Brittanica starts its definition of a Cargo Cult as such:](https://www.britannica.com/topic/cargo-cult)
 
 > Cargo cult, any of the religious movements chiefly, but not solely, in Melanesia that exhibit belief in the imminence of a new age of blessing, to be initiated by the arrival of a special “cargo” of goods from supernatural sources—based on the observation by local residents of the delivery of supplies to colonial officials
+
+![Drawing of an imitation propellor warplane and three boxes](/attachments/blogposts/2020/202009-cargo-cult-plane.png)
 
 Richard Feynman translated this to science in 1974:
 
@@ -102,7 +104,7 @@ Jamie prepared the presentation with a [blog post about Cargo Cults and Coconut 
 
 Ad Men made us think about the work of writer Willem Elsschot, who was an Ad Men himself. In particular the novels "Lijmen" (Glueing) and "Het Been" (The Leg), which revolves around a kind of scam set in the 1930s that is still around today. There doesn't seem to be an english translation, but [Wikipedia has a reasonable enlish summary of the movie](https://en.wikipedia.org/wiki/Lijmen/Het_Been).
 
-Credits: Marc Evers for editing, and also thinking of Elsschot.
+Credits: Marc Evers for editing, and also thinking of Willem Elsschot.
 
 <aside>
   <h3>@@</h3>
