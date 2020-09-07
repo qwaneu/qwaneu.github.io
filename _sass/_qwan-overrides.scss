@@ -84,6 +84,7 @@ em {
       line-height: 0.9em;
       margin-top: 1em;
       margin-bottom: 0.2em;
+      padding-bottom: 0.1em;
     }
 
     blockquote {
@@ -150,16 +151,16 @@ em {
       background-color: gainsboro;
       margin: 2em 1em 1em 1em;
       padding: 1em 1.5em 1em 1.5em;
-    }
 
-    aside a {
-      padding: 0.5em 1.5em;
-      background-color: #1abc9c;
-      text-decoration: none;
-      color: white;
-    }
-    aside a:hover {
-      background-color: #16a085;
+      a {
+        padding: 0.5em 1.5em;
+        background-color: #1abc9c;
+        text-decoration: none;
+        color: white;
+      }
+      a:hover {
+        background-color: #16a085;
+      }
     }
   }
 
@@ -273,27 +274,27 @@ footer h3 {
 
 .client-quotes-list {
   text-align: center;
-
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(26em, 1fr));
   row-gap: 1em;
   column-gap: 1em;
   padding: 0 2em 1em 2em;
-}
-.client-quotes-list .client-quotes-item {
-  padding: 0.1em 0.2em;
-  background-color: #fbfbfb;
-  border: 4px solid #f1f1f1;
-  border-radius: 8px;
-}
-.client-quotes-list .client-quotes-item h4 {
-  font-style: italic;
-  line-height: 1.2em;
-}
-.client-quotes-list .client-quotes-item p {
-  line-height: 1.8em;
-  width: 80%;
-  margin: 10px auto;
+
+  .client-quotes-item {
+    padding: 0.1em 0.2em;
+    background-color: #fbfbfb;
+    border: 4px solid #f1f1f1;
+    border-radius: 8px;
+  }
+  .client-quotes-item h4 {
+    font-style: italic;
+    line-height: 1.2em;
+  }
+  .client-quotes-item p {
+    line-height: 1.8em;
+    width: 80%;
+    margin: 10px auto;
+  }
 }
 
 .courses-grid {

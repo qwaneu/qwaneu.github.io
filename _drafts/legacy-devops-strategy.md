@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cargo cults and angry chaos monkeys
+title: Cargo cults & angry chaos monkeys
 tags:
   - strategy
   - DevOps
@@ -20,31 +20,37 @@ After doing a short introduction on Wardley Maps, Simon talked about "No one siz
 
 ## Cargo cults
 
-[Brittanica starts its' definition of a Cargo Cult as such:](https://www.britannica.com/topic/cargo-cult)
+[Brittanica starts its definition of a Cargo Cult as such:](https://www.britannica.com/topic/cargo-cult)
+
 > Cargo cult, any of the religious movements chiefly, but not solely, in Melanesia that exhibit belief in the imminence of a new age of blessing, to be initiated by the arrival of a special “cargo” of goods from supernatural sources—based on the observation by local residents of the delivery of supplies to colonial officials
 
-Richard Feynman translated this to science in 1974
->In the South Seas there is a cargo cult of people. During the war they saw airplanes with lots of good materials, and they want the same thing to happen now. So they’ve arranged to make things like runways, to put fires along the sides of the runways, to make a wooden hut for a man to sit in, with two wooden pieces on his head for headphones and bars of bamboo sticking out like antennas—he’s the controller—and they wait for the airplanes to land. They’re doing everything right. The form is perfect. It looks exactly the way it looked before. But it doesn’t work. No airplanes land. So I call these things cargo cult science, because they follow all the apparent precepts and forms of scientific investigation, but they’re missing something essential, because the planes don’t land.
+Richard Feynman translated this to science in 1974:
+
+> In the South Seas there is a cargo cult of people. During the war they saw airplanes with lots of good materials, and they want the same thing to happen now. So they’ve arranged to make things like runways, to put fires along the sides of the runways, to make a wooden hut for a man to sit in, with two wooden pieces on his head for headphones and bars of bamboo sticking out like antennas—he’s the controller—and they wait for the airplanes to land. They’re doing everything right. The form is perfect. It looks exactly the way it looked before. But it doesn’t work. No airplanes land. So I call these things cargo cult science, because they follow all the apparent precepts and forms of scientific investigation, but they’re missing something essential, because the planes don’t land.  
 — Richard Feynman
 
 Societies with Cargo Cults are run by a Big Men, who perform impressive ceremonies to underline their greatness. Jamie gave several examples from Big Men going to a conference and coming back with advice that was only partially actionable. "Test all the things!" (asserts / expectations? what are those?)
 
-## Cargo cult antidotes:
+## Cargo cult antidotes
 
-Practices are an emergent property of how you work, so blindly copying the practices might not be productive. You are probably familiar with companies copying the 'Spotify model'. It's worth watching Jamie explain the 'Netflix of the Netherlands'.
+Practices are an emergent property of how you work, so blindly copying the practices does not work. You are probably familiar with companies copying the 'Spotify model'. It's worth watching Jamie explain the 'Netflix of the Netherlands'.
 
-When going to a conference, don't blindly apply what you've seen, your context is different. Patterns put context first for a reason. Jamie mentioned the first Software Circus, and people adopting netflix practices like Chaos Monkeys without understanding or user need. I saw Kelsey Hightowers' brilliant Kubernetes demo, both highly entertaining, technically risque and solid content. I didn't adopt Kubernetes... After a successful launch, in which I spent far too much time creating a chain of Docker builds, I went cold turkey and forbade myself to use Docker for a year. That is how I 'missed' Kubernetes.
+When going to a conference, don't blindly apply what you've seen, your context is different. Patterns put context first for a reason. Jamie mentioned the first [Software Circus conference](https://www.softwarecircus.io/), and people adopting Netflix practices like Chaos Monkeys without understanding or user need.
+
+I saw Kelsey Hightower's brilliant Kubernetes demo, both highly entertaining, technically risque and solid content. I didn't adopt Kubernetes... After a successful launch, in which I spent far too much time creating a chain of Docker builds, I went cold turkey and forbade myself to use Docker for a year. That is how I 'missed' Kubernetes.
 
 ## How does one get sucked into a Cargo Cult
 
 ### Ad Men & Vendors
 
-> For all our secular rationalism and technological advances, potential for surrender to the charms of magical thinking remains embedded in the human psyche, awaiting only the advertiser to awaken it.
-Tim Wu, The Attention Merchants
+> For all our secular rationalism and technological advances, potential for surrender to the charms of magical thinking remains embedded in the human psyche, awaiting only the advertiser to awaken it.  
+— Tim Wu, The Attention Merchants
 
 This made me think about the ultimate Ad Men from the 80s - Amazing Discoveries. And lo and behold, there is video evidence of it. This is so over the top, no-one I knew bought anything from it, but one level away there were people who had gotten things from it.
 
-The episode I found on youtube is about car polish. It is magical, and makes your car shiny! It's amaazing Mike! Note the comments of people who bought it and found it lacking. When I'd apply a Wardley map to polishing a car, not owning one would be an option, so you don't have to think about it. We delegate it to people who are specialists and do a much better job than we ever could. If you do it yourself, getting the basics right comes first. Then you maybe can do experiments. And basic can be very basic, as in use a soft spunge. I once had a (software) client who polished his brand new car with a metal scrubber. It had to be repainted. (He is extremely capable otherwise, everyone has their lapses).
+The episode I found on YouTube is about car polish. It is magical, and makes your car shiny! It's amaazing Mike! Note the comments of people who bought it and found it lacking. 
+
+When I'd apply Wardley mapping to polishing a car, not owning one would be an option, so you don't have to think about it. We delegate it to people who are specialists and do a much better job than we ever could. If you do it yourself, getting the basics right comes first. Then you maybe can do experiments. And basic can be very basic, as in use a soft spunge. I once had a (software) client who polished his brand new car with a metal scrubber. It had to be repainted (he was extremely capable otherwise, everyone has their lapses).
 
 ### Intellectual gaps
 
@@ -56,7 +62,7 @@ I now know a bit about sales, and I don't think I can ever stop learning about m
 
 Choose life, choose a career. Choose XP, SAFE, Rational Rose, Kubernetes, AWS Lambda. I'm trying not to choose, and make conscious trade-offs instead, but there is always temptation and Fear of Missing Out (FOMO).
 
-Or, as Jamie puts it further down in his Quick Checklist against magical thinking: "Am I moving too quickly? Only fools rush in".
+Or, as Jamie puts it further down in his Quick Checklist against magical thinking: _Am I moving too quickly? Only fools rush in_.
 
 Am I insecure, hero worshipping something?
 
@@ -88,8 +94,16 @@ Simon also talked about DevOps being the New Legacy. We'll cover that in a follo
 
 In the run-up to this, Steve Freeman shared a few great resources. I'm still mulling over [Communities of Need versus Communities of Practice](https://theitriskmanager.com/2015/04/19/communities-of-need-community-of-solutions/). Chris Matts' talk is based around Geoffry Moore's Chrossing the Chasm. Food for follow up posts.
 
-Jamie prepared the presentation with a [blog post about Cargo Cults and Coconut Headphones](https://blog.container-solutions.com/cloud-native-transformation-and-wishful-thinking). Inspiration for Jamies talk came from a presentation at the SPA Conference in 2006 by Dave Thomas that we both attended, included in Jamies post.
+Jamie prepared the presentation with a [blog post about Cargo Cults and Coconut Headphones](https://blog.container-solutions.com/cloud-native-transformation-and-wishful-thinking). Inspiration for Jamie's talk came from a presentation at the [SPA Conference](https://www.spaconference.org) in 2006 by Dave Thomas that we both attended.
 
 [Cargo Cult Science by Richard P. Feynman, 1974 - pdf](http://calteches.library.caltech.edu/51/02/CargoCult.pdf)
 
 [Steve McConnell applied Cargo Cults to Software Engineering in 2000.](https://stevemcconnell.com/articles/cargo-cult-software-engineering/)
+
+<aside>
+  <h3>@@</h3>
+  <p>@@.</p>
+  <p><div>
+    <a href="/training">Learn more about our workshops</a>
+  </div></p>
+</aside>
