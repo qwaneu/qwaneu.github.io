@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cargo cults & angry chaos monkeys
+title: Cargo cults and angry chaos monkeys
 tags:
   - strategy
   - DevOps
