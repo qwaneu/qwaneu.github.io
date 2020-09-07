@@ -8,9 +8,11 @@ author: Willem van den Ende
 image: /attachments/blogposts/2020/202009-cargo-cult-plane.png
 ---
 
-A couple of days ago, Jamie Dobson and Simon Wardley did a back to back presentation on [Cargo Cults and mapping DevOps and serverless](https://www.youtube.com/watch?v=hlPEeDWHy34&feature=youtu.be). Great athmosphere in the virtual room. My son made a cameo apperance near the end. One can't strategists young enough.
-j
-This is a rich vein, it trigges a lot. So in the spirit of glorious [Dirt Roads](http://localhost:8082/2020/09/02/dimensional-planning.html), I'm going to limit myself to writing the things that resonated with me, amended with a few triggers.
+A couple of days ago, Jamie Dobson and Simon Wardley did a back to back presentation on [Cargo Cults and mapping DevOps and serverless](https://www.youtube.com/watch?v=hlPEeDWHy34&feature=youtu.be). Great athmosphere in the virtual room. My son made a cameo apperance near the end. One can't grow strategists young enough.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hlPEeDWHy34" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+This is a rich vein, it triggers a lot. So in the spirit of glorious [Dirt Roads](http://localhost:8082/2020/09/02/dimensional-planning.html), I'm going to limit myself to writing the things that resonated with me, amended with a few connections it triggered.
 
 Jamie prepared the presentation with a [blog post about Cloud native and Wishful thinking, or how to avoid buying Coconut Headphones](https://blog.container-solutions.com/cloud-native-transformation-and-wishful-thinking).
 
@@ -96,7 +98,7 @@ Simon also talked about DevOps being the New Legacy. We'll cover that in a follo
 
 In the run-up to this, Steve Freeman shared a few great resources. I'm still mulling over [Communities of Need versus Communities of Practice](https://theitriskmanager.com/2015/04/19/communities-of-need-community-of-solutions/). Chris Matts' talk is based around Geoffry Moore's Chrossing the Chasm. Food for follow up posts.
 
-Jamie prepared the presentation with a [blog post about Cargo Cults and Coconut Headphones](https://blog.container-solutions.com/cloud-native-transformation-and-wishful-thinking). Inspiration for Jamie's talk came from a presentation at the [SPA Conference](https://www.spaconference.org) in 2006 by Dave Thomas that we both attended.
+Jamie prepared the presentation with a [blog post about Cargo Cults and Coconut Headphones](https://blog.container-solutions.com/cloud-native-transformation-and-wishful-thinking). Inspiration for Jamie's talk came from a keynote titled "Cargo Cults and Angry Monkeys" at the [SPA Conference](https://www.spaconference.org) in 2006 by Dave Thomas that we both attended.
 
 [Cargo Cult Science by Richard P. Feynman, 1974 - pdf](http://calteches.library.caltech.edu/51/02/CargoCult.pdf)
 
