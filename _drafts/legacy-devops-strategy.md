@@ -102,7 +102,7 @@ Jamie prepared the presentation with a [blog post about Cargo Cults and Coconut 
 
 [Steve McConnell applied Cargo Cults to Software Engineering in 2000.](https://stevemcconnell.com/articles/cargo-cult-software-engineering/)
 
-Ad Men made us think about the work of writer Willem Elsschot, who was an Ad Men himself. In particular the novels "Lijmen" (Glueing) and "Het Been" (The Leg), which revolves around a kind of scam set in the 1930s that is still around today. There doesn't seem to be an english translation, but [Wikipedia has a reasonable enlish summary of the movie](https://en.wikipedia.org/wiki/Lijmen/Het_Been).
+Ad Men made us think about the work of writer Willem Elsschot, who was an Ad Men himself. In particular the novels "Lijmen" (Glueing) and "Het Been" (The Leg), which revolves around a kind of advertising scam set in the 1930s that is still around today. There doesn't seem to be an english translation, but [Wikipedia has a reasonable enlish summary of the movie](https://en.wikipedia.org/wiki/Lijmen/Het_Been).
 
 Credits: Marc Evers for editing, and also thinking of Willem Elsschot.
 
