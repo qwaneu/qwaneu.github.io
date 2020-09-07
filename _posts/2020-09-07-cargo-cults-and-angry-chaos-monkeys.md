@@ -51,7 +51,7 @@ I saw Kelsey Hightower's brilliant Kubernetes demo, both highly entertaining, te
 — Tim Wu, The Attention Merchants
 
 This made me think about the ultimate Ad Men from the 80s - Amazing Discoveries. And lo and behold, [there is video evidence of it](https://www.youtube.com/watch?v=-lxXqWF5ra0). This is so over the top, no-one I knew bought anything from it, but one level away there were people who had gotten things from it.
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-lxXqWF5ra0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 The episode I found on YouTube is about car polish. It is magical, and makes your car shiny! It's amaazing Mike! Note the comments of people who bought it and found it lacking.
 
 When I'd apply Wardley mapping to polishing a car, not owning one would be an option, so you don't have to think about it. We delegate it to people who are specialists and do a much better job than we ever could. If you do it yourself, getting the basics right comes first. Then you maybe can do experiments. And basic can be very basic, as in use a soft spunge. We once had a (software) client who polished his brand new car with a metal scrubber. It had to be repainted (he was extremely capable otherwise, everyone has their lapses).
