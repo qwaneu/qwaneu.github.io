@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DevOps is the new Legacy
+title: Cargo cults and angry chaos monkeys
 tags:
   - strategy
   - DevOps
@@ -14,14 +14,22 @@ This is a rich vein, it trigges a lot. So in the spirit of glorious Dirt Roads, 
 
 Simon: No one size fits all methods. Agile is becoming process over people.
 
-Jamie prepared the presentation with a blog post about Cargo Cults. I was wondering if he had seen the photos - he had, and put them in the presentation. I was also wondering how not to fall into Cargo Cults. I'm temped by 'the shiny' as much as the next person. I have learnt to try out 'the shiny' on my own first, and then only later contaminate others with it, but still, I don't mind failure but would rather do less of it sometimes.
+Jamie prepared the presentation with a blog post about Cargo Cults.
+
+[Brittanica starts its' definition of a Cargo Cult as such:](https://www.britannica.com/topic/cargo-cult)
+> Cargo cult, any of the religious movements chiefly, but not solely, in Melanesia that exhibit belief in the imminence of a new age of blessing, to be initiated by the arrival of a special “cargo” of goods from supernatural sources—based on the observation by local residents of the delivery of supplies to colonial officials
+
+I was wondering if Jamie had seen the photos - he had, and put them in the presentation. I was also wondering how not to fall into Cargo Cults. I'm temped by 'the shiny' as much as the next person. I have learnt to try out 'the shiny' on my own first, and then only later contaminate others with it, but still, I don't mind failure but would rather do less of it sometimes.
+
+
 
 # Cargo cult antidotes:
 
-- When going to a conference, don't blindly apply what you've seen, your context is different. Patterns put context first for a reason.
--
+Societies with Cargo Cults are run by a Big Men, who perform impressive ceremonies to underline their greatness.
 
-Societies with Cargo Cults are run by a Big Men.
+Practices are an emergent property of how you work, so blindly copying the practices might not be productive. You are probably familiar with companies copying the 'Spotify model'. It's worth watching Jamie explain the 'Netflix of the Netherlands'.
+
+When going to a conference, don't blindly apply what you've seen, your context is different. Patterns put context first for a reason. Jamie mentioned the first Software Circus, and people adopting netflix practices like Chaos Monkeys without understanding or user need. I saw Kelsey Hightowers' brilliant Kubernetes demo, both highley entertaining.  After
 
 # How does one get sucked into a Cargo Cult
 
@@ -119,5 +127,12 @@ cloud native transformation.
 Maps get discussions going. Whiteboards take the person(al) out of the
 discussion, they move the discussion from the subject to the object. Simon /
 doctrine: Have a common language / challenge assumptions. The people doing the
-work know te problems, but narrative doesn't let the assumptions be challenged.
+work know the problems, but narrative doesn't let the assumptions be challenged.
 pre-mortem / post-mortem blameless.
+
+Andy Nordgren -
+
+Everett Rogers - diffusion. Moore uses the non-cumulative form . Each evolution
+goes through hundreds or thousands of chasms.
+
+[Cargo Cult Science by Richard P. Feynman, 1974](http://calteches.library.caltech.edu/51/02/CargoCult.pdf)
