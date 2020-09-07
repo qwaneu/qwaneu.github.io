@@ -26,7 +26,7 @@ After doing a short introduction on Wardley Maps, Simon talked about "No one siz
 
 Richard Feynman translated this to science in 1974:
 
-> In the South Seas there is a cargo cult of people. During the war they saw airplanes with lots of good materials, and they want the same thing to happen now. So they’ve arranged to make things like runways, to put fires along the sides of the runways, to make a wooden hut for a man to sit in, with two wooden pieces on his head for headphones and bars of bamboo sticking out like antennas—he’s the controller—and they wait for the airplanes to land. They’re doing everything right. The form is perfect. It looks exactly the way it looked before. But it doesn’t work. No airplanes land. So I call these things cargo cult science, because they follow all the apparent precepts and forms of scientific investigation, but they’re missing something essential, because the planes don’t land.  
+> In the South Seas there is a cargo cult of people. During the war they saw airplanes with lots of good materials, and they want the same thing to happen now. So they’ve arranged to make things like runways, to put fires along the sides of the runways, to make a wooden hut for a man to sit in, with two wooden pieces on his head for headphones and bars of bamboo sticking out like antennas—he’s the controller—and they wait for the airplanes to land. They’re doing everything right. The form is perfect. It looks exactly the way it looked before. But it doesn’t work. No airplanes land. So I call these things cargo cult science, because they follow all the apparent precepts and forms of scientific investigation, but they’re missing something essential, because the planes don’t land.
 — Richard Feynman
 
 Societies with Cargo Cults are run by a Big Men, who perform impressive ceremonies to underline their greatness. Jamie gave several examples from Big Men going to a conference and coming back with advice that was only partially actionable. "Test all the things!" (asserts / expectations? what are those?)
@@ -43,14 +43,14 @@ I saw Kelsey Hightower's brilliant Kubernetes demo, both highly entertaining, te
 
 ### Ad Men & Vendors
 
-> For all our secular rationalism and technological advances, potential for surrender to the charms of magical thinking remains embedded in the human psyche, awaiting only the advertiser to awaken it.  
+> For all our secular rationalism and technological advances, potential for surrender to the charms of magical thinking remains embedded in the human psyche, awaiting only the advertiser to awaken it.
 — Tim Wu, The Attention Merchants
 
-This made me think about the ultimate Ad Men from the 80s - Amazing Discoveries. And lo and behold, there is video evidence of it. This is so over the top, no-one I knew bought anything from it, but one level away there were people who had gotten things from it.
+This made me think about the ultimate Ad Men from the 80s - Amazing Discoveries. And lo and behold, [there is video evidence of it](https://www.youtube.com/watch?v=-lxXqWF5ra0). This is so over the top, no-one I knew bought anything from it, but one level away there were people who had gotten things from it.
 
-The episode I found on YouTube is about car polish. It is magical, and makes your car shiny! It's amaazing Mike! Note the comments of people who bought it and found it lacking. 
+The episode I found on YouTube is about car polish. It is magical, and makes your car shiny! It's amaazing Mike! Note the comments of people who bought it and found it lacking.
 
-When I'd apply Wardley mapping to polishing a car, not owning one would be an option, so you don't have to think about it. We delegate it to people who are specialists and do a much better job than we ever could. If you do it yourself, getting the basics right comes first. Then you maybe can do experiments. And basic can be very basic, as in use a soft spunge. I once had a (software) client who polished his brand new car with a metal scrubber. It had to be repainted (he was extremely capable otherwise, everyone has their lapses).
+When I'd apply Wardley mapping to polishing a car, not owning one would be an option, so you don't have to think about it. We delegate it to people who are specialists and do a much better job than we ever could. If you do it yourself, getting the basics right comes first. Then you maybe can do experiments. And basic can be very basic, as in use a soft spunge. We once had a (software) client who polished his brand new car with a metal scrubber. It had to be repainted (he was extremely capable otherwise, everyone has their lapses).
 
 ### Intellectual gaps
 
@@ -99,6 +99,10 @@ Jamie prepared the presentation with a [blog post about Cargo Cults and Coconut 
 [Cargo Cult Science by Richard P. Feynman, 1974 - pdf](http://calteches.library.caltech.edu/51/02/CargoCult.pdf)
 
 [Steve McConnell applied Cargo Cults to Software Engineering in 2000.](https://stevemcconnell.com/articles/cargo-cult-software-engineering/)
+
+Ad Men made us think about the work of writer Willem Elsschot, who was an Ad Men himself. In particular the novels "Lijmen" (Glueing) and "Het Been" (The Leg), which revolves around a kind of scam set in the 1930s that is still around today. There doesn't seem to be an english translation, but [Wikipedia has a reasonable enlish summary of the movie](https://en.wikipedia.org/wiki/Lijmen/Het_Been).
+
+Credits: Marc Evers for editing, and also thinking of Elsschot.
 
 <aside>
   <h3>@@</h3>
