@@ -47,15 +47,28 @@ So in front end code, a number of concerns come together: user interface code, i
 
 What if we looking at a front end component through a hexagonal lens? What is the domain, what are the ports, what are the adapters?
 
+Let's look at a sample [Vue.js](https://vuejs.org/) and [Vuex](https://vuex.vuejs.org/) based front end application, a web shop we developed as an exercises in our courses. We have a few UI components, like a ProductList. We have a store that can retrieve the available from some backend API and which holds the current list of products.
+
+![vue.js application main concepts: UI components, store, API access](/attachments/blogposts/2020/PortsAndAdapters-3.png)
+{: class="post-image" }
+
 ### Ports
 
 - the UI forms the primary port through which our users drive the component
 - resources and operations on them offered by (backend) services are our secondary ports
 - any intents for which we need browser functionality are also ports (like local storage or alerts)
 
+### Primary adapters
+
+We see the Vue.js based UI components as primary adapters. This includes the components, its HTML and its CSS. These components are heavily dependent on Vue.js and related libraries. 
+
+This adapter code will have its own automated tests, which is greatly facilitated by the Vue.js test library. It allows us to run all UI component tests in seconds.
+
 ### Domain
 
 So what is 'domain logic' in this case? Front end components run in an untrusted environment (the user's browser), so backend components are responsible for business rules, with the intent of ensuring correctness and consistency. In a front end, we do have domain related logic related, but its intent is to facilitate, guide, enable the user: **view logic** or **view models**.
+
+The state and store objects are part of our domain; they sit on the edge of the domain and provide an interface to the UI components. In this way, they act as a [Facade](https://en.wikipedia.org/wiki/Facade_pattern)) towards the domain code. 
 
 Our Agile Fluency Diagnostic front end knows about domain concepts like _facilitators_ and _diagnosticSessions_. We get these as data from backend APIs, but we still translate these to our own classes in the front end code to decouple from APIs and facilitate independent evolution of components and their APIs.
 
@@ -63,7 +76,9 @@ Our Agile Fluency Diagnostic front end knows about domain concepts like _facilit
 
 Secondary adapters are the code that encapsulate the API calls and translate these to our domain.
 
-In our application for instance, we have an ApiBasedSessionRepository that offers 'all' and 'byId' to the domain, to get all sessions or a specific one.
+We created adapters for the interaction with backend APIs. They act as [Repositories](https://www.martinfowler.com/eaaCatalog/repository.html) in our domain, like a `ProductRepository` that offers an `allAvailable()` function to get all available products. We create these adapters independently using test driven development. 
+
+In our online Agile Fluency Diagnostic application for instance, we have an ApiBasedSessionRepository that offers `all` and `byId` to the domain, to get all sessions or a specific one.
 
 ```javascript
 class ApiBasedSessionRepository {
@@ -88,36 +103,25 @@ class ApiBasedSessionRepository {
 }
 ```
 
-The backend API adapters also take care of mapping from/to our domain objects, like the _toDiagnosticSessionSummary function in the example. We make this mapping explicit, to:
+The backend API adapters also take care of mapping from/to our domain objects, like the `_toDiagnosticSessionSummary` function in the example. We make this mapping explicit, to:
 - allow independent evolution of different components
 - represent the domain objects (resources) explicitly in our front end code, to make it easier for ourselves as developers
 - shield against any malicious JS stuff coming in
 - allow contract based testing
 
-### Primary adapters
+### The application through a Hexagonal lens
 
-Our Vue.js based UI components are the primary adapters. This includes the components, its HTML and its CSS. These components are heavily dependent on Vue.js and related libraries. So we have quite some adapter code (all the UI components) in our front end. Some numbers for the current state of our front end application:
+If we look at our application through a Hexagonal lens, we see domain objects (plain Javascript) in the center, state objects at the boundary, Vue.js based UI components as primary adapters and repositories as secondary adapters encapsulating interaction with backend APIs.
+
+![UI components, store, API adapter put in a hexagon](/attachments/blogposts/2020/PortsAndAdapters-8.png)
+{: class="post-image" }
+
+So we have quite some adapter code (all the UI components) in our front end. Some numbers for the online Agile Fluency Diagnostic application:
 
 | domain / view logic | 37% | 
 | UI component adapters | 53% |
 | API adapters | 9% |
 | main.js | 1% |
-
-### A Vue.js application
-
-Let's look at a sample [Vue.js](https://vuejs.org/)/[Vuex](https://vuex.vuejs.org/) application, a web shop in this case. We have a few UI components (Vue.js based views/components), like a ProductList. We have a store that can retrieve the available from some backend API and which holds the current list of products.
-
-![vue.js application main concepts: UI components, store, API access](/attachments/blogposts/2020/PortsAndAdapters-3.png)
-{: class="post-image" }
-
-We see the Vue.js based UI components as adapters. This adapter code will have its own automated tests, which is greatly facilitated by the Vue.js test library. It allows us to run all component tests in seconds.
-
-The state objects are part of our domain; they sit on the edge of the domain and provide an interface to the UI components. In this way, they act as a [Facade](https://en.wikipedia.org/wiki/Facade_pattern)) towards the domain code. 
-
-We created adapters for the interaction with backend APIs. They act as [Repositories](https://www.martinfowler.com/eaaCatalog/repository.html) in our domain (e.g. `ProductRepository` that offers an `allAvailable()` function to get all available products). We create these adapters independently using test driven development. 
-
-![UI components, store, API adapter put in a hexagon](/attachments/blogposts/2020/PortsAndAdapters-8.png)
-{: class="post-image post-image-50" }
 
 ### Zooming in on the domain
 
