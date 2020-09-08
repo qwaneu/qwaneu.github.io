@@ -138,16 +138,16 @@ Separating these concerns allows us to decouple the view logic from the UI struc
 
 Using the Hexagonal lens helps us with **WTPW - What To Put Where**: a new validation rule for adding a facilitator? _put it in the NewFacilitator domain object_; better visualization of password strength? _in the UI component_; do we need to map a backend API peculiarity? _in the API adapter_.
 
-Mapping data in the API adapters comes with a bit of extra effort of writing the mapping code. This is a trade-off and the price is usually worth paying in our experience.
+Mapping data in the API adapters comes with a bit of extra effort of writing the mapping code. This is a trade-off and is usually worth it in our experience.
 
-Adding a new feature, like adding a new property to Facilitator, can result in the [code smell](/shop) called [Shotgun Surgery](https://blog.ndepend.com/shotgun-surgery/): we need to make changes in several places, in the UI component (add a new text field), in the domain (extend the domain object, add a validation rule), in the adapter (map the new property to/from the backend API). Again a trade-off, the changes themselves tend to be small, so we think almost often the price is worth paying here.
+Adding a new feature, like adding a new property to Facilitator, can result in the [code smell](/shop) called [Shotgun Surgery](https://blog.ndepend.com/shotgun-surgery/): we need to make changes in several places, in the UI component (add a new text field), in the domain (extend the domain object, add a validation rule), in the adapter (map the new property to/from the backend API). Again a trade-off, the changes themselves tend to be small, so we think the price is worth paying here.
 
 Applying the Hexagonal lens also triggers some follow up questions:
 - what to do with the logic in our UI components, like disabling a button when the input is not valid?
 - how to structure the view domain in detail?
 - structuring the core of the hexagon: how can we make the domain part more modular?
 
-Keep an eye on this blog, we will dive deeper into these questions and our experiences.
+Keep an eye on our blog, we will dive deeper into these questions and our experiences.
 
 ## References
 
@@ -155,6 +155,8 @@ Keep an eye on this blog, we will dive deeper into these questions and our exper
 - The [original article on Hexagonal Architecture](https://alistair.cockburn.us/hexagonal-architecture/) by Alistair Cockburn
 - Instead of UI Library, feel free to read browser APIs, [Frameworkless Front-End Development](https://github.com/Apress/frameworkless-front-end-development)) is a solid introduction to using Vanilla JS.
 - [The first post in this series](/2020/08/26/hexagonal-vue.journey.html)
+
+Credits: Editing - Willem van den Ende
 
 <aside>
   <h3>Want to learn more?</h3>
