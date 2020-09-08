@@ -162,6 +162,19 @@ em {
         background-color: #16a085;
       }
     }
+
+    table {
+      width: 100%;
+      border: 1px solid #ddd;
+      tbody {
+        tr:nth-child(odd) {background-color: #f2f2f2;} 
+        th, td {
+          padding: 0.5em 1em;
+          margin: 0;
+          text-align: left;
+        }
+      }
+    }
   }
 
   .post-meta {

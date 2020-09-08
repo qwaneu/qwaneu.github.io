@@ -9,93 +9,151 @@ author: Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2020/PortsAndAdapters-1.png
 ---
 
-Developing Front end components: UI often tend to start out simple, 'just' a form or a grid representing the data that comes from the backend (in other words, it's 'just' putting a visual layer over backend APIs), but when the front end evolves, they become more complex than that, because of all kinds of concerns (many UX - user experience related):
+Front ends tend to start out simple, 'just' a form or a grid showing data that comes from the backend. It looks like 'just' a visual layer on top of backend APIs. When a front end evolves however, it will become more complex, because of all kinds of concerns regarding UX/UI and architecture. 
 
-- we want to guide users through specific flows, e.g. depending on user level (novice vs expert) or variations in the data (simple product vs extensive details)
-- we want to provide quick validation feedback on input, to prevent errors
-- we want to provide all kinds of feedback so that our users know what's happening and know what is expected of them, e.g. provide spinners while waiting, green check marks when some input is correct
-- we want to prevent distracting or confusing the users, so we hide buttons for actions that are not possible yet, or hide functionalities that the user cannot use from their current role
-- we want to connect to APIs or even collecting data from 2 or 3 API and present it in a coherent way; the available APIs might not 100% match the view you want to present
-- we want to move a whole concern over to the front end, like a shopping basket that fully lives in the front end so that we prevent extra complexity in the backend for managing temporary state for many users
+To mention a few:
+
+- guide users through specific flows, e.g. depending on user level or variations in the data (simple product vs extensive details), while the backend APIs are flow agnostic
+- provide quick feedback on input, to prevent mistakes
+- provide feedback so that our users continuously know what is happening and what is expected of them, e.g. spinners when waiting, green check marks for correct input, specific validation feedback
+- prevent distracting or confusing users, e.g. hide buttons for actions that are not possible yet, hide functionalities not available the the current user role
+- collect data from multiple API and present it in a coherent way; 
+- present data in a way the user understands, as some APIs might not 100% match the user's view on the world
+- move a whole concern over to the front end, e.g. implement a shopping basket in the front end and prevent extra complexity in the backend for managing shopping basket state
 
 ## Hexagonal Architecture to manage complexity
 
-Having applied [Hexagonal Architecture](/2020/08/20/hexagonal-architecture) to back end components, well-structured monoliths and desktop client applications, we have found that thinking hexagonally helps to keep complexity manageable. Taking a hexagonal perspective on our componpent, we see distinguish and decouple different concerns: ports (sets of interactions with the outside world), adapters, domain logic. It allows us to focus on domain logic and business rules and it facilitates independent evolution of different services/components. It also allows for better automated testing of all these concerns (@@upcoming blog entry).
+Having applied [Hexagonal Architecture](/2020/08/20/hexagonal-architecture) to back end components, well-structured monoliths and desktop client applications, we have found that thinking hexagonally helps to keep complexity manageable. 
 
-Another aspect of the Hexagonal Architecture pattern is that it is fractal: we apply it at component or service level, but we can also zoom out and see our application landscape as a network of connected hexagons. This includes front end components, but we can also see a relational database (having constraints, views, possibly stored procedures) as a hexagon on its own.
+![ports and adapters](/attachments/blogposts/2020/ports-and-adapters.jpg)
+{: class="post-image post-image-50" }
 
-![application as a network of hexagons](/attachments/blogposts/2020/hextesting-01.jpg)
-{: class="post-image" }
-
-## Hexagons applied to front end
-
-@@[picture: front end ball of mud with the different concerns]
-
-Looking at a front end component through a hexagonal lens, we see distinguish and decouple different concerns: 
+It allows us to focus on domain logic and business rules and it facilitates independent evolution of different services/components. It also allows for better automated testing of all these concerns. Hexagonal Architecture distinguishes:
 
 | Port | set of interactions with outside world |
 | Adapter | translates from and to outside world | 
-| Domain | model of the domain, independent of frameworks, libraries | 
+| Domain | model of the domain, independent of frameworks & libraries; concepts in our stakeholders' language | 
 
-The concepts in the Domain have meaning for users, they are in our stakeholders' language. 
+For our current project, the online Agile Fluency Diagnostic, we are developing a Vue.js based frontend, a Python/Flask based backend and a relational database. To manage complexity and facilitate evolution, we decided to apply hexagonal architecture to both frontend and backend. We will focus specifically on how this worked out for the Vue.js frontend and what decisions we took, and why.
 
-![ports and adapters](/attachments/blogposts/2020/ports-and-adapters.jpg)
-{: class="post-image" }
+Let's zoom out and see our application as a network of connected hexagons:
 
-So what could be the domain logic, the ports, the adapters in a front end component?
+![application as a network of hexagons](/attachments/blogposts/2020/hextesting-01.jpg)
+{: class="post-image post-image-50" }
 
-Ports: 
+## Hexagons applied to front end
+
+So in front end code, a number of concerns come together: user interface code, integration with the UI library or framework (or with the browser APIs if you go Frameworkless Front-End Developlment), validation & feedback logic, state management, user flow logic, backend API integration.
+
+What if we looking at a front end component through a hexagonal lens? What is the domain, what are the ports, what are the adapters?
+
+### Ports
+
 - the UI forms the primary port through which our users drive the component
 - resources and operations on them offered by (backend) services are our secondary ports
-- any intents for which we need browser functionality are also ports (e.g. local storage can be one, or alerts)
+- any intents for which we need browser functionality are also ports (like local storage or alerts)
 
-So what is 'domain logic' in this case? As a guideline, because front end components run in user's browsers (untrusted environment), backend components are responsible for ensuring adherence to business rules, so the domain logic should be encapsulated there. In the front end we do have logic related to our domain, but its intent is to facilitate, guide, enable the user: **view logic** or **view models**.
+### Domain
 
+So what is 'domain logic' in this case? Front end components run in an untrusted environment (the user's browser), so backend components are responsible for business rules, with the intent of ensuring correctness and consistency. In a front end, we do have domain related logic related, but its intent is to facilitate, guide, enable the user: **view logic** or **view models**.
 
-Our front end is about domain concepts (facilitators, diagnosticSessions), we get these from backend APIs but we still translate these to our own classes in the front end code to decouple the front end from back end API evolution (we want to facilitate independent evolution of our different components and their APIs) but also to safeguard from interesting vulnerabilities that could occur when we just base our code on the objects coming in from the backend; backend API classes/functions are our secondary ports
+Our Agile Fluency Diagnostic front end knows about domain concepts like _facilitators_ and _diagnosticSessions_. We get these as data from backend APIs, but we still translate these to our own classes in the front end code to decouple from APIs and facilitate independent evolution of components and their APIs.
 
-## Hexagonal perspective on a Vue.js application
+### Secondary adapters
 
-Let's look at a sample [Vue.js](https://vuejs.org/)/[Vuex](https://vuex.vuejs.org/) application, a web shop in this case. We have a few UI components (Vue.js based views/components), like a ProductList. We have a 'store' that can retrieve the available from some backend API and which holds the current list of products.
+Secondary adapters are the code that encapsulate the API calls and translate these to our domain.
+
+In our application for instance, we have an ApiBasedSessionRepository that offers 'all' and 'byId' to the domain, to get all sessions or a specific one.
+
+```javascript
+class ApiBasedSessionRepository {
+  constructor (axios) {
+    this.axios = axios
+  }
+
+  _toDiagnosticSessionSummary (data) {
+    return new DiagnosticSessionSummary({ id: data.id, team: data.team, date: data.date, isOpen: data.is_open, isTest: data.is_test })
+  }
+
+  all () {
+    return this.axios.doGet({
+      url: '/diagnostic-sessions',
+      failureReason: 'The sessions could not be retrieved'
+    }).then(response => response.data.diagnostic_sessions.map(this._toDiagnosticSessionSummary))
+  }
+
+  byId (sessionId) {
+    ...
+  }
+}
+```
+
+The backend API adapters also take care of mapping from/to our domain objects, like the _toDiagnosticSessionSummary function in the example. We make this mapping explicit, to:
+- allow independent evolution of different components
+- represent the domain objects (resources) explicitly in our front end code, to make it easier for ourselves as developers
+- shield against any malicious JS stuff coming in
+- allow contract based testing
+
+### Primary adapters
+
+Our Vue.js based UI components are the primary adapters. This includes the components, its HTML and its CSS. These components are heavily dependent on Vue.js and related libraries. So we have quite some adapter code (all the UI components) in our front end. Some numbers for the current state of our front end application:
+
+| domain / view logic | 37% | 
+| UI component adapters | 53% |
+| API adapters | 9% |
+| main.js | 1% |
+
+### A Vue.js application
+
+Let's look at a sample [Vue.js](https://vuejs.org/)/[Vuex](https://vuex.vuejs.org/) application, a web shop in this case. We have a few UI components (Vue.js based views/components), like a ProductList. We have a store that can retrieve the available from some backend API and which holds the current list of products.
 
 ![vue.js application main concepts: UI components, store, API access](/attachments/blogposts/2020/PortsAndAdapters-3.png)
 {: class="post-image" }
 
-We see the Vue.js based UI components as adapters. Although we've drawn the UI adapter pretty small, this will be a substantial part of the code. This adapter code will have its own automated tests.
+We see the Vue.js based UI components as adapters. This adapter code will have its own automated tests, which is greatly facilitated by the Vue.js test library. It allows us to run all component tests in seconds.
 
-The state objects are part of our view domain; they reside on the edge of our view domain and offer an interface to the UI components (they act as a [Facade](https://en.wikipedia.org/wiki/Facade_pattern)). 
+The state objects are part of our domain; they sit on the edge of the domain and provide an interface to the UI components. In this way, they act as a [Facade](https://en.wikipedia.org/wiki/Facade_pattern)) towards the domain code. 
 
-We created adapters for the interaction with backend APIs. They act as [Repositories](https://www.martinfowler.com/eaaCatalog/repository.html) in our domain (e.g. `ProductRepository` that offers an `allAvailable()` function to get all available products). We test-drive these adapters independently. 
+We created adapters for the interaction with backend APIs. They act as [Repositories](https://www.martinfowler.com/eaaCatalog/repository.html) in our domain (e.g. `ProductRepository` that offers an `allAvailable()` function to get all available products). We create these adapters independently using test driven development. 
 
 ![UI components, store, API adapter put in a hexagon](/attachments/blogposts/2020/PortsAndAdapters-8.png)
-{: class="post-image" }
+{: class="post-image post-image-50" }
 
-How do we structure our view domain? Instead of putting all logic in the store objects, we introduce domain objects (plain Javascript/Typescript classes) that represent the concepts and their responsibilities. The store objects delegate as much as possible to these objects. We see that these domain objects don't tend to be very responsibility-heavy; we end up with a bunch of simple objects that are very easy to understand and to write tests for.
+### Zooming in on the domain
 
-The backend API adapters also take care of mapping from/to our domain objects. We make this explicit mapping because of a mix of reasons:
-- allow independent evolution of different components
-- represent the domain objects (resources) explicitly in our front end code, to make it easier for ourselves as developers
-- shield against any interesting malicious JS stuff coming in
-- (for future exploration) allow contract based testing
+How do we structure our view domain? Instead of putting all logic in the (Vuex) store objects, we introduce domain objects - plain Javascript/Typescript classes - to represent concepts and their responsibilities. The store objects delegate as much as possible to these objects. 
+
+We see that these domain objects don't tend to be very responsibility-heavy; we end up with a bunch of simple objects that are very easy to understand and to write unit tests for.
+
+We also tend to move logic (for e.g. validation) from the UI components to Javascript/Typescript objects, which makes our UI components simpler and our logic easier to test. We will elaborate this in a future post.
 
 ## Consequences
 
-Separating these concerns allows us to decouple the view logic from the UI structure, styling, details. It allows us to let our front end evolve more independently from the backend
+Separating these concerns allows us to decouple the view logic from the UI structure, styling, details. It allows us to let our front end evolve more independently from the backend.
 
-Using the Hexagonal lens helps us with WTPW (What To Put Where), we have places in our code for UI stuff, for view logic, for APIs based stuff. 
+Using the Hexagonal lens helps us with **WTPW - What To Put Where**: is it a new validation rule for adding a new facilitator? _put it in the NewFacilitator domain object_; a better visualization of password strength? _UI component_; do we need to map a backend API peculiarity? _API adapter_.
 
-This also triggers a number of follow up questions:
-- what to do with the logic in our UI components, like disabling a button as long as the input is not yet valid?
+Mapping data in the API adapters comes with a bit of extra effort of writing the mapping code. This is a trade-off and the price is usually worth paying in our experience.
+
+Adding a new feature, like adding a new property to Facilitator, can result in the [code smell](/shop) called [Shotgun Surgery](https://blog.ndepend.com/shotgun-surgery/): we need to make changes in several places, in the UI component (add a new text field), in the domain (extend the domain object, add a validation rule), in the adapter (map the new property to/from the backend API). Again a trade-off, the changes themselves tend to be small, so we think almost often the price is worth paying here.
+
+Applying the Hexagonal lens also triggers some follow up questions:
+- what to do with the logic in our UI components, like disabling a button when the input is not valid?
 - how to structure the view domain in detail? 
-- structuring the hexagon: how can we make the domain part more modular?
+- structuring the core of the hexagon: how can we make the domain part more modular?
 
-Keep an eye on this blog, we will dive deeper into these questions and our ideas/experiences.
+Keep an eye on this blog, we will dive deeper into these questions and our experiences.
 
-## Notes
-
-Difference between front ends / back ends: domain/business heavy, front ends tends to be more adapter heavy (more code that is about integrating)
 
 ## References
 
 - [Growing Object Oriented Software guided by Tests](http://www.growing-object-oriented-software.com/) book by Steve Freeman & Nat Pryce.
 - The [original article on Hexagonal Architecture](https://alistair.cockburn.us/hexagonal-architecture/) by Alistair Cockburn
+
+<aside>
+  <h3>Want to learn more?</h3>
+  <p>We offer courses and workshops on Agile Engineering, Domain Driven Design and Hexagonal Architecture. </p>
+  <p><div>
+    <a href="/training">Learn more about our courses</a>
+  </div></p>
+</aside>
