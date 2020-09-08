@@ -9,17 +9,17 @@ author: Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2020/PortsAndAdapters-8.png
 ---
 
-Front ends tend to start out simple, 'just' a form or a grid showing data that comes from the backend. It looks like 'just' a visual layer on top of backend APIs. When a front end evolves however, it will become more complex, because of all kinds of concerns regarding UX/UI and architecture.
+Front ends tend to start out simple, often as 'just' a form or a grid showing data that comes from a backend. It looks like 'just' a visual layer on top of backend APIs. When a front end evolves and grows, it inevitably becomes more complex. We then need to take a good hard look at the UX/UI and overall architecture.
 
 To mention a few:
 
-- guide users through specific flows, e.g. depending on user level or data variations (simple product vs extensive details), while the backend APIs are flow agnostic
-- provide quick feedback on input, to prevent mistakes
+- guide users through specific flows, e.g. anonymous users vs admins, variations in data that trigger different scenarios, while the backend APIs are flow agnostic
+- provide timely feedback on input, to prevent mistakes
 - provide feedback so that our users continuously know what is happening and what is expected of them, e.g. spinners when waiting, check marks for correct input, specific validation feedback
-- prevent distracting or confusing users, e.g. hide buttons for actions that are not possible yet, hide functionalities not available the the current user role
+- don't distract or confuse users, e.g. hide buttons for actions that are not possible yet, hide functionalities not available the the current user role
 - collect data from multiple APIs and present it in a coherent way
-- present data in a way the user understands, as some APIs might not 100% match the user's view on the world
-- move a whole concern over to the front end, e.g. implement a shopping basket in the front end and prevent extra complexity in the backend for managing shopping basket state
+- present data in a way the user understands, as some APIs might not match the user's view of the world 100%
+- move a concern over to the front end, for instance implement a shopping basket in the front end and prevent extra complexity in the backend for managing shopping basket state
 
 ## Hexagonal Architecture to manage complexity
 
@@ -43,7 +43,7 @@ Let's zoom out and see our application as a network of connected hexagons:
 
 ## Hexagons applied to front end
 
-So in front end code, a number of concerns come together: user interface code, integration with the UI library or framework (or with the browser APIs if you go [Frameworkless Front-End Development](https://github.com/Apress/frameworkless-front-end-development)), validation & feedback logic, state management, user flow logic, backend API integration.
+So in front end code, a number of concerns come together: user interface code, integration with the UI library , validation & feedback logic, state management, user flow logic, backend API integration.
 
 What if we looking at a front end component through a hexagonal lens? What is the domain, what are the ports, what are the adapters?
 
@@ -60,7 +60,7 @@ Let's look at a sample [Vue.js](https://vuejs.org/) and [Vuex](https://vuex.vuej
 
 ### Primary adapters
 
-We see the Vue.js based UI components as primary adapters. This includes the component code, its HTML and its CSS. These UI components are heavily dependent on Vue.js and related libraries. 
+We see the Vue.js based UI components as primary adapters. This includes the component code, its HTML and its CSS. These UI components are heavily dependent on Vue.js and related libraries.
 
 This adapter code will have its own automated tests, which is greatly facilitated by the Vue.js test library. It allows us to run all UI component tests in seconds.
 Our front end is about domain concepts (facilitators, diagnosticSessions), we get these from backend APIs but we still translate these to our own classes in the front end code to decouple the front end from back end API evolution (we want to facilitate independent evolution of our different components and their APIs) but also to safeguard from interesting vulnerabilities that could occur when we just base our code on the objects coming in from the backend; backend API classes/functions are our secondary ports
@@ -85,8 +85,8 @@ In our online Agile Fluency Diagnostic application for instance, we have an ApiB
 class ApiBasedSessionRepository {
   ...
   _toDiagnosticSessionSummary (data) {
-    return new DiagnosticSessionSummary({ 
-      id: data.id, team: data.team, 
+    return new DiagnosticSessionSummary({
+      id: data.id, team: data.team,
       date: data.date, isOpen: data.is_open, isTest: data.is_test })
   }
 
@@ -124,7 +124,7 @@ So we have quite some adapter code (all the UI components) in our front end. Som
 
 ### Zooming in on the domain
 
-How do we structure our view domain? Instead of putting all logic in the (Vuex) store objects, we introduce domain objects - plain Javascript/Typescript classes - to represent concepts and their responsibilities. Store objects delegate as much as possible to plain Javascript domain objects. 
+How do we structure our view domain? Instead of putting all logic in the (Vuex) store objects, we introduce domain objects - plain Javascript/Typescript classes - to represent concepts and their responsibilities. Store objects delegate as much as possible to plain Javascript domain objects.
 
 These domain objects don't tend to be very responsibility-heavy. They start out as data classes and gain some logic along they way. We end up with simple objects that are very easy to understand and well testable.
 
@@ -153,6 +153,7 @@ Keep an eye on this blog, we will dive deeper into these questions and our exper
 
 - [Growing Object Oriented Software guided by Tests](http://www.growing-object-oriented-software.com/) book by Steve Freeman & Nat Pryce.
 - The [original article on Hexagonal Architecture](https://alistair.cockburn.us/hexagonal-architecture/) by Alistair Cockburn
+- Instead of UI Library, feel free to read browser APIs, [Frameworkless Front-End Development](https://github.com/Apress/frameworkless-front-end-development)) is a solid introduction to using Vanilla JS.
 - [The first post in this series](/2020/08/26/hexagonal-vue.journey.html)
 
 <aside>
