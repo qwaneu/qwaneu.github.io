@@ -13,13 +13,13 @@ Front ends tend to start out simple, often as 'just' a form or a grid showing da
 
 To mention a few:
 
-- guide users through specific flows, e.g. anonymous users vs admins, variations in data that trigger different scenarios, while the backend APIs are flow agnostic
-- provide timely feedback on input, to prevent mistakes
-- provide feedback so that our users continuously know what is happening and what is expected of them, e.g. spinners when waiting, check marks for correct input, specific validation feedback
-- don't distract or confuse users, e.g. hide buttons for actions that are not possible yet, hide functionalities not available the the current user role
-- collect data from multiple APIs and present it in a coherent way
-- present data in a way the user understands, as some APIs might not match the user's view of the world 100%
-- move a concern over to the front end, for instance implement a shopping basket in the front end and prevent extra complexity in the backend for managing shopping basket state
+- _guide users through specific flows_, e.g. anonymous users vs admins, variations in data that trigger different scenarios, while the backend APIs are flow agnostic
+- _provide timely feedback_ on input, to prevent mistakes
+- _manage expectations with feedback_ so that our users continuously know what is happening and what is expected of them, e.g. spinners when waiting, check marks for correct input, specific validation feedback
+- _don't distract or confuse_, e.g. hide buttons for actions that are not possible yet, hide functionalities not available to the current user role
+- _combine data_ from multiple APIs and present it in a coherent way
+- _present data understandably_, as some APIs might not match the user's view of the world 100%
+- _move a concern over to the front end_, for instance implement a shopping basket in the front end, to prevent extra complexity in the backend for managing shopping basket state
 
 ## Hexagonal Architecture to manage complexity
 
@@ -69,7 +69,7 @@ Our front end is about domain concepts (facilitators, diagnosticSessions), we ge
 
 So what is 'domain logic' in this case? Front end components run in the user's browser - an untrusted environment, so backend components are responsible for business rules, with the intent of ensuring correctness and consistency. In a front end, we do have domain related logic related, but its intent is to facilitate, guide, enable the user: **view logic** or **view models**.
 
-The state and store objects are part of our domain; they sit on the edge of the domain and provide an interface to the UI components. In this way, they act as a [Facade](https://en.wikipedia.org/wiki/Facade_pattern)) towards the domain code.
+The state and store objects are part of our domain; they sit on the edge of the domain and provide an interface to the UI components. In this way, they act as a [Facade](https://en.wikipedia.org/wiki/Facade_pattern) towards the domain code.
 
 Our Agile Fluency Diagnostic front end knows about domain concepts like _facilitators_ and _diagnosticSessions_. We get these as data from backend APIs, but we still translate these to our own classes in the front end code to decouple from APIs and facilitate independent evolution of components and their APIs.
 
