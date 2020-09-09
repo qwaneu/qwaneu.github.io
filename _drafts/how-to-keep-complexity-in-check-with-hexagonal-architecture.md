@@ -155,8 +155,9 @@ Keep an eye on our blog, we will dive deeper into these questions and our experi
 - The [original article on Hexagonal Architecture](https://alistair.cockburn.us/hexagonal-architecture/) by Alistair Cockburn
 - Instead of UI Library, feel free to read browser APIs, [Frameworkless Front-End Development](https://github.com/Apress/frameworkless-front-end-development)) is a solid introduction to using Vanilla JS.
 - [The first post in this series](/2020/08/26/hexagonal-vue.journey.html)
+- [History of the Hexagonal Architecture pattern]()https://m.facebook.com/notes/alistair-cockburn/history-of-the-hexagonal-architecture-pattern/10158593628164035/) by Alistair Cockburn (just out, unfortunately only on Facebook)
 
-Credits: Editing - Willem van den Ende
+Editing - Willem van den Ende
 
 <aside>
   <h3>Want to learn more?</h3>
