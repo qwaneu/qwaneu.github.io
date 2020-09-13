@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hexagonal perspective on automated tests
+title: Automated test architecture
 tags:
   - architecture
   - ports and adapters
@@ -9,15 +9,20 @@ author: Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2020/hextesting-04.jpg
 ---
 
-We have introduced our perspective on Hexagonal Architecture in a [previous post](/2020/08/20/hexagonal-architecture). In this post, we will share another benefit of looking at your components through the Hexagonal lens: it helps you in making decisions about your automated test architecture - what kinds of tests cover which concerns...and what mix of automated tests will give you sufficient confidence that your changes are ready for delivery.
+We have introduced our view on Hexagonal Architecture in previous post: [hexagonal architecture](/2020/08/20/hexagonal-architecture) and [How to keep Front End complexity in check with Hexagonal Architecture](/2020/09/09/how-to-keep-complexity-in-check-with-hexagonal-architecture.html). In this post, we will share another benefit of looking through the Hexagonal lens: it helps you in making decisions about your automated test architecture.
 
-## An example application landscape, throught the hexagonal lens
+- What kinds of tests cover which concerns and which risks?
+- What mix of automated tests is appropriate for my context?
+- What mix of tests will provide confidence that your changes are ready for delivery?
 
-Say we have an application that consists of a backend component that uses a database for persistence, a front end running in a web browser. The backend component exposes an API (represented by the line) which is used by the front end.
+## An example application landscape
+
+Say we have an application that consists of a backend component that uses a database, and a front end running in a web browser. The backend component exposes an API (represented by the line) used by the front end.
 
 ![typical architecture: front end, back end, database](/attachments/blogposts/2020/hextesting-01.jpg)
+{: class="post-image post-image-50" }
 
-The domain logic (business rules, view logic) is in the center, surrounded by adapters, while dependencies go outside-in.
+We see both the frontend and the backend as hexagons, each with its own domain, ports and adapters. Domain logic is in the center, dependencies go outside-in.
 
 ## Unit tests
 

@@ -61,11 +61,19 @@ We thought of many more possible features and more shiny versions of features, w
 
 @@Some features we removed from Dirt Road scope turned out to be unnecessary (when discussing the next steps for evolving with the Agile Fluency Project). If we would have 'just built it all' we would have wasted time.
 
+And you cannot foresee everything; you need to put software in the hands of users, sooner rather than later, and then observe how they use it. This will provide information on what is 'good enough' / where your product is not yet good enough. 
+
 ## On to the Cobblestone Road
 
 What about the next one, the Cobblestone Road version?
 
 @@TODO
+
+## And the Highway? 
+
+Once we got the Dirt Road out and we started working on Cobblestone features, more and more possible features are popping up. While defining the Dirt Road version and cutting off (do we really really need this?) to the bare essentials (mostly) is doable (takes discipline, but having tight constraints really helps in making decisions). Once your on the Cobblestone Road, the criteria tend to become less clear. 
+
+So one of the benefits of having a Highway version somewhere on the horizon, is that we can park our shiny features there; some of them turn out to be Cobbelstone after all, or well worth the extra investment. Most of them will stay there parked - but they are out of our heads so we can focus on more valuable work!
 
 ## References
 
