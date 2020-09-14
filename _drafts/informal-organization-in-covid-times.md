@@ -15,6 +15,8 @@ An organization is a (complex) system, that not only consists of the employees, 
 
 For managers for instance it has become very difficult to sense what is going on, which the teams, which the people. There is a lot of value in walking around, running into people, having a short chat (listing, observing), and in this way observing early the many weak signals in an organization. Managers use these early, weak signals to do small and timely interventions. Example: a new hire sends out some unhappy signals during a chat at the coffee machine, manager can dive deeper, find out the person has some trouble finding their place, and help them out a bit. When you don't have access to those signals, the manager might find out about it when the new hire turns in their resignation letter, and then all damage has been done & it is too late.
 
+@@management = weak signal detection
+
 ## Formal vs informal organization strcutures
 
 Formal organization: team structure & membership & roles; management hierarchy / reporting lines; the "scrum structure", regular demos, planning sessions, etc. Note: working with teams applies more structure to an organization and in this way emphasises/reinforces the formal structure. Also: having to account for every hour on the right project is also formal structure.
