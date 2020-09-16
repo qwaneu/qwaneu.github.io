@@ -28,7 +28,7 @@ The informal structure often gets lower priority; especially when working agile 
 
 The informal structure is however crucial for an organization: 50-70% of learning inside an organization comes from informal networks (source: Dave Snowden)Without informal networks, org does not have ability to connect in novel/unexpected ways. So low informal structure means less/no innovation/innovation capability. This is what you see happening in bureaucracies (optimizing the formal structure, but becoming more rigid and less able to adapt/innovate).
 
-In informal network, trust is automatic, in formal networks not; in formal networks, it takes lot of time to build trust. Informal network tend not to be transparent, "transparency is enemy of innovation and trust" (Dave Snowden) "Trust has low energy cost in informal network, high energy cost in formal setting" (Snowden)
+In informal network, trust is automatic, in formal networks not; in formal networks, it takes lot of time to build trust. Informal network tend not to be transparent, "transparency is enemy of innovation and trust" (Dave Snowden) "Trust has low energy cost in informal network, high energy cost in formal setting" (Snowden) @@ https://www.thepeoplespace.com/ideas/articles/you-cant-build-trust-through-transparency
 
 You organize (and reorganize) the formal structure of an organization. You facilitate the informal structure to happen. You cannot organize the informal structure, by definition. Installing committees or working groups is a form of formal structure; it is a way to impose order (managers sometimes do this if there is a problem or something is not working out @@+voorbeeld?), it is not informal structure, even if it would bring together people across the organization.
 
