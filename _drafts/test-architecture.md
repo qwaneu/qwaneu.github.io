@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Automated test architecture
+title: How to decide on an architecture for end to end tests
 tags:
   - architecture
   - ports and adapters
@@ -10,14 +10,14 @@ author: Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2020/hextesting-02.jpg
 ---
 
-In this post, we will share another benefit of looking through the Hexagonal Architecture lens: it helps you in making decisions about your the architecture of automated tests of your application landscape. 
+In this post, we will share another benefit of looking through the Hexagonal Architecture lens: it supports making decisions about the architecture of automated tests in your application landscape. 
 
 - What kinds of tests cover which concerns and which risks?
 - What mix of automated tests is appropriate for my context?
 - What mix of tests will provide confidence that your changes are ready for delivery?
 - How can I move a test around in my test architecture so that I get faster, more specific feedback?
 
-We have introduced our view on Hexagonal Architecture in previous post: [hexagonal architecture](/2020/08/20/hexagonal-architecture) and [How to keep Front End complexity in check with Hexagonal Architecture](/2020/09/09/how-to-keep-complexity-in-check-with-hexagonal-architecture.html). 
+We have introduced our view on Hexagonal Architecture in previous posts: [hexagonal architecture](/2020/08/20/hexagonal-architecture) and [How to keep Front End complexity in check with Hexagonal Architecture](/2020/09/09/how-to-keep-complexity-in-check-with-hexagonal-architecture.html). 
 
 ## An example application landscape
 
