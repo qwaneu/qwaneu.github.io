@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Automated Test Architecture
+title: How to decide on an architecture for automated tests
 tags:
   - architecture
   - ports and adapters
@@ -10,7 +10,7 @@ author: Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2020/hextesting-02.jpg
 ---
 
-In this post, we will share another benefit of looking through the Hexagonal Architecture lens: it helps in making decisions about the automated test architecture of your application landscape. It can guide you in questions like:
+In this post, we will share another benefit of looking through the Hexagonal Architecture lens: it supports making decisions about the architecture of automated tests in your application landscape. It can guide you in questions like:
 
 - What kinds of tests cover which concerns and which risks?
 - What mix of automated tests is appropriate for my context?
