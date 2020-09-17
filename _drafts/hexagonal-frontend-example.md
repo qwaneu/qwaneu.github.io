@@ -9,7 +9,11 @@ author: Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2020/PortsAndAdapters-8.png
 ---
 
-In a [previous post](/2020/09/09/how-to-keep-complexity-in-check-with-hexagonal-architecture.html), we elaborated on how we apply [Hexagonal Architecture](/2020/08/20/hexagonal-architecture.html) in front end applications.
+In a [previous post](/2020/09/09/how-to-keep-complexity-in-check-with-hexagonal-architecture.html), we elaborated on how we apply [Hexagonal Architecture](/2020/08/20/hexagonal-architecture.html) in front end applications. 
+
+We have also written about how hexagonal architecture informs test architecture. We also apply this thinking for a front end component: as we distinguish ports, adapters and domain logic, we will have unit tests, adapter integration tests, and possibly some component end-to-end tests.
+
+
 
 Let's look at an example, taken from the Agile Fluency Diagnostic application we are developing.
 
