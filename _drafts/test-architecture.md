@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to decide on an architecture for end to end tests
+title: How to decide on an architecture for automated tests
 tags:
   - architecture
   - ports and adapters
