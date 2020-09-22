@@ -107,7 +107,7 @@ So we regard this UI component as a primary adapter. Our rules of thumb:
 - it **delegates any actions or events to domain code**; in this case the button triggers the `createSession` event, which delegates to the `createDiagnosticSession` function, and passes the new `Session` along.
 - we move any logic or conditionals to domain objects, like NewSession
 
-As a result, the automated tests for this component are focused: they are primarily about the component showing the correct data and elements, and delegating to the correct domain functions. Some of its tests:
+As a result, the automated tests for this component are focused. Their focus is the component showing the correct data and elements, and delegating to appropriate domain functions. Some of its tests:
 
 ```javascript
 describe('New Diagnostic Session.vue', () => {
@@ -148,11 +148,11 @@ describe('New Diagnostic Session.vue', () => {
 })
 ```
 
-We have started a small proprietary DSL around the Vue test utils (`aVueWrapperFor`), to reduce testing boilerplate.
+We have started a small DSL around the Vue test utils (`aVueWrapperFor`), to reduce testing boilerplate.
 
 ## Domain - view logic & state
 
-Let's have a look at the domain code. First, the FacilitatorModule. This module manages state relevant for UI components. It acts like a [Facade](https://en.wikipedia.org/wiki/Facade_pattern) and exposes only relevant state and actions from the domain to a UI component. If we were to use TypeScript, we would have made this explicit with an interface.
+Let's have a look at the domain code. First, the FacilitatorModule. The suffix 'Module' is chosen to fit in the Vue ecosystem. This module manages state relevant for UI components. It acts like a [Facade](https://en.wikipedia.org/wiki/Facade_pattern) and exposes only relevant state and actions from the domain to a UI component. If we were to use TypeScript, we would have made this explicit with an interface.
 
 ```javascript
 export class FacilitatorModule extends BaseModule {
@@ -192,11 +192,11 @@ export class FacilitatorModule extends BaseModule {
 }
 ```
 
-This object manages some state - the currentSession (which is not used by this component, but by one of the others). The `createDiagnosticSession` action ensures the data is valid (delegating this to the NewSession object that is passed), and delegates to the session repository. It also does some error handling: its base class has some boilerplate to capture error messages, so that a UI component can show these.
+The `FacilitatorModule` manages the `currentSession` state on behalf of another component.
 
-The session repository is injected via the constructor. Our `main.js` does all the wiring, with a bit of helper code).
+The session repository is injected via the constructor. The dependencies are wired up in `main.js`.
 
-_We started out with [Vuex](https://vuex.vuejs.org/) for state management. Vuex is highly opinionated on structuring state management. To some extent, this is helpful, as it guides developers in structuring their code in state, state mutating code, and (asynchronous actions). We found the usage of Vuex modules in UI components a bit noisy however and the way Vuex module are written a bit cumbersome._
+_We started out with [Vuex](https://vuex.vuejs.org/) for state management. Vuex is highly opinionated on structuring state management. To some extent, this is helpful, as it guides developers in structuring code in state, code that mutates state, and asynchronous actions. We found the use of Vuex modules in UI components cumbersome and verbose._
 
 So we decided to roll our own, inspired by Vuex and our own experience with structuring domain code. We follow these guidelines:
 
@@ -207,11 +207,11 @@ So we decided to roll our own, inspired by Vuex and our own experience with stru
 - a module object delegates as much as possible to other domain objects
 - module dependencies are injected via its constructor; we have separate wiring code (`main.js`)
 
-We are still a bit undecided about the name 'module' (borrowed this from Vuex).
+We are still unconvinced about the name 'module', which we borrowed from Vuex. Your suggestions for a better name are welcome.
 
 ## More domain: NewSession
 
-Usually, a UI component with a form has some local data to keep this state. In this component, we saw that we had a clump of data and some validation logic related to it. Later on, we found some more logic (marking a session as _test_ fixes the number of participants to 3). Data and corresponding logic wants to be together, so we extracted it into its own class, NewSession.
+A UI component with a form often maintains state. In `NewSession`, we saw that we had a clump of data and some validation logic related to it. Later on, we found some more logic: when someone marks a session as _test_, the number of participants gets set to a fixed amount of three, because [three is the magic number ;-)](https://www.youtube.com/watch?v=YZoYEr6NdmE). Data and corresponding logic wants to be together, so we extracted it into its own class, `NewSession`.
 
 ```javascript
 export class NewSession {
@@ -256,9 +256,9 @@ export class NewSession {
 }
 ```
 
-It is a stateful object: it holds a new session; when you `validate` it, it will also contain information about its validity (`errors`).
+`NewSession` is a stateful object: it holds a new session; when you `validate` it, it will also contain information about its validity (`errors`).
 
-Being a relatively simple object, with a specific purpose, its unit tests reflect this. A selection of its tests:
+The tests reflect the focus of `NewSession`. A selection of its tests:
 
 ```javascript
 import { NewSession, aValidNewSession } from '@/domain/new-session'
@@ -292,13 +292,18 @@ describe('A new session', () => {
 })
 ```
 
-The `aValidNewSession` function is an instance of the Builder pattern. It provides an example NewSession with valid data and allows to easily make variations, e.g. `aValidNewSession({ participants: '31' })`.
+The `aValidNewSession` function is an instance of the[Builder pattern](https://en.wikipedia.org/wiki/Builder_pattern). A _Builder_ separates the construction of a complex object from its representation. The `aValidNewSession` Builder provides an example `NewSession` with valid data. It lets us describe variations succinctly, for instance: `aValidNewSession({ participants: '31' })`.
 
-By moving this view logic to a simple, dedicated, plain Javascript object, we can isolate part of the UI related behaviour and write faster, more focused tests for these. Testing validation and feedback rules through the UI is more cumbersome.
+By moving this view logic to a compact, dedicated, plain Javascript object, we can isolate part of the UI related behaviour and write faster, more focused tests for these. Testing validation and feedback rules through the UI would be cumbersome.
 
 ## The API Adapter
 
 Let's have a look at the API adapter: the `ApiBasedSessionRepository`.
+
+API adapters are secondary adapters that:
+- **perform API calls**, in this case using the _axios_ library
+- **map data** to and from domain objects
+- **handle errors**
 
 ```javascript
 export class ApiBasedSessionRepository extends SessionRepository {
@@ -342,12 +347,12 @@ export class ApiBasedSessionRepository extends SessionRepository {
 }
 ```
 
-This session repository offers the `create` and the `all` functions to the domain (there is more, we left it out for the sake of simplicity).
+This session repository offers the `create` and the `all` functions to the domain.
 
-- `create` receives a NewSession object, transforms this to the API data format, and POSTs this to a backend URL. We use the [axios](https://github.com/axios/axios) library for this, with a thin wrapper of our own to encapsulate a bit of repeated boilerplate.
+- `create` receives a `NewSession` object, transforms this to the API data format, and POSTs this to a backend URL. We use our own wrapper around the [axios](https://github.com/axios/axios) library for this, so that we can encapsulate repeated boilerplate.
 - `all` performs a GET on a backend API; it receives JSON containing an array of diagnostic session data, which is mapped to DiagnosticSessionSummary objects with the `_toDiagnosticSessionSummary` function
 
-Its adapter integration test looks like:
+Here is an excerpt of its' adapter integration test:
 
 ```javascript
 describe('The API based session repository', () => {
@@ -408,10 +413,12 @@ describe('The API based session repository', () => {
 })
 ```
 
-Summarizing, API adapters are secondary adapters that:
-- **perform API call**, in this case using the axios library
-- **map data** to/from domain objects, preferably in separate functions to make code more glanceable
-- **handle errors**, converting these to a relevant thing or error
+Adapter tests are valuable, because they force us to understand the service we are adapting, and help us pinpoint problems if there ever are any.
+
+We hope we have illustrated that API adapters are secondary adapters that:
+- **perform API calls**, in this case using the [axios](https://github.com/axios/axios) library
+- **map data** to and from domain objects, preferably in separate functions to make code more glanceable
+- **handle errors**, converting these to a relevant thing or an error
 
 ## Summary
 
@@ -421,7 +428,7 @@ In a next post, we will elaborate how we structure the domain code. This is espe
 
 <aside>
   <h3>Seeing your systems through a Hexagonal lens</h3>
-  <p>Making good architecture decisions across your application landscape is a tough skill. We can help, e.g. with architecture reviews.</p>
+  <p>Making informed architecture decisions across your application landscape is a tough skill. We can support you with for instance architecture reviews, carrying out experiments and facilitating collaborative architecture sessions.</p>
   <p><div>
     <a href="/consulting">Learn more about our consultancy services</a>
   </div></p>
