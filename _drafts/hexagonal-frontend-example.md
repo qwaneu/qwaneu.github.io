@@ -16,24 +16,24 @@ We have also written about how hexagonal architecture informs test architecture.
 
 Let's look at an example, with code!, taken from the Agile Fluency Diagnostic application we are developing. 
 
-![the online agile fluency diagnostic](/attachments/blogposts/2020/online-afd.png)
+![screenshot of the online agile fluency diagnostic, showing a form to create a new diagnostic session followed by a a list of 'my diagnostic sessions'](/attachments/blogposts/2020/online-afd.png)
 {: class="post-image post-image-50" }
 
-We will use a specific functionality as an example: creating a new diagnostic session. We will show how the primary and secondary adapters look like, and what our domain code looks like. A quick architecture sketch, to show the different objects involved and how they relate to the hexagon.
+We will use a specific activity as an example: creating a new diagnostic session. We will show the primary and secondary adapters, and our domain. Here is a quick architecture sketch, to show the different objects involved and how they relate to the hexagon:
 
-![architectuur/hexagon tekening](/attachments/blogposts/2020/front-end-hexagon-sketch.jpg)
+![architectuur/hexagon drawing, parts explained below](/attachments/blogposts/2020/front-end-hexagon-sketch.jpg)
 {: class="post-image" }
 
 UI adapter: red, (view) domain objects: blue, API adapter: green
 
 ## Primary adapters: UI Components
 
-We have created a NewDiagnosticSession Vue component, which looks like this:
+This is our new NewDiagnosticSession Vue component:
 
-![new diagnostic session component looks](/attachments/blogposts/2020/new-diagnostic-session.png)
+![Screenshot: 'Create a new diagnostic session' heading, fields for team name, date, session type (regular or test) and a dropdown for the number of participants. The call to action button is 'Create'](/attachments/blogposts/2020/new-diagnostic-session.png)
 {: class="post-image" }
 
-It defines a form with inputs and a button, and has a help box. The code looks like this (some details have been left out for this post):
+The form has inputs and a button, and opens a help box when you click on the 'i'. The code looks roughly like this, we have left some details out for clarity:
 
 ```html
 <template>
@@ -104,10 +104,10 @@ To activate Vue change detection on the state contained by this object, we need 
 So we regard this UI component as a primary adapter. Our rules of thumb:
 - the component code (JS + HTML) **talks UI**, forms, Vue.js integration
 - the component **visualizes state** (either from a 'module' object or its local data), i.e. show data, show/hide elements based on data
-- it **delegates any actions or events to domain code**; in this case the button triggers `createSession` which is delegated to the `createDiagnosticSession` function.
-- we move any logic or conditionals to domain objects, elike NewSession
+- it **delegates any actions or events to domain code**; in this case the button triggers the `createSession` event, which delegates to the `createDiagnosticSession` function, and passes the new `Session` along.
+- we move any logic or conditionals to domain objects, like NewSession
 
-As a result, the automated tests for this component are more simple: they are primarily about the component showing the correct data and elements, and delegating to the correct domain functions. Some of its tests:
+As a result, the automated tests for this component are focused: they are primarily about the component showing the correct data and elements, and delegating to the correct domain functions. Some of its tests:
 
 ```javascript
 describe('New Diagnostic Session.vue', () => {
@@ -148,11 +148,11 @@ describe('New Diagnostic Session.vue', () => {
 })
 ```
 
-We have started a small proprietary DSL around the Vue test utils (`aVueWrapperFor`), to reduce testing boilerplate a bit.
+We have started a small proprietary DSL around the Vue test utils (`aVueWrapperFor`), to reduce testing boilerplate.
 
 ## Domain - view logic & state
 
-Let's have a look at the domain code. First, the FacilitatorModule. This module manages state relevant for UI components. It acts like a [Facade](https://en.wikipedia.org/wiki/Facade_pattern) and exposes only relevant state and actions from the domain to a UI component. If we would have used TypeScript, we would have made this explicit with an interface.
+Let's have a look at the domain code. First, the FacilitatorModule. This module manages state relevant for UI components. It acts like a [Facade](https://en.wikipedia.org/wiki/Facade_pattern) and exposes only relevant state and actions from the domain to a UI component. If we were to use TypeScript, we would have made this explicit with an interface.
 
 ```javascript
 export class FacilitatorModule extends BaseModule {
@@ -169,7 +169,9 @@ export class FacilitatorModule extends BaseModule {
 
   retrieveDiagnosticSession (sessionId) {
     return this.handleAllErrorsFor(
-      this.sessionRepository.byId(sessionId).then(diagnosticSession => { this._currentSession = diagnosticSession })
+      this.sessionRepository.byId(sessionId).then(
+        diagnosticSession => { this._currentSession = 
+	                       diagnosticSession })
     )
   }
 
