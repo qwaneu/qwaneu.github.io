@@ -10,7 +10,6 @@ image: /attachments/blogposts/2020/PortsAndAdapters-8.png
 ---
 
 In a [previous post](/2020/09/09/how-to-keep-complexity-in-check-with-hexagonal-architecture.html), we elaborated on how we apply [Hexagonal Architecture](/2020/08/20/hexagonal-architecture.html) in front end applications. 
-{: class="post-image" }
 
 We have also written about how hexagonal architecture informs test architecture. We also apply this thinking for a front end component: as we distinguish ports, adapters and domain logic, we will have unit tests, adapter integration tests, and possibly some component end-to-end tests.
 
@@ -19,62 +18,70 @@ Let's look at an example, with code!, taken from the Agile Fluency Diagnostic ap
 ![screenshot of the online agile fluency diagnostic, showing a form to create a new diagnostic session followed by a a list of 'my diagnostic sessions'](/attachments/blogposts/2020/online-afd.png)
 {: class="post-image post-image-50" }
 
-We will use a specific activity as an example: creating a new diagnostic session. We will show the primary and secondary adapters, and our domain. Here is a quick architecture sketch, to show the different objects involved and how they relate to the hexagon:
+We will use a specific activity as an example: creating a new diagnostic session. We will show the primary and secondary adapters, and our domain code. Here is a quick architecture sketch, to show the different objects involved and how they relate to the hexagon:
 
-![architectuur/hexagon drawing, parts explained below](/attachments/blogposts/2020/front-end-hexagon-sketch.jpg)
+![architecture/hexagon drawing, parts explained below](/attachments/blogposts/2020/front-end-hexagon-sketch.jpg)
 {: class="post-image" }
 
-UI adapter: red, (view) domain objects: blue, API adapter: green
+The UI components are the primary adapters, drawn in red; domain objects with view logic are in blue; the API adapters are the secondary adapters, in green.
 
 ## Primary adapters: UI Components
 
-This is our new NewDiagnosticSession Vue component:
+<div class="shout-out">
+  <div>
+    <img src="/attachments/blogposts/2020/front-end-hexagon-sketch-1.jpg" alt="architecture/hexagon drawing, focused on the domain">
+  </div>
+  <div>
+    <p>UI component as a primary adapter:</p>
+    <ul>
+      <li><strong>Talks UI elements & UI integration</strong></li>
+      <li><strong>Visualizes state</strong> - display data, show/hide elements</li>
+      <li><strong>Does not contain logic or conditionals</strong></li>
+      <li><strong>Delegates actions and decisions to the domain</strong></li> 
+    </ul>
+  </div>
+</div>
+
+This is what the NewDiagnosticSession Vue component looks like:
 
 ![Screenshot: 'Create a new diagnostic session' heading, fields for team name, date, session type (regular or test) and a dropdown for the number of participants. The call to action button is 'Create'](/attachments/blogposts/2020/new-diagnostic-session.png)
 {: class="post-image" }
 
-The form has inputs and a button, and opens a help box when you click on the 'i'. The code looks roughly like this, we have left some details out for clarity:
+The form has inputs and a button, and opens a help box when you click on the 'i'. The code looks roughly like this, leaving out some details for clarity:
 
 ```html
-<template>
+<div>
+  <header><h1>Create a new diagnostic session</h1></header>
   <div>
-    <header class="event__header">
-      <h1>Create a new diagnostic session</h1>
-    </header>
-    <HelpBox id="create-session-help" :helper="helper">...</HelpBox>
-    <div>
-      <form class="create-session" @submit.prevent>
-        <div id="create-session-team" class="input-wrapper" 
-            v-bind:class="{ error: newSession.errors.teamMissing }">
-          <label for="create-session-team">Team name:</label>
-          <input type="text" v-model="newSession.team" placeholder="team name" maxlength="100">
-        </div>
-        ...
-        <div id="create-session-participants" class="input-wrapper" 
-            v-bind:class="{ error: newSession.errors.participantsMissing }">
-          <label for="create-session-participants">Number of participants:</label>
-          <input type="number" v-model="newSession.participants" placeholder="number of participants">
-        </div>
-        <div class="buttons">
-          <button class="button" type="submit" id="create-session-btn" @click="createSession">
-            Create
-          </button>
-        </div>
-      </form>
-    </div>
+    <form class="create-session" @submit.prevent>
+      <div id="create-session-team" class="input-wrapper" 
+        v-bind:class="{ error: newSession.errors.teamMissing }">
+        <label for="create-session-team-input">Team name:</label>
+        <input id="create-session-team-input" type="text" v-model="newSession.team" 
+          placeholder="team name" maxlength="100">
+      </div>
+      ...
+      <div id="create-session-participants" class="input-wrapper" 
+        v-bind:class="{ error: newSession.errors.participantsMissing }">
+        <label for="create-session-participants-input">Number of participants:</label>
+        <input id="create-session-participants-input" type="number" v-model="newSession.participants"   
+          placeholder="number of participants">
+      </div>
+      <div class="buttons">
+        <button class="button" type="submit" id="create-session-btn" @click="createSession">
+          Create
+        </button>
+      </div>
+    </form>
   </div>
-</template>
+</div>
 ```
 ```javascript
-<script>
-import ...
-
 export default {
   name: 'NewDiagnosticSession',
   data: function () {
     return {
       newSession: new NewSession(),
-      helper: new Helper(),
       facilitator: this.facilitatorModule,
     }
   },
@@ -91,20 +98,19 @@ export default {
       this.facilitator.createDiagnosticSession(this.newSession)
     }
   },
-  components: { HelpBox, HelpBoxToggle }
+  components: ...
 }
-</script>
 ```
 
-It delegates input validation to the NewSession domain object (see below). The Help Box toggling is delegated to another, small, single purpose domain object Helper.
+It delegates input validation to the `NewSession` domain object (see below). 
 
-It gets a facilitatorModule object as a property. This is our 'state object'. We have decided to inject this dependency through props, because we don't like singletons or globals for managing our dependencies, nor do we like dependency injection magic. We want to be in control of our dependencies.
+The component receives a `facilitatorModule` object as a property. This is our 'state object'. We have decided to inject this dependency through props, because we don't like singletons or globals for managing our dependencies, nor do we like dependency injection magic. We want to be in control of our dependencies.
 To activate Vue change detection on the state contained by this object, we need to include it in the data part - hence the `facilitator: this.facilitatorModule`.
 
-So we regard this UI component as a primary adapter. Our rules of thumb:
+This UI component is a primary adapter. Our rules of thumb:
 - the component code (JS + HTML) **talks UI**, forms, Vue.js integration
-- the component **visualizes state** (either from a 'module' object or its local data), i.e. show data, show/hide elements based on data
-- it **delegates any actions or events to domain code**; in this case the button triggers the `createSession` event, which delegates to the `createDiagnosticSession` function, and passes the new `Session` along.
+- the component **visualizes state**, either from a 'module' object or local data; it shows data and shows/hides elements based on data
+- it **delegates any actions or events to domain code**; in this case the button triggers the `createSession` event, which delegates to the `createDiagnosticSession` function, and passes the `NewSession` object along.
 - we move any logic or conditionals to domain objects, like NewSession
 
 As a result, the automated tests for this component are focused. Their focus is the component showing the correct data and elements, and delegating to appropriate domain functions. Some of its tests:
@@ -152,7 +158,21 @@ We have started a small DSL around the Vue test utils (`aVueWrapperFor`), to red
 
 ## Domain - view logic & state
 
-Let's have a look at the domain code. First, the FacilitatorModule. The suffix 'Module' is chosen to fit in the Vue ecosystem. This module manages state relevant for UI components. It acts like a [Facade](https://en.wikipedia.org/wiki/Facade_pattern) and exposes only relevant state and actions from the domain to a UI component. If we were to use TypeScript, we would have made this explicit with an interface.
+<div class="shout-out">
+  <div>
+    <img src="/attachments/blogposts/2020/front-end-hexagon-sketch-2.jpg" alt="architecture/hexagon drawing, focused on the domain">
+  </div>
+  <div>
+    <p>Domain:</p>
+    <ul>
+      <li>Encapsulates <strong>view logic & behaviour</strong></li>
+      <li>Consists of <strong>small, focused, plain JS/TS objects</strong></li>
+      <li><strong>Translates errors</strong> to something meaningful for users</li> 
+    </ul>
+  </div>
+</div>
+
+Let's have a look at the domain code. First, the `FacilitatorModule`. The suffix 'Module' is chosen to fit in the Vue ecosystem. This module manages state relevant for UI components. It acts like a [Facade](https://en.wikipedia.org/wiki/Facade_pattern) and exposes only relevant state and actions from the domain to a UI component. If we were to use TypeScript, we would have made this explicit with an interface.
 
 ```javascript
 export class FacilitatorModule extends BaseModule {
@@ -192,13 +212,13 @@ export class FacilitatorModule extends BaseModule {
 }
 ```
 
-The `FacilitatorModule` manages the `currentSession` state on behalf of another component.
+The `FacilitatorModule` manages the `currentSession` state on behalf of another component. Why did we put this in this module instead of a separate module? We will dive into this in a future blog post.
 
 The session repository is injected via the constructor. The dependencies are wired up in `main.js`.
 
 _We started out with [Vuex](https://vuex.vuejs.org/) for state management. Vuex is highly opinionated on structuring state management. To some extent, this is helpful, as it guides developers in structuring code in state, code that mutates state, and asynchronous actions. We found the use of Vuex modules in UI components cumbersome and verbose._
 
-So we decided to roll our own, inspired by Vuex and our own experience with structuring domain code. We follow these guidelines:
+So we decided to roll our own, inspired by Vuex and our own experience with structuring domain code. We are following these guidelines:
 
 - a module object is plain Javascript / TypeScript
 - it keeps state and exposes it to UI components
@@ -292,24 +312,32 @@ describe('A new session', () => {
 })
 ```
 
-The `aValidNewSession` function is an instance of the[Builder pattern](https://en.wikipedia.org/wiki/Builder_pattern). A _Builder_ separates the construction of a complex object from its representation. The `aValidNewSession` Builder provides an example `NewSession` with valid data. It lets us describe variations succinctly, for instance: `aValidNewSession({ participants: '31' })`.
+The `aValidNewSession` function is an instance of the [Builder pattern](https://en.wikipedia.org/wiki/Builder_pattern). A _Builder_ separates the construction of a complex object from its representation. The `aValidNewSession` Builder provides an example `NewSession` with valid data. It lets us describe variations succinctly, for instance: `aValidNewSession({ participants: '31' })`.
 
-By moving this view logic to a compact, dedicated, plain Javascript object, we can isolate part of the UI related behaviour and write faster, more focused tests for these. Testing validation and feedback rules through the UI would be cumbersome.
+By moving this view logic to a compact, dedicated, plain Javascript object, we can isolate parts of the UI related behaviour and write fast, focused tests for these. Testing validation and feedback rules through the UI would be cumbersome.
 
 ## The API Adapter
 
-Let's have a look at the API adapter: the `ApiBasedSessionRepository`.
+<div class="shout-out">
+  <div>
+    <img src="/attachments/blogposts/2020/front-end-hexagon-sketch-3.jpg" alt="architecture/hexagon drawing, focused on the API/secondary adapters">
+  </div>
+  <div>
+    <p>Secondary adapters:</p>
+    <ul>
+      <li><strong>perform API calls</strong></li>
+      <li><strong>map data</strong> to and from domain objects</li>
+      <li><strong>handle errors</strong></li> 
+    </ul>
+  </div>
+</div>
 
-API adapters are secondary adapters that:
-- **perform API calls**, in this case using the _axios_ library
-- **map data** to and from domain objects
-- **handle errors**
+Let's have a look at the API adapter: the `ApiBasedSessionRepository`. We follow the [Repository Pattern](https://www.martinfowler.com/eaaCatalog/repository.html): the adapter exposes a domain oriented interface, in this case consisting of the `all` and `create` functions. We use the _axios_ library for performing API calls.
 
 ```javascript
-export class ApiBasedSessionRepository extends SessionRepository {
-  constructor (axios) {
-    super()
-    this.axios = axios
+export class ApiBasedSessionRepository {
+  constructor (axiosWrapper) {
+    this.axiosWrapper = axiosWrapper
   }
 
   _toDiagnosticSessionSummary (data) {
@@ -324,14 +352,14 @@ export class ApiBasedSessionRepository extends SessionRepository {
   ...
 
   all () {
-    return this.axios.doGet({
+    return this.axiosWrapper.doGet({
       url: '/diagnostic-sessions',
       failureReason: 'The sessions could not be retrieved'
     }).then(response => response.data.diagnostic_sessions.map(this._toDiagnosticSessionSummary))
   }
 
   create (newSession) {
-    return this.axios.doPost({
+    return this.axiosWrapper.doPost({
       url: '/diagnostic-sessions',
       data: {
         team: newSession.team,
@@ -349,10 +377,10 @@ export class ApiBasedSessionRepository extends SessionRepository {
 
 This session repository offers the `create` and the `all` functions to the domain.
 
-- `create` receives a `NewSession` object, transforms this to the API data format, and POSTs this to a backend URL. We use our own wrapper around the [axios](https://github.com/axios/axios) library for this, so that we can encapsulate repeated boilerplate.
+- `create` receives a `NewSession` object, transforms this to the API data format, and POSTs this to a backend URL. We created a wrapper around the [axios](https://github.com/axios/axios) library to encapsulate repeated boilerplate. The `doPost` function also provides error handling.
 - `all` performs a GET on a backend API; it receives JSON containing an array of diagnostic session data, which is mapped to DiagnosticSessionSummary objects with the `_toDiagnosticSessionSummary` function
 
-Here is an excerpt of its' adapter integration test:
+Here is an excerpt of its adapter integration test:
 
 ```javascript
 describe('The API based session repository', () => {
@@ -366,7 +394,10 @@ describe('The API based session repository', () => {
   describe('getting all sessions', () => {
     it('should return a list of sessions', done => {
       mock.onGet('http://baseurl/diagnostic-sessions').reply(200, {
-        diagnostic_sessions: [{ id: '100', team: 'Pretty Programmers', date: '2002-11-22', is_open: true, is_test: true }]
+        diagnostic_sessions: [{
+          id: '100', team: 'Pretty Programmers', 
+          date: '2002-11-22', is_open: true, is_test: true 
+        }]
       })
       repo.all().then(sessions => {
         expect(sessions).toEqual([new DiagnosticSessionSummary({
@@ -384,11 +415,8 @@ describe('The API based session repository', () => {
   describe('creating a session', () => {
     it('should return new session id', (done) => {
       mock.onPost('http://baseurl/diagnostic-sessions', {
-        team: 'Team A', 
-        date: '2020-08-25', 
-        participant_count: '3', 
-        language: 'en', 
-        is_test: true 
+        team: 'Team A', date: '2020-08-25', 
+        participant_count: '3', language: 'en', is_test: true 
       }).reply(201, { id: '100' })
       repo.create(aValidNewSession({ 
         team: 'Team A', 
@@ -415,10 +443,10 @@ describe('The API based session repository', () => {
 
 Adapter tests are valuable, because they force us to understand the service we are adapting, and help us pinpoint problems if there ever are any.
 
-We hope we have illustrated that API adapters are secondary adapters that:
+We have illustrated that API adapters are secondary adapters that:
 - **perform API calls**, in this case using the [axios](https://github.com/axios/axios) library
 - **map data** to and from domain objects, preferably in separate functions to make code more glanceable
-- **handle errors**, converting these to a relevant thing or an error
+- **handle errors**, convert these to a relevant error or sometimes a [Null object](http://wiki.c2.com/?NullObject)
 
 ## Summary
 
