@@ -454,6 +454,8 @@ We have walked you through an example of how we have applied the Hexagonal Archi
 
 In a next post, we will elaborate how we structure the domain code. This is especially relevant when your front end component grows and you are looking for ways to reduce complexity.
 
+_Credits: Thanks to Willem for editing and helping improve this post._
+
 <aside>
   <h3>Seeing your systems through a Hexagonal lens</h3>
   <p>Making informed architecture decisions across your application landscape is a tough skill. We can support you with for instance architecture reviews, carrying out experiments and facilitating collaborative architecture sessions.</p>
