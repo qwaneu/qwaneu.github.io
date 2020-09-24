@@ -1,6 +1,6 @@
 ---
 layout: post
-title: is DevOps the new Legacy?
+title: Is DevOps the new Legacy?
 tags:
   - strategy
   - DevOps
@@ -8,15 +8,17 @@ author: Willem van den Ende
 image:
 ---
 
-Last week, Jamie Dobson and Simon Wardley did a back to back presentation on [Cargo Cults and mapping DevOps and serverless](https://www.youtube.com/watch?v=hlPEeDWHy34&feature=youtu.be).
+In the first week of September, Jamie Dobson and Simon Wardley did a back to back presentation on [Cargo Cults and mapping DevOps and serverless](https://www.youtube.com/watch?v=hlPEeDWHy34&feature=youtu.be).
 
-But first, let us digress into defintions. What do we mean by DevOps?
+But first, let us digress into definitions. What do we mean by _DevOps_?
 
 In the beginning, DevOps was a specialized form of Sesame Street. And that is what it still means to me.
 
-Still here? Allright. Let's digress a bit further, shall we? Back in 2003 a client, asked me if I did anything else but eXtreme Programming. That took me aback a bit, and after some thinking, I said: Sesame Street. Why? he asked. Well, I remember at least one sketch in Sesame Street ending with a loud exclamation WORKING TOGETHER!. This is a recurring theme in Sesame Street. Solving problems by *WORKING TOGETHER*. DevOps is Developers and Operators working together. So it is, in a way, a more restricted subset of Sesame Street. So as long as there are people playing the roles of Developers and Operators (even if renamed, and they may be unified in one person. Roles don't always neetly map 1:1 to people), DevOps can never be legacy.
+Still here? Alright. Let's digress a bit further, shall we? 
 
-So we need another definition, so that DevOps can become legacy. Simon's definition of devops: @@@TODO
+Back in 2003, a client asked me if I did anything else but eXtreme Programming. That took me aback a bit, and after some thinking, I said: Sesame Street. Why? he asked. Well, I remember at least one sketch in Sesame Street ending with a loud exclamation WORKING TOGETHER!. This is a recurring theme in Sesame Street. Solving problems by *WORKING TOGETHER*. DevOps is Developers and Operators working together. So it is, in a way, a more restricted subset of Sesame Street. So as long as there are people playing the roles of Developers and Operators - they may have different names, or they may be unified in one person, as roles don't always neatly map 1:1 to people - DevOps can never be legacy.
+
+So we need another definition, so that DevOps can become legacy. Simon's definition of devOps: @@@TODO
 
 
 A utility: change something from exiting to boring.
