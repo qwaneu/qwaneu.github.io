@@ -9,14 +9,11 @@ author: Marc Evers
 image: /attachments/blogposts/2020/PortsAndAdapters-8.png
 ---
 
-In a [previous post](/2020/09/09/how-to-keep-complexity-in-check-with-hexagonal-architecture.html), we elaborated on how we apply [Hexagonal Architecture](/2020/08/20/hexagonal-architecture.html) in front end applications. 
+In a [previous post](/2020/09/09/how-to-keep-complexity-in-check-with-hexagonal-architecture.html), we elaborated on why and how we apply [Hexagonal Architecture](/2020/08/20/hexagonal-architecture.html) in front end applications. 
 
 We have also written about how hexagonal architecture informs test architecture. We also apply this thinking for a front end component: as we distinguish ports, adapters and domain logic, we will have unit tests, adapter integration tests, and possibly some component end-to-end tests.
 
-Let's look at an example, with code!, taken from the Agile Fluency Diagnostic application we are developing. 
-
-![screenshot of the online agile fluency diagnostic, showing a form to create a new diagnostic session followed by a a list of 'my diagnostic sessions'](/attachments/blogposts/2020/online-afd.png)
-{: class="post-image post-image-50" }
+In this post we will dive a bit deeper in the how and why using an example taken from the Agile Fluency Diagnostic application we are developing. The [Agile Fluency Model](https://www.agilefluency.org/) describes an agile team's pathway in a positive, inclusive way, promoting improvement. If you haven't already, checking out the [Agile Fluency Model](https://www.agilefluency.org/) may well be worth your while. Using the model includes devising diagnostics, and  investment plans for teams growth. Being licensed facilitators, we facilitate such diagnostics and guide teams in their Agile journey. Being forced to facilitate the diagnostics online, we decided to build and application for that purpose. In the diagnostic application licensed facilitators can manage their diagnostic sessions, invite teams to the sessions, and facilitate the sessions online.
 
 We will use a specific activity as an example: creating a new diagnostic session. We will show the primary and secondary adapters, and our domain code. Here is a quick architecture sketch, to show the different objects involved and how they relate to the hexagon:
 
@@ -25,7 +22,14 @@ We will use a specific activity as an example: creating a new diagnostic session
 
 The UI components are the primary adapters, drawn in red; domain objects with view logic are in blue; the API adapters are the secondary adapters, in green.
 
+
 ## Primary adapters: UI Components
+
+The front end should help the facilitator to create valid Diagnostic Sessions (sessions in short). A valid session is one that contains a valid team name, a date and a number of participants between 1 and 30. A session can be marked as 'test' session, making the number of participants fixed to 3. 
+
+On quite a few projects we have seen developers putting such validation logic in the front-end components (in our case, that'd be Vue components). Although Vue components are a bit friendlier to testing code than, say, Anguar components, testing such front-end components can be a pain especially when their logic becomes more complicated. The clutter in the tests having to do with setting up the front end wrappers, the potential necessety to spy on the services, often obfuscate what the tests are really about: validation, or other logic. The possibility to add logic to strings withing the html like code, often makes things worse. 
+
+We therefore, tend to try and separate the logic from the ui components and much as possible. A rule of thumb for us is: any 'if' in a UI component is an opportunity to move to the domain. Doing so, we try to keep the UI components as thin as they can possibly be, focused on displaying state and passing commands to the domain. 
 
 <div class="shout-out">
   <div>
@@ -47,7 +51,7 @@ This is what the NewDiagnosticSession Vue component looks like:
 ![Screenshot: 'Create a new diagnostic session' heading, fields for team name, date, session type (regular or test) and a dropdown for the number of participants. The call to action button is 'Create'](/attachments/blogposts/2020/new-diagnostic-session.png)
 {: class="post-image" }
 
-The form has inputs and a button, and opens a help box when you click on the 'i'. The code looks roughly like this, leaving out some details for clarity:
+The form has inputs and a button, and opens a help box when you click on the 'i'. The code looks roughly like the code block below, leaving out some details for clarity. Take a look and pay attention not only to, how we implement submitting the form, but also how inputs are validated.
 
 ```html
 <div>
@@ -102,10 +106,12 @@ export default {
 }
 ```
 
-It delegates input validation to the `NewSession` domain object (see below). 
+It delegates input validation to the `NewSession` domain object, and the validation state is maintained in the `NewSession` object as well. At the moment, validation takes place on clicking `create`. Create session delegates to `facilitator.createDiagnosticSession`, which in turn delegates the validation to `NewSession`. Since new session is being observed by the component, missing fields and the like become visible in the ui.
 
+### Injecting modules
 The component receives a `facilitatorModule` object as a property. This is our 'state object'. We have decided to inject this dependency through props, because we don't like singletons or globals for managing our dependencies, nor do we like dependency injection magic. We want to be in control of our dependencies.
 To activate Vue change detection on the state contained by this object, we need to include it in the data part - hence the `facilitator: this.facilitatorModule`.
+
 
 This UI component is a primary adapter. Our rules of thumb:
 - the component code (JS + HTML) **talks UI**, forms, Vue.js integration
@@ -113,7 +119,7 @@ This UI component is a primary adapter. Our rules of thumb:
 - it **delegates any actions or events to domain code**; in this case the button triggers the `createSession` event, which delegates to the `createDiagnosticSession` function, and passes the `NewSession` object along.
 - we move any logic or conditionals to domain objects, like NewSession
 
-As a result, the automated tests for this component are focused. Their focus is the component showing the correct data and elements, and delegating to appropriate domain functions. Some of its tests:
+These rules of thumb help us to keep our components clean and focused. As a result, the automated tests for this component are equally clean and focused. Their focus is the component showing the correct data and elements, and delegating to appropriate domain functions. Some of its tests:
 
 ```javascript
 describe('New Diagnostic Session.vue', () => {
