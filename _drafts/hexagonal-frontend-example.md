@@ -39,7 +39,7 @@ Therefore, we separate the logic from the UI components as much as possible. Our
 
 This is what the NewDiagnosticSession Vue component looks like:
 
-![Screenshot: 'Create a new diagnostic session' heading, fields for team name, date, session type (regular or test) and a dropdown for the number of participants. The call to action button is 'Create'](/attachments/blogposts/2020/new-diagnostic-session.png)
+![Screenshot: 'Create a new diagnostic session' heading, fields for team name, date, session type (regular or test) and a drop-down for the number of participants. The call to action button is 'Create'](/attachments/blogposts/2020/new-diagnostic-session.png)
 {: class="post-image" }
 
 The form has inputs and a button, and opens a help box when you click on the 'i'. The code looks roughly like the code block below, leaving out some details for clarity. Take a look and pay attention to not only how we implement form submission a the form, but also how inputs are validated.
@@ -97,7 +97,7 @@ The TextInput is a small component we created to wrap an input with a label in a
 
 NewDiagnosticSession delegates input validation to the `NewSession` domain object. The validation state is maintained in the `NewSession` object as well. Validation takes place on clicking the Create button. The `createSession` function delegates to `facilitator.createDiagnosticSession`, which in turn delegates the validation to `NewSession`. 
 
-Since the NewSession object is being observed by the component, missing fields and the like are highlighted in the ui. We use a conditional class on the TextInputs for this:
+Since the NewSession object is being observed by the component, missing fields and the like are highlighted in the UI. We use a conditional class on the TextInputs for this:
 ```
 :class="{ error: newSession.errors.teamMissing }
 ```
@@ -119,13 +119,13 @@ Since the NewSession object is being observed by the component, missing fields a
 
 ### Injecting modules
 
-The component receives a `facilitatorModule` object as a property. This is our 'state object'. We have decided to inject this dependency through props, because we don't like singletons or globals for managing our dependencies, nor do we like dependency injection magic. _We want to be in control of our dependencies._
+The component receives a `facilitatorModule` object as a property. This is our 'state object'. We have decided to inject this dependency through props, because we don't like singletons or global variables for managing our dependencies, nor do we like dependency injection magic. _We want to be in control of our dependencies._
 To activate Vue change detection on the state within this object, we need to include it in the data part - hence the `facilitator: this.facilitatorModule`.
 
 ### Some rules of thumb
 
 Some of our rules of thumb for UI components as primary adapters are:
-- the component code (Javascript + HTML) **talks UI**: it is about layout, forms, Vue.js integration, etc.
+- the component code (JavaScript + HTML) **talks UI**: it is about layout, forms, Vue.js integration, etc.
 - the component **visualizes state**, either from a 'module' object or from local data; it shows data and shows/hides elements based on data
 - it **delegates any actions or events to domain code**; in this case the button triggers the `createSession` event, which delegates to the `createDiagnosticSession` function, and passes the `NewSession` object along.
 - we move any logic or conditionals to domain objects, like NewSession
@@ -223,7 +223,7 @@ _We started out with [Vuex](https://vuex.vuejs.org/) for state management. Vuex 
 
 Inspired by Vuex and our own experience with structuring domain code, we decided to roll our own. We follow these guidelines:
 
-- a module object is a **plain Javascript / TypeScript object**
+- a module object is a **plain JavaScript / TypeScript object**
 - it **keeps state and exposes it to UI components**, with an explicit interface when using Typescript; we want to be explicit about **what the UI needs to know** so that we are in control of dependencies in our code
 - it **defines actions for UI components**; the function names reflect the language of our domain, to make explicit **what the UI can do**
 - a module **delegates to other domain objects** as much as possible; we want to prevent them becoming a responsibility magnet, ending up with lots of procedural code in our modules; this would reduce readability and maintainability
@@ -319,7 +319,7 @@ describe('A new session', () => {
 
 The `aValidNewSession` function is an instance of the [Builder pattern](https://en.wikipedia.org/wiki/Builder_pattern). A _Builder_ separates the construction of a complex object from its representation. The `aValidNewSession` Builder provides an example `NewSession` with valid data. It lets us describe variations succinctly, for instance: `aValidNewSession({ participants: '31' })`.
 
-By moving view logic to a compact, dedicated, plain Javascript object, we can isolate UI related behaviour and write fast, focused tests for it. Testing validation and feedback rules through the UI would be cumbersome.
+By moving view logic to a compact, dedicated, plain JavaScript object, we can isolate UI related behaviour and write fast, focused tests for it. Testing validation and feedback rules through the UI would be cumbersome.
 
 <div class="shout-out">
   <div>
@@ -329,7 +329,7 @@ By moving view logic to a compact, dedicated, plain Javascript object, we can is
     <p>Domain:</p>
     <ul>
       <li>Encapsulates <strong>view logic & behaviour</strong></li>
-      <li>Consists of <strong>small, focused, plain Javascript objects</strong></li>
+      <li>Consists of <strong>small, focused, plain JavaScript objects</strong></li>
       <li><strong>Translates errors</strong> to something meaningful for users</li> 
     </ul>
   </div>
@@ -384,8 +384,8 @@ export class ApiBasedSessionRepository {
 
 This session repository offers the `create` and the `all` functions to the domain.
 
-- `create` receives a `NewSession` object, transforms this to the API data format, and POSTs this to a backend URL. We have created a small wrapper around the [axios](https://github.com/axios/axios) library. The functions doPost and doGet encapsulate repeated boilerplate, and do generic error handling.
-- `all` performs a GET on a backend API; it receives JSON containing an array of diagnostic session data, which is mapped to DiagnosticSessionSummary objects by the `_toDiagnosticSessionSummary` function.
+- `create` receives a `NewSession` object, transforms this to the API data format, and POSTs this to a back end URL. We have created a small wrapper around the [axios](https://github.com/axios/axios) library. The functions doPost and doGet encapsulate repeated boilerplate, and do generic error handling.
+- `all` performs a GET on a back end API; it receives JSON containing an array of diagnostic session data, which is mapped to DiagnosticSessionSummary objects by the `_toDiagnosticSessionSummary` function.
 
 Here is an excerpt of its adapter integration test:
 
@@ -450,7 +450,7 @@ describe('The API based session repository', () => {
 
 Adapter integration tests are valuable, because they force us to understand the service we are adapting, and help us pinpoint problems if there ever are any.
 
-The API adapter also takes care of mapping data to/from domain objects. We do this mapping explicitly, to decouple our front end code from API details. This limits the impact of backend API changes and allows our UI component to have its own view on the domain - which might differ from the way backend data is structured. We prefer to put API-domain object mappings in separate functions in the adapter, to make the code easier to read and to be able to write focused tests for the mapping. 
+The API adapter also takes care of mapping data to/from domain objects. We do this mapping explicitly, to decouple our front end code from API details. This limits the impact of back end API changes and allows our UI component to have its own view on the domain - which might differ from the way back end data is structured. We prefer to put API-domain object mappings in separate functions in the adapter, to make the code easier to read and to be able to write focused tests for the mapping. 
 
 A third responsibility of API adapters is handling errors. They convert API errors to something meaningful within the UI component. In our application, we map error on sensible messages. Sometimes we can convert an error into a [Null object](http://wiki.c2.com/?NullObject), for example by returning an empty list if data retrieval fails.
 
@@ -470,9 +470,9 @@ A third responsibility of API adapters is handling errors. They convert API erro
 
 ## Summary
 
-We have walked you through an example of how we have applied the Hexagonal Architecture pattern to a Vue.js based front end application. We have shown example code of primary adapters (the UI components), domain code (state & view logic using plain old Javascript objects), and secondary adapters (code that calls APIs and maps data).
+We have walked you through an example of how we have applied the Hexagonal Architecture pattern to a Vue.js based front end application. We have shown example code of primary adapters (the UI components), domain code (state & view logic using plain old JavaScript objects), and secondary adapters (code that calls APIs and maps data).
 
-We do not pose this as a best practice. Instead, we made a series of considerations, trade-offs and design decisions informed by our experience with front end code and hexagonal architecture, and guided by the different concerns we ran into when developing our application. We expect that our journey is more valuable to you than the specific code that came from it.
+We do not pose this as a best practice. Instead, we made a series of considerations, trade-offs and design decisions informed by our experience with front end code and hexagonal architecture, and guided by different concerns we ran into when developing our application. Our journey is probably more valuable to you than the specific code that came from it.
 
 In a next post, we will elaborate how we structure the domain code. This is especially relevant when your front end component grows and you are looking for ways to reduce complexity.
 
