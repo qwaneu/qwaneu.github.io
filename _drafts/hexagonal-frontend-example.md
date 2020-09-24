@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hexagonal Front End - An Example
+title: A Hexagonal Vue.js front-end, by example 
 tags:
   - architecture
   - ports and adapters
@@ -15,9 +15,9 @@ We have also written about [how hexagonal architecture informs test architecture
 
 In this post we will dive a bit deeper in the how and why using an example taken from the Agile Fluency Diagnostic application we are developing. 
 
-> The [Agile Fluency Model](https://www.agilefluency.org/) describes an agile team's pathway in a positive, inclusive way, promoting improvement. If you haven't already, checking out the [Agile Fluency Model](https://www.agilefluency.org/) may well be worth your while. Or drop us a line if you'd like to learn more.
+> The [Agile Fluency Model](https://www.agilefluency.org/) describes an agile team's pathway in a positive, inclusive way, promoting improvement. If you haven't already, checking out the [Agile Fluency Model](https://www.agilefluency.org/) may well be worth your while. Or [drop us a line](/contact) if you'd like to learn more.
 
-Using the model includes devising diagnostics sessions and investment plans for teams to grow. Being licensed facilitators, we facilitate such diagnostic sessions and guide teams in their agile journey. Being forced to facilitate the diagnostics remotely, we decided to build an application for that purpose. In the diagnostic application licensed facilitators can manage their diagnostic sessions, invite teams to sessions, and facilitate the sessions online.
+Using the model includes devising diagnostic sessions and investment plans for teams to grow. As licensed facilitators, we facilitate such diagnostic sessions and guide teams in agility. When we were forced by COVID-19 to facilitate the diagnostics remotely, we decided to build an application for that purpose. In the diagnostic application facilitators can manage their diagnostic sessions, invite teams to sessions, and facilitate the sessions online.
 
 We will use a specific activity as an example: _creating a new diagnostic session_. We will explain what decisions we made for primary and secondary ports and adapters, and for the domain code. Here is a quick architecture sketch, to show the different objects involved and how they relate to the hexagon:
 
@@ -483,11 +483,11 @@ A third responsibility of API adapters is handling errors. They convert API erro
 
 ## Summary
 
-We have walked you through an example of how we have applied the Hexagonal Architecture pattern to a Vue.js based front end application. We have shown example code of primary adapters (the UI components), domain code (state & view logic using plain old JavaScript objects), and secondary adapters (code that calls APIs and maps data).
+We have walked you through an example of how we have applied the Hexagonal Architecture pattern to a Vue.js based front end application. We focused on a particular user need, _create a diagnostic session_. We have shown example code of primary adapters (the UI components), domain code (state & view logic using plain old JavaScript objects), and secondary adapters (code that calls APIs and maps data).
 
-We do not pose this as a best practice. Instead, we made a series of considerations, trade-offs and design decisions informed by our experience with front end code and hexagonal architecture, and guided by different concerns we ran into when developing our application. Our journey is probably more valuable to you than the specific code that came from it.
+We do not pose this as a best practice. Instead, we made a series of considerations, _trade-offs_ and _design decisions_ informed by our experience with front end code and hexagonal architecture, and guided by different concerns we ran into when developing our application. Our journey is probably more valuable to you than the specific code that came from it.
 
-In a next post, we will elaborate how we structure the domain code. This is especially relevant when your front end component grows and you are looking for ways to reduce complexity.
+In a follow-up post, we will elaborate how we structure the domain code. This is especially relevant when your front end component grows and you are looking for ways to reduce complexity.
 
 _Credits: many thanks to Willem for editing and helping improve this post._
 
