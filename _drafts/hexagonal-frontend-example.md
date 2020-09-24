@@ -42,7 +42,7 @@ This is what the NewDiagnosticSession Vue component looks like:
 ![Screenshot: 'Create a new diagnostic session' heading, fields for team name, date, session type (regular or test) and a drop-down for the number of participants. The call to action button is 'Create'](/attachments/blogposts/2020/new-diagnostic-session.png)
 {: class="post-image" }
 
-The form has inputs and a button, and opens a help box when you click on the 'i'. The code looks roughly like the code block below, leaving out some details for clarity. Take a look and pay attention to not only how we implement form submission a the form, but also how inputs are validated.
+The code looks roughly like the code block below, leaving out some details for clarity. Take a look and pay attention to not only how we implement form submission a the form, but also how inputs are validated.
 
 ```html
 <div>
@@ -317,7 +317,15 @@ describe('A new session', () => {
 })
 ```
 
-The `aValidNewSession` function is an instance of the [Builder pattern](https://en.wikipedia.org/wiki/Builder_pattern). A _Builder_ separates the construction of a complex object from its representation. The `aValidNewSession` Builder provides an example `NewSession` with valid data. It lets us describe variations succinctly, for instance: `aValidNewSession({ participants: '31' })`.
+We often use the [Builder pattern](https://en.wikipedia.org/wiki/Builder_pattern) for creating objects in test code. _Builder_ separates the construction of a complex object from its representation. These builders then have the form of 
+
+```.java
+  build(aValidNewSession().withParticipantCount(31));
+```
+
+Why did we introduce this instead of just calling the object's constructor? Often we just need an valid instance of something and we do not care about the specifics, sometimes we want to control only one specific field. Repeating constructor calls is tedious and creates unnecessary coupling in tests. 
+
+In our JavaScript code the original Builder Pattern has less added value, because functions with default parameters can do the job just fine. The `aValidNewSession` function is an instance of such a function. It provides an example `NewSession` with valid data. It lets us describe variations succinctly like above, for instance: `aValidNewSession({ participants: '31' })`.
 
 By moving view logic to a compact, dedicated, plain JavaScript object, we can isolate UI related behaviour and write fast, focused tests for it. Testing validation and feedback rules through the UI would be cumbersome.
 
@@ -346,23 +354,13 @@ export class ApiBasedSessionRepository {
   constructor (axiosWrapper) {
     this.axiosWrapper = axiosWrapper
   }
-
-  _toDiagnosticSessionSummary (data) {
-    return new DiagnosticSessionSummary({
-      id: data.id,
-      team: data.team,
-      date: data.date,
-      isOpen: data.is_open,
-      isTest: data.is_test
-    })
-  }
   ...
-
   all () {
     return this.axiosWrapper.doGet({
       url: '/diagnostic-sessions',
       failureReason: 'The sessions could not be retrieved'
-    }).then(response => response.data.diagnostic_sessions.map(this._toDiagnosticSessionSummary))
+    }).then(response => response.data.diagnostic_sessions
+      .map(toDiagnosticSessionSummary))
   }
 
   create (newSession) {
@@ -379,6 +377,16 @@ export class ApiBasedSessionRepository {
     }).then(response => response.data.id)
   }
   ...
+}
+
+export function toDiagnosticSessionSummary (data) {
+  return new DiagnosticSessionSummary({
+    id: data.id,
+    team: data.team,
+    date: data.date,
+    isOpen: data.is_open,
+    isTest: data.is_test
+  })
 }
 ```
 
@@ -400,30 +408,33 @@ describe('The API based session repository', () => {
   })
   describe('getting all sessions', () => {
     it('should return a list of sessions', done => {
+      const sessionData = { id: '100', team: 'Pretty Programmers', date: '2002-11-22', 
+        is_open: true, is_test: true }
       mock.onGet('http://baseurl/diagnostic-sessions').reply(200, {
-        diagnostic_sessions: [{
-          id: '100', team: 'Pretty Programmers', 
-          date: '2002-11-22', is_open: true, is_test: true 
-        }]
+        diagnostic_sessions: [sessionData]
       })
       repo.all().then(sessions => {
-        expect(sessions).toEqual([new DiagnosticSessionSummary({
-          id: '100',
-          team: 'Pretty Programmers',
-          date: '2002-11-22',
-          isOpen: true,
-          isTest: true
-        })])
+        expect(sessions).toEqual([toDiagnosticSessionSummary(sessionData)])
         done()
       })
+    })
+    it('should map session data to DiagnosticSessionSummaries', () => {
+      const data = { id: '100', team: 'Pretty Programmers', date: '2002-11-22', 
+        is_open: true, is_test: true }
+      expect(toDiagnosticSessionSummary(data)).toEqual(new DiagnosticSessionSummary({
+        id: '100',
+        team: 'Pretty Programmers',
+        date: '2002-11-22',
+        isOpen: true,
+        isTest: true
+      }))
     })
     ...
   })
   describe('creating a session', () => {
-    it('should return new session id', (done) => {
+    it('should return new session id', done => {
       mock.onPost('http://baseurl/diagnostic-sessions', {
-        team: 'Team A', date: '2020-08-25', 
-        participant_count: '3', language: 'en', is_test: true 
+        team: 'Team A', date: '2020-08-25', participant_count: '3', language: 'en', is_test: true 
       }).reply(201, { id: '100' })
       repo.create(aValidNewSession({ 
         team: 'Team A', 
@@ -450,9 +461,11 @@ describe('The API based session repository', () => {
 
 Adapter integration tests are valuable, because they force us to understand the service we are adapting, and help us pinpoint problems if there ever are any.
 
-The API adapter also takes care of mapping data to/from domain objects. We do this mapping explicitly, to decouple our front end code from API details. This limits the impact of back end API changes and allows our UI component to have its own view on the domain - which might differ from the way back end data is structured. We prefer to put API-domain object mappings in separate functions in the adapter, to make the code easier to read and to be able to write focused tests for the mapping. 
+The first responsibility of an API adapter is to encapsulate communicating with (back end) APIs (line 35).
 
-A third responsibility of API adapters is handling errors. They convert API errors to something meaningful within the UI component. In our application, we map error on sensible messages. Sometimes we can convert an error into a [Null object](http://wiki.c2.com/?NullObject), for example by returning an empty list if data retrieval fails.
+The API adapter also takes care of mapping data to/from domain objects. We do this mapping explicitly, to decouple our front end code from API details. This limits the impact of back end API changes and allows our UI component to have its own view on the domain - which might differ from the way back end data is structured. We prefer to put API-domain object mappings in separate functions in the adapter, to make the code easier to read and to be able to write focused tests for the mapping (line 21). 
+
+A third responsibility of API adapters is handling errors. They convert API errors to something meaningful within the UI component (line 50). In our application, we map error on sensible messages. Sometimes we can convert an error into a [Null object](http://wiki.c2.com/?NullObject), for example by returning an empty list if data retrieval fails.
 
 <div class="shout-out">
   <div>
