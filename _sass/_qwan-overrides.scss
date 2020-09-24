@@ -175,6 +175,21 @@ em {
         }
       }
     }
+
+    table.rouge-table {
+      border: none;
+      tbody {
+        tr {
+          background-color: inherit;
+        }
+        td {
+          padding: 0 0.1em;
+          pre {
+            margin: 0 0;
+          }
+        }
+      }
+    }    
   }
 
   .post-meta {
@@ -237,6 +252,7 @@ em {
     margin-bottom: 0.5em;
   }
 }
+
 
 .wrap {
   padding: 3.5em 0.5em 0.5em 0.5em;
