@@ -6,16 +6,16 @@ tags:
   - ports and adapters
   - web development
 author: Marc Evers, Rob Westgeest
-image: /attachments/blogposts/2020/PortsAndAdapters-8.png
+image: /attachments/blogposts/2020/front-end-hexagon-sketch.jpg
 ---
 
 In a [previous post](/2020/09/09/how-to-keep-complexity-in-check-with-hexagonal-architecture.html), we elaborated on why and how we apply [Hexagonal Architecture](/2020/08/20/hexagonal-architecture.html) in front end applications. 
 
-We have also written about [how hexagonal architecture informs test architecture](/2020/09/17/test-architecture.html). We also apply this thinking for a front end component: as we distinguish ports, adapters and domain logic, we will have unit tests, adapter integration tests, and possibly some component end-to-end tests.
+We have also written about [how hexagonal architecture informs test architecture](/2020/09/17/test-architecture.html). We apply this thinking for a front end component as well: as we distinguish ports, adapters and domain logic, we will have unit tests, adapter integration tests, and possibly some component end-to-end tests.
 
 In this post we will dive a bit deeper in the how and why using an example taken from the Agile Fluency Diagnostic application we are developing. 
 
-> The [Agile Fluency Model](https://www.agilefluency.org/) describes an agile team's pathway in a positive, inclusive way, promoting improvement. If you haven't already, checking out the [Agile Fluency Model](https://www.agilefluency.org/) may well be worth your while. Or [drop us a line](/contact) if you'd like to learn more.
+> The [Agile Fluency® Model](https://www.agilefluency.org/) describes an agile team's pathway in a positive, inclusive way, promoting improvement. If you haven't already, checking out the [Agile Fluency Model](https://www.agilefluency.org/) may well be worth your while. Or [drop us a line](/contact) if you'd like to learn more.
 
 Using the model includes devising diagnostic sessions and investment plans for teams to grow. As licensed facilitators, we facilitate such diagnostic sessions and guide teams in agility. When we were forced by COVID-19 to facilitate the diagnostics remotely, we decided to build an application for that purpose. In the diagnostic application facilitators can manage their diagnostic sessions, invite teams to sessions, and facilitate the sessions online.
 
@@ -26,14 +26,13 @@ We will use a specific activity as an example: _creating a new diagnostic sessio
 
 The UI components are the primary adapters, drawn in red; domain objects with view logic are in blue; the API adapters are the secondary adapters, in green.
 
-Originally, the Hexagonal Architecture pattern distinguishes primary ports - ports that _drive the system_ - and secondary ports - ports that _are driven by the system_. In this post, we use the primary/secondary terms also for the adapters that realize the primary and secondary ports.
-
+> The Hexagonal Architecture pattern distinguishes primary ports - ports that _drive the system_ - and secondary ports - ports that _are driven by the system_. In this post, we use the primary/secondary terms also for the adapters that realize the primary and secondary ports.
 
 ## Primary adapters: UI Components
 
 The front end should help the facilitator to create valid Diagnostic Sessions, sessions in short. A valid session is one that has a valid team name, a date, and a number of participants between 1 and 30. A session can be marked as 'test' session, which fixes the number of participants to 3. 
 
-On quite a few projects we have seen developers putting such validation logic in front-end components (Vue.js components in our case). Although Vue.js components lend themselves better for fast tests, than for example Angular components, testing front-end components can still be a pain, especially when their logic becomes more complicated. The clutter in the tests having to do with setting up front end wrappers and possibly spying on services, often obfuscates what the tests are really about: validation, or other logic. The option to add logic to strings within the html template often makes things worse. 
+On quite a few projects, we have seen developers putting such validation logic in front-end components - [Vue.js](https://vuex.vuejs.org/) components in our case. Although Vue.js components lend themselves better for fast tests than for example Angular components, testing front-end components can still be a pain, especially when their logic becomes more complicated. The clutter in the tests having to do with setting up front end wrappers and possibly spying on services often obfuscates what the tests are really about: validation and other logic. The option to add logic to strings within the html template often makes things worse. 
 
 Therefore, we separate the logic from the UI components as much as possible. Our rule of thumb here is: any 'if' in a UI component is a candidate for moving to the domain. By doing so, we try to keep the UI components as thin as they can possibly be, focused on displaying state and passing commands to the domain. 
 
@@ -171,7 +170,7 @@ describe('New Diagnostic Session.vue', () => {
 })
 ```
 
-We have started writing a small DSL (domain specific language) around the Vue test utils (`aVueWrapperFor`), to reduce testing boilerplate: `aVueWrapperFor(NewDiagnosticSession).withProps ...`
+We have started writing a small DSL (domain specific language) around the Vue test utils, to reduce testing boilerplate: `aVueWrapperFor(NewDiagnosticSession).withProps ...`
 
 ## Domain - view logic & state
 
@@ -347,7 +346,7 @@ By moving view logic to a compact, dedicated, plain JavaScript object, we can is
 
 Let's have a look at the API adapter: the `ApiBasedSessionRepository`. We follow the [Repository Pattern](https://www.martinfowler.com/eaaCatalog/repository.html): the adapter exposes a domain oriented interface, in this case consisting of the `all` and `create` functions. In Typescript we would define a `SessionRepository` interface having these two functions, so that our domain code depends on this abstraction and not on API implementation details or http library peculiarities.
 
-We use the _axios_ library for performing API calls.
+We use the [axios](https://github.com/axios/axios) library for performing API calls.
 
 ```javascript
 export class ApiBasedSessionRepository {
@@ -392,7 +391,7 @@ export function toDiagnosticSessionSummary (data) {
 
 This session repository offers the `create` and the `all` functions to the domain.
 
-- `create` receives a `NewSession` object, transforms this to the API data format, and POSTs this to a back end URL. We have created a small wrapper around the [axios](https://github.com/axios/axios) library. The functions doPost and doGet encapsulate repeated boilerplate, and do generic error handling.
+- `create` receives a `NewSession` object, transforms this to the API data format, and POSTs this to a back end URL. We have created a small wrapper around the axios library. The functions doPost and doGet encapsulate repeated boilerplate, and do generic error handling.
 - `all` performs a GET on a back end API; it receives JSON containing an array of diagnostic session data, which is mapped to DiagnosticSessionSummary objects by the `_toDiagnosticSessionSummary` function.
 
 Here is an excerpt of its adapter integration test:
