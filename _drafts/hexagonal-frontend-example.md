@@ -17,7 +17,10 @@ In this post we will dive a bit deeper in the how and why using an example taken
 
 > The [Agile Fluency® Model](https://www.agilefluency.org/) describes an agile team's pathway in a positive, inclusive way, promoting improvement. If you haven't already, checking out the [Agile Fluency Model](https://www.agilefluency.org/) may well be worth your while. Or [drop us a line](/contact) if you'd like to learn more.
 
+
 Using the model includes devising diagnostic sessions and investment plans for teams to grow. As licensed facilitators, we facilitate such diagnostic sessions and guide teams in agility. When we were forced by COVID-19 to facilitate the diagnostics remotely, we decided to build an application for that purpose. In the diagnostic application facilitators can manage their diagnostic sessions, invite teams to sessions, and facilitate the sessions online.
+
+![agile fluency diagnostic tool](/attachments/blogposts/2020/diagnostic-tool.png)
 
 We will use a specific activity as an example: _creating a new diagnostic session_. We will explain what decisions we made for primary and secondary ports and adapters, and for the domain code. Here is a quick architecture sketch, to show the different objects involved and how they relate to the hexagon:
 
