@@ -4,66 +4,62 @@ layout: accessibletwo
 {% include header_post.html baseurl="/" %}
 
 <div class="wrap">
-  <div class="grid grid-pad">
-    <div class="col-1-1">
-      <article class="post-wrap" itemscope itemtype="http://schema.org/BlogPosting">
-        <header class="post-header .entry-title">
-          <h1>{{ page.title }}</h1>
-          <p class="post-meta">
-            <div>
-              <span class="post-meta-item"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></span>
-            {% if page.author %}
-              <span class="post-meta-item" itemprop="author" itemscope itemtype="http://schema.org/Person">
-              <span class="post-meta-item" itemprop="name">{{ page.author }}</span>
-            {% endif %}
-            <span class="post-meta-item">
-              <a href="/feed.xml">
-                Subscribe to the RSS feed
-                <img class="feed-icon" src="/images/feed-icon-24x24.png" alt="">
-              </a>
-            </span>
-
-            </div>
-          {% if page.tags %}
-            <div>Tags:
-            {% for tag in page.tags %}
-            <a href="/blog-by-tag#tag-{{ tag | replace: ' ', '-' }}">{{ tag }}</a>,
-            {% endfor %}
-            </div>
-          {% endif %}
-            <div>
-            </div>
-          </p>
-        </header>
-
-        <div class="post" itemprop="articleBody">
-          {{ content }}
-        </div>
-      </article>
-    </div>
-
-    <div class="post-bottom-navigation">
-      {% if page.previous %}
-      <span class="previous-link">
-        <a rel="prev" href="{{ page.previous.url }}"><i class="icon-previous2"></i> Previous Entry</a>
-      </span>
-      {% endif %}
-
-      {% if page.next %}
-      <span class="next-link">
-        <a rel="next" href="{{ page.next.url }}">Next Entry <i class="icon-next2"></i></a>
-      </span>
-      {% endif %}
-
-      <p>
-        <span>
+  <article class="post-wrap" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header .entry-title">
+      <h1>{{ page.title }}</h1>
+      <p class="post-meta">
+        <div>
+          <span class="post-meta-item"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></span>
+        {% if page.author %}
+          <span class="post-meta-item" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span class="post-meta-item" itemprop="name">{{ page.author }}</span>
+        {% endif %}
+        <span class="post-meta-item">
           <a href="/feed.xml">
-            <img class="feed-icon" src="/images/feed-icon-32x32.png" alt="">
-            Subscribe to our RSS feed
+            Subscribe to the RSS feed
+            <img class="feed-icon" src="/images/feed-icon-24x24.png" alt="">
           </a>
         </span>
+
+        </div>
+      {% if page.tags %}
+        <div>Tags:
+        {% for tag in page.tags %}
+        <a href="/blog-by-tag#tag-{{ tag | replace: ' ', '-' }}">{{ tag }}</a>,
+        {% endfor %}
+        </div>
+      {% endif %}
+        <div>
+        </div>
       </p>
+    </header>
+
+    <div class="post" itemprop="articleBody">
+      {{ content }}
     </div>
+  </article>
+
+  <div class="post-bottom-navigation">
+    {% if page.previous %}
+    <span class="previous-link">
+      <a rel="prev" href="{{ page.previous.url }}"><i class="icon-previous2"></i> Previous Entry</a>
+    </span>
+    {% endif %}
+
+    {% if page.next %}
+    <span class="next-link">
+      <a rel="next" href="{{ page.next.url }}">Next Entry <i class="icon-next2"></i></a>
+    </span>
+    {% endif %}
+
+    <p>
+      <span>
+        <a href="/feed.xml">
+          <img class="feed-icon" src="/images/feed-icon-32x32.png" alt="">
+          Subscribe to our RSS feed
+        </a>
+      </span>
+    </p>
   </div>
 </div>
 
