@@ -8,7 +8,7 @@ author: Willem van den Ende
 image:
 ---
 
-In the first week of September, Jamie Dobson and Simon Wardley did a back to back presentation on [Cargo Cults and mapping DevOps and serverless](https://www.youtube.com/watch?v=hlPEeDWHy34&feature=youtu.be).
+In the first week of September, Jamie Dobson and Simon Wardley did a back to back presentation on [Cargo Cults and mapping DevOps and serverless](https://www.youtube.com/watch?v=hlPEeDWHy34&feature=youtu.be). It was quite entertaining and well worth a watch.
 
 But first, let us digress into definitions. What do we mean by _DevOps_?
 
