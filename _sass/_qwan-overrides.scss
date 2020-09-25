@@ -55,6 +55,7 @@ em {
     font-size: 120%;
     ul {
       margin-bottom: 0.7em;
+      padding-left: 2em;
       list-style: disc;
     }
     li {
@@ -212,6 +213,7 @@ em {
   }
 }
 
+// niet gebruikt:
 .accessiblepost {
   font-size: 120%;
   ul {
@@ -252,7 +254,6 @@ em {
     margin-bottom: 0.5em;
   }
 }
-
 
 .wrap {
   padding: 3.5em 0.5em 0.5em 0.5em;
@@ -331,7 +332,6 @@ footer h3 {
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   row-gap: 0.5em;
   column-gap: 1em;
-  // padding: 2em;
 
   .post-meta {
     padding-bottom: 0.3em;
