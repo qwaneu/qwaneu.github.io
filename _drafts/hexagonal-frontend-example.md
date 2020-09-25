@@ -17,7 +17,7 @@ In this post we will dive a bit deeper in the how and why using an example taken
 
 > The [Agile Fluency Model](https://www.agilefluency.org/) describes an agile team's pathway in a positive, inclusive way, promoting improvement. If you haven't already, checking out the [Agile Fluency Model](https://www.agilefluency.org/) may well be worth your while. Or drop us a line if you'd like to learn more.
 
-Using the model includes devising diagnostics sessions and investment plans for teams to grow. Being licensed facilitators, we facilitate such diagnostic sessions and guide teams in their agile journey. Being forced to facilitate the diagnostics remotely, we decided to build an application for that purpose. In the diagnostic application licensed facilitators can manage their diagnostic sessions, invite teams to sessions, and facilitate the sessions online.
+Using the model includes devising diagnostics sessions and investment plans for teams to grow. Being licensed facilitators, we facilitate such diagnostic sessions and guide teams in their agile journey. Being forced to facilitate the diagnostics remotely, we decided to build an application for that purpose. In the diagnostic application, licensed facilitators can manage their diagnostic sessions, invite teams to sessions, and facilitate the sessions online.
 
 We will use a specific activity as an example: _creating a new diagnostic session_. We will explain what decisions we made for primary and secondary ports and adapters, and for the domain code. Here is a quick architecture sketch, to show the different objects involved and how they relate to the hexagon:
 
@@ -42,7 +42,7 @@ This is what the NewDiagnosticSession Vue component looks like:
 ![Screenshot: 'Create a new diagnostic session' heading, fields for team name, date, session type (regular or test) and a drop-down for the number of participants. The call to action button is 'Create'](/attachments/blogposts/2020/new-diagnostic-session.png)
 {: class="post-image" }
 
-The code looks roughly like the code block below, leaving out some details for clarity. Take a look and pay attention to not only how we implement form submission a the form, but also how inputs are validated.
+The code looks roughly like the code block below, leaving out some details for clarity. Take a look and pay attention to not only how we implement form submission, but also how inputs are validated.
 
 ```html
 <div>
