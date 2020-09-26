@@ -3,6 +3,10 @@
     "csv",
     "markdown"
   ],
+  "[markdown]":{
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80,
+  },
   "spellright.language": [
     "en_GB"
   ],
