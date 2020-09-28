@@ -30,11 +30,11 @@ The former describes Lean Agile Exchange to a large extent.
 
 My quick summary animation looks like this:
 
-<video width="320" height="240" controls>
+<video width="320" height="240" controls alt="The linked post describes this better than I could in an alt tag">
   <source src="/attachments/blogposts/2020/dominant-memes.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
-_I made a short animation to illustrate how a conference in the cloud makes rainclouds go away._
+_Dominant memes, principles dominate before the chasm, practices after. Read [Chris' post for the details](https://theitriskmanager.com/2015/04/19/communities-of-need-community-of-solutions/.)_
 
 Community of needs sessions can be recognized by questions, or uncomfortable
 truths that don't necessarily sell anything. The keynotes at Lean Agile Exchange
