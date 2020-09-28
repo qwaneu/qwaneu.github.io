@@ -56,11 +56,13 @@ Dokku's lack of complexity.
 
 ## Why does it matter
 
-It is easy to get lured into complex setups recommended by cloud providers (link
-to wordpress on AWS). I found even a simple looking BAAS can have its' own
+It is easy to get lured into complex setups recommended by cloud providers. When I'm hinking of overcomplicating things, I remind my self of the [Wordpress: Best practices on AWS](https://aws.amazon.com/blogs/architecture/wordpress-best-practices-on-aws/). I find looking at the deploment view sobering:
+![Deployment diagram, including two regions with their NAT gateways, wordpress instances, Memcached, Aurora read replicats, EFS mount targets, and an application load balancer to tie it together](https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2018/03/23/wordpress-on-aws.png)
+If you need a set-up this complex for your blog (you most likely don't), you are probably better off hosting it at [wordpress.com](https://wordpress.com) or a provider that specializes in extremely high volume wordpress setups. Saves you money and time too.
+I found even a simple looking BAAS can have its' own
 complexities when e.g. trying to have a test environment, or quickly iterating
-on my laptop. Dokku uses by now established technology: git, docker and nginx,
-and does a good job of hiding the complexities of the latter two from you
+on my laptop. Dokku leverages well established products: git, docker and nginx,
+and does a good job of hiding the complexities of the latter two
 without introducing unnecessary risks.
 
 It also comes with nice surprises like zero-downtime deployments with very little work.
@@ -73,16 +75,30 @@ energy long before the big cloud providers, their service has always been swift
 
 The basic flow, as illustrated by the animation below is, to tell dokku to
 create an app, tell Dokku what components it consists of in a `Procfile` (mine is
-just one line) and optionally a `.buildpack` if the application is non-standard
-(mine was haskell, so I needed one). push the repository to Dokku and wait for
-it to build. I learned after the basic tutorial that providing an FQDN in this
-step helps to add Lets Encrypt in the next step.
+just one line) and optionally a `.buildpacks` file if the application is non-standard
+. This is not needed for e.g. a rails application. Push the repository to Dokku and wait for
+it to build.
+
+The Procfile for my haskell web application that consumes no further services looks like:
+```
+web: <repositoryname>
+```
+
+
+
+This is my .buildpacks file:
+```
+https://github.com/mfine/heroku-buildpack-stack
+```
+
+Dokku is a clone of Heroku, the haskell tool stack is not included out of the box, hence I neede a .buildpacks file.
+
+I learned after the basic tutorial that providing a FQDN (Fully Qualified Domain Name) with the initial deploy step helps to add Lets Encrypt in the next step.
 
 Let's encrypt can be added after that (Not before), it is one command, you only
-need to provide an e-mail address. Basic Authentication is also one command.
+need to provide an e-mail address. [Instructions for dokku-letsencrypt](https://github.com/dokku/dokku-letsencrypt) also explain the one-liner for monthly renewals. Basic Authentication is also one command, as explained in the [dokku-http-auth documentation](https://github.com/dokku/dokku-http-auth).
 
-I recommend going through the tutorial that lets' you set up an example Rails
-application, even if you don't care about rails. I was pleasantly surprised how
+I recommend going through [Dokkus' Deploy tutorial](http://dokku.viewdocs.io/dokku/deployment/application-deployment/) that walks you through setting up an example Ruby on Rails application, even if you don't care about rails. I was pleasantly surprised how
 easy it was to add PostgreSQL to an application. I chose to start
 with sqlite, because I thought that would make deployment easier, but Dokku
 makes postgresql so easy that I may be wrong about that. Creating a database and adding it to an application is just two Dokku commands away. It also includes a facility to
@@ -90,48 +106,63 @@ back up the database to an S3 compatible bucket regularly.
 
 ## Bonus: Cheap zero-downtime deployments
 
-I was pleasantly surprised to find that with adding yet another text file -
-CHECKS - dokku can do fast zero downtime deployments. You need to tell dokku how
+I was pleasantly surprised to find that with adding yet another text file dokku can do fast [zero downtime deployments](http://dokku.viewdocs.io/dokku/deployment/zero-downtime-deploys/). You need to tell dokku how
 long to wait before running a health check, how many retries to do and how long
-,and what the health check (a GET request to an http endpoint in my case) should
+, what the health check should
 be, and what should be in the result.
 
-A checks file for a haskell application I deployed looks like:
+The file needs to be called `CHECKS`. A checks file for a haskell application I deployed looks like:
+```
+WAIT=1
+TIMEOUT=30
+ATTEMPTS=30
 
-@@ Checks
+/static/hello.html  Hello!
+```
+While Haskell build times can be long, application startup is well under a
+second, so we don't have to wait long for the health check to succeed. The check performs a `GET` retuest to an HTTP endpoint that should have the text _Hello!_ in it.
 
-While haskell build times can be long, application startup is well under a
-second, so we don't have to wait long for the health check.
-
-## Storage took a bit longer to figure out
-
-For my test app, I needed to change two things:
-
-- read the PORT environment variable
-- check if there is a /storage directory
-
-The Dokku storage plugin @@link allows you to specify a directory on the host
-that will be mounted in the docker container. An Sqlite database is just a file (SQLite i compeetes with `openn`).
+## Storage and Port took a bit longer to figure out
 
 A bit would be: an hour or so, as opposed to lets encrypt and basic auth that took minutes. Not bad at all.
 
-the port and storage were also good feedback about the two sets I based my
-experiment on. Yesod is batteries included, but figuring out how to specify a
-Port and storage was a pain - the scaffold has a lot of code to go through.
-Servant doesn't do much configuration out of the box, so a directory check and
-environment variable read were quickly added (after searching for the
-appropriate API calls).
+By default any files you write in your application will be gone after a deploy or another reset. [Persistent Storage with Dokku](http://dokku.viewdocs.io/dokku/advanced-usage/persistent-storage/) is not hard, but did need a modification to my application, since I chose to use the recommended `/storage` path. Convention over configuration tends to simplify things over time.
+
+For my test app, I needed to change two things:
+
+- read the PORT environment variable, so NGINX can forward the application.
+- check if there is a `/storage` directory and use that to open the database from.
+
+The [Dokku storage plugin](http://dokku.viewdocs.io/dokku/advanced-usage/persistent-storage/) link allows you to specify a directory on the host
+that will be mounted in the docker container. An Sqlite database is just a file.
+
+Configuring thee port and storage were also good feedback about the two sets of
+development frameworks/libraries I based my experiment on. Yesod is batteries
+included, but figuring out _how_ to specify a Port and storage was a pain - the
+scaffold has a lot of code to go through. It is like reading someone else's mind without mirror neurons. Servant doesn't do much configuration
+out of the box, so [dirt road solutions](/2020/09/02/dimensional-planning.html) for a directory check and reading the PORT environment variable read were quickly
+added,  after searching for the appropriate API calls.
 
 ## Conclusion: Dokku is a keeper
 
 Dokku makes it easy to deploy with a single `git push` with a provider of your choosing. VPSes are cheap and plentiful. Dokku abstracts docker containers away without introducing unnecessary risks. If you need more than a build on git push can provide, you can always add an external continuous delivery pipeline that builds a Docker container, and push that to a Dokku host later.
 
 ![Man looks up at large stacks of shipping containers, he is almost surrounded by them.](/attachments/blogposts/2020/caleb-russell-intimidating-containers.jpg)
-Docker containers can be intimidating. <span>Photo by <a href="https://unsplash.com/@calebrussell?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Caleb Russell</a> on <a href="https://unsplash.com/s/photos/shipping-containers?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+<span>Photo by <a href="https://unsplash.com/@calebrussell?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Caleb Russell</a> on <a href="https://unsplash.com/s/photos/shipping-containers?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+
+Docker containers can be intimidating, but Dokku lightens the load.
 
 # Further reading:
 
 - [Terrorform was a red dwarf episode](https://en.wikipedia.org/wiki/Terrorform)
+- [Dokku documentation](http://dokku.viewdocs.io/dokku/)
+- [Deploy a blank page to production](/2020/09/03/deploy-a-blank-page.html)
+- [Dimensional planning - good enough software, early and often](/2020/09/02/dimensional-planning.htm)
 
--- ad blurb:
-Want to improve your deliveries, make them flow more continuosly? We deliver software large and small, and help other people do it. (talk to us | service link)
+<aside>
+  <h3>Improve your deliveries</h3>
+  <p>Do you want your delivery to flow more continuously, and meet user needs early and often? We deliver software large and small, and help other people do it.</p>
+  <p><div>
+    <a href="/consulting">Learn more about our mentoring & consultancy services</a>
+  </div></p>
+</aside>
