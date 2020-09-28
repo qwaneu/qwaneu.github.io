@@ -1,47 +1,83 @@
-Lean Agile Exchange - still a community of needs conference
+---
+layout: post
+title: Lean Agile Exchange - still a community of needs conference
+tags:
+  - conferences
+  - lean
+  - agile
+author: Willem van den Ende
+image: /attachments/blogposts/2020/leanagilecloud.png
+---
 
-I was wondering if Lean Agile Exchange @@link @@date would be as much a Community of Needs
-conference as e.g. Lean Agile Scotland or Agile Cambridge was.
 
+I was wondering if [Lean Agile Exchange](https://www.leanagileexchange.net/programme/extreme-parenting) on 10 and 11 September would be as much a Community of Needs
+conference as e.g. Lean Agile Scotland or Agile Cambridge were. I was not disappointed.
+
+## What defines a community of needs conference?
 Steve Freeman recently recommended Chris Matts' presentation at and on Lean
 Agile Scotland from four years ago about community of needs versus community of
 solutions conferences.
+[Communities of Need versus Communities of Practice](https://theitriskmanager.com/2015/04/19/communities-of-need-community-of-solutions/)
 
- https://vimeo.com/190010827 . This is well worth a watch.
+> The “Communities of Need” are centred on the creation of memes. Members of this community operate in the area of “Need” to create a meme and then work with the meme to identify fitness landscapes where it fails, and evolve them accordingly. These communities have problems that need to be solved. They take solutions developed for one context and attempt to implement them in their own context (exaption), and modify (evolve) them as appropriate.
 
-as Chris says: "Community of solutions conference often don't address the needs at all. Community of
+As Chris says:
+> "Community of solutions conferences often don't address the needs at all. Community of
 solutions keynotes are highly polished, delivered by someone who has deliverd
 the same presentation ten times a year for twenty years."
 
+The former describes Lean Agile Exchange to a large extent.
+
 My quick summary animation looks like this:
 
-@@ insert animation
+<video width="320" height="240" controls>
+  <source src="/attachments/blogposts/2020/dominant-memes.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+_I made a short animation to illustrate how a conference in the cloud makes rainclouds go away._
 
 Community of needs sessions can be recognized by questions, or uncomfortable
 truths that don't necessarily sell anything. The keynotes at Lean Agile Exchange
 were a good example of that. And hand-drawn slides, made in the spur of the moment.
 
 The conference slack channel also was lively, with people asking questions like
-"why do the programmers around here believe functional programs don't need
+"why do the programmers in my workplace believe functional programs don't need
 tests", and "Has anyone tried to authoritatively write down the names for things
 used in the organisation?"
 
-@@ insert links to sessions
+## Some sessions I enjoyed
+
+### Cynicism Doesn't build products
 From the regular sessions the one by Gwen Diagram's on Cynicism stood out, Gwen's
-talk was so full of energy, I managed to stay awake for it after a long day
+talk [Cynicism Deosn't Build Products](https://www.leanagileexchange.net/programme/cynicism-doesnt-build-products) was so full of energy, I managed to stay awake for it after a long day
 of on-line conference. An enormous amount of slides with photos and lively story
 telling. It warned us to resist the undue optimism that can result form pressure, or face
 the consequences of working on an impossible product.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6FfKjAXFNzk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-I enjoyed Suzanne and Wouter Lagerweijs' session on eXtreme parenting. It was very much about
+### eXtreme Parenting
+I enjoyed Suzanne and Wouter Lagerweijs' session##  on [eXtreme p..arenting?](https://www.leanagileexchange.net/programme/extreme-parenting). It was very much about
 responding to change and the breakout sessions in small groups were a good
 chance to meet other participants, and talk about parenting challenges. This showed once
-again that workshops over Zoom can work, and even can have an intimate feel to them.
+again that workshops over Zoom can work, and even can have an intimate feel to them. This is an example of _exaption_
 
-Nat and ?Julie?'s talk about Tiger Teams show what to do when your bluff gets
+### Tiger Team
+[Taking the Tiger by the
+tail](https://www.leanagileexchange.net/programme/taking-tiger-tail) by Nat
+Price and Julie Camosseto's talk was about what to do when your bluff gets
 called, and you get all the things you asked for to solve the biggest problem in
-a company.
+a company. As that problem actually does turn out to be the biggest problem, and
+not just hyperbole. Nat and Julie got to form a Tiger Team, and assemble all the
+people they needed from around the world. This is an example of _evolving_
+practice.
 
+## I'm glad we sponsored
 I'm glad we sponsored this conference. I still need to watch the Alpaca's from
-the break. If you feel you missed out, you can still get a ticket @@link, watch the
-recordings and discuss on slack.
+the break. I did pace myself, skipping the occasional session like I would if it was an IRL conference made a difference.
+
+
+## More Media
+
+* [Communities of Need versus Communities of Practice blog post](https://theitriskmanager.com/2015/04/19/communities-of-need-community-of-solutions/)
+* [Chris Matt's Lean Agile Scotland video on Communities of Need or Practice](https://vimeo.com/190010827)
+*
