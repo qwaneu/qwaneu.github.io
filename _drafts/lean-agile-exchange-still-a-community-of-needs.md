@@ -34,7 +34,7 @@ My quick summary animation looks like this:
   <source src="/attachments/blogposts/2020/dominant-memes.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
-_Dominant memes, principles dominate before the chasm, practices after. Read [Chris' post for the details](https://theitriskmanager.com/2015/04/19/communities-of-need-community-of-solutions/.)_
+_Dominant memes: principles dominate before the chasm, practices after. Read [Chris' post for the details](https://theitriskmanager.com/2015/04/19/communities-of-need-community-of-solutions/.)_
 
 Community of needs sessions can be recognized by questions, or uncomfortable
 truths that don't necessarily sell anything. The keynotes at Lean Agile Exchange
@@ -80,4 +80,11 @@ the break. I did pace myself, skipping the occasional session like I would if it
 
 * [Communities of Need versus Communities of Practice blog post](https://theitriskmanager.com/2015/04/19/communities-of-need-community-of-solutions/)
 * [Chris Matt's Lean Agile Scotland video on Communities of Need or Practice](https://vimeo.com/190010827)
-*
+
+<aside>
+  <h3>Need a trusted advisor?</h3>
+  <p>We are fiercely vendor neutral, have experienced a wide array of technologies, principles and practices and don't mind getting stuck in when needed.</p>
+  <p><div>
+    <a href="/contact">Have a chat with us, the first conversation is always free.</a>
+  </div></p>
+</aside>

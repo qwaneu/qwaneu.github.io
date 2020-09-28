@@ -110,7 +110,7 @@ Credits: Marc Evers for editing, and also thinking of Willem Elsschot.
 
 <aside>
   <h3>Need a trusted advisor?</h3>
-  <p>We are fiercely vendor neutral, have experienced a wide array of technology, and don't mind getting stuck in when needed.</p>
+  <p>We are fiercely vendor neutral, have experienced a wide array of technologies, and don't mind getting stuck in when needed.</p>
   <p><div>
     <a href="/contact">Have a chat with us, the first conversation is always free.</a>
   </div></p>
