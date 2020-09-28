@@ -79,11 +79,17 @@ just one line) and optionally a `.buildpacks` file if the application is non-sta
 . This is not needed for e.g. a rails application. Push the repository to Dokku and wait for
 it to build.
 
+<video width="320" height="240" controls>
+  <source src="/attachments/blogposts/2020/dokku-deploy-rails.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+Once git push has completed, you'll have a working application, connected to a webserver, and if needed other services such as a database.
+
 The Procfile for my haskell web application that consumes no further services looks like:
 ```
 web: <repositoryname>
 ```
-
 
 
 This is my .buildpacks file:
