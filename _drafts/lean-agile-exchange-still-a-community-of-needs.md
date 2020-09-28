@@ -30,7 +30,7 @@ The former describes Lean Agile Exchange to a large extent.
 
 My quick summary animation looks like this:
 
-<video width="320" height="240" controls alt="The linked post describes this better than I could in an alt tag">
+<video width="100%" controls alt="The linked post describes this better than I could in an alt tag">
   <source src="/attachments/blogposts/2020/dominant-memes.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
