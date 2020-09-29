@@ -29,6 +29,9 @@ Visual Architecting Process by Ruth Malan & Dana Bredemeyer distinguishes Meta A
 
 @@ plaatje
 
+Simon Brown's C4 model
+
+@@zie https://pauldambra.dev/amp/2018/02/serverless-part-one/ voor voorbeeldje
 
 ## But now we have cloud!
 
