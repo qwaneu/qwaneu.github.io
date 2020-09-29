@@ -189,8 +189,20 @@ em {
             margin: 0 0;
           }
         }
+        td:first-of-type { // hide line numbers by default
+          display: none;
+        }
       }
-    }    
+    }  
+    .code-line-numbers {
+      table.rouge-table {
+        tbody {
+          td:first-of-type {
+            display: block;
+          }
+        }
+      }
+    }      
   }
 
   .post-meta {
@@ -210,6 +222,12 @@ em {
   span {
     margin-left: 0.5em;
     margin-right: 0.5em;
+  }
+}
+
+.no-line-numbers {
+  td:first-of-type {
+    display: none;
   }
 }
 

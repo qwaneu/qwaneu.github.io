@@ -69,6 +69,7 @@ The code looks roughly like the code block below, leaving out some details for c
   </div>
 </div>
 ```
+{: class="code-line-numbers" :}
 ```javascript
 export default {
   name: 'NewDiagnosticSession',
@@ -94,6 +95,7 @@ export default {
   components: ...
 }
 ```
+{: class="code-line-numbers" :}
 
 The TextInput is a small component we created to wrap an input with a label in a div.
 
@@ -172,6 +174,7 @@ describe('New Diagnostic Session.vue', () => {
   ...
 })
 ```
+{: class="code-line-numbers" :}
 
 We have started writing a small DSL (domain specific language) around the Vue test utils, to reduce testing boilerplate: `aVueWrapperFor(NewDiagnosticSession).withProps ...`
 
@@ -216,6 +219,7 @@ export class FacilitatorModule extends BaseModule {
   ...
 }
 ```
+{: class="code-line-numbers" :}
 
 The `FacilitatorModule` manages the `currentSession` state on behalf of another component. Why did we put it in this module instead of a separate module? We will dive into this in a future blog post.
 
@@ -282,6 +286,7 @@ export class NewSession {
   }
 }
 ```
+{: class="code-line-numbers" :}
 
 `NewSession` is a stateful object: it holds a new session. After you `validate` it, it will also contain information about its validity in the `errors` property.
 
@@ -318,11 +323,12 @@ describe('A new session', () => {
   ...
 })
 ```
+{: class="code-line-numbers" :}
 
 We often use the [Builder pattern](https://en.wikipedia.org/wiki/Builder_pattern) for creating objects in test code. _Builder_ separates the construction of a complex object from its representation. These builders then have the form of 
 
-```.java
-  build(aValidNewSession().withParticipantCount(31));
+```javascript
+build(aValidNewSession().withParticipantCount(31));
 ```
 
 Why did we introduce this instead of just calling the object's constructor? Often we just need an valid instance of something and we do not care about the specifics, sometimes we want to control only one specific field. Repeating constructor calls is tedious and creates unnecessary coupling in tests. 
@@ -391,6 +397,7 @@ export function toDiagnosticSessionSummary (data) {
   })
 }
 ```
+{: class="code-line-numbers" :}
 
 This session repository offers the `create` and the `all` functions to the domain.
 
@@ -460,6 +467,7 @@ describe('The API based session repository', () => {
   ...
 })
 ```
+{: class="code-line-numbers" :}
 
 Adapter integration tests are valuable, because they force us to understand the service we are adapting, and help us pinpoint problems if there ever are any.
 
