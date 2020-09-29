@@ -36,11 +36,11 @@ Deploying blank pages serves a dual purpose. It is useful to quickly share early
 
 What is the user need here? I started developing a flash card application to help me remember programming constructs and library functions. This worked well enough on my laptop, but I wanted to use it on my phone as well to quickly review questions on the go.
 
-I didn't want to lose rapid local development, and I didn't want to write elaborate Terrorform scripts either. I also didn't want a fully manual deployment that I would forget the working of in due time. Options discarded:
+I didn't want to lose rapid local development, and I didn't want to write elaborate [Terrorform](https://en.wikipedia.org/wiki/Terrorform) scripts either. I also didn't want a fully manual deployment that I would forget the working of in due time. Options discarded:
 
-* BAAS (Back-end As A Service). I've used one extensively. They seem to come without SQL, and fast iteration after initial development is still something that requires a fair amount of work.
-* Elaborate cloud deployment with e.g. Terraform. More complicated than needed
-* Manual deployment on a VPS. It would work at this scale, but I would forget what I did, and is not that repeatable.
+* BAAS (Back-end As A Service), like [Firebase](https://firebase.google.com/). I've used one extensively. They seem to come without SQL, and fast iteration after initial development is still something that requires a fair amount of work.
+* Elaborate cloud deployment with e.g. Terraform, AWS CloudFormation or Azure ARM templates. More complicated than needed, as Terraform code tends to become large and detailed even for simple applications.
+* Manual deployment on a VPS (virtual private server). It would work at this scale, but I would forget what I did, and is not that repeatable.
 
 It turns out that Dokku is not only more repeatable, but also faster than manual
 deployment. It boils down to useful primitives, good documentation, and choices that are pre-made.
@@ -49,7 +49,7 @@ For development I settled on a glorious little monolith. Inspired by
 Marc and Rob, I chose [SQLite](https://www.sqlite.org/whentouse.html) instead of
 `fopen()`. As a development language I chose Haskell - because I missed it and because there are some interesting takes on back-end development that originate from it. Based on the feedback I got from deploying with Dokku, I switched frameworks. More about that later.
 
-For a first deployment I would like to protect details with https ([Let's Encrypt](https://letsencrypt.org/))
+For a first deployment I would like to protect details with HTTPS ([Let's Encrypt](https://letsencrypt.org/))
 and quickly hide it behind a username/password with HTTP Basic Authentication,
 while I am figuring out how I want authentication and authorization to work properly.
 
@@ -59,8 +59,8 @@ Dokku's lack of complexity.
 
 ## Why does it matter
 
-It is easy to get lured into complex setups recommended by cloud providers. When I'm thinking of overcomplicating things, I remind my self of the [Wordpress: Best practices on AWS](https://aws.amazon.com/blogs/architecture/wordpress-best-practices-on-aws/). I find looking at the deployment view sobering:
-![Deployment diagram, including two regions with their NAT gateways, wordpress instances, Memcached, Aurora read replicas, EFS mount targets, and an application load balancer to tie it together](https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2018/03/23/wordpress-on-aws.png)
+It is easy to get lured into complex setups recommended by cloud providers. When I'm thinking of overcomplicating things, I remind my self of the [WordPress: Best practices on AWS](https://aws.amazon.com/blogs/architecture/wordpress-best-practices-on-aws/). I find looking at the deployment view sobering:
+![Deployment diagram, including two regions with their NAT gateways, WordPress instances, Memcached, Aurora read replicas, EFS mount targets, and an application load balancer to tie it together](https://d2908q01vomqb2.cloudfront.net/fc074d501302eb2b93e2554793fcaf50b3bf7291/2018/03/23/wordpress-on-aws.png)
 
 If you need a set-up this complex for your blog (and most likely you don't!), you are probably better off hosting it at [wordpress.com](https://wordpress.com) or a provider that specializes in extremely high volume WordPress setups. Saves you money and time too.
 I even found a simple looking BAAS can have its own
@@ -74,7 +74,7 @@ It also comes with nice surprises like zero-downtime deployments with very littl
 ## How does it work
 Dokku lets you deploy with a `git push` to a (virtual) server
 of your choosing. I chose [Hetzner](https://www.hetzner.com/) for this experiment, they have been using 100% green
-energy long before the big cloud providers and their service has always been swift (when necessary, which isn't often). Their VPSs are priced well below other offerings.
+energy long before the big cloud providers and their service has always been swift (when necessary, which isn't often). Their VPSes are priced well below other offerings.
 
 The basic flow, as illustrated by the animation below is, to tell Dokku to
 create an app, tell Dokku what components it consists of in a `Procfile` (mine is
@@ -138,7 +138,7 @@ For my test app, I needed to change two things:
 - read the PORT environment variable, so NGINX can forward the application.
 - check if there is a `/storage` directory and use that to open the database from.
 
-The [Dokku storage plugin](http://dokku.viewdocs.io/dokku/advanced-usage/persistent-storage/) link allows you to specify a directory on the host
+The [Dokku storage plug-in](http://dokku.viewdocs.io/dokku/advanced-usage/persistent-storage/) link allows you to specify a directory on the host
 that will be mounted in the docker container. An SQLite database is just a file.
 
 Configuring thee ports and storage were also good feedback about the two sets of
