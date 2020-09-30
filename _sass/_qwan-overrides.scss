@@ -26,11 +26,12 @@ em {
 /* blog summary experiment */
 .blogsummary-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 31em);
+  grid-template-columns: repeat(auto-fit, minmax(30em, max-content));
   row-gap: 2em;
   column-gap: 2em;
   padding-left: 2em;
   padding-right: 2em;
+  justify-content: center;
 }
 
 .post-summary-wrap {
