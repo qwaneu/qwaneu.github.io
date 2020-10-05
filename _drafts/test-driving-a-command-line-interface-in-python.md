@@ -335,12 +335,31 @@ The current test-setup allows me to create a setup with in memory repositories f
 Say my main would look like this:
 
 ~~~python
+if __name__ == '__main__':
+    app = build_cli(customer_repository=InMemoryCustomerRepository.with_standard_customers())
+    app()
 ~~~
 
-then my end to end test will look like this:
+then, assuming end to endness up to an in memory repostory, my end to end test  will look like this:
 
 ~~~python
+class TestCustomerList:
+    @pytest.fixture(autouse=True)
+    def setup(self):
+        self.runner = CliRunner()
+        self.customer_repository = InMemoryCustomerRepository()
+        self.app = build_cli(customer_repository=self.customer_repository)
+    
+    def run_cli(self, *arguments):
+        return self.runner.invoke(self.app, arguments)
+
+    def test_list_customers_shows_a_list_of_customers(self):
+        self.customer_repository.save(aValidCustomer(short_hand="QWAN", name="Quality Without A Name")),
+        resulting_output = self.run_cli('customers', 'list').output
+        assert_that(resulting_output, equal_to('QWAN\tQuality Without A Name\n'))
 ~~~
+
+The distinction between the cli adapter integration test and end to end test is small in this example, because the query example is extremely simple. But you'll get the idea, that: 1) it is quite doable to test the cli adapter in isolation, and 2) you can play around with test scope once you have a well defined place to wire the application.
 
 ## Conclusion
 
