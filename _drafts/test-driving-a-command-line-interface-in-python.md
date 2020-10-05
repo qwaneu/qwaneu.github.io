@@ -244,7 +244,113 @@ class CustomerCli:
             print('{}\t{}'.format(customer.short_hand, customer.name))
 ~~~
 
+This works, but only for one customer. I need to ad a test for multiple customers. As a small refactoring I rename the current test to `test_list_customers_formats_a_customers_short_hand_and_name`. The new test looks like:
+
+~~~python
+class TestCustomerCli:
+    # ...
+    def test_list_customers_shows_a_list_of_customers(self):
+        runner = CliRunner()
+        customer_query = Mock()
+        CustomerCli(customer_query).register(invoicer_app)
+        customer_query.return_value = [
+            aValidCustomer(short_hand="QWAN", name="Quality Without A Name"),
+            aValidCustomer(short_hand="FRSH", name="Fresh Bakery")
+            ]
+        resulting_output = runner.invoke(invoicer_app, ['customers', 'list']).output
+        assert_that(resulting_output, equal_to('''QWAN\tQuality Without A Name\nFRSH\tFresh Bakery\n'''))
+~~~
+
+I generalise the implementation to using lists:
 
 
 ~~~python
+class CustomerCli:
+    # ...
+    def register(self, invoicer_app):
+        # ...
+        @customers.command()
+        def list():
+            for customer in self._customer_query():
+                print('{}\t{}'.format(customer.short_hand, customer.name))
 ~~~
+
+There's some duplication in the tests, so I clean them up a bit:
+
+~~~python
+class TestCustomerCli:
+    @pytest.fixture(autouse=True)
+    def setup(self):
+        self.runner = CliRunner()
+        self.customer_query = Mock()
+        CustomerCli(self.customer_query).register(invoicer_app)
+    
+    def test_list_customers_formats_a_customers_short_hand_and_name(self):
+        self.customer_query.return_value = [aValidCustomer(short_hand="QWAN", name="Quality Without A Name")]
+        resulting_output = self.runner.invoke(invoicer_app, ['customers', 'list']).output
+        assert_that(resulting_output, equal_to('QWAN\tQuality Without A Name\n'))
+
+    def test_list_customers_shows_a_list_of_customers(self):
+        self.customer_query.return_value = [
+            aValidCustomer(short_hand="QWAN", name="Quality Without A Name"),
+            aValidCustomer(short_hand="FRSH", name="Fresh Bakery")
+            ]
+        resulting_output = self.runner.invoke(invoicer_app, ['customers', 'list']).output
+        assert_that(resulting_output, equal_to('''QWAN\tQuality Without A Name\nFRSH\tFresh Bakery\n'''))
+~~~
+
+Still not being happy with the invoke noise, that repeats itself in both tests, I extract it in a method (that may eventually be pulled up in a super class, but lets not get ahead of myself).
+
+~~~python
+class TestCustomerCli:
+    @pytest.fixture(autouse=True)
+    def setup(self):
+        self.runner = CliRunner()
+        self.customer_query = Mock()
+        CustomerCli(self.customer_query).register(invoicer_app)
+    
+    def run_cli(self, *arguments):
+        return self.runner.invoke(invoicer_app, arguments)
+
+    def test_list_customers_formats_a_customers_short_hand_and_name(self):
+        self.customer_query.return_value = [aValidCustomer(short_hand="QWAN", name="Quality Without A Name")]
+        resulting_output = self.run_cli('customers', 'list').output
+        assert_that(resulting_output, equal_to('QWAN\tQuality Without A Name\n'))
+
+    def test_list_customers_shows_a_list_of_customers(self):
+        self.customer_query.return_value = [
+            aValidCustomer(short_hand="QWAN", name="Quality Without A Name"),
+            aValidCustomer(short_hand="FRSH", name="Fresh Bakery")
+            ]
+        resulting_output = self.run_cli('customers', 'list').output
+        assert_that(resulting_output, equal_to('''QWAN\tQuality Without A Name\nFRSH\tFresh Bakery\n'''))
+~~~
+
+## Testing End to end through the command line 
+
+In hour [test architecture blog entry](https://www.qwan.eu/2020/09/17/test-architecture.html) we elaborated on choosing end to end-ness of tests. With my current cli test setup, I made it possible to choose end to end-ness and still manage the context of my end to end test with ease. 
+
+The current test-setup allows me to create a setup with in memory repositories for customers, invoices and whatever I need. 
+
+Say my main would look like this:
+
+~~~python
+~~~
+
+then my end to end test will look like this:
+
+~~~python
+~~~
+
+## Conclusion
+
+Test driving a cli is definitely doable. It needs a bit of a testing mindset, creativity and looking for libs that help you just enough. 
+I created a basis for test driving my command line interface, allowing me to develop in a sustainable way. 
+
+<aside>
+  <h3>Want to apply unit testing or test driven development in places that seem not suitable?</h3>
+  <p>We offer workshops on Test Driven Development on legacy code and we can mentor your team in applying it successfully in your own environment.</p>
+  <p><div>
+    <a href="/training">Learn more about our workshops</a>
+  </div></p>
+</aside>
