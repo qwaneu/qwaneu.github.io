@@ -216,6 +216,7 @@ I move the `customers` and `list` methods to inner functions of a `register` met
 class CustomerCli:
     def __init__(self, customer_query):
         pass
+        
     def register(self, invoicer_app):
         @invoicer_app.group()
         def customers():
