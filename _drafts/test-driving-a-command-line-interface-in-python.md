@@ -31,7 +31,7 @@ In the past 18 months, I have been working for a big organisation where lots of 
 
 My invoicing app will start as a script, but one with real stuff to do. It needs to deal with tax rules (VAT and potentially others). It will maintain rules around generating invoice numbers, payment periods, and totals. It will make it possible to manage customers and generate invoices with as few user input as possible. It will produce PDF output and needs to deal with multiple organisation units: my business, my wife's business, and some personal things.
 
-@@take hex approach + plaatje + link
+![invoicer-hexagonal-view](/attachments/blogposts/2020/Invoicer-cli-post-hexagonal-view.png)
 
 Testing business rules focuses on the domain, testing the adapter integration with storage of invoices and customers (whatever that storage is, we haven't decided yet) is a separate issue. 
 
@@ -78,9 +78,13 @@ runner.invoke(my_app, ['s3', 'ls'])
 
 As a first step, I want to list the customers, so that I can select one to send an invoice to. In the Ports and Adapters perspective, it would look like:
 
-![hexagon list customers](blah.png)
+![hexagon list customers](/attachments/blogposts/2020/Invoicer-cli-post-list-customers.png)
 
-My first test is:
+The customer cli delegates the list action to the ListCustomers query, which in turn gets the customers from the  repository. Note that the InMemoryCustomerRepository is drawn in the domain here. We are not very consistent in where we draw such an in memory Repository. Sometimes we draw it as an adapter (when it is replacing some SQLBased version as a fake adapter). On the other hand it doesn't adapt anything. It is a thing on its own with no relation to the outside world. It's all a matter of perspective and intent. 
+
+> Overdesign? You may argue that, in this case, the query object is a bit over kill. Why not let the command line interface get the customers from the repository directly? There is a point in that argument. In this case we merely want to make clear how is would look like if the query object is a bit more complicated than this.
+
+My first test for the CustomerCli looks like:
 
 ~~~python
 class TestCustomerCli:
@@ -216,7 +220,7 @@ I move the `customers` and `list` methods to inner functions of a `register` met
 class CustomerCli:
     def __init__(self, customer_query):
         pass
-        
+
     def register(self, invoicer_app):
         @invoicer_app.group()
         def customers():
