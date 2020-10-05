@@ -20,13 +20,13 @@ Since I need something quickly (generate similar repeated invoices for a client)
 
 ## Testing issues with scripts
 
-I have used several command argument parsers for multiple personal projects and never bothered to test them. First of all because it where personal projects, no other user would be bothered by glitches in the command line. Because of the following hurdle. Calling a script and capturing the output to see what it is doing is one thing. But what if the script is generating (binary) files, make changes to some sort of database, integrate with APIs and has some business logic as well? Then integrated tests becomes a pain and simply calling the script from the command line and observing the effects in several places doesn't cut it.
+I have used several command argument parsers for multiple personal projects and never bothered to test them. First of all because it where personal projects, no other user would be bothered by glitches in the command line. Secondly, because of the following hurdle. Calling a script and capturing the output to see what it is doing is one thing. But what if the script is generating (binary) files, make changes to some sort of database, integrate with APIs and has some business logic as well? Then integrated tests becomes a pain and simply calling the script from the command line and observing the effects in several places doesn't cut it.
 
 In the past 18month or so, I have been working for a big organisation where lots of teams and individuals use (a.o.) python scripts to execute smaller and bigger automation tasks. They typically have no clue how start testing those scripts. Most of those scripts integrate stuff much like I mentioned before.
 
 ## Hexagonal approach
 
-My invoicing app will be a script, at first, but one with real stuff to do; It will have to deal with TAX rules (VAT and potentially others). It will maintain rules around generating invoice numbers, payment periods, totals. It will make it possible to manage customers, generate their invoices with as few user input as possible, it will produce pdf output and I needs to deal with multiple organisation units (my professional, my wifes professional, and personal). 
+My invoicing app will be a script at first, but one with real stuff to do; It will have to deal with TAX rules (VAT and potentially others). It will maintain rules around generating invoice numbers, payment periods, totals. It will make it possible to manage customers, generate their invoices with as few user input as possible, it will produce pdf output and I needs to deal with multiple organisation units (my professional, my wifes professional, and personal). 
 
 Testing the business rules focusses on the domain, testing the adapter integration with some storage of invoices and customers etc. (whatever that storege is, haven't decided yet) is a separate issue. 
 
@@ -34,7 +34,7 @@ Testing the command line interface should be just like testing a rest interface.
 
 ## Introducing 'click'
 
-[Click](https://click.palletsprojects.com/) {target:"blank"} is, once you understand it's model, and easy to use python based argument parser. It support nested groups of commands and arguments and options for each of the levels. For example:
+[Click](https://click.palletsprojects.com/){:target="_blank"} is, once you understand it's model, and easy to use python based argument parser. It support nested groups of commands and arguments and options for each of the levels. For example:
 
 ~~~python
 @click.group(name='aws') # root level group
@@ -64,14 +64,13 @@ aws --verbose s3 --account-name my-account ls my-bucket
 
 is very easy to do.
 
-It even has a `CliRunner()` to enable you to invoke a command like this:
+It even has a `CliRunner()` for testing, to enable you to invoke a command like this:
 
 ~~~python
 runner = CliRunner()
 runner.invoke(my_app, ['s3', 'ls'])
 ~~~
 
-Specially for unit testing.
 
 ## Getting to work
 
@@ -123,6 +122,95 @@ Then "QWAN  Quality Without A Name" is the result.
 
 To do that we need to be able to influence the result whatever the `list` function is interacting with. 
 
-The issue with most easy to use libraries like `click` or `flask` is that the typical examples use top level functions. Injecting some dependencies in a test becomes a pain.
+The issue with most easy to use libraries like `click` (or `flask` for http interfaces) is that the typical examples use top level functions. Even though they have testing support, they seem to focus on integrated testing. They don't describe how to injecting dependencies using their framework.
 
+## Injecting dependencies
 
+Before moving on, I remove the `list()` implementation to prevent false postitives:
+
+~~~python
+@customers.command()
+def list():
+    pass
+~~~
+
+We like to maintain control over our dependencies. Dependency injection should not be some magic process. So in my using the `Given, When,  Then Example above, my test should look like: 
+
+~~~python
+class TestCustomerCli:
+    def test_list_customers_shows_a_list_of_customer_names_and_codes_in_texts(self):
+        runner = CliRunner()
+        # Given the allCustomersQuery produces a customer with 
+        #   short_hand="QWAN" and name="Quality Without A Name")
+        resulting_output = runner.invoke(invoicer_app, ['customers', 'list']).output
+        assert_that(resulting_output, equal_to('QWAN\tQuality Without A Name\n'))
+~~~
+
+To make the test complete, I need something like:
+
+~~~python
+class TestCustomerCli:
+    def test_list_customers_shows_a_list_of_customer_names_and_codes_in_texts(self):
+        runner = CliRunner()
+        customer_query = Mock()
+        CustomerCli(customer_query)
+        customer_query.return_value = [aValidCustomer(short_hand="QWAN", name="Quality Without A Name")]
+        resulting_output = runner.invoke(invoicer_app, ['customers', 'list']).output
+        assert_that(resulting_output, equal_to('QWAN\tQuality Without A Name\n'))
+~~~
+
+This results in:
+~~~
+>       CustomerCli(customerQuery)
+E       NameError: name 'CustomerCli' is not defined
+~~~
+
+So step by step I define the customer cli:
+class CustomerCli:
+    def __init__(self, customer_query):
+        pass
+(self, customer_query):
+        pass
+~~~
+
+resulting in:
+~~~
+E       AssertionError: 
+E       Expected: 'QWAN\tQuality Without A Name\n'
+E            but: was ''
+~~~
+
+Unsure of wether `click` would actually work with instance methods, I move the customers function and the list function as methods in the CustomerCli:
+
+~~~python
+class CustomerCli:
+    def __init__(self, customer_query):
+        pass
+
+    @invoicer_app.group()
+    def customers(self):
+        pass
+
+    @customers.command()
+    def list(self):
+        pass
+~~~
+
+the failure remains the same, but is it actually getting to list? Lets try the fake again.
+
+~~~python
+class CustomerCli:
+    # ...
+    @customers.command()
+    def list(self):
+        print('QWAN\tQuality Without A Name')
+~~~
+
+Nope it does not. Still the same failure. Apparently, `click` only works with plain functions. I recall a trick that I used for flask routes as well
+
+~~~python
+~~~
+~~~python
+~~~
+~~~python
+~~~
