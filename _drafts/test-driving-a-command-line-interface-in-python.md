@@ -206,11 +206,45 @@ class CustomerCli:
         print('QWAN\tQuality Without A Name')
 ~~~
 
-Nope it does not. Still the same failure. Apparently, `click` only works with plain functions. I recall a trick that I used for flask routes as well
+Nope it does not. Still the same failure. Apparently, `click` only works with plain functions. I recall a trick that I used for flask routes. I created a `register` method in the route classes and used inner functions there. 
+
+So I move the `customers` and `list` methods to inner functions of a register method, that gets the invoicer_app function injected. In python, this is quite a small step. A bit of indenting, removing self parameters:
 
 ~~~python
+class CustomerCli:
+    def __init__(self, customer_query):
+        pass
+    def register(self, invoicer_app):
+        @invoicer_app.group()
+        def customers():
+            pass
+
+        @customers.command()
+        def list():
+            print('QWAN\tQuality Without A Name')
 ~~~
+
+And: BAM! Green. Works! Ship it! ;-) 
+
+Now lets remove the fakes:
+
 ~~~python
+class CustomerCli:
+    def __init__(self, customer_query):
+        self._customer_query = customer_query
+
+    def register(self, invoicer_app):
+        @invoicer_app.group()
+        def customers():
+            pass
+
+        @customers.command()
+        def list():
+            customer = self._customer_query()[0]
+            print('{}\t{}'.format(customer.short_hand, customer.name))
 ~~~
+
+
+
 ~~~python
 ~~~
