@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Test drive a command line interface in python
+title: Test driving a command line interface in Python
 tags:
   - continuous delivery
   - architecture
@@ -19,17 +19,19 @@ My application needs to generate PDF invoices for clients really easily. It shou
 
 ## The choice for a CLI
 
-Since I need something quickly - generate repeated invoices for a client - and grow later - maybe integrate with the bookkeeping application, mailing the invoices, making it easy for my wife to use it and so on - I decided to make a command line interface (let's call it a script) first and maybe create a web front-end later. 
+Since I need something quickly - generating repeated invoices for a client - and grow later - maybe integrate with the bookkeeping application, mailing the invoices, making it easy for my wife to use it and so on - I decided to make a command line interface (let's call it a script) first and maybe create a web front-end later. 
 
 ## Testing issues with scripts
 
-I have used several command argument parsers for multiple personal projects and never bothered to test them. First of all being where personal projects, no other user would be bothered by glitches in the command line. A second reason is that scripts can be a pain to test: calling a script and capturing the output to see what it is doing is one thing. But what if the script generates (binary) files, makes changes to a database, integrates with APIs and has some business logic as well? Then integrated tests becomes a pain and simply calling the script from the command line and observing the effects in several places doesn't cut it.
+I have used several command argument parsers for multiple personal projects and never bothered to test them. First of all, they were personal projects and no other user would be bothered by glitches in the command line. A second reason is that scripts can be a pain to test: calling a script and capturing the output to see what it is doing is one thing. But what if the script generates (binary) files, makes changes to a database, integrates with APIs and has some business logic as well? Then integrated tests become a pain. Simply calling the script from the command line and observing the effects in several places doesn't cut it.
 
-In the past 18 months, I have been working for a big organisation where lots of teams and individuals use Python scripts to automate smaller and bigger tasks. Most of those scripts integrate stuff much like I mentioned above. Typically, the developers have no clue how start testing those scripts, even though the scripts often play a crucial role in IT and business processes. 
+In the past 18 months, I have been working for a big organisation where lots of teams and individuals use Python scripts to automate smaller and bigger tasks. Most of those scripts integrate stuff much like I mentioned above. Typically, the developers have no clue how start testing those scripts, even though the scripts play a crucial role in IT and business processes. 
 
 ## Hexagonal approach
 
-My invoicing app will start as a script, but one with real stuff to do. It needs to deal with tax rules (VAT and potentially others). It will maintain rules around generating invoice numbers, payment periods, and totals. It will make it possible to manage customers and generate invoices with as few user input as possible. It will produce PDF output and needs to deal with multiple organisation units: my business, my wife's business, and some personal things.
+My invoicing app will start as a script, but one with real stuff to do. It needs to deal with tax rules like VAT and potentially others. It will maintain rules around generating invoice numbers, payment periods, and totals. It will make it possible to manage customers and generate invoices with as few user input as possible. It will produce PDF output and needs to deal with multiple organisation units: my business, my wife's business, and some personal things.
+
+I decided to apply [Hexagonal Architecture](/2020/08/20/hexagonal-architecture.html) or _Ports and Adapters_ architecture to structure the script code. The picture below shows the architecture of the script: we have a CLI adapter dealing with the command line stuff, a repository adapter for storing customers and invoices, and a PDF adapter for generating PDFs. The domain logic and business rules (including invoicing logic and tax rules) are in the centre.
 
 ![invoicer-hexagonal-view](/attachments/blogposts/2020/Invoicer-cli-post-hexagonal-view.png)
 
@@ -76,21 +78,22 @@ runner.invoke(my_app, ['s3', 'ls'])
 
 ## Getting to work
 
-As a first step, I want to list the customers, so that I can select one to send an invoice to. In the Ports and Adapters perspective, it would look like:
+As a first step, I want to list the customers, so that I can select one to send an invoice to. In the Ports and Adapters perspective, it looks like:
 
 ![hexagon list customers](/attachments/blogposts/2020/Invoicer-cli-post-list-customers.png)
 
-The customer cli delegates the list action to the ListCustomers query, which in turn gets the customers from the  repository. Note that the InMemoryCustomerRepository is drawn in the domain here. We are not very consistent in where we draw such an in memory Repository. Sometimes we draw it as an adapter (when it is replacing some SQLBased version as a fake adapter). On the other hand it doesn't adapt anything. It is a thing on its own with no relation to the outside world. It's all a matter of perspective and intent. 
+The `CustomerCli` delegates the list action to the `ListCustomers` query, which in turn gets the customers from the  repository. Note that we have drawn the `InMemoryCustomerRepository` in the domain here. We are not very consistent in where we put such an in-memory repository. Sometimes we regard it as an adapter, for instance when it is replacing a real database adapter as a fake. On the other hand it doesn't adapt anything. It is a thing on its own, with no relation to the outside world. This all a matter of perspective and intent. 
 
-> Overdesign? You may argue that, in this case, the query object is a bit over kill. Why not let the command line interface get the customers from the repository directly? There is a point in that argument. In this case we merely want to make clear how is would look like if the query object is a bit more complicated than this.
+> Overdesign? You may argue that, in this case, the query object is a bit overkill. Why not let the command line interface get the customers from the repository directly? In this case, we could do that; we merely want to make clear how it would look like if the query object would a bit more complicated.
 
-My first test for the CustomerCli looks like:
+My first test for the `CustomerCli` looks like:
 
 ~~~python
 class TestCustomerCli:
     def test_list_customers_shows_a_list_of_customer_names_and_codes_in_texts(self):
         runner = CliRunner()
-        assert_that(runner.invoke(invoicer_app, ['customers', 'list']).output, equal_to('QWAN\tQuality Without A Name\n'))
+        assert_that(runner.invoke(invoicer_app, ['customers', 'list']).output, 
+            equal_to('QWAN\tQuality Without A Name\n'))
 ~~~
 
 > I know pytest has a different opinion on structuring tests and I don't have to make a test case class. We still like to use test case classes to group tests and have multiple groups of tests in a file, because it helps the readability of the test suite.
@@ -101,7 +104,7 @@ After getting the failure:
 E       NameError: name 'invoicer_app' is not defined
 ```
 
-and adding code step by step, the implementation looks like this (similar to the click example above):
+and adding code step by step, the implementation looks similar to the click example above:
 
 ~~~python
 @click.group(name='invoicer')
@@ -119,17 +122,17 @@ def list():
 
 ## The problem with this approach 
 
-The test works and is good enough to get acquainted with `click`, but I am not happy with the situation. What I have specified is that whatever happens, listing customers produces "QWAN, Quality Without A Name". Somehow I need to be able to influence the result:
+The test works and is good enough to get acquainted with `click`, but I am not happy with the situation. What I have specified is that whatever happens, listing customers produces "QWAN Quality Without A Name". Somehow I need to be able to influence the result:
 
 ~~~
-Given @@my querying all customers produces a list with just "Quality Without A Name"
+Given querying all customers produces a list with just "Quality Without A Name"
 When listing all customers through the CLI
 Then "QWAN  Quality Without A Name" is the result.
 ~~~
 
 To do that, we need to be able to influence the result whatever the `list` function is interacting with. 
 
-The issue with most easy-to-use libraries like `click` (or `flask` for HTTP interfaces), is that the typical examples use top level functions. Even though they have testing support, they seem to focus on integrated testing. They don't describe how to injecting dependencies using their framework. @@uitwerken
+The issue with most easy-to-use libraries like `click` (or `flask` for HTTP interfaces), is that the typical examples you find online use top level functions. Even though they have testing support, they seem to focus on integrated testing only. They do not describe how you can inject the library as a dependency.
 
 ## Injecting dependencies
 
@@ -141,7 +144,7 @@ def list():
     pass
 ~~~
 
-We like to maintain control over our dependencies. Dependency injection should not be some magic process. So in my using the Given, When, Then Example above, my test should look like: 
+We like to be in control of our dependencies. Dependency injection should not be some magic process. So in my using the _Given-When-Then_ example above, my test should look like: 
 
 ~~~python
 class TestCustomerCli:
@@ -153,7 +156,7 @@ class TestCustomerCli:
         assert_that(resulting_output, equal_to('QWAN\tQuality Without A Name\n'))
 ~~~
 
-To make the test complete, I need something like:
+To make the test complete, I need something the code below. I introduce a `CustomerCli` class and inject a stub for the customer query. The stub returns a list with one customer, using the test builder pattern.
 
 ~~~python
 class TestCustomerCli:
@@ -161,18 +164,21 @@ class TestCustomerCli:
         runner = CliRunner()
         customer_query = Mock()
         CustomerCli(customer_query)
-        customer_query.return_value = [aValidCustomer(short_hand="QWAN", name="Quality Without A Name")]
+        customer_query.return_value = [
+            aValidCustomer(short_hand="QWAN", name="Quality Without A Name")]
         resulting_output = runner.invoke(invoicer_app, ['customers', 'list']).output
         assert_that(resulting_output, equal_to('QWAN\tQuality Without A Name\n'))
 ~~~
 
 This results in:
+
 ~~~
 >       CustomerCli(customerQuery)
 E       NameError: name 'CustomerCli' is not defined
 ~~~
 
-So step by step I define the customer cli:
+So step by step I define the customer CLI:
+
 ~~~python
 class CustomerCli:
     def __init__(self, customer_query):
@@ -180,13 +186,14 @@ class CustomerCli:
 ~~~
 
 resulting in:
+
 ~~~
 E       AssertionError: 
 E       Expected: 'QWAN\tQuality Without A Name\n'
 E            but: was ''
 ~~~
 
-I'm not sure if `click` would actually work with instance methods. To try this out, I move the `customers` and `list` functions as methods in the CustomerCli:
+I'm not sure if `click` would actually work with instance methods. To try this out, I change the `customers` and `list` functions into methods in `CustomerCli`:
 
 ~~~python
 class CustomerCli:
@@ -214,7 +221,7 @@ class CustomerCli:
 
 Nope it does not, still the same failure. Apparently, `click` only works with plain functions. I recall a trick that I used for Flask routes. I created a `register` method in the route classes and used inner functions. 
 
-I move the `customers` and `list` methods to inner functions of a `register` method that takes the invoicer_app function as an argument. In Python, this is quite a small step. A bit of indenting, removing `self` parameters:
+I move the `customers` and `list` methods to inner functions of a `register` method that takes the `invoicer_app` function as an argument. In Python, this is quite a small step. A bit of indenting, removing `self` parameters:
 
 ~~~python
 class CustomerCli:
@@ -251,7 +258,7 @@ class CustomerCli:
             print('{}\t{}'.format(customer.short_hand, customer.name))
 ~~~
 
-This works, but only for one customer. I need to ad a test for multiple customers. As a small refactoring, I rename the current test to `test_list_customers_formats_a_customers_short_hand_and_name`@@. The new test looks like:
+This works, but only for one customer. I need to add a test for multiple customers. As a small refactoring, I rename the current test to `test_list_customers_formats_a_customers_short_hand_and_name`. The new test looks like:
 
 ~~~python
 class TestCustomerCli:
@@ -268,7 +275,7 @@ class TestCustomerCli:
         assert_that(resulting_output, equal_to('''QWAN\tQuality Without A Name\nFRSH\tFresh Bakery\n'''))
 ~~~
 
-I generalise the `list` implementation to use the whole lists instead of just the first element:
+I generalise the `list` implementation to use the whole list instead of just the first element:
 
 ~~~python
 class CustomerCli:
@@ -334,11 +341,9 @@ class TestCustomerCli:
 
 ## Testing End-to-End through the command line 
 
-In our [test architecture post](https://www.qwan.eu/2020/09/17/test-architecture.html), we elaborated on choosing end-to-end-ness of tests. With my current CLI test setup, I made it possible to choose end-to-end-ness and still manage the context of my end to end test with ease. 
+In our [test architecture post](https://www.qwan.eu/2020/09/17/test-architecture.html), we elaborated on choosing end-to-end-ness of tests. With my current CLI test setup, I made it possible to choose end-to-end-ness and still manage the context of my end to end test with ease. The current test setup allows me to create a setup with in-memory repositories for customers, invoices, etc.
 
-The current test setup allows me to create a setup with in-memory repositories for customers, invoices, etc.
-
-Say my main would look like this:
+Say my `main` code would look like this:
 
 ~~~python
 if __name__ == '__main__':
@@ -346,7 +351,7 @@ if __name__ == '__main__':
     app()
 ~~~
 
-then, assuming end to endness up to an in memory repostory, my end to end test  will look like this:
+Then, if I choose end-to-end-ness for my test as covering the whole script with an in-memory repository, the resulting end to end test looks like this:
 
 ~~~python
 class TestCustomerList:
@@ -360,21 +365,24 @@ class TestCustomerList:
         return self.runner.invoke(self.app, arguments)
 
     def test_list_customers_shows_a_list_of_customers(self):
-        self.customer_repository.save(aValidCustomer(short_hand="QWAN", name="Quality Without A Name")),
+        self.customer_repository.save(aValidCustomer(
+            short_hand="QWAN", name="Quality Without A Name")),
         resulting_output = self.run_cli('customers', 'list').output
         assert_that(resulting_output, equal_to('QWAN\tQuality Without A Name\n'))
 ~~~
 
-The distinction between the cli adapter integration test and end to end test is small in this example, because the query example is extremely simple. But you'll get the idea, that: 1) it is quite doable to test the cli adapter in isolation, and 2) you can play around with test scope once you have a well defined place to wire the application.
+The distinction between the CLI adapter integration test and the end to end test is small in this example, because the query example itself is extremely simple. But you'll get the idea:
+1. **It is quite doable to test a CLI adapter in isolation**
+2. **You can play with test scope once you have a well defined place to wire the application**
 
 ## Conclusion
 
-Test driving a CLI is definitely doable. It needs a bit of a testing mindset, creativity and looking for libraries that help you just enough. 
-I created a basis for test driving my command line interface, allowing me to develop in a sustainable way. 
+Test driving a Command Line Interface is definitely doable. It needs a bit of a testing mindset, some creativity, and looking for libraries that help you just enough. 
+I created a basis for test driving my command line interface, which allowing me to develop my application in a sustainable way. 
 
 <aside>
-  <h3>Want to apply unit testing or test driven development in places that seem not suitable?</h3>
-  <p>We offer workshops on Test Driven Development on legacy code and we can mentor your team in applying it successfully in your own environment.</p>
+  <h3>Want to apply unit testing or test driven development where it seems hard or impossible?</h3>
+  <p>We offer workshops on Test Driven Development in legacy code and we can mentor your team in applying it successfully in your own environment.</p>
   <p><div>
     <a href="/training">Learn more about our workshops</a>
   </div></p>
