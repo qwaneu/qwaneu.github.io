@@ -9,7 +9,7 @@ author: Rob Westgeest
 image: /attachments/blogposts/2020/cli.png
 ---
 
-Testing the command line interface (CLI) should be just like testing a REST interface. A CLI is an adapter concern that we can test drive, separate from the business logic. In this post I'll show an approach to test drive the command line interface of an application in Python.
+Testing a command line interface (CLI) should be just like testing a REST interface. A CLI is an adapter concern that we can test drive, separate from the business logic. In this post I'll show an approach to test drive the command line interface of an application in Python.
 
 ## Context
 
@@ -17,15 +17,24 @@ I am writing a utility application to create and manage invoices for clients. Yo
 
 My application needs to generate PDF invoices for clients really easily. It should work for different organisational units as well, for example, my business, for my wife's, who sends out many small invoices, and for some personal business as well.
 
-## The choice for a CLI
+## Why CLI
 
-Since I need something quickly - generating repeated invoices for a client - and grow later - maybe integrate with the bookkeeping application, mailing the invoices, making it easy for my wife to use it and so on - I decided to make a command line interface (let's call it a script) first and maybe create a web front-end later. 
+For now I need something quickly, so that I can generate repeated invoices for a client.
+
+Later, I may want to:
+* grow the number of invoices 
+* integrate with the bookkeeping application, 
+* mail the invoices, 
+* make it easy for my wife to use it, 
+* and so on 
+
+So I thought I'd create a CLI first and keep the option for a web front-end open. 
 
 ## Testing issues with scripts
 
 I have used several command argument parsers for multiple personal projects and never bothered to test them. First of all, they were personal projects and no other user would be bothered by glitches in the command line. A second reason is that scripts can be a pain to test: calling a script and capturing the output to see what it is doing is one thing. But what if the script generates (binary) files, makes changes to a database, integrates with APIs and has some business logic as well? Then integrated tests become a pain. Simply calling the script from the command line and observing the effects in several places doesn't cut it.
 
-In the past 18 months, I have been working for a big organisation where lots of teams and individuals use Python scripts to automate smaller and bigger tasks. Most of those scripts integrate stuff much like I mentioned above. Typically, the developers have no clue how start testing those scripts, even though the scripts play a crucial role in IT and business processes. 
+In the past 18 months, I have been working for a large organisation where many teams and individuals use Python scripts to automate smaller and bigger tasks. Most of those scripts integrate stuff much like I mentioned above. Typically, the developers have no clue how start testing those scripts, even though the scripts play a crucial role in IT and business processes. 
 
 ## Hexagonal approach
 
@@ -92,11 +101,11 @@ My first test for the `CustomerCli` looks like:
 class TestCustomerCli:
     def test_list_customers_shows_a_list_of_customer_names_and_codes_in_texts(self):
         runner = CliRunner()
-        assert_that(runner.invoke(invoicer_app, ['customers', 'list']).output, 
-            equal_to('QWAN\tQuality Without A Name\n'))
+	actual = runner.invoke(invoicer_app, ['customers', 'list']).output
+        assert_that(actual, equal_to('QWAN\tQuality Without A Name\n'))
 ~~~
 
-> I know pytest has a different opinion on structuring tests and I don't have to make a test case class. We still like to use test case classes to group tests and have multiple groups of tests in a file, because it helps the readability of the test suite.
+I chose to group the test cases in classes and have multiple groups of tests in a file, because it helps the readability of the test suite.
 
 After getting the failure:
 
@@ -104,7 +113,7 @@ After getting the failure:
 E       NameError: name 'invoicer_app' is not defined
 ```
 
-and adding code step by step, the implementation looks similar to the click example above:
+Adding code step by step, the implementation looks similar to the click example above:
 
 ~~~python
 @click.group(name='invoicer')
@@ -122,7 +131,7 @@ def list():
 
 ## The problem with this approach 
 
-The test works and is good enough to get acquainted with `click`, but I am not happy with the situation. What I have specified is that whatever happens, listing customers produces "QWAN Quality Without A Name". Somehow I need to be able to influence the result:
+The test works and it is good enough to get acquainted with `click`, but I am not happy with the situation. What I have specified is that whatever happens, listing customers produces "QWAN Quality Without A Name". Somehow I need to be able to influence the result:
 
 ~~~
 Given querying all customers produces a list with just "Quality Without A Name"
@@ -144,7 +153,7 @@ def list():
     pass
 ~~~
 
-We like to be in control of our dependencies. Dependency injection should not be some magic process. So in my using the _Given-When-Then_ example above, my test should look like: 
+We like to be in control of our dependencies. Dependency injection should not be some magic process. So in the _Given-When-Then_ example above, my test should look like: 
 
 ~~~python
 class TestCustomerCli:
