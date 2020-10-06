@@ -5,8 +5,9 @@ Why did we introduce this instead of just calling the object's constructor? Ofte
 
 In our JavaScript code the original Builder Pattern has less added value, because functions with default parameters can do the job just fine. The `aValidNewSession` function is an instance of such a function. It provides an example `NewSession` with valid data. It lets us describe variations succinctly like above, for instance: `aValidNewSession({ participants: '31' })`.
 
-
-
+----
+default parameters, do you mean destructuring? an example would be handy.
+----
 ## Forces
 
 - object is instantiated in many tests
