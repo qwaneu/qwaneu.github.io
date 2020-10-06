@@ -66,6 +66,11 @@ em {
     ol {
       list-style: decimal;
       text-indent: 1em;
+      li {
+        list-style-type: decimal;
+        list-style-position: outside;
+        color: #525252;
+      }
     }
     p {
       color: #525252;
@@ -84,7 +89,7 @@ em {
 
     h3 {
       font-size: 1.1em;
-      line-height: 0.9em;
+      line-height: 1.2em;
       margin-top: 1em;
       margin-bottom: 0.2em;
       padding-bottom: 0.1em;
