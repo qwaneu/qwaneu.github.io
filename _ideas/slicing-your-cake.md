@@ -71,5 +71,9 @@ Event Storming / Alberto Brandolini (Picture that explains everything???)
 
 HT to RIGD-Loxia - when consulting around 2013, we had lots of fruitful discussions on applying Ports and Adapters to the (sometimes quite complex) Railway Engineering software they develop. We arrived at the metaphor of 'slices of cake' ('taartpunten').
 
+WE: micro-frontends (upsides: indepentent evolution, scaling, support of multiple backends without tangling. downsides: loss of type-safety, more complicated build and complications|choices in deployment).
+
 WE: OCAML discourages the use of folders for organizing code (I have doubts as to  how well this scales. They recently renamed their to-javascript thing from reasonml to something else, and put that in their principles. I tried ReasonML and I could not  wrap my head around this. front-end packaging is somewhat arbitrary, but if you are consistent, it does help in finding your way around. I have only ever seen one system without folders (MAINSAIL did not support folders) and it did not end well. I may be  missing something, many people seem to be happy with it, micro frontends (and give up type safety between the comonents, or use an IDL)? embedded development on relatively small things (micro krnels)
 sub-hexagons -> ?relation with micro front-ends? (there is at least one book about micro frontends now).
+
+WE: static checking of dependency directions in CI (Rob and I saw that near Zaventem, _retrie_  the haskell refactoring language also seems to support something like that). For folder structure I think it matters less _what_ you choose, as long as you stick with the convention. I gave up having a preference on where to put tests (in /test or in src/module/sometest.in.some.language )
