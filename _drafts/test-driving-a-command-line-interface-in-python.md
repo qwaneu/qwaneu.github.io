@@ -6,7 +6,7 @@ tags:
   - architecture
   - test driven development
 author: Rob Westgeest
-
+image: /attachments/blogposts/2020/cli.png
 ---
 
 Testing the command line interface (CLI) should be just like testing a REST interface. A CLI is an adapter concern that we can test drive, separate from the business logic. In this post I'll show an approach to test drive the command line interface of an application in Python.
