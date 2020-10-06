@@ -101,8 +101,8 @@ My first test for the `CustomerCli` looks like:
 class TestCustomerCli:
     def test_list_customers_shows_a_list_of_customer_names_and_codes_in_texts(self):
         runner = CliRunner()
-	actual = runner.invoke(invoicer_app, ['customers', 'list']).output
-        assert_that(actual, equal_to('QWAN\tQuality Without A Name\n'))
+	result = runner.invoke(invoicer_app, ['customers', 'list'])
+        assert_that(result.output, equal_to('QWAN\tQuality Without A Name\n'))
 ~~~
 
 I chose to group the test cases in classes and have multiple groups of tests in a file, because it helps the readability of the test suite.
@@ -161,8 +161,8 @@ class TestCustomerCli:
         runner = CliRunner()
         # Given the allCustomersQuery produces a customer with 
         #   short_hand="QWAN" and name="Quality Without A Name")
-        resulting_output = runner.invoke(invoicer_app, ['customers', 'list']).output
-        assert_that(resulting_output, equal_to('QWAN\tQuality Without A Name\n'))
+        result = runner.invoke(invoicer_app, ['customers', 'list'])
+        assert_that(result.output, equal_to('QWAN\tQuality Without A Name\n'))
 ~~~
 
 To make the test complete, I need something the code below. I introduce a `CustomerCli` class and inject a stub for the customer query. The stub returns a list with one customer, using the test builder pattern.
@@ -175,8 +175,8 @@ class TestCustomerCli:
         CustomerCli(customer_query)
         customer_query.return_value = [
             aValidCustomer(short_hand="QWAN", name="Quality Without A Name")]
-        resulting_output = runner.invoke(invoicer_app, ['customers', 'list']).output
-        assert_that(resulting_output, equal_to('QWAN\tQuality Without A Name\n'))
+        result = runner.invoke(invoicer_app, ['customers', 'list'])
+        assert_that(result.output, equal_to('QWAN\tQuality Without A Name\n'))
 ~~~
 
 This results in:
@@ -280,8 +280,8 @@ class TestCustomerCli:
             aValidCustomer(short_hand="QWAN", name="Quality Without A Name"),
             aValidCustomer(short_hand="FRSH", name="Fresh Bakery")
             ]
-        resulting_output = runner.invoke(invoicer_app, ['customers', 'list']).output
-        assert_that(resulting_output, equal_to('''QWAN\tQuality Without A Name\nFRSH\tFresh Bakery\n'''))
+        result = runner.invoke(invoicer_app, ['customers', 'list'])
+        assert_that(result.output, equal_to('''QWAN\tQuality Without A Name\nFRSH\tFresh Bakery\n'''))
 ~~~
 
 I generalise the `list` implementation to use the whole list instead of just the first element:
@@ -309,16 +309,16 @@ class TestCustomerCli:
     
     def test_list_customers_formats_a_customers_short_hand_and_name(self):
         self.customer_query.return_value = [aValidCustomer(short_hand="QWAN", name="Quality Without A Name")]
-        resulting_output = self.runner.invoke(invoicer_app, ['customers', 'list']).output
-        assert_that(resulting_output, equal_to('QWAN\tQuality Without A Name\n'))
+        result = self.runner.invoke(invoicer_app, ['customers', 'list'])
+        assert_that(result.output, equal_to('QWAN\tQuality Without A Name\n'))
 
     def test_list_customers_shows_a_list_of_customers(self):
         self.customer_query.return_value = [
             aValidCustomer(short_hand="QWAN", name="Quality Without A Name"),
             aValidCustomer(short_hand="FRSH", name="Fresh Bakery")
             ]
-        resulting_output = self.runner.invoke(invoicer_app, ['customers', 'list']).output
-        assert_that(resulting_output, equal_to('''QWAN\tQuality Without A Name\nFRSH\tFresh Bakery\n'''))
+        result = self.runner.invoke(invoicer_app, ['customers', 'list'])
+        assert_that(result.output, equal_to('''QWAN\tQuality Without A Name\nFRSH\tFresh Bakery\n'''))
 ~~~
 
 Still not happy with the invoke noise that repeats itself in both tests, I extract this in a new method. This method may eventually be pulled up in a superclass, but let's not get ahead of myself.
@@ -336,16 +336,16 @@ class TestCustomerCli:
 
     def test_list_customers_formats_a_customers_short_hand_and_name(self):
         self.customer_query.return_value = [aValidCustomer(short_hand="QWAN", name="Quality Without A Name")]
-        resulting_output = self.run_cli('customers', 'list').output
-        assert_that(resulting_output, equal_to('QWAN\tQuality Without A Name\n'))
+        result = self.run_cli('customers', 'list')
+        assert_that(result.output, equal_to('QWAN\tQuality Without A Name\n'))
 
     def test_list_customers_shows_a_list_of_customers(self):
         self.customer_query.return_value = [
             aValidCustomer(short_hand="QWAN", name="Quality Without A Name"),
             aValidCustomer(short_hand="FRSH", name="Fresh Bakery")
             ]
-        resulting_output = self.run_cli('customers', 'list').output
-        assert_that(resulting_output, equal_to('''QWAN\tQuality Without A Name\nFRSH\tFresh Bakery\n'''))
+        result = self.run_cli('customers', 'list')
+        assert_that(result.output, equal_to('''QWAN\tQuality Without A Name\nFRSH\tFresh Bakery\n'''))
 ~~~
 
 ## Testing End-to-End through the command line 
@@ -376,8 +376,8 @@ class TestCustomerList:
     def test_list_customers_shows_a_list_of_customers(self):
         self.customer_repository.save(aValidCustomer(
             short_hand="QWAN", name="Quality Without A Name")),
-        resulting_output = self.run_cli('customers', 'list').output
-        assert_that(resulting_output, equal_to('QWAN\tQuality Without A Name\n'))
+        result = self.run_cli('customers', 'list')
+        assert_that(result.output, equal_to('QWAN\tQuality Without A Name\n'))
 ~~~
 
 The distinction between the CLI adapter integration test and the end to end test is small in this example, because the query example itself is extremely simple. But you'll get the idea:
