@@ -65,4 +65,9 @@ We introduced 'test' sessions for facilitators to try out stuff without conseque
   - duplication
   - similar concept/thing in different places in the code
 - A pair - it pays to have a good discussion about what is the nature of the thing, and where does it belong; nitpicking is worthwhile, the minutes you spent bickering about the right place will probably save you and your colleagues many hours of wandering through the code to find the line to change
-
+----
+notes:
+a summary of what helps should go in the  intro, so the reader knows what to look for
+documentation helps too (e.g readme driven development, or high level description of what goes where on a wiki. the links in the documentation may suggest alternative arrangements).
+i made a csv export entirely in a frontend. thinking abounwhat goes where helps there too (some of the endpointness/ routing is forced by the browsers mechanism.  my mental model was a pipe and maps. Domain model |headigpngs, rows and columns | csv .  that was useful to keep the parts to work on small, and came in handy when , thanks to obscure BOM handling in excel for mac, we needed two types of csv. also handy when we needed a more limited view of the domain model for an additional persona. 
+i think the menu is not needed. the different tratments of csv make for a more coherent post,
