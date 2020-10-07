@@ -165,7 +165,7 @@ class TestCustomerCli:
         assert_that(result.output, equal_to('QWAN\tQuality Without A Name\n'))
 ~~~
 
-To make the test complete, I need something the code below. I introduce a `CustomerCli` class and inject a stub for the customer query. The stub returns a list with one customer, using the test builder pattern.
+To make the test complete, I need something the code below. I introduce a `CustomerCli` class and inject a stub for the customer query. The stub returns a list with one customer.
 
 ~~~python
 class TestCustomerCli:
@@ -179,7 +179,9 @@ class TestCustomerCli:
         assert_that(result.output, equal_to('QWAN\tQuality Without A Name\n'))
 ~~~
 
-This results in:
+`aValidCustomer` is our pyhtonic variation of the builder pattern that we often use for creating instances of complicated object structures in tests. `Customer` is a tree structure and has a bunch of attributes. `aValidCustomer` creates an example customer instance and allows us to focus on the attributes that are relevant for the test.
+
+Running the test above results in:
 
 ~~~
 >       CustomerCli(customerQuery)
@@ -218,7 +220,7 @@ class CustomerCli:
         pass
 ~~~
 
-This gives the same failure, but is it actually calling `list`? Let's try the fake implementation again.
+This gives the same failure, but is it actually calling `list`? Let's try the cheat-implementation again.
 
 ~~~python
 class CustomerCli:
@@ -230,7 +232,7 @@ class CustomerCli:
 
 Nope it does not, still the same failure. Apparently, `click` only works with plain functions. I recall a trick that I used for Flask routes. I created a `register` method in the route classes and used inner functions. 
 
-I move the `customers` and `list` methods to inner functions of a `register` method that takes the `invoicer_app` function as an argument. In Python, this is quite a small step. A bit of indenting, removing `self` parameters:
+I move the `customers` and `list` methods to inner functions of a `register` method that takes the `invoicer_app` function as an argument. In Python, this is quite a small step. Its a bit of indenting and removing `self` parameters:
 
 ~~~python
 class CustomerCli:
@@ -249,7 +251,7 @@ class CustomerCli:
 
 ...BAM! Green test. It works! Ship it! ;-) 
 
-Now let's remove the fakes:
+Now let's replace the cheat-implementation with something real:
 
 ~~~python
 class CustomerCli:
