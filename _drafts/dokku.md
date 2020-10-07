@@ -34,7 +34,7 @@ Deploying blank pages serves a dual purpose. It is useful to quickly share early
 
 ## Why Dokku
 
-What is the user need here? I started developing a flash card application to help me remember programming constructs and library functions. This worked well enough on my laptop, but I wanted to use it on my phone as well to quickly review questions on the go.
+What is the user need here? I started developing a flash card application to help me remember programming constructs and library functions, because I wasn't happy with the UX of the ones I had found. This worked well enough on my laptop, but I wanted to use it on my phone as well to quickly review questions on the go.
 
 I didn't want to lose rapid local development, and I didn't want to write elaborate [Terrorform](https://en.wikipedia.org/wiki/Terrorform) scripts either. I also didn't want a fully manual deployment that I would forget the working of in due time. Options discarded:
 
@@ -44,6 +44,10 @@ I didn't want to lose rapid local development, and I didn't want to write elabor
 
 It turns out that Dokku is not only more repeatable, but also faster than manual
 deployment. It boils down to useful primitives, good documentation, and choices that are pre-made.
+
+> We trade off ready made deployment for more options, and bounded cost. Generic VPS'es are readily availble. For this one I chose [Hetzner](https://www.hetzner.com/unternehmen/umweltschutz/). They are based in Germany, which has good privacy laws, and have been running on [green energy for years](https://www.hetzner.com/unternehmen/umweltschutz/). This saves me time [lobbying my provider to become green](https://blog.container-solutions.com/forbes-article-spotlighting-environmental-impact).  Their prices are low, and their 24/7 customer support has served me well over the years.
+
+Cloud providers innovate, but when you don't need all the latest things, or granular deployment permissions, there are providers with a more conservative approach, that copy what works. Often with simpler, more streamlined UX and bounded, low costs. In this case I spent about £1 on a floating IP address, and 20% for automated, rotating backup of the whole VM. Up and running for a coffee or two a month. Not bad.
 
 For development I settled on a glorious little monolith. Inspired by
 Marc and Rob, I chose [SQLite](https://www.sqlite.org/whentouse.html) instead of
