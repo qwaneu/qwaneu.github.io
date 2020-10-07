@@ -391,6 +391,8 @@ The distinction between the CLI adapter integration test and the end to end test
 Test driving a Command Line Interface is definitely doable. It needs a bit of a testing mindset, some creativity, and looking for libraries that help you just enough. 
 I created a basis for test driving my command line interface, which allowing me to develop my application in a sustainable way. 
 
+Credits: Marc and Willem, Thanks again for raking this post while I am making a mess.
+
 <aside>
   <h3>Want to apply unit testing or test driven development where it seems hard or impossible?</h3>
   <p>We offer workshops on Test Driven Development in legacy code and we can mentor your team in applying it successfully in your own environment.</p>
