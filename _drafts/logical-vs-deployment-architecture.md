@@ -9,7 +9,7 @@ image:
 
 When visiting clients and talking about the architecture of their software systems, we notice that quite often, people conflate different concerns under the term 'architecture'. They tend to mix logical concerns (the main concepts/objects in the application, the dynamics of this, and how these are connected) with deployment concerns (REST APIs, components, microservices, lambdas). The movement to 'cloud' has made this even worse, especially with the addition of serverless infrastructure concepts.
 
-An example of this is the post on "What a typical 100% Serverless Architecture looks like in AWS!" by Xavier Lefèvre. The diagram shown talks AWS lambdas, S3 buckets, API gateway, etc. It is not about the domain concepts and how they relate (they talk a bit about it in the text). Neither does it focus on how business logic is mapped onto the infrastructure concepts. The view presented is a deployment view, not a logical view of the application.
+An example of this is the post on [What a typical 100% Serverless Architecture looks like in AWS](https://medium.com/serverless-transformation/what-a-typical-100-serverless-architecture-looks-like-in-aws-40f252cd0ecb) by Xavier Lefèvre. The post gives a nice view into some of the architecture and infrastructure decisions they made. The diagram in the post however talks AWS lambdas, S3 buckets, API gateway, etc. It is not about the domain concepts and how they relate (they talk a bit about it in the text). Neither does it focus on how business logic is mapped onto the infrastructure concepts. The view presented is a deployment view, not a logical view of the application.
 
 ## Views on software systems 
 
@@ -17,37 +17,41 @@ I am not saying this view on an application is wrong. On the contrary, I find th
 
 At least separate the logical/conceptual view and the deployment view of your software system. Having separate views greatly helps you in making better design choices.
 
-An example:
+## An example
 
-web shop back end component processes product orders; it creates/stores/retrieves orders from a relational database; it also offers order overview with full text search option, and the possibility to export of orders per time period (up to a year). For the overview/search and export, an Elastic Search based index is used. Seen through the hexagonal architecture lens, it looks like this:
+Let's look at an example, loosely based on a project we worked on some time ago. The system is a web shop. One of the back end components processes product orders. This component creates/stores/retrieves orders from a relational database; it also offers order overview with full text search option, and the possibility to export of orders per time period (up to a year). For the search and export, an Elastic Search based index was used. 
 
-![plaatje: hex arch ingevuld]()
+All three functionalities were closely related, being about the same Order [Aggregate](@@link to some DDD goodness). Seen through the [hexagonal architecture lens](/2020/08/20/hexagonal-architecture.html), it looks like this:
 
-Principle followed: each component responsible for its own data storage (i.e. logical database per component)
+![order processing, search and export in a single component, seen through a hexagonal architecture lens](/attachments/blogposts/2020/log-dep-view-hex-1.jpg)
 
-Initially it was a single component deployed.
+The red 'A's are the primary and secondary adapter, REST controllers, SQL database adapters, and Elastic Search adapters in this case.
 
-In practice, we notice that the different functionalities have different runtime characteristics: 
-- exports are run only a few times a month but have a very high CPU and memory demand, sometimes causing unavailability of the component, impeding the primary business process (processing orders).
-- the search queries are sometime quite complicated, causing the component to busy, slowing down responsiveness of the component, again affecting the primary process
+One of the architecture principles we followed was that each component is responsible for its own data storage, which amounts to no shared logical databases between components and no inter-component coupling via the database.
 
-Let's split it into order processing, order search and order export components, in separate git repositories:
+Initially this component was deployed as a single unit. Then we started noticing some issues with the component. The different functionalities turned out to have quite different runtime characteristics: 
+- Exports are run only a few times a month, but when running they have a very high CPU and memory demand; this sometimes caused the component to be unavailable, impeding the primary business process of order processing.
+- Sometimes complex search queries triggered heavy processing in the component, reducing responsiveness of the component, again affecting the primary process.
 
-![plaatje: 3 components]()
+The component was split it into 3 components: order processing, search and export, and they were put in separate git repositories. We introduced shared libraries to handle the dependencies between the code bases.
 
-The 3 components can have their own deployment characteristic, like the export component can be a single instance with a lot of memory, the order processing component can be configured for auto scaling during busy times, etc.
+![order processing, search and export as three components](/attachments/blogposts/2020/log-dep-view-hex-split-in-3.jpg)
 
-But now we have 3 components that are tightly coupled and that share a database, violating our architecture principles...or not? Did we create a mess or...? Because different concerns, like dependencies, logical coupling, runtime issues, get all mixed up, things get unnecessarily complicated.
+The 3 components got their own deployment parameters: the export component can be a single instance with a lot of memory, the order processing component can be configured for auto scaling during busy times, etc.
 
-And we split the codebase, but pulling things apart is not necessarily decoupling! As a matter of fact, the coupling is still there, but obfuscated. We have made things worse.
+**But now we have 3 components that are tightly coupled, with some interesting dependencies across the components (indicated by the dotted lines). The components also share databases, violating our architecture principles...or not? Did we create a mess or...? Because different concerns, like dependencies, logical coupling, runtime issues, get all mixed up, things get unnecessarily complicated.**
 
-Let's take a different perspective on this: logically we can see it as one component, with one codebase/one git repository:
+We split the codebase, but pulling things apart is not necessarily decoupling! As a matter of fact, the coupling is still there, but obfuscated. We have made things worse...
 
-![plaatje: hex arch ingevuld - herhaling]()
+## Taking a fresh view
 
-This is a single logical coherent component. We have some coupling here, but it is local to this codebase so acceptable/manageable.
+What happened? We did a logical split of a component because of deployment (or runtime) concerns. Let's take a different perspective on this: logically we can continue to see it as a single coherent component that has one codebase, one git repository. We have some coupling here, but it is local to this codebase so acceptable/manageable. So we are back at the initial architecture drawing.
 
-This single logical component can be deployed as three separate deployables.
+![order processing, search and export in a single component, seen through a hexagonal architecture lens](/attachments/blogposts/2020/log-dep-view-hex-1.jpg)
+
+This is the **logical view** on our order processing component. 
+
+We can create three deployables from this single logical component, to accommodate for the different runtime characteristics. This allows us to better balance the different architectural concerns, like coupling/cohesion and runtime performance, scaling. 
 
 ![plaatje: deployment view, 3 components met dependencies]()
 
@@ -56,19 +60,33 @@ So by separating the two views, we can discuss logical concerns and deployment/r
 
 ## This is not a new idea
 
-Philippe Kruchten's [4+1 Architecture View Model](https://www.cs.ubc.ca/~gregor/teaching/papers/4+1view-architecture.pdf) (PDF) from 1995; distinguishes Logical View, Process View, Development View, Physical View + Scenarios
+We did not invent this idea of having different perspectives or views on your system's architecture. The concept has been around for quite some time. We'd like to mention a few of our sources of inspiration.
 
-@@plaatje
+### 4+1 Architecture View Model
+Philippe Kruchten's [4+1 Architecture View Model](https://www.cs.ubc.ca/~gregor/teaching/papers/4+1view-architecture.pdf) (PDF) dates from 1995 and distinguishes Logical View, Process View, Development View, Physical View, and the Scenario (or Use Case) view.
 
-Visual Architecting Process by Ruth Malan & Dana Bredemeyer distinguishes Meta Architecture, Conceptual Architecture, Logical Architecture, Execution Architecture. -> great architecture course, recommended
+![4+1 architecture model](/attachments/blogposts/2020/4plus1.jpg)
+{: class="post-image post-image-50" }
+
+- Logical view: supports functional requirements, this would contain domain objects
+- Process view: addresses things like concurrency, system integrity, fault tolerance
+- Development view: focuses on the organization of software in modules, libraries, subsystems (bounded contexts)
+- Physical view: takes into account system qualities like availability, performance, scalability; it visualizes how the software runs on a network of nodes
+- Use case view: a small set of important scenarios that show all four views work together
+
+### Visual Architecting Process
+
+In 2019 I attended the Software Architecture workshop from Dana Bredemeyer and learned about the Visual Architecting Process by Ruth Malan & Dana Bredemeyer. They have lots of goodness to share about architecture and I really recommend this course. One of the concepts I learned related to this post is the distinction between Meta Architecture, Conceptual Architecture, Logical Architecture and Execution Architecture.
 
 @@ plaatje
 
-Simon Brown's C4 model
+### ...and more
 
-@@zie https://pauldambra.dev/amp/2018/02/serverless-part-one/ voor voorbeeldje
+There are more useful related approaches, like Simon Brown's [C4 Model for Visualising Architecture](https://c4model.com/). 
 
-## But now we have cloud!
+@@zie https://pauldambra.dev/amp/2018/02/serverless-part-one/ voor aardig voorbeeld?
+
+## But we are cloud native!
 
 cloud -> makes it worse, the way we use/connect all the cloud services becomes the leading view. Imaginable, because cloud is quite complicated and has a steep learning curve. But conflating different views, or leaving the conceptual view implicit altogether will make it even more complicated.
 
@@ -109,7 +127,3 @@ Having a logical view and a deployment view allows you to address different desi
     <a href="/consulting">Learn more about our consultancy services</a>
   </div></p>
 </aside>
-
-## MISC
-
-- event driven microservices -> what about connascence?

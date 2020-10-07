@@ -14,10 +14,6 @@ WTPW ... in such a way that you will be able to find it back
 
 ## Examples
 
-## profile dependent menu
-
-@TODO
-
 ### Adding export of rollup data in CSV format
 
 We already had a GET endpoint delivering rollup data
