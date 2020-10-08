@@ -106,7 +106,7 @@ because functions with default parameters can do the job just fine. The
 example `NewSession` with valid data. It lets us describe variations succinctly
 like above, for instance: `aValidNewSession({ participants: '31' })`.
 
-The aValidNewSession builder function is implemented like this, using ECMAScript
+The `aValidNewSession` builder function is implemented like this, using ECMAScript
 6 destructuring for function parameters and default values:
 
 ```javascript
@@ -161,7 +161,7 @@ class QuestionBuilder {
                 .withId(aUUID())
                 .withLetter("A.")
                 .withQuestionText("Whoot!")
-                .forZoneFocusing();
+                .forZone(Zone.Focusing);
     }
 
     private UUID id;
@@ -184,8 +184,8 @@ class QuestionBuilder {
         return this;
     }
 
-    public QuestionBuilder forZoneFocusing() {
-        this.zone = Zone.Focusing;
+    public QuestionBuilder forZone(Zone zone) {
+        this.zone = zone;
         return this;
     }
 
@@ -231,13 +231,13 @@ The classical style of builders makes it possible to create a partial object in 
 
 ~~~java
 public class TestAnswering() {
-  private QuestionBuilder aFocusingQuestion() {
-    return aValidQuestion().forZoneFocusing();
-  }
   @Test
   public void test.....() {
-    Question question = build(aFocusingQuestion().withLetter("letter"))
+    Question question = build(aFocusingQuestion().withLetter("X"))
     // ....
+  }
+  private QuestionBuilder aFocusingQuestion() {
+    return aValidQuestion().forZone(Zone.Focusing);
   }
 }
 ~~~
