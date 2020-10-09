@@ -7,7 +7,7 @@ author: Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2020/house-scaffolding.jpg
 ---
 
-Imagine you grow a suite of automated tests that server you well, but are struggling to read through them. Quite a bit of repetition and boilerplate that obfuscates what is going on in individual tests. [Builder](https://en.wikipedia.org/wiki/Builder_pattern) is a pattern that lets our tests reveal their intent more succinctly, at the cost of making a small investment in creating a builder for our domain concept under test.
+Imagine you grow a suite of automated tests that serve you well, but you are struggling to read through them. Quite a bit of repetition and boilerplate that obfuscates what is going on in individual tests. [Builder](https://en.wikipedia.org/wiki/Builder_pattern) is a pattern that lets our tests reveal their intent more succinctly, at the cost of making a small investment in creating a builder for our domain concept under test.
 
 We often use the [Builder pattern](https://en.wikipedia.org/wiki/Builder_pattern) for creating object instances in our automated tests. In our recent post on [A Hexagonal Vue.js front-end, by example](/2020/09/25/hexagonal-frontend-example.html), we showed some of our JavaScript test code that contained a `aValidNewSession` builder function. In this post we will elaborate a bit on the what & why.
 
@@ -88,28 +88,32 @@ The `aValidNewSession` function is an instance of the [Builder
 pattern](https://en.wikipedia.org/wiki/Builder_pattern). A _Builder_ separates
 the construction of a complex object from its representation. The
 `aValidNewSession` builder function provides an example `NewSession` with valid
-data. It lets us describe variations succinctly, like: `aValidNewSession({
-participants: '31' })`.
+data. It lets us describe variations succinctly: 
+```javascript
+aValidNewSession({ participants: '31' })
+```
 
 So why did we introduce this instead of just calling the object's constructor?
-Often we just need an valid instance and we do not care about the
-specifics, sometimes we want to control one specific field. Repeated
-constructor calls are tedious to write and create unnecessary coupling. 
+Often we just need an valid instance and we do not care about the specifics,
+sometimes we want to control one specific field. Repeated constructor calls are
+tedious to write and create unnecessary coupling. 
 
-> The original _Builder_ often looks a bit more like:
+> The original _Builder_ often looks more like:
 ```java
 new SomeBuilder().withThis("stuff").withThat("other stuff").build()
 ```
-There are different ways of implementing this pattern, but the _intent_ of _Builder_ remains the same. See further down this post for examples in different languages.
+There are different ways of implementing this pattern, but the _intent_ of
+_Builder_ remains the same. See further down this post for examples in different
+languages.
 
-In our JavaScript example, the Builder Pattern in its original form has less added value,
-because functions with default parameters can do the job just fine. The
-`aValidNewSession` function is an example of such a function. It provides an
-example `NewSession` with valid data. It lets us describe variations succinctly
-like above, for instance: `aValidNewSession({ participants: '31' })`.
+In our JavaScript example, the Builder Pattern in its original 'classic' form
+has less added value, because functions with default parameters can do the job
+just fine. The `aValidNewSession` function is an example of such a function. It
+provides an example `NewSession` with valid data and lets us describe variations
+succinctly.
 
-The `aValidNewSession` builder function is implemented like this, using ECMAScript
-6 destructuring for function parameters and default values:
+The `aValidNewSession` builder function is implemented like this, using default
+values and ECMAScript 6 destructuring for function parameters:
 
 ```javascript
 export function aValidNewSession ({ team = 'Team X', date = '2011-11-12', 
@@ -124,13 +128,13 @@ export function aValidNewSession ({ team = 'Team X', date = '2011-11-12',
 }
 ```
 
-We provide sensible values for a newSession, so that `aValidNewSession()` returns a valid object.
+We provide sensible values for a newSession, so that `aValidNewSession()` returns a new session with all valid properties.
 
 We apply the same pattern in Python as well, leveraging the Python `**kwargs`
-feature (keyword arguments that behave like a dictionary). A
+feature (keyword arguments in the form of a dictionary). The `validArgs`
 dictionary provides default values which can be overridden by specific values
 provided. In our online Agile Fluency Diagnostic application, we have a
-`Question` class and a corresponding `aValidQuestion` builder function.
+`Question` class with a `aValidQuestion` builder function.
 
 ~~~python
 @dataclass    
@@ -145,19 +149,15 @@ def aValidQuestion(**kwargs):
     return Question(**{**validArgs, **kwargs})
 ~~~
 
-`aValidID('55')` is another builder function that creates a valid UUID containing '55' or some other numbers.
+`aValidID('55')` is another builder function that creates a valid UUID.
 
-In Java we would create a more classic builder, with a small DSL (domain specific language).
+In Java we would create a classic builder, with a small DSL (domain specific language).
 
 ~~~java
 aValidQuestion().forZone(Zone.Focusing).withAnswer(Choice.YES).build();
 ~~~ 
 ~~~java
 class QuestionBuilder {
-    public static UUID aUUID() {
-        return UUID.fromString("de8841ab-3552-4525-a3c8-b584797bc79c");
-    }
-
     public static QuestionBuilder aValidQuestion() {
         return new QuestionBuilder()
                 .withId(aUUID())
@@ -187,28 +187,32 @@ class QuestionBuilder {
         this.zone = zone;
         return this;
     }
-
     public Question build() {
         return new Question(id, letter, questionText, zone);
     }
 }
 ~~~
 
-The implementation of test data builders depends a bit on the programming
+The specific implementation of test data builders depends on the programming
 language used and the features it offers. In a language like Java it is
 more verbose than for instance in Python.
 
 ## On builder styles
 
-The advantage of JavaScriptic and Pythonic `aValidThing({ attr: 'such' })` is that there is hardly any effort in creating these functions. Often they are good enough. There are a few upsides to the classic builder style as well.
+The advantage of JavaScriptic and Pythonic `aValidThing({ attr: 'such' })` is
+that there is hardly any effort in creating these functions. Often they are good
+enough. There are a few upsides to using classic builders as well.
 
 ### Readability and the help of the IDE
 
-When object structures become more complicated, simple builder functions become hard to read. [Vue.js](https://vuejs.org/) for example comes with testing support, allowing you to `mount` a local `Vue` environment, creating a `vue wrapper` to interact with. 
+When object structures become more complicated, simple builder functions become
+hard to read. [Vue.js](https://vuejs.org/) for example comes with testing
+support, allowing you to _mount_ a local Vue environment, creating a _vue
+wrapper_ to interact with. The `mount` function has defaults for many
+properties. It is hard to remember what you need for a component test. In some
+cases you need a real router or I18N, sometimes a mock or stub, sometimes you need to instantiate things _in the right order_. 
 
-This `mount` function has defaults for many properties. It is hard to remember what you need for a component test. In some cases you need a real router, real I18N, etc., and sometimes things must be instantiated _in the right order_. 
-
-So we created a builder around the Vue test utils that allows us to do things like:
+So we created a builder around [Vue Test Utils](https://vue-test-utils.vuejs.org/) that allows us to do things like:
 
 ```javascript
     aVueWrapperFor(TheDiagnosticSession)
@@ -228,17 +232,18 @@ When you write a builder like this, you will get more help from your IDE via aut
 
 ### Partially built objects
 
-The classic style of builders makes it possible to create a partially built object in a local test function, which you finalize and build in the test:
+The classic style of builders makes it possible to create a partially built object in a local test function, which you can finalize and build in the test:
 
 ~~~java
 public class TestAnswering() {
+  private QuestionBuilder aFocusingQuestion() {
+    return aValidQuestion().forZone(Zone.Focusing);
+  }
+
   @Test
   public void test...() {
     Question question = aFocusingQuestion().withLetter("X").build()
     ...
-  }
-  private QuestionBuilder aFocusingQuestion() {
-    return aValidQuestion().forZone(Zone.Focusing);
   }
 }
 ~~~
@@ -247,22 +252,22 @@ public class TestAnswering() {
 
 Applying the test builder pattern has the following consequences:
 
-- The pattern allows us to **express valid (and invalid) examples of our objects explicitly**. For instance: `aValidOrder().withItems(...).thatHasBeenPaid().build()`. This makes our test much more expressive.
+- We can **express valid (and invalid) examples of our objects explicitly**, making our test much more expressive. For instance: `aValidOrder().withItems(...).thatHasBeenPaid().build()`
 - **Setup code in tests is reduced**, resulting in more succinct tests.
-- We **reduce duplicated values** for object instances, because we can often depend on the default values provides by the builder.
-- It becomes **more clear what a test is actually about**. We express the relevant details in our test explicitly and ignore the irrelevant details. If the date of a session is relevant to a test, but the team name not, we can use `aValidSession({ date: '2020-10-07 })` in the test instead of `new Session({ team: 'Team A', date: '2020-10-07', participants: 3 })`. 
+- We can **reduce duplicated values** for object instances, because we can depend on the sensible defaults the builder provides.
+- It becomes **more clear what a test is actually about**. We express relevant details explicitly and ignore the irrelevant details. If the date of a session is relevant to a test, but the team name not, we can use `aValidSession({ date: '2020-10-07 })` instead of `new Session({ team: 'Team A', date: '2020-10-07', participants: 3 })`. 
 - We greatly **reduce dependencies on constructors**. Changing the constructor signature of widely used objects is painful. Changes to builders are easier to manage because of the default values.
-- Writing the builder means **some extra code**. The extra effort is small, even in a more verbose language like Java, and the pay off is big. If we create a classic style builder, we add new builder methods on the fly, when we need them, reducing up-front investment.
+- Writing the builder means **some extra code**. The extra effort is small, even in a more verbose language like Java, and the pay off is big. If we create a classic style builder, we can add new builder methods when needed, reducing up-front investment.
 
 > **Where to put builder code?**  
-It is test code, so we tend to put it in a separate builders.js/py/java/... file sitting next to our domain test code. Sometimes we put it next to the production classes.
+Builder code is test code, so we tend to put it in a separate builders.js/py/java/... file sitting next to our domain test code. Sometimes we put it near the production classes.
 
 > **When to introduce builders?**  
-Initially, there are just a few tests that instantiate a domain object, so there seems not much added benefit of starting out with builders. If we introduce them later on however, we find ourselves refactoring quite a few tests to move to builders. So we like to introduce them sooner rather than later.
+Initially, there are just a few tests that instantiate a domain object, so there seems not much added benefit of starting out with builders. If we introduce them later however, we find ourselves refactoring quite a few tests to move to builders. So we prefer to introduce them sooner rather than later.
 
 > **Should builders be tested as well?**  
 Although builders can be quite a few lines of code, we don't write tests for 
-them. The builder code itself is straightforward and we test them via the tests that use them, specifically through the _fail_ step - seeing a new test fail first, to check our assumptions and verify the test's feedback.
+them. The builder code is straightforward and we test them via the tests that use them. The _fail_ step from the test driven development cycle - let a new test fail first, to check our assumptions and test feedback - is helpful here.
 
 ## Conclusion
 
@@ -270,10 +275,12 @@ We like test data builders. It is a pattern where the benefits outweigh the smal
 
 This pattern is widely applicable, but the specific form varies from programming language to programming language.
 
+_Credits: Willem, thanks for dotting the i's in this post._
+
 <aside>
   <h3>There is more to writing automated tests that add value</h3>
-  <p>We run immersive courses on Test Driven Development that are likely to improve your work soon after. We also upskill teams by mentoring or working hands-on. A well-calibrated set of tests helps you say 'yes we can' more often in a sustainable way.</p>
+  <p>We run immersive courses on Test Driven Development that help improve your work soon after. We also upskill teams by mentoring or working hands-on. A well-calibrated set of tests helps you say 'yes we can' more often in a sustainable way.</p>
   <p><div>
-    <a href="/training">Find out how our courses support your work</a>
+    <a href="/training">Find out how our courses can support your work</a>
   </div></p>
 </aside>
