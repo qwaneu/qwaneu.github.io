@@ -13,38 +13,14 @@ slow and brittle? I have had that too, don't worry. Imagine then if you could
 have cost-effective end-to-end tests. How would that impact your product
 development?
 
-<<<<<<< Updated upstream
 ## Instead of Selenium, in addition to Storybook and unit tests
-=======
-I'm separating end-to-end tests and UI tests. I develop, or help develop
-applications on a daily basis. They usually include a web-front-end. Mostly SPA,
-or an MPA with a significant amount of JavaScript. The front-ends are important
-to get right, because that is where most of the users live. My usual approach is
-decomposing things, so that I can test things that could possibly break, e.g.
-validation and logic. If I feel sufficiently motivated, or the client has enough
-budget, I'll add a small amount of selenium tests. They are hard to write, slow
-to run, but being able to validate 10, 20 main scenarios in an application, and
-provide clear and actionable feedback to others (in an enterprise setting) or to
-our team (in a startup setting) can mean the difference between the product sinking
-or swimming (not exaggerating here, story may be to come another time).
-
-Recently, to make manual testing easier, and decomposing components while
-getting visual feedback, I've used [Storybook](20201001101721-storybook.md) (thanks [Rachel Davies](20201001101748-rachel_davies.md) for putting
-that in a sample project). Manually testing and iterating on components in
-isolation is faster, and it forces you, if ever so gently, to develop
-independent components and pages. Clicking around, typing, manual testing and
-iterating gives me empathy, and is definitely something that is always on my 'I
-should do this more often' list. But it is also tedious, as it involves making
-lots of little decisions, which leads to [Decision Fatigue](20200606212825-decision_fatigue.md) .
->>>>>>> Stashed changes
 
 As Marc and Rob have described in their series on vue.js (architecting and
-test-driving), we like to have tests in our front-ends, for anything that can
-break. In addition to that, I like
+test-driving), we like to have tests in our front-ends, for [anything that can possibly break]()http://wiki.c2.com/?TestEverythingThatCouldPossiblyBreak. In addition to that, I like to have:
 
-* at least a set of end-to-end tests to check few main scenarios.
-* a playground for components we made or just use
-* a type system to make sure everything still hangs together (this leaves time to focus on tests for interesting behaviour)
+* at least a set of end-to-end tests to check few main scenarios;
+* a playground for components we made or just use;
+* a type system to make sure everything still hangs together, leaving time to focus on tests for interesting behaviour.
 
 My go to tool for that browser and end-to-end tests has been Selenium, for at
 least the last ten years. I distinguish between browser tests and end-to-end
