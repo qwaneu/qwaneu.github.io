@@ -15,45 +15,47 @@ development?
 
 ## Instead of Selenium, in addition to Storybook and unit tests
 
-As Marc and Rob have described in their series on vue.js (architecting and
-test-driving), we like to have tests in our front-ends, for [anything that can possibly break]()http://wiki.c2.com/?TestEverythingThatCouldPossiblyBreak. In addition to that, I like to have:
+As Marc and Rob have described in their series on architecting and test-driving Vue.js (see [How to keep Front End complexity in check with Hexagonal Architecture](http://localhost:8082/2020/09/09/how-to-keep-complexity-in-check-with-hexagonal-architecture.html) and [A Hexagonal Vue.js front-end, by example](/2020/09/25/hexagonal-frontend-example.html)), we like to have tests in our front-ends, for [anything that can possibly break](http://wiki.c2.com/?TestEverythingThatCouldPossiblyBreak). In addition to that, I like to have:
 
 * at least a set of end-to-end tests to check few main scenarios;
 * a playground for components we made or just use;
 * a type system to make sure everything still hangs together, leaving time to focus on tests for interesting behaviour.
 
-My go to tool for that browser and end-to-end tests has been Selenium, for at
-least the last ten years. I distinguish between browser tests and end-to-end
-tests, because if you can easily test visual components fast, and in isolation,
-it becomes attractive to do that as well. Selenium is battle tested, but has
-several moving parts and does not execute particularly fast. So I tend to only
-automate a few scenarios with that, and leave the rest to non-visual unit tests.
-Those tests help, but it costs mental energy to interpret some of the results,
-and I tend not to look at the UI enough, so that suboptimal interaction patterns stay in
-the UI longer than they should.
+My go to tool for browser and end-to-end tests has been Selenium, at least for
+the last ten years. I make a distinction between browser tests and end-to-end
+tests, because if you can easily test visual components fast and in isolation,
+it becomes attractive to do that as well. 
 
-End-to-end tests can be fast, if you design the front-end and backend system(s) for speed. I
-have done this, but in projects with existing systems that option is not always
+Selenium is battle tested, but it has several moving parts and does not execute
+particularly fast. So I tend to automate only a few scenarios, and leave the
+rest to non-visual unit tests. Those Selenium based scenario tests help, but it
+costs mental energy to interpret the results. [ME: +waarom?]
+
+I tend not to look at the UI enough, so that suboptimal interaction patterns
+stay in the UI longer than they should. [ME: dit punt mag wel wat verder uitgewerkt worden]
+
+End-to-end tests can be fast, if you design the front-end and backend system(s) for speed [ME: for enabling fast testing? met evt link naar hexagonal testing post]. I have done this, but in existing systems that option is not always
 available.
 
-
 ## Why Cypress
-What is powerful about [Cypress](20200925094231-cypress.md), is that it lives in the same environment as the
-SPA front-end. Same language (JavaScript or something that generates it), same
-toolchain, same people. Working test-first, without hand-offs and waiting was a
-game changer for unit tests, and it can be the same for UI tests and end-to-end
-tests.
 
-[Cypress](20200925094231-cypress.md) makes it easy to separate end-to-end tests and UI tests. Since the tests
+What is powerful about [Cypress](https://www.cypress.io/), is that it lives in
+the same environment as the SPA front-end. Same language, same toolchain, same
+people. Working test-first, without hand-offs and waiting was a game changer for
+unit tests, and now with Cypress it can be the same for UI tests and end-to-end tests as well.
+
+Cypress makes it easy to separate end-to-end tests and UI tests. Since the tests
 are white-box, and the test-code inhabits the same space as the UI code, it is
-easier to isolate small bits of UI, and test them visually, quickly. Cypress
+easier to isolate small bits of the UI and test them visually, quickly. Cypress
 offers support code to start where you are, possibly with end-to-end tests, and
-stub out dependencies as you go. If you start fresh, the bar for developing with
-[hexagons](20200629174628-hexagonal_architecture.md) and use [A Humble Dialog](humble_object_at_xunitpatterns_com.md) instead of a tightly coupled network is lowered.
+stub out dependencies as you go. 
+
+If you start fresh, Cypress lowers the bar for developing with
+[hexagons](/2020/08/20/hexagonal-architecture.html) and using the [Humble
+Dialog pattern](http://xunitpatterns.com/Humble%20Object.html) instead of a tightly coupled network.
 
 Changing the speed at which something runs by an order of magnitude is a game
-changer. I've experienced this with TDD at the unit level in the past, and once
-with Selenium (after architecting the application to be fast).
+changer. I've experienced this with test driven development at the unit level in the past, and once with Selenium (after architecting the application to be fast).
 
 &#x2013; see also [testcafe - A node.js tool to automate end-to-end web testing | TestCafe](a_node_js_tool_to_automate_end_to_end_web_testing_testcafe.md)
 [cypress accessible blog example](cypress_example_recipes_examples_blogs_a11y_at_master_cypress_io_cypress_example_recipes.md)
