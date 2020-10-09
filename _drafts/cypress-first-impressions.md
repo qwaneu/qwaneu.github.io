@@ -28,18 +28,19 @@ it becomes attractive to do that as well.
 
 Selenium is battle tested, but it has several moving parts and does not execute
 particularly fast. So I tend to automate only a few scenarios, and leave the
-rest to non-visual unit tests. Those Selenium based scenario tests help, but interpreting the result of the unit tests in the UI cost mental energy to interpret the results: you have to make the mapping between what the tests tell you, and how it looks on the screen in your imagination. For instance: It is useful to know that a specific validation failure will disable submitting on a forms model, but what does it look like?
+rest to non-visual unit tests. 
 
-I tend not to look at the UI enough, so that suboptimal interaction patterns
-stay in the UI longer than they should. I was one of those people who would go: "My tests are great, now I don't have to click through the UI all the time". When I hear something like that now, I cringe. I knew in theory that, apart from observing users, reflectively using the application yourself is a powerful feedback mechanism. Yet some states are hard to achieve in a test situation, and doing this in production is not necessarily feasible. So when, after a long time, I am finally brave to click through the UI, I go "Oh. this is ... bad!". And because it is slow and cumbersome, I can't immediately fix it, and the pattern repeats.
+### shortcomings of non-visual unit tests for a front-end
+Interpreting the result of the unit tests in the UI cost mental energy: you have to make the mapping between what the tests tell you, and how it looks on the screen in your imagination. For instance: It is useful to know that a specific validation failure will disable submitting on a forms model, but what does it look like?
 
-It helps me to see the UI in action, but I also don't want to watch all the test
-  runs all the time, including browsers spawning etc. It also doesn't help if I
-  have to wait for <span class="underline">that slow screen in the legacy app</span> every time, and wait for
-  the mail to be sent, travel around the world, and received all the time.
-[ME: dit punt mag wel wat verder uitgewerkt worden]
+I'm quite handy at writing unit tests, so my UI is usually not broken, and the tests pass. When the tests pass, I push a small feature to production and move on to the next part. However, that means that I tend not to look at the UI enough. If there are clumsy interaction patterns, I will not notice them.
 
+I was one of those people who would go: "My tests are great, now I don't have to click through the UI all the time". When I hear something like that now, I cringe. I knew in theory that, apart from observing users, reflectively using the application yourself is a powerful feedback mechanism. Yet some states are hard to achieve in a test situation, and doing this in production is not necessarily feasible. So when, after a long time, I am finally brave to click through the UI, I go "Oh. this is ... bad!". And because it is slow and cumbersome, I can't immediately fix it, and the pattern repeats.
 
+### Selium works, but is tiring
+Selenium helps me to see the UI in action, but watching it run the tests, including browsers spawning etc is tiring. So in effect I use it similarly to unit tests. I look at the UI I am developing, and when a test fails, but not otherwise, because the threshold is too high. 
+
+### What if we made our system fast?
 End-to-end tests can be fast, if you [design the front-end and backend system(s) for fast test runs](/2020/09/17/test-architecture.html). I have done this, but in existing systems that option is not always available. Rather it is something we have to work towards. This is an area where a modular browser testing tool like Cypress can come in handy.
 
 ## Why Cypress
