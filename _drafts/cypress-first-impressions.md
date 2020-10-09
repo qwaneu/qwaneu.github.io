@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cypress First Impressions
+title: Fast browser tests with Cypress - First Impressions
 tags:
   - architecture
 author: Willem van den Ende
@@ -15,10 +15,10 @@ development?
 
 ## Instead of Selenium, in addition to Storybook and unit tests
 
-As Marc and Rob have described in their series on architecting and test-driving Vue.js (see [How to keep Front End complexity in check with Hexagonal Architecture](http://localhost:8082/2020/09/09/how-to-keep-complexity-in-check-with-hexagonal-architecture.html) and [A Hexagonal Vue.js front-end, by example](/2020/09/25/hexagonal-frontend-example.html)), we like to have tests in our front-ends, for [anything that can possibly break](http://wiki.c2.com/?TestEverythingThatCouldPossiblyBreak). In addition to that, I like to have:
+As Marc and Rob have described in their series on architecting and test-driving Vue.js (see [How to keep Front End complexity in check with Hexagonal Architecture](/2020/09/09/how-to-keep-complexity-in-check-with-hexagonal-architecture.html) and [A Hexagonal Vue.js front-end, by example](/2020/09/25/hexagonal-frontend-example.html)), we like to have tests in our front-ends, for [anything that can possibly break](http://wiki.c2.com/?TestEverythingThatCouldPossiblyBreak). In addition to that, I like to have:
 
 * at least a set of end-to-end tests to check few main scenarios;
-* a playground for components we made or just use;
+* [a playground](https://storybook.js.org) for components we made or just use;
 * a type system to make sure everything still hangs together, leaving time to focus on tests for interesting behaviour.
 
 My go to tool for browser and end-to-end tests has been Selenium, at least for
@@ -28,14 +28,19 @@ it becomes attractive to do that as well.
 
 Selenium is battle tested, but it has several moving parts and does not execute
 particularly fast. So I tend to automate only a few scenarios, and leave the
-rest to non-visual unit tests. Those Selenium based scenario tests help, but it
-costs mental energy to interpret the results. [ME: +waarom?]
+rest to non-visual unit tests. Those Selenium based scenario tests help, but interpreting the result of the unit tests in the UI cost mental energy to interpret the results: you have to make the mapping between what the tests tell you, and how it looks on the screen in your imagination. For instance: It is useful to know that a specific validation failure will disable submitting on a forms model, but what does it look like?
 
 I tend not to look at the UI enough, so that suboptimal interaction patterns
-stay in the UI longer than they should. [ME: dit punt mag wel wat verder uitgewerkt worden]
+stay in the UI longer than they should. I was one of those people who would go: "My tests are great, now I don't have to click through the UI all the time". When I hear something like that now, I cringe. I knew in theory that, apart from observing users, reflectively using the application yourself is a powerful feedback mechanism. Yet some states are hard to achieve in a test situation, and doing this in production is not necessarily feasible. So when, after a long time, I am finally brave to click through the UI, I go "Oh. this is ... bad!". And because it is slow and cumbersome, I can't immediately fix it, and the pattern repeats.
 
-End-to-end tests can be fast, if you design the front-end and backend system(s) for speed [ME: for enabling fast testing? met evt link naar hexagonal testing post]. I have done this, but in existing systems that option is not always
-available.
+It helps me to see the UI in action, but I also don't want to watch all the test
+  runs all the time, including browsers spawning etc. It also doesn't help if I
+  have to wait for <span class="underline">that slow screen in the legacy app</span> every time, and wait for
+  the mail to be sent, travel around the world, and received all the time.
+[ME: dit punt mag wel wat verder uitgewerkt worden]
+
+
+End-to-end tests can be fast, if you [design the front-end and backend system(s) for fast test runs](/2020/09/17/test-architecture.html). I have done this, but in existing systems that option is not always available. Rather it is something we have to work towards. This is an area where a modular browser testing tool like Cypress can come in handy.
 
 ## Why Cypress
 
@@ -57,27 +62,9 @@ Dialog pattern](http://xunitpatterns.com/Humble%20Object.html) instead of a tigh
 Changing the speed at which something runs by an order of magnitude is a game
 changer. I've experienced this with test driven development at the unit level in the past, and once with Selenium (after architecting the application to be fast).
 
+
+## background / further reading / stuff that now has partly been addd to Instead of
 &#x2013; see also [testcafe - A node.js tool to automate end-to-end web testing | TestCafe](a_node_js_tool_to_automate_end_to_end_web_testing_testcafe.md)
 [cypress accessible blog example](cypress_example_recipes_examples_blogs_a11y_at_master_cypress_io_cypress_example_recipes.md)
 [Cypress](20200925094231-cypress.md)
 
-## background / further reading / stuff that now has partly been addd to Instead of
-I've used [Storybook](https://storybook.js.org) (hat tip to Rachel Davies for putting
-that in [a sample project](https://github.com/tes/rolling-fields). Manually testing and iterating on components in
-isolation is faster, and it forces you, if ever so gently, to develop
-independent components and pages. Clicking around, typing, manual testing and
-iterating gives me empathy, and is definately something that is always on my 'I
-should do this more often' list. But it is also tedious, as it involves making
-lots of little decisions, which leads to [Decision Fatigue](20200606212825-decision_fatigue.md) .
-
-So, combined [Storybook](https://storybook.js.org), unit tests in the front-end, [components](20200629174628-hexagonal_architecture.md) and a few
-selenium tests that run the UI end to end give me confidence. What I was missing:
-
--   Speed. Still felt to slow to respond to incoming suggestions for improvement
--   Visual feedback from some of the unit tests. Especially on bigger forms with
-    many components and fields.
-
-It helps me to see the UI in action, but I also don't want to watch all the test
-  runs all the time, including browsers spawning etc. It also doesn't help if I
-  have to wait for <span class="underline">that slow screen in the legacy app</span> every time, and wait for
-  the mail to be sent, travel around the world, and received all the time.
