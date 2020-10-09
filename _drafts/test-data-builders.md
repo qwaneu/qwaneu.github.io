@@ -264,14 +264,14 @@ them. The builder code itself is straightforward and we test them via the tests 
 
 ## Conclusion
 
-We really like test data builders. It is a pattern where the benefits hugely outweigh the small investment in a bit of builder code. They make your tests more focused and readable, and provide a very succinct but expressive way of describing your test setup.
+We like test data builders. It is a pattern where the benefits outweigh the small investment in builder code. They make tests more focused and readable, and provide a succinct and expressive way of describing your test setup.
 
-This pattern is universally applicable, but its specific form can vary from programming language to programming language.
+This pattern is widely applicable, but the specific form varies from programming language to programming language.
 
 <aside>
-  <h3>There is much more to writing good automated tests</h3>
-  <p>We offer courses on Test Driven Development and we can mentor teams in automated testing skills. </p>
+  <h3>There is more to writing automated tests that add value</h3>
+  <p>We run immersive courses on Test Driven Development that are likely to improve your work soon after. We also upskill teams by mentoring or working hands-on. A well-calibrated set of tests helps you say 'yes we can' more often in a sustainable way.</p>
   <p><div>
-    <a href="/training">Learn more about our courses</a>
+    <a href="/training">Find out how our courses support your work</a>
   </div></p>
 </aside>
