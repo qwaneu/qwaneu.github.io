@@ -4,17 +4,18 @@ title: Test Data Builders
 tags:
   - design, test driven development
 author: Marc Evers, Rob Westgeest
-image: 
+image: /attachments/blogposts/2020/house-scaffolding.jpg
 ---
 
-We often use the [Builder pattern](https://en.wikipedia.org/wiki/Builder_pattern) for creating object instances in our automated tests. In our recent post on [A Hexagonal Vue.js front-end, by example](/2020/09/25/hexagonal-frontend-example.html), we showed some of our JavaScript test code that contained a `aValidNewSession` function. In this post we will elaborate a bit on the what & why.
+We often use the [Builder pattern](https://en.wikipedia.org/wiki/Builder_pattern) for creating object instances in our automated tests. In our recent post on [A Hexagonal Vue.js front-end, by example](/2020/09/25/hexagonal-frontend-example.html), we showed some of our JavaScript test code that contained a `aValidNewSession` builder function. In this post we will elaborate a bit on the what & why.
 
 ## Context 
 
-Let's zoom in on the `NewSession` object that we used in the [previous
-post](/2020/09/25/hexagonal-frontend-example.html). It is used by a UI component
-(`NewDiagnosticSession`) for creating a new session. Creating can only proceed
-if all the NewSession object's properties have valid values. It looks like this:
+Let's zoom in on that `NewSession` object we used in the [previous
+post](/2020/09/25/hexagonal-frontend-example.html). It is used by the
+`NewDiagnosticSession` UI component for creating a new session. Creating can
+only proceed if all the `NewSession` object properties have valid values. It
+looks like this:
 
 ```javascript
 export class NewSession {
@@ -29,10 +30,11 @@ export class NewSession {
   ...
 ```
 
-> Note that the `NewSession` constructor is empty. This is somewhat atypical for a JavaScript object. We do this because `NewSession` is used as a form model for a new session, which starts out empty. You may want to pass the values for its properties as constructor parameters in other cases.
+> Note that the `NewSession` constructor does not have any arguments. This is somewhat atypical for a JavaScript object. We do this because `NewSession` is used as a form model for a new session, which starts out empty. In other cases, you may want to pass the initial values as constructor parameters.
 
-If we want to write a test to check if the number of participants is valid, we 
-need to create a `NewSession` with all valid properties, except for the number of participants:
+If we want to write a test to check if the number of participants is valid, we
+need to create a `NewSession` with all valid properties, except for the number
+of participants:
 
 ```javascript
 describe('A new session', () => {
@@ -49,7 +51,7 @@ describe('A new session', () => {
 
 We have 6 lines for setting up the object under test. Most of the values should
 be valid, but their specific value is not relevant. This obfuscates the
-value that is relevant for the test, namely the `'31'` for `participants`.
+value that is relevant for the test, namely the '31'.
 
 Another issue with this approach is that we have more tests involving
 `NewSession`, each with a similar setup. If we need to extend
@@ -61,10 +63,10 @@ A number of forces are at play here:
 - changing object construction is cumbersome and error prone, it requires many
   changes all around the code - the [Shotgun Surgery code
   smell](https://blog.ndepend.com/shotgun-surgery/);
-- only 1 or 2 values are relevant for the test, the rest is not relevant and
-  obfuscates the intent of the test;
-- we could add default values to the production code, but unless the defaults
-  use useful within our domain, they increase the risk of
+- only one or two values are relevant for the test, the rest is not relevant and
+  obfuscates the test intent;
+- we could add default values to production code, but unless the defaults
+  are useful within our domain, they increase the risk of
   errors by accidentally using a default value.
 
 ## Solution
@@ -80,7 +82,12 @@ describe('A new session', () => {
   })
 ```
 
-The `aValidNewSession` function is an instance of the [Builder pattern](https://en.wikipedia.org/wiki/Builder_pattern). A _Builder_ separates the construction of a complex object from its representation. The `aValidNewSession` builder function provides an example `NewSession` with valid data. It lets us describe variations succinctly, like: `aValidNewSession({ participants: '31' })`.
+The `aValidNewSession` function is an instance of the [Builder
+pattern](https://en.wikipedia.org/wiki/Builder_pattern). A _Builder_ separates
+the construction of a complex object from its representation. The
+`aValidNewSession` builder function provides an example `NewSession` with valid
+data. It lets us describe variations succinctly, like: `aValidNewSession({
+participants: '31' })`.
 
 So why did we introduce this instead of just calling the object's constructor?
 Often we just need an valid instance and we do not care about the
@@ -262,9 +269,9 @@ We really like test data builders. It is a pattern where the benefits hugely out
 This pattern is universally applicable, but its specific form can vary from programming language to programming language.
 
 <aside>
-  <h3>Bla</h3>
-  <p>Bla</p>
+  <h3>There is much more to writing good automated tests</h3>
+  <p>We offer courses on Test Driven Development and we can mentor teams in automated testing skills. </p>
   <p><div>
-    <a href="/consulting">Learn more about our mentoring and coaching services</a>
+    <a href="/training">Learn more about our courses</a>
   </div></p>
 </aside>
