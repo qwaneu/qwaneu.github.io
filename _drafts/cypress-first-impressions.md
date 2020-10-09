@@ -1,13 +1,42 @@
+---
+layout: post
+title: Cypress First Impressions
+tags:
+  - architecture
+author: Willem van den Ende
+image: 
+---
 
-
-
-
-Imagine your UI and end-to-end tests could be an order of magnitude faster than
+Imagine your UI and end-to-end tests could run an order of magnitude faster than
 they are now? Oh, you don't have end-to-end tests, because they would be too
-slow and brittle? I have had that too, don't worry. Imagine then if you could have
-cost-effective end-to-end tests. How would that impact your product development?
+slow and brittle? I have had that too, don't worry. Imagine then if you could
+have cost-effective end-to-end tests. How would that impact your product
+development?
 
+<<<<<<< Updated upstream
 ## Instead of Selenium, in addition to Storybook and unit tests
+=======
+I'm separating end-to-end tests and UI tests. I develop, or help develop
+applications on a daily basis. They usually include a web-front-end. Mostly SPA,
+or an MPA with a significant amount of JavaScript. The front-ends are important
+to get right, because that is where most of the users live. My usual approach is
+decomposing things, so that I can test things that could possibly break, e.g.
+validation and logic. If I feel sufficiently motivated, or the client has enough
+budget, I'll add a small amount of selenium tests. They are hard to write, slow
+to run, but being able to validate 10, 20 main scenarios in an application, and
+provide clear and actionable feedback to others (in an enterprise setting) or to
+our team (in a startup setting) can mean the difference between the product sinking
+or swimming (not exaggerating here, story may be to come another time).
+
+Recently, to make manual testing easier, and decomposing components while
+getting visual feedback, I've used [Storybook](20201001101721-storybook.md) (thanks [Rachel Davies](20201001101748-rachel_davies.md) for putting
+that in a sample project). Manually testing and iterating on components in
+isolation is faster, and it forces you, if ever so gently, to develop
+independent components and pages. Clicking around, typing, manual testing and
+iterating gives me empathy, and is definitely something that is always on my 'I
+should do this more often' list. But it is also tedious, as it involves making
+lots of little decisions, which leads to [Decision Fatigue](20200606212825-decision_fatigue.md) .
+>>>>>>> Stashed changes
 
 As Marc and Rob have described in their series on vue.js (architecting and
 test-driving), we like to have tests in our front-ends, for anything that can
@@ -34,7 +63,7 @@ available.
 
 ## Why Cypress
 What is powerful about [Cypress](20200925094231-cypress.md), is that it lives in the same environment as the
-SPA front-end. Same language (javascript or something that generates it), same
+SPA front-end. Same language (JavaScript or something that generates it), same
 toolchain, same people. Working test-first, without hand-offs and waiting was a
 game changer for unit tests, and it can be the same for UI tests and end-to-end
 tests.
