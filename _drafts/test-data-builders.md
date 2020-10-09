@@ -7,6 +7,8 @@ author: Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2020/house-scaffolding.jpg
 ---
 
+Imagine you grow a suite of automated tests that server you well, but are struggling to read through them. Quite a bit of repetition and boilerplate that obfuscates what is going on in individual tests. [Builder](https://en.wikipedia.org/wiki/Builder_pattern) is a pattern that lets our tests reveal their intent more succinctly, at the cost of making a small investment in creating a builder for our domain concept under test.
+
 We often use the [Builder pattern](https://en.wikipedia.org/wiki/Builder_pattern) for creating object instances in our automated tests. In our recent post on [A Hexagonal Vue.js front-end, by example](/2020/09/25/hexagonal-frontend-example.html), we showed some of our JavaScript test code that contained a `aValidNewSession` builder function. In this post we will elaborate a bit on the what & why.
 
 ## Context 
