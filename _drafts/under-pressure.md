@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Under pressure - why overtime is such a bad idea and working harder won't to save your **s
+title: Under pressure - why overtime is such a bad idea and working harder won't save you
 tags:
   - agile fluency
   - continuous delivery
@@ -9,34 +9,59 @@ author: Marc Evers
 image: 
 ---
 
-We have been doing a number of Agile Fluency diagnostic workshops with several teams this year. In this workshop, which is a kind of team retrospective, we discover together with a software team how fluent they are in the different fluency zones. The 3 most interesting zone in the Agile Fluency model are:
-- Focusing - ...
-- Delivering - ...
-- Optimizing - ...
+We have been doing a number of Agile Fluency diagnostic workshops with several teams this year. In this workshop, which is a kind of team retrospective, we discover together with a software team how fluent they are in the different fluency zones. The 3 most interesting zone in the [Agile Fluency® Model](https://www.agilefluency.org/) are:
+- Focusing - focusing teams produce business value; it is about transparency and teamwork
+- Delivering - delivering teams deliver on the market cadence; it is about sustainable delivery, productive, low defects
+- Optimizing - optimizing teams lead their market; 'business agility', teams organized for good product decisions
 
-What we sometimes see teams that are not doing that many retrospectives. Everything seems to be going well enough, they say, and there is not so much to discuss in their retrospectives, or the retrospectives become a bit of a drag. Our observation is that the team _are_ doing quite ok, but we see sufficient room for improving 'productivity'. 
+What we sometimes see teams that are not doing that many retrospectives.
+Everything seems to be going well enough, they say, and there is not so much to
+discuss in their retrospectives, or the retrospectives become a bit of a drag.
+Our observation is that the team _are_ doing quite ok, but we see sufficient
+room for improving 'productivity'. 
 
 ## Productivity
 
-Looking at Agile Fluency zone benefits, they mention increased ROI (return on investment), which tends to come from making better product and priority decisions so that you deliver more value sooner. They also mention increased productivity/efficiency. Now productivity is a dangerous, overloaded term within software development (anyone remember counting lines of code as a measure of productivity?).
+Looking at Agile Fluency zone benefits, the model mentions increased ROI (return
+on investment), which tends to come from making better product and priority
+decisions so that you deliver more value sooner. The model also mentions
+increased productivity/efficiency. Now productivity is a dangerous, overloaded
+term within software development (anyone remember counting lines of code as a
+measure of productivity?).
 
-Let's define productivity loosely as the share of a team's time that they spend on doing valuable stuff. Valuable stuff is not only working on features and changes that are valuable to users and customers, but also time spent on learning, on doing structural fixes in the CI/CD pipeline, etc. So it is about being valuable in the short term and in the long term. 
+Let's define productivity loosely as the share of a team's time that they spend
+on doing valuable stuff. Valuable stuff is not only working on features and
+changes that are valuable to users and customers, but also time spent on
+learning, on doing structural fixes in the CI/CD pipeline, etc. So it is about
+being valuable in the short term and in the long term. 
 
-Fixing bugs, context switching because of late feedback, monitoring builds and restarting because of flaky tests are all activities that do not add value and which keep productivity down.
+Fixing bugs, context switching because of late feedback, monitoring builds and
+restarting because of flaky tests are all activities that do not add value and
+which keep productivity down.
 
 ![taartgrafiekje of zo van werkzaamheden ter illustratie?]()
 
-So what can a team do to improve productivity? Regular reflection is key here: reflect on your way of working, trying to find better ways of organizing your work and creating more flow.
+So what can a team do to improve productivity? Regular reflection is key here:
+reflect on your way of working, trying to find better ways of organizing your
+work and creating more flow.
 
 Reducing misunderstandings and waiting because of hand-offs of work by close collaboration and communication also helps to save time and be more productive.
 
-Teams that get fluent in the Delivering zone work on their technical excellence. This increases productivity by having low defect rates, little rework. Delivering quality work and having low defect rates also changes the dynamics in the team and make the context more joyful to work in. This affects retention positively and helps productivity in the long term.
+Teams that get fluent in the Delivering zone work on their technical excellence.
+This increases productivity by having low defect rates, little rework.
+Delivering quality work and having low defect rates also changes the dynamics in
+the team and make the context more joyful to work in. This affects retention
+positively and helps productivity in the long term.
 
 ## A little pressure
 
 We think teams benefit from a little pressure, and some sense of urgency, to trigger a quest for higher productivity.
 
-We noticed that 'pressure' often has a negative connotation. In more stressful times or when the stakes are high, some managers put pressure on development teams to deliver more stuff faster, urging them to 'work harder'. Team members feel the pressure and think the only option is to work overtime (often unpaid) to deliver to the high demands.
+We noticed that 'pressure' often has a negative connotation. In more stressful
+times or when the stakes are high, some managers put pressure on development
+teams to deliver more stuff faster, urging them to 'work harder'. Team members
+feel the pressure and think the only option is to work overtime (often unpaid)
+to deliver to the high demands.
 
 ## Working harder
 
@@ -65,19 +90,90 @@ and how the team works as a system in relation to its environment.
 
 So overtime and shouting "work harder!" is not going to work. This is not the way to a more productive team. Using pressure in this way will have the opposite effect of what management tries to achieve. 
 
-## Enabling constraints
+## Enabling constraints help teams grow
 
-There is a different way to use a moderate amount of pressure. Taking a complex systems perspective, we can look at enabling constraints [@@+ definitie]. We can use constraints with a team to create a context for them where they feel the urge to continuously reflect, look for improvements, innovate, but also to optimize for flow of work, speed & quality of decisions, questioning what to build, finding Dirt Roads.
+There is a different way to use a moderate amount of pressure. Taking a complex
+systems perspective, we can look at enabling constraints. Enabling constraints
+are constraints on a system (e.g. a team) that do not prescribe the system's
+behaviour, but help the system to self-organize within those constraints.
+Enabling constraints provide sufficient freedom for interesting behaviour to
+emerge.
 
-Clear objectives and constraints on time and effort - pick a date, work with the team as it is, mind the 32 / 40 weekly hours but also breaks, etc. that people need. 
+> There are two types of constraints, **governing constraints** and **enabling constraints**.  
+> As an example, say we'd organize an [Open Space](https://www.agilealliance.org/glossary/open-space) conference: a code of conduct would be a governing constraint; it defines the boundaries of acceptable behaviour and when a participant would cross those boundaries, they will get kicked out.  
+> The Open Space rules and principles on the contrary, are enabling constraints. Rules like *Whoever comes is the right people* and the *Law of Two Feet* do not prescribe what should happen, but they provide a context in which useful conversations start taking place and where people take responsibility for their own learning
+
+Enabling constraints create a container for a team for helps them (tickles
+them?) to continuously reflect, look for improvements, innovate, but also to
+optimize for flow of work, speed & quality of decisions, questioning what to
+build, finding Dirt Roads.
+
+Clear objectives and constraints on time and effort - pick a date, work with the
+team as it is, mind the 32 / 40 weekly hours but also breaks, etc. 
 
 Then challenge the team to find their way of achieving the goal.
 
-This is what we mean with 'pressure' - just enough pressure for a team to have a sense of urgency, to trigger a bit of creativity but also invite push back - "help me reach this goal; help me find a simpler way; if it is impossible, say so, and then find something that is ambitious but achievable together".
+This is what we mean with 'pressure' - just enough pressure for a team to have a
+sense of urgency, to trigger a bit of creativity but also invite push back -
+"help me reach this goal; help me find a simpler way; if it is impossible, say
+so, and then find something that is ambitious but achievable together".
 
-## Keep on growing 
+What we see in practice is that teams get more fluent in particular in Focusing
+and Delivering capabilities, because of demands of their organization, their
+context, the market the organization is operating in. After some time the teams
+plateau and what they do is good enough. Urge to grow further fades. 
 
-What we see in practice is that teams get more fluent in particular in Focusing and Delivering capabilities, because of demands of their organization, their context, the market the organization is operating in. After some time the teams plateau and what they do is good enough. Urge to grow further fades a bit. 
+Having a set of enabling constraints like a goal, a target date, limits on work hours can help a team to feel that urge again. 
 
+## Discovering better ways & maximizing the amount of work not done
 
+Putting a little pressure on a team in the form of the enabling constraints
+mentioned above will help them in discovering better ways. Specifically:
+- **learning better ways** - take ample time to reflect, adjust the way of
+  working and try out stuff; this might feel a bit counter-intuitive because you
+  are limited in time; this could result in all kinds of process improvements,
+  like  writing scripts for repeated work, taking time to thoroughly refactor
+  that piece of code that is continuously slowing you down
+- **(re)organize for shorter feedback loops and better flow** - find/try
+  different ways of how you organize, like more pair/mob programming instead of
+  waiting for code reviews, playing with WIP (work in progress) limits,
+  reconsidering your team's dependencies on other teams
+- **maximizing the amount of work not done**: as a team start questioning what
+  is really needed to achieve the objectives; when there is some pressure,
+  usually you find you can do with less. Dimensional planning is a technique
+  that can help here, see our previous posts: [Good enough
+  software, early & often](/2020/09/02/dimensional-planning.html) and
+  [Dimensional Planning - a
+  story](/2020/09/30/dimensional-planning-a-story.html).
 
+![DoE over sense of urgency -> retro focus -> etc]()
+
+## Sustainable pace
+
+Working with enabling constraints does not mean creating a stressful environment for a team! Some teams might need a bit of help or coaching in how to discover better ways. 
+
+And remember, as a manager, you're in it together. 
+
+## Conclusion
+
+TBD
+
+## References
+
+The concept of Governing vs Enabling Constraints originates from Alicia Juarrero and has been elaborated in the Cynefin sensemaking framework. For more information, see e.g.:
+- Chris Corrigan, [Constraints that enable emergence](http://www.chriscorrigan.com/parkinglot/constraints-that-enable-emergence/)
+- Dave Snowden, [Freedom through Constraints](https://www.cognitive-edge.com/freedom-through-constraints/)
+- Chris Matts, [Constraints that Enable](https://theitriskmanager.com/2018/12/09/constraints-that-enable/)
+- Maciej Kaszubowski, [Enabling constraints in software development](https://mkaszubowski.com/2020/05/11/enabling-constraints-in-software-development.html)
+
+If you'd like to learn more about the Agile Fluency model and how it can help you in getting more from agile working, we recommend reading the [eBook](https://www.agilefluency.org/ebook.php)
+
+<aside>
+  <h3>From good enough to team greatness</h3>
+  <p>
+    Would you like your teams to grow further even though they're doing ok? Do feel you are not getting the benefits from your 'agile transformation'? Drop us a line and we can work with you.
+  </p>
+  <p><div>
+    <a href="/consulting">Learn more about our agile fluency related services</a>
+  </div></p>
+</aside>
