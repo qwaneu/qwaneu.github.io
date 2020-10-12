@@ -8,7 +8,7 @@ image:
 ---
 
 When visiting clients and talking about the architecture of their software systems, we often notice that people conflate different concerns under the term 'architecture'.
-They tend to mix logical conserns with deployment concerns. Examples of*logical concerns* would be domain logic, domain dynamics, and how these are connected. *Deployment concerns* can be for instance REST APIs, components, microservices, and lambdas.
+They tend to mix logical concerns with deployment concerns. Examples of *logical concerns* would be domain logic, domain dynamics, and how these are connected. *Deployment concerns* can be for instance REST APIs, components, microservices, and lambdas.
 The cloud native movement has made this even worse, especially with serverless infrastructure concepts.
 
 An example of this is the post on [What a typical 100% Serverless Architecture looks like in AWS](https://medium.com/serverless-transformation/what-a-typical-100-serverless-architecture-looks-like-in-aws-40f252cd0ecb) by Xavier Lefèvre.
@@ -44,12 +44,12 @@ One of the architecture principles we followed was that each component is respon
 
 Initially this component was deployed as a single unit.
 Then we started noticing some issues with the component.
-The different functionalities turned out to have quite different runtime characteristics:
-- Exports are run only a few times a month, but when running they have a very high CPU and memory demand; this sometimes caused the component to be unavailable, impeding the primary business process of order processing.
-- Sometimes complex search queries triggered heavy processing in the component, reducing responsiveness of the component, again affecting the primary process.
+The distict functionalities turned out to have quite different runtime characteristics:
+- Exports are run only a few times a month, but when running they have a very high CPU and memory demand; this sometimes caused the unit to be unavailable, impeding the primary business process of order processing.
+- Sometimes complex search queries triggered heavy processing in the uni, reducing responsiveness of the unit, again affecting the primary process.
 
-The component was split it into 3 components: order processing, search and export, and they were put in separate git repositories.
-We introduced shared libraries to handle the dependencies between the code bases.
+The unit was split it into 3 components: order processing, search and export, and they were put in separate git repositories.
+We introduced *shared libraries* to handle the dependencies between the code bases.
 
 ![order processing, search and export as three components](/attachments/blogposts/2020/log-dep-view-hex-split-in-3.jpg)
 
@@ -62,7 +62,7 @@ We have one view combining  dependencies, logical coupling, and runtime issues. 
 
 > We split the codebase, but *pulling things apart is not necessarily decoupling*!
 > As a matter of fact, the coupling is still there, but obfuscated.
-> We have actually made things worse...
+We have actually made things worse...
 
 ## Taking a fresh view
 
@@ -75,7 +75,7 @@ We have some coupling here, but it is local to this codebase so acceptable/manag
 
 This is the **logical view** of our order processing subsystem.
 
-We can create three deployables from this single logical component, to accommodate for the different runtime characteristics.
+We can create three deployables from this single logical component, to accommodate the different runtime characteristics.
 This allows us to better balance the different architectural concerns, like coupling/cohesion and runtime performance, scaling.
 
 ![deployment view with databases and 3 order processing deployables](/attachments/blogposts/2020/orders-deployment-view.jpg)
@@ -90,7 +90,7 @@ for instance when the export is already the new version and order processing is 
 ## This is not a new idea
 
 We did not invent this idea of having different perspectives or views on your system's architecture.
-It has been around for quite some time and we'd like to mention a few of our sources of inspiration.
+It has been around for quite some time and we would like to mention a few of our sources of inspiration.
 
 ### 4+1 Architecture View Model
 
@@ -108,7 +108,7 @@ This model distinguishes the Logical View, the Process View, the Development Vie
 
 ### Visual Architecting Process
 
-In 2019 I attended the Software Architecture workshop from Dana Bredemeyer and learned about the Visual Architecting Process by [Ruth Malan](https://ruthmalan.com/) & Dana Bredemeyer](http://bredemeyer.com/). They have lots of goodness to share about architecture and I really recommend this course.
+In 2019 I attended the Software Architecture workshop from Dana Bredemeyer and learned about the Visual Architecting Process by [Ruth Malan](https://ruthmalan.com/) & [Dana Bredemeyer](http://bredemeyer.com/). They have much to share about architecture and I highly recommend this course.
 
 One of the concepts I learned related to this post is four levels of architecture: Meta Architecture, Conceptual Architecture, Logical Architecture and Execution Architecture. A picture from the notes I took during the course:
 
@@ -125,7 +125,7 @@ Along the way, we discover architecture principles and guidelines that we consid
 
 ### ...and more
 
-There are more useful related approaches, like Simon Brown's [C4 Model for Visualising Architecture](https://c4model.com/).
+Simon Brown's [C4 Model for Visualising Architecture](https://c4model.com/) alsso supports multiple perspectives.
 
 ## But we are cloud native!
 
@@ -139,12 +139,12 @@ It does take away some infrastructure concerns, but you still need to decide how
 An interesting development in this area is linking financial models to (serverless) infrastructure. With cloud based infrastructure, we are moving away from mostly fixed cost infrastructure to more and more variable costs and pay-per-use.
 The deployment view can provide interesting financial feedback on logical design decisions. Refactoring could have direct financial benefit.
 Simon Wardley (of Wardley Mapping fame) talks about this in the [webinar he did together with Jamie Dobson on DevOps is the New Legacy](https://info.container-solutions.com/devops-is-the-new-legacy).
-
+@TODO findev or finops post link
 ## Microservices will solve this!
 
 No.
 
-Microservices (or rather appropriately sized services) are a deployment concept, they are about what things you deploy together and what things need to be deployed separately.
+Microservices, or rather appropriately sized services, are a deployment concept, they are about what things you deploy together and what things need to be deployed separately.
 The logical view of your software system is about capturing your domain and managing dependencies and consistency boundaries.
 If you conflate the logical design with microservices, it becomes hard to make good decisions.
 
@@ -153,17 +153,17 @@ He mentions the Bounded Context concept from Domain Driven Design, which is all 
 
 ## But it is all connected!
 
-It is. But that does not reduce the value of having the separate views. We still have to map the logical view onto the deployment view, which might result in some restrictions on the logical design decisions we take.
+It is. But that does not reduce the value of separating the views. We still have to map the logical view onto the deployment view, which might result in some restrictions on the logical design decisions we take.
 But with separate, clear views, this becomes easier.
-This is a bit analogous to well-factored code that is way easier to optimize for performance than cluttered, entangled code.
+This is a bit analogous to well-factored code that is easier to optimize for performance than entangled code.
 
 ## Conclusion
 
-Having just one view on components mixes different concerns and makes it more difficult to make good decisions about e.g. dependencies.
-This can lead to suboptimal design decisions, like splitting code at the wrong spots or a less optimal runtime environment, ultimately leading to production issues.
+Having just one view on components mixes different concerns and makes it harder to decide about e.g. dependencies.
+This can lead to suboptimal design decisions, such as splitting code at the wrong spots or a suboptimal runtime environment, which ultimately lead to production issues.
 
 Having a logical view and a deployment view allows you to address different design and runtime trade-offs separately.
-Different views enable you to have more focused, fruitful conversations about the different architecture and design decisions you make for the systems you develop.
+Different views enable you to have more focused, fruitful conversations about the architecture and design decisions you make for the systems you develop.
 
 ## References
 
