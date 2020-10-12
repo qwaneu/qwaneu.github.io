@@ -3,6 +3,7 @@ layout: post
 title: Logical vs Deployment Architecture
 tags:
   - architecture
+  - DevOps
 author: Marc Evers
 image: /attachments/blogposts/2020/logical-deployment-thumbnail.jpg
 ---
@@ -108,65 +109,70 @@ We have actually made things worse...
 
 ## Taking a fresh view
 
-What happened? We did a logical split of a component because of
-deployment/runtime concerns. Let's take a different perspective on this:
-logically we can continue to see it as a single coherent component that has one
-codebase, one git repository. We have some coupling here, but it is local to
-this codebase so it is manageable. So we are back at the initial
-architecture drawing:
+What happened? We split the component and its codebase into three because of
+runtime concerns. Let's take a different perspective on this: logically we can
+continue to see it as a single coherent component with one codebase, one git
+repository. There is some coupling here, but it is local to this codebase and
+manageable. So we are back at the initial architecture picture:
 
 ![order processing, search and export in a single component, seen through a hexagonal architecture lens](/attachments/blogposts/2020/log-dep-view-hex-2.jpg)
 {: class="post-image post-image-70" }
 
-This is the **logical view** of our order processing subsystem.
+This is the **logical view** on our order processing subsystem. It is about our domain logic and how it connects to its outside world.
 
-We can create three deployables from this single logical component, to accommodate for the different runtime characteristics.
-This allows a better balance between different architectural concerns, like coupling/cohesion and runtime performance, scaling.
+We can create three deployables from this single logical component, to
+accommodate for the different runtime characteristics. This allows a better
+balance between different architectural concerns, like coupling/cohesion,
+runtime performance, scaling.
 
 ![deployment view with databases and 3 order processing deployables](/attachments/blogposts/2020/orders-deployment-view.jpg)
 {: class="post-image post-image-70" }
 
-This is the **deployment view** of our order processing subsystem.
+This is the **deployment view** of our order processing subsystem. It is about what units of deployment we have, how they depend on each other and on database services.
 
-So by separating the two views, we can discuss logical concerns and deployment/runtime concerns separately. This allows us to make better trade-offs.
-By deploying a single logical component as multiple deployment units, we need to prevent compatibility issues during deployment:
-for instance when the export is already the new version and order processing is still the old version. In this situation however, the benefit of allowing different runtime characteristics outweighs these costs.
+So by separating the two views, we can discuss logical concerns and deployment
+or runtime concerns separately. This allows us to make better trade-offs. Having
+one logical component split into three deployables does incur a cost for
+example: we need to take care of potential compatibility issues during
+deployment, when during a short period of time multiple versions of the
+component are active. The benefit of allowing different runtime characteristics
+outweighs these costs.
 
 ## This is not a new idea
 
-We did not invent this idea of having different perspectives or views on your system's architecture.
-It has been around for quite some time and we would like to mention a few of our sources of inspiration.
+We did not invent this idea of having different views on your system's
+architecture. It has been around for quite some time and we would like to
+mention a few of our sources of inspiration.
 
 ### 4+1 Architecture View Model
 
-Philippe Kruchten's [4+1 Architecture View Model](https://www.cs.ubc.ca/~gregor/teaching/papers/4+1view-architecture.pdf) (PDF) dates from 1995.
+Philippe Kruchten's [4+1 Architecture View Model (PDF)](https://www.cs.ubc.ca/~gregor/teaching/papers/4+1view-architecture.pdf) dates from 1995.
 This model distinguishes the Logical View, the Process View, the Development View, the Physical View, and the Scenario (or Use Case) view.
 
 ![4+1 architecture model](/attachments/blogposts/2020/4plus1.jpg)
 {: class="post-image post-image-70" }
 
-- _Logical view_: supports functional requirements, this would contain domain objects
+- _Logical view_: supports functional requirements and would contain domain objects
 - _Process view_: addresses things like concurrency, system integrity, fault tolerance
-- _Development view_: focuses on the organization of software in modules, libraries, subsystems (bounded contexts)
+- _Development view_: focuses on the organization of software in modules, libraries, subsystems; the concept of [Bounded Contexts](https://www.martinfowler.com/bliki/BoundedContext.html) from Domain Driven Design could fit here
 - _Physical view_: takes into account system qualities like availability, performance, scalability; it visualizes how the software runs on a network of nodes
-- _Use case view_: small set of important scenarios that show all four views work together
+- _Use case view_: small set of important scenarios that show how all these views work together
 
 ### Visual Architecting Process
 
-In 2019 I attended the Software Architecture workshop from Dana Bredemeyer and learned about the Visual Architecting Process by [Ruth Malan](https://ruthmalan.com/) & [Dana Bredemeyer](http://bredemeyer.com/). They have much to share about architecture and I highly recommend this course.
+In 2019, I attended the Software Architecture workshop from Dana Bredemeyer and learned about the Visual Architecting Process by [Ruth Malan](https://ruthmalan.com/) & [Dana Bredemeyer](http://bredemeyer.com/). They have a lot of great material about architecture and I highly recommend this course.
 
-One of the concepts I learned related to this post is four levels of architecture: Meta Architecture, Conceptual Architecture, Logical Architecture and Execution Architecture. A picture from the notes I took during the course:
-
-![visual architecture process - levels](/attachments/blogposts/2020/visual-architecture-levels.jpg)
-{: class="post-image post-image-70" }
-
+One of the concepts I learned related to this post is four levels of architecture: Meta Architecture, Conceptual Architecture, Logical Architecture and Execution Architecture. 
 - _Conceptual_: about components, collaborations and their rationale
 - _Logical_: fully defined interfaces, rich description of responsibilities
 - _Execution_: mapping components on physical resources, validate runtime quality requirements
 - _Meta_: higher level guiding ideas, vision, philosophy & principles
 
+![visual architecture process - levels](/attachments/blogposts/2020/visual-architecture-levels.jpg)
+{: class="post-image post-image-70" }
+
 The process is not linear but highly iterative: we take design decision at for instance the conceptual level, validate & record it, get interesting feedback from elaborating it on the Logical level, so we revisit the Conceptual level.
-Along the way, we discover architecture principles and guidelines that we consider at the meta level.
+Along the way, we discover architecture principles and guidelines that we consider at the meta level (the picture is from the notes I took at the course).
 
 ### ...and more
 
@@ -174,54 +180,75 @@ Simon Brown's [C4 Model for Visualising Architecture](https://c4model.com/) also
 
 ## But we are cloud native!
 
-We noticed that moving to a cloud based infrastructure tends to make the confusion worse. At various clients, we have seen developers enthusiastically embracing cloud services, making the infrastructure the leading view.
-We understand that developers need some focus on cloud services, because cloud offerings tend to be quite complicated and have a steep learning curve.
-Conflating the different views or leaving the conceptual view implicit will make it even more complicated.
+We noticed the movement to a cloud based infrastructure tends to make the
+confusion worse. At various clients, we have seen developers enthusiastically
+embracing cloud services, making the infrastructure the leading view. We
+understand that developers need some focus on cloud services, because cloud
+offerings are quite extensive and complicated, and have a steep learning curve.
 
-Serverless does not mean you can stop thinking how to model your domain in software and how to manage dependencies.
-It does take away some infrastructure concerns, but you still need to decide how to map your domain and logical components onto the infrastructure.
+Conflating the different views or leaving the conceptual view implicit will make
+it even more complicated however. Serverless for instance does not mean you can
+stop thinking how to model your domain in software and how to manage
+dependencies. It does take away some infrastructure concerns, but **you still
+need to decide how to map your domain and logical components onto the
+infrastructure**.
 
-An interesting development in this area is linking financial models to (serverless) infrastructure. With cloud based infrastructure, we are moving away from mostly fixed cost infrastructure to more and more variable costs and pay-per-use.
-The deployment view can provide interesting financial feedback on logical design decisions. Refactoring could have direct financial benefit.
-Simon Wardley (of Wardley Mapping fame) talks about this in the [webinar he did together with Jamie Dobson on DevOps is the New Legacy](https://info.container-solutions.com/devops-is-the-new-legacy). Or read more in detail about this in [Why the fuss about serverless?](https://blog.gardeviance.org/2016/11/why-fuss-about-serverless.html) [FinDev and Serverless Microeconomics: Part 1](https://aws.amazon.com/blogs/enterprise-strategy/findev-and-serverless-microeconomics-part-1/) if you'd like to learn more.
+An interesting development in this area is linking financial models to
+(serverless) infrastructure. With cloud based infrastructure, we are moving away
+from mostly fixed cost infrastructure to more and more variable costs and
+pay-per-use. **The deployment view can provide interesting financial feedback on
+logical design decisions. Refactoring could have direct financial benefit.**
+Simon Wardley (of Wardley Mapping fame) talks about this in the [webinar he did
+together with Jamie Dobson on DevOps is the New
+Legacy](https://info.container-solutions.com/devops-is-the-new-legacy). Or have a look at
+ [Why the fuss about
+serverless?](https://blog.gardeviance.org/2016/11/why-fuss-about-serverless.html)
+and [FinDev and Serverless Microeconomics: Part
+1](https://aws.amazon.com/blogs/enterprise-strategy/findev-and-serverless-microeconomics-part-1/)
+if you'd like to learn more.
 
 ## Microservices will solve this!
 
 No.
 
-Microservices, or rather appropriately sized services, are a deployment concept,
-they are about what things you deploy together and what things need to be
+Microservices, or rather appropriately sized services, are a deployment concept.
+They are about what things you deploy together and what things need to be
 deployed separately. The logical view of your software system is about capturing
 your domain and managing dependencies and consistency boundaries. If you
 conflate the logical design with microservices, it becomes hard to make good
 decisions.
 
-Alberto Brandolini elaborates on this in his recent post [About Bounded Contexts and Microservices](https://blog.avanscoperta.it/2020/06/11/about-bounded-contexts-and-microservices/).
+Alberto Brandolini elaborates on this in his excellent post [About Bounded Contexts and Microservices](https://blog.avanscoperta.it/2020/06/11/about-bounded-contexts-and-microservices/).
 He mentions the Bounded Context concept from Domain Driven Design, which is all about the logical architecture.
 
 ## But it is all connected!
 
-It is. But that does not reduce the value of separating the views. We still have to map the logical view onto the deployment view, which might result in some restrictions on the logical design decisions we take.
-But with separate, clear views, this becomes easier.
-This is a bit analogous to well-factored code that is easier to optimize for performance than entangled code.
+It is. But that does not reduce the value of having separate the views. We still
+have to map the logical view onto the deployment view, which might result in
+some restrictions on the logical design decisions we take. But with separate,
+clear views, this becomes easier. This is in a way analogous to well-factored
+code that is easier to optimize for performance than entangled code.
 
 ## Conclusion
 
-Having just one view on components mixes different concerns and makes it harder to decide about e.g. dependencies.
-This can lead to suboptimal design decisions, such as splitting code at the wrong spots or a suboptimal runtime environment, which ultimately lead to production issues.
+Having just one view on components mixes different concerns and makes it harder
+to decide about e.g. dependencies. This can lead to suboptimal design decisions,
+such as splitting code at the wrong spots or a suboptimal runtime environment,
+which ultimately lead to production issues.
 
-Having a logical view and a deployment view allows you to address different design and runtime trade-offs separately.
-Different views enable you to have more focused, fruitful conversations about the architecture and design decisions you make for the systems you develop.
+Having a logical view and a deployment view allows you to address different
+design and runtime trade-offs separately. Different views enable you to have
+more focused, fruitful conversations about the architecture and design decisions
+you make for the systems you develop.
 
 ## References
 
-- Alberto Brandolini, [About Bounded Contexts and Microservices](https://blog.avanscoperta.it/2020/06/11/about-bounded-contexts-and-microservices/)
 - Gregor Riegler, [Levels of Modularity](http://gregorriegler.com/2020/08/08/levels-of-modularity.html)
 - Vasco Figueira, [Microservices - architecture nihilism in minimalism's clothes](https://vlfig.me/posts/microservices)
 
 <aside>
   <h3>Seeing your systems through different lenses</h3>
-  <p>Making informed architecture decisions across your application landscape is a tough skill. We can support you with for instance architecture reviews, carrying out experiments and facilitating collaborative architecture sessions.</p>
+  <p>Making informed architecture decisions across your application landscape is a tough skill. We can support you with for instance architecture reviews, carrying out experiments, and facilitating collaborative architecture sessions.</p>
   <p><div>
     <a href="/consulting">Learn more about our consultancy services</a>
   </div></p>
