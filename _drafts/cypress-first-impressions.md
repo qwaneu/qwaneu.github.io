@@ -13,6 +13,8 @@ slow and brittle? I have had that too, don't worry. Imagine then if you could
 have cost-effective end-to-end tests. How would that impact your product
 development?
 
+- @TODO cypress is fast - video from a run without much explanation
+
 ## Fast browser tests in addition to...
 
 As Marc and Rob have described in their series on architecting and test-driving Vue.js (see [How to keep Front End complexity in check with Hexagonal Architecture](/2020/09/09/how-to-keep-complexity-in-check-with-hexagonal-architecture.html) and [A Hexagonal Vue.js front-end, by example](/2020/09/25/hexagonal-frontend-example.html)), we like to have tests in our front-ends, for [anything that can possibly break](http://wiki.c2.com/?TestEverythingThatCouldPossiblyBreak). In addition to that, I like to have:
@@ -71,10 +73,16 @@ If you start fresh, Cypress lowers the bar for developing with
 Dialog pattern](http://xunitpatterns.com/Humble%20Object.html) instead of a tightly coupled network.
 
 Changing the speed at which something runs by an order of magnitude is a game
-changer. I've experienced this with test driven development at the unit level in the past, and once with Selenium (after architecting the application to be fast).
+changer. I've experienced this with test driven development at the unit level in
+the past, and once with Selenium (after architecting the application to be
+fast).
 
+-> @TODO more DOE here
+-> @TODO cypress run from CI here (minus the 5 seconds startup)
+
+You can always slow down fast tests if you need, the other way around is much more difficult.
 
 ## background / further reading / stuff that now has partly been addd to Instead of
-&#x2013; see also [testcafe - A node.js tool to automate end-to-end web testing | TestCafe](a_node_js_tool_to_automate_end_to_end_web_testing_testcafe.md)
+&#x2013; see also [testcafe - A node.js tool to automate end-to-end web testing | TestCafe](a_node_js_tool_to_automate_end_to_end_web_testing_testcafe.md) - this has built in support for using things like google auth. Was recommended on twitter @TODO dig out tweet - this has built in support for using things like google auth. Was recommended on twitter @TODO dig out tweet. For what I'm working on now, I want home grown authentication for a change, I might explore test cafe for other projects.
 [cypress accessible blog example](cypress_example_recipes_examples_blogs_a11y_at_master_cypress_io_cypress_example_recipes.md)
 [Cypress](20200925094231-cypress.md)
