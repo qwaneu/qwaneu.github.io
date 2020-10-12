@@ -4,79 +4,124 @@ title: Logical vs Deployment Architecture
 tags:
   - architecture
 author: Marc Evers
-image:
+image: /attachments/blogposts/2020/logical-deployment-thumbnail.jpg
 ---
 
-When visiting clients and talking about the architecture of their software systems, we often notice that people conflate different concerns under the term 'architecture'.
-They tend to mix logical concerns with deployment concerns. Examples of *logical concerns* would be domain logic, domain dynamics, and how these are connected. *Deployment concerns* can be for instance REST APIs, components, microservices, and lambdas.
-The cloud native movement has made this even worse, especially with serverless infrastructure concepts.
+When visit clients and discuss the architecture of their software systems, we
+often notice that people conflate different concerns under the term
+'architecture'. They tend to mix logical concerns with deployment concerns.
+Examples of *logical concerns* would be domain logic, domain dynamics, and how
+these are connected. *Deployment concerns* can be for instance REST APIs,
+components, microservices, and lambdas. The recent ['cloud native'](https://en.wikipedia.org/wiki/Cloud_native_computing) movement has made this
+even worse, especially with serverless infrastructure concepts.
 
-An example of this is the post on [What a typical 100% Serverless Architecture looks like in AWS](https://medium.com/serverless-transformation/what-a-typical-100-serverless-architecture-looks-like-in-aws-40f252cd0ecb) by Xavier Lefèvre.
-The post gives a nice view into some of the architecture and infrastructure decisions they made. The diagram in the post however talks AWS lambdas, S3 buckets, API gateway, etc.
-This architecture view is not about the domain concepts and how they relate (they talk a bit about it in the text). Neither does it focus on how business logic is mapped onto the infrastructure concepts.
-The view presented is a deployment view, not a logical view of the application.
+![mapping multiple views](/attachments/blogposts/2020/logical-deployment-thumbnail.jpg)
+{: class="post-image post-image-50" }
+
+In this post we will elaborate on why it is useful to have different views on the architecture of your software systems.
+
+## Table of contents
+- [Views on software systems](#views-on-software-systems)
+- [An example](#an-example)
+- [Taking a fresh view](#taking-a-fresh-view)
+- [This is not a new idea](#this-is-not-a-new-idea)
+- [But we are cloud native!](#but-we-are-cloud-native)
+- [Microservices will solve this!](#microservices-will-solve-this)
+- [But it is all connected!](#but-it-is-all-connected)
+- [Conclusion](#conclusion)
+- [References](#references)
 
 ## Views on software systems
 
-I am not saying this view on an application is wrong. On the contrary, I find [the 100% serverless post](https://medium.com/serverless-transformation/what-a-typical-100-serverless-architecture-looks-like-in-aws-40f252cd0ecb) insightful in how they are using the serverless infrastructure concepts and how all the services in the infrastructure are connected.
-It is however just one of many views on a software system. For any non trivial software system, we need multiple views, to make the complexity manageable for us.
-Multiple views enable us to makie trade-offs about:
+An example of mixed architecture concerns is the post on [What a typical 100%
+Serverless Architecture looks like in
+AWS](https://medium.com/serverless-transformation/what-a-typical-100-serverless-architecture-looks-like-in-aws-40f252cd0ecb)
+by Xavier Lefèvre. The post gives a nice view into some of the infrastructure
+decisions they have made. The diagram in the post however primarily talks AWS
+Lambdas, S3 buckets, API gateway, etc. It is not about the domain concepts and
+how they relate (they talk a bit about it in the text). Neither does it focus on
+how business logic is mapped onto the infrastructure concepts. The view
+presented is a deployment view, not a logical view of the system.
 
+I am not saying this view on a system is wrong. On the contrary, I find [the
+100% serverless
+post](https://medium.com/serverless-transformation/what-a-typical-100-serverless-architecture-looks-like-in-aws-40f252cd0ecb)
+insightful in how they are using the serverless infrastructure concepts and how
+all the services in the infrastructure are connected. It is however one of many
+views on a software system. For any non trivial software system, we need
+multiple views, to keep complexity manageable.
+
+Multiple views enable us to make trade-offs about:
 * business rules,
 * how concepts work together,
 * how everything is mapped onto infrastructure.
 
-_Mapping onto_ is key here - we start from what we want, and map that on the infrastructure we can get. Sometimes we let cool infrastructure inspire us, but we always go back to our wants and the user needs.
+> _Mapping onto_ is key here - we start from what we want, and map that on the
+> infrastructure we can get. Sometimes we let cool infrastructure inspire us,
+> but we always go back to our wants and our users' needs.
 
 ## An example
 
 Let's look at an example, loosely based on a project we worked on some time ago. The system is a web shop. One of the back end components processes product orders.
-This component creates/stores/retrieves orders from a relational database; it also offers order overview with full text search option, and the possibility to export of orders per time period (up to a year).
+This component creates/stores/retrieves orders from a relational database; it also offers an order overview with full text search functionality, and the possibility to export of orders per time period.
 For the search and export, an Elastic Search based index was used.
 
-All three functionalities were closely related, being about the same Order [Aggregate](@@link to some DDD goodness). Seen through the [hexagonal architecture lens](/2020/08/20/hexagonal-architecture.html), it looks like this:
+All three functionalities were closely related, being about the same Order
+[Aggregate](https://www.martinfowler.com/bliki/DDD_Aggregate.html). Seen through
+the [Hexagonal Architecture lens](/2020/08/20/hexagonal-architecture.html), it
+looks like this:
 
 ![order processing, search and export in a single component, seen through a hexagonal architecture lens](/attachments/blogposts/2020/log-dep-view-hex-1.jpg)
 
 The red 'A's are the primary and secondary adapter, REST controllers, SQL database adapters, and Elastic Search adapters in this case.
 
-One of the architecture principles we followed was that each component is responsible for its own data storage, which amounts to no shared logical databases between components and no inter-component coupling via the database.
+An architecture principle we followed was that each component is responsible for its own data storage, which amounts to no shared logical databases between components and no inter-component coupling via a database.
 
-Initially this component was deployed as a single unit.
+Initially this component was deployed as a single unit: one Docker image, a few instances running on AWS EC2 machines to handle the load.
 Then we started noticing some issues with the component.
-The distict functionalities turned out to have quite different runtime characteristics:
+The distinct functionalities turned out to have quite different runtime characteristics:
 - Exports are run only a few times a month, but when running they have a very high CPU and memory demand; this sometimes caused the unit to be unavailable, impeding the primary business process of order processing.
-- Sometimes complex search queries triggered heavy processing in the uni, reducing responsiveness of the unit, again affecting the primary process.
+- Sometimes complex search queries triggered heavy processing, reducing responsiveness of the unit, again affecting the primary process.
 
-The unit was split it into 3 components: order processing, search and export, and they were put in separate git repositories.
-We introduced *shared libraries* to handle the dependencies between the code bases.
+The unit was split it into 3 components: order processing, search and export,
+and they were put in separate git repositories. We introduced *shared libraries*
+to handle the dependencies between the code bases.
 
 ![order processing, search and export as three components](/attachments/blogposts/2020/log-dep-view-hex-split-in-3.jpg)
 
-The 3 components got their own deployment parameters: the export component can be a single instance with a lot of memory, the order processing component can be configured for auto scaling during busy times, etc.
+The 3 components got their own deployment parameters: the export component can
+be a single instance with a lot of memory, the order processing component can be
+configured for auto scaling during busy times, etc.
 
-> But now we have 3 components that are tightly coupled. They have some "interesting" dependencies across the components, as indicated by the dotted lines.
-> The components also share databases, so violate our architecture principles...or not? Did we create a mess or...?
+> But now we have 3 components that are tightly coupled. They have some
+> "interesting" dependencies across the components, as indicated by the dotted
+> lines. The components also share databases, so they violate our architecture
+> principles...or not? Did we create a mess or...?
 
-We have one view combining  dependencies, logical coupling, and runtime issues. Because these different concerns get all mixed up, things get unnecessarily complicated.
+We have one view combining  dependencies, logical coupling, and runtime issues.
+Because these different concerns get all mixed up, things get unnecessarily
+complicated.
 
 > We split the codebase, but *pulling things apart is not necessarily decoupling*!
-> As a matter of fact, the coupling is still there, but obfuscated.
+> As a matter of fact, the coupling is still there, but obfuscated.  
 We have actually made things worse...
 
 ## Taking a fresh view
 
-What happened? We did a logical split of a component because of deployment/runtime concerns.
-Let's take a different perspective on this: logically we can continue to see it as a single coherent component that has one codebase, one git repository.
-We have some coupling here, but it is local to this codebase so acceptable/manageable. So we are back at the initial architecture drawing:
+What happened? We did a logical split of a component because of
+deployment/runtime concerns. Let's take a different perspective on this:
+logically we can continue to see it as a single coherent component that has one
+codebase, one git repository. We have some coupling here, but it is local to
+this codebase so it is manageable. So we are back at the initial
+architecture drawing:
 
 ![order processing, search and export in a single component, seen through a hexagonal architecture lens](/attachments/blogposts/2020/log-dep-view-hex-2.jpg)
 {: class="post-image post-image-70" }
 
 This is the **logical view** of our order processing subsystem.
 
-We can create three deployables from this single logical component, to accommodate the different runtime characteristics.
-This allows us to better balance the different architectural concerns, like coupling/cohesion and runtime performance, scaling.
+We can create three deployables from this single logical component, to accommodate for the different runtime characteristics.
+This allows a better balance between different architectural concerns, like coupling/cohesion and runtime performance, scaling.
 
 ![deployment view with databases and 3 order processing deployables](/attachments/blogposts/2020/orders-deployment-view.jpg)
 {: class="post-image post-image-70" }
@@ -125,7 +170,7 @@ Along the way, we discover architecture principles and guidelines that we consid
 
 ### ...and more
 
-Simon Brown's [C4 Model for Visualising Architecture](https://c4model.com/) alsso supports multiple perspectives.
+Simon Brown's [C4 Model for Visualising Architecture](https://c4model.com/) also supports multiple perspectives.
 
 ## But we are cloud native!
 
@@ -138,15 +183,18 @@ It does take away some infrastructure concerns, but you still need to decide how
 
 An interesting development in this area is linking financial models to (serverless) infrastructure. With cloud based infrastructure, we are moving away from mostly fixed cost infrastructure to more and more variable costs and pay-per-use.
 The deployment view can provide interesting financial feedback on logical design decisions. Refactoring could have direct financial benefit.
-Simon Wardley (of Wardley Mapping fame) talks about this in the [webinar he did together with Jamie Dobson on DevOps is the New Legacy](https://info.container-solutions.com/devops-is-the-new-legacy).
-@TODO findev or finops post link
+Simon Wardley (of Wardley Mapping fame) talks about this in the [webinar he did together with Jamie Dobson on DevOps is the New Legacy](https://info.container-solutions.com/devops-is-the-new-legacy). Or read more in detail about this in [Why the fuss about serverless?](https://blog.gardeviance.org/2016/11/why-fuss-about-serverless.html) [FinDev and Serverless Microeconomics: Part 1](https://aws.amazon.com/blogs/enterprise-strategy/findev-and-serverless-microeconomics-part-1/) if you'd like to learn more.
+
 ## Microservices will solve this!
 
 No.
 
-Microservices, or rather appropriately sized services, are a deployment concept, they are about what things you deploy together and what things need to be deployed separately.
-The logical view of your software system is about capturing your domain and managing dependencies and consistency boundaries.
-If you conflate the logical design with microservices, it becomes hard to make good decisions.
+Microservices, or rather appropriately sized services, are a deployment concept,
+they are about what things you deploy together and what things need to be
+deployed separately. The logical view of your software system is about capturing
+your domain and managing dependencies and consistency boundaries. If you
+conflate the logical design with microservices, it becomes hard to make good
+decisions.
 
 Alberto Brandolini elaborates on this in his recent post [About Bounded Contexts and Microservices](https://blog.avanscoperta.it/2020/06/11/about-bounded-contexts-and-microservices/).
 He mentions the Bounded Context concept from Domain Driven Design, which is all about the logical architecture.
