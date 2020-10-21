@@ -37,13 +37,14 @@ I'm quite handy at writing unit tests, so my UI is usually not broken, and the t
 
 I was one of those people who would go: "My tests are great, now I don't have to click through the UI all the time". When I hear something like that now, I cringe. I knew in theory that, apart from observing users, reflectively using the application yourself is a powerful feedback mechanism. Yet some states are hard to achieve in a test situation, and doing this in production is not necessarily feasible. So when, after a long time, I am finally brave to click through the UI, I go "Oh. this is ... bad!". And because it is slow and cumbersome, I can't immediately fix it, and the pattern repeats.
 
-- @TODO add small DOE HERE
-
+-- @@ TODO
+```
 exploratory testing -> focus on user needs
 hard to achieve states -> exploratory test cost -> minus exploratory testing -> hard to achieve states
 
 if it hurts, do it more often:
-exploratory testing -> speed of explortory testing -> minus hard to achieve states
+exploratory testing -> speed of exploratory testing -> minus hard to achieve states
+```
 
 But if everything is manual, this is still expensive, and doesn't scale. The time elapsed from an incoming user issue to first reproduction remains high (especially if it is a part of the UI we haven't worked on in a while).
 
