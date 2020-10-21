@@ -67,7 +67,7 @@ Day two is the hands-on day. In two parts we will plan and execute a
 * Duration: 2 Days
 * Training infrastructure (including laptops) will be taken care of
 * Basic programming skills required
-* This training is available as open enrollment and in-house.
+* This training is available as open enrolment and in-house.
 * This training is available as half day follow up on our [test driven development training](/training/test-driven-development).
 
 

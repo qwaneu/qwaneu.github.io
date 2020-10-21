@@ -47,7 +47,7 @@ what this means for steering a change process
 
 * Duration: 1 day
 * No laptops required
-* This training is available as open enrollment and in-house.
+* This training is available as open enrolment and in-house.
 
 ### Register
 

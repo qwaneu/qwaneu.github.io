@@ -8,7 +8,7 @@ author: Marc Evers
 image: /attachments/blogposts/2020/logical-deployment-thumbnail.jpg
 ---
 
-When visit clients and discuss the architecture of their software systems, we
+When we visit clients and discuss the architecture of their software systems, we
 often notice that people conflate different concerns under the term
 'architecture'. They tend to mix logical concerns with deployment concerns.
 Examples of *logical concerns* would be domain logic, domain dynamics, and how
@@ -19,7 +19,7 @@ even worse, especially with serverless infrastructure concepts.
 ![mapping multiple views](/attachments/blogposts/2020/logical-deployment-thumbnail.jpg)
 {: class="post-image post-image-50" }
 
-In this post we will elaborate on why it is useful to have different views on the architecture of your software systems.
+In this post we will show how separating logical and deployment views on the architecture of your software systems facilitates more fruitful conversations. We will start with some of our experience on what happens when you don't.
 
 ## Table of contents
 - [Views on software systems](#views-on-software-systems)
@@ -245,6 +245,8 @@ you make for the systems you develop.
 
 - Gregor Riegler, [Levels of Modularity](http://gregorriegler.com/2020/08/08/levels-of-modularity.html)
 - Vasco Figueira, [Microservices - architecture nihilism in minimalism's clothes](https://vlfig.me/posts/microservices)
+
+_Credits: thanks to Willem for editing and helping improve this post._
 
 <aside>
   <h3>Seeing your systems through different lenses</h3>

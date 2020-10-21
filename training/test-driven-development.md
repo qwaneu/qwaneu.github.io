@@ -38,8 +38,8 @@ The course consists of a mix of short presentations, live programming demonstrat
 * Duration: 2 days
 * Training infrastructure (including laptops) will be taken care of
 * Basic programming skills required
-* This training is available as open enrollment and in-house.
-* Programming languages: Java, C#, Python, Ruby, Javascript, TypeScript, Scala
+* This training is available as open enrolment and in-house.
+* Programming languages: Java, C#, Python, Ruby, JavaScript, TypeScript, Scala
 * We deliver this training in The Netherlands, the UK, and Belgium
 
 ### Register
@@ -48,7 +48,7 @@ Please see [Test Driven Development in C# on Springest](https://www.springest.nl
 
 ### Our colleagues
 
-Although we think we provide something special with this training, we're not the only supplier. Here's a list of our collegues in the Netherlands:
+Although we think we provide something special with this training, we're not the only supplier. Here's a list of our colleagues in the Netherlands:
 
 * [Test driven development at DevOn](https://www.devon.nl/training/?eventtitle=certified-agile-test-driven-development){:target="_blank"}
 * [Test driven development at Alten](https://www.alten.nl/en/training-test-driven-development-tdd/){:target="_blank"}
