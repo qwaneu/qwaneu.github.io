@@ -85,7 +85,8 @@ Your browser does not support the video tag.
 
 You can always slow down fast tests if you need, the other way around is much more difficult.
 
-## background / further reading / stuff that now has partly been addd to Instead of
-&#x2013; see also [testcafe - A node.js tool to automate end-to-end web testing | TestCafe](a_node_js_tool_to_automate_end_to_end_web_testing_testcafe.md) - this has built in support for using things like google auth. Was recommended on twitter @TODO dig out tweet - this has built in support for using things like google auth. Was recommended on twitter @TODO dig out tweet. For what I'm working on now, I want home grown authentication for a change, I might explore test cafe for other projects.
-[cypress accessible blog example](cypress_example_recipes_examples_blogs_a11y_at_master_cypress_io_cypress_example_recipes.md)
-[Cypress](20200925094231-cypress.md)
+## Further reading
+
+Yves Reynhout recommended Test Cafe on twitter for his use case:
+<blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="en" dir="ltr">I&#39;ve switched to testcafe since cypress didn&#39;t deal very well with navigating to other domains (e.g. brokered authentication). While the argument is that it&#39;s not part of the SUT, I found that changing / special casing the SUT to be able to cope with it just not worth my time.</p>&mdash; Yves Reynhout (@yreynhout) <a href="https://twitter.com/yreynhout/status/1311614345449803779?ref_src=twsrc%5Etfw">October 1, 2020</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
