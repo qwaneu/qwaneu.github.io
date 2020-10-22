@@ -3,6 +3,8 @@ layout: post
 title: Fast browser tests with Cypress - First Impressions
 tags:
   - architecture
+  - browser testing
+  - test driven development
 author: Willem van den Ende
 image:
 ---
@@ -43,7 +45,7 @@ The optimistic loop is exploratory testing leads to better UX, which in turn lea
 
 We can do more exploratory tests by sheer force of will, or throwing more people at the problem. But if everything is manual, this is expensive, and doesn't scale. The time elapsed from an incoming user issue to first reproduction remains high, especially if it is a part of the UI we haven't worked on in a while.
 
-### Selium works, but is tiring
+### Selenium works, but is tiring
 Selenium helps me to see the UI in action, but watching it run the tests, including browsers spawning etc is tiring. So in effect I use it similarly to unit tests. I look at the UI I am developing, and when a test fails, but not otherwise, because the threshold is too high.
 
 ### What if we made our system fast?
@@ -51,7 +53,9 @@ End-to-end tests can be fast, if you [design the front-end and backend system(s)
 
 I've made another diagram of effects to illustrate what happens when it is easy to set up an exploratory test quickly.
 ![Diagram is explained below.](/attachments/blogposts/2020/cypress-doe-exploratory.jpg)
-When setup speed is high, we can do more exploratory testing, which means we have fewer defects, and more time available to do automated tests, which improves our setup speed.
+Casting a wider net of automated tests leads to fewer hard to achieve states. When we have fewer hard to achieve states, we can devote more time to  exploratory testing, which means we have fewer defects, and more time available to do automated tests, and then we have come full circle, with fewer hard to achieve states.
+
+Marc suggested, rightly, that exploratory testing doesn't _immediately_ lead to fewer defects. So I've drawn a delay there. Working through an application, even when the parts run fast, takes time. Understanding and better UX also take time.
 
 ## Why Cypress
 
@@ -88,3 +92,5 @@ You can always slow down fast tests if you need, the other way around is much mo
 Yves Reynhout recommended Test Cafe on twitter for his use case:
 <blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="en" dir="ltr">I&#39;ve switched to testcafe since cypress didn&#39;t deal very well with navigating to other domains (e.g. brokered authentication). While the argument is that it&#39;s not part of the SUT, I found that changing / special casing the SUT to be able to cope with it just not worth my time.</p>&mdash; Yves Reynhout (@yreynhout) <a href="https://twitter.com/yreynhout/status/1311614345449803779?ref_src=twsrc%5Etfw">October 1, 2020</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Thanks to Marc Evers for encouragement and careful questioning.
