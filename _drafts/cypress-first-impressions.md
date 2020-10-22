@@ -5,6 +5,7 @@ tags:
   - architecture
   - continuous delivery 
   - test driven development
+  - systems thinking
 author: Willem van den Ende
 image: /attachments/blogposts/2020/cypress-doe-exploratory.jpg
 ---
