@@ -16,4 +16,4 @@ We ran two sessions, the slides are available as PDFs:
 - Example Mapping workshop - [slides](/attachments/example-mapping.pdf)
 - Promise is Debt (taking a systems view on agile development) - [slides](/attachments/promise-is-debt.pdf)
 
-The story of Promise is Debt is also available as a [booklet](/attachments/qwan-systems-book.pdf).
+The story of Promise is Debt is also available as a [booklet](/attachments/ebooks/qwan-systems-book.pdf).
