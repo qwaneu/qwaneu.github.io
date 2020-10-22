@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Under pressure - why overtime is such a bad idea and working harder won't save you
+title: Under pressure
 tags:
   - agile fluency
   - continuous delivery
@@ -15,7 +15,7 @@ Are you  regularly holding retrospectives, but they do not result in improvement
 ## Background 
 
 In our consulting practice this year we have run [Agile Fluency](https://www.agilefluency.org/) diagnostic workshops
-with several development teams. The aim is to let the team discover how they can sustainably deliver better software products faster. We do this by learning together with them about what is going on, using a set questionaire as a guide. 
+with several development teams. Our aim is to let the team discover how they can sustainably deliver better software products faster. We do this by learning together with them about what is going on, using a set questionnaire as a guide. 
 
 Occasionally we work with a team that feels they are doing
 quite ok. They do retrospectives, but not much is coming out of these.
@@ -30,26 +30,23 @@ the [Agile Fluency® Model](https://www.agilefluency.org/) distinguishes. The
 three most interesting zones are:
 
 | **Focusing** | Teams that are fluent in Focusing produce business value; this zone is about transparency and teamwork. |
-| **Delivering**  | Teams that are fluent in Delivering deliver on the market cadence; this zone is about sustainable delivery, about being productive with low defects. |
-| **Optimizing** | Teams that are fluent in Optimizing lead their market; this zone is about 'business agility', where teams are organized for making good product decisions. |
+| **Delivering**  | Teams that are fluent in Delivering, deliver on the market cadence; this zone is about sustainable delivery, about being productive with low defects. |
+| **Optimizing** | Teams that are fluent in Optimizing, lead their market; this zone is about 'business agility', where teams are organized for making good product decisions. |
 
 We sometimes work with teams that are not doing that many retrospectives.
 Everything seems to be going well enough, they say, and there is not much to
 discuss in their retrospectives. The retrospectives become a bit of a drag.
 
-Our observation is that usually such a team is actually performing reasonably
-well, but there is also room to further improve _productivity_. Now
-productivity in software development is a overloaded term. Does anyone
-remember counting lines of code as a measure of productivity? So let's
-elaborate a bit on our working definition of productivity.
+Our observation is usually that, while such a team is performing reasonably
+well, they tend to have blind spots for improvement opportunities, often in the
+area of _productivity_. Now productivity in software development is an
+overloaded and somewhat dangerous term. Does anyone remember counting lines of
+code as a measure of productivity? So let's elaborate a bit on our working
+definition of productivity.
 
-> Higher productivity is one of the benefits of becoming fluent in the different
-Agile Fluency zones. The model also mentions increased Return On Investment as a
-benefit: if we make better product decisions, clarify priorities and steer based
-on feedback from actual users, we can deliver more value sooner. A _product
-decision_ is about what goes in the product and which [level of
-perfection](/2020/09/02/dimensional-planning.html) we aim for, while a _priority
-decision_ determines what work needs to be done first.
+> Higher productivity is only one of the benefits of becoming fluent in the
+> different Agile Fluency zones. Others are increased Return On Investment
+> (ROI), reduced risk and increased team member satisfaction.
 
 ## Productivity
 
@@ -59,11 +56,17 @@ other changes directly valuable to users and customers. It also includes time
 spent on learning, on doing structural fixes in the build pipeline, etc.
 Productivity is about being valuable in the short term and in the long term.
 
+Productivity and ROI are not independent. Productivity is an enabler for increasing ROI: by becoming more productive, a team can deliver value earlier, for lower costs. Smoothness of delivery makes it possible to steer software products.
+
 Fixing defects, context switching because of late feedback, keeping an eye on
 running builds and restarting them a few times because of flaky tests are all
 activities that lower productivity, like illustrated by the picture below.
 
 ![late feedback creates waste](/attachments/blogposts/2020/productivity-waste.jpg)
+
+**In a team based context, productivity is a
+systemic property** - it emerges from the interactions between the team members
+from how the organizational context interacts with the team.
 
 So what can a team do to improve productivity? **Regular reflection is key**:
 reflect on your way of working, look for better ways of organizing your work,
@@ -86,19 +89,27 @@ directly follows on our actions.
 
 ![fast feedback causes less waste and more learning](/attachments/blogposts/2020/productivity-less-waste.jpg)
 
-We think a team can benefit from a little pressure and some sense of urgency, to
-help them move to a virtuous cycle of continuous improvement and higher
-productivity.
+## Under pressure
 
-> We notice that 'pressure' often has a negative connotation. In stressful
-times, when the stakes are high, some managers will pressure teams to deliver
-more stuff faster, urging them to 'work harder'. Team members get stressed and
-fall in the trap of thinking the only option is to work overtime.  
-**This is not what we mean here and we think that such an approach is counterproductive!**
+So how to proceed when a team thinks it is doing ok and have blind spots, as we sometimes observe? What can we do to get them into further improving their productivity? We think a sense of urgency, can help to
+help them move to a virtuous cycle of continuous improvement and so, higher
+productivity. A sense of urgency can be developed from a bit of pressure. 
 
-## Under pressure, work harder?
+We notice that 'pressure' often has a negative connotation. In stressful times,
+when the stakes are high, some managers will pressure teams to deliver more
+stuff faster, urging them to 'work harder'. Team members get stressed and fall
+in the trap of thinking the only option is to work overtime.  
+**This is not what we mean here and we think that such an approach is
+counterproductive!**
 
-So why is working harder and putting in overtime so unproductive?
+## Why overtime is such a bad idea and working harder won't save you
+
+So why is working harder and putting in overtime so unproductive? Let's
+visualize this using a diagram of effects: if there is too much work to do, we
+experience pressure and we decide to work overtime, which results in more
+valuable output, reducing the work left. This is a balancing loop, illustrated by the seesaw icon.
+
+![diagram of effects #work -> overtime -> valuable output](/attachments/blogposts/2020/under-pressure-overtime.jpg)
 
 Overtime acts as a buffer that absorbs any high demands. It is like magic extra
 time, by which a 60 hour job suddenly fits into 40 hours. So putting in extra
@@ -125,17 +136,21 @@ Furthermore, overtime quickly burns out people. In summary, overtime is inhumane
 and achieves the opposite of what people intend: lower instead of higher
 productivity.
 
-@@DOE overtime
+The diagram of effects below illustrates this: when feeling the pressure to
+deliver, we tend to skip reflection and investing in process improvement, which
+means we are not becoming more productive. The effect of overtime is increased
+fatigue and more mistakes, making us even less productive. This reduces the
+valuable output we produce, increasing pressure even more. There are multiple
+self-reinforcing loops at play here (see the snowballs rolling
+downhill) which are much stronger that the balancing effect mentioned earlier.
+
+![diagram of effects #pressure -> less reflection; overtime -> fatigue & mistakes -> less productive -> less valuable output](/attachments/blogposts/2020/under-pressure-overtime-effects.jpg)
 
 We also have an issue with stating that teams should "work harder". This assumes
 they are currently not doing their best. It is a reasonable assumption that
 everyone _is_ doing their best given what they know, their skills, the resources
 available to them and the situation at hand - see e.g. the [prime directive for
-retrospectives](http://www.retrospectivewiki.org/index.php?title=The_Prime_Directive)).
-Once in a while you might have a low performing contributor, but then it is
-management's job to act on this. **In a team based context, productivity is a
-systemic property** - it emerges from the interactions between the team members
-from how the organizational context interacts with the team.
+retrospectives](http://www.retrospectivewiki.org/index.php?title=The_Prime_Directive).
 
 So demanding (or allowing) overtime and urging a team to "work harder!" is not
 going to work and will not lead to a more productive team. 
@@ -143,7 +158,8 @@ going to work and will not lead to a more productive team.
 ## Enabling constraints help a team grow
 
 There is a different way to create a moderate amount of pressure and a sense of
-urgency, turning to the field of complex systems for inspiration. We can regard a team within its organization context as a complex system. 
+urgency, turning to the field of complex systems for inspiration. We can regard
+a team within its organization context as a complex system. 
 
 Complexity theory provides us with the idea of _Enabling Constraints_. Enabling
 constraints are constraints on a system (e.g. a team) that do not prescribe the
@@ -154,11 +170,19 @@ which a team can self-organize.
 
 Providing a team with clear objectives and challenging them to find their way to
 that goal with limited time and effort can be seen as relevant enabling
-constraints here. Together with a team, you can e.g. pick a date mind and agree
+constraints here. Together with a team, you can e.g. pick a date and agree
 that you will mind the 32 / 40 working hours per week. This will create a
 container that can encourage a team to continuously reflect, look for
 improvements, innovate, but also to optimize the flow of their work, to optimize
 the speed & quality of decisions, to question what to build, to find [Dirt Roads](/2020/09/30/dimensional-planning-a-story.html).
+
+The diagram of effects below shows how the enabling constraints of having a
+goal, a deadline and no overtime change the system. When we feel the pressure,
+we can decide to take time for reflection and continuous improvement, so that we
+become increasingly more productive, delivering more valuable output in less
+time.
+
+![enabling constraints changing the system](/attachments/blogposts/2020/under-pressure-pressure-constraints.jpg)
 
 This is what we mean when we are talking about 'pressure'. The goal and the
 constraints provide just enough pressure for a team to have a sense of urgency,
@@ -186,15 +210,19 @@ If we use things like an ambitious goal, time boxes, and reasonable work hours a
   of; try out stuff, run small experiments; this might feel counter-intuitive
   because you have a big goal to achieve and limited time; running many experiments however is the way to find all kinds of process improvements, like scripts for repeated work, or simplifying some code that is continuously
   slowing you down. It will help you to go faster.
-- **maximizing the amount of work not done**: as a team start questioning what
-  is really needed to achieve the goal; when there is some pressure and your
-  resources are limited, you often find you can do with less. Dimensional
-  planning is a technique that can help here, see our previous posts: [Good
-  enough software, early & often](/2020/09/02/dimensional-planning.html) and
-  [Dimensional Planning - a
+- **maximizing the amount of work not done**: following [this principle of the
+  Agile Manifesto](https://agilemanifesto.org/principles.html), start
+  questioning what is really needed to achieve the goal; when there is some
+  pressure and your resources are limited, you often find you can do with less.
+  Dimensional planning is a technique that can help here, see our previous
+  posts: [Good enough software, early &
+  often](/2020/09/02/dimensional-planning.html) and [Dimensional Planning - a
   story](/2020/09/30/dimensional-planning-a-story.html).
 
-Having a sense of direction and a sense of urgency will make retrospectives valuable again. If a team knows where they are heading and know how fast (or slow) they are going, they will start seeing impediments and opportunities for improvement.
+Having a sense of direction and a sense of urgency will make retrospectives
+valuable again. If a team knows where they are heading and know how fast (or
+slow) they are going, they will start seeing impediments and opportunities for
+improvement.
 
 With some pressure on the system, great things can develop. But we need to keep the work sustainable, for people to thrive. We need to balance focused work and focused improvement with slack and rest.
 
@@ -223,7 +251,7 @@ training courses, conferences.
 ## Conclusions
 
 What we see in practice is that teams get more fluent in particular in Focusing
-and Delivering capabilities, because of demands of their organization, their
+and Delivering proficiencies, because of demands of their organization, their
 context, the market the organization is operating in. After some time the teams
 plateau and what they do is good enough. Urge to grow further fades. Having a
 set of enabling constraints like a goal, a target date, limits on work hours can
@@ -237,6 +265,8 @@ The concept of Governing vs Enabling Constraints originates from [Alicia Juarrer
 - Dave Snowden, [Freedom through Constraints](https://www.cognitive-edge.com/freedom-through-constraints/)
 - Chris Matts, [Constraints that Enable](https://theitriskmanager.com/2018/12/09/constraints-that-enable/)
 - Maciej Kaszubowski, [Enabling constraints in software development](https://mkaszubowski.com/2020/05/11/enabling-constraints-in-software-development.html)
+
+Diagrams of Effects is a powerful technique to make sense of what is going on in a team or an organization. We recommend Gerald M. Weinberg's Quality Software Management series if you'd like to learn more, or read our whitepaper [Promise is Debt](http://geraldmweinberg.com/Site/QSM_vol_1.html).
 
 _Maximizing the amount of work not done_ is one of the [twelve principles of the Agile Manifesto](https://agilemanifesto.org/principles.html).
 
