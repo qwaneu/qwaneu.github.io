@@ -31,26 +31,30 @@ it becomes attractive to do that as well.
 
 Selenium is battle tested, but it has several moving parts and does not execute
 particularly fast. So I tend to automate only a few scenarios, and leave the
-rest to non-visual unit tests. I also tend to delay writing Selenium tests until the application is further fleshed out. The risk, that I had materialize, is that we have structured our application and the services it uses in such a way that adding browser tests has become time consuming or nigh-on impossible.
+rest to non-visual unit tests. I also tend to delay writing Selenium tests until the application is further fleshed out. The risk that I had materialize, is that we have structured our application and the services it uses in such a way that adding browser tests has become time consuming or nigh-on impossible.
 
-### shortcomings of non-visual tests for a front-end
-Interpreting the result of the unit tests in the UI cost mental energy: you have to make the mapping between what the tests tell you, and how it looks on the screen in your imagination. For instance: It is useful to know that a specific validation failure will disable submitting on a forms model, but what does it look like?
+### Shortcomings of non-visual tests for a front-end
+Interpreting the result of the unit tests in the UI costs mental energy: you
+have to make the mapping between what the tests tell you, and how it looks on
+the screen in your imagination. For instance: it is useful to know that a
+specific validation failure will disable submitting on a forms model, but what
+does it look like?
 
 I'm quite handy at writing unit tests, so my UI is usually not broken, and the tests pass. When the tests pass, I push a small feature to production and move on to the next part. However, that means that I tend not to look at the UI enough. If there are clumsy interaction patterns, I will not notice them.
 
-I was one of those people who would go: "My tests are great, now I don't have to click through the UI all the time". When I hear something like that now, I cringe. I knew in theory that, apart from observing users, reflectively using the application yourself is a powerful feedback mechanism. Yet some states are hard to achieve in a test situation, and doing this in production is not necessarily feasible. So when, after a long time, I am finally brave to click through the UI, I go "Oh. this is ... bad!". And because it is slow and cumbersome, I can't immediately fix it, and the pattern repeats.
+I was one of those people who would go: "My tests are great, now I don't have to click through the UI all the time". When I hear something like that now, I cringe. I knew in theory that, apart from observing users, reflectively using the application yourself is a powerful feedback mechanism. Yet some states are hard to achieve in a test situation, and doing this in production is not necessarily feasible. So when after a long time, I am finally brave enough to click through the UI, I go "Oh. this is ... bad!". And because it is slow and cumbersome, I cannot immediately fix it, and the pattern repeats.
 
 A quick diagram of effects illustrates our predicament:
 ![Diagram of effects, explanation below](/attachments/blogposts/2020/cypress-hard-states-.jpg)
-The optimistic loop is exploratory testing leads to better UX, which in turn leads to more motivation. When we are motivated, we do more exploratory testing, etc. This is limited by the time we have available _and_ by hard to achieve states. The more features we have, the more hard to achieve states we have, the fewer exploratory tests we can do.
+The optimistic loop is: exploratory testing leads to better UX, which in turn leads to more motivation. When we are motivated, we do more exploratory testing, etc. This is limited by the time we have available _and_ by hard to achieve states. The more features we have, the more hard to achieve states we have, the fewer exploratory tests we can do.
 
-We can do more exploratory tests by sheer force of will, or throwing more people at the problem. But if everything is manual, this is expensive, and doesn't scale. The time elapsed from an incoming user issue to first reproduction remains high, especially if it is a part of the UI we haven't worked on in a while.
+We can do more exploratory tests by sheer force of will, or throwing more people at the problem. But if everything is manual, this is expensive and it doesn't scale. The time elapsed from an incoming user issue to first reproduction remains high, especially if it is a part of the UI we haven't worked on in a while.
 
 ### Selenium works, but is tiring
-Selenium helps me to see the UI in action, but watching it run the tests, including browsers spawning etc is tiring. So in effect I use it similarly to unit tests. I look at the UI I am developing, and when a test fails, but not otherwise, because the threshold is too high.
+Selenium helps me to see the UI in action, but watching it run the tests, including browsers spawning etc. is tiring. So in effect I use it similarly to unit tests. I look at the UI I am developing and when a test fails, but not otherwise, because the threshold is too high.
 
 ### What if we made our system fast?
-End-to-end tests can be fast, if you [design the front-end and backend system(s) for fast test runs](/2020/09/17/test-architecture.html). I have done this, but in existing systems that option is not always available. Rather it is something we have to work towards. This is an area where a modular browser testing tool like Cypress can come in handy.
+End-to-end tests can be fast, if you [design the front-end and back-end system(s) for fast test runs](/2020/09/17/test-architecture.html). I have done this, but in existing systems that option is not always available. Rather it is something we have to work towards. This is an area where a modular browser testing tool like Cypress can come in handy.
 
 I've made another diagram of effects to illustrate what happens when it is easy to set up an exploratory test.
 ![Diagram of effects, explained in words below.](/attachments/blogposts/2020/cypress-doe-exploratory.jpg)
@@ -66,7 +70,7 @@ people. Working test-first, without hand-offs and waiting was a game changer for
 unit tests, and now with Cypress it can be the same for UI tests and end-to-end tests as well.
 
 Cypress makes it easy to separate end-to-end tests and UI tests. Since the tests
-are white-box, and the test-code inhabits the same space as the UI code, it is
+are white-box and the test-code inhabits the same space as the UI code, it is
 easier to isolate small bits of the UI and test them visually, quickly. Cypress
 offers support code to start where you are, possibly with end-to-end tests, and
 stub out dependencies as you go.
