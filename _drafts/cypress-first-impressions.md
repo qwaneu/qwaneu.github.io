@@ -3,10 +3,10 @@ layout: post
 title: Fast browser tests with Cypress - First Impressions
 tags:
   - architecture
-  - browser testing
+  - continuous delivery 
   - test driven development
 author: Willem van den Ende
-image:
+image: /attachments/blogposts/2020/cypress-doe-exploratory.jpg
 ---
 
 Imagine your UI and end-to-end tests could run an order of magnitude faster than
@@ -51,8 +51,8 @@ Selenium helps me to see the UI in action, but watching it run the tests, includ
 ### What if we made our system fast?
 End-to-end tests can be fast, if you [design the front-end and backend system(s) for fast test runs](/2020/09/17/test-architecture.html). I have done this, but in existing systems that option is not always available. Rather it is something we have to work towards. This is an area where a modular browser testing tool like Cypress can come in handy.
 
-I've made another diagram of effects to illustrate what happens when it is easy to set up an exploratory test quickly.
-![Diagram is explained below.](/attachments/blogposts/2020/cypress-doe-exploratory.jpg)
+I've made another diagram of effects to illustrate what happens when it is easy to set up an exploratory test.
+![Diagram of effects, explained in words below.](/attachments/blogposts/2020/cypress-doe-exploratory.jpg)
 Casting a wider net of automated tests leads to fewer hard to achieve states. When we have fewer hard to achieve states, we can devote more time to  exploratory testing, which means we have fewer defects, and more time available to do automated tests, and then we have come full circle, with fewer hard to achieve states.
 
 Marc suggested, rightly, that exploratory testing doesn't _immediately_ lead to fewer defects. So I've drawn a delay there. Working through an application, even when the parts run fast, takes time. Understanding and better UX also take time.
@@ -89,8 +89,18 @@ You can always slow down fast tests if you need, the other way around is much mo
 
 ## Further reading
 
+Marc and Rob recently wrote about [How to decide on an architecture for Automated Tests](/2020/09/17/test-architecture.html).
+
 Yves Reynhout recommended Test Cafe on twitter for his use case:
 <blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="en" dir="ltr">I&#39;ve switched to testcafe since cypress didn&#39;t deal very well with navigating to other domains (e.g. brokered authentication). While the argument is that it&#39;s not part of the SUT, I found that changing / special casing the SUT to be able to cope with it just not worth my time.</p>&mdash; Yves Reynhout (@yreynhout) <a href="https://twitter.com/yreynhout/status/1311614345449803779?ref_src=twsrc%5Etfw">October 1, 2020</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Thanks to Marc Evers for encouragement and careful questioning.
+
+<aside>
+  <h3>Rightsize your automated tests</h3>
+  <p>Getting a good mix of automated tests and making appropriate trade-offs can be a challenge. We can support you with workshops, architecture and code reviews, or working in your teams.</p>
+  <p><div>
+    <a href="/consulting">Learn more about our consultancy services</a>
+  </div></p>
+</aside>
