@@ -10,17 +10,17 @@ author: Marc Evers
 image: /attachments/blogposts/2020/working-harder.jpg
 ---
 
-We have run [Agile Fluency](https://www.agilefluency.org/) diagnostic workshops
-with several development teams this year. In these workshops, we discover
-together with a team how they can deliver better software products faster, in a
-sustainable way. Occasionally we work with a team that feels they are doing
-quite ok. They try to do retrospectives, but not much is coming out of these.
-When we look closely at how they work however, we see quite some room for
-further improvement of their productivity. 
+Are you  regularly holding retrospectives, but they do not result in improvements? In this post we will highlight how a team can move to a virtuous cycle of continuous improvement. 
 
-In this post, we will zoom in on what is going on here and what an organization
-can do to help a team to move towards a virtuous cycle of continuous
-improvement.
+## Background 
+
+In our consulting practice this year we have run [Agile Fluency](https://www.agilefluency.org/) diagnostic workshops
+with several development teams. The aim is to let the team discover how they can sustainably deliver better software products faster. We do this by learning together with them about what is going on, using a set questionaire as a guide. 
+
+Occasionally we work with a team that feels they are doing
+quite ok. They do retrospectives, but not much is coming out of these.
+However, when we look closely at how they work, we see quite a bit of room for
+further productivity improvement. 
 
 ## Team fluency
 
