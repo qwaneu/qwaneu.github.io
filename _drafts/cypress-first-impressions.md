@@ -42,7 +42,12 @@ does it look like?
 
 I'm quite handy at writing unit tests, so my UI is usually not broken, and the tests pass. When the tests pass, I push a small feature to production and move on to the next part. However, that means that I tend not to look at the UI enough. If there are clumsy interaction patterns, I will not notice them.
 
-I was one of those people who would go: "My tests are great, now I don't have to click through the UI all the time". When I hear something like that now, I cringe. I knew in theory that, apart from observing users, reflectively using the application yourself is a powerful feedback mechanism. Yet some states are hard to achieve in a test situation, and doing this in production is not necessarily feasible. So when after a long time, I am finally brave enough to click through the UI, I go "Oh. this is ... bad!". And because it is slow and cumbersome, I cannot immediately fix it, and the pattern repeats.
+I was one of those people who would go: "My tests are great, now I don't have to click through the UI all the time". When I hear something like that now, I cringe. Although it is preferable to observe actual users, they are not always available when I need to work on an application. I knew in theory that using the application yourself is a powerful feedback mechanism: exploratory testing.
+
+To explore an application, you need to do two things:
+-  get to the area in the application in that you want to explore
+-  get the application in an interesting state
+Yet some states are hard to achieve in a test situation, and doing this in production is not necessarily feasible. So when after a long time, I am finally brave enough to click through the UI, I go "Oh. this is ... bad!". And because it is slow and cumbersome, I cannot immediately fix it, and the pattern repeats.
 
 A quick diagram of effects illustrates our predicament:
 ![Diagram of effects, explanation below](/attachments/blogposts/2020/cypress-hard-states-.jpg)
@@ -96,11 +101,13 @@ You can always slow down fast tests if you need, the other way around is much mo
 
 Marc and Rob recently wrote about [How to decide on an architecture for Automated Tests](/2020/09/17/test-architecture.html).
 
+[Explore it](https://pragprog.com/titles/ehxta/explore-it/) by Elizabeth Hendrickson
+
 Yves Reynhout recommended Test Cafe on twitter for his use case:
 <blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="en" dir="ltr">I&#39;ve switched to testcafe since cypress didn&#39;t deal very well with navigating to other domains (e.g. brokered authentication). While the argument is that it&#39;s not part of the SUT, I found that changing / special casing the SUT to be able to cope with it just not worth my time.</p>&mdash; Yves Reynhout (@yreynhout) <a href="https://twitter.com/yreynhout/status/1311614345449803779?ref_src=twsrc%5Etfw">October 1, 2020</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Thanks to Marc Evers for encouragement and careful questioning.
+Thanks to Marc and Rob for encouragement and careful questioning.
 
 <aside>
   <h3>Rightsize your automated tests</h3>
