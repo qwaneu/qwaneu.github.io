@@ -284,6 +284,17 @@ some time the teams plateau and what they do is good enough. Urge to grow
 further fades. Having a set of enabling constraints like a goal, a target date,
 and limits on work hours can help a team to feel that urge again.
 
+Let's conclude with a quote from the [Time Off](https://maxfrenzel.com/time-off) book by John Fitch & Max Frenzel, where the authors quote Stephan Aarstol, CEO of a successful business, where during summer time everyone has 5 hour workdays: 
+
+> The shorter work time requires focus and clarity. You have to develop what
+> Aarstol calls a "production mindset," asking yourself what's essential and
+> putting better processes in place. He believes most people don't spend enough
+> of their work time thinking about how to work, instead of just working: "A
+> five-hour workday offers baked-in time management by forcing workers to
+> prioritize high-value activities." By creating artificial time constraints,
+> you actually help unlock productivity enhancements because it forces you to
+> reevaluate the way in which you do things.
+
 ## References
 
 The concept of Governing vs Enabling Constraints originates from [Alicia Juarrero](https://mitpress.mit.edu/contributors/alicia-juarrero) and has been elaborated in the [Cynefin sensemaking framework](https://en.wikipedia.org/wiki/Cynefin_framework). To learn more, you can read:

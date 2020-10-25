@@ -8,7 +8,7 @@ author: Marc Evers, Rob Westgeest, Willem van den Ende
 image:
 ---
 
-## Effects of fast tests
+Some intro
 
 ## Fast Vue.js components test are great?
 
