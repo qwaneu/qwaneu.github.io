@@ -113,8 +113,8 @@ enough.
 
 ## Summary
 
-We can apply the Dirt Road/Cobblestone Road/Highway metaphor of Dimensional
-Planning not only to whole releases, but to individual features as well. We can
+We can apply the Dirt Road-Cobblestone Road-Highway metaphor of Dimensional
+Planning not only to whole releases, but also to individual features. We can
 define Dirt Road, Cobblestone Road, and Highway versions of a feature.
 
 This facilitates iterative development of features and user stories. A story can
@@ -126,9 +126,9 @@ Dimensions of features also facilitates fine grained planning, tracking and
 steering. Instead of all-or-nothing decision when reducing scope - should we
 remove or include this story? - we can decide to reduce the 'depth' of a story.
 
-Dimensions of a story is another way of splitting large user stories, in a true
-iterative way. In this way, story/feature dimensions enable the _Negotiable_
-property of the [INVEST heuristic for good user
+User story dimensions provide an extra way of splitting large user stories, in a
+true iterative way. In this way, dimensions enable the _Negotiable_ property of
+Bill Wake's [INVEST heuristic for good user
 stories](https://xp123.com/articles/invest-in-good-stories-and-smart-tasks/).
 
 ## References
