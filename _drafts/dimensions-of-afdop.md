@@ -44,47 +44,30 @@ The application needed at least something for filling in a questionnaire
 and visualizing aggregated results. After Rob had made a start with the
 questionnaire, we defined our Dirt Road version of the tool, consisting of the
 following key features:
-- *Questionnaires* - accessible through unique links so that participants do not need to create an account and can remain anonymous
-- *Rollup views* - the aggregated questionnaire results that we share with the participants
+
+| *Questionnaires* | accessible through unique links so that participants do not need to create an account and can remain anonymous |
+| *Rollup views* | the aggregated questionnaire results that we share with the participants |
   
 But we also needed:
-- _Authentication_ - the application should be publicly accessible for participants, some security measurements should be in place
-- _Operability_ - deploy the application to AWS 
+
+| _Authentication_ | the application should be publicly accessible for participants, some security measurements should be in place |
+| _Operability_ | deploy the application to AWS |
 
 We left out the following features:
-- _User management_ - decided on the Dirt Road of hard-coding ourselves in the backend, being the only users for now;
-- _Sending out workshop invitations_ - we started with manually copying & emailing the links;
-- _Styling & branding_ - we did some styling but kept it as simple as possible
-- _User experience_ - we put some effort in the questionnaire, but as the rest
-  of the application was only used by us expert users, we kept error handling
-  simple with some rough edges, and we tolerated some edge cases and dead ends
-  in the application
+
+| _User management_ | we decided on the Dirt Road of hard-coding ourselves in the backend, being the only users for now |
+| _Send workshop invitations_ | we started with manually copying & emailing the links |
+| _Styling & branding_ | we did some styling but kept it as simple as possible |
+| _User experience_ | we put some effort in the questionnaire, but as the rest of the application was only used by us expert users, we kept error handling  simple with some rough edges, and we tolerated some edge cases and dead ends in the application |
 
 For the features that we did include, we also tried to scale down the dimensions:
-- _Authentication_ - **Cobblestone**, login with username and password, and
-  provide password reset functionality for better security. To enable password
-  resets, we decided to build email integration as well. Looking back, we could
-  have postponed some effort here by keeping it simpler, but hey, test-driving
-  SMTP integration is actually quite fun!
-- _Diagnostic session management_ - **Dirt Road**, the minimum we required for
-  running workshops: create a session, list all sessions, get joining links for
-  participants. We did not add access control: all users (well, Rob & Marc)
-  could see all session details.
-- _Questionnaires_ - **Cobblestone**, we wanted to give workshop participants a
-  good questionnaire experience, scaling down to Dirt Road would probably confuse or even put off participants, because they are very occasional users
-  of the application.
-- _Rollup visualization_ - **Cobblestone**, we visualized the aggregated results
-  from the workshop in a nice table with coloured dots, because the
-  visualization needs to be clear for participants.
-- _Gathering rollup consensus answers_ - **Dirt Road**, we can mark answers
-  visually (which was a CSS no-brainer) but we don't record the results. Instead
-  we record results by hand or by screenshot.
-- _Operability_ - **Cobblestone**, running the application on our local machines
-  was not an option, so we needed to deploy it to AWS and operate it in a secure
-  way. Instead of manual configuration, we coded our infrastructure in
-  Terraform. We know this will pay off in time and stress reduction later on.
-  For deploying our Docker containers we could largely reuse an existing
-  deployment tool we developed for a different project.
+
+| _Authentication_ | **Cobblestone** | login with username and password, and  provide password reset functionality for better security. To enable password resets, we decided to build email integration as well. Looking back, we could have postponed some effort here by keeping it simpler, but hey, test-driving SMTP integration is actually quite fun! |
+| _Diagnostic session management_ | **Dirt Road** | the minimum we required for running workshops: create a session, list all sessions, get joining links for participants. We did not add access control: all users (well, Rob & Marc)  could see all session details. |
+| _Questionnaires_ | **Cobblestone** | we wanted to give workshop participants a good questionnaire experience, scaling down to Dirt Road would probably confuse or even put off participants, because they are very occasional users of the application. |
+| _Rollup views - visualization_ | **Cobblestone** | we visualized the aggregated results from the workshop in a nice table with coloured dots, because the visualization needs to be clear for participants. |
+| _Rollup views - gathering consensus_ | **Dirt Road** | we can mark answers   visually (which was a CSS no-brainer) but we don't record the results. Instead  we record results by hand or by screenshot. |
+| _Operability_ | **Cobblestone** | running the application on our local machines was not an option, so we needed to deploy it to AWS and operate it in a secure way. Instead of manual configuration, we coded our infrastructure in Terraform. We know this will pay off in time and stress reduction later on. For deploying our Docker containers we could largely reuse an existing deployment tool we developed for a different project. |
 
 We did not build an automated CI/CD pipeline. We did create build scripts that
 do the heavy lifting like running tests and creating Docker images, but the
@@ -142,16 +125,18 @@ few different releases.
 This meant more features and less Dirt Road-ness, to make the application good
 enough for administration by the Agile Fluency Project and for a wider audience
 of facilitators. We decided on the following features:
-- _Facilitator management_, ability to add new facilitators and see all who have access to the application; introduce an 'administrator' role
-- _Access control_, facilitators can only see their own sessions
-- _Recording rollup results_
-- _Automated backups_
-- _Agile Fluency Project branding_, to make it an integrated experience for facilitators
+
+| _Facilitator management_ | ability to add new facilitators and see all who have access to the application; introduce an 'administrator' role |
+| _Access control_ | facilitators can only see their own sessions |
+| _Recording rollup results_ | |
+| _Automated backups_ | |
+| _Agile Fluency Project branding_ | to make it an integrated experience for facilitators |
 
 We decided to postpone the following things:
-- _Update facilitators_, getting facilitators on board was the first priority, updating can be added later
-- _Facilitator license expiry_, assuming for now that not many licenses expire, everyone keeps having access to the application
-- _Internationalization of the questionnaire_, although we picked this one up pretty soon; we knew some had translated the questionnaire and we found multi language support an interesting challenge (how hard can it be! well, not that hard, but it took more effort than we initially assumed ;)
+
+| _Update facilitators_ | Getting facilitators on board was the first priority, updating can be added later. |
+| _Facilitator license expiry_ | We assumed that in the short term not many licenses would expire, so everyone keeps having access to the application. |
+| _Questionnaire internationalization_ | Although we picked this one up pretty soon; we knew some had translated the questionnaire and we found multi language support an interesting challenge (how hard can it be! well, not that hard, but it took more effort than we initially assumed ;) |
 
 Currently, the application looks like this:
 
