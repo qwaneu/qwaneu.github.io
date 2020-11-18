@@ -73,11 +73,12 @@ For the features that we did include, we also tried to scale down the dimensions
 - _Questionnaires_ - **Cobblestone**, we wanted to give workshop participants a
   good questionnaire experience, scaling down to Dirt Road would probably confuse or even put off participants, because they are very occasional users
   of the application.
-- _Workshop rollup views_
-  - _visualization_ - **Cobblestone**, we visualized the aggregated results from the workshop in a nice table with coloured dots, because the visualization needs to be clear for participants.
-  - _gathering consensus on answers_ - **Dirt Road**, we can mark answers
-    visually (which was a CSS no-brainer) but we don't record the results.
-    Instead we record results by hand or by screenshot.
+- _Rollup visualization_ - **Cobblestone**, we visualized the aggregated results
+  from the workshop in a nice table with coloured dots, because the
+  visualization needs to be clear for participants.
+- _Gathering rollup consensus answers_ - **Dirt Road**, we can mark answers
+  visually (which was a CSS no-brainer) but we don't record the results. Instead
+  we record results by hand or by screenshot.
 - _Operability_ - **Cobblestone**, running the application on our local machines
   was not an option, so we needed to deploy it to AWS and operate it in a secure
   way. Instead of manual configuration, we coded our infrastructure in
