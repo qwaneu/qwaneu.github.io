@@ -8,6 +8,8 @@ author: Willem van den Ende
 image: /attachments/blogposts/2020/202009-cargo-cult-plane.png
 ---
 
+_Upaated 21 november 2020, added some more notes on Simon Wardleys segment_.
+
 A couple of days ago, Jamie Dobson and Simon Wardley did a back to back presentation on [Cargo Cults and mapping DevOps and serverless](https://www.youtube.com/watch?v=hlPEeDWHy34&feature=youtu.be). Great athmosphere in the virtual room. My son made a cameo apperance near the end. One can't grow strategists young enough.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hlPEeDWHy34" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -76,23 +78,66 @@ There are several antidotes, this one resonated most with me: **trusted advisers
 
 We are all prone to wishful thinking, advertisers, soothsayers and translators. Move in small steps.
 
-## On to Simon
+# On to Simon Wardley
 
-Simon had another talk prepared, but switched to something else based on what Jamie presented - "carefully crafted presentation straight out of the window."
+Simon Wardley had another talk prepared, but switched to something else based on what Jamie presented - "carefully crafted presentation straight out of the window."
 
-**No one size fits all**. Simon uses agile for reducing cost of change (XP), Lean/
-off the shelf, focus on learning and reducing waste, focus on reducing
+_Edit November 2020 I left out the quick notes I jotted initially, as I wanted to separate them out into a separate piece. They appear to fit best here anyway, so adding them now_.
+
+## A utility: change something from exiting to boring.
+
+Compute from product to utility causes co-evolution.
+
+Inertia when  'traditional' needs to go to 'Next generation'.
+
+Past stuff not thrown out of the window, but co-opted, as devops and now cloud native do with agile.
+
+"Refactoring has financial value". Observability of financial flows is slowly growing.
+
+Emerging architectural value of serverless is expected by the map, but isn't there yet.
+
+Serverless and cloud don't save money, they allow you to do more, because you
+are in competition. If you don't move, you are going to have to spend more and
+more just to keep up.. 10-15 year transitions. Evolution is made of thousands of
+diffusion curves. In 2024 to 2029 serverless is becoming the new norm. "Digital
+transformation is saying you've discovered the internet."
+
+Climatic pattern: there is no choice on evolution. No custom-built everything, we depend
+on lots of components, otherwise it would not be possible.
+
+## Keep moving, just to stand still. The Red Queen Effect.
+
+## Should we move to serverless now?
+1. execs have no situational awareness
+2. if you are starting a cloud journey now, wait a couple of years and do
+   serverless then.
+3. "they think they are busy people."
+4. Do you see any companies anticipate serverless (I built the world first
+serverless environment in 2005). Big consultants killed it. You need to get the
+timing right. Amazon, like the chinese government are good at finding the right
+time to industrialize.
+5. Jamie: who is going to change serverless into a racket. Who is going to
+   benefit? Boring serverless. How are providers of the functions going to make
+   money?
+
+Existential threat / forcing function. The only pattern we have seen in every
+cloud native transformation.
+
+## No one size fits all
+
+Simon Wardley uses agile for reducing cost of change (XP), Lean/
+off the shelf: focus on learning and reducing waste, focus on reducing
 deviation.
 
 Talking about specific methods for specific contexts caused Simon to be seen as a heretic at some (agile) conferences. Fact check: I haven't seen Simon burnt at the stake at the few agile
-conferences I was - curious which ones these were. I've done back to back presentations with an early Prince II practitioner and worked with people who have been successful with Waterfall. So I'm all in on using appropriate methods. It is my inertia in having had my second and later successes with XP. The first one was flying by the seat of our pants and working closely with customers and users. Ah - "focus on user needs".
+conferences we both were - curious which ones these were. 
 
 Doctrine: **Use Appropriate Methods**, **Think Small** (which links to Jamie's small steps and
 Extreme Programming's baby steps), **Challenge Assumptions** (may have to drink poison if you do this too much), **Focus on User Needs**.
 
 When a method is applied in the wrong context and it does not give the expected outcome, the default reaction tends to be "you are using the wrong parts of the process". This leads to process over people.
 
-Simon also talked about DevOps being the New Legacy. We'll cover that in a follow up post.
+Simon also talked about DevOps being the New Legacy. 
 
 ## Further reading
 
