@@ -66,20 +66,20 @@ For the features that we did include, we also tried to scale down the dimensions
 | _Diagnostic session management_ | **Dirt Road** | the minimum we required for running workshops: create a session, list all sessions, get joining links for participants. We did not add access control: all users (well, Rob & Marc)  could see all session details. |
 | _Questionnaires_ | **Cobblestone** | we wanted to give workshop participants a good questionnaire experience, scaling down to Dirt Road would probably confuse or even put off participants, because they are very occasional users of the application. |
 | _Rollup views - visualization_ | **Cobblestone** | we visualized the aggregated results from the workshop in a nice table with coloured dots, because the visualization needs to be clear for participants. |
-| _Rollup views - gathering consensus_ | **Dirt Road** | we can mark answers   visually (which was a CSS no-brainer) but we don't record the results. Instead  we record results by hand or by screenshot. |
-| _Operability_ | **Cobblestone** | running the application on our local machines was not an option, so we needed to deploy it to AWS and operate it in a secure way. Instead of manual configuration, we coded our infrastructure in Terraform. We know this will pay off in time and stress reduction later on. For deploying our Docker containers we could largely reuse an existing deployment tool we developed for a different project. |
+| _Rollup views - gathering consensus_ | **Dirt Road** | we can mark answers visually,which was a CSS no-brainer, but we don't record the results. Instead we record results by hand or by screenshot. |
+| _Operability_ | **Cobblestone** | running the application on our local machines was not an option, so we needed to deploy it somewhere. We chose to deploy to AWS and operate it in a secure way. Instead of manual configuration, we coded our infrastructure in Terraform. We expect this will pay off in time and reduced stress later on. For deploying our Docker containers we could largely reuse an existing deployment tool we developed for a different project. |
 
 We did not build an automated CI/CD pipeline. We did create build scripts that
 do the heavy lifting like running tests and creating Docker images, but the
 release process and versioning is still manual, which is good enough up to
-today.
+now. Continuous Integration and Delivery is an activity, not a tool.
 
 Based on these decisions, we managed to deliver just in time an application that
 was good enough to run the two scheduled diagnostic workshops. The facilitator's dashboard looked like shown below. The joining links are quite primitive (relative urls):
 
 ![AFP facilitator's dashboard April 2020](/attachments/blogposts/2020/afdop-april-2020.jpg)
 
-The questionnaire and rollup view looked like this,  (with bogus test questions from our fake backend server):
+The questionnaire and rollup view looked like this, (with bogus test questions from our fake backend server):
 
 ![AFP facilitator's dashboard April 2020](/attachments/blogposts/2020/afdop-2-april-2020.jpg)
 
@@ -88,7 +88,7 @@ The questionnaire and rollup view looked like this,  (with bogus test questions 
 Developing a Dirt Road is harder than it seems: playing the _what can we leave
 out_ is quite difficult. We might have left more things out for the first
 workshops. There is often a plausible reason for "just doing this feature as
-well". It is a matter of trade-offs and judgment. 
+well". It is a matter of trade-offs and judgment.
 
 The questionnaire and rollup view needed to be good enough for workshop
 participants to use, so that they'd focus on the content and not on the
@@ -103,7 +103,7 @@ As we were not in contact with any real users apart from ourselves, we made a
 lot of assumptions in our decisions. You cannot foresee everything; you need to
 put software in the hands of users, sooner rather than later, and then observe
 how they use it. This will provide better information on what is 'good enough'
-and where your product is not yet good enough. 
+and where your product is not yet good enough.
 
 In the course of the 6 weeks, we thought of many more possible features and some
 nice bells and whistles. We parked these on our Miro board under the
@@ -120,7 +120,7 @@ wasted time.
 
 Together with the Agile Fluency Project we decided to develop the application
 further and make it available for the community of facilitators. We defined a
-few different releases. 
+few different releases.
 
 This meant more features and less Dirt Road-ness, to make the application good
 enough for administration by the Agile Fluency Project and for a wider audience
@@ -142,7 +142,7 @@ Currently, the application looks like this:
 
 ![diagnostic tool current view](/attachments/blogposts/2020/diagnostic-tool.png)
 
-## And the Highway? 
+## And the Highway?
 
 Once we got the Dirt Road out and we started working on Cobblestone features,
 more and more possible features are popping up. The Dirt Road version was about
@@ -165,7 +165,7 @@ they'd fall of the wall like falling leaves during autumn. We'd put the fallen
 cards in a box but no one ever asked about them. By putting those things on a
 card on the wall, even though we suspected we would never do them, our customers
 felt heard and knew it was a matter of trade-offs whether these stories would
-get priority or not. In one of our early agile projects, we had a nice round
+get priority or not. In one of our early XP projects, we had a nice round
 wall where we put the story cards on, giving the impression of future stories
 disappearing:
 
