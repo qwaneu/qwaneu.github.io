@@ -144,3 +144,10 @@ Futures_ and _Alternate Depths_. See also [Koen's original
 slides](https://www.slideshare.net/inxin/dimensional-planning-30790935)
 
 To learn more about User Story Mapping, we recommend going back to the source - [Jeff Patton's original article](https://www.jpattonassociates.com/the-new-backlog/) or [his book User Story Mapping](https://www.amazon.com/User-Story-Mapping-Discover-Product/dp/1491904909/ref=as_sl_pc_qf_sp_asin_til?tag=jefpatass-20&linkCode=w00&linkId=NX2UXYQEFAANOFPO&creativeASIN=1491904909).
+
+This post is part of a series on Dimensional Planning:
+
+- [Dimensional Planning - good enough software, early & often](/2020/09/02/dimensional-planning.html)
+- [Dimensional Planning - a story](/2020/09/30/dimensional-planning-a-story.html)
+- Dimensions of Dimensional Planning
+- [Dimensions of Features - an example](/2020/11/23/dimensions-of-afp.html)

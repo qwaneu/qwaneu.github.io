@@ -123,6 +123,13 @@ Picture credits:
 - [USDA NRCS Montana
   Roads10.tif](https://www.flickr.com/photos/160831427@N06/24195960627/in/photolist-CS7C7X-JKmsWE-4vgo5-pu9JtG-Bwko6v-AKAiop-WcDfnj-atAVun-nvQZPY-x9pXL-28vzsLu-MtbseE-A7JWbG-AJvZpQ-orukdd-5k7aMq-eZpV1-JVcMs-pihYiS-uQ5Tfk-PEpYHo-GyLPDT-6BpjPj-5DSQ5G-8ZNkh-frzDGo-xTL8u2-q9h6Ea-vbRjRF-vRefE8-aiB7mr-ogoG4R-vYpdL-ehUpXY-8RDsQg-gGNuS1-eApn8j-dNTbn4-HDpFNM-dAexNJ-2fBMt7v-5hnrJy-ZnjRne-GHLchu-HAsM7L-8DoSXS-Lqnud2-xDeVre-5Avufr-2SaQ5a)
 
+This post is part of a series on Dimensional Planning:
+
+- Dimensional Planning - good enough software, early & often
+- [Dimensional Planning - a story](/2020/09/30/dimensional-planning-a-story.html)
+- [Dimensions of Dimensional Planning](/2020/11/13/dimensions-of-dimensional-planning.html)
+- [Dimensions of Features - an example](/2020/11/23/dimensions-of-afp.html)
+
 <aside>
   <h3>Want to apply story mapping and dimensional planning?</h3>
   <p>These practices are simple and elegant, but not always easy to put into practice. We offer workshops on agile planning techniques and we can mentor your team in applying them successfully.</p>

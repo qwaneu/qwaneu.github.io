@@ -120,6 +120,12 @@ Visualizing the _work done over time_ separately from the _scope reduced over ti
 
 _Credits: I really am not much of a writer, and 'speeling error' are my middle names. There is no way I could write anything really, without Willem and Marc, cleaning up the mess. Thanks guys._
 
+This post is part of a series on Dimensional Planning:
+
+- [Dimensional Planning - good enough software, early & often](/2020/09/02/dimensional-planning.html)
+- Dimensional Planning - a story
+- [Dimensions of Dimensional Planning](/2020/11/13/dimensions-of-dimensional-planning.html)
+- [Dimensions of Features - an example](/2020/11/23/dimensions-of-afp.html)
 
 <aside>
   <h3>Dimensional Planning and Release burn down charts</h3>
