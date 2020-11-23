@@ -16,6 +16,7 @@ technique called diagram of effects for getting to effective team feedback.
 
 ## Fluency and team growth
 
+bla bla
 
 ## What happens in a team diagnostic workshop
 
@@ -36,19 +37,29 @@ recommendations for them to grow.
 
 ## Diagrams of Effects to make sense of it all
 
-We have been using diagrams of effects for ages to make sense of what is happening, in projects, teams, organizations, and to get insights into what makes a system hard to change. It helps us to find better experiments to run and more effective interventions.
-@@explain
+While teams that aim for Focusing or Delivering tend to be a bit more
+'standard', especially with Optimizing teams we see a wider variation of things
+going on in and around the team, in particular because Optimizing implies
+changing the organization structure. It has much more organizational impact, way
+beyond the team itself.
+
+We have been using diagrams of effects for ages to make sense of what is
+happening, in projects, teams, organizations, and to get insights into what
+makes a system hard to change. It helps us to find better experiments to run and
+more effective interventions. 
+
+@@explain DoE
 
 Our source for this technique from Gerald Weinberg, who uses this extensively in his
 Quality Software Management series. There are similar techniques like causal
 loop diagrams.
 
-These techniques come from the field of systems thinking. We do not try to
+> These techniques come from the field of systems thinking. We do not try to
 create a correct or right model of reality nor do we try to design an ideal
 situation, because that would not be appropriate for complex systems like teams
 and organizations. We use them very much as a collaborative sensemaking
 technique, to build a shared understanding and to find sensible directions for
-change. @@Cynefin linkje? ja.
+change. @@Cynefin link
 
 ## Processing
 
@@ -73,7 +84,16 @@ science, but more about finding plausible effects in this system.
 
 ![plaatje hiervan zou mooi zijn]()
 
-@@more
+## Looking for loops
+
+We start looking for what keeps this system like it is and what will make it go
+out of control. We are looking for balancing loops and self-reinforcing loops in
+the system. Such loops provide us information on why it is so hard to bring
+changes in an organization but also hints about more effective interventions.
+
+@@twee simpele voorbeeldjes geinspireerd door de workshops
+
+
 
 ## Reporting it back
 
@@ -87,3 +107,17 @@ at once and no context. So we think of a way to build up the diagram in steps
 during the feedback session, so that we can tell our story and our
 considerations. This includes the disclaimer that this is our interpretation of
 what we saw and heard.
+
+## Experiments, not solutions
+
+We provide our recommendations a bit high level. We recommend teams to try out
+techniques, run small experiments. Our recommendations are in line with the DoEs
+we constructed, so in line with how we see the system.
+
+## References
+
+- Agile Fluency e-book
+- Gerald Weinberg, Quality Software Management I
+- Dave Snowden e.a., Cynefin - Weaving Sense-making into the Fabric of our World Book (2020)
+- Donella H. Meadows, Thinking in Systems
+- Promise is Debt
