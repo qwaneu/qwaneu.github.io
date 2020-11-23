@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dimensions of Features - an Example
+title: Dimensions of Features - An Example
 tags:
   - continuous delivery
   - planning
@@ -197,13 +197,6 @@ Project.
 
 ## References
 
-This post is part of a series on Dimensional Planning:
-
-- [Dimensional Planning - good enough software, early & often](/2020/09/02/dimensional-planning.html)
-- [Dimensional Planning - a story](/2020/09/30/dimensional-planning-a-story.html)
-- [Dimensions of Dimensional Planning](/2020/11/13/dimensions-of-dimensional-planning.html)
-- Dimensions of Features - an Example
-
 More on scaffolding: Sonja Blignaut, [Learnings from Whistler: Scaffolding emergence](https://www.morebeyond.co.za/learnings-from-whistler-scaffolding-emergence/)
 
 We have started to make some of the Python backend code we developed available
@@ -212,6 +205,13 @@ of [an SMTP based email sending library -
 quiltz-messaging](https://github.com/qwaneu/quiltz-messaging). It is still in an early stage, but feel free to [contact us](/contact) if you're interested!
 
 _Credits: thanks to Willem for editing and helping improve this post._
+
+This post is part of a series on Dimensional Planning:
+
+- [Dimensional Planning - good enough software, early & often](/2020/09/02/dimensional-planning.html)
+- [Dimensional Planning - a story](/2020/09/30/dimensional-planning-a-story.html)
+- [Dimensions of Dimensional Planning](/2020/11/13/dimensions-of-dimensional-planning.html)
+- Dimensions of Features - an example
 
 <aside>
   <h3>Want to apply dimensional planning?</h3>
