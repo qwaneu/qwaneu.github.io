@@ -6,7 +6,7 @@ tags:
   - systems thinking
   - test driven development
 author: Marc Evers
-image:
+image: /attachments/blogposts/2020/fast-test-effects-1.jpg
 ---
 
 We are fans of Test Driven Development (TDD). It has served us well over the
@@ -41,6 +41,11 @@ quality and speed of development. In other words, these help your
 of effects shows:
 
 ![beneficial effects of fast tests](/attachments/blogposts/2020/fast-test-effects-1.jpg)
+
+> The post-its represent _variables_ - things we can observe or measure. A black arrow indicates an effect in the same direction: if _speed of
+feedback_ goes up, _amount of learning_ also goes up. A red arrow with a '-'
+indicates an opposite effect: the more _mistakes_ we make, the lower the _code
+quality_. The || on an arrow means the effect has a delay.
 
 **So fast UI tests are great ... but they can have unintended consequences and
 nudge you towards less optimal design decisions.**
