@@ -57,17 +57,6 @@ representing username uniqueness as an explicit domain concept; "lazily evaluate
 
 ## testing routes with mirroring (using the production behaviour of collaborators/mapping functions)
 
-## Wrapping dates, logging and UUIDs in our own concepts
-
-"We sometimes tolerate libraries in the center: libraries are not in control and are less intrusive. But we tend to even wrap lower level library concepts like logging, date/time, and UUIDs, because these still tend to get in the way[plaatje met de libs]" (WE: maybe expand a little bit: we only use a fraction, which we want to document, and we insulate ourselves from changes in these dependencies. This lowers the cost of testing and replacing them when necessary)
-
-“It’s a thing”; we find our code makes assumptions about the strings or ints, sometimes just a little (though spread out over the code)
-
-Example: dates as UTC; Python/SQAlchemy+SQLite does not save timezones; we have our own Clock, we have some UTC timezone knowledge in several places (e.g. re-adding the timezone when a datetime is read from the db)
-
-https://codeblog.jonskeet.uk/2019/03/27/storing-utc-is-not-a-silver-bullet/
-
-
 ## UI components are dumb & flat
 
 UI component only concerns UI; so each component is a bit of html structure, css, and data / state wiring; 
