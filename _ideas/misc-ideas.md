@@ -77,3 +77,8 @@ View logic is easier to reuse (not the primary goal, but a nice side benefit)
 
 Background information
 - [Humble Object pattern](https://martinfowler.com/bliki/HumbleObject.html)
+
+# WTPW Example: AFDOP test sessions 
+## Introducing 'test' diagnostic sessions
+
+We introduced 'test' sessions for facilitators to try out stuff without consequences (and for us to see how the system is used for real). To prevent unintended usage of test sessions, we fix the number of participants to 3. Where do we put the 'test' concern en the '3 participants' business rule?
