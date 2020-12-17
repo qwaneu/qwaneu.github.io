@@ -1,6 +1,6 @@
 ---
 layout: post
-title: WTPW - What To Put Where, the million dollar question in software development
+title: What To Put Where? - the million dollar question in software development
 tags:
   - architecture
   - design
@@ -8,202 +8,251 @@ author: Marc Evers
 image: /attachments/blogposts/2020/cesar-carlevarino-aragon-NL_DF0Klepc-unsplash.jpg
 ---
 
-
 Deciding What To Put Where is half of the work of software development. What
-should I put where, in such a way that I (and my colleagues!) will be able to
+should I put where, in such a way that I (and my colleagues) will be able to
 find it back later? Finding a good place for things in code greatly helps (or
 hinders!) maintainability of the code later on.
 
-Knowing what to put where is a skill developed through practice. Some things
-that can be helpful: looking at code through a Hexagonal Architecture lens,
-making the 'things' in your code explicit by wrapping it in types or classes,
-CRC cards, pair programming, documentation.
+Knowing what to put where is a skill developed through practice. Things
+that can be helpful are looking at code through a Hexagonal Architecture lens,
+making the 'things' in your code explicit through types or classes,
+designing with CRC cards, pair programming, and documentation.
 
 ![](/attachments/blogposts/2020/cesar-carlevarino-aragon-NL_DF0Klepc-unsplash.jpg)
 {: class="post-image post-image-70" }
 
-Let's explore this further in this post, through some examples.
+Let's explore this further in this post.
 
-## Why WTPW
+- [Knowing What To Put Where](#knowing-what-to-put-where)
+- [Adding CSV export](#adding-csv-export)
+- [Internationalization](#internationalization)
+- [Things that help in deciding what to put where](#things-that-help-in-deciding-what-to-put-where)
+- [Learn what to put where](#learn-what-to-put-where)
+- [References](#references)
+## Knowing What To Put Where
 
 An important part of our job as software developers is taking design decisions
-at all levels: sketching the high level architecture on a whiteboard, where we
-decide which responsibility goes in which components; CRC
-(class-responsibility-collaborator) design sessions, where we play out scenarios
-of object interaction, to see which object will have which responsibility; and
-also at the micro-level, where we decide on naming, on functions or methods. 
+at all levels: sketching a high level architecture on a whiteboard, where we
+decide which responsibility goes where; CRC (class-responsibility-collaborator)
+design sessions, where we play out scenarios of object interactions, to see
+which object will have which responsibility; and also at the micro-level,
+deciding on names and specific functions or methods. 
 
-We are not only trying to make it work, but we are also continuously thinking
-about what concern or responsibility should we put where. This is quite an
-important task in software development: we spend much more time reading and
-understanding code than writing it. If we want to make changes, we'd like to
-quickly find out where in the code base we should be. And we hope the concern to
-be changed is in one and only one place.
+We are not only trying to make the software work for now, but we try to develop
+it in a sustainable way. Therefore we are continuously thinking about what
+concern should we put where. We spend much more time reading and understanding
+code than writing it. Whenever we need to make changes, we'd like to find out
+quickly where in the code we should be, and we hope that the concern to be
+changed is in one and only one place.
 
 > Putting things in the 'right' place will help us a lot later on. It
 is so important that we think it deserves its own acronym ;-)  
-> **WTPW - What To Put Where**
+> **WTPW - What To Put Where**  
+> stuff just anywhere, but then you'll spend many hours looking through the mess
+> It's like keeping your shed well organized. You can dump your tools and other
+> to find the things you need. Putting some consideration in what are you going
+> to put where will save you lots of time and frustration later.
 
-How do we decide what to put where? We do not have generic rules and certainly
-not best practices. We do apply numerous design heuristics and it is a skill you
-learn through (deliberate) practice. So let's have a look at a few examples and
-our considerations regarding what should be put where. The examples are from the
-online [Agile Fluency® Diagnostic](https://www.agilefluency.org/diagnostic.php)
-application we are working on.
+How do we decide what to put where? We do not have generic rules or best
+practices, but we do apply numerous design heuristics. It is a skill you learn
+through (deliberate) practice. So let's have a look at two examples to share our
+considerations regarding what should be put where. The examples are from our
+work on the online [Agile Fluency®
+Diagnostic](https://www.agilefluency.org/diagnostic.php) application.
 
 ## Adding CSV export
 
 In the Online Agile Fluency Diagnostic application, we show a colourful
-aggregated view (the 'rollup chart') on team survey results. We decided to make
-this aggregated data available for download in CSV (Comma Separated Values), so
-that our users can process it using their own tools.
+aggregated view of team survey results (the 'rollup chart'). We decided to make
+the aggregated data available for download in CSV format (Comma Separated
+Values), so that our users can process it with e.g. Excel.
 
 In our back-end component, we already had the following:
-- a domain object Rollup with the logic to create it from survey data
-- an HTTP GET route to expose the Rollup as JSON data, part of the adapters ring
-  of our component
-- a function that maps the Rollup object to JSON data, part of the route module
+- a domain object `Rollup` with logic to create it from survey data
+- an HTTP GET route to expose the Rollup as JSON data (part of the adapters ring
+  of our component)
+- a function that maps the Rollup object to JSON data (in the same module as the route code)
 
-How do we fit in a CSV export? We regard it as a view on the Rollup domain
-object. Looking through the [Hexagonal Architecture](http://localhost:8082/2020/08/20/hexagonal-architecture.html) lens, it does not affect the
-domain, so we do not need any domain changes. It is an adapter concern: it is
-about translating a domain object to a different format on a different endpoint.
+Where do we put a CSV export? We regard it as another view on the Rollup domain
+object. Looking through the [Hexagonal
+Architecture](http://localhost:8082/2020/08/20/hexagonal-architecture.html)
+lens, it does not affect the domain logic, so we do not need any changes there.
+It is an adapter concern: it is about translating a domain object to a different
+format on a different endpoint.
 
 ![fitting in CSV export into the architecture](/attachments/blogposts/2020/wtpw-csv.jpg)
 {: class="post-image post-image-50" }
 
-We added an endpoint and a Rollup object to CSV mapping function that produces
-text lines in CSV format. The front-end component also needed a bit of work to
-expose this new feature, a button to start the download.
+We added an endpoint and a function that maps a Rollup object to text lines in
+CSV format. A bit of work on the front-end component was required as well, to
+add a download button.
 
 As a result, whenever we need to change or add data in the CSV we know exactly
-where to find it: it is an adapter-concern, part of our route code.
+where to find it: it is an adapter concern, and it is part of our route code.
 
-The CSV conversion including the headings is currently a single function, 8
-lines of Python. Once we'd start doing more with CSV, we might find that 'CSV'
-is a thing of itself as well and start extracting a class for it.
+The CSV conversion including headings is currently a single function, 8 lines of
+Python. Maybe once we'd like to have more fancy CSV output, we might find that
+'CSV' is a thing of itself. In that case we'd probably extract a class for it.
 
-## Internationalizing an application
+## Internationalization
  
-Another interesting feature we took on for the Online Agile Fluency Diagnostic
-application was internationalization (I18N). We wanted to offer the team survey
-in different languages, where the facilitator selects a language for a
-diagnostic workshop. While the original survey is in English, our colleague
-facilitators had been working on German and Spanish translations. Having the
-team survey available in multiple languages makes the online tool much wider
-applicable.
+We wanted to offer the Agile Fluency team survey in different languages, where
+the facilitator selects one language for a diagnostic workshop. The original
+survey is in English, and our colleague facilitators had been working on German
+and Spanish translations. Having the team survey available in multiple languages
+would make the online application much wider applicable.
 
-In our Vue.js front-end component we decided to use the `VueI18N` library. We
-created a file with translations for some of the front-end texts and fed this to
-`VueI18N` which plugs itself into the UI components. It works pretty
-straightforward. So our first idea was that language and locale related stuff
-needs to land in our UI components.
+In our Vue.js front-end, we decided to use the
+[VueI18N](https://kazupon.github.io/vue-i18n/) library. We created a file with
+translations for the survey related texts and fed this to `VueI18N` which plugs
+itself into UI components. It seemed all pretty straightforward and our first
+idea was that language and locale related stuff could be put in the UI
+components.
 
-The survey question texts themselves are however not part of the front-end
-component, but come from the back-end. So our back-end needs to have multiple
-translations of the survey and serve the one based on the team workshop
-language.
+The survey question texts themselves are not part of the front-end component,
+but come from the back-end. We extended our back-end to support multiple survey
+translations in YAML format and select the right translation based on the
+language selected for a team workshop.
 
-When creating a diagnostic session, we want to select language from a list of
-languages. The `NewDiagnosticSession` UI component ([which we wrote about in an
-earlier post](/2020/09/25/hexagonal-frontend-example.html)) gets available
-languages from the back-end.
+When creating a diagnostic session, we let the facilitator select a language
+from a list of languages. The `NewDiagnosticSession` UI component ([which we
+wrote about in an earlier post](/2020/09/25/hexagonal-frontend-example.html))
+gets the available languages from the back-end.
 
-When the front-end Survey component retrieves and shows a survey, it needs to
-set its language to the language of the survey, so that the surrounding texts
-(like instructions for the survey) also show up in the right language. So the
-Survey UI component ended up with some logic around `VueI18N` and current language
-selection.
+When the front-end Survey component retrieves a survey, it needs to set its
+language to the survey language, so that the accompanying texts (like
+instructions) show up correctly. Some logic around `VueI18N` started to grow in the Survey UI component.
 
-Because a facilitator shares the rollup charts view with team members, it should show in the language of the diagnostic session. Afterwards, it should
-switch back to English. We had to add some conditional logic in a router hook to
-make sure the language gets reset when needed. 
+Because a facilitator shares the rollup chart view the team, the rollup chart
+should also be shown in the language of the diagnostic session. We had to add
+some conditional logic in a router hook to make sure the current language gets
+reset when needed. 
 
-Hm, it does not smell good...language and `VueI18N` knowledge everywhere...
+Hm, it does not smell good...we see more and more knowledge about languages and
+`VueI18N` spread around our code base...
 
 ![I18N creating a mess in our architecture](/attachments/blogposts/2020/wtpw-i18n-1.jpg)
 
 Multiple UI components contain language related logic and depend on the
-`VueI18N` library. Our domain knows about languages. Our `main.js` needs to wire
-it all up knowing too much intimate details about how `VueI18N` works... We had
-for instance code like this in UI components:
+`VueI18N` library. Our domain knows about the current language and how `VueI18N`
+works. Our `main.js` has  intimate knowledge about how `VueI18N` works... We had
+code like this in UI components:
 
 ```javascript
-  retrieveQuestions: function () {
     this.diagnostic.retrieveQuestions(this.sessionId, this.participantId).then(() => {
       this.$i18n.locale = this.diagnostic.language
     })
-  }
 ```
 
-Our UI components are acting as a Mediator between our domain code and
-`VueI18N`. We followed the Hexagonal Architecture principle of keeping libraries
-and frameworks outside, so we prevented dependencies on `VueI18N` in our domain,
-but now our UI components are getting messy.
+Our UI components are acting as a
+[Mediator](https://en.wikipedia.org/wiki/Mediator_pattern) between our domain
+code and `VueI18N`. We followed the Hexagonal Architecture principle of keeping
+frameworks outside, preventing `VueI18N` dependencies on in our domain code, but
+now our UI components are getting messy.
 
-> Note that the language of the survey is a cross cutting concern. Both front
-end and back-end will have knowledge of survey language.  
+> Survey language is a cross cutting concern in this application, we cannot
+isolate it completely. Both front end and back-end will have knowledge of survey
+language.  
 > **The question is not how to remove this knowledge as much as possible, but
 rather how to minimize what each part _really_ needs to know to do its job.**  
-> In the back-end we know the language of a diagnostic session and we select an
-appropriate version of the survey based on that. We also select the correct
-translation for the invitation email sent to team members, but there is no other
-language-based logic there.
+> In the back-end, we know the language of a diagnostic session and we select an
+appropriate survey translation based on that. We also select the correct
+translation for invitation emails, but there is no other language-based logic.
 
-We concluded that we are missing a domain concept and an adapter in the front
-end. Although `VueI18N` is quite closely related to the Vue.js based UI
-components, the concept of current and available languages is still a separate
-concern. So we introduced a **Language Store** concept, implemented by a
-`I18nBasedLanguageStore` adapter which encapsulates the dependencies on the
-`VueI18N` libraries.
+Reflecting on what we created, we concluded that we are missing a domain concept
+and an adapter in the front end. `VueI18N` is quite closely related to Vue.js
+based UI components, but the concept of available languages and a current
+language is a concern of its own. Hence we introduced a **Language Store**
+concept for this, which implemented by a `I18nBasedLanguageStore` adapter
+encapsulating `VueI18N` dependencies.
 
-After we introduced the language store, we suddenly had a place to put all
-language related stuff: selecting the current language, knowing the available
-languages, resetting current language when appropriate. Now our domain can
-_decide_ on the language, but it does not need to know how it works. It
-delegates to the Language Store which handles the details. Our UI components
-were freed of complicated language related code; they just translate and
-visualize, nothing more.
+Once we had introduced the language store, we suddenly had a place to put all
+language related stuff: selecting the current language, knowing available
+languages, resetting the current language. Our domain code can now _decide_ on
+the language, but it does not need to know how it works out in the UI. The
+domain code delegates to the Language Store, which handles the details. We moved
+the language related logic from the UI components to the Language Store.
 
 ![I18N - improving dependencies through the language store concept](/attachments/blogposts/2020/wtpw-i18n-2.jpg)
 
 > Once you discover, or uncover, a concept in your code and you make it explicit
-> through a type of class, suddenly different concerns start finding their
-> place. You start looking in a different way at logic you have been adding in
-> several places.
+> through a type or a class, different concerns start finding their home. It
+> will make you look in a different way at logic you have been adding in several
+> places.
 
-## Things that help
+## Things that help in deciding what to put where
 
-What helps us in deciding what to put where? 
+Let's look at some things we find helpful in our quest on what to put where:
 
-- **Use [Hexagonal Architecture](http://localhost:8082/2020/08/20/hexagonal-architecture.html) as a lens** - Hex is a typology - look at concerns in code, is it port, adapter (primary/secondary), domain, ...
-- **Introducing a name for a 'thing' in the code**. We can do this either by design or discovery. Whenever we find ourselves fiddling with a string (or any other primitive type) in several places in the code, this string apparently means something. We look for a good name so that we can create a class or type for it. Having a thing represented by a name and a class creates a place in the code where related logic and responsibilities want to go. Duplicated code or doing similar things in different places in the code is usually a strong indicator that there is something to be discovered.
-- **Ask ourselves 'who needs to know what? what can we do to reduce that knowledge?'** The more an object or function knows, the more coupled it is, the more sensitive it becomes to changes. And the more code we will need to touch if there is a change. In our I18N example, both front-end and back-end know the language of a diagnostic session. Only the front-end needs to know about the current language, the back-end does not (and should not) care.
-- **Working with CRC (Class, Responsibilities, Collaborator) cards to get quick feedback on a design**. With [CRC cards](http://c2.com/doc/oopsla89/paper.html), we create a model of object and their proposed responsibilities on cards, which enables us to quickly play out al;alternative scenarios and get a feel for how the design would work out. It also helps to get feedback on which object needs to know what.
-- **Pair programming, or ensemble/mob programming** - it pays to have a good discussion about what is the nature of the thing, and where does it belong; nitpicking is worthwhile, the minutes we spent bickering about the right place will probably save us and our colleagues many hours of wandering through the code to find the line(s) to change
-- **Documentation** helps too, e.g [Readme Driven Development](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html) or a high level description of what goes where on a wiki. It helps if we have standard places at least for the main concerns, and we stick to that. The links in the documentation may suggest alternative arrangements@@.
+- **Use Hexagonal Architecture as
+  a lens** - [Hexagonal
+  Architecture](http://localhost:8082/2020/08/20/hexagonal-architecture.html) provides a frame of reference to designate
+  different concerns in a system as ports, adapters, or domain logic, and it
+  helps with structuring dependencies.
+- **Introduce a name for the 'thing' in the code**. We can do this either by
+  design or discovery. Whenever we find ourselves fiddling with for instance a
+  string in several places in the code, this string apparently means something.
+  We start looking for a good name and create a type for it. Having a thing
+  represented by a name creates a place in the code where related logic and
+  responsibilities want to go. Duplicated code or is usually a strong indicator
+  that there is a 'thing' to be discovered.
+- **Ask 'Who needs to know what? Can reduce that knowledge?'** The more an
+  object or function knows, the more coupled it is and the more sensitive it is
+  to changes. And the more code we will need to touch if there is a change. In
+  our I18N example, both front-end and back-end know the language of a
+  diagnostic session. Only the front-end needs to know about the _current_
+  language, the back-end should not care.
+- **Working with CRC (Class, Responsibilities, Collaborator) cards for rapid
+  design feedback**. [CRC cards](http://c2.com/doc/oopsla89/paper.html) are a
+  lo-fi pen-and-paper technique to quickly create a model of objects and their
+  responsibilities on cards. It enables us to play out alternative scenarios and
+  get a feel for how the design works out. It provides good feedback on which
+  object needs to know what.
+- **Pair programming or ensemble/mob programming** - collaboratively doing
+  design, having a good discussion together about what is the nature of the
+  'thing' and where it does belong. Taking time to nitpick about the right place
+  is worthwhile, it will probably save us and our future colleagues many hours
+  of wandering through the code to find the lines to change.
+- **Test Driven Development As If You Meant It** - [TDD As If You Meant
+  It](https://cumulative-hypotheses.org/2011/08/30/tdd-as-if-you-meant-it/) is a
+  more extreme form of Test Driven Development originally proposed by Keith
+  Braithwaite as a workshop technique. With TDD As If You Meant It you let your
+  code grow in the test and only extract a function or class when the code asks
+  for it by showing duplication. This technique turns out to be useful for
+  discovering 'things' in production code as well. 
+- **Documentation** helps too, e.g [Readme Driven
+  Development](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html)
+  or a high level description of what goes where on a wiki. It helps if we have
+  standard places at least for the main concerns, and we stick to that. 
 
 ## Learn what to put where
 
-"How can I learn more about what to put where?" a participant recently asked in our refactoring workshop. WTPW is very much about skill and design heuristics. So no best practices or simple lists to learn by heart. So what _can_ you do?
+"How can I learn more about what to put where?" a participant recently asked in
+our refactoring workshop. WTPW is very much about skill and design heuristics.
+There are no best practices or simple lists. So what _can_ you do?
 
 - Practice, lots of practice, **deliberate practice**
 - **Practice together** - run frequent team sessions to practice, e.g. in the
   form of [coding dojos](https://codingdojo.org/) or [mob/ensemble programming](https://www.agilealliance.org/glossary/mob-programming/). By putting the code
   under a magnifying glass and nitpicking together, you will learn a lot, and
   have a great time!
-- Try out **alternatives and small experiments**, whenever you can; yes, also when you're working on production code; but also when sketching designs on a whiteboard or doing a CRC session
-- **Test Driven Development** is a discipline of software development that helps in making you continuously think about what to put where; the **Growing Object Oriented Software, Guided by Tests** book by Nat Pryce & Steve Freeman is highly recommended for this.
+- Try out **alternatives and small experiments**, whenever you can. Yes, also
+  when you're working on production code, when sketching designs on a whiteboard
+  or doing a CRC session.
+- **Test Driven Development** is a discipline of software development that helps
+  in making you continuously think about what to put where. We recommend the
+  **Growing Object Oriented Software, Guided by Tests** book by Nat Pryce &
+  Steve Freeman.
 - **Read the [99 Bottles of OOP e-book](https://sandimetz.com/99bottles)** by
-  Sandi Metz, @@
+  Sandi Metz. This book is about learning Test Driven Development and Object Oriented Design, and guides you through different design consideration with concrete examples. Also highly recommended!
 - Learn yourself **the language of Code Smells and Refactorings**. Code Smells
-  provide a vocabulary of things that can be improved in the code. Mastering
+  provide a vocabulary of things that can be improved in code. Mastering
   this vocabulary will give you a richer perspective on your code. Refactorings
-  provide you with a vocabulary to reason about small, controlled improvements.
-- Learn about **[connascence](https://connascence.io/)**, a more formal model of
-  different dimensions of coupling in code. Connascence is not widely known, but
-  gives you a powerful perspective on dependencies - who needs to know what and
-  what else needs to change if I change this? 
+  provide you a vocabulary of small, well defined design improvements.
+- Learn about **Connascence**. [Connascence](https://connascence.io/) is a more
+  formal model of different dimensions of coupling in code. It offers a powerful
+  perspective on dependencies - who needs to know what and what else needs to
+  change if I change this? 
 - **Don't be afraid to make wrong choices**. Learning how to refactor away
   from your previous, not-so-good decisions is much more powerful than trying to
   learn to do things first time right. The more skilled you get in programming
@@ -216,10 +265,9 @@ What helps us in deciding what to put where?
 - [Buy our Code Smells & Refactoring cards](/shop) for learning the vocabulary of code smells & refactoring
 - Read more about Connascence in [Kevin Rutherford's blog](https://silkandspinach.net/2015/02/10/connascence-a-retrospective/)
 
-
-_Credits:  thanks to Willem for editing and helping improve this post._
-
-_Photo credits: tools photo by <a href="https://unsplash.com/@carlevarino?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Cesar Carlevarino Aragon</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>_
+_Credits:_
+- _thanks to Willem for editing and helping improve this post._
+- _Photo credits: tools photo by <a href="https://unsplash.com/@carlevarino?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Cesar Carlevarino Aragon</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>_
 
 <aside>
   <h3>Learning what to put where</h3>

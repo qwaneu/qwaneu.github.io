@@ -1,21 +1,24 @@
 ---
 layout: post
-title: Hexagons in the Backend - a Python example
+title: Hexagons in the back end - an example
 tags:
   - architecture
   - patterns
   - ports and adapters
   - test driven development
 author: Marc Evers
-image: 
+image: /attachments/blogposts/2020/t-h-chia-1-Zr2ye5588-unsplash.jpg
 ---
 
 We have shared a number of posts on the Hexagonal Architecture, how it helps in
 your automated test  architecture, how it looks like when applied in a Vue.js
-based front-end.
+based front-end. In this post, we will share how we applied it in the back-end
+component for the Online Agile Fluency® Diagnostic application we are
+developing.
 
-In this post, we will share how we applied it in the backend component for the
-Online Agile Fluency Diagnostic application we are developing.
+![hexagons image](/attachments/blogposts/2020/t-h-chia-1-Zr2ye5588-unsplash.jpg)
+{: class="post-image post-image-70" }
+
 
 ## Hexagonal Architecture
 
@@ -272,7 +275,6 @@ class DiagnosticSessionsRepository(ABC):
     @abstractmethod
     def save(self, event):
         pass
-
 ```
 
 This interface definition is part of our domain. It describes the role a
@@ -285,22 +287,35 @@ database. For each test case, this test creates a SQLite database and runs the
 schema migrations so that the database schema is the current schema. This all
 runs in milliseconds.
 
-## Putting it all together
-
-If we put this all in one picture, we get something like this. In green, we have mentioned the different types of test, with their (approximate) scope.
-
-![hexagonal architecture in backend - create diagnostic session with types of tests](/attachments/blogposts/2020/hexagonal-backend-tests.jpg)
-
-We have focused adapter integration tests, unit tests for the domain objects
-(including commands), and a suite end-to-end tests where we exercise most end
-points. The whole back-end test suite including end to end tests runs in under
-10 seconds.
-
-## Hexagonal rings
+## Putting it all together, guided by tests
 
 Looking back on how we applied Hexagonal Architecture principles, you could say we distinguish a number of rings, where the central 'domain' consist of a ring of commands/queries (or 'use cases') and a core of rich domain objects.
 
 ![different rings in hexagonal architecture ](/attachments/blogposts/2020/hexagonal-rings.jpg)
+{: class="post-image" }
+
+Our domain objects are in the centre, with unit tests:
+
+![hexagonal architecture in back-end - create diagnostic session - unit tests](/attachments/blogposts/2020/hexagonal-backend-unit-tests.jpg)
+
+We have created a primary adapter for the HTTP routes and a secondary adapter for the SQLAlchemy/SQLite based diagnostic session repository. They have their own adapter integration tests, which test our code together with the libraries we use:
+
+![hexagonal architecture in back-end - create diagnostic session - adapter integration tests](/attachments/blogposts/2020/hexagonal-backend-adapter-integration-tests.jpg)
+
+Finally, we have a series of component end-to-end tests, which test the who;le back-end component through its HTTP REST API. This end to end tests plugs in in-memory repository adapters to improve test speed and reliability. We don't need to run the end to end test against a real database, because our adapter integration tests have covered that concern extensively.
+
+![hexagonal architecture in back-end - create diagnostic session - end-to-end tests](/attachments/blogposts/2020/hexagonal-backend-end-to-end-tests.jpg)
+
+The component end to end test runs fast enough to be included in the back end
+automated test suite. The whole test suite runs in under 10 seconds, giving us
+rapid feedback on every line we change.
+
+## Conclusion
+
+
+
+_Credits: Photo by <a href="https://unsplash.com/@teckhonc?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">T.H. Chia</a> on <a href="https://unsplash.com/s/photos/hexagons?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>_
 
 ## References
+
 
