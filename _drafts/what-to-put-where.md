@@ -241,8 +241,9 @@ There are no best practices or simple lists. So what _can_ you do?
   or doing a CRC session.
 - **Test Driven Development** is a discipline of software development that helps
   in making you continuously think about what to put where. We recommend the
-  **Growing Object Oriented Software, Guided by Tests** book by Nat Pryce &
-  Steve Freeman.
+  [Growing Object Oriented Software, Guided by
+  Tests](https://www.goodreads.com/book/show/4268826-growing-object-oriented-software-guided-by-tests)
+  book by Nat Pryce & Steve Freeman.
 - **Read the [99 Bottles of OOP e-book](https://sandimetz.com/99bottles)** by
   Sandi Metz. This book is about learning Test Driven Development and Object Oriented Design, and guides you through different design consideration with concrete examples. Also highly recommended!
 - Learn yourself **the language of Code Smells and Refactorings**. Code Smells
