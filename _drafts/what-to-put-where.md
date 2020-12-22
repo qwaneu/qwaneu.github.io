@@ -75,7 +75,7 @@ In our back-end component, we already had the following:
 
 Where do we put a CSV export? We regard it as another view on the Rollup domain
 object. Looking through the [Hexagonal
-Architecture](http://localhost:8082/2020/08/20/hexagonal-architecture.html)
+Architecture](/blog/2020/08/20/hexagonal-architecture.html)
 lens, it does not affect the domain logic, so we do not need any changes there.
 It is an adapter concern: it is about translating a domain object to a different
 format on a different endpoint.
@@ -88,7 +88,7 @@ CSV format. A bit of work on the front-end component was required as well, to
 add a download button.
 
 As a result, whenever we need to change or add data in the CSV we know exactly
-where to find it: it is an adapter concern, and it is part of our route code.
+where to find it: it is an adapter concern, and it is part of our routing code.
 
 The CSV conversion including headings is currently a single function, 8 lines of
 Python. Maybe once we'd like to have more fancy CSV output, we might find that
@@ -123,9 +123,9 @@ When the front-end Survey component retrieves a survey, it needs to set its
 language to the survey language, so that the accompanying texts (like
 instructions) show up correctly. Some logic around `VueI18N` started to grow in the Survey UI component.
 
-Because a facilitator shares the rollup chart view the team, the rollup chart
+Because a facilitator shares the rollup chart view with the team, the rollup chart
 should also be shown in the language of the diagnostic session. We had to add
-some conditional logic in a router hook to make sure the current language gets
+some conditional logic in a router hook to ensure the current language gets
 reset when needed. 
 
 Hm, it does not smell good...we see more and more knowledge about languages and
@@ -133,7 +133,7 @@ Hm, it does not smell good...we see more and more knowledge about languages and
 
 ![I18N creating a mess in our architecture](/attachments/blogposts/2020/wtpw-i18n-1.jpg)
 
-Multiple UI components contain language related logic and depend on the
+Multiple UI components contain translaton logic and depend on the
 `VueI18N` library. Our domain knows about the current language and how `VueI18N`
 works. Our `main.js` has  intimate knowledge about how `VueI18N` works... We had
 code like this in UI components:
@@ -147,19 +147,19 @@ code like this in UI components:
 Our UI components are acting as a
 [Mediator](https://en.wikipedia.org/wiki/Mediator_pattern) between our domain
 code and `VueI18N`. We followed the Hexagonal Architecture principle of keeping
-frameworks outside, preventing `VueI18N` dependencies on in our domain code, but
+frameworks outside, preventing `VueI18N` dependencies in our domain code, but
 now our UI components are getting messy.
 
-> Survey language is a cross cutting concern in this application, we cannot
+> Survey language is a cross cutting concern in this application. We cannot
 isolate it completely. Both front end and back-end will have knowledge of survey
 language.  
 > **The question is not how to remove this knowledge as much as possible, but
 rather how to minimize what each part _really_ needs to know to do its job.**  
 > In the back-end, we know the language of a diagnostic session and we select an
-appropriate survey translation based on that. We also select the correct
+appropriate survey translation. We also select a
 translation for invitation emails, but there is no other language-based logic.
 
-Reflecting on what we created, we concluded that we are missing a domain concept
+Reflecting on what we created, we concluded that we missed a domain concept
 and an adapter in the front end. `VueI18N` is quite closely related to Vue.js
 based UI components, but the concept of available languages and a current
 language is a concern of its own. Hence we introduced a **Language Store**
@@ -202,13 +202,13 @@ Let's look at some things we find helpful in our quest on what to put where:
   our I18N example, both front-end and back-end know the language of a
   diagnostic session. Only the front-end needs to know about the _current_
   language, the back-end should not care.
-- **Working with CRC (Class, Responsibilities, Collaborator) cards for rapid
+- **Working with CRC (Class, Responsibilities, Collaborators) cards for rapid
   design feedback**. [CRC cards](http://c2.com/doc/oopsla89/paper.html) are a
-  lo-fi pen-and-paper technique to quickly create a model of objects and their
+  lo-fi technique to quickly create a model of objects and their
   responsibilities on cards. It enables us to play out alternative scenarios and
   get a feel for how the design works out. It provides good feedback on which
   object needs to know what.
-- **Pair programming or ensemble/mob programming** - collaboratively doing
+- **Pair programming or ensemble programming** - collaboratively doing
   design, having a good discussion together about what is the nature of the
   'thing' and where it does belong. Taking time to nitpick about the right place
   is worthwhile, it will probably save us and our future colleagues many hours
@@ -219,7 +219,7 @@ Let's look at some things we find helpful in our quest on what to put where:
   Braithwaite as a workshop technique. With TDD As If You Meant It you let your
   code grow in the test and only extract a function or class when the code asks
   for it by showing duplication. This technique turns out to be useful for
-  discovering 'things' in production code as well. 
+  discovering 'things' in legacy code as well. Our tests can be a haven of tiny green fields in a see of brown.
 - **Documentation** helps too, e.g [Readme Driven
   Development](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html)
   or a high level description of what goes where on a wiki. It helps if we have
@@ -233,7 +233,7 @@ There are no best practices or simple lists. So what _can_ you do?
 
 - Practice, lots of practice, **deliberate practice**
 - **Practice together** - run frequent team sessions to practice, e.g. in the
-  form of [coding dojos](https://codingdojo.org/) or [mob/ensemble programming](https://www.agilealliance.org/glossary/mob-programming/). By putting the code
+  form of [coding dojos](https://codingdojo.org/) or [ensemble programming](https://www.agilealliance.org/glossary/mob-programming/). By putting the code
   under a magnifying glass and nitpicking together, you will learn a lot, and
   have a great time!
 - Try out **alternatives and small experiments**, whenever you can. Yes, also
@@ -246,7 +246,7 @@ There are no best practices or simple lists. So what _can_ you do?
   book by Nat Pryce & Steve Freeman.
 - **Read the [99 Bottles of OOP e-book](https://sandimetz.com/99bottles)** by
   Sandi Metz. This book is about learning Test Driven Development and Object Oriented Design, and guides you through different design consideration with concrete examples. Also highly recommended!
-- Learn yourself **the language of Code Smells and Refactorings**. Code Smells
+- Teach yourself **the language of Code Smells and Refactorings**. Code Smells
   provide a vocabulary of things that can be improved in code. Mastering
   this vocabulary will give you a richer perspective on your code. Refactorings
   provide you a vocabulary of small, well defined design improvements.
