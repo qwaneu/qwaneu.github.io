@@ -9,9 +9,9 @@ image: /attachments/blogposts/2020/cesar-carlevarino-aragon-NL_DF0Klepc-unsplash
 ---
 
 Deciding What To Put Where is half of the work of software development. What
-should I put where, in such a way that I (and my colleagues) will be able to
-find it back later? Finding a good place for things in code greatly helps (or
-hinders!) maintainability of the code later on.
+should I put where, in such a way that me and my colleagues will be able to
+find it back later? Finding a good place for things in code greatly helps or
+hinders! maintainability of the code later on.
 
 Knowing what to put where is a skill developed through practice. Things
 that can be helpful are looking at code through a Hexagonal Architecture lens,
@@ -33,27 +33,27 @@ Let's explore this further in this post.
 
 An important part of our job as software developers is taking design decisions
 at all levels: sketching a high level architecture on a whiteboard, where we
-decide which responsibility goes where; CRC (class-responsibility-collaborator)
+decide which responsibility goes where; CRC (Class Responsiblity Collaborators)
 design sessions, where we play out scenarios of object interactions, to see
-which object will have which responsibility; and also at the micro-level,
-deciding on names and specific functions or methods. 
+which object will have which responsibility; and also at the micro-level, e.g.
+deciding on names for specific operations.
 
-We are not only trying to make the software work for now, but we try to develop
-it in a sustainable way. Therefore we are continuously thinking about what
-concern should we put where. We spend much more time reading and understanding
+We are not only trying to make the software work for now, we try to develop
+in a sustainable way. Therefore we are continuously thinking "what
+concern should we put where?". We spend much more time navigating, reading and understanding
 code than writing it. Whenever we need to make changes, we'd like to find out
 quickly where in the code we should be, and we hope that the concern to be
 changed is in one and only one place.
 
-> Putting things in the 'right' place will help us a lot later on. It
-is so important that we think it deserves its own acronym ;-)  
+> Putting things in the 'right' place will help us later on. It
+is so important that we think it deserves its own acronym:
 > **WTPW - What To Put Where**  
-> stuff just anywhere, but then you'll spend many hours looking through the mess
-> It's like keeping your shed well organized. You can dump your tools and other
-> to find the things you need. Putting some consideration in what are you going
+> We can put "stuff" just anywhere, but then we will spend many hours looking through the mess.
+> It's like keeping your shed well organized. You can dump your tools and figure out how
+> to find the things you need in the future. That saves time now, but is frustrating when you need 'that thing'. Putting some consideration in what you are going
 > to put where will save you lots of time and frustration later.
 
-How do we decide what to put where? We do not have generic rules or best
+How do we decide What To Put Where? We do not have generic rules or best
 practices, but we do apply numerous design heuristics. It is a skill you learn
 through (deliberate) practice. So let's have a look at two examples to share our
 considerations regarding what should be put where. The examples are from our
