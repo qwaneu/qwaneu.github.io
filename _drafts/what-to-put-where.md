@@ -75,7 +75,7 @@ In our back-end component, we already had the following:
 
 Where do we put a CSV export? We regard it as another view on the Rollup domain
 object. Looking through the [Hexagonal
-Architecture](/blog/2020/08/20/hexagonal-architecture.html)
+Architecture](/2020/08/20/hexagonal-architecture.html)
 lens, it does not affect the domain logic, so we do not need any changes there.
 It is an adapter concern: it is about translating a domain object to a different
 format on a different endpoint.
