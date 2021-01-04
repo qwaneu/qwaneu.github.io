@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hexagons in the back end - an example
+title: Hexagons in the back-end - an example
 tags:
   - architecture
   - patterns
@@ -10,8 +10,12 @@ author: Marc Evers
 image: /attachments/blogposts/2020/t-h-chia-1-Zr2ye5588-unsplash.jpg
 ---
 
-Hexagonal Archtecture allows us to continuously evolve a web backend. In this post we'll show you how we do that. It is a continuation of a series, previous installments demenstonrated how Hexagonal architecture facilitates automated test architecture, and development of a Vue.js based front-end. In this post, we will share how we
-applied it in the back-end for the Online Agile Fluency
+Hexagonal Architecture allows us to continuously evolve a web back-end. In this
+post, we'll show you how we do that. It is a continuation of a series, previous
+instalments demonstrated [how Hexagonal architecture facilitates automated test
+architecture](/2020/09/17/test-architecture.html), and [development of a Vue.js
+based front-end](/2020/09/25/hexagonal-frontend-example.html). In this post, we
+will share how we applied it in the back-end for the Online Agile Fluency
 Diagnostic application.
 
 ![hexagons image](/attachments/blogposts/2020/t-h-chia-1-Zr2ye5588-unsplash.jpg)
@@ -30,10 +34,11 @@ Diagnostic application.
 
 ## Hexagonal Architecture
 
-Apply the Hexagonal Architecture pattern enables us to focus on the language of
-our domain in the components we develop. The pattern describes that domain logic
-resides in the centre, mapping to and from the outside world is managed through
-ports and adapters, and dependencies go outside-in. See [our previous blog post](/2020/08/20/hexagonal-architecture.html) for details.
+Applying the [Hexagonal Architecture
+pattern](/2020/08/20/hexagonal-architecture.html) enables us to focus on the
+language of our domain in the components we develop. The pattern describes that
+domain logic resides in the centre, mapping to and from the outside world is
+managed through ports and adapters, and dependencies go outside-in.
 
 ![hexagonal architecture](/attachments/blogposts/2020/ports-and-adapters.jpg)
 {: class="post-image post-image-70" }
@@ -44,89 +49,88 @@ We are working on a web application for the [Agile Fluency
 project](https://www.agilefluency.org/), to support licensed Agile Fluency
 facilitators to run remote [diagnostic
 workshops](https://www.agilefluency.org/diagnostic.php) with development teams.
-Team members fill in a survey using the application, and the application creates
-an aggregated visualisation of the survey results in a 'rollup chart'
+Team members fill in a survey using the application and the application creates
+an aggregated visualisation of the survey results in a 'rollup chart'.
 
 We prefer to work domain driven. We started out in spring 2020 with a quick
 [event storming](https://www.eventstorming.com/) session and identified domain concepts like Facilitator,
 Diagnostic Session (the workshop), Survey, and Rollup Chart. We made sure that
-our front end and our back end components speak this domain language, by having
+our front-end and back-end components speak this domain language, by having
 the components, classes and function reflect these concepts.
 
-So how does the Hexagonal Architecture manifest itself in our back-end component? What other design decisions did we make to structure our code?
-
-Let's use creating a new diagnostic session as an example. 
+So how does Hexagonal Architecture manifest itself in our back-end component?
+What other design decisions did we make to structure our code? Let's use
+creation of a new diagnostic session as an example. 
 
 The back-end component is Python based. It provides a HTTP REST API, stores its
-data in a SQLite database, and sends emails using an SMTP server. The relevant
+data in a SQLite database, and sends emails through SMTP. Relevant
 domain concepts are `DiagnosticSession` and the `CreateDiagnosticSession`
 command. The persistence concern is represented by a
 `DiagnosticSessionRepository` port, an interface within our domain.
 
-The REST API is implemented by routes code based on the
+The REST API is implemented by routing code based on the
 [Flask library](https://flask.palletsprojects.com/en/1.1.x/). This is a primary
 adapter driving the back-end component. We have create a
-`DiagnosticSessionRoutes` class that translates and delegates to the domain
-objects
+`DiagnosticSessionRoutes` class that translates and delegates to domain objects.
 
 The `DiagnosticSessionRepository` port is implemented by the
-`DBDiagnosticSessionRepository` adapter which uses the [SQLAlchemy library](https://www.sqlalchemy.org/) and
-SQLite to store and retrieve data. It takes care of any side effects that result
-from decisions taken by the domain logic.
+`DBDiagnosticSessionRepository` adapter which uses the [SQLAlchemy
+library](https://www.sqlalchemy.org/) and SQLite to store and retrieve data. It
+takes care of any side effects from decisions taken by the domain logic.
 
 The diagram below illustrates these different concepts.
 
 ![hexagonal architecture in back-end - create diagnostic session](/attachments/blogposts/2020/hexagonal-backend.jpg)
 
-An overview of the different adapters in our back-end:
+An overview of the different adapters in our back-end component:
 
-| Adapter | primary/secondary | module | responsibility |
+| **Adapter** | **Primary/secondary** | **Module** | **Responsibility** |
 | DiagnosticSessionRoutes | primary | /app/adapters/routes | offer HTTP REST API; translate incoming requests to calls on domain logic |
-| DBDiagnosticSessionsRepository | secondary | /app/adapters/repositories | map DiagnosticSession to/from a SQLite database; implement the DiagnosticSessionRepository interface  |
+| DBDiagnosticSessionsRepository | secondary | /app/adapters/repositories | map DiagnosticSession to/from an SQLite database; implement the DiagnosticSessionRepository interface  |
 | SMTPBasedMessageEngine | secondary | from quiltz.messaging library | use SMTP to send messages; implement the MessageEngine interface, which is part of our domain |
+{: style="font-size: 90%;" }
 
 ## Working domain driven: Commands and Queries
 
 We have structured our domain code in behaviour-rich domain objects and command
-& query objects. When a HTTP REST request comes in, the routes code transforms
-incoming JSON into data objects and delegates to an appropriate Command or Query
-object within our domain.
+& query objects. When a HTTP REST request comes in, the routing code transforms
+incoming JSON data into data objects and delegates to an appropriate Command or
+Query object within our domain.
 
-The command and query objects are based on _Commands_ and _Read Models_ we have
-found in our event storming session. In this way, our code speaks the same
+The command and query objects are based on the _Commands_ and _Read Models_ we
+have found in our event storming session. In this way, our code speaks the same
 language as our domain model and we have traceability all the way. In our code
-for example, we have the CreateDiagnosticSession, JoinSession, and
-AnswerQuestion commands.
+for example, we have the `CreateDiagnosticSession`, `JoinSession`, and
+`AnswerQuestion` commands.
 
-> Commands and Read Models are patterns from [Domain Driven
+> _Commands_ and _Read Models_ are patterns from [Domain Driven
 Design](https://www.dddcommunity.org/). A Command represents a user's intent to
 change something, a Read Model is the information a user needs to issue a
-command - what does the user need to know to take that decision?
+command - what do you need to know to take that decision?
 
 A Command object's responsibility is to:
 - perform validation (optional)
-- look up an [aggregate](https://lostechies.com/gabrielschenker/2015/05/25/ddd-the-aggregate/) - i.e. the 'thing' the command is operating on
+- look up an
+  [aggregate](https://lostechies.com/gabrielschenker/2015/05/25/ddd-the-aggregate/)
+  - i.e. the 'thing' the command is operating on
 - delegate the actual work to the aggregate
 - store any updates or events
-- take care of other side effects (like sending out a message)
+- take care of other side effects, like sending out a message
 
 We keep commands mostly free of domain decisions. Domain logic should be as much
 as possible in the rich domain objects, like `DiagnosticSession` or
 `Facilitator`. A command just does a lookup, delegates, takes care of side
 effects. Most of the times conditional logic in a command is a smell.
 
-> A Command is an example of the Command design pattern. It is basically a
-function turned into an object, which facilitates injecting any dependencies
-needed for handling side-effects.
-
-Although we prefer to use the Command pattern from Domain Driven Design, other
-people use other concepts in their domain code like 'use cases', which fulfil a
-similar role.
+> A Command is an example of the Command design pattern. It is a function turned
+into an object, which facilitates injecting any dependencies needed for handling
+side-effects.
 
 ## Creating a diagnostic session
 
 Let's have a look at some code. To create a new diagnostic session, the front
-end does a POST on `/api/diagnostic-sessions`. The route code looks like this:
+end does a POST on `/api/diagnostic-sessions`. The route code looks like this
+(with some details left out):
 
 ```python
 class DiagnosticSessionRoutes(object):
@@ -137,7 +141,7 @@ class DiagnosticSessionRoutes(object):
         create_diagnostic_session=CreateDiagnosticSession(diagnostic_session_repository), 
             ...)
 
-    def __init__(self, diagnostic_session_repository,  create_diagnostic_session, ...):
+    def __init__(self, diagnostic_session_repository, create_diagnostic_session, ...):
         self.diagnosticSessionsRepository = diagnostic_session_repository
         self.create_diagnostic_session = create_diagnostic_session
         ...
@@ -147,7 +151,8 @@ class DiagnosticSessionRoutes(object):
 
         @route('/api/diagnostic-sessions', methods=['POST'], login_required=True)
         def create():
-            result = self.create_diagnostic_session({**request.get_json(), **dict(facilitator=self.current_user_repository.current_user())})
+            result = self.create_diagnostic_session(
+              {**request.get_json(), **dict(facilitator=self.current_user_repository.current_user())})
             if result.is_success():
                 return jsonify(id=str(result.id)), 201
             else:
@@ -156,11 +161,12 @@ class DiagnosticSessionRoutes(object):
 ```
 
 We have a static creation method `withDiagnosticSessionsRepository` that creates
-the route and instantiates commands based on the injected repositories. In the
+the route and instantiates commands based on injected repositories. In the
 tests, we use the constructor, because it enables us to inject a test double for
 commands.
 
-`RouteBuilder` is a thin wrapper around Flask which helps us among other things in securing routes when necessary (the `login_required`).
+`RouteBuilder` is a thin wrapper around Flask which helps us with for instance
+securing routes when necessary with `login_required`.
 
 The POST on `/api/diagnostic-sessions` delegates to the instance of the
 `CreateDiagnosticSession` command. It extracts the fields of the JSON data into
@@ -170,12 +176,14 @@ returns the id of the new session, which is put in the HTTP response. If the
 command is not successful, the body of its result will contain an error message,
 which is returned in the HTTP response.
 
-To represent the command results, we have introduced a small Results library.
-We prefer to have success and failure explicitly in our code, rather than
-checking `None` return values. `None` erases the reason for failure, which makes it difficult to deal with at the call-site. Result is available as part of our
-[quiltz-domain library on GitHub](https://github.com/qwaneu/quiltz-domain).
+To represent the command results, we have introduced a small Results library. We
+prefer to have success and failure explicitly in our code, rather than checking
+for `None`. `None` erases the reason for failure, which makes it difficult to
+deal with at the call-site. `Result` is available as part of our [quiltz-domain
+library on GitHub](https://github.com/qwaneu/quiltz-domain).
 
-We have introduced a `register` function that allows us to write focused adapter integration tests to cover the integration with Flask. An example test:
+We have introduced a `register` function that allows us to write focused adapter
+integration tests to cover the Flask integration:
 
 ```python
 def createDiagnosticSessionRoutes(**kwargs):
@@ -210,22 +218,24 @@ class TestDiagnosticSessionRoutes_Post(RoutesTests):
 ```
 
 We have hidden the Flask setup boilerplate in a `RoutesTests` base class. This
-also creates a test_client for doing HTTP calls. The setUp makes sure all
-request in the test are performed as an authenticated user (`self.do_signin()`). It also provides a `current_user_repository`.
+also creates a `test_client` for doing HTTP calls. The `setUp` function makes
+sure all requests are performed as an authenticated user (`self.do_signin()`).
+It also provides a `current_user_repository`.
 
 The `createDiagnosticSessionRoutes` function conveniently provides dummy `None`
 references for the different dependencies these routes need (in a quite Pythonic
-way), so that we can focus on the ones that are relevant in the specific tests.
+way), so that we can focus on the ones relevant for the specific tests.
 
-We have decided to mock the `CreateDiagnosticSession` command. This has a risk
-of having green tests even though the route and the actual command are not
-working together, especially with Python's flexible duck typing. Therefore we
-have also created a suite of component end-to-end tests that test the full
-component wired with in-memory repositories.
+We have decided to mock the `CreateDiagnosticSession` command. This bears the
+risk of having green tests even though the route and the actual command do not
+work together, especially with Python's flexible duck typing. Therefore we have
+also created a suite of component end-to-end tests that test the full component
+wired with in-memory repositories.
 
 ## Inside the command
 
-The `CreateDiagnosticSession` command code looks like this. We have left out some details for convenience:
+The `CreateDiagnosticSession` command code looks like this, with some details
+left out for convenience:
 
 ```python
 class CreateDiagnosticSession:
@@ -249,13 +259,13 @@ as a function. The actual creation (domain logic) is delegated to
 `DiagnosticSessionCreator`, a factory. After successful creation, it stores the
 resulting event in a diagnostic session repository.
 
-The command needs dependencies to do its job. We inject a diagnostic session"
-repository via the constructor. We also inject an IDGenerator to generate unique
-ids based on UUIDs. Because generating UUIDs introduces randomness and because
-it is an Operating System dependency, we have created our own thin abstraction
-around it: the ID and IDGenerator classes, which are also part of the
-[quiltz-domain library](https://github.com/qwaneu/quiltz-domain). This allows us
-to test this command with a predictable 'fixed ID generator'.
+The command needs dependencies to do its job. We inject a diagnostic session
+repository via the constructor. We also inject an `IDGenerator` to generate
+unique ids based on UUIDs. Because generating UUIDs introduces randomness and an
+Operating System dependency, we have created our own thin abstraction around it:
+the `ID` and `IDGenerator` classes, which are also part of the [quiltz-domain
+library](https://github.com/qwaneu/quiltz-domain). This allows us to test this
+command with a predictable _fixed ID generator_.
 
 Because the command needs dependencies, we find it appropriate to apply the
 Command design pattern and turn it into class. An alternative is to use [higher
@@ -294,7 +304,7 @@ class TestCreateDiagnosticSession:
 
 Here we decided to mock the `DiagnosticSessionsRepository`. An alternative would
 be to use an `InMemoryDiagnosticSessionsRepository`. We find ourselves moving
-away from mocking repositories and prefer to use in-memory variants of the
+away from mocking repositories and preferring in-memory variants of the
 repositories, as they are behaviourally closer to the database based variants.
 
 We inject a fixed ID generator and a fixed clock - we control time, how cool is
@@ -313,8 +323,7 @@ class DiagnosticSessionCreator:
     self.id_generator=id_generator
     self.clock = clock
 
-  def create_with_id(self, team=None, date=None, 
-                     participant_count=0, is_test=False, facilitator=None, language="en"):
+  def create_with_id(self, team=None, date=None, ...):
     return validate(
         presence_of('team', team),
         max_length_of('team', team, 140),
@@ -332,7 +341,7 @@ class DiagnosticSessionCreator:
     )
 ```
 
-The create_with_id function provides default values for incoming data, so that
+The `create_with_id` function provides default values for incoming data, so that
 it can handle missing data. It validates the data using a small validation
 library that is part of the [quiltz-domain
 library](https://github.com/qwaneu/quiltz-domain). Only if validation is
@@ -364,14 +373,14 @@ class DiagnosticSessionsRepository(ABC):
 ```
 
 This interface is part of our domain. It describes the role a diagnostic session
-repository plays. We have an in-memory implementation which is used in tests,
+repository plays. We have an in-memory implementation for tests,
 and a SQLAlchemy/SQLite based implementation `DBDiagnosticSessionsRepository`.
 
 The `DBDiagnosticSessionsRepository` has its own adapter integration test, where
-we test the DB mapping and the queries against an in-memory SQLite database. For
-each test case, an SQLite database is created and schema migrations are run so
-that the database schema corresponds to the current schema. This all runs in
-milliseconds.
+we test the database mapping and the queries against an in-memory SQLite
+database. For each test case, a database is created and schema migrations are
+run so that the database schema corresponds to the current schema. This all runs
+in milliseconds.
 
 ## Putting it all together, guided by tests
 
@@ -379,12 +388,12 @@ Looking back on how we have applied Hexagonal Architecture principles, we
 distinguish a number of rings, where the 'domain' consist of a ring of commands
 and queries and a core of rich domain objects.
 
-![different rings in hexagonal architecture ](/attachments/blogposts/2020/hexagonal-rings.jpg)
+![different rings in hexagonal architecture](/attachments/blogposts/2020/hexagonal-rings.jpg)
 {: class="post-image" }
 
-The Hexagonal Architecture pattern also provides us [a lens to look at our
-automated tests](/2020/09/17/test-architecture.html). Our domain objects and
-commands have unit tests with limited scope (indicated by the green lines):
+The Hexagonal Architecture pattern provides [a lens to look at our automated
+tests](/2020/09/17/test-architecture.html). Our domain objects and commands have
+unit tests with limited scope (indicated by the green lines):
 
 ![hexagonal architecture in back-end - create diagnostic session - unit tests](/attachments/blogposts/2020/hexagonal-backend-unit-tests.jpg)
 
@@ -409,16 +418,21 @@ seconds, giving us rapid feedback on every line we change.
 
 ## Conclusion
 
-In this post, we have shown how we have applied the Hexagonal Architecture pattern and how it helps us to let different concerns find their place in the code. It also helped us in creating a fast and focused test suite that gives us rapid feedback when developing.
+In this post, we have shown how we have applied the Hexagonal Architecture
+pattern and how it helped us to let different concerns find their place in the
+code. It helps to decide [What To Put
+Where](/2020/12/23/what-to-put-where.html). It also helped us in creating a fast
+and focused test suite that gives rapid feedback when developing.
 
-Hexagonal Architecture fits well with Domain Driven Design. It facilitates using domain language in the core of your components.
+Hexagonal Architecture fits well with Domain Driven Design. It facilitates using
+domain language in the core of your components.
 
 ## References
 
-- The [Domain Driven Design community dddcommunity.org](https://www.dddcommunity.org/) is a good starting point for further exploration
+- The [Domain Driven Design community _dddcommunity.org_](https://www.dddcommunity.org/) is a good starting point for further exploration
 - Event Storming is a powerful collaborative domain modelling technique invented
   by Alberto Brandolini; who is [writing a
-  book](https://www.eventstorming.com/book/) on this (recommended!)
+  book](https://www.eventstorming.com/book/) on this - recommended!
 - We work test-driven, because the discipline of Test Driven Development greatly
   helps us to deliver working software continuously; the [Growing Object
   Oriented Software, Guided by Tests](https://www.goodreads.com/book/show/4268826-growing-object-oriented-software-guided-by-tests) book by Nat Pryce & Steve Freeman is a
@@ -434,12 +448,14 @@ This post is part of a series on Hexagonal Architecture:
 - [A Hexagonal Vue.js front-end, by example](/2020/09/25/hexagonal-frontend-example.html)
 - Hexagons in the back end - an example
 
-_Credits: Photo by <a href="https://unsplash.com/@teckhonc?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">T.H. Chia</a> on <a href="https://unsplash.com/s/photos/hexagons?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>_
+_Credits:_
+- _Photo by <a href="https://unsplash.com/@teckhonc?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">T.H. Chia</a> on <a href="https://unsplash.com/s/photos/hexagons?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>_
+- _Many thanks to Willem for editing and helping improve this post._
 
 <aside>
-  <h3>working domain driven</h3>
-  <p>@@.</p>
+  <h3>Seeing your systems through a Hexagonal lens</h3>
+  <p>Making informed architecture decisions across your application landscape is a tough skill. We can support you with for instance architecture reviews, carrying out experiments and facilitating collaborative architecture sessions.</p>
   <p><div>
-    <a href="/training">Learn more about our workshops and courses</a>
+    <a href="/consulting">Learn more about our consultancy services</a>
   </div></p>
 </aside>
