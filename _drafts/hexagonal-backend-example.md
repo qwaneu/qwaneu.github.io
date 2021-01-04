@@ -10,11 +10,9 @@ author: Marc Evers
 image: /attachments/blogposts/2020/t-h-chia-1-Zr2ye5588-unsplash.jpg
 ---
 
-We have shared a number of posts on the Hexagonal Architecture architecture
-pattern: how it helps in your automated test  architecture, how it looks like
-when applied in a Vue.js based front-end. In this post, we will share how we
-applied it in the Python based back-end component for the Online Agile Fluency®
-Diagnostic application we are working on.
+Hexagonal Archtecture allows us to continuously evolve a web backend. In this post we'll show you how we do that. It is a continuation of a series, previous installments demenstonrated how Hexagonal architecture facilitates automated test architecture, and development of a Vue.js based front-end. In this post, we will share how we
+applied it in the back-end for the Online Agile Fluency
+Diagnostic application.
 
 ![hexagons image](/attachments/blogposts/2020/t-h-chia-1-Zr2ye5588-unsplash.jpg)
 {: class="post-image post-image-70" }
@@ -34,7 +32,7 @@ Diagnostic application we are working on.
 
 Apply the Hexagonal Architecture pattern enables us to focus on the language of
 our domain in the components we develop. The pattern describes that domain logic
-resides in the centre, mapping to/from the outside world is managed through
+resides in the centre, mapping to and from the outside world is managed through
 ports and adapters, and dependencies go outside-in. See [our previous blog post](/2020/08/20/hexagonal-architecture.html) for details.
 
 ![hexagonal architecture](/attachments/blogposts/2020/ports-and-adapters.jpg)
@@ -173,9 +171,9 @@ command is not successful, the body of its result will contain an error message,
 which is returned in the HTTP response.
 
 To represent the command results, we have introduced a small Results library.
-We'd prefer to have success and failure explicitly in our code, rather than
-checking `None` return values. Result is available as part of our
-[quiltz-domain library on GitHub](https://github.com/qwaneu/quiltz-domain) and is worth a blog post of its own.
+We prefer to have success and failure explicitly in our code, rather than
+checking `None` return values. `None` erases the reason for failure, which makes it difficult to deal with at the call-site. Result is available as part of our
+[quiltz-domain library on GitHub](https://github.com/qwaneu/quiltz-domain).
 
 We have introduced a `register` function that allows us to write focused adapter integration tests to cover the integration with Flask. An example test:
 
@@ -251,7 +249,7 @@ as a function. The actual creation (domain logic) is delegated to
 `DiagnosticSessionCreator`, a factory. After successful creation, it stores the
 resulting event in a diagnostic session repository.
 
-The command needs dependencies to do its job. We inject a diagnostic session
+The command needs dependencies to do its job. We inject a diagnostic session"
 repository via the constructor. We also inject an IDGenerator to generate unique
 ids based on UUIDs. Because generating UUIDs introduces randomness and because
 it is an Operating System dependency, we have created our own thin abstraction
@@ -417,9 +415,9 @@ Hexagonal Architecture fits well with Domain Driven Design. It facilitates using
 
 ## References
 
-- The Domain Driven Design community offers lots of design goodness; [dddcommunity.org](https://www.dddcommunity.org/) is a good starting point for further exploration
+- The [Domain Driven Design community dddcommunity.org](https://www.dddcommunity.org/) is a good starting point for further exploration
 - Event Storming is a powerful collaborative domain modelling technique invented
-  by Alberto Brandolini; we is [writing a
+  by Alberto Brandolini; who is [writing a
   book](https://www.eventstorming.com/book/) on this (recommended!)
 - We work test-driven, because the discipline of Test Driven Development greatly
   helps us to deliver working software continuously; the [Growing Object
