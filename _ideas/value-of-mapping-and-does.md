@@ -14,6 +14,10 @@ doctrine: Have a common language / challenge assumptions. The people doing the
 work know te problems, but narrative doesn't let the assumptions be challenged.
 pre-mortem / post-mortem blameless.
 
+
+
+- Wardley map, VSM, DoE, all provide a light weight, malleable structure around which conversations unfold
+
 Simon Wardley: "I don't tell them they're wrong, I just let them look at the map". Collectively visualizing things is powerful.
 ----
 deze terug stoppen in essays.

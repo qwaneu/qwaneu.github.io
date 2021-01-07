@@ -298,6 +298,10 @@ around the standard library to capture its behaviour. This can be quite useful
 to 'fix' the behaviour and get early feedback if a newer version subtly breaks
 the standard library API.
 
+Creating small, domain-oriented abstractions around standard library primitives
+creates a new home for responsibilities. This helps in the quest for [What To
+Put Where](/2020/12/23/what-to-put-where.html).
+
 ## References
 
 - If you'd like to learn the vocabulary of code smells like Primitive Obsession
