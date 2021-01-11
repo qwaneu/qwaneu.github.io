@@ -5,7 +5,7 @@ tags:
   - architecture
   - design
 author: Marc Evers
-image: 
+image: /attachments/blogposts/2021/wrapping-ids-hexagonal.jpg
 ---
 
 In our previous post on [Hexagonal Architecture in a
