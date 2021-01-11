@@ -25,24 +25,49 @@ As a development manager, CTO or CIO:
 - Do you have teams that you think can do better, while they think everything is working fine?
 - Do you notice that teams are doing less and less retrospectives, and when asked, they struggle to find subjects to talk about?
 
-...then the [Agile Fluency](https://www.agilefluency.org/)® model could be beneficial to you. The Agile Fluency model provides profound insights in team growth and potential, and gives direction for focused improvement. We are [licensed Agile Fluency Facilitators](https://www.agilefluency.org/diagnostic.php) and we can run fluency diagnostic workshops with your teams. This provides both the teams and yourself with detailed feedback and a concrete path for growth. If you haven't already, it may be worthwhile to visit the [Agile Fluency Project site](https://www.agilefluency.org/) and have a look at the short introduction video.
+...then the [Agile Fluency](https://www.agilefluency.org/)® model could be
+beneficial to you. The Agile Fluency model provides profound insights in team
+growth and potential, and gives direction for focused improvement. We are
+[licensed Agile Fluency
+Facilitators](https://www.agilefluency.org/diagnostic.php) and we can run
+fluency diagnostic workshops with your teams. This provides both the teams and
+yourself with detailed feedback and a concrete path for growth. If you haven't
+already, it may be worthwhile to visit the [Agile Fluency Project
+site](https://www.agilefluency.org/) and have a look at the short introduction
+video.
+
+![Licensed Agile Fluency Facilitator](/images/qwan/AFP_Badge-Facilitator_no_zone@480.png)
+{: class="post-image post-image-40" }
+
 
 ## Team coaching & mentoring
 
-We help teams getting started with agile or taking their next step. We find that usually getting started does not take that much effort. It all depends on the willingness and enthusiasm of the teams.
+We help teams getting started with agile or taking their next step. We find that
+usually getting started does not take that much effort. It all depends on the
+willingness and enthusiasm of the teams.
 
-We can coach management in their agile thinking, teams in concrete agile practices and we can pair-program with your developers to teach them Test Driven Development or help them solve their TDD issues like working with legacy code.
+We can coach management in their agile thinking, teams in concrete agile
+practices and we can pair-program with your developers to teach them Test Driven
+Development or help them solve their TDD issues like working with legacy code.
 
 ## Architecture audits
 
-We are hands-on software practitioners with tens of years of experience in analysis design and implementation of software in environments ranging from J2EE, through Smalltalk and Haskell to embedded software and Single Page Applications. Our experience enables us to carry out audits on architecture and code quality.
+We are hands-on software practitioners with tens of years of experience in
+analysis design and implementation of software in environments ranging from
+J2EE, through Smalltalk and Haskell to embedded software and Single Page
+Applications. Our experience enables us to carry out audits on architecture and
+code quality.
 
 ## Process audit and reviews
 
-Would you like to gain insight in your way of working? Would you like to do a health check of your development process? Are you looking for the next step of agile development but you are not sure which direction to go?
+Would you like to gain insight in your way of working? Would you like to do a
+health check of your development process? Are you looking for the next step of
+agile development but you are not sure which direction to go?
 
-In a limited amount of time (a few days), we can give you insight in and feedback about your development process, and recommendations for the next steps to take. We do this by interviewing and observing your teams, e.g. stand up meetings, retrospectives, planning meetings.
-
+In a limited amount of time (a few days), we can give you insight in and
+feedback about your development process, and recommendations for the next steps
+to take. We do this by interviewing and observing your teams, e.g. stand up
+meetings, retrospectives, planning meetings.
 
 <aside>
   <h3>Want to find out how we can support you?</h3>
