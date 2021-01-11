@@ -11,8 +11,8 @@ image: /attachments/blogposts/2021/wrapping-ids-hexagonal.jpg
 In our previous post on [Hexagonal Architecture in a
 back-end](/2021/01/04/hexagonal-backend-example.html), we mentioned wrapping ID
 generation and timestamps in concepts of their own. This might feel a bit
-over-designed, but we have some pragmatic reasons to do so. In this post,
-we will share the trade-offs and rationale behind wrapping the standard stuff
+over-designed, but we have reasons to do so. In this post,
+we share the trade-offs and rationale behind wrapping the standard stuff
 in abstractions of your own.
 
 - [Forces](#forces)
@@ -46,7 +46,7 @@ just use these things in their code. They are standard, stable, why would you
 put extra boilerplate around those?
 
 We have run into a number of issues that make us encapsulate the standard,
-stable things as well rather than use it directly everywhere in our code.
+stable things as well, rather than include them everywhere in our code.
 
 ## It hurts when writing unit tests
 
@@ -276,6 +276,8 @@ the ID, IDGenerator and corresponding test data builder as part of the
 > invalid data conveniently. We found out the hard way that we had waited too
 > long with introducing the ID class, because UUIDs were all over the place. It
 > took us a few hours to refactor.
+
+Narrator: "If you leave this for a few years, it may be hard to recover from, and repeatedly lead to surprisingly interesting defects. For instance, when over time you use different frameworks that generate different shapes of UUID's and handle them as strings everytwhere".
 
 ## Consequences
 
