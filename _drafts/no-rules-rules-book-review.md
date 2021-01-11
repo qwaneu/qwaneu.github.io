@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Book Review: No Rules Rules
+title: No Rules Rules - book summary & review
 tags:
   - books
 author: Marc Evers
-image: 
+image: /attachments/blogposts/2021/no-rules-rules-cover.jpg
 ---
 
-No Rules Rules - Netflix and the Culture of Reinvention
-by Reed Hastings (Netflix co-founder & CEO) and Erin Meyer
+[No Rules Rules - Netflix and the Culture of Reinvention](https://www.norulesrules.com/) by Reed Hastings (Netflix co-founder & CEO) and Erin Meyer
 
 What I like about the book is the story behind the way of working and the current 'rules'/practices of Netflix. The book shows how Hastings manages the company as a complex system: providing enabling constraints(not too many), trying it out, see where it fails, and adjusting the constraints.
 
