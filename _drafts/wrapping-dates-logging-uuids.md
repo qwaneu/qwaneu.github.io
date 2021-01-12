@@ -11,19 +11,18 @@ image: /attachments/blogposts/2021/wrapping-ids-hexagonal.jpg
 In our previous post on [Hexagonal Architecture in a
 back-end](/2021/01/04/hexagonal-backend-example.html), we mentioned wrapping ID
 generation and timestamps in concepts of their own. This might feel a bit
-over-designed, but we have reasons to do so. In this post,
-we share the trade-offs and rationale behind wrapping the standard stuff
-in abstractions of your own.
+over-designed, but we have reasons to do so. In this post, we share the
+trade-offs and rationale behind wrapping the standard stuff in abstractions of
+your own.
 
-- [Forces](#forces)
+- [Context](#context)
 - [It hurts when writing unit tests](#it-hurts-when-writing-unit-tests)
 - [Standard stuff is stable...until it changes](#standard-stuff-is-stableuntil-it-changes)
 - [Standard stuff does the job...but does it communicate?](#standard-stuff-does-the-jobbut-does-it-communicate)
 - [Standard stuff offers all you need...and so much more](#standard-stuff-offers-all-you-needand-so-much-more)
-- [Introduce a seam?](#introduce-a-seam)
 - [Resolution: thinking from the domain](#resolution-thinking-from-the-domain)
 - [Example: timestamps](#example-timestamps)
-- [Example: IDs and ID Generator](#example-ids-and-id-generator)
+- [Example: unique identifiers](#example-unique-identifiers)
 - [Consequences](#consequences)
 - [Considerations](#considerations)
 - [References](#references)
@@ -41,9 +40,9 @@ If we represent monetary amounts by integers for instance, we need to know how
 it works in every location where those integers are used. Is it cents, euros, dollars?
 
 We tend to take a similar approach with other standard language or standard
-library things, like dates, timestamps, logging, UUIDs. Most developers
-just use these things in their code. They are standard, stable, why would you
-put extra boilerplate around those?
+library things, like dates, timestamps, logging, UUIDs. Most developers just use
+these things in their code. They are standard, stable, why would you put extra
+boilerplate around those?
 
 We have run into a number of issues that make us encapsulate the standard,
 stable things as well, rather than include them everywhere in our code.
@@ -131,8 +130,8 @@ class Token:
     return self._created_time + timedelta(minutes=Token.EXPIRY_IN_MINUTES) < datetime.now()
 ```
 
-For us the code in `is_expired` is not obvious at first glance. We always make
-mistakes with the  greater than/less then operators, and fortunately our unit
+We do not find the code in `is_expired` obvious at first glance. We tend to make
+mistakes with the greater than/less then operators, fortunately our unit
 tests will save us. This piece of code does not express clearly the intent of
 timestamps in our code.
 
@@ -140,14 +139,13 @@ timestamps in our code.
 
 Python `datetime` objects offer all kinds of methods, like `isoweekday`,
 `replace`, `-` and we don't need all of those for representing timestamps. For
-tokens that expire, we only need to compare, add a time
-delta and maybe convert them to and from strings (serialization).
+tokens that expire, we only need to compare, add a time delta and maybe convert
+them to and from strings (serialization).
 
 Using an interface that is way broader than what the concept it is representing
 needs, creates an [affordance](https://jnd.org/affordances_and_design/) for
 using the other stuff when it seems convenient, without having to think hard
 about the intent.
-
 
 ## Resolution: thinking from the domain
 
@@ -201,12 +199,12 @@ class Clock:
         return Timestamp(datetime.now(timezone.utc))
 ```
 
-The Timestamp class expresses the responsibilities of a Timestamp in
-this specific domain, and no more. We cannot accidentally and implicitly
-introduce a new timestamp responsibility.
+The Timestamp class expresses the responsibilities of a Timestamp in this
+specific domain, and no more. We cannot accidentally introduce a new timestamp
+responsibility.
 
 There are more reasons to wrap date/time related behaviour in an abstraction of
-its own. It provides a place to handle time zone related logic. Even more so
+its own: it provides a place to handle time zone related logic. Even more so
 once you realize that UTC and time zones [have some interesting
 properties](https://codeblog.jonskeet.uk/2019/03/27/storing-utc-is-not-a-silver-bullet/).
 
@@ -241,7 +239,8 @@ class IDGenerator(object):
         return ID(uuid.uuid4())
 ```
 
-The `IDGenerator` gets injected in the creation code, here is an example from the Online Agile Fluency Diagnostic application:
+The `IDGenerator` gets injected in the creation code, here is an example from
+the Online Agile Fluency Diagnostic application:
 
 ```python
 class DiagnosticSessionCreator:
@@ -265,8 +264,9 @@ class TestCreateWithId:
     assert diagnostic_session.id == aValidID('12')
 ```
 
-The `aValidID` function is a [test data builder](/2020/10/09/test-data-builders.html) for IDs. We have published
-the ID, IDGenerator and corresponding test data builder as part of the
+The `aValidID` function is a [test data
+builder](/2020/10/09/test-data-builders.html) for IDs. We have published the ID,
+IDGenerator and corresponding test data builder code as part of the
 [quiltz-domain library on GitHub](https://github.com/qwaneu/quiltz-domain).
 
 > We introduced the IDGenerator early on in the project so that we'd be in
@@ -277,7 +277,10 @@ the ID, IDGenerator and corresponding test data builder as part of the
 > long with introducing the ID class, because UUIDs were all over the place. It
 > took us a few hours to refactor.
 
-Narrator: "If you leave this for a few years, it may be hard to recover from, and repeatedly lead to surprisingly interesting defects. For instance, when over time you use different frameworks that generate different shapes of UUID's and handle them as strings everytwhere".
+Narrator: _"If you leave this for a few years, it may be hard to recover from,
+and will repeatedly lead to surprisingly interesting defects. For instance, when
+over time you use different frameworks that generate different shapes of UUIDs
+and handle them as strings everywhere."_
 
 ## Consequences
 
@@ -299,18 +302,18 @@ principle of **domain in the centre, libraries & frameworks on the outside**.
 
 ![Wrapping standard library things seen through a hexagonal architecture lens](/attachments/blogposts/2021/wrapping-ids-hexagonal.jpg)
 
-It feels like extra work, not adding much value initially when the codebase is
-still small and innocent. But the extra effort is limited and will save you
-hours later on.
-
 ## Considerations
 
 Initially, it feels like overkill to wrap stable, well-known, relatively simple
-standard library constructs in abstractions of their own. So we sometimes start
-out with directly using the library within our domain code. We tolerate
-libraries, as they are not in control and are less intrusive than frameworks. We
-wrap them later on when we notice logic growing around the use of that library.
-The longer we wait however, the more painful it becomes. 
+standard library constructs in abstractions of their own. It feels like extra
+work, not adding much value initially when the codebase is still small and
+innocent. The extra effort is limited however and will save you many hours later
+on.
+
+So we sometimes start out with directly using the library within our domain
+code. We tolerate libraries, as they are not in control and are less intrusive
+than frameworks. We wrap them later on when we notice logic growing around the
+use of that library. The longer we wait however, the more painful it becomes. 
 
 With this approach, we are not testing the actual timestamp or UUID generation
 in our unit tests. That's ok, we do not need to test standard library behaviour.
@@ -331,11 +334,14 @@ Put Where](/2020/12/23/what-to-put-where.html).
 - The concept of [Connascence](https://connascence.io/), a model for reasoning
   about coupling in code, provides a foundation for wrapping standard
   library things in your own abstractions
-- Read more about the Hexagonal Architecture pattern in [our series of posts on this topic](/2020/08/20/hexagonal-architecture.html)
+- Read more about the Hexagonal Architecture pattern in [our series of posts on
+  this topic](/2020/08/20/hexagonal-architecture.html)
 - [Working Effectively with Legacy
   Code](https://www.goodreads.com/book/show/44919.Working_Effectively_with_Legacy_Code)
   (2004) by Michael Feathers is the standard work on refactoring legacy code.
   Even after 17 years, it is still relevant for the problems we run into today.
+
+_Credits: thanks to Willem for editing and helping improve this post._
 
 <aside>
   <h3>Seeing your systems through a Hexagonal lens</h3>
