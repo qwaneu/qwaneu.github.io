@@ -15,9 +15,9 @@ Our consulting engagements typically last from a few weeks to several months. We
 
 [Call us to discuss what we could do for you](/contact).
 
-## Team fluency workshops
+## Development Team Fluency
 
-As a development manager, CTO or CIO:
+If you having one of the following questions as a development manager, CTO or CIO:
 
 - Do you have this gut feeling that your teams, although pretty mature, can grow further?
 - Do you have teams that are struggling to find ways to improve?
@@ -25,20 +25,25 @@ As a development manager, CTO or CIO:
 - Do you have teams that you think can do better, while they think everything is working fine?
 - Do you notice that teams are doing less and less retrospectives, and when asked, they struggle to find subjects to talk about?
 
-...then the [Agile Fluency](https://www.agilefluency.org/)® model could be
-beneficial to you. The Agile Fluency model provides profound insights in team
-growth and potential, and gives direction for focused improvement. We are
-[licensed Agile Fluency
-Facilitators](https://www.agilefluency.org/diagnostic.php) and we can run
-fluency diagnostic workshops with your teams. This provides both the teams and
-yourself with detailed feedback and a concrete path for growth. If you haven't
-already, it may be worthwhile to visit the [Agile Fluency Project
-site](https://www.agilefluency.org/) and have a look at the short introduction
-video.
+...then we can work with you and your teams. We offer a diagnostic tool to gain profound
+insights in team growth and potential, and find direction for focused
+improvement. It will help your teams to find specific areas for growth
+and what they can do themselves to become more fluent at software delivery. We will provide systemic insights in your development organization
+that will help you to create a context in which your teams can flourish.
 
-![Licensed Agile Fluency Facilitator](/images/qwan/AFP_Badge-Facilitator_no_zone@480.png)
-{: class="post-image post-image-40" }
-
+<div class="shout-out">
+  <div>
+    <img src="/images/qwan/AFP_Badge-Facilitator_no_zone@480.png" alt="highway" width="70%">
+  </div>
+  <div>
+    <p style="font-size: smaller;">
+    We are <a href="https://www.agilefluency.org/diagnostic.php">licensed Agile Fluency® Facilitators</a> which means we can run
+fluency diagnostic workshops with your teams, to provide both the teams and
+management with detailed feedback and a concrete path for growth. If you haven't
+already, it's worthwhile to visit the <a href="https://www.agilefluency.org">Agile Fluency Project site</a> and watch the short introduction video.
+    </p>
+  </div>
+</div>
 
 ## Team coaching & mentoring
 

@@ -1,3 +1,6 @@
+
+$phone: "screen and (max-width: 768px)";
+
 em {
   font-style: italic;
 }
@@ -118,9 +121,6 @@ em {
     .post-image {
       text-align: center;
     }
-    .post-image-40 img {
-      width: 40%;
-    }
     .post-image-50 img {
       width: 50%;
     }
@@ -158,6 +158,22 @@ em {
         font-size: larger;
         text-align: center;
         margin: 0.1em;
+      }
+    }
+
+    @media  #{$phone} {
+      .shout-out {
+        width: 95%;
+        display: flex;
+        flex-flow: column-reverse wrap;
+  
+        div:first-of-type {
+          max-width: 45%;
+        }
+        div {
+          max-width: 95%;
+          padding: 0.1em;
+        }
       }
     }
 
