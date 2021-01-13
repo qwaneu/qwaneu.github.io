@@ -37,27 +37,25 @@ http://debasishg.blogspot.com/2006/02/habitability-and-piecemeal-growth.html
 # QWAN take on the Testing Quadrants
 
 
-# Hexagonal Architecture Posts
+# Hexagonal example in Ruby
 
-## Hexagonal example in Ruby
+# Test Driving Adapters - SMTP client in Python
 
-## Test Driving Adapters - SMTP client in Python
+# Test Driving Adapters - database based repository
 
-## Test Driving Adapters - database based repository
+# Hexagons & dependencies - why we don't use dependency injection frameworks
 
-## Hexagons & dependencies - why we don't use dependency injection frameworks
+# Hexagons: DB transaction & domain
 
-## Hexagons: DB transaction & domain
-
-## Hexagons and pure domain:
+# Hexagons and pure domain:
 
 representing username uniqueness as an explicit domain concept; "lazily evaluated assumption" allows pure domain code
 
-## testing vue component met v-model (data in, events out)
+# testing vue component met v-model (data in, events out)
 
-## testing routes with mirroring (using the production behaviour of collaborators/mapping functions)
+# testing routes with mirroring (using the production behaviour of collaborators/mapping functions)
 
-## UI components are dumb & flat
+# UI components are dumb & flat
 
 UI component only concerns UI; so each component is a bit of html structure, css, and data / state wiring; 
 
@@ -78,7 +76,6 @@ View logic is easier to reuse (not the primary goal, but a nice side benefit)
 Background information
 - [Humble Object pattern](https://martinfowler.com/bliki/HumbleObject.html)
 
-# WTPW Example: AFDOP test sessions 
-## Introducing 'test' diagnostic sessions
+# WTPW Example: Introducing 'test' diagnostic sessions in AFP
 
 We introduced 'test' sessions for facilitators to try out stuff without consequences (and for us to see how the system is used for real). To prevent unintended usage of test sessions, we fix the number of participants to 3. Where do we put the 'test' concern en the '3 participants' business rule?
