@@ -240,7 +240,7 @@ class IDGenerator(object):
 ```
 
 The `IDGenerator` gets injected in the creation code, here is an example from
-the Online Agile Fluency Diagnostic application:
+the Online Agile Fluency® Diagnostic application:
 
 ```python
 class DiagnosticSessionCreator:
