@@ -29,7 +29,7 @@ sufficient room for reflection, discussion and questions.
 We will also show how the examples that come out of the workshop can be
 transformed into automated tests.
 
-## Audience & Prerequisites
+## Audience & prerequisites
 
 This workshop is for developers, product owners, scrum masters, agile coaches,
 testers

@@ -16,7 +16,7 @@ requests from our customers!
     <article class="post-wrap">
       <div class="post">
         <h2 class="entry-title"><a href="/training/agile-engineering">Agile Engineering</a></h2>
-        <div class="post-meta">Delivering software with confidence & joy</div>
+        <div class="post-meta">Deliver software with confidence & joy</div>
         <p>
         Agile/Scrum provides great focus on delivering in short cycles. To keep on delivering quality software with confidence, you need to master agile engineering principles & practices.
         </p>
@@ -41,7 +41,7 @@ requests from our customers!
       <div class="post">
         <h2 class="entry-title"><a href="/training/mastering-legacy-code">Mastering Legacy Code</a></h2>
         <div class="post-meta">
-        Build confidence working with nasty code
+        Build confidence with legacy code
         </div>
         <p>
         We all know 'em: those areas in your code base that need quite some courage to work on. Join us & learn techniques to make changes in these areas with confidence. 
@@ -65,13 +65,13 @@ requests from our customers!
 
     <article class="post-wrap">
       <div class="post">
-        <h2 class="entry-title">User Story Mapping & Dimensional Planning </h2>
+        <h2 class="entry-title"><a href="/training/user-story-mapping-dimensional-planning">User Story Mapping & Dimensional Planning</a></h2>
         <div class="post-meta">
-        Effectively steering your product
+        More effective product decisions
         </div>
-        <p>Managing your product backlog as an ordered list of user stories is a challenge. The customer wants it all, but this takes too long!</p>
-        <p>User Story Mapping and Dimensional Planning are two pragmatic techniques for management your product development and for planning releases, to find the greatest value for the least effort.
-        In this hands on workshop, your learn the techniques by doing.</p>
+        <p>Managing your product backlog as an ordered list of user stories is a challenge. Your customer wants it all, but it takes too long!
+        User Story Mapping and Dimensional Planning are two pragmatic product management techniques for realizing more value sooner.</p>
+        <a class="btn read-more" href="/training/user-story-mapping-dimensional-planning">Read More</a>
       </div>
     </article>
 
@@ -83,6 +83,31 @@ requests from our customers!
         </div>
         <p>Do you have long, boring refinement sessions? Do you still run into surprises and lack of shared understanding when building the software? In this hands-on workshop, you will experience Example Mapping, a simple pen-and-paper technique to spice up your refinements.
         </p>
+        <a class="btn read-more" href="/training/example-mapping">Read More</a>
+      </div>
+    </article>
+
+    <article class="post-wrap">
+      <div class="post">
+        <h2 class="entry-title"><a href="/training/ddd-introduction">Domain Driven Design Introduction</a></h2>
+        <div class="post-meta">
+        Making sense of software complexity
+        </div>
+        <p>Domain-driven design is an approach to software development for complex needs by connecting the architecture and implementation to an evolving model of the problem domain. It enables an agile approach to complex software development by putting the domain model central.
+        </p>
+        <a class="btn read-more" href="/training/ddd-introduction">Read More</a>
+      </div>
+    </article>
+
+    <article class="post-wrap">
+      <div class="post">
+        <h2 class="entry-title"><a href="/training/implementing-ddd">Implementing Domain Driven Design</a></h2>
+        <div class="post-meta">
+        Domain modelling all the way, from post-it to working code
+        </div>
+        <p>Domain-driven design is an approach to software development for complex needs by connecting the architecture and implementation to an evolving model of the problem domain. Working from your domain facilitates higher quality software products that will be better maintainable.
+        </p>
+        <a class="btn read-more" href="/training/implementing-ddd">Read More</a>
       </div>
     </article>
   </div>

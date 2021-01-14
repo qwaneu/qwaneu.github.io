@@ -1,7 +1,7 @@
 ---
 title:  Mastering Legacy Code
 layout: other
-summary: "We all know 'em: those areas in your code base that need quite some courage to work on. Join us & learn techniques to make changes in these areas with confidence. "
+summary: 'We all know ''em: those areas in your code base that need quite some courage to work on. Join us & learn techniques to make changes in these areas with confidence.'
 tags: [legacy code, working effectively with legacy code, agile engineering, extreme programming, test driven development, refactoring, code smells, unit testing]
 ---
 
@@ -33,7 +33,7 @@ help you to recover quickly from mistakes and learn from them.
 This course helps you get started and offers effective practices and
 courage to persevere.
 
-### Benefits
+## Benefits
 
 If you participate in this course, you will:
 
@@ -45,7 +45,7 @@ If you participate in this course, you will:
 * _...and have fun!_  - we take pride in creating a fun and effective learning
  environment, mixing presentations with exercises and hands-development.
 
-### Topics
+## Topics
 
 The first day is introductory, with an overview of refactorings, code
  smells, and how to break dependencies by finding seams in the code. We
@@ -62,15 +62,20 @@ Day two is the hands-on day. In two parts we will plan and execute a
  large refactoring with a team. And do so safely, even though in the
  beginning no automated tests are present.
 
-### Practical information
+## Audience & prerequisites
 
-* Duration: 2 Days
+Software developers, architects
+
+Having at least a year of experience in a software development environment is
+recommended. Basic programming skills are required.
+
+## Practical information
+
+* Duration: 2 days
 * Training infrastructure (including laptops) will be taken care of
-* Basic programming skills required
 * This training is available as open enrolment and in-house.
 * This training is available as half day follow up on our [test driven development training](/training/test-driven-development).
 
-
-### Register
+## Register
 
 Please refer to [Mastering legacy code on Springest](https://www.springest.nl//qwan/mastering-legacy-code){:target="_blank"} for dates and registration or [contact us directly](/#contact).

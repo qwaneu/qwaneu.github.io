@@ -1,15 +1,19 @@
 ---
 title:  TDD - Test Driven Development Hands-on
 layout: other
-summary: "TDD in once sentence: write a failing test, make it pass, refactor and repeat - easier said than done. Take a deep dive in growing your test driven development skills."
-tags: [agile engineering, extreme programming, XP, TDD, test driven development, refactoring, unit testing, scrum developer, ci/cd, continuous integration, continuous delivery]
+summary: 'TDD in once sentence: write a failing test, make it pass, refactor and repeat - easier said than done. Take a deep dive in growing your test driven development skills.'
+tags: [agile engineering, extreme programming, XP, TDD, test driven development, refactoring, unit testing, scrum developer, CI/CD, continuous integration, continuous delivery]
 ---
-In this in depth practical course, you will learn Test Driven Development and master different unit testing techniques, like mocking.
 
-The focus of this course is on improving your unit testing skills, getting a better understanding of what a unit test is,
-optimizing test scope and performance, and learning techniques and guidelines for writing and maintaining unit tests.
+In this in depth practical course, you will learn Test Driven Development and
+master different unit testing techniques, like mocking.
 
-### Benefits
+The focus of this course is on improving your unit testing skills, getting a
+better understanding of what a unit test is, optimizing test scope and
+performance, and learning techniques and guidelines for writing and maintaining
+unit tests.
+
+## Benefits
 
 By participating in this course, you will:
 
@@ -21,7 +25,7 @@ By participating in this course, you will:
 
 *... and have fun!* – we take pride in creating a fun and effective learning environment, mixing presentations with exercises and hands-on development.
 
-### Topics
+## Topics
 
 The course consists of a mix of short presentations, live programming demonstrations, and lots of programming exercises.
 
@@ -33,7 +37,7 @@ The course consists of a mix of short presentations, live programming demonstrat
 * Hexagonal Architecture - a fresh perspective on software dependencies and test architecture
 * Code Smells & Refactorings
 
-### Practical information
+## Practical information
 
 * Duration: 2 days
 * Training infrastructure (including laptops) will be taken care of
@@ -42,11 +46,11 @@ The course consists of a mix of short presentations, live programming demonstrat
 * Programming languages: Java, C#, Python, Ruby, JavaScript, TypeScript, Scala
 * We deliver this training in The Netherlands, the UK, and Belgium
 
-### Register
+## Register
 
 Please see [Test Driven Development in C# on Springest](https://www.springest.nl/qwan/mastering-unit-testing){:target="_blank"} or [Test Driven Development in Java on Springest](https://www.springest.nl/qwan/hands-on-test-driven-development-in-java){:target="_blank"} for course schedules and registration or [contact us directly](/#contact).
 
-### Our colleagues
+## Our colleagues
 
 Although we think we provide something special with this training, we're not the only supplier. Here's a list of our colleagues in the Netherlands:
 

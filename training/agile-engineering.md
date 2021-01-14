@@ -2,16 +2,24 @@
 title: Agile Engineering
 layout: other
 summary: Agile/Scrum provides great focus on delivering in short cycles. To keep on delivering quality software with confidence, you need to master agile engineering principles & practices.
-tags: [agile engineering, extreme programming, XP, TDD, test driven development, refactoring, unit testing, scrum developer, ci/cd, continuous integration, continuous delivery]
+tags: [agile engineering, extreme programming, XP, TDD, test driven development, refactoring, unit testing, scrum developer, CI/CD, continuous integration, continuous delivery]
 redirect_from: "/agile-engineering"
 ---
-When you have learned the basics of agile software development, you might wonder how to actually get things done and get your software out of the door when you go agile. Scrum focuses on coordination and feedback practices, adding technical practices allows teams to grow systems with confidence and safety.
 
-This intensive, hands on course focuses on the down to earth side of working in an agile way: how to plan, build, test, and deploy the software. How to get it done using user stories, test driven development, automated testing, incremental design, relentless refactoring, pair programming, and continuous integration.
+When you have learned the basics of agile software development, you might wonder
+how to actually get things done and get your software out of the door when you
+go agile. Scrum focuses on coordination and feedback practices, adding technical
+practices allows teams to grow systems with confidence and safety.
 
-This Agile Engineering course is also an excellent way to prepare for the Scrum.org Professional Scrum Developer 1 assessment.
+This intensive, hands on course focuses on the down to earth side of working in
+an agile way: how to plan, build, test, and deploy the software. How to get it
+done using user stories, test driven development, automated testing, incremental
+design, relentless refactoring, pair programming, and continuous integration.
 
-### Benefits
+This Agile Engineering course is also an excellent way to prepare for the
+Professional Scrum Developer 1 assessment.
+
+## Benefits
 
 By participating in course, you will:
 
@@ -25,12 +33,12 @@ By participating in course, you will:
 
 *... and you’ll have fun!* We take pride in creating a fun and effective learning environment, mixing presentations with simulations, exercises and hands-on development.
 
-### Topics
+## Topics
 
 eXtreme Programming – values, principles &amp; practices; user stories &amp; specification by example; test driven development &amp; merciless refactoring; 
 agile architecture &amp; incremental design; responsibility driven design and CRC cards; bringing it all together, in a 3 iteration micro project. 
 
-### Practical information
+## Practical information
 
 * Duration: 3 days (or 2 when skipping the mini project)
 * Training infrastructure (including laptops) will be taken care of
@@ -39,6 +47,6 @@ agile architecture &amp; incremental design; responsibility driven design and CR
 * Programming languages: Java, C#, Python, Ruby, JavaScript, TypeScript, Scala
 * We deliver this training in The Netherlands, the UK, and Belgium
 
-### Register
+## Register
 
 Please see [Agile Engineering on Springest](https://www.springest.nl/qwan/agile-engineering){:target="_blank"} for course schedules and registration or [contact us directly](/#contact).
