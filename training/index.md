@@ -77,17 +77,15 @@ requests from our customers!
 
     <article class="post-wrap">
       <div class="post">
-        <h2 class="entry-title">Example Mapping Workshop</h2>
+        <h2 class="entry-title"><a href="/training/example-mapping">Example Mapping Workshop</a></h2>
         <div class="post-meta">
-        Spice up your refinement
+        Spice up your refinement sessions
         </div>
-        <p>Do you have long, boring refinement sessions? Do you still run into big surprises and lack of shared understanding when building the software?</p>
-        <p>In this hands on workshop, we introduce you to Example Mapping, a simple workshop format that brings focus to your refinements. It will get you faster to a shared understanding, surface big unknowns earlier, and make the process much more enjoyable. 
+        <p>Do you have long, boring refinement sessions? Do you still run into surprises and lack of shared understanding when building the software? In this hands-on workshop, you will experience Example Mapping, a simple pen-and-paper technique to spice up your refinements.
         </p>
       </div>
     </article>
   </div>
-
 </div>
 
 <img src="/images/agile_engineering_wordle.png" style="width: 100%"> 
