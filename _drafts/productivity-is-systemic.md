@@ -4,6 +4,7 @@ title: Productivity is systemic
 tags:
   - agile fluency
   - feedback
+  - systems thinking
 author: Marc Evers
 image: 
 ---

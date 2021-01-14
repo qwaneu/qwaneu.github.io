@@ -4,6 +4,7 @@ title: Team Fluency Feedback with Systems Thinking
 tags:
   - agile fluency
   - feedback
+  - systems thinking
 author: Marc Evers, Rob Westgeest
 image: 
 ---
