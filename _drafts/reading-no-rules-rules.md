@@ -1,15 +1,19 @@
 ---
 layout: post
-title: No Rules Rules - book summary & review
+title: 'Reading: No Rules Rules - Netflix and the Culture of Reinvention'
 tags:
   - books
+  - complexity
 author: Marc Evers
 image: /attachments/blogposts/2021/no-rules-rules-cover.jpg
 ---
 
 [No Rules Rules - Netflix and the Culture of Reinvention](https://www.norulesrules.com/) by Reed Hastings (Netflix co-founder & CEO) and Erin Meyer
 
-What I like about the book is the story behind the way of working and the current 'rules'/practices of Netflix. The book shows how Hastings manages the company as a complex system: providing enabling constraints(not too many), trying it out, see where it fails, and adjusting the constraints.
+What I like about the book is the story behind the way of working and the
+current 'rules'/practices of Netflix. The book shows how Hastings manages the
+company as a complex system: providing enabling constraints(not too many),
+trying it out, see where it fails, and adjusting the constraints.
 
 Hastings took his experience from his previous company, where he'd establish new
 rules whenever something didn't work out, and set out at Netflix to do this
@@ -26,9 +30,17 @@ A culture of freedom and responsibility
 
 ## So we should copy Netflix to be successful?
 
-The book describes the current way of working and how they arrived at this through experimenting and adjusting. The risk of book like this is that people take the current state and try to copy it. Copying the motions of Netflix (or some other successful company) won't help you. 
+The book describes the current way of working and how they arrived at this
+through experimenting and adjusting. The risk of book like this is that people
+take the current state and try to copy it. Copying the motions of Netflix (or
+some other successful company) won't help you. 
 
-A complex system like an organization has history. The past/road followed led to the current state of affairs. Copying the motions won't get you far, as you are **confusing correlation for causation**. Netflix culture is like it is now because of its history of continuously evolving constraints through experimentation. This is what is helping it to be a successful company. The current way of working is a result of that, not the cause.
+A complex system like an organization has history. The past/road followed led to
+the current state of affairs. Copying the motions won't get you far, as you are
+**confusing correlation for causation**. Netflix culture is like it is now
+because of its history of continuously evolving constraints through
+experimentation. This is what is helping it to be a successful company. The
+current way of working is a result of that, not the cause.
 
 > This is similar to what happened to the 'Spotify model': [Henrik Kniberg
 shared how Spotify was organizing for scaling up while trying to keep
@@ -49,11 +61,24 @@ So they hire top performers, provide a vision and context, and some enabling con
 
 "Performance is contagious" - focusing on high performing people reinforces itself?
 
-I noticed that Reed is referring to some research about software programmer performance (the "rock star principle"), where high performers outperform low performers by an order of magnitude. Productivity in software development is a not well understood topic however with lots of bad or meaningless research around (anyone remember counting lines of code as a measure of productivity?). This research focuses very much on individual performance, while software development is a team sport. 
+I noticed that Reed is referring to some research about software programmer
+performance (the "rock star principle"), where high performers outperform low
+performers by an order of magnitude. Productivity in software development is a
+not well understood topic however with lots of bad or meaningless research
+around (anyone remember counting lines of code as a measure of productivity?).
+This research focuses very much on individual performance, while software
+development is a team sport. 
 
-The performance of a high performing team is more than the sum of the performance of its members. Not saying Netflix is taking a wrong approach (their results show the opposite), but what 'top performer' means does not become clear from the book, I'd be interested to learn more especially for software development.
+The performance of a high performing team is more than the sum of the
+performance of its members. Not saying Netflix is taking a wrong approach (their
+results show the opposite), but what 'top performer' means does not become clear
+from the book, I'd be interested to learn more especially for software
+development.
 
-Performance of an individual is not solely is always a function of the individual's capabilities and the context the person is working in. Although the book mentions they are collaboration focused, I did not see this specific thing explicitly.
+Performance of an individual is not solely is always a function of the
+individual's capabilities and the context the person is working in. Although the
+book mentions they are collaboration focused, I did not see this specific thing
+explicitly.
 
 Retention: the Keeper Test 
 
@@ -75,9 +100,11 @@ it is not working out worse for them.
 
 ## Radical candor 
 
-Frequent candid feedback has high leverage: it "exponentially magnifies the speed and effectiveness of your team or workforce"
+Frequent candid feedback has high leverage: it "exponentially magnifies the
+speed and effectiveness of your team or workforce"
 
-Build feedback in; coach employees to give/receive feedback effectively. "Feedback anywhere, anytime"
+Build feedback in; coach employees to give/receive feedback effectively.
+"Feedback anywhere, anytime"
 
 4A Feedback Guidelines:
 1. Aim to Assist - give constructive feedback, with positive intent
@@ -92,11 +119,16 @@ Netflix experimented with 360 feedback. What they learned:
 
 ## Remove controls
 
-No holiday policies; no travel and expense policies. Instead of 'pessimistic control' (always asking for permission), they apply 'optimistic control', finance checks samples after the fact. If people overspend, this does not mean a reprimand, but it triggers to have another look at context.
+No holiday policies; no travel and expense policies. Instead of 'pessimistic
+control' (always asking for permission), they apply 'optimistic control',
+finance checks samples after the fact. If people overspend, this does not mean a
+reprimand, but it triggers to have another look at context.
 
 Trust leads to trustworthiness
 
-Lead with context; prerequisites: high talent density, goal is innovation (not error prevention, like in a context where safety is critical), loosely coupled system (with high alignment)
+Lead with context; prerequisites: high talent density, goal is innovation (not
+error prevention, like in a context where safety is critical), loosely coupled
+system (with high alignment)
 
 If someone does something dumb, don't blame that person, but ask yourself what
 context did you fail to set. I like this systemic perspective, is in line with
@@ -110,3 +142,17 @@ creating a context where good results emerge.
 
 ## Conclusion
 
+I found this book worthwhile to read. Seen through a complex adaptive systems
+lens, it tells a nice story of the path Netflix followed, what they tried out
+and why they decided things. 
+
+It left me with questions about 'hiring top performers', especially in my trade
+(software development) things 'top performer' and productivity are complex
+things to grasp. We will write more about that soon.
+
+Like with many other books and articles it bears the risk of people copy-pasting
+the current Netflix practices. If you want to take things from the book to your
+own organization, focus on the principles and prepare for a journey of trying
+out things, finding it doesn't work and tweaking it until it does, with a
+preference for setting context and trusting people to fixing things by more
+stifling rules.
