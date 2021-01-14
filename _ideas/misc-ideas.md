@@ -79,3 +79,18 @@ Background information
 # WTPW Example: Introducing 'test' diagnostic sessions in AFP
 
 We introduced 'test' sessions for facilitators to try out stuff without consequences (and for us to see how the system is used for real). To prevent unintended usage of test sessions, we fix the number of participants to 3. Where do we put the 'test' concern en the '3 participants' business rule?
+
+# The political economy of legacy code
+
+Source: discussion Marc/Willem 15-12-2020
+
+Use new people wisely
+- new people means feedback, e.g. about implicit knowledge
+
+# Domain knowledge vs Business knowledge
+
+Triggered by AF Diagnostics and AFD statements
+
+Domain knowledge != Business knowledge
+
+Optimizing Zone: optimize for product decision making (needs business knowledge as well as domain knowledge)
