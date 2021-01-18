@@ -24,7 +24,7 @@ developers experience tens or hundreds of times a day.
 
 Putting effort in improving these, e.g. making your unit test suite a few
 seconds faster, is often hard to explain and justify. It can take some time
-before you and especially the people around you and management start noticing
+before you, and especially the people around you start noticing
 the effects. So it seems like you are focusing on futile things, not on the
 'big' problems. In the end however, it all adds up. Improvements are
 multiplicative.
@@ -46,17 +46,17 @@ initially:
 - doing small improvements every day gets you in the habit of just doing these
   improvements; it will require less mental effort to think about them or decide
   to do it
-- a habit doing many small improvement means that you get lots of practice doing
-  it, which means that you will grow better at it over time, making it easier to
+- growing a habit of doing many small improvement means that you get well versed in doing
+  it. This means that you will grow better at it over time, making it easier to
   do even more improvements
 - "learning to see" - the more you do the small improvements, the better you are
-  able to see new opportunities for improvement; in code that a year ago you
-  thought was good enough, you will start noticing all kinds of code smells
+  able to see new opportunities for improvement. You will start noticing all kinds of code smells in code that a year ago you
+  thought was good enough
 - the multiplicative effect will manifest itself after a delay, so cause and
-  effect might not obvious for others (and you might not get the credit you
-  deserve)
+  effect might not obvious for others. You also may not get the credit you
+  deserve: true skill is invisible
 - the multiplicative effect can eventually result in order-of-magnitude
-  improvements in feedback loops (like the build pipeline), and
+  improvements in feedback loops, and
   [order-of-magnitude improvements tend to change the game, like we wrote
   earlier](/2020/11/27/paying-the-price-of-fast-tests.html).
 
@@ -75,3 +75,6 @@ they allocated less time for customer work). On the longer term (1-2 years) the
 improvements had started to make a big differences, making it much easier,
 faster, cheaper to make new changes.
 
+## Further reading
+
+Ursula Le Guinn on male magicians like Gandalf (I know, I suggested Gandalf, and then inevitably something pops up in my twitter feed.)
