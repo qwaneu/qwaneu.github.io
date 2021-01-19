@@ -83,7 +83,9 @@ explicitly.
 Retention: the Keeper Test 
 
 An organization is not a family; a family stays together regardless of
-"performance". Netflix asks people (managers, employees themselves) to
+"performance". 
+
+Netflix asks people (managers, employees themselves) to
 frequently do the Keeper Test: "If a person on your team were to quit tomorrow,
 would you try to change their mind? Or would you accept their resignation,
 perhaps with a little relief? If the latter, you should give them a severance
@@ -156,3 +158,4 @@ own organization, focus on the principles and prepare for a journey of trying
 out things, finding it doesn't work and tweaking it until it does, with a
 preference for setting context and trusting people to fixing things by more
 stifling rules.
+

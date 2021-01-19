@@ -46,9 +46,9 @@ initially:
 - doing small improvements every day gets you in the habit of just doing these
   improvements; it will require less mental effort to think about them or decide
   to do it
-- growing a habit of doing many small improvement means that you get well versed in doing
-  it. This means that you will grow better at it over time, making it easier to
-  do even more improvements
+- growing a habit of doing many small improvement means that you get well versed
+  in doing it. This means that you will grow better at it over time, making it
+  easier to do even more improvements
 - "learning to see" - the more you do the small improvements, the better you are
   able to see new opportunities for improvement. You will start noticing all kinds of code smells in code that a year ago you
   thought was good enough
