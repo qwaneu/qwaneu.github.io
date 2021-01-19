@@ -124,4 +124,5 @@ continuously without postponing integration or getting stuck in complexity.
 
 - Twitter thread by Pete Hodgsson (@ph1)  https://twitter.com/ph1/status/1263186192951939072 on [Piranha: an open Source tool to automatically delete stale code](https://eng.uber.com/piranha/). Academic paper: https://manu.sridharan.net/files/ICSE20-SEIP-Piranha.pdf. Thread contains a more detailed categorisation beyond 'tech toggles' and 'other'.
 
+- https://www.martinfowler.com/articles/feature-toggles.html#CategoriesOfToggles
 - LaunchDarkly, a service to manage flags at various states in a products lifecycle / for various audiences.
