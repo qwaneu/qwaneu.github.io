@@ -113,8 +113,15 @@ We find it useful to take a critical stance and see feature toggles as a symptom
 instead of a solution. This can help us find better ways of delivering
 continuously without postponing integration or getting stuck in complexity.
 
+## Musings by willem. More visible here than in essays.
+
+- what if you use feature toggles as part of authorization (e.g. which products someone or someones' organisation has access to?)
+- WE - I have feature toggles seen work, surprisingly well. And at the same time, multiple ways of authorizing access to features (flages, but also other interfaces. logic everywhere). Removing feature flags would make the product inoperable. 
+- WE - feature toggles work only when one can separate all the functionality under the toggle. One can also fool oneself 
+- WE: Forces:  as developers we want to ship small pieces, and get feedback. users do not always want this ('where did that button move?'). Even when they are agile developers or even UX people. For a long time I interpreted continuous delivery as 'in the hands of the user', but apparently that is continuous deployment (since the CD book).  As operations people, we want to be able to roll back 'bad' changes. Feature toggles may be a way (what are others?). (as developers we experience that 'bad changes' hurt less if you do them more often).
+
 ## Further reading
 
-- Twitter thread by Pete Hodgsson (@ph1)  https://twitter.com/ph1/status/1263186192951939072 on [Piranha: an open Source tool to automatically delete stale code](https://eng.uber.com/piranha/). Academic paper: https://manu.sridharan.net/files/ICSE20-SEIP-Piranha.pdf
+- Twitter thread by Pete Hodgsson (@ph1)  https://twitter.com/ph1/status/1263186192951939072 on [Piranha: an open Source tool to automatically delete stale code](https://eng.uber.com/piranha/). Academic paper: https://manu.sridharan.net/files/ICSE20-SEIP-Piranha.pdf. Thread contains a more detailed categorisation beyond 'tech toggles' and 'other'.
 
 - LaunchDarkly, a service to manage flags at various states in a products lifecycle / for various audiences.
