@@ -9,18 +9,22 @@ author:
 image:
 ---
 
-Let's reflect on the practice of using feature toggles.
-As more and more development organizations are moving towards continuous
-delivery, we see them using feature toggles more and more. It is, once again, not a best practice, but one
-that comes with trade-offs. We are not implying feature toggles are bad, but we
-urge you to be aware of the trade-offs and risks involved, and to take a
+Let's reflect on the practice of using feature toggles. As more and more
+development organizations are moving towards continuous delivery, we see them
+using feature toggles more and more. It is, once again, not a best practice, but
+one that comes with trade-offs. We are not implying feature toggles are bad, but
+we urge you to be aware of the trade-offs and risks involved, and to take a
 critical look at how you are using them.
 
 ## Feature toggles defined
 
-Feature toggles are: a separate mechanism to give access to a feature, e.g. enabled in a specific environment, or enabled for specific users or organizations.
+Feature toggles are a separate mechanism to give access to a feature, e.g.
+enabled in a specific environment, or enabled for specific users or
+organizations.
 
-Usually it works through some configuration flag, sometimes via a special administrator UI where you can toggle a feature on or off in a specific environment (test/production/...).
+Usually it works through some configuration flag, sometimes via a special
+administrator UI where you can toggle a feature on or off in a specific
+environment - test/production/acceptance...
 
 ## Feature toggles facilitate continuous delivery
 
@@ -56,7 +60,9 @@ configurations interact than it is to reason about one component.
 
 ## Combinatorial explosion
 
-Once teams start using feature toggles, sooner or later there will be many. Some feature toggle management is highly recommended, so that you know when to remove specific toggles and the corresponding code and tests.
+Once teams start using feature toggles, sooner or later there will be many. Some
+feature toggle management is highly recommended, so that you know when to remove
+specific toggles and the corresponding code and tests.
 
 Another nasty effect of multiple feature toggles occurs when they start
 interacting. You could get into a situation of a combinatorial explosion of
@@ -69,14 +75,20 @@ much harder.
 ## Tech toggles
 
 Once you have a toggle mechanism in place, it becomes your hammer and everything
-starts looking like a nail. Or if it goes badly, everything starts looking like a thumb. 
-We also see teams using the toggles to switch off parts of the code that are not yet fully working or still messy. As you are not toggling
-features, we tend to call these 'tech toggles' instead.
+starts looking like a nail - or a thumb. We also see teams using toggles to
+switch off parts of the code that are not yet fully working or still messy. Such
+toggles are not feature driven, but driven by technical motives, so we tend to
+call these _tech toggles_.
 
-Feature toggles come with trade-offs, but tech toggles are a big no for us. In
-our opinion, tech toggles can be prevented. Instead, look at your way of working
-and find a way of deliver code that is tested and works. Tech toggles only hide
-deeper issues in your software development approach.
+Tech toggles can be useful in your journey towards continuous delivery, for
+example to get rid of long release cycles and code freezes.
+
+Once you are able to deliver at will, introducing tech toggles is a slippery
+slope. It risks moving away from having continuously integrated software,
+because you start increasing your batch size. Tech toggles can hide deeper
+issues in your software development process. We recommend looking at your way of
+working and finding a way of deliver code that is tested and works first, before
+resorting to tech toggles.
 
 ## Some good practices and considerations
 
