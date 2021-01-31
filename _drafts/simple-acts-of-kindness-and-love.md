@@ -78,3 +78,6 @@ faster, cheaper to make new changes.
 ## Further reading
 
 Ursula Le Guinn on male magicians like Gandalf (I know, I suggested Gandalf, and then inevitably something pops up in my twitter feed.)
+
+https://jessitron.com/2021/01/18/when-costs-are-nonlinear-keep-it-small/
+

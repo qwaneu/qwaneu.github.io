@@ -94,3 +94,21 @@ Triggered by AF Diagnostics and AFD statements
 Domain knowledge != Business knowledge
 
 Optimizing Zone: optimize for product decision making (needs business knowledge as well as domain knowledge)
+
+# Only rolling forward
+
+At client some years ago we embarked on a journey towards continuous delivery.
+
+One of the decisions we made is to not do rollback of releases, only roll-forward.
+
+To do this, the delivery process should be sufficiently smooth. If something
+happens, you should be able to make a change, review-commit-test-build within
+minutes rather than hours.
+
+If you are able to do this, it will make your release process simpler: there is
+just one release process, you will not have processes or procedures for hotfixes
+etc. So less complexity (also organizational), and being more in control.
+
+# Feature toggle musings by Willem
+
+- WE - I have feature toggles seen work, surprisingly well. And at the same time, multiple ways of authorizing access to features (flages, but also other interfaces. logic everywhere). Removing feature flags would make the product inoperable. 

@@ -99,6 +99,11 @@ you are guaranteed to cause horrible development performance. Your goal is to
 deliver better software sooner, your goal is not to keep people busy. If you
 want to keep people busy, suggest them a hobby. 
 
+
+## Management is not only the manager's job
+
+@@verwijzing/quote Weinberg over management als ieders verantwoordelijkheid o.i.d.
+
 ## Sometimes it's the individual
 
 One developer can drag down a team, by slacking off, or with a negative attitude
@@ -112,4 +117,13 @@ You can fix low performance by having a talk with someone who is dragging down
 the team, or even removing him. This does not necessarily lead to a highly
 productive team. The organizational context will quickly become the next
 bottleneck.
+
+## Productivity is an enabler for everything else
+
+Focus on improving productivity, by many small improvement decisions will create
+more and more time for valuable stuff. Small improvements might not change much
+from today to tomorrow, but on the longer term it can result in order of
+magnitude improvements, e.g. delivering software daily instead of monthly. And
+order of magnitude improvements change the game, for the team as well as for
+business.
 
