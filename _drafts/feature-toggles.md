@@ -23,11 +23,9 @@ involved, and to take a critical look at how you are using them.
 
 Feature toggles are a separate mechanism to give access to a feature, e.g.
 enabled in a specific environment, or enabled for specific users or
-organizations.
-
-Usually it works through some configuration flag, sometimes via a special
-administrator UI where you can toggle a feature on or off in a specific
-environment - test/production/acceptance...
+organizations. Usually it works through some configuration flag, sometimes via a
+special administrator UI where you can toggle a feature on or off in a specific
+environment, like test, acceptance, production.
 
 ## Feature toggles facilitate continuous delivery
 
@@ -35,41 +33,39 @@ As developers we want to ship small pieces and get early feedback. Users do not
 always want this - "where did that button move?' - even when they are agile
 developers or UX people. 
 
-Feature toggles can help decouple delivery (moving changes to production) from
-release (enabling it for users), for example because what is meaningful for a
+Feature toggles can help decouple delivery - moving changes to production - from
+release - enabling it for users - for example because what is meaningful for a
 user or customer comprises a bigger set of features. Another example is rolling
 out gradually.
 
-Feature toggles enable you to deliver at will, and removing releasing to
-users/customers as a bottleneck. 
+**Feature toggles enable you to deliver at will**, and removing releasing to
+users or customers as a bottleneck. As a result of this decoupling, releasing
+something to specific users or stakeholders becomes a separate, independent
+business decision.
 
-As a result of decoupling, releasing something to specific users/stakeholders
-becomes a separate, independent business decision.
-
-Feature toggles can also help reduce the risk of 'bad' changes and reduce fear
+Feature toggles can help reduce the risk of 'bad' changes and fear
 of releasing. If you can reduce the impact of releasing a feature to just one or
-a few users, it becomes less risky. It even allows a kind of rollback (switching
-off the feature toggle) when necessary.
+a few users, it becomes less risky. It even allows a kind of rollback when necessary - by switching off the feature toggle.
 
 ## Feature toggles hinder continuous integration
 
 Feature toggles come with trade-offs. They delay integration, so they tend to
-move us away from continuous integration. A risk of this is late feedback - you
+move away from continuous integration. A risk of this is late feedback - you
 don't catch issues fast, because the issue is hidden behind the toggle.
 
 Creating automated tests for the system with and without the feature toggle
 enabled can help a lot. This does increase system complexity however, as it is
-more difficult to juggle two variations of a system in your mind.
+more difficult to juggle two variations of the system in your mind.
 
 ## Other consequences
 
-Feature toggles introduce extra complexity in the code, either by adding some
-extra conditionals and variations of behaviour or by having some extra routing
+Feature toggles introduce extra complexity in the code, either by adding
+extra conditionals and behaviour variations or by having extra routing
 rules and configuration logic.
 
 Feature toggles that span more than one component sharply increase cognitive
-load. It is much harder to reason over two components and how their different
-configurations interact than it is to reason about one component.
+load. It is much harder to reason over two or more components and how their
+different configurations interact, than it is to reason about one component.
 
 ## Combinatorial explosion
 
@@ -89,36 +85,42 @@ much harder.
 ## Tech toggles
 
 Once you have a toggle mechanism in place, it becomes your hammer and everything
-starts looking like a nail - or a thumb. We also see teams using toggles to
-switch off parts of the code that are not yet fully working or still messy. Such
-toggles are not feature driven, but driven by technical motives, so we tend to
-call these _tech toggles_.
+starts looking like a nail - or a thumb. We encounter teams using toggles to
+switch off parts of the code that are not yet fully working or still a mess.
+Such toggles are driven by technical motives, so we tend to call these _tech
+toggles_.
 
 Tech toggles can be useful in your journey towards continuous delivery, for
 example to get rid of long release cycles and code freezes.
 
 Once you are able to deliver at will, introducing tech toggles is a slippery
-slope. It risks moving away from having continuously integrated software,
-because you start increasing your batch size. Tech toggles can hide deeper
-issues in your software development process. We recommend looking at your way of
-working and finding a way of deliver code that is tested and works first, and building capability to quickly deploy and rollback changes,  before
-resorting to tech toggles. We want to respond to change, not live in fear of additional if's and buts we added. 
+slope. You start moving away from having continuously integrated software,
+because you increase your batch size. Tech toggles hide deeper issues in your
+software development process. We recommend looking at your way of working and
+finding a way of deliver code that is tested and works first, and building
+capability to quickly deploy and rollback changes,  before resorting to tech
+toggles. We want to respond to change, not live in fear of additional if's and
+buts we added. 
 
 ## Considerations
 
-Reduce the 'scope' of a toggle; if a toggle changes behaviour in many places in
+Reduce the scope of a toggle: if a toggle changes behaviour in many places in
 the code, it becomes much harder to test both configurations of the system.
 
 Prefer using your existing authorisation mechanism to enable/disable access to
-features; having a single well understood mechanism reduces the risk of
-mistakes. The feature toggle might need permissions to be finer grained. Remember to refactor and clean up when the feature toggle related permissions are not needed anymore.
+features. Having a single, well understood mechanism reduces the risk of
+mistakes. The feature toggle might temporarily need more fine grained
+permissions. Remember to refactor and clean up when the feature toggle related
+permissions are not needed any more.
 
 ![splitting permissions for toggling features](/attachments/blogposts/2021/ft-split-permissions.jpg)
 
-If a toggle is affecting multiple components, let one component lead, while the
-rest follows; i.e. one component uses the toggle to show different behaviour,
-the others just react correctly on what this component does/tells/says (@@needs
-small example)
+If a toggle is affecting multiple components, preferably let one component be in
+the lead, while the rest follows, i.e. one component uses the toggle to show
+different behaviour, the others react correctly on what this component returns.
+A back-end component for instance can use a feature toggle to expose or hide
+specific data. The front end component shows what it gets from that back-end and
+does not need to check the toggle.
 
 Feature toggles will only work well when one can separate all the functionality
 under the toggle. One can also fool oneself easily.
@@ -133,12 +135,11 @@ complexity.
 
 ## Further reading
 
-- [Twitter thread](https://twitter.com/ph1/status/1263186192951939072) by [Pete Hodgsson](http://twitter.com/@ph1) on [Piranha: an open Source tool to automatically delete stale code](https://eng.uber.com/piranha/). Academic paper: https://manu.sridharan.net/files/ICSE20-SEIP-Piranha.pdf. The Twitter thread contains a more detailed categorisation beyond 'tech toggles' and 'other'.
-- [Categories of Feature Toggles](https://www.martinfowler.com/articles/feature-toggles.html#CategoriesOfToggles) on martinfowler.com.
+- [Twitter thread](https://twitter.com/ph1/status/1263186192951939072) by [Pete Hodgsson](http://twitter.com/@ph1) on [Piranha: an open Source tool to automatically delete stale code](https://eng.uber.com/piranha/). There is also an [academic paper on this topic](https://manu.sridharan.net/files/ICSE20-SEIP-Piranha.pdf). The Twitter thread contains a more detailed categorisation beyond 'tech toggles' and 'other'.
+- [Categories of Feature Toggles](https://www.martinfowler.com/articles/feature-toggles.html#CategoriesOfToggles) on [martinfowler.com](https://martinfowler.com)
 - [LaunchDarkly](https://launchdarkly.com/), a service to manage flags at various states in a products lifecycle, for various audiences.
 
-_Credits:_ 
-- _<span>Switch photo (cropped) by <a href="https://unsplash.com/@justusmenke?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Justus Menke</a> on <a href="https://unsplash.com/s/photos/switch?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>_
+_Photo credits: <span>Switch photo by <a href="https://unsplash.com/@justusmenke?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Justus Menke</a> on <a href="https://unsplash.com/s/photos/switch?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a> (cropped)</span>_
 
 <aside>
   <h3>Delivering software at will</h3>
