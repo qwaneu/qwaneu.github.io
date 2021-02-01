@@ -101,8 +101,8 @@ Once you are able to deliver at will, introducing tech toggles is a slippery
 slope. It risks moving away from having continuously integrated software,
 because you start increasing your batch size. Tech toggles can hide deeper
 issues in your software development process. We recommend looking at your way of
-working and finding a way of deliver code that is tested and works first, before
-resorting to tech toggles.
+working and finding a way of deliver code that is tested and works first, and building capability to quickly deploy and rollback changes,  before
+resorting to tech toggles. We want to respond to change, not live in fear of additional if's and buts we added. 
 
 ## Considerations
 
@@ -111,23 +111,23 @@ the code, it becomes much harder to test both configurations of the system.
 
 Prefer using your existing authorisation mechanism to enable/disable access to
 features; having a single well understood mechanism reduces the risk of
-mistakes. The feature toggle might need permissions to be finer grained. Remember to refactor and clean up when the feature toggle related permissions are not needed any more
+mistakes. The feature toggle might need permissions to be finer grained. Remember to refactor and clean up when the feature toggle related permissions are not needed anymore.
 
 ![splitting permissions for toggling features](/attachments/blogposts/2021/ft-split-permissions.jpg)
 
 If a toggle is affecting multiple components, let one component lead, while the
 rest follows; i.e. one component uses the toggle to show different behaviour,
-the other juts react correctly on what this component does/tells/says (@@needs
+the others just react correctly on what this component does/tells/says (@@needs
 small example)
 
 Feature toggles will only work well when one can separate all the functionality
-under the toggle. One can also fool oneself...
+under the toggle. One can also fool oneself easily.
 
 ## Conclusion
 
 Feature toggles is a practice that facilitates continuous delivery, but it comes
 with trade-offs. We find it useful to take a critical stance and see feature
-toggles as a symptom instead of a solution. This can help us find better ways of
+toggles more as a symptom than a solution. This can help us find better ways of
 delivering continuously without postponing integration or getting stuck in
 complexity.
 
