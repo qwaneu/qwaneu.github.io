@@ -5,7 +5,7 @@ tags:
   - feedback
   - continuous delivery
   - DevOps
-author: Marc Evers
+author: Marc Evers, Willem van den Ende
 image: /attachments/blogposts/2021/justus-menke-Uwecr7Su3dU-unsplash-cropped.jpg
 ---
 
@@ -134,11 +134,10 @@ complexity.
 ## Further reading
 
 - [Twitter thread](https://twitter.com/ph1/status/1263186192951939072) by [Pete Hodgsson](http://twitter.com/@ph1) on [Piranha: an open Source tool to automatically delete stale code](https://eng.uber.com/piranha/). Academic paper: https://manu.sridharan.net/files/ICSE20-SEIP-Piranha.pdf. The Twitter thread contains a more detailed categorisation beyond 'tech toggles' and 'other'.
-- [Categories of Feature Toggles](https://www.martinfowler.com/articles/feature-toggles.html#CategoriesOfToggles)
+- [Categories of Feature Toggles](https://www.martinfowler.com/articles/feature-toggles.html#CategoriesOfToggles) on martinfowler.com.
 - [LaunchDarkly](https://launchdarkly.com/), a service to manage flags at various states in a products lifecycle, for various audiences.
 
 _Credits:_ 
-- _thanks Willem for reviewing_
 - _<span>Switch photo (cropped) by <a href="https://unsplash.com/@justusmenke?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Justus Menke</a> on <a href="https://unsplash.com/s/photos/switch?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>_
 
 <aside>
