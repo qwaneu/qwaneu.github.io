@@ -5,7 +5,7 @@ tags:
   - feedback
   - continuous delivery
   - DevOps
-author: 
+author: Marc Evers
 image: /attachments/blogposts/2021/justus-menke-Uwecr7Su3dU-unsplash-cropped.jpg
 ---
 
