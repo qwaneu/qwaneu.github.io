@@ -1024,22 +1024,22 @@ h3.plain {
     }
 }
 
-nav.mainmenu-plain  {
-  background-color: black;
-  background-color: black;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(5em, max-content));
-  row-gap: 2em;
-  column-gap: 1em;
-  margin-bottom: 0em;
-  padding-left: 0em; /* for some reason it is 40px otherwise, which means the items are not centered properly. The  */
-}
+// nav.mainmenu-plain  {
+//   background-color: black;
+//   background-color: black;
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(5em, max-content));
+//   row-gap: 2em;
+//   column-gap: 1em;
+//   margin-bottom: 0em;
+//   padding-left: 0em; /* for some reason it is 40px otherwise, which means the items are not centered properly. The  */
+// }
 
-.mainmenu-plain a {
-  padding-top: 0.5em;
-  padding-bottom: 1em;
-  font-size: 120%;
-}
+// .mainmenu-plain a {
+//   padding-top: 0.5em;
+//   padding-bottom: 1em;
+//   font-size: 120%;
+// }
 
 
 // https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element

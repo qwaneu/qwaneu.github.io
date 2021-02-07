@@ -1,6 +1,22 @@
 
 $phone: "screen and (max-width: 768px)";
 
+
+nav.mainmenu-plain  {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5em, max-content));
+  column-gap: 1em;
+  row-gap: 0.1em;
+  margin-bottom: 0em;
+  padding-left: 0em;
+
+  a {
+    padding-top: 0.3em;
+    font-size: 120%;
+  }
+}
+
 em {
   font-style: italic;
 }
@@ -372,6 +388,20 @@ footer h3 {
     line-height: 1.8em;
     width: 80%;
     margin: 10px auto;
+  }
+}
+
+.partners-list {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  row-gap: 1em;
+  column-gap: 6em;
+  margin: auto;
+  max-width: 60rem;
+
+  img {
+    width: 100%;
   }
 }
 
