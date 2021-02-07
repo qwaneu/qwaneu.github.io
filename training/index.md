@@ -1,15 +1,22 @@
 ---
 title: Training Courses
-layout: other
+layout: accessibletwo
 ---
 
-[Our training courses](#training-courses) are intensive and hands-on. We work with small groups up to 14 participants to ensure an optimal learning experience.
+{% include header_clean.html %}
 
-We deliver our courses and workshop in English, Dutch, German or French (together with our German and French partners).
-Programming exercises are available in different programming languages: Java, C#, Scala, Ruby, Python, JavaScript, and TypeScript.
+<div class="wrap">
+  <article class="post-wrap">
+    <div class="post">
 
-We offer both open enrolment courses and customized in-company courses, on-site or remote. If you have a need that is not covered by an existing course, we are happy to make new ones for you. Our best courses got started by specific 
-requests from our customers!
+<h1>{{page.title}}</h1>
+
+<p>Our training courses are intensive and hands-on. We work with small groups up to 14 participants to ensure an optimal learning experience.</p>
+
+<p>We deliver our courses and workshop in English, Dutch, German or French (together with our German and French partners).
+Programming exercises are available in different programming languages: Java, C#, Scala, Ruby, Python, JavaScript, and TypeScript.</p>
+
+<p>We offer both open enrolment courses and customized in-company courses, on-site or remote. If you have a need that is not covered by an existing course, we are happy to make new ones for you. Our best courses got started by specific requests from our customers!</p>
 
 <div class="wrap blog-grid" id="training-courses">
   <div class="courses-grid">
@@ -114,3 +121,10 @@ requests from our customers!
 </div>
 
 <img src="/images/agile_engineering_wordle.png" style="width: 100%"> 
+
+    </div>
+  </article>
+</div>
+
+{% include curvedown.html %}
+{% include footer.html %}
