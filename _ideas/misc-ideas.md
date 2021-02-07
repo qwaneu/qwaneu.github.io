@@ -112,3 +112,16 @@ etc. So less complexity (also organizational), and being more in control.
 # Feature toggle musings by Willem
 
 - WE - I have feature toggles seen work, surprisingly well. And at the same time, multiple ways of authorizing access to features (flages, but also other interfaces. logic everywhere). Removing feature flags would make the product inoperable. 
+
+# NDVEA: Niet Denken Voor Een Ander
+
+i.m. Hans Walkate
+
+# Language Matters
+
+"words mean things" - Geert Bossuyt
+- improve -> grow
+- assessment -> diagnostic
+- help -> ?
+- problem/solution -> forces/tension, resolve/reinforce/dampen
+- causal -> dispositional
