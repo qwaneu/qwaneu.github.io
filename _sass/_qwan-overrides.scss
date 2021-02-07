@@ -396,9 +396,10 @@ footer h3 {
   display: grid;
   grid-template-columns: 2fr 6fr;
   row-gap: 1em;
-  column-gap: 6em;
+  column-gap: 5em;
   margin: auto;
   max-width: 60rem;
+  padding-top: 1em;
 
   img {
     width: 100%;

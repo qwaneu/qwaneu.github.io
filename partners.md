@@ -4,9 +4,11 @@ title: Partners
 ---
 
 {% include header_clean.html %}
-<div style="margin-left: 2em;">
-  <h1>{{page.title}}</h1>
-</div>
+<div class="wrap">
+  <article class="post-wrap">
+    <div class="post">
+
+<h1>{{page.title}}</h1>
 
 <div class="partners-list">
   <div>
@@ -31,6 +33,10 @@ title: Partners
       <a href="http://iota.digital" target="_blank">Read more about Iota.Digital</a>
     </p>  
   </div>
+</div>
+
+    </div>
+  </article>
 </div>
 
 {% include curvedown.html %}
