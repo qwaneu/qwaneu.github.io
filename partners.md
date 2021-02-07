@@ -4,7 +4,6 @@ title: Partners
 ---
 
 {% include header_clean.html %}
-
 <div style="margin-left: 2em;">
   <h1>{{page.title}}</h1>
 </div>
