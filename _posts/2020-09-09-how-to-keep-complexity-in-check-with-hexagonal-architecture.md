@@ -136,7 +136,7 @@ Like we said before, Hexagonal Architecture is an architectural pattern, not a b
 
 Separating these concerns allows us to decouple the view logic from the UI structure, styling, and details. It allows the front end to evolve independently from the backend.
 
-Using the Hexagonal lens helps us with **WTPW - What To Put Where**: a new validation rule for adding a facilitator? _put it in the NewFacilitator domain object_; better visualization of password strength? _in the UI component_; do we need to map a backend API peculiarity? _in the API adapter_.
+Using the Hexagonal lens helps us with [WTPW - What To Put Where]((/2020/12/23/what-to-put-where.html)): a new validation rule for adding a facilitator? _put it in the NewFacilitator domain object_; better visualization of password strength? _in the UI component_; do we need to map a backend API peculiarity? _in the API adapter_.
 
 Mapping data in the API adapters comes with a bit of extra effort of writing the mapping code. This is a trade-off and is usually worth it in our experience.
 
