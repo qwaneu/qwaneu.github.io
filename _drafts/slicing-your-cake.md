@@ -150,25 +150,25 @@ The DiagnosticModule class is quite a big slice of the cake: it does a lot,
 handling diagnostic sessions for facilitators and surveys for workshop
 participants. We could split it up into smaller slices. 
 
-How do we determine the
-size of a slice? If we have many small slices, it may get unwieldy. If a slice
-is large, we tend to group unrelated things that have different reasons to change. Some design heuristics for
-splitting a hexagon into slices:
-- Organize around the [Aggregates](https://www.martinfowler.com/bliki/DDD_Aggregate.html) 
-  you have found in event storming or some other
-  domain modelling technique; splitting up according to domains or bounded
-  contexts will probably be too course grained.
+How do we determine the size of a slice? If we have many small slices, it may
+get unwieldy. If a slice is large, we tend to group unrelated things that have
+different reasons to change. Here are some design heuristics for splitting a
+hexagon into slices:
+- Organize around the
+  [Aggregates](https://www.martinfowler.com/bliki/DDD_Aggregate.html) you have
+  found in event storming or some other domain modelling technique; splitting up
+  according to domains or bounded contexts will probably be too course grained.
 - If you do user story mapping, you will have mapped out users' activities and
   tasks; you could slice by user activity.
 - Group around objects/functions working on the same data.
 - Group data and actions related to specific user roles.
 - Put data with different lifecycles in separate slices.
 
-_Naming the slices_: we borrowed the 'module' term from Vuex. We could also
-have called it 'DiagnosticSessionSlice', or just 'DiagnosticSessions' following
-the principle of not naming objects after the pattern applied. We'd rather not
-call them 'service' because this is already an overloaded term with little
-meaning of its own.
+_Naming the slices_: we borrowed the 'module' term from Vuex. We could also have
+called it 'DiagnosticSessionSlice', or just 'Diagnostics' following the
+principle of not naming objects after the pattern applied. We'd rather not call
+them 'service' because this is already an overloaded term with little meaning of
+its own.
 
 _What to do with shared objects?_ We can put these in one or more shared folders
 or libraries on which different slices depend.
@@ -177,11 +177,11 @@ _Wiring the component_: you need to instantiate 'slices' and inject any
 secondary ports. In our Vue.js based component, this is done from the main
 function.
 
-We could have split the front-end component into 3 separate
-front-ends based on our different users: the administrator part, the diagnostic
-session management part, and the survey part. The trade-off here is managing 3
-simpler deployables that do have some overlapping code vs having a larger, more
-complicated code base. For us the latter was preferable.
+We could have split the front-end component into 3 separate front-ends based on
+our different users: the administrator part, the diagnostic session management
+part, and the survey part. The trade-off here is managing 3 simpler deployables
+that do have some overlapping code vs having a larger, more complicated code
+base. For us the latter was preferable.
 
 ## Related work
 
@@ -194,8 +194,8 @@ These ideas have been inspired by work of others, to mention a few:
 Another source of inspiration were the fruitful discussions I had with software
 architects at [RIGD-Loxia](https://www.rigd-loxia.nl/) a number of years ago. We
 explored how to apply Hexagonal Architecture to the (sometimes quite complex)
-Railway Safety Engineering software they develop. I think the 'slices of cake'
-metaphor originates from there.
+Railway Safety Engineering software they develop. The 'slices of cake' metaphor
+originates from there.
 
 A current related development is micro-frontends. Micro-frontend have as
 upsides: independent evolution, scaling, support of multiple back-ends without
