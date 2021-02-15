@@ -100,8 +100,8 @@ and coupled with our front end components, which made writing focused tests for
 the logic harder among other things. 
 
 So we decided to roll our own way of handling logic and state in plain
-JavaScript, inspired by how Vuex provides modularity through different
-'modules', we have created a number of 'module' objects, an `AdminModule`, a
+JavaScript. Inspired by how Vuex provides modularity through different
+'modules', we created a number of 'module' objects, an `AdminModule`, a
 `DiagnosticModule` and a `FacilitatorModule`.
 
 ![@@plaatje met wat afdop modules]()
@@ -153,7 +153,7 @@ instance.
 The DiagnosticModule is quite a big slice of the cake: it does a lot, handling
 diagnostic sessions for facilitators and surveys for workshop participants. We
 could split it up into smaller slices. How do we determine the size of a slice?
-If we have many small slices, it may get unwieldy. If a slice is large, we re
+If we have many small slices, it may get unwieldy. If a slice is large, we are
 probably grouping unrelated things. Some design heuristics for splitting a hexagon into slices:
 - Organize around the Aggregates you have found in event storming or some other
   domain modelling technique; splitting up according to domains or bounded
@@ -189,7 +189,7 @@ These ideas have been inspired by work of others, to mention a few:
 - Jimmy Bogard's [Vertical Slice architecture](https://jimmybogard.com/vertical-slice-architecture/amp/)
 - [A domain-driven Vue.js Architecture](https://medium.com/bauer-kirch/a-domain-driven-vue-js-architecture-77771c20f0da)
 - Michel Weststrate, [UI as an afterthought](https://michel.codes/blogs/ui-as-an-afterthought)
-- Alberto's Brandolini's [Event Storming](https://www.eventstorming.com/) technique has also been influential in how we look at the domain
+- Alberto's Brandolini's [Event Storming](https://www.eventstorming.com/) technique has also been influential in how we look at the domain.
 
 Another source of inspiration were the fruitful discussions I had with software
 architects at [RIGD-Loxia](https://www.rigd-loxia.nl/) a number of years ago. We
@@ -199,21 +199,17 @@ metaphor originates from there.
 
 A current related development is micro-frontends. Micro-frontend have as
 upsides: independent evolution, scaling, support of multiple back-ends without
-tangling. Some downsides are: loss of type-safety, more complicated build and
-interesting choices in deployment.
-
-@@WE: OCAML discourages the use of folders for organizing code (I have doubts as to  how well this scales. They recently renamed their to-JavaScript thing from reasonml to something else, and put that in their principles. I tried ReasonML and I could not  wrap my head around this. front-end packaging is somewhat arbitrary, but if you are consistent, it does help in finding your way around. I have only ever seen one system without folders (MAINSAIL did not support folders) and it did not end well. I may be  missing something, many people seem to be happy with it, micro frontends (and give up type safety between the comonents, or use an IDL)? embedded development on relatively small things (micro kernels)
+tangling. Some downsides are: loss of type-safety, more complicated builds and
+'interesting' choices in deployment.
 
 The Slicing your Cake pattern is also related to the [Micro Front-ends
 pattern](https://martinfowler.com/articles/micro-frontends.html). In a way,
 micro front-ends are cake slices taken to the extreme. Slice your front-end cake
 in modular parts will facilitate splitting it up in micro front-ends later.
 
-@@WE: static checking of dependency directions in CI (Rob and I saw that near Zaventem, _retrie_  the Haskell refactoring language also seems to support something like that). For folder structure I think it matters less _what_ you choose, as long as you stick with the convention. I gave up having a preference on where to put tests (in /test or in src/module/sometest.in.some.language )
-
 _Credits:_
 - _Photo credits: <span>Photo by <a href="https://unsplash.com/@anniespratt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Annie Spratt</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>_
-- _Thanks to Willem for reviewing and encouraging to get this published._
+- _Thanks to Willem for reviewing and encouraging me to get this published._
 
 <aside>
   <h3>Seeing your systems through a Hexagonal lens</h3>
