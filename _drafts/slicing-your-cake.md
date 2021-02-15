@@ -68,7 +68,7 @@ more secondary ports, e.g. a repository or messaging.
 ![slicing your cake pattern](/attachments/blogposts/2021/slicing-your-cake.jpg)
 {: class="post-image post-image-70" }
 
-The responsibilities of a slice object are:
+The responsibilities of a slice are:
 - It acts as a Facade towards primary adapters; e.g. in a front-end component,
   it specifies/exposes what data a UI component can show and what actions it can
   trigger.
@@ -104,15 +104,11 @@ JavaScript. Inspired by how Vuex provides modularity through different
 'modules', we created a number of 'module' objects, an `AdminModule`, a
 `DiagnosticModule` and a `FacilitatorModule`.
 
-![@@plaatje met wat afdop modules]()
+![Online Agile Fluency Diagnostic tool slices](/attachments/blogposts/2021/slicing-afdop.jpg)
+{: class="post-image post-image-50" }
 
-The `diagnostic-module` provides data and actions regarding the diagnostic
-session and the associated survey. It offers e.g. the participant's colour (we
-use colours to identify participants), facilitator info, the survey questions.
-It offers actions like `join` (a participant opening the survey),
-`retrieveQuestions` (triggered by the UI to start retrieving survey questions
-asynchronously), and `confirmAnswer`/`updateAnswer` for handling the participant
-filling in the survey.
+The `diagnostic-module` slice provides data and actions regarding the diagnostic
+session and the associated survey.
 
 ```javascript
 export class DiagnosticModule {
@@ -139,30 +135,34 @@ questions and answers, and the `sessionJoiner` which handles correct joining of
 a participant so that he/she will see the correct survey.
 
 The module exposes properties to the UI components, like the color and the
-facilitator's name. It also exposes actions that can be initiated
-from the UI components, like `join` for a participant joining a session or
-`updateAnswer` for changing an answer in the survey.
+facilitator's name. It also exposes actions that can be initiated from the UI
+components, like `retrieveQuestions` to start retrieving survey questions
+asynchronously, `join` for a participant joining a session and `updateAnswer`
+for changing an answer in the survey.
 
 The module only exposes data and actions that are relevant to the UI components,
 the rest is private. UI components do not have access to repositories for
 instance.
 
-
 ## Considerations
 
-The DiagnosticModule is quite a big slice of the cake: it does a lot, handling
-diagnostic sessions for facilitators and surveys for workshop participants. We
-could split it up into smaller slices. How do we determine the size of a slice?
-If we have many small slices, it may get unwieldy. If a slice is large, we are
-probably grouping unrelated things. Some design heuristics for splitting a hexagon into slices:
-- Organize around the Aggregates you have found in event storming or some other
+The DiagnosticModule class is quite a big slice of the cake: it does a lot,
+handling diagnostic sessions for facilitators and surveys for workshop
+participants. We could split it up into smaller slices. 
+
+How do we determine the
+size of a slice? If we have many small slices, it may get unwieldy. If a slice
+is large, we tend to group unrelated things that have different reasons to change. Some design heuristics for
+splitting a hexagon into slices:
+- Organize around the [Aggregates](https://www.martinfowler.com/bliki/DDD_Aggregate.html) 
+  you have found in event storming or some other
   domain modelling technique; splitting up according to domains or bounded
   contexts will probably be too course grained.
 - If you do user story mapping, you will have mapped out users' activities and
-  tasks. User activities are candidate slices.
-- Group around things/functions working on the same data.
+  tasks; you could slice by user activity.
+- Group around objects/functions working on the same data.
 - Group data and actions related to specific user roles.
-- Data with different lifecycles can be in separate slices.
+- Put data with different lifecycles in separate slices.
 
 _Naming the slices_: we borrowed the 'module' term from Vuex. We could also
 have called it 'DiagnosticSessionSlice', or just 'DiagnosticSessions' following
@@ -177,7 +177,7 @@ _Wiring the component_: you need to instantiate 'slices' and inject any
 secondary ports. In our Vue.js based component, this is done from the main
 function.
 
-Alternatively, we could have split the front-end component into 3 separate
+We could have split the front-end component into 3 separate
 front-ends based on our different users: the administrator part, the diagnostic
 session management part, and the survey part. The trade-off here is managing 3
 simpler deployables that do have some overlapping code vs having a larger, more
@@ -218,3 +218,4 @@ _Credits:_
     <a href="/consulting">Learn more about our consultancy services</a>
   </div></p>
 </aside>
+
