@@ -1,4 +1,15 @@
-#+title: Literate adventures in C - warming up
+#+STARTUP: showall indent
+#+STARTUP: hidestars
+#+BEGIN_EXPORT html
+---
+layout: post
+title: Literate adventures in C - warming up
+tags:
+  -
+author: Willem van den Ende
+image: /attachments/blogposts/2021/tpop-book-cover.jpg
+---
+#+END_EXPORT
 
 [[https://www.jezuk.co.uk/about.html][Jez Higgins ]]and [[http://www.chrisoldwood.com/articles.htm][Chris Oldwood]] recommended [[https://www.cs.princeton.edu/~bwk/tpop.webpage/][The Practice of Programming]] book to me when we were working on an enterprise C++ project. It is from the same year as my beloved Extreme Programming Explained, but quite different. It is multi-language, but some of the exercises are in ~C~ (not surprising, given the authors). I got started on it last year, but life got in the way, and I needed to practice my C a bit before being able to do anything meaningful in it. Now that Rob and I are prepping for a C++ TDD / Legacy code training next month, I'm in the right frame of mind to also dive deeper into C.
 
