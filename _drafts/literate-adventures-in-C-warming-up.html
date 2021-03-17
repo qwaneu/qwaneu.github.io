@@ -2,56 +2,64 @@
 layout: post
 title: Literate adventures in C - warming up
 tags:
-  -
+  - programming
+  - refactoring
+  - polyglot
+  - books
 author: Willem van den Ende
 image: /attachments/blogposts/2021/tpop-book-cover.jpg
 ---
-<div>
+
 <p>
-<div id="orgc3c03b7" class="figure" style="float:left;" >
-<p><img alt="Book cover. The Practice of Programming." src="/attachments/blogposts/2021/tpop-book-cover.jpg" alt="tpop-book-cover.jpg" />
+<a href="https://www.jezuk.co.uk/about.html">Jez Higgins</a> and <a href="http://www.chrisoldwood.com/articles.htm">Chris Oldwood</a> recommended <a href="https://www.cs.princeton.edu/~bwk/tpop.webpage/">The Practice of Programming</a> book to me when we were working on an enterprise C++ project. It is from the same vintage as Extreme Programming Explained and Refactoring, but quite different. It is multi-language, but some of the exercises are in <code>C</code> (not surprising, given the authors&rsquo; backgrounds). I got started on it last year, but life got in the way, and I needed to practice my C a bit before being able to do anything meaningful in it. Now that Rob and I are prepping for a C++ TDD / Legacy code training next month, I&rsquo;m in the right frame of mind to also dive deeper into C.
 </p>
-</div>
-<a href="https://www.jezuk.co.uk/about.html">Jez Higgins </a>and <a href="http://www.chrisoldwood.com/articles.htm">Chris Oldwood</a> recommended <a href="https://www.cs.princeton.edu/~bwk/tpop.webpage/">The Practice of Programming</a> book to me when we were working on an enterprise C++ project. It is from the same year as my beloved Extreme Programming Explained, but quite different. It is multi-language, but some of the exercises are in <code>C</code> (not surprising, given the authors). I got started on it last year, but life got in the way, and I needed to practice my C a bit before being able to do anything meaningful in it. Now that Rob and I are prepping for a C++ TDD / Legacy code training next month, I&rsquo;m in the right frame of mind to also dive deeper into C.
+
+
+<div id="org2b5b5df" class="figure">
+<p><img src="../attachments/blogposts/2021/tpop-book-cover.jpg" alt="tpop-book-cover.jpg" />
 </p>
+<p><span class="figure-number">Figure 1: </span>The Practice of Programming book cover.</p>
 </div>
-<div id="table-of-contents" style="float:clear;">
+
+<div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org8ec204e">1. Why on earth would you program in C?</a></li>
-<li><a href="#org7f43a83">2. The one thing I wished I had known when learning C</a>
+<li><a href="#org43c41a6">1. Why on earth would you program in C?</a></li>
+<li><a href="#orgcc841d9">2. The one thing I wished I had known when learning C</a>
 <ul>
-<li><a href="#orge82332a">2.1. How to do baby steps in C then?</a></li>
-<li><a href="#org74f482f">2.2. What is this magic?</a></li>
+<li><a href="#orgaef2a17">2.1. How to do baby steps in C then?</a></li>
+<li><a href="#orgdfd6584">2.2. What is this magic?</a></li>
 </ul>
 </li>
-<li><a href="#org8136800">3. My warm-up has warm-ups, exploring literate C programming</a>
+<li><a href="#org083ec1c">3. My warm-up has warm-ups, exploring literate C programming</a>
 <ul>
-<li><a href="#org38c0339">3.1. First named function with parameter: square</a></li>
-<li><a href="#org80e8d29">3.2. Call a block by name</a></li>
+<li><a href="#orgab68d01">3.1. First named function with parameter: square</a></li>
+<li><a href="#org52e7737">3.2. Call a block by name</a></li>
 </ul>
 </li>
-<li><a href="#org638e8d7">4. An editors&rsquo; table as input</a></li>
-<li><a href="#org3d78e00">5. Two steps forward, one step back</a></li>
-<li><a href="#org3e902b4">6. Now we can call the built-in qsort.</a></li>
-<li><a href="#org2bae60c">7. Extract the comparator</a></li>
-<li><a href="#org4387de9">8. A horizontal table</a></li>
-<li><a href="#org6aa28ec">9. Some of the blocks re-refactored by the QWAN ensemble</a></li>
-<li><a href="#org02f6973">10. Extract print<sub>array</sub></a></li>
-<li><a href="#org55d4716">11. Four tabs for tangling code blocks in org-mode</a></li>
+<li><a href="#orgf6604db">4. An editors&rsquo; table as input</a></li>
+<li><a href="#orgeb45d7b">5. Two steps forward, one step back</a></li>
+<li><a href="#orgedf8cf6">6. Now we can call the built-in qsort.</a></li>
+<li><a href="#orgcfaf945">7. Extract the comparator</a></li>
+<li><a href="#org21d060d">8. A horizontal table</a></li>
+<li><a href="#org27e03f8">9. Some of the blocks re-refactored by the QWAN ensemble</a></li>
+<li><a href="#orgca6a744">10. Extract the print code into a function</a></li>
+<li><a href="#org7eb20ce">11. Four tabs for tangling code blocks in org-mode</a></li>
+<li><a href="#org426cc2d">12. <span class="todo TODO">TODO</span> summarize, and refer to next post</a></li>
+<li><a href="#org09ac265">13. <span class="todo TODO">TODO</span> Call for action</a></li>
+<li><a href="#org6d1e24b">14. <span class="todo TODO">TODO</span> add a class for org-src-container</a></li>
 </ul>
 </div>
 </div>
-
 
 <p>
 I showed this to Marc and Rob and they thought it was fun. I&rsquo;m also sharing some of the failures, following a recent discussion on twitter that people only publish things when they gone well, or when they have been heavily edited. This may lead readers to believe that they could not possibly do such a thing.
 </p>
 
 
-<div id="outline-container-org8ec204e" class="outline-2">
-<h2 id="org8ec204e"><span class="section-number-2">1</span> Why on earth would you program in C?</h2>
+<div id="outline-container-org43c41a6" class="outline-2">
+<h2 id="org43c41a6"><span class="section-number-2">1</span> Why on earth would you program in C?</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 The &rsquo;logical&rsquo; reason is that <code>C</code> is still one of the best languages to maintain existing <code>C</code> programs in. Your house probably runs on a few million lines of <code>C</code> code (in your heating, your ovens, kitchen timers, smart meters, and for me every year since 2000 has been the year of linux on the desktop, and guess what the linux kernel is made of?. My editor may look lispy, but is also built on C). So learning a bit of C is good, even if it just to get over ones&rsquo; fear of the unknown.
@@ -67,16 +75,16 @@ If you told me 25 years ago I would say I would program C for relaxation, I migh
 </div>
 </div>
 
-<div id="outline-container-org7f43a83" class="outline-2">
-<h2 id="org7f43a83"><span class="section-number-2">2</span> The one thing I wished I had known when learning C</h2>
+<div id="outline-container-orgcc841d9" class="outline-2">
+<h2 id="orgcc841d9"><span class="section-number-2">2</span> The one thing I wished I had known when learning C</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Was working in baby steps. Admittedly, getting evenings full of blue screens and reboots was not very motivating. I figured this out a couple of years later, when I was working in a C++ codebase. The Solaris tooling had a debugger that would let me make some changes in an implementation (.cpp) file, and restart an execution from where it was. I couldn&rsquo;t believe it was not Smalltalk. I learnt working in baby steps, because the compile times in that project were long, and it took me a month of working like that to get them into a doable state (45 minutes down to 5 or so).
 </p>
 </div>
 
-<div id="outline-container-orge82332a" class="outline-3">
-<h3 id="orge82332a"><span class="section-number-3">2.1</span> How to do baby steps in C then?</h3>
+<div id="outline-container-orgaef2a17" class="outline-3">
+<h3 id="orgaef2a17"><span class="section-number-3">2.1</span> How to do baby steps in C then?</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 I decided to not leave the comfort of my editor (<a href="https://www.orgroam.com">org-roam</a> inside <a href="https://github.com/hlissner/doom-emacs">Doom Emacs</a>), and do literate programming for a bit. This means I can write a bit of code, and write my thoughts about it right where I am. The warm up was easy, refactoring required learning a bit more about org-babel. I&rsquo;ve put the resources I found useful at the end of the post.
@@ -98,8 +106,8 @@ Pressing ctrl-c, ctrl-c generates a <code>main()</code> function, builds it, and
 </div>
 </div>
 
-<div id="outline-container-org74f482f" class="outline-3">
-<h3 id="org74f482f"><span class="section-number-3">2.2</span> What is this magic?</h3>
+<div id="outline-container-orgdfd6584" class="outline-3">
+<h3 id="orgdfd6584"><span class="section-number-3">2.2</span> What is this magic?</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 I&rsquo;m using <a href="https://github.com/hlissner/doom-emacs">Doom Emacs</a>, installing things like C compilers and wiring them up is relatively easy, as Doom doctor told me which bits I was missing.
@@ -112,30 +120,30 @@ This is a kind of magic, it also works on mac, and I don&rsquo;t even know which
 </div>
 </div>
 </div>
-<div id="outline-container-org8136800" class="outline-2">
-<h2 id="org8136800"><span class="section-number-2">3</span> My warm-up has warm-ups, exploring literate C programming</h2>
+<div id="outline-container-org083ec1c" class="outline-2">
+<h2 id="org083ec1c"><span class="section-number-2">3</span> My warm-up has warm-ups, exploring literate C programming</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 I wanted to do an exercise around quicksort from the book, but first, how can I use variables and stuff in my code.
 </p>
 </div>
 
-<div id="outline-container-org38c0339" class="outline-3">
-<h3 id="org38c0339"><span class="section-number-3">3.1</span> First named function with parameter: square</h3>
+<div id="outline-container-orgab68d01" class="outline-3">
+<h3 id="orgab68d01"><span class="section-number-3">3.1</span> First named function with parameter: square</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 <code>+name: and :var</code> let us name a program and pass a parameter to it.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="org641f76e"> printf(<span style="color: #98be65;">"%d"</span>, <span style="color: #ECBE7B;">x</span> * <span style="color: #dcaeea;">x</span>);
+<pre class="src src-C" id="org38cf846"> printf(<span style="color: #98be65;">"%d"</span>, <span style="color: #ECBE7B;">x</span> * <span style="color: #dcaeea;">x</span>);
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org80e8d29" class="outline-3">
-<h3 id="org80e8d29"><span class="section-number-3">3.2</span> Call a block by name</h3>
+<div id="outline-container-org52e7737" class="outline-3">
+<h3 id="org52e7737"><span class="section-number-3">3.2</span> Call a block by name</h3>
 <div class="outline-text-3" id="text-3-2">
 <pre class="example">
 64
@@ -144,8 +152,8 @@ I wanted to do an exercise around quicksort from the book, but first, how can I 
 </div>
 </div>
 
-<div id="outline-container-org638e8d7" class="outline-2">
-<h2 id="org638e8d7"><span class="section-number-2">4</span> An editors&rsquo; table as input</h2>
+<div id="outline-container-orgf6604db" class="outline-2">
+<h2 id="orgf6604db"><span class="section-number-2">4</span> An editors&rsquo; table as input</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 One of the more &rsquo;tent&rsquo; like aspects of C is that it does not have a package manager. There is <a href="https://github.com/silentbicycle/theft">Theft - Property-Based Testing for C</a>, but I thought i&rsquo;d get to installing that later. Having a list of numbers as input would be good enough to start with.
@@ -155,7 +163,7 @@ One of the more &rsquo;tent&rsquo; like aspects of C is that it does not have a 
 I started with a table with just one column. org-mode graciously adds a header when calling <code>org-create-table</code>, so in good <code>C</code> style I used one letter for the header, as it is just a bunch of numbers.
 </p>
 
-<table id="org813c737" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="orga76c9d0" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -183,8 +191,27 @@ I started with a table with just one column. org-mode graciously adds a header w
 
 <p>
 Let&rsquo;s just print the numbers, and see what we got, passing our named table as <code>:var</code>. I renamed it to highlight what is source and destination.
-I wanted to print the cell contents, copying some code out of documentation I found. But I got segfaults instead. So a step back, and print just the row numbers, to see that we can get a table as output:
 </p>
+
+<p>
+I wanted to print the cell contents, copying some code out of documentation I found. But I got segfaults instead. So I took a step back, and print just the row numbers, to see that we can get a table as output:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-C" id="org69c96bd"><span style="color: #51afef; font-weight: bold;">  #include</span> <span style="color: #98be65;">"stdlib.h"</span>
+<span style="color: #51afef; font-weight: bold;">  #include</span> <span style="color: #98be65;">"stdio.h"</span>
+  <span style="color: #ECBE7B;">int</span> <span style="color: #c678dd;">main</span>()
+  {
+    <span style="color: #51afef;">for</span> (<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span>=<span style="color: #da8548; font-weight: bold;">0</span>; i&lt;somedata_rows; i++) {
+      printf (<span style="color: #98be65;">"%2d "</span>, i); <span style="color: #5B6268;">// </span><span style="color: #5B6268;">print the column number</span>
+      <span style="color: #5B6268;">// </span><span style="color: #5B6268;">here I wanted to print the cell contents, but got segfaults on my initial code.</span>
+      printf(<span style="color: #98be65;">"\n"</span>);
+    }
+    <span style="color: #51afef;">return</span> <span style="color: #da8548; font-weight: bold;">0</span>;
+  }
+</pre>
+</div>
+
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -240,8 +267,8 @@ Rob later pointed out that a two-dimensional array in <code>C</code> is just a f
 </div>
 
 
-<div id="outline-container-org3d78e00" class="outline-2">
-<h2 id="org3d78e00"><span class="section-number-2">5</span> Two steps forward, one step back</h2>
+<div id="outline-container-orgeb45d7b" class="outline-2">
+<h2 id="orgeb45d7b"><span class="section-number-2">5</span> Two steps forward, one step back</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 The previous was an iteration of many steps. I kept getting segfaults when
@@ -258,6 +285,25 @@ copy pasted&#x2026; the column has already been converted to ints.
 Since printf is stringly typed, we don&rsquo;t get a compiler error, but a segfault.
 The code I pasted had <code>const char*</code> for the cell. We don&rsquo;t have char pointers (also known as strings) here, we have ints. So when we write that correctly, we can print the values.
 </p>
+
+<div class="org-src-container">
+<pre class="src src-C" id="org65b0dcb"><span style="color: #51afef; font-weight: bold;">  #include</span> <span style="color: #98be65;">"stdlib.h"</span>
+<span style="color: #51afef; font-weight: bold;">  #include</span> <span style="color: #98be65;">"stdio.h"</span>
+  <span style="color: #ECBE7B;">int</span> <span style="color: #c678dd;">main</span>()
+  {
+    <span style="color: #51afef;">for</span> (<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span>=<span style="color: #da8548; font-weight: bold;">0</span>; i&lt;somedata_rows; i++) {
+      printf (<span style="color: #98be65;">"%2d "</span>, i);
+      printf(<span style="color: #98be65;">"%2d "</span>, somedata_cols);
+      <span style="color: #5B6268;">// </span><span style="color: #5B6268;">should have called this row, but kept name from documentation code...</span>
+      <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">j</span>=<span style="color: #da8548; font-weight: bold;">0</span>;
+      <span style="color: #51afef;">const</span> <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">cell</span> = somedata[i][j];
+      printf(<span style="color: #98be65;">"%2d "</span>, cell);
+      printf(<span style="color: #98be65;">"\n"</span>);
+    }
+    <span style="color: #51afef;">return</span> <span style="color: #da8548; font-weight: bold;">0</span>;
+  }
+</pre>
+</div>
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -296,8 +342,8 @@ Ok, so we know how to input, and output a table of numbers. We can use this as a
 </div>
 </div>
 
-<div id="outline-container-org3e902b4" class="outline-2">
-<h2 id="org3e902b4"><span class="section-number-2">6</span> Now we can call the built-in qsort.</h2>
+<div id="outline-container-orgedf8cf6" class="outline-2">
+<h2 id="orgedf8cf6"><span class="section-number-2">6</span> Now we can call the built-in qsort.</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 So The Practice Of Programming has a QuickSort example, and asks the reader to convert it from recursive to iterative. In C. I managed to sketch out an iterative example on paper, but I know too little of allocation in C to do that in one go. A baby step would be to convert the recursive calls to pushes on our own stack, and iterate until the stack is empty. Starting off with pushing the initial interval on the stack.
@@ -310,6 +356,39 @@ An optimization could then be to keep current<sub>interval</sub>, and only push 
 <p>
 So lets&rsquo; start with using <code>qsort</code> from the standard library. Ths took me a couple of tries, I had accidentally put my <code>#include</code> s inside the <code>main</code>. It requires a comparator function. The book, provided <code>icmp</code>, so I typed that in:
 </p>
+
+<div class="org-src-container">
+<pre class="src src-C" id="org067efd9"><span style="color: #51afef; font-weight: bold;">#include</span> <span style="color: #98be65;">"stdlib.h"</span>
+<span style="color: #51afef; font-weight: bold;">#include</span> <span style="color: #98be65;">"stdio.h"</span>
+
+<span style="color: #5B6268;">/* </span><span style="color: #5B6268;">icmp: integer compare of *p1 and *p2</span><span style="color: #5B6268;"> */</span>
+<span style="color: #ECBE7B;">int</span> <span style="color: #c678dd;">icmp</span>(<span style="color: #51afef;">const</span> <span style="color: #ECBE7B;">char</span> * <span style="color: #dcaeea;">p1</span>, <span style="color: #51afef;">const</span> <span style="color: #ECBE7B;">char</span> * <span style="color: #dcaeea;">p2</span>) {
+  <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">v1</span>, <span style="color: #dcaeea;">v2</span>;
+
+  v1 = *p1;
+  v2 = *p2;
+
+  <span style="color: #51afef;">if</span> (v1 &lt; v2)
+      <span style="color: #51afef;">return</span> -<span style="color: #da8548; font-weight: bold;">1</span>;
+  <span style="color: #51afef;">else</span> <span style="color: #51afef;">if</span> (v1 == v2)
+      <span style="color: #51afef;">return</span> <span style="color: #da8548; font-weight: bold;">0</span>;
+  <span style="color: #51afef;">else</span>
+      <span style="color: #51afef;">return</span> <span style="color: #da8548; font-weight: bold;">1</span>;
+}
+
+<span style="color: #ECBE7B;">int</span> <span style="color: #c678dd;">main</span>() {
+    <span style="color: #51afef;">const</span> <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">N</span> = <span style="color: #da8548; font-weight: bold;">3</span>;
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">arr</span>[<span style="color: #da8548; font-weight: bold;">3</span>] = { -<span style="color: #da8548; font-weight: bold;">100</span>, <span style="color: #da8548; font-weight: bold;">10</span>, <span style="color: #da8548; font-weight: bold;">3</span> };
+    qsort(arr, N, <span style="color: #51afef;">sizeof</span>(<span style="color: #ECBE7B;">int</span>), icmp );
+    <span style="color: #5B6268;">// </span><span style="color: #5B6268;">qsort modifies arr in place, and we can't</span>
+    <span style="color: #5B6268;">// </span><span style="color: #5B6268;">return a list from main. so print it instead</span>
+    <span style="color: #51afef;">for</span>(<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span>=<span style="color: #da8548; font-weight: bold;">0</span>; i&lt;N;i++) {
+       printf(<span style="color: #98be65;">"%2d "</span>, arr[i]);
+       printf(<span style="color: #98be65;">"\n"</span>); <span style="color: #5B6268;">// </span><span style="color: #5B6268;">newline gives us the table rendering</span>
+    }
+}
+</pre>
+</div>
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -338,14 +417,14 @@ So, we can call a library function. C doesn&rsquo;t come with much out of the bo
 </div>
 </div>
 
-<div id="outline-container-org2bae60c" class="outline-2">
-<h2 id="org2bae60c"><span class="section-number-2">7</span> Extract the comparator</h2>
+<div id="outline-container-orgcfaf945" class="outline-2">
+<h2 id="orgcfaf945"><span class="section-number-2">7</span> Extract the comparator</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 Extract out <code>icmp</code> in its&rsquo; own org-mode block, so I don&rsquo;t have to repeat it all the time:
 </p>
 <div class="org-src-container">
-<pre class="src src-C" id="orge48c580"><span style="color: #5B6268;">/* </span><span style="color: #5B6268;">icmp: integer compare of *p1 and *p2</span><span style="color: #5B6268;"> */</span>
+<pre class="src src-C" id="org2bd57e1"><span style="color: #5B6268;">/* </span><span style="color: #5B6268;">icmp: integer compare of *p1 and *p2</span><span style="color: #5B6268;"> */</span>
 <span style="color: #ECBE7B;">int</span> <span style="color: #c678dd;">icmp</span>(<span style="color: #51afef;">const</span> <span style="color: #ECBE7B;">void</span> * <span style="color: #dcaeea;">p1</span>, <span style="color: #51afef;">const</span> <span style="color: #ECBE7B;">void</span> * <span style="color: #dcaeea;">p2</span>) {
   <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">v1</span>, <span style="color: #dcaeea;">v2</span>;
 
@@ -365,7 +444,7 @@ Extract out <code>icmp</code> in its&rsquo; own org-mode block, so I don&rsquo;t
 
 <p>
 This broke down, and was a large step, as it was / is not obvious how to export just some code to a file, in the same location as the next block.
-Eventually, I got it working, after <a href="#org55d4716">Four browser tabs</a>. I almost gave up - there is always the option to use <code>.h</code> and <code>.c</code> files in an IDE,  and not use literate programming for learning. <b>Almost</b>, I am glad I got this working. The <code>:tangle</code> headers above are now unnecessary. The <code>:exports</code> header prevents execution of the code block, which is useful, as there is nothing to execute. I&rsquo;ll leave them in the text as evidence of my going around in circles.~
+Eventually, I got it working, after <a href="#org7eb20ce">Four browser tabs</a>. I almost gave up - there is always the option to use <code>.h</code> and <code>.c</code> files in an IDE,  and not use literate programming for learning. <b>Almost</b>, I am glad I got this working. The <code>:tangle</code> headers above are now unnecessary. The <code>:exports</code> header prevents execution of the code block, which is useful, as there is nothing to execute. I&rsquo;ll leave them in the text as evidence of my going around in circles.~
 </p>
 
 <p>
@@ -374,8 +453,8 @@ Cool, we have a function. Now we need to tell org-babel how to use it. <code>&lt
 </div>
 </div>
 
-<div id="outline-container-org4387de9" class="outline-2">
-<h2 id="org4387de9"><span class="section-number-2">8</span> A horizontal table</h2>
+<div id="outline-container-org21d060d" class="outline-2">
+<h2 id="org21d060d"><span class="section-number-2">8</span> A horizontal table</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 I sort of started almost writing a test there, at the top of main. Some sample data to kick off the sort. I didn&rsquo;t use org-mode for a table, because I got all rows, and didn&rsquo;t want to do array manipulation just to get some data.
@@ -385,7 +464,7 @@ I sort of started almost writing a test there, at the top of main. Some sample d
 Stepping away from the keyboard, I realised that if I layed out the table in org-mode horizontally, I didn&rsquo;t need much magic.
 Now for our horizontal table:
 </p>
-<table id="org23785de" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="orge925868" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -417,6 +496,39 @@ Then assign it to the variable we had before, so we can take a tiny step.
 <p>
 Let&rsquo;s give this block a separate name, otherwise the RESULTS block will end up with the previous one.
 </p>
+<div class="org-src-container">
+<pre class="src src-C" id="org9ac50fa"><span style="color: #51afef; font-weight: bold;">#include</span> <span style="color: #98be65;">"stdlib.h"</span>
+<span style="color: #51afef; font-weight: bold;">#include</span> <span style="color: #98be65;">"stdio.h"</span>
+<span style="color: #5B6268;">/* </span><span style="color: #5B6268;">icmp: integer compare of *p1 and *p2</span><span style="color: #5B6268;"> */</span>
+<span style="color: #ECBE7B;">int</span> <span style="color: #c678dd;">icmp</span>(<span style="color: #51afef;">const</span> <span style="color: #ECBE7B;">void</span> * <span style="color: #dcaeea;">p1</span>, <span style="color: #51afef;">const</span> <span style="color: #ECBE7B;">void</span> * <span style="color: #dcaeea;">p2</span>) {
+  <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">v1</span>, <span style="color: #dcaeea;">v2</span>;
+
+  v1 = *(<span style="color: #ECBE7B;">int</span> *) p1;
+  v2 = *(<span style="color: #ECBE7B;">int</span> *) p2;
+
+  <span style="color: #51afef;">if</span> (v1 &lt; v2)
+      <span style="color: #51afef;">return</span> -<span style="color: #da8548; font-weight: bold;">1</span>;
+  <span style="color: #51afef;">else</span> <span style="color: #51afef;">if</span> (v1 == v2)
+      <span style="color: #51afef;">return</span> <span style="color: #da8548; font-weight: bold;">0</span>;
+  <span style="color: #51afef;">else</span>
+      <span style="color: #51afef;">return</span> <span style="color: #da8548; font-weight: bold;">1</span>;
+}
+
+<span style="color: #ECBE7B;">int</span> <span style="color: #c678dd;">main</span>() {
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">N</span> = <span style="color: #da8548; font-weight: bold;">5</span>;
+    <span style="color: #5B6268;">// </span><span style="color: #5B6268;">get the first row of our one-row table</span>
+    <span style="color: #ECBE7B;">int</span>* <span style="color: #dcaeea;">arr</span> = unsorted[<span style="color: #da8548; font-weight: bold;">0</span>];
+
+    qsort(arr, N, <span style="color: #51afef;">sizeof</span>(<span style="color: #ECBE7B;">int</span>), icmp );
+    <span style="color: #5B6268;">// </span><span style="color: #5B6268;">print the array</span>
+    <span style="color: #51afef;">for</span>(<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span>=<span style="color: #da8548; font-weight: bold;">0</span>; i&lt;N;i++) {
+       printf(<span style="color: #98be65;">"%2d "</span>, arr[i]);
+    }
+    printf(<span style="color: #98be65;">"\n"</span>);
+}
+</pre>
+</div>
+
 <pre class="example">
 -100  0  1 10 420
 </pre>
@@ -428,8 +540,8 @@ And it works as expected, all nicely sorted :-).
 </div>
 </div>
 
-<div id="outline-container-org6aa28ec" class="outline-2">
-<h2 id="org6aa28ec"><span class="section-number-2">9</span> Some of the blocks re-refactored by the QWAN ensemble</h2>
+<div id="outline-container-org27e03f8" class="outline-2">
+<h2 id="org27e03f8"><span class="section-number-2">9</span> Some of the blocks re-refactored by the QWAN ensemble</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 So this post isn&rsquo;t even going to make it to QuickSort by the book. I showed the above to Rob and Marc yesterday, and we had some more fun. Marc and I learnt C in trial by fire style, as part of our operating systems class in Uni. &rsquo;but we don&rsquo;t know C&rsquo;, &rsquo;You&rsquo;ll pick it up&rsquo;. Rob was actually taught C for a whole two weeks (not much, given the care one needs to use it safely. ).
@@ -512,22 +624,57 @@ Anwyay, having our int pointers makes it more obvious what is going on here. In 
 </div>
 </div>
 
-<div id="outline-container-org02f6973" class="outline-2">
-<h2 id="org02f6973"><span class="section-number-2">10</span> Extract print<sub>array</sub></h2>
+<div id="outline-container-orgca6a744" class="outline-2">
+<h2 id="orgca6a744"><span class="section-number-2">10</span> Extract the print code into a function</h2>
 <div class="outline-text-2" id="text-10">
 <p>
-We&rsquo;ll extract the <code>print_array</code> helper in its&rsquo; own
+We&rsquo;ll extract the printing code into its&rsquo; own <code>print_array</code> function, in its&rsquo; own
 block, it is getting a bit repetitive.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="orgca41f79"><span style="color: #51afef; font-weight: bold;">#include</span> <span style="color: #98be65;">"stdio.h"</span>
+<pre class="src src-C" id="org0f12dc7"><span style="color: #51afef; font-weight: bold;">#include</span> <span style="color: #98be65;">"stdio.h"</span>
 <span style="color: #5B6268;">/* </span><span style="color: #5B6268;">print_array: print an array of integers of length N to stdout</span><span style="color: #5B6268;"> */</span>
 <span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">print_array</span>(<span style="color: #51afef;">const</span> <span style="color: #ECBE7B;">int</span>* <span style="color: #dcaeea;">xs</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">N</span>) {
     <span style="color: #51afef;">for</span>(<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span>=<span style="color: #da8548; font-weight: bold;">0</span>; i&lt;N;i++) {
        printf(<span style="color: #98be65;">"%2d "</span>, xs[i]);
     }
     printf(<span style="color: #98be65;">"\n"</span>);
+}
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-C" id="org9f92c61"><span style="color: #51afef; font-weight: bold;">#include</span> <span style="color: #98be65;">"stdlib.h"</span>
+<span style="color: #51afef; font-weight: bold;">#include</span> <span style="color: #98be65;">"stdio.h"</span>
+<span style="color: #5B6268;">/* </span><span style="color: #5B6268;">icmp: integer compare of *p1 and *p2</span><span style="color: #5B6268;"> */</span>
+<span style="color: #ECBE7B;">int</span> <span style="color: #c678dd;">icmp</span>(<span style="color: #51afef;">const</span> <span style="color: #ECBE7B;">void</span> * <span style="color: #dcaeea;">p1</span>, <span style="color: #51afef;">const</span> <span style="color: #ECBE7B;">void</span> * <span style="color: #dcaeea;">p2</span>) {
+  <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">v1</span>, <span style="color: #dcaeea;">v2</span>;
+
+  v1 = *(<span style="color: #ECBE7B;">int</span> *) p1;
+  v2 = *(<span style="color: #ECBE7B;">int</span> *) p2;
+
+  <span style="color: #51afef;">if</span> (v1 &lt; v2)
+      <span style="color: #51afef;">return</span> -<span style="color: #da8548; font-weight: bold;">1</span>;
+  <span style="color: #51afef;">else</span> <span style="color: #51afef;">if</span> (v1 == v2)
+      <span style="color: #51afef;">return</span> <span style="color: #da8548; font-weight: bold;">0</span>;
+  <span style="color: #51afef;">else</span>
+      <span style="color: #51afef;">return</span> <span style="color: #da8548; font-weight: bold;">1</span>;
+}
+
+<span style="color: #51afef; font-weight: bold;">#include</span> <span style="color: #98be65;">"stdio.h"</span>
+<span style="color: #5B6268;">/* </span><span style="color: #5B6268;">print_array: print an array of integers of length N to stdout</span><span style="color: #5B6268;"> */</span>
+<span style="color: #ECBE7B;">void</span> <span style="color: #c678dd;">print_array</span>(<span style="color: #51afef;">const</span> <span style="color: #ECBE7B;">int</span>* <span style="color: #dcaeea;">xs</span>, <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">N</span>) {
+    <span style="color: #51afef;">for</span>(<span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span>=<span style="color: #da8548; font-weight: bold;">0</span>; i&lt;N;i++) {
+       printf(<span style="color: #98be65;">"%2d "</span>, xs[i]);
+    }
+    printf(<span style="color: #98be65;">"\n"</span>);
+}
+<span style="color: #ECBE7B;">int</span> <span style="color: #c678dd;">main</span>() {
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">arr</span>[] = { <span style="color: #da8548; font-weight: bold;">20000</span>, <span style="color: #da8548; font-weight: bold;">1</span>, <span style="color: #da8548; font-weight: bold;">42</span>, -<span style="color: #da8548; font-weight: bold;">100</span>, <span style="color: #da8548; font-weight: bold;">10</span>, <span style="color: #da8548; font-weight: bold;">3</span> };
+    <span style="color: #51afef;">const</span> <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">N</span> = <span style="color: #51afef;">sizeof</span>(arr) / <span style="color: #51afef;">sizeof</span>(<span style="color: #ECBE7B;">int</span>);
+    qsort(arr, N, <span style="color: #51afef;">sizeof</span>(<span style="color: #ECBE7B;">int</span>), icmp );
+    print_array(arr, N);
 }
 </pre>
 </div>
@@ -547,8 +694,8 @@ Documenting my steps helped here already. I had forgotten how to include blocks 
 
 
 
-<div id="outline-container-org55d4716" class="outline-2">
-<h2 id="org55d4716"><span class="section-number-2">11</span> Four tabs for tangling code blocks in org-mode</h2>
+<div id="outline-container-org7eb20ce" class="outline-2">
+<h2 id="org7eb20ce"><span class="section-number-2">11</span> Four tabs for tangling code blocks in org-mode</h2>
 <div class="outline-text-2" id="text-11">
 <ol class="org-ol">
 <li><a href="https://orgmode.org/manual/Noweb-Reference-Syntax.html#Noweb-Reference-Syntax">Noweb Reference Syntax (The Org Manual)</a> how to reuse code in multiple blocks.</li>
@@ -572,5 +719,212 @@ with. Very useful, but doesn&rsquo;t have the information on reusing code from a
 <p>
 I still would like to know how to output <code>icmp</code> to its&rsquo; own .h file, and use that in another block.
 </p>
+</div>
+</div>
+
+<div id="outline-container-org426cc2d" class="outline-2">
+<h2 id="org426cc2d"><span class="section-number-2">12</span> <span class="todo TODO">TODO</span> summarize, and refer to next post</h2>
+</div>
+<div id="outline-container-org09ac265" class="outline-2">
+<h2 id="org09ac265"><span class="section-number-2">13</span> <span class="todo TODO">TODO</span> Call for action</h2>
+<div class="outline-text-2" id="text-13">
+<p>
+(probably: training courses, also available in C++)
+</p>
+</div>
+</div>
+<div id="outline-container-org6d1e24b" class="outline-2">
+<h2 id="org6d1e24b"><span class="section-number-2">14</span> <span class="todo TODO">TODO</span> add a class for org-src-container</h2>
+<div class="outline-text-2" id="text-14">
+<p>
+generated css for inspiration:
+</p>
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #51afef;">&lt;style type=</span><span style="color: #98be65;">"text/css"</span><span style="color: #51afef;">&gt;</span>
+<span style="color: #51afef;"> &lt;!--</span><span style="color: #5B6268;">/*</span><span style="color: #5B6268;">--&gt;&lt;![CDATA[/*&gt;&lt;!--</span><span style="color: #5B6268;">*/</span>
+<span style="color: #51afef;">  .title  </span>{ <span style="color: #98be65;">text-align</span>: center;
+             <span style="color: #98be65;">margin-bottom</span>: .2em; }
+  <span style="color: #51afef;">.subtitle </span>{ <span style="color: #98be65;">text-align</span>: center;
+              <span style="color: #98be65;">font-size</span>: medium;
+              <span style="color: #98be65;">font-weight</span>: bold;
+              <span style="color: #98be65;">margin-top</span>:<span style="color: #da8548; font-weight: bold;">0</span>; }
+  <span style="color: #51afef;">.todo   </span>{ <span style="color: #98be65;">font-family</span>: monospace; <span style="color: #98be65;">color</span>: <span style="color: #ffffff; background-color: #ff0000;">red</span>; }
+  <span style="color: #51afef;">.done   </span>{ <span style="color: #98be65;">font-family</span>: monospace; <span style="color: #98be65;">color</span>: <span style="color: #ffffff; background-color: #008000;">green</span>; }
+  <span style="color: #51afef;">.priority </span>{ <span style="color: #98be65;">font-family</span>: monospace; <span style="color: #98be65;">color</span>: <span style="color: #ffffff; background-color: #ffa500;">orange</span>; }
+  <span style="color: #51afef;">.tag    </span>{ <span style="color: #98be65;">background-color</span>: <span style="color: #000000; background-color: #eee;">#eee</span>; <span style="color: #98be65;">font-family</span>: monospace;
+            <span style="color: #98be65;">padding</span>: 2px; <span style="color: #98be65;">font-size</span>: <span style="color: #da8548; font-weight: bold;">80</span>%; <span style="color: #98be65;">font-weight</span>: normal; }
+  <span style="color: #51afef;">.timestamp </span>{ <span style="color: #98be65;">color</span>: <span style="color: #000000; background-color: #bebebe;">#bebebe</span>; }
+  <span style="color: #51afef;">.timestamp-kwd </span>{ <span style="color: #98be65;">color</span>: <span style="color: #ffffff; background-color: #5f9ea0;">#5f9ea0</span>; }
+  <span style="color: #51afef;">.org-right  </span>{ <span style="color: #98be65;">margin-left</span>: auto; <span style="color: #98be65;">margin-right</span>: 0px;  <span style="color: #98be65;">text-align</span>: right; }
+  <span style="color: #51afef;">.org-left   </span>{ <span style="color: #98be65;">margin-left</span>: 0px;  <span style="color: #98be65;">margin-right</span>: auto; <span style="color: #98be65;">text-align</span>: left; }
+  <span style="color: #51afef;">.org-center </span>{ <span style="color: #98be65;">margin-left</span>: auto; <span style="color: #98be65;">margin-right</span>: auto; <span style="color: #98be65;">text-align</span>: center; }
+  <span style="color: #51afef;">.underline </span>{ <span style="color: #98be65;">text-decoration</span>: underline; }
+  <span style="color: #51afef;">#postamble p, #preamble p </span>{ <span style="color: #98be65;">font-size</span>: <span style="color: #da8548; font-weight: bold;">90</span>%; <span style="color: #98be65;">margin</span>: .2em; }
+  <span style="color: #51afef;">p.verse </span>{ <span style="color: #98be65;">margin-left</span>: <span style="color: #da8548; font-weight: bold;">3</span>%; }
+  <span style="color: #51afef;">pre </span>{
+    <span style="color: #98be65;">border</span>: 1px solid <span style="color: #000000; background-color: #ccc;">#ccc</span>;
+    <span style="color: #98be65;">box-shadow</span>: 3px 3px 3px <span style="color: #000000; background-color: #eee;">#eee</span>;
+    <span style="color: #98be65;">padding</span>: 8pt;
+    <span style="color: #98be65;">font-family</span>: monospace;
+    <span style="color: #98be65;">overflow</span>: auto;
+    <span style="color: #98be65;">margin</span>: 1.2em;
+  }
+  <span style="color: #51afef;">pre.src </span>{
+    <span style="color: #98be65;">position</span>: relative;
+    <span style="color: #98be65;">overflow</span>: auto;
+    <span style="color: #98be65;">padding-top</span>: 1.2em;
+  }
+  <span style="color: #51afef;">pre.src:before </span>{
+    <span style="color: #98be65;">display</span>: none;
+    <span style="color: #98be65;">position</span>: absolute;
+    <span style="color: #98be65;">background-color</span>: <span style="color: #000000; background-color: #ffffff;">white</span>;
+    <span style="color: #98be65;">top</span>: -10px;
+    <span style="color: #98be65;">right</span>: 10px;
+    <span style="color: #98be65;">padding</span>: 3px;
+    <span style="color: #98be65;">border</span>: 1px solid <span style="color: #ffffff; background-color: #000000;">black</span>;
+  }
+  <span style="color: #51afef;">pre.src:hover:before </span>{ <span style="color: #98be65;">display</span>: inline; <span style="color: #98be65;">margin-top</span>: 14px;}
+  <span style="color: #5B6268;">/* </span><span style="color: #5B6268;">Languages per Org manual </span><span style="color: #5B6268;">*/</span>
+  <span style="color: #51afef;">pre.src-asymptote:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Asymptote'</span>; }
+  <span style="color: #51afef;">pre.src-awk:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Awk'</span>; }
+  <span style="color: #51afef;">pre.src-C:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'C'</span>; }
+  <span style="color: #5B6268;">/* </span><span style="color: #5B6268;">pre.src-C++ doesn't work in CSS </span><span style="color: #5B6268;">*/</span>
+  <span style="color: #51afef;">pre.src-clojure:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Clojure'</span>; }
+  <span style="color: #51afef;">pre.src-css:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'CSS'</span>; }
+  <span style="color: #51afef;">pre.src-D:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'D'</span>; }
+  <span style="color: #51afef;">pre.src-ditaa:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'ditaa'</span>; }
+  <span style="color: #51afef;">pre.src-dot:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Graphviz'</span>; }
+  <span style="color: #51afef;">pre.src-calc:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Emacs Calc'</span>; }
+  <span style="color: #51afef;">pre.src-emacs-lisp:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Emacs Lisp'</span>; }
+  <span style="color: #51afef;">pre.src-fortran:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Fortran'</span>; }
+  <span style="color: #51afef;">pre.src-gnuplot:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'gnuplot'</span>; }
+  <span style="color: #51afef;">pre.src-haskell:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Haskell'</span>; }
+  <span style="color: #51afef;">pre.src-hledger:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'hledger'</span>; }
+  <span style="color: #51afef;">pre.src-java:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Java'</span>; }
+  <span style="color: #51afef;">pre.src-js:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Javascript'</span>; }
+  <span style="color: #51afef;">pre.src-latex:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'LaTeX'</span>; }
+  <span style="color: #51afef;">pre.src-ledger:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Ledger'</span>; }
+  <span style="color: #51afef;">pre.src-lisp:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Lisp'</span>; }
+  <span style="color: #51afef;">pre.src-lilypond:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Lilypond'</span>; }
+  <span style="color: #51afef;">pre.src-lua:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Lua'</span>; }
+  <span style="color: #51afef;">pre.src-matlab:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'MATLAB'</span>; }
+  <span style="color: #51afef;">pre.src-mscgen:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Mscgen'</span>; }
+  <span style="color: #51afef;">pre.src-ocaml:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Objective Caml'</span>; }
+  <span style="color: #51afef;">pre.src-octave:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Octave'</span>; }
+  <span style="color: #51afef;">pre.src-org:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Org mode'</span>; }
+  <span style="color: #51afef;">pre.src-oz:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'OZ'</span>; }
+  <span style="color: #51afef;">pre.src-plantuml:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Plantuml'</span>; }
+  <span style="color: #51afef;">pre.src-processing:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Processing.js'</span>; }
+  <span style="color: #51afef;">pre.src-python:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Python'</span>; }
+  <span style="color: #51afef;">pre.src-R:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'R'</span>; }
+  <span style="color: #51afef;">pre.src-ruby:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Ruby'</span>; }
+  <span style="color: #51afef;">pre.src-sass:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Sass'</span>; }
+  <span style="color: #51afef;">pre.src-scheme:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Scheme'</span>; }
+  <span style="color: #51afef;">pre.src-screen:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Gnu Screen'</span>; }
+  <span style="color: #51afef;">pre.src-sed:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Sed'</span>; }
+  <span style="color: #51afef;">pre.src-sh:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'shell'</span>; }
+  <span style="color: #51afef;">pre.src-sql:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'SQL'</span>; }
+  <span style="color: #51afef;">pre.src-sqlite:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'SQLite'</span>; }
+  <span style="color: #5B6268;">/* </span><span style="color: #5B6268;">additional languages in org.el's org-babel-load-languages alist </span><span style="color: #5B6268;">*/</span>
+  <span style="color: #51afef;">pre.src-forth:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Forth'</span>; }
+  <span style="color: #51afef;">pre.src-io:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'IO'</span>; }
+  <span style="color: #51afef;">pre.src-J:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'J'</span>; }
+  <span style="color: #51afef;">pre.src-makefile:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Makefile'</span>; }
+  <span style="color: #51afef;">pre.src-maxima:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Maxima'</span>; }
+  <span style="color: #51afef;">pre.src-perl:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Perl'</span>; }
+  <span style="color: #51afef;">pre.src-picolisp:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Pico Lisp'</span>; }
+  <span style="color: #51afef;">pre.src-scala:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Scala'</span>; }
+  <span style="color: #51afef;">pre.src-shell:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Shell Script'</span>; }
+  <span style="color: #51afef;">pre.src-ebnf2ps:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'ebfn2ps'</span>; }
+  <span style="color: #5B6268;">/* </span><span style="color: #5B6268;">additional language identifiers per "defun org-babel-execute"</span>
+<span style="color: #5B6268;">       in ob-*.el </span><span style="color: #5B6268;">*/</span>
+<span style="color: #51afef;">  pre.src-cpp:before  </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'C++'</span>; }
+  <span style="color: #51afef;">pre.src-abc:before  </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'ABC'</span>; }
+  <span style="color: #51afef;">pre.src-coq:before  </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Coq'</span>; }
+  <span style="color: #51afef;">pre.src-groovy:before  </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Groovy'</span>; }
+  <span style="color: #5B6268;">/* </span><span style="color: #5B6268;">additional language identifiers from org-babel-shell-names in</span>
+<span style="color: #5B6268;">     ob-shell.el: ob-shell is the only babel language using a lambda to put</span>
+<span style="color: #5B6268;">     the execution function name together. </span><span style="color: #5B6268;">*/</span>
+<span style="color: #51afef;">  pre.src-bash:before  </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'bash'</span>; }
+  <span style="color: #51afef;">pre.src-csh:before  </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'csh'</span>; }
+  <span style="color: #51afef;">pre.src-ash:before  </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'ash'</span>; }
+  <span style="color: #51afef;">pre.src-dash:before  </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'dash'</span>; }
+  <span style="color: #51afef;">pre.src-ksh:before  </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'ksh'</span>; }
+  <span style="color: #51afef;">pre.src-mksh:before  </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'mksh'</span>; }
+  <span style="color: #51afef;">pre.src-posh:before  </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'posh'</span>; }
+  <span style="color: #5B6268;">/* </span><span style="color: #5B6268;">Additional Emacs modes also supported by the LaTeX listings package </span><span style="color: #5B6268;">*/</span>
+  <span style="color: #51afef;">pre.src-ada:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Ada'</span>; }
+  <span style="color: #51afef;">pre.src-asm:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Assembler'</span>; }
+  <span style="color: #51afef;">pre.src-caml:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Caml'</span>; }
+  <span style="color: #51afef;">pre.src-delphi:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Delphi'</span>; }
+  <span style="color: #51afef;">pre.src-html:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'HTML'</span>; }
+  <span style="color: #51afef;">pre.src-idl:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'IDL'</span>; }
+  <span style="color: #51afef;">pre.src-mercury:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Mercury'</span>; }
+  <span style="color: #51afef;">pre.src-metapost:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'MetaPost'</span>; }
+  <span style="color: #51afef;">pre.src-modula-2:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Modula-2'</span>; }
+  <span style="color: #51afef;">pre.src-pascal:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Pascal'</span>; }
+  <span style="color: #51afef;">pre.src-ps:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'PostScript'</span>; }
+  <span style="color: #51afef;">pre.src-prolog:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Prolog'</span>; }
+  <span style="color: #51afef;">pre.src-simula:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Simula'</span>; }
+  <span style="color: #51afef;">pre.src-tcl:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'tcl'</span>; }
+  <span style="color: #51afef;">pre.src-tex:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'TeX'</span>; }
+  <span style="color: #51afef;">pre.src-plain-tex:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Plain TeX'</span>; }
+  <span style="color: #51afef;">pre.src-verilog:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Verilog'</span>; }
+  <span style="color: #51afef;">pre.src-vhdl:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'VHDL'</span>; }
+  <span style="color: #51afef;">pre.src-xml:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'XML'</span>; }
+  <span style="color: #51afef;">pre.src-nxml:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'XML'</span>; }
+  <span style="color: #5B6268;">/* </span><span style="color: #5B6268;">add a generic configuration mode; LaTeX export needs an additional</span>
+<span style="color: #5B6268;">     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs </span><span style="color: #5B6268;">*/</span>
+  <span style="color: #51afef;">pre.src-conf:before </span>{ <span style="color: #98be65;">content</span>: <span style="color: #98be65;">'Configuration File'</span>; }
+
+  <span style="color: #51afef;">table </span>{ <span style="color: #98be65;">border-collapse</span>:collapse; }
+  <span style="color: #51afef;">caption.t-above </span>{ <span style="color: #98be65;">caption-side</span>: top; }
+  <span style="color: #51afef;">caption.t-bottom </span>{ <span style="color: #98be65;">caption-side</span>: bottom; }
+  <span style="color: #51afef;">td, th </span>{ <span style="color: #98be65;">vertical-align</span>:top;  }
+  <span style="color: #51afef;">th.org-right  </span>{ <span style="color: #98be65;">text-align</span>: center;  }
+  <span style="color: #51afef;">th.org-left   </span>{ <span style="color: #98be65;">text-align</span>: center;   }
+  <span style="color: #51afef;">th.org-center </span>{ <span style="color: #98be65;">text-align</span>: center; }
+  <span style="color: #51afef;">td.org-right  </span>{ <span style="color: #98be65;">text-align</span>: right;  }
+  <span style="color: #51afef;">td.org-left   </span>{ <span style="color: #98be65;">text-align</span>: left;   }
+  <span style="color: #51afef;">td.org-center </span>{ <span style="color: #98be65;">text-align</span>: center; }
+  <span style="color: #51afef;">dt </span>{ <span style="color: #98be65;">font-weight</span>: bold; }
+  <span style="color: #51afef;">.footpara </span>{ <span style="color: #98be65;">display</span>: inline; }
+  <span style="color: #51afef;">.footdef  </span>{ <span style="color: #98be65;">margin-bottom</span>: 1em; }
+  <span style="color: #51afef;">.figure </span>{ <span style="color: #98be65;">padding</span>: 1em; }
+  <span style="color: #51afef;">.figure p </span>{ <span style="color: #98be65;">text-align</span>: center; }
+  <span style="color: #51afef;">.equation-container </span>{
+    <span style="color: #98be65;">display</span>: table;
+    <span style="color: #98be65;">text-align</span>: center;
+    <span style="color: #98be65;">width</span>: <span style="color: #da8548; font-weight: bold;">100</span>%;
+  }
+  <span style="color: #51afef;">.equation </span>{
+    <span style="color: #98be65;">vertical-align</span>: middle;
+  }
+  <span style="color: #51afef;">.equation-label </span>{
+    <span style="color: #98be65;">display</span>: table-cell;
+    <span style="color: #98be65;">text-align</span>: right;
+    <span style="color: #98be65;">vertical-align</span>: middle;
+  }
+  <span style="color: #51afef;">.inlinetask </span>{
+    <span style="color: #98be65;">padding</span>: 10px;
+    <span style="color: #98be65;">border</span>: 2px solid <span style="color: #ffffff; background-color: #808080;">gray</span>;
+    <span style="color: #98be65;">margin</span>: 10px;
+    <span style="color: #98be65;">background</span>: <span style="color: #000000; background-color: #ffffcc;">#ffffcc</span>;
+  }
+  <span style="color: #51afef;">#org-div-home-and-up</span>
+<span style="color: #51afef;">   </span>{ <span style="color: #98be65;">text-align</span>: right; <span style="color: #98be65;">font-size</span>: <span style="color: #da8548; font-weight: bold;">70</span>%; <span style="color: #98be65;">white-space</span>: nowrap; }
+  <span style="color: #51afef;">textarea </span>{ <span style="color: #98be65;">overflow-x</span>: auto; }
+  <span style="color: #51afef;">.linenr </span>{ <span style="color: #98be65;">font-size</span>: smaller }
+  <span style="color: #51afef;">.code-highlighted </span>{ <span style="color: #98be65;">background-color</span>: <span style="color: #000000; background-color: #ffff00;">#ffff00</span>; }
+  <span style="color: #51afef;">.org-info-js_info-navigation </span>{ <span style="color: #98be65;">border-style</span>: none; }
+  <span style="color: #51afef;">#org-info-js_console-label</span>
+<span style="color: #51afef;">    </span>{ <span style="color: #98be65;">font-size</span>: 10px; <span style="color: #98be65;">font-weight</span>: bold; <span style="color: #98be65;">white-space</span>: nowrap; }
+  <span style="color: #51afef;">.org-info-js_search-highlight</span>
+<span style="color: #51afef;">    </span>{ <span style="color: #98be65;">background-color</span>: <span style="color: #000000; background-color: #ffff00;">#ffff00</span>; <span style="color: #98be65;">color</span>: <span style="color: #ffffff; background-color: #000000;">#000000</span>; <span style="color: #98be65;">font-weight</span>: bold; }
+  <span style="color: #51afef;">.org-svg </span>{ <span style="color: #98be65;">width</span>: <span style="color: #da8548; font-weight: bold;">90</span>%; }
+  <span style="color: #5B6268;">/*</span><span style="color: #5B6268;">]]&gt;</span><span style="color: #5B6268;">*/</span>--&gt;
+&lt;/style&gt;
+</pre>
+</div>
 </div>
 </div>
