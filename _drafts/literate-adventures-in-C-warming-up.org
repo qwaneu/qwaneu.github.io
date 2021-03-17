@@ -87,8 +87,11 @@ I started with a table with just one column. org-mode graciously adds a header w
 |  300 |
 
 Let's just print the numbers, and see what we got, passing our named table as ~:var~. I renamed it to highlight what is source and destination.
+
+I wanted to print the cell contents, copying some code out of documentation I found. But I got segfaults instead. So I took a step back, and print just the row numbers, to see that we can get a table as output:
+
 #+name: c-table
-#+header: :exports results
+#+header: :exports both
 #+begin_src  C :var somedata=unsorted
   #include "stdlib.h"
   #include "stdio.h"
@@ -103,7 +106,6 @@ Let's just print the numbers, and see what we got, passing our named table as ~:
   }
 #+end_src
 
-I wanted to print the cell contents, copying some code out of documentation I found. But I got segfaults instead. So a step back, and print just the row numbers, to see that we can get a table as output:
 
 #+RESULTS: c-table
 | 0 |
@@ -144,7 +146,7 @@ Since printf is stringly typed, we don't get a compiler error, but a segfault.
 The code I pasted had ~const char*~ for the cell. We don't have char pointers (also known as strings) here, we have ints. So when we write that correctly, we can print the values.
 
 #+name: c-table2
-#+header: :exports results
+#+header: :exports both
 #+begin_src  C :var somedata=unsorted
   #include "stdlib.h"
   #include "stdio.h"
@@ -178,7 +180,7 @@ Ok, so we know how to input, and output a table of numbers. We can use this as a
  So lets' start with using ~qsort~ from the standard library. Ths took me a couple of tries, I had accidentally put my ~#include~ s inside the ~main~. It requires a comparator function. The book, provided ~icmp~, so I typed that in:
 
 #+name: qsort_builtin
-#+header: :exports results
+#+header: :exports both
 #+begin_src C
 #include "stdlib.h"
 #include "stdio.h"
@@ -263,7 +265,7 @@ Then assign it to the variable we had before, so we can take a tiny step.
 
 Let's give this block a separate name, otherwise the RESULTS block will end up with the previous one.
 #+name: qsort_builtin_refactored
-#+header: :exports results
+#+header: :exports both
 #+header: :noweb yes
 #+begin_src C :var unsorted=unsorted_horizontal
 #include "stdlib.h"
@@ -360,7 +362,8 @@ void print_array(const int* xs, int N) {
 #+RESULTS: print_array
 
 #+name: qsort_builtin_fewer_casts_remove_magic_number
-#+header: :exports results :noweb yes
+#+header: :exports both
+#+header: :noweb yes
 #+begin_src C
 #include "stdlib.h"
 #include "stdio.h"
