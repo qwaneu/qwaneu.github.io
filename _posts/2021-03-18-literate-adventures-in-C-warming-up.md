@@ -502,24 +502,19 @@ block, it is getting a bit repetitive.
 # Four tabs for tangling code blocks in org-mode
 
 1.  [Noweb Reference Syntax (The Org Manual)](https://orgmode.org/manual/Noweb-Reference-Syntax.html#Noweb-Reference-Syntax) how to reuse code in multiple blocks.
-2.  [Working with Source Code (Org Mode Compact Guide)](https://orgmode.org/guide/Working-with-Source-Code.html) how to evaluate source code
-
-and using header arguments.
-
-1.  [Using results from one code block in another](https://kitchingroup.cheme.cmu.edu/blog/2019/02/12/Using-results-from-one-code-block-in-another-org-mode/)  was
-
-more useful for evaluating code than combining multiple blocks. I did learn about the :cache
+2.  [Working with Source Code (Org Mode Compact Guide)](https://orgmode.org/guide/Working-with-Source-Code.html) how to evaluate source code and using header arguments.
+3.  [Using results from one code block in another](https://kitchingroup.cheme.cmu.edu/blog/2019/02/12/Using-results-from-one-code-block-in-another-org-mode/)  was more useful for evaluating code than combining multiple blocks. I did learn about the :cache
 header for caching output that takes a long time to compute, only updating it
 when the source code block changes. I didn&rsquo;t need it here, but useful for future
 reference.
-[C, C++, D Source Code Blocks in Org Mode](https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-C.html) This is the one I started
+4. [C, C++, D Source Code Blocks in Org Mode](https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-C.html) This is the one I started
 with. Very useful, but doesn&rsquo;t have the information on reusing code from another block.
 
-I still would like to know how to output `icmp` to its&rsquo; own .h file, and use that in another block.
+I still would like to know how to output `icmp` to its&rsquo; own .h file, and use that in another block. Something to explore for next time.
 <a id="orgc596a48"></a>
 # What next?
 
-I&rsquo;ve got my environment set up, I&rsquo;m thinking of two follow up posts, one on implementing quicksort by the book, and then finally the iterative quicksort. Those should be a bit briefer and, at least the middle one, straightforward. As the book said, Tony Hoare found recursive quicksort much simpler than the iterative one.
+I'm not yet entirely happy with the rendering of my literate code, but, here too, baby steps. I&rsquo;ve got my environment set up, I&rsquo;m thinking of two follow up posts, one on implementing quicksort by the book, and then finally the iterative quicksort. Those should be a bit briefer and, at least the middle one, straightforward. As the book said, Tony Hoare found recursive quicksort much simpler than the iterative one.
 
 Why continue? It is fun, and quite often, in hindsight, I find I benefit in my work from doing small exercises, even though it sometimes escapes me in the moment.
 
