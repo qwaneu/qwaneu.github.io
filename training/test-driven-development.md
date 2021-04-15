@@ -1,8 +1,8 @@
 ---
-title:  TDD - Test Driven Development Hands-on
+title:  Hexagonal Architecture Hands-on
 layout: other
 summary: 'TDD in once sentence: write a failing test, make it pass, refactor and repeat - easier said than done. Take a deep dive in growing your test driven development skills.'
-tags: [agile engineering, extreme programming, XP, TDD, test driven development, refactoring, unit testing, scrum developer, CI/CD, continuous integration, continuous delivery]
+tags: [agile engineering, extreme programming, XP, TDD, test driven development,ports and adapters, hexagonal architecture, clean architecture, scrum developer, CI/CD, continuous integration, continuous delivery]
 ---
 
 In this in depth practical course, you will learn Test Driven Development and
@@ -43,12 +43,9 @@ The course consists of a mix of short presentations, live programming demonstrat
 * Training infrastructure (including laptops) will be taken care of
 * Basic programming skills required
 * This training is available as open enrolment and in-house.
-* Programming languages: Java, C#, Python, Ruby, JavaScript, TypeScript, Scala
-* We deliver this training in The Netherlands, the UK, and Belgium
+* Programming languages: Java, C#, C++, Python, Ruby, JavaScript, TypeScript, Scala
 
-## Register
-
-Please see [Test Driven Development in C# on Springest](https://www.springest.nl/qwan/mastering-unit-testing){:target="_blank"} or [Test Driven Development in Java on Springest](https://www.springest.nl/qwan/hands-on-test-driven-development-in-java){:target="_blank"} for course schedules and registration or [contact us directly](/#contact).
+{% include upcoming.md %}
 
 ## Our colleagues
 

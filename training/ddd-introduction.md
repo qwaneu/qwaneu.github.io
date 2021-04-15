@@ -48,4 +48,5 @@ recommended.
 
 * Duration: 1 day
 * No laptops required
-* This training is available as in-house training only.
+
+{% include upcoming.md %}

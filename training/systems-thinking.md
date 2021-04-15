@@ -41,6 +41,15 @@ After participating in this course you will:
 * understand how change happens in individuals and organizations, and what this
   means for steering a change process
 
+## Prerequisites
+
+This course is meant for managers, project leaders, IT customers, scrum masters, and coaches. We expect participants to have experience working with software projects, as a manager, customer, developer, or other stakeholder.
+
+## Topics
+
+- Introduction to systems thinking, with hands-on exercises using issues the participants bring in
+- Cynefin sensemaking framework
+
 ## Practical information
 
 * Duration: 1 day

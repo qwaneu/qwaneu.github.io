@@ -1,22 +1,17 @@
 ---
 title: Training Courses
-layout: accessibletwo
+layout: other-accessible
 ---
 
-{% include header_clean.html %}
+{% include upcoming.md %}
 
-<div class="wrap">
-  <article class="post-wrap">
-    <div class="post">
+Our training courses are intensive and hands-on. We offer both open enrolment courses and customized in-company courses, on-site and remote. We work with small groups up to 14 participants to ensure an optimal learning experience.
 
-<h1>{{page.title}}</h1>
+We deliver our courses in English, Dutch, German or French (together with our German and French partners).
+Programming exercises are available in: Java, C#, C++, Scala, Ruby, Python, JavaScript, and TypeScript.
 
-<p>Our training courses are intensive and hands-on. We work with small groups up to 14 participants to ensure an optimal learning experience.</p>
+If you have a need that is not covered by an existing course, [we are happy to make new ones for you](/contact). Our best courses got started by specific requests from our customers!
 
-<p>We deliver our courses and workshop in English, Dutch, German or French (together with our German and French partners).
-Programming exercises are available in different programming languages: Java, C#, Scala, Ruby, Python, JavaScript, and TypeScript.</p>
-
-<p>We offer both open enrolment courses and customized in-company courses, on-site or remote. If you have a need that is not covered by an existing course, we are happy to make new ones for you. Our best courses got started by specific requests from our customers!</p>
 
 <div class="wrap blog-grid" id="training-courses">
   <div class="courses-grid">
@@ -72,30 +67,6 @@ Programming exercises are available in different programming languages: Java, C#
 
     <article class="post-wrap">
       <div class="post">
-        <h2 class="entry-title"><a href="/training/user-story-mapping-dimensional-planning">User Story Mapping & Dimensional Planning</a></h2>
-        <div class="post-meta">
-        More effective product decisions
-        </div>
-        <p>Managing your product backlog as an ordered list of user stories is a challenge. Your customer wants it all, but it takes too long!
-        User Story Mapping and Dimensional Planning are two pragmatic product management techniques for realizing more value sooner.</p>
-        <a class="btn read-more" href="/training/user-story-mapping-dimensional-planning">Read More</a>
-      </div>
-    </article>
-
-    <article class="post-wrap">
-      <div class="post">
-        <h2 class="entry-title"><a href="/training/example-mapping">Example Mapping Workshop</a></h2>
-        <div class="post-meta">
-        Spice up your refinement sessions
-        </div>
-        <p>Do you have long, boring refinement sessions? Do you still run into surprises and lack of shared understanding when building the software? In this hands-on workshop, you will experience Example Mapping, a simple pen-and-paper technique to spice up your refinements.
-        </p>
-        <a class="btn read-more" href="/training/example-mapping">Read More</a>
-      </div>
-    </article>
-
-    <article class="post-wrap">
-      <div class="post">
         <h2 class="entry-title"><a href="/training/ddd-introduction">Domain Driven Design Introduction</a></h2>
         <div class="post-meta">
         Making sense of software complexity
@@ -117,14 +88,41 @@ Programming exercises are available in different programming languages: Java, C#
         <a class="btn read-more" href="/training/implementing-ddd">Read More</a>
       </div>
     </article>
+    <article class="post-wrap">
+      <div class="post">
+        <h2 class="entry-title"><a href="/training/user-story-mapping-dimensional-planning">Hexagonal Architecture Hands On</a></h2>
+        <div class="post-meta">
+        Malleable software
+        </div>
+        <p>Our software should be about the business we’re in, about the problem domain we are working in. It should speak domain language, not technicalities. Hexagonal Architecture puts the domain logic front and centre.</p>
+        <a class="btn read-more" href="/training/hexagonal-architecture">Read More</a>
+      </div>
+    </article>
+
+    <article class="post-wrap">
+      <div class="post">
+        <h2 class="entry-title"><a href="/training/user-story-mapping-dimensional-planning">User Story Mapping & Dimensional Planning</a></h2>
+        <div class="post-meta">
+        More effective product decisions
+        </div>
+        <p>Managing your product backlog as an ordered list of user stories is a challenge. Your customer wants it all, but it takes too long!
+        User Story Mapping and Dimensional Planning are two pragmatic product management techniques for realizing more value sooner.</p>
+        <a class="btn read-more" href="/training/user-story-mapping-dimensional-planning">Read More</a>
+      </div>
+    </article>
+
+    <article class="post-wrap">
+      <div class="post">
+        <h2 class="entry-title"><a href="/training/example-mapping">Example Mapping Workshop</a></h2>
+        <div class="post-meta">
+        Spice up your refinement sessions
+        </div>
+        <p>Do you have long, boring refinement sessions? Do you still run into surprises and lack of shared understanding when building the software? In this hands-on workshop, you will experience Example Mapping, a simple pen-and-paper technique to spice up your refinements.
+        </p>
+        <a class="btn read-more" href="/training/example-mapping">Read More</a>
+      </div>
+    </article>
   </div>
 </div>
 
 <img src="/images/agile_engineering_wordle.png" style="width: 100%"> 
-
-    </div>
-  </article>
-</div>
-
-{% include curvedown.html %}
-{% include footer.html %}
