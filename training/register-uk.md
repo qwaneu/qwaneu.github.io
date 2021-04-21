@@ -9,12 +9,9 @@ layout: other-accessible
 
 - All fees are exclusive of 21% Dutch VAT.
 - Course fees need to be paid before the course starts.
-- Cancellation fees:
-  - until 4 weeks before the course startsL no cancellation fee
-  - between 4 and 2 weeks before the course starts: 50% of the course fee
-  - within 2 weeks before the course starts: no refund
 - You can send someone else to replace you at no extra cost; please let us know who will replace you.
 - Your data will be processed by Living Software Ltd.
+- Our [General Terms & Conditions](terms-and-conditions-uk)
 
 We offer a 10% discount for 3 or more participants from the same company, please
 [contact us](https://www.qwan.eu/contact) for a quote
