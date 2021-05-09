@@ -20,4 +20,4 @@ Have you participated in one of our courses before? Or would you like to  the
 same course again as a refresher? We offer discounts for our alumni, please
 [contact us](https://www.qwan.eu/contact) for pricing.
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe1Q8nMsqb3SL_O1AS-UNjFMK6r54hREjWLV4yw8FsR3AXDcQ/viewform?embedded=true" width="840" height="1612" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>.
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe1Q8nMsqb3SL_O1AS-UNjFMK6r54hREjWLV4yw8FsR3AXDcQ/viewform?embedded=true" width="120%" height="1612" frameborder="0" marginheight="0" marginwidth="0" style="margin: 0 -38px 0 -38px;">Loading…</iframe>.
