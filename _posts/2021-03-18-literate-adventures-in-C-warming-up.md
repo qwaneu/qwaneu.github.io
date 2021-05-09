@@ -36,8 +36,7 @@ image: /attachments/blogposts/2021/tpop-book-cover.jpg
 
 I showed this to Marc and Rob and they thought it was fun. I&rsquo;m also sharing some of my failures, following a recent discussion on twitter that people only publish things when they gone well, or when they have been heavily edited. This may lead readers to believe that they could not possibly do such a thing.
 
-<a id="org46c8e62"></a>
-# Why on earth would you program in C?
+# <a id="org46c8e62"></a>Why on earth would you program in C?
 
 The &rsquo;logical&rsquo; reason is that `C` is still one of the best languages to maintain existing `C` programs in. Your house probably runs on a few million lines of `C` code (in your heating, your ovens, kitchen timers, smart meters, and for me every year since 2000 has been the year of linux on the desktop, and guess what the linux kernel is made of?. My editor may look lispy, but is also built on C). So learning a bit of C is good, even if it just to get over ones&rsquo; fear of the unknown.
 
@@ -45,13 +44,13 @@ The illogical reason is that programming in `C` is like leaving your comfy dwell
 
 If you told me 25 years ago I would say I would program C for relaxation, I might have disagreed. I had been taught program with pointers, but making a mistake often meant a blue screen, and a minutes long reboot of my computer. So I dabbled in C, and soon left for more comfortable environments. In a Unix (this post was written on MacOs and Linux), C&rsquo;s natural habitat, the experience is different: a segfault just means a message in my editors&rsquo; window and another quick try. Computers are now fast enough to compile a bit of `C` in an instant.
 
-<a id="orgf9c3736"></a>
-# The one thing I wished I had known when learning C
+
+# <a id="orgf9c3736"></a>The one thing I wished I had known when learning C
 
 Was *working in baby steps*. Admittedly, getting evenings full of blue screens and reboots was not very motivating. I figured this out a couple of years later, when I was working in a C++ codebase. The Solaris tooling had a debugger that would let me make some changes in an implementation (.cpp) file, and restart an execution from where it was. I couldn&rsquo;t believe it was not Smalltalk. I learnt working in baby steps, because the compile times in that project were long, and it took me a month of working like that to get them into a doable state (45 minutes down to 5 or so).
 
-<a id="org8e18193"></a>
-## How to do baby steps in C then?
+
+## <a id="org8e18193"></a>How to do baby steps in C then?
 
 I decided to not leave the comfort of my editor ([org-roam](https://www.orgroam.com) inside [Doom Emacs](https://github.com/hlissner/doom-emacs)), and do literate programming for a bit. This means I can write a bit of code, and write my thoughts about it right where I am. The warm up was easy, refactoring required learning a bit more about org-babel. I&rsquo;ve put the resources I found useful at the end of the post.
 
@@ -61,18 +60,14 @@ I&rsquo;ve used this setup before for emacs lisp, but not for C, so I wasn&rsquo
 
 Pressing ctrl-c, ctrl-c generates a `main()` function, builds it, and if successful, runs it. And puts the results in the text. So far so good. That was easy, and got me hooked into doing more of it.
 
-<a id="org9892b7e"></a>
-## What is this magic?
+## <a id="org9892b7e"></a>What is this magic?
 
 I&rsquo;m using [Doom Emacs](https://github.com/hlissner/doom-emacs), installing things like C compilers and wiring them up is relatively easy, as Doom doctor told me which bits I was missing.
 The  [C, C++, D Source Code Blocks in Org Mode](https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-C.html) documentation got me through the first couple of code blocks.
 
 This is a kind of magic, it also works on mac, and I don&rsquo;t even know which C compiler was used. Instead of typing commands, I can edit code live, and see the results instantly. Fast feedback is fun.
 
-
-<a id="org7e99251"></a>
-
-# My warm-up has warm-ups, exploring literate C programming
+# <a id="org7e99251"></a>My warm-up has warm-ups, exploring literate C programming
 
 I wanted to do an exercise around quicksort from the book, but first, how can I use variables and stuff in my code.
 
@@ -167,10 +162,7 @@ Our table has been turned into a two-dimensional array, with the rows first, and
 
 Rob later pointed out that a two-dimensional array in `C` is just a figment of your imagination. Nothing is stopping you from accessing it as a one dimensional array, or even a struct, if you feel so inclined.
 
-
-<a id="org3cf1d0b"></a>
-
-# Two steps forward, one step back
+# <a id="org3cf1d0b"></a>Two steps forward, one step back
 
 The previous was an iteration of many steps. I kept getting segfaults when
 trying to print the cell. So I was tempted to break out a debugger, since print
@@ -233,10 +225,7 @@ The code I pasted had `const char*` for the cell. We don&rsquo;t have char point
 
 Ok, so we know how to input, and output a table of numbers. We can use this as a kind of example based test for our QuickSort.
 
-
-<a id="org4cd927a"></a>
-
-# Now we can call the built-in qsort.
+# <a id="org4cd927a"></a>Now we can call the built-in qsort.
 
 So The Practice Of Programming has a QuickSort example, and asks the reader to convert it from recursive to iterative. In C. I managed to sketch out an iterative example on paper, but I know too little of allocation in C to do that in one go. A baby step would be to convert the recursive calls to pushes on our own stack, and iterate until the stack is empty. Starting off with pushing the initial interval on the stack.
 
@@ -299,10 +288,7 @@ So lets&rsquo; start with using `qsort` from the standard library. Ths took me a
 
 So, we can call a library function. C doesn&rsquo;t come with much out of the box, don&rsquo;t try finding data structures such as a stack in it. This was common for mainstream languages up until about Java. But we have `qsort`, so we can build the scaffolding we need for our own version of it.
 
-
-<a id="org2a0247c"></a>
-
-# Extract the comparator
+# <a id="org2a0247c"></a>Extract the comparator
 
 Extract out `icmp` in its&rsquo; own org-mode block, so I don&rsquo;t have to repeat it all the time:
 
@@ -326,10 +312,7 @@ Eventually, I got it working, after [Four browser tabs](#org43809ad). I almost g
 
 Cool, we have a function. Now we need to tell org-babel how to use it. `<<icmp>>` works, as long as we have the `:noweb yes` header in both the source and destination block.
 
-
-<a id="org943fe32"></a>
-
-# A horizontal table
+# <a id="org943fe32"></a>A horizontal table
 
 I sort of started almost writing a test there, at the top of main. Some sample data to kick off the sort. I didn&rsquo;t use org-mode for a table, because I got all rows, and didn&rsquo;t want to do array manipulation just to get some data.
 
@@ -399,10 +382,7 @@ Let&rsquo;s give this block a separate name, otherwise the RESULTS block will en
 
 And it works as expected, all nicely sorted :-).
 
-
-<a id="orge160085"></a>
-
-# Some of the blocks re-refactored by the QWAN ensemble
+# <a id="orge160085"></a>Some of the blocks re-refactored by the QWAN ensemble
 
 So this post isn&rsquo;t even going to make it to QuickSort by the book. I showed the above to Rob and Marc yesterday, and we had some more fun. Marc and I learnt C in trial by fire style, as part of our operating systems class in Uni. &rsquo;but we don&rsquo;t know C&rsquo;, &rsquo;You&rsquo;ll pick it up&rsquo;. Rob was actually taught C for a whole two weeks (not much, given the care one needs to use it safely. ).
 
@@ -444,9 +424,7 @@ The reason we have to pass the length of the array to `qsort` is probably that w
 Anwyay, having our int pointers makes it more obvious what is going on here. In C, usually pointers have the same size as integers. Qsort doesn&rsquo;t care if we sort pointers to structs, or integers, as long as it gets it&rsquo;s `icmp`. So we dereference our fake int pointer to an int `v1 = *p1`; and everyone is happy.
 
 
-<a id="orgc0d8c30"></a>
-
-# Extract the print code into a function
+# <a id="orgc0d8c30"></a>Extract the print code into a function
 
 We&rsquo;ll extract the printing code into its&rsquo; own `print_array` function, in its&rsquo; own
 block, it is getting a bit repetitive.
@@ -496,10 +474,7 @@ block, it is getting a bit repetitive.
 
 > Documenting my steps helped here already. I had forgotten how to include blocks like `<<icmp>>` and `<<print_array>>`. My notes above said I need :noweb yes.
 
-
-<a id="org43809ad"></a>
-
-# Four tabs for tangling code blocks in org-mode
+# <a id="org43809ad"></a>Four tabs for tangling code blocks in org-mode
 
 1.  [Noweb Reference Syntax (The Org Manual)](https://orgmode.org/manual/Noweb-Reference-Syntax.html#Noweb-Reference-Syntax) how to reuse code in multiple blocks.
 2.  [Working with Source Code (Org Mode Compact Guide)](https://orgmode.org/guide/Working-with-Source-Code.html) how to evaluate source code and using header arguments.
@@ -511,8 +486,8 @@ reference.
 with. Very useful, but doesn&rsquo;t have the information on reusing code from another block.
 
 I still would like to know how to output `icmp` to its&rsquo; own .h file, and use that in another block. Something to explore for next time.
-<a id="orgc596a48"></a>
-# What next?
+
+# <a id="orgc596a48"></a>What next?
 
 I'm not yet entirely happy with the rendering of my literate code, but, here too, baby steps. I&rsquo;ve got my environment set up, I&rsquo;m thinking of two follow up posts, one on implementing quicksort by the book, and then finally the iterative quicksort. Those should be a bit briefer and, at least the middle one, straightforward. As the book said, Tony Hoare found recursive quicksort much simpler than the iterative one.
 
@@ -525,4 +500,3 @@ Why continue? It is fun, and quite often, in hindsight, I find I benefit in my w
     <a href="/training/mastering-legacy-code">See the Mastering Legacy Code Course</a>
   </div></p>
 </aside>
-

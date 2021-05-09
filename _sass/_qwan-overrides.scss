@@ -102,9 +102,16 @@ em {
         font-weight: bold;
       }    
     }
+    h1 {
+      text-transform: none;  
+      font-size: 1.6em;
+      line-height: 1.2em;
+      margin-top: 1.1em;
+      margin-bottom: 0.6em;
+    }
     h2 {
       text-transform: none;
-      font-size: 1.5em;
+      font-size: 1.4em;
       line-height: 1.2em;
       margin-top: 1.1em;
       margin-bottom: 0.6em;
