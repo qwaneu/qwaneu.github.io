@@ -7,6 +7,8 @@ author: Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2020/house-scaffolding.jpg
 ---
 
+_Updated 25-05-2021 - added link to the original Test Builder pattern post by Nat Pryce_
+
 Imagine you grow a suite of automated tests that serve you well, but you are struggling to read through them. Quite a bit of repetition and boilerplate that obfuscates what is going on in individual tests. [Builder](https://en.wikipedia.org/wiki/Builder_pattern) is a pattern that lets our tests reveal their intent more succinctly, at the cost of making a small investment in creating a builder for our domain concept under test.
 
 We often use the [Builder pattern](https://en.wikipedia.org/wiki/Builder_pattern) for creating object instances in our automated tests. In our recent post on [A Hexagonal Vue.js front-end, by example](/2020/09/25/hexagonal-frontend-example.html), we showed some of our JavaScript test code that contained a `aValidNewSession` builder function. In this post we will elaborate a bit on the what & why.
@@ -274,6 +276,10 @@ them. The builder code is straightforward and we test them via the tests that us
 We like test data builders. It is a pattern where the benefits outweigh the small investment in builder code. They make tests more focused and readable, and provide a succinct and expressive way of describing your test setup.
 
 This pattern is widely applicable, but the specific form varies from programming language to programming language.
+
+## References
+
+The Test Data Builder pattern was originally described by Nat Pryce: [Test Data Builders: an alternative to the Object Mother pattern](http://natpryce.com/articles/000714.html).
 
 _Credits: Willem, thanks for dotting the i's in this post._
 
