@@ -11,3 +11,4 @@
 | [Workshop Hexagonal Architecture Hands On](/training/hexagonal-architecture) | 13 October 2021, 9:00-17:00 CEST | Remote | English | €495 - [register](/training/register) |
 | [Workshop Domain Driven Design](/training/ddd-introduction) | 20 October, 9:00-17:00 CEST | Remote | English | €495 - [register](/training/register) |
 | [Test Driven Development in Kotlin](/training/test-driven-development) | 25 & 27 October 2021, 9:00-17:00 CEST | Remote | English | €995 - [register](/training/register) |
+| [Test Driven Development in C++](/training/test-driven-development) | 1 & 3 November 2021, 9:00-17:00 CEST | Remote | English | €995 - [register](/training/register) |
