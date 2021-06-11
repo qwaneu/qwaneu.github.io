@@ -49,4 +49,6 @@ recommended.
 * Duration: 1 day
 * No laptops required
 
+[Register for this course](/training/register)
+
 {% include upcoming.md %}

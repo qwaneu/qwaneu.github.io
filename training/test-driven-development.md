@@ -43,7 +43,9 @@ The course consists of a mix of short presentations, live programming demonstrat
 * Training infrastructure (including laptops) will be taken care of
 * Basic programming skills required
 * This training is available as open enrolment and in-house.
-* Programming languages: Java, C#, C++, Python, Ruby, JavaScript, TypeScript, Scala
+* Programming languages: Java, C#, C++, Python, Ruby, JavaScript, TypeScript, Scala, Kotlin
+
+[Register for this course](/training/register)
 
 {% include upcoming.md %}
 

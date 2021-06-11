@@ -32,4 +32,6 @@ Architects, software developers, CI/CD engineers, anyone involved in developing 
 * This training is available as open enrolment and in-house.
 * Programming languages: Java, C#, C++, Python
 
+[Register for this course](/training/register)
+
 {% include upcoming.md %}

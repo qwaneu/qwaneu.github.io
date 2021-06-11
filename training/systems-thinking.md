@@ -56,6 +56,6 @@ This course is meant for managers, project leaders, IT customers, scrum masters,
 * No laptops required
 * This training is available as open enrolment and in-house.
 
-## Register
+[Register for this course](/training/register)
 
-Please refer to [Systems Thinking on Springest](https://www.springest.nl/qwan/systems-thinking-making-sense-of-it){:target="_blank"} for dates and registration or [contact us directly](/#contact).
+{% include upcoming.md %}
