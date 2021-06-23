@@ -90,7 +90,7 @@ If you have a need that is not covered by an existing course, [we are happy to m
     </article>
     <article class="post-wrap">
       <div class="post">
-        <h2 class="entry-title"><a href="/training/user-story-mapping-dimensional-planning">Hexagonal Architecture Hands On</a></h2>
+        <h2 class="entry-title"><a href="/training/hexagonal-architecture">Hexagonal Architecture Hands On</a></h2>
         <div class="post-meta">
         Malleable software
         </div>
