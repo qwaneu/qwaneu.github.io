@@ -5,22 +5,20 @@ tags:
   - test driven development
   - feedback
   - eXtreme Programming
-author: Marc Evers
+author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: 
 ---
 
-We are starting a series of posts on **heuristics and guidelines for unit tests
+This is the first in a series of posts on **heuristics and guidelines for unit tests
 and test driven development**. 
 
-Before we dive into heuristics, let's first do a quick recap of test driven
-development (TDD). We notices that more and more people have heard of it, but
-also that few know what TDD actually is. There's lots of inaccuracies and
-incorrect things being said.
+Before we dive into heuristics, let's first do a quick recap of Test Driven
+Development (TDD). We notice that more and more people have heard of it, but
+also that few know what TDD actually is.
 
 ## The 5-minute-to-the-coffee-machine explanation of TDD
 
-The basics of TDD are simple to explain, like you can explain Scrum in the
-elevator, we can explain TDD while walking to the coffee machine. The Test
+We can explain TDD while walking to the coffee machine. The Test
 Driven Developent cycle consists of 4 steps:
 
 ![TDD cycle](/attachments/blogposts/2020/tdd-cycle.png)
@@ -29,7 +27,9 @@ Driven Developent cycle consists of 4 steps:
 2. see it fail
 3. make it pass
 4. refactor
-   
+ 
+Practicing TDD is _slightly_ more difficult than explaining it, and takes a bit
+of deliberate practice.
 
 ### Write a test
 
@@ -40,7 +40,7 @@ details of the interface we design and the behaviour we expect.
 ### See it fail
 
 We run the test and watch the new test fail. As we did not write any code yet,
-we expect missing definitions & missing behaviour. 
+we expect missing definitions and missing behaviour. 
 
 Only the new test should fail. Are there any other failures? Fix them first. We
 also check if the feedback from the failure is helpful.
@@ -61,7 +61,10 @@ to write
 
 ...wait a minute with the party, there is a fourth step left: refactor. 
 
-Now that our tests are all green, we can safely clean up code, remove duplication, improve naming This is called [refactoring](https://refactoring.com) - small, well-defined steps that improve the design of the code, without changing its behaviour.
+Now that our tests are all green, we can safely clean up code, remove
+duplication, improve naming This is called
+[refactoring](https://refactoring.com) - small, well-defined steps that improve
+the design of the code, without changing its behaviour.
 
 **Now we're done, let's party!**
 
@@ -86,7 +89,7 @@ work. It is a set of habits that help to keep on taking small steps towards our
 goals
 
 It reminds us that we continously take care of the code and refactor while
-everything is still fresh in our heads. 
+everything is still fresh in our minds. 
 
 It forces us to think about the next step we are going to take, about how things
 should work; it forces us to express our intent precisely in code. Jim Shore
@@ -94,7 +97,6 @@ call this a "series of validated hypothesis" - a test is a hypothesis, the code
 (in)validates it.
 
 > "I'm not a great programmer; I'm just a good programmer with great habits." -- Kent Beck
- 
 
 ## Practice
 
