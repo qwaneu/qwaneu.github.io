@@ -161,16 +161,6 @@ our design and it provide very early feedback about the brilliant solution in
 our head (which often turns out to be less brilliant than we thought). In the
 end it makes us go faster, because our code just works. With each green test, we
 are a tiny step closer to our goal.
-
-## Some more quotes
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Someone is wrong about TDD on the internet, claiming it to be &quot;backwards&quot;.<br><br>It&#39;s actually just very very deliberately forward, but in tiny steps.<br><br>TDD done well might best be described as:<br>Clarify Intent Before Acting.</p>&mdash; Tobbe Gyllebring (@drunkcod) <a href="https://twitter.com/drunkcod/status/1397152190347816972?ref_src=twsrc%5Etfw">May 25, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I think it’s fashionable to hate on unit testing because, like anything in software, many are bad at it and only do it via cargo culting. Good TDD promotes loose coupling and is a productivity hack. Other testing is needed, too. “Simplest test that could possibly fail.”</p>&mdash; Jon Stewart (@codeslack) <a href="https://twitter.com/codeslack/status/1392312280570793988?ref_src=twsrc%5Etfw">May 12, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">In unit testing, what&#39;s a unit? Is it a method? Is it a class? Is it a module? No. Let&#39;s clarify this once and for all.<br><br>In unit testing, a unit isn&#39;t an element of structure. In unit testing, a unit is an individually observable element of BEHAVIOR.<a href="https://twitter.com/hashtag/TDD?src=hash&amp;ref_src=twsrc%5Etfw">#TDD</a> <a href="https://twitter.com/hashtag/BDD?src=hash&amp;ref_src=twsrc%5Etfw">#BDD</a> <a href="https://twitter.com/hashtag/ATDD?src=hash&amp;ref_src=twsrc%5Etfw">#ATDD</a> <a href="https://twitter.com/hashtag/UnitTesting?src=hash&amp;ref_src=twsrc%5Etfw">#UnitTesting</a></p>&mdash; Christian Hujer #BLM 🏴‍☠️🖦🧙🏻‍♂️🕊💉 (@christianhujer) <a href="https://twitter.com/christianhujer/status/1391301843683139585?ref_src=twsrc%5Etfw">May 9, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-
-
 ## I want to learn more!
 
 Go to the source. Kent Beck's book [Test Driven Development, By
@@ -185,5 +175,7 @@ but also acceptance testing.
 Jim Shore did a series of [Lunch & Learn sessions on TDD](https://www.jamesshore.com/v2/projects/lunch-and-learn) last year, which is a series of 21 videos where he shows all aspects of TDD - also highly recommended!
 
 GeePaw Hill has written a lot of thoughtful posts on TDD: https://www.geepawhill.org/category/tdd/. See for instance his video on [Five Underplayed Premises Of TDD](https://www.geepawhill.org/2018/01/18/five-underplayed-premises-of-tdd-2/)
+
+Emily Bache recently published an article on InfoQ, on [How to Spread Technical Practices Like TDD in an Organization](https://www.infoq.com/articles/spread-technical-practices-organization/). She has also [collected a number of katas - short coding exercises to practice TDD](https://www.sammancoaching.org/kata_descriptions/).
 
 Or join one of our [Test Driven Development courses](/training/test-driven-development). Our courses focus on deliberate practice and learning by doing.

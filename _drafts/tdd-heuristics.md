@@ -1,13 +1,15 @@
 # overzicht & werklijst van heuristics/guidelines
 
-* Think about design in the test
-* Wishful thinking
-* start with assert/expectation
-* 0, 1, N
-* Act stupid in implementation
-* Faking & Cheating
-* Triangulation
+## TDD
+- Think about design in the test
+- Wishful thinking
+- start with assert/expectation
+- 0, 1, N
+- Act stupid in implementation
+- Faking & Cheating
+- Triangulation
 
+## Unit testing
 - Test name describes the action and the expected result
 - One (conceptual) assert per test
 - Test cases follow common setup
