@@ -66,7 +66,7 @@ duplication, improve naming This is called
 [refactoring](https://refactoring.com) - small, well-defined steps that improve
 the design of the code, without changing its behaviour.
 
-**Now we're done, let's party!**
+**🎉 Now we're done, let's party! 🎉**
 
 ## That's it?
 
@@ -97,6 +97,26 @@ call this a "series of validated hypothesis" - a test is a hypothesis, the code
 (in)validates it.
 
 > "I'm not a great programmer; I'm just a good programmer with great habits." -- Kent Beck
+
+## Some effects
+
+In [TDD as Change
+Stragey](https://www.geepawhill.org/2021/02/02/tdd-as-change-strategy/), GeePaw
+Hill states "Microtest TDD is an effective change strategy because it
+dramatically improves our performance at comprehension, confirmation, and
+regression detection, all critical factors in handling change quickly & safely."
+
+When doing TDD we find ourselves hardly using the debugger any more. The tests
+help us to pinpoint issues quite well. And we tend to start with writing a test
+first to reproduce a bug.
+
+Working test driven does feel slow sometimes; sometimes we have a solution in
+our head, and writing test first, step by step feels like driving with your foot
+on the brake. We still find that working in this way forces us to think about
+our design and it provide very early feedback about the brilliant solution in
+our head (which often turns out to be less brilliant than we thought). In the
+end it makes us go faster, because our code just works. With each green test, we
+are a tiny step closer to our goal.
 
 ## Practice
 
@@ -138,29 +158,38 @@ saw cut easier though the wood, prevent fatigue, and makes for cleaner cuts as w
 heuristics that make the process smoother and the end result better."_
 
 Like cutting a plank, TDD is deceptively simple to explain but hard to do well.
+
+## Heuristics and guidelines
+
 Over the years of training and mentoring people we have collected quite a few
 heuristics and guidelines that help us to write, _and explain how to write_,
-tests that are clean, maintainable, and helpful. We will be publishing a series
-of these heuristics and guidelines, so keep an eye on this blog!
-## Effects
+tests that are clean, maintainable, and helpful. We want to share these, so we will publish a series of heuristics and guidelines the next few weeks:
 
-In [TDD as Change
-Stragey](https://www.geepawhill.org/2021/02/02/tdd-as-change-strategy/) states
-"Microtest TDD is an effective change strategy because it dramatically improves
-our performance at comprehension, confirmation, and regression detection, all
-critical factors in handling change quickly & safely."
+**Guidelines & heuristics for TDD**
+- Think about design in the test
+- Wishful thinking
+- Start with the expectation
+- 0, 1, N
+- Act stupid in implementation
+- Faking & Cheating
+- Triangulation
 
-When doing TDD we find ourselves hardly using the debugger any more. The tests
-help us to pinpoint issues quite well. And we tend to start with writing a test
-first to reproduce a bug.
+**Guidelines & heuristics for (unit) tests**
+- Test name describes the action and the expected result
+- One (conceptual) assert per test
+- Test cases follow common setup
+- Take as much care for test code as you do for production code
+- Tests are independent - always start from a clean slate
+- Given-When-Then (or Arrange-Act-Assert)
+- No more than one failing test at a time
+- Fix one failing test at a time
+- What is a unit test?
+- Rules for simple design
+- Mirroring
+- Focus on relevant data
 
-Working test driven does feel slow sometimes; sometimes we have a solution in
-our head, and writing test first, step by step feels like driving with your foot
-on the brake. We still find that working in this way forces us to think about
-our design and it provide very early feedback about the brilliant solution in
-our head (which often turns out to be less brilliant than we thought). In the
-end it makes us go faster, because our code just works. With each green test, we
-are a tiny step closer to our goal.
+So keep an eye on this blog!
+
 ## I want to learn more!
 
 Go to the source. Kent Beck's book [Test Driven Development, By
@@ -174,7 +203,7 @@ but also acceptance testing.
 
 Jim Shore did a series of [Lunch & Learn sessions on TDD](https://www.jamesshore.com/v2/projects/lunch-and-learn) last year, which is a series of 21 videos where he shows all aspects of TDD - also highly recommended!
 
-GeePaw Hill has written a lot of thoughtful posts on TDD: https://www.geepawhill.org/category/tdd/. See for instance his video on [Five Underplayed Premises Of TDD](https://www.geepawhill.org/2018/01/18/five-underplayed-premises-of-tdd-2/)
+GeePaw Hill has written a lot of thoughtful posts on TDD: https://www.geepawhill.org/category/tdd/. See for instance his video on [Five Underplayed <Premises Of TDD](https://www.geepawhill.org/2018/01/18/five-underplayed-premises-of-tdd-2/)
 
 Emily Bache recently published an article on InfoQ, on [How to Spread Technical Practices Like TDD in an Organization](https://www.infoq.com/articles/spread-technical-practices-organization/). She has also [collected a number of katas - short coding exercises to practice TDD](https://www.sammancoaching.org/kata_descriptions/).
 
