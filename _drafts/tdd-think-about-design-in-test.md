@@ -11,7 +11,7 @@ image: /attachments/blogposts/2021/tdd/Think-about-design.png
 
 When writing a test, we don't just think about how to formulate the test. We think about design - the design of the code-under-test and the context in which it fits. Writing a test is an act of design. 
 
-Looking at the TDD cycle, we can ask ourselves: where is the design step?
+Looking at the [TDD cycle](/2021/06/24/tdd-still-relevant-in-2021.html), we can ask ourselves: where is the design step?
 
 ![tdd cycle: test - fail - pass - refactor](/attachments/blogposts/2021/tdd/tdd-cycle-small.png)
 {: class="post-image" }
@@ -23,6 +23,8 @@ before the production code means you're specifying the API of the
 code-under-test and making this concrete in code. The test expresses an example
 of both the syntax (method names, parameters) and semantics (what is the
 behaviour, what do the methods do).
+
+This is a post in our [series on Test Driven Development, Heuristics & Guidelines](/blog-by-tag#tag-test-driven-development).
 
 ## Example 
 
