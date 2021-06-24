@@ -26,7 +26,8 @@ Overzicht & werklijst van heuristics/guidelines
 
 **Other**
 - Rules for simple design
-
+- Practice, Practice, Practice
+- Sometimes we thank a test for its' service and move on
 
 Principles?
 - YAGNI
