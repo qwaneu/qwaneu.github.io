@@ -12,10 +12,12 @@ image: /attachments/blogposts/2021/tdd/wishful-2.png
 Write the test based on how you wish the object under test could be
 used. Then make it work. Prevent letting you be guided by constraints
 and implementation details only...nothing is holding you back! 
-Just write it as you'd wish the production code to be...
+Just write it as you'd wish it to be...
 
 ![](/attachments/blogposts/2021/tdd/tdd-cycle-small.png)
 {: class="post-image" }
+
+The [Growing Object Oriented Software book](http://www.growing-object-oriented-software.com/) calls this "Write the Test That You'd Want to Read".
 
 By writing test scenarios like this, we can already get feedback about our 
 design ideas without having to implement them first. This enables us to 
