@@ -2,7 +2,8 @@
 layout: post
 title: Test Data Builders
 tags:
-  - design, test driven development
+  - design
+  - test driven development
 author: Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2020/house-scaffolding.jpg
 ---
