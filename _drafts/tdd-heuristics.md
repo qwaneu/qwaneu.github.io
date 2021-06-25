@@ -21,13 +21,14 @@ Overzicht & werklijst van heuristics/guidelines
 - No more than one failing test at a time
 - Fix one failing test at a time
 - What is a unit test?
-- Mirroring
-- Focus on relevant data
+- (new) Mirroring
+- (new) Focus on relevant data
 
 **Other**
 - Rules for simple design
 - Practice, Practice, Practice
 - Sometimes we thank a test for its' service and move on
+- Test behaviour rather that state
 
 Principles?
 - YAGNI
