@@ -6,7 +6,7 @@ tags:
   - feedback
   - eXtreme Programming
 author: Marc Evers, Willem van den Ende, Rob Westgeest
-image: /attachments/blogposts/2021/tdd/Think-about-design.png
+image: /attachments/blogposts/2021/tdd/start-at-expectation.jpg
 ---
 
 Write the last part of your test first: start with the assert or the expectation.
@@ -14,6 +14,9 @@ Write the last part of your test first: start with the assert or the expectation
 This may feel strange, as you may be inclined to write your test from top to
 bottom, from set-up, through invocation of production code, to expectation. This
 may feel the wrong way around.
+
+![start with the expectation, person holding a finish flag](/attachments/blogposts/2021/tdd/start-at-expectation.jpg)
+{: class="post-image post-image-50" }
 
 ## Like writing a report, when we were in school
 
@@ -31,8 +34,6 @@ behaviour and interfaces right from the beginning.
 By starting with the expectation, we focus on the test outcomes and work
 backward from there. Once the expectation is clear, we write the minimally
 required setup and code to get to our outcome.
-
-![expect1st.png](expect1st.png){width=180px}
 
 It is ok to have it feel wrong and awkward. Starting with an expectation, 
 you inject a little deliberate practice in your day to day work. 

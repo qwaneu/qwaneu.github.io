@@ -2,12 +2,12 @@ Overzicht & werklijst van heuristics/guidelines
 
 
 **Guidelines & heuristics for TDD**
-- Think about design in the test
-- Wishful thinking
-- Start with the expectation
-- 0, 1, N
-- Act stupid in implementation
-- Faking & Cheating
+> Think about design in the test
+> Wishful thinking
+> Start with the expectation
+> 0, 1, N
+> Act stupid in implementation
+> Faking & Cheating
 - Triangulation
 - Make the change easy, then make the change (refactor after and before)
 
