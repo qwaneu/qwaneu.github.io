@@ -72,7 +72,7 @@ The Test step of the TDD cycle is a step to think about design. This cuts both
 ways: it benefits both the design of the production code and the readability of
 the test.
 
-The Refactor step is also a great place to think about design. The rush to produce shiny new code, and the anxiety of 'will this work' has waned, now we can calmly consider if this is any good, and how well it resolves the forces for our design. We will delve in to this later.
+The Refactor step is also a great place to think about design. The rush to produce shiny new code, and the anxiety of 'will this work' has waned, now we can calmly consider if this code is any good, and how well it resolves the forces for our design. We might delve into this later.
 
 ## Conclusion
 
