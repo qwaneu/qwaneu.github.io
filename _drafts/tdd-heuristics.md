@@ -28,7 +28,7 @@ Overzicht & werklijst van heuristics/guidelines
 - Rules for simple design
 - Practice, Practice, Practice
 - Sometimes we thank a test for its' service and move on
-- Test behaviour rather that state
+- Test behaviour rather than state
 
 Principles?
 - YAGNI
