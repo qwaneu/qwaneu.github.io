@@ -61,17 +61,18 @@ As code is unambiguous, you need to be precise in how the code-under-test is goi
 ## Early, fast feedback
 
 By expressing your design decisions precisely in code, your test will already
-provide feedback about these decisions. It will give you feedback on your design
-decisions, feedback about names, parameters, results, errors, call semantics,
-etc. 
+provide feedback about these decisions: .e.g. 
+names, parameters, results, errors, call semantics, data strucure, interfaces and composition (how the parts fit together).
 
-So take your time to think your test through and to observe the test code once
+So take your time to think your test through. Then observe the test code once
 written. If you don't like what you see, change is still cheap: revisit your
 decisions, rewrite the test.
 
 The Test step of the TDD cycle is a step to think about design. This cuts both
 ways: it benefits both the design of the production code and the readability of
 the test.
+
+The Refactor step is also a great place to think about design. The rush to produce shiny new code, and the anxiety of 'will this work' has waned, now we can calmly consider if this is any good, and how well it resolves the forces for our design. We will delve in to this later.
 
 ## Conclusion
 
