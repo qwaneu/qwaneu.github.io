@@ -10,8 +10,8 @@ image: /attachments/blogposts/2021/tdd/wishful-2.png
 ---
 
 Write the test based on how you wish the object under test could be
-used. Then make it work. Prevent letting you be guided by constraints
-and implementation details only...nothing is holding you back! 
+used. Then make it work. Don't be guided by constraints
+and implementation details...nothing is holding you back! 
 Just write it as you'd wish it to be...
 
 ![](/attachments/blogposts/2021/tdd/tdd-cycle-small.png)
@@ -22,14 +22,14 @@ The [Growing Object Oriented Software book](http://www.growing-object-oriented-s
 By writing test scenarios like this, we can already get feedback about our 
 design ideas without having to implement them first. This enables us to 
 steer the design just in time, based on concrete examples in code. It is a bit 
-like sketching an interaction diagram on the whiteboard, but you are expressing 
+like sketching an [interaction diagram](https://en.wikipedia.org/wiki/Unified_Modeling_Language#Interaction_diagrams) on the whiteboard, but you are expressing 
 it precisely in code.
 
 ![Wishful thinking](/attachments/blogposts/2021/tdd/wishful-2.png)
 {: class="post-image" }
 
 Actually, [thinking about design in test](@@todo) is usually an act of wishful
-thinking, because you're expressing a piece of design in your test that is about
+thinking, because you are expressing a piece of design in your test that is about
 to come to life. 
 
 ## Wishful thinking in practice
@@ -50,3 +50,5 @@ fast way to get feedback.
 The practice of wishful thinking has been around for a while. As far as we know,
 it comes from: _Abelson, Sussman & Sussman, [Structure and Interpretation of
 Computer Programs](https://mitpress.mit.edu/sites/default/files/sicp/index.html)
+
+We use [Interaction diagrams](https://en.wikipedia.org/wiki/Unified_Modeling_Language#Interaction_diagrams) sparingly. If we do use them while writing tests we find the [sequence diagram](https://en.wikipedia.org/wiki/Sequence_diagram) on a napkin or whiteboard useful. Especially with potentially complicated interactions or mock objects.
