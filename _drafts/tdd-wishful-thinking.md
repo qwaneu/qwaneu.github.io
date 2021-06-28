@@ -14,7 +14,7 @@ used. Then make it work. Don't be guided by constraints
 and implementation details...nothing is holding you back! 
 Just write it as you'd wish it to be...
 
-![](/attachments/blogposts/2021/tdd/tdd-cycle-small.png)
+![@@todo: text](/attachments/blogposts/2021/tdd/tdd-cycle-small.png)
 {: class="post-image" }
 
 The [Growing Object Oriented Software book](http://www.growing-object-oriented-software.com/) calls this "Write the Test That You'd Want to Read".
@@ -31,6 +31,14 @@ it precisely in code.
 Actually, [thinking about design in test](@@todo) is usually an act of wishful
 thinking, because you are expressing a piece of design in your test that is about
 to come to life. 
+
+Jim Shore: 'Programming by Intention': 
+1. call the functions you wish you had
+2. comment it out
+3. implement the missing functions
+4. test, uncomment, fix up
+
+In his [video series sabout Test Driven Development](https://www.jamesshore.com/v2/projects/lunch-and-learn)
 
 ## Wishful thinking in practice
 
