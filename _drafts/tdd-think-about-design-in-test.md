@@ -11,9 +11,12 @@ image: /attachments/blogposts/2021/tdd/Think-about-design.png
 
 When writing a test, we don't just think about how to formulate the test. We
 think about **design** - the design of the code-under-test and the context in
-which it fits. Writing a test is an act of design. 
+which it fits. Writing a test is an act of design.
 
-Looking at the [TDD cycle](/2021/06/24/tdd-still-relevant-in-2021.html), we can ask ourselves: where is the design step?
+## Where is design in Test Driven Development?
+
+Looking at the [TDD cycle](/2021/06/24/tdd-still-relevant-in-2021.html), we can
+ask ourselves: where is the design step?
 
 ![tdd cycle: test - fail - pass - refactor](/attachments/blogposts/2021/tdd/tdd-cycle-small.png)
 {: class="post-image" }
@@ -36,6 +39,14 @@ machine model. One of the tests that have to do with paying for drinks is:
 
 ```python
 # Using Python & pytest
+class VendingMachine:
+  def configure(self, choice, can price):
+    ...
+  def insert(self, amount):
+    ...
+  def deliver(self, choice):
+    ...
+
 def test_delivers_when_paid_enough():
   machine = VendingMachine()                      # 1
   machine.configure(Choice.Cola, Can.Coke, 2)     # 2
@@ -46,11 +57,18 @@ def test_delivers_when_paid_enough():
 
 We create a VendingMachine object (1). We configure its choices (buttons)
 through a *configure* function, and we decided to pass the price as a third
-parameter here (2). We also decided to represent the price by integers, a
-decision we will probably regret sooner rather than later. It is unclear
+parameter here (2). We also decided to represent the price by integers,
+something we will probably get to regret sooner rather than later. It is unclear
 whether it represents cents, euros, dollars, tokens...
 
-We also decided that to get a priced drink, we first need to insert money (3)
+> Aside: we rarely see course participants introduce a Money concept at this
+> point, or at all. Many of us remain blissfully unaware of how complicated
+> Money can be to represent properly. Quite often we even see [floating point
+> numbers used to represent
+> money](https://spin.atomicobject.com/2014/08/14/currency-rounding-errors/).
+> Ignorance is bliss. Until it bites you.
+
+We decided that to get a priced drink, we first need to insert money (3)
 and then choose a drink (4).
 
 Code is unambiguous, we need to be precise in how the code-under-test is going
@@ -98,14 +116,23 @@ tests, we are happy. We won't settle for anything less.
 
 ## Reading
 
-[Little things add up](http://wirfs-brock.com/blog/2005/09/05/little-things-add-up/), by Rebecca Wirfs-Brock:
-
 > That is why test-driven development is a big win. Writing tests first forces
 > you to focus on thinking about the interface before you design and code it.
 > Making those tests work becomes a relentless way of getting observable
-> behavior to work rather than letting crufty untested code pile up.
+> behavior to work rather than letting crufty untested code pile up.  
+> -- [Little things add up](http://wirfs-brock.com/blog/2005/09/05/little-things-add-up/), Rebecca Wirfs-Brock
 
 - Kent Beck, [Test Driven Development, By
   Example](https://www.oreilly.com/library/view/test-driven-development/0321146530/) (2002)
 - Steve Freeman and Nat Pryce, [Growing Object Oriented Software, Guided
   by Tests](http://www.growing-object-oriented-software.com/) (2008)
+
+"Think about design in test" is a heuristic, not a hard rule. We haven't defined heuristics yet. Oops. In the meantime, have a read through [Growing Your Personal Design Heuristics Toolkit](http://wirfs-brock.com/blog/2019/03/20/growing-your-personal-design-heuristics/) by Rebecca Wirfs-Brock if you'd like to get a grasp on what a heuristic is, and what heuristics could do for you (especially your own).
+
+<aside>
+  <p>If you want to show us how to write proper tests with money, why not join us for one of our Test Driven Development courses, which focus on deliberate practice and learning by doing.
+  </p>
+  <p><div>
+    <a href="/training/test-driven-development">Find out more</a>
+  </div></p>
+</aside>

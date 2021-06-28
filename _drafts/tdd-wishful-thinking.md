@@ -60,3 +60,5 @@ it comes from: _Abelson, Sussman & Sussman, [Structure and Interpretation of
 Computer Programs](https://mitpress.mit.edu/sites/default/files/sicp/index.html)
 
 We use [Interaction diagrams](https://en.wikipedia.org/wiki/Unified_Modeling_Language#Interaction_diagrams) sparingly. If we do use them while writing tests we find the [sequence diagram](https://en.wikipedia.org/wiki/Sequence_diagram) on a napkin or whiteboard useful. Especially with potentially complicated interactions or mock objects.
+
+_This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
