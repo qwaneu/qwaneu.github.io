@@ -11,6 +11,9 @@ Overzicht & werklijst van heuristics/guidelines
 - Triangulation
 - Make the change easy, then make the change (refactor after and before)
 
+- What is a heuristic
+ - http://wirfs-brock.com/blog/2019/03/20/growing-your-personal-design-heuristics/
+
 **Guidelines & heuristics for (unit) tests**
 - Test name describes the action and the expected result
 - One (conceptual) assert per test
