@@ -38,29 +38,49 @@ is about to come to life.
 Let's return to the drinks vending machine test from the previous post. We want
 the vending machine to deliver a priced drink when we pay enough. 
 
+We wish for the machine to have a bin to catch drinks. We decide to inject the bin as a structural dependency. We can always change our minds and code later.
+
 ```python
-# Using Python & pytest
-def test_delivers_when_paid_enough():
   bin = Bin()
-  machine = VendingMachine(bin=bin) # 1
-  machine.configure_choice(Choice.Cola, Can.Coke).with_price(Money.euro(2)) # 2
+  machine = VendingMachine(bin=bin)
+```
+
+To configure choices and prices, we fancy an internal DSL ([Domain Specific
+Language](https://martinfowler.com/dsl.html)). In plain language: we will chain
+function calls. This time we want to do money properly, with a Money class and a
+`euro` creation function.
+
+```python
+  machine.configure(Choice.Cola).delivering(Can.Coke).with_price(Money.euro(2))
+```
+
+Calling `deliver` on the machine drops a drink (hopefully) in the bin, which we
+empty using `retrieve`.
+
+```python
   machine.insert(Money.euro(2))
   machine.deliver(Choice.Cola)
-  bin_contents = bin.retrieve() # 3
+  bin_contents = bin.retrieve()
+```
+
+Putting it all together:
+
+```python
+def test_delivers_when_paid_enough():
+  bin = Bin()
+  machine = VendingMachine(bin=bin)
+  machine.configure(Choice.Cola).delivering(Can.Coke).with_price(Money.euro(2))
+  machine.insert(Money.euro(2))
+  machine.deliver(Choice.Cola)
+  bin_contents = bin.retrieve()
   assert_that(bin_contents, equal_to(Can.Coke))
 ```
 
-We wish for the machine to have a bin as a structural dependency (1). To
-configure choices and prices, we would like to have an internal DSL ([domain
-specific language](https://martinfowler.com/dsl.html)), chaining the
-`with_price` call to the `configure_choice` call. This time we want to do money
-properly, for instance with a `euro` creation function on a Money class (2).
-Calling `deliver` on the machine drops a drink (hopefully) in the bin, which we
-empty using `retrieve` (3).
+So far the code is only a wish in the test, it doesn't exist yet. But it already
+gives us feedback about this approach. If we don't like what we see, change is
+still very cheap.
 
-The code is just a wish in the test, it doesn't exist yet. But it already gives
-us feedback about this approach. If we don't like what we see, change is still
-very cheap.
+## Wish for more
 
 We also use wishful thinking for instance when we kind of get stuck
 writing a test because the new idea does not readily fit the currently existing
@@ -68,17 +88,17 @@ code. By wishful thinking, we don't let ourselves be constrained by the current
 solution (for now), but just express how we imagine it to be. Once we have
 expressed that, we can evaluate and see what it means for the existing code.
 
-If we get stuck in a design discussion or need to be more precise than just
+When we get stuck in a design discussion or need to be more precise than just
 drawing the lines and boxes on the whiteboard, we can do wishful thinking to
-express our train of though and share with our colleagues. It is a cheap and
-fast way to get feedback.
+express our train of though and share with our colleagues. It is a fast way to get feedback.
 
-BDD with Cucumber is another way to do wishful thinking - write scenarios in natural language, and postpone considerations about realising that wish in code (or otherwise).
+BDD with Cucumber is another way to do wishful thinking - write scenarios in
+natural language, and postpone considerations about realising that wish in code
+(or otherwise). @@Link naar Formulation?
 
 ## Further reading
 
-The practice of wishful thinking has been around for a while. As far as we know,
-it comes from: _Abelson, Sussman & Sussman_, [Structure and Interpretation of
+The practice of wishful thinking has been around for a while. An early instance can be found in: _Abelson, Sussman & Sussman_, [Structure and Interpretation of
 Computer Programs](https://mitpress.mit.edu/sites/default/files/sicp/index.html)
 
 We use [Interaction diagrams](https://en.wikipedia.org/wiki/Unified_Modeling_Language#Interaction_diagrams) sparingly. If we do use them while writing tests we find the [sequence diagram](https://en.wikipedia.org/wiki/Sequence_diagram) on a napkin or whiteboard useful. Especially with potentially complicated interactions or mock objects.
