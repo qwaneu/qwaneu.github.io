@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "TDD Heuristics: Wishful thinking"
+title: "TDD Heuristics: Wishful Thinking"
 tags:
   - test driven development
   - feedback
@@ -9,7 +9,7 @@ author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: /attachments/blogposts/2021/tdd/wishful-2.png
 ---
 
-Write the test based on how you wish the object under test could be used. Then
+Write a test based on how you wish the object under test could be used. Then
 make it work. Don't let yourself be limited by constraints and implementation
 details... nothing is holding you back! Just write it as you'd wish it to be.
 
