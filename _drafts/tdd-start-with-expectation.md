@@ -41,11 +41,12 @@ you inject a little deliberate practice in your day to day work.
 
 ## Example
 
-Let's look at an example from our [Online Agile Fluency Diagnostic
-application](). This application support a facilitator in running a workshop
-with a development team. This is represented in the code by a concept
-_DiagnosticSession_. We would like to enable co-facilitation, so we want to add
-a sharing feature to the DiagnosticSession class. 
+Let's look at an example from our [Online Agile Fluency® Diagnostic
+application](/2020/09/25/hexagonal-frontend-example.html). This application
+support a facilitator in running a workshop with a development team. This is
+represented in the code by a concept _DiagnosticSession_. We would like to
+enable co-facilitation, so we want to add a sharing feature to the
+DiagnosticSession class. 
 
 How do we start? First create a session? No, let's start with the
 expected outcome: a shared session is accessible for the co-facilitator:
@@ -93,3 +94,17 @@ You may believe that this does not apply to legacy code. Quite the contrary:
 although it can be harder, it will help you identify better, less cluttered, and
 more focused interfaces for existing code. The effort may be big, but so is the
 feeling of increased understanding and relief after you've done it.
+
+## Further reading
+
+@@Behaviour Driven Development / Formulation link? 
+
+_This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
+
+<aside>
+  <p>Join us for one of our Test Driven Development courses, which focus on deliberate practice and learning by doing.
+  </p>
+  <p><div>
+    <a href="/training/test-driven-development">Find out more</a>
+  </div></p>
+</aside>
