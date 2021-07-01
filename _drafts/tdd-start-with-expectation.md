@@ -97,7 +97,7 @@ feeling of increased understanding and relief after you've done it.
 
 ## Further reading
 
-Source: Kent Beck Test Driven Development, By Example
+Starting with the expectation comes from Kent Beck's Test Driven Development, By Example: he describes the _Assert First_ pattern.
 
 @@Behaviour Driven Development / Formulation link? 
 

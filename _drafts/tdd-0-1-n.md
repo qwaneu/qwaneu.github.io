@@ -74,3 +74,11 @@ Starting with a negative case prevents you from only writing tests for
 happy paths. It is also often the smallest step you can take. 
 Completing a step feels good and prepares you to take the next.
 Before you know it you may have a whole suite of these things.
+
+## Further reading
+
+The 0, 1, N heuristic is related to the _Starter Test_ and _One to Many_ patterns in Test Driven Development, By Example by Kent Beck.
+
+[James Grenning proposed the ZOMBIES acronym](http://blog.wingman-sw.com/tdd-guided-by-zombies) for writing tests:
+(Z)ero, (O)ne, (M)any, (B)oundary behaviors, (I)nterface definition, (E)xercise
+exceptional behaviour, (S)imple scenarios-simple solutions.
