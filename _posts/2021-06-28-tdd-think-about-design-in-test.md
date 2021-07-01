@@ -40,7 +40,7 @@ machine model. One of the tests that have to do with paying for drinks is:
 ```python
 # Using Python & pytest
 class VendingMachine:
-  def configure(self, choice, can price):
+  def configure(self, choice, can, price):
     ...
   def insert(self, amount):
     ...
