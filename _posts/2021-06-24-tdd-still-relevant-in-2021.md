@@ -189,8 +189,7 @@ through a series posts the next few weeks. Keep an eye on this blog!
 ## I want to learn more!
 
 - Go to the source. Kent Beck's book [Test Driven Development, By
-  Example](https://www.oreilly.com/library/view/test-driven-development/0321146530/)
-  from 2002 is a good source to learn more.
+  Example](https://www.oreilly.com/library/view/test-driven-development/0321146530/) from 2002 is a good source to learn more.
 
 - Another book we often recommend is [Growing Object Oriented Software, Guided
   by Tests](http://www.growing-object-oriented-software.com/), by Steve Freeman
@@ -200,7 +199,15 @@ through a series posts the next few weeks. Keep an eye on this blog!
 - Jim Shore did a series of [Lunch & Learn sessions on
   TDD](https://www.jamesshore.com/v2/projects/lunch-and-learn) last year, which
   is a series of 21 videos where he shows all aspects of TDD - also highly
-  recommended!
+  recommended! Jim's [The Art of Agile Development
+  book](https://www.jamesshore.com/v2/books/aoad2) is a great resource on agile
+  principles & practices, including Test Driven Development; see also [the
+  pre-release chapter on
+  TDD](https://www.jamesshore.com/v2/books/aoad2/test-driven_development) from
+  the upcoming second edition of the book.
+
+- Lasse Koskela wrote about applying TDD in a Java context in [Test Driven -
+  Practical TDD and Acceptance TDD for Java Developers](https://www.goodreads.com/book/show/933862.Test_Driven) (2008)
 
 - GeePaw Hill has written a lot of thoughtful [posts on
   TDD](https://www.geepawhill.org/category/tdd/). See for instance his video on
@@ -224,3 +231,6 @@ through a series posts the next few weeks. Keep an eye on this blog!
     <a href="/training/test-driven-development">Find out more</a>
   </div></p>
 </aside>
+
+_Updated 01-07-2021: added The Art of Agile Development & Test Driven to further
+reading_

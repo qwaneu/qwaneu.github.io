@@ -84,7 +84,6 @@ So far the code is only a wish in the test, it doesn't exist yet. But it already
 gives us feedback about this approach. If we don't like what we see, change is
 still very cheap.
 
-
 > When we write a test, we imagine the perfect interface for our operation. We are telling ourselves a story about how the operation will look from the outside. Our story won't always come true, but it's better to start from the best-possible application program interface (API) and work backward than to make things complicated, ugly, and "realistic" from the get-go."  
 > --Kent Beck, [Test Driven Development, By Example](https://www.oreilly.com/library/view/test-driven-development/0321146530/), p. 4
 
