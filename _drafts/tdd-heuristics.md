@@ -16,7 +16,7 @@ Overzicht & werklijst van heuristics/guidelines
 
 **Guidelines & heuristics for (unit) tests**
 - Test name describes the action and the expected result
-- One (conceptual) assert per test
+> One (conceptual) assert per test
 - Test cases follow common setup
 - Take as much care for test code as you do for production code
 - Tests are independent - always start from a clean slate
