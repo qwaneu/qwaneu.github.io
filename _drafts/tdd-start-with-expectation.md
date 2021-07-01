@@ -76,13 +76,13 @@ def test_sharing_makes_it_accessible_for_the_secondary_facilitator(self):
   assert_that(session.is_accessible_for(co_facilitator), is_(True))
 ```
 
-We are using [test data builders](/2020/10/09/test-data-builders.html) here.
+`aValidDiagnosticSession` and `aValidFacilitator` are examples of [test data builders](/2020/10/09/test-data-builders.html).
 
 ## Effects
 
-We force ourselves to state our intent explicitly first, which helps in design.
-This is again a small, quick feedback loop, helping us to get clear where we
-want to go.
+We force ourselves to state our intent first, which helps in design. This again
+provides a low-cost, fast feedback loop, helping us to get clear where we want
+to go.
 
 The test is focused on the outcome, which helps to reduce clutter, unnecessary
 setup code. We prevent our test from wandering around, instead it will go
@@ -96,6 +96,8 @@ more focused interfaces for existing code. The effort may be big, but so is the
 feeling of increased understanding and relief after you've done it.
 
 ## Further reading
+
+Source: Kent Beck Test Driven Development, By Example
 
 @@Behaviour Driven Development / Formulation link? 
 
