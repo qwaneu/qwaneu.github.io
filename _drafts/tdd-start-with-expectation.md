@@ -9,8 +9,8 @@ author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: /attachments/blogposts/2021/tdd/start-at-expectation.jpg
 ---
 
-Write the last part of your test first: start with the expectation or the
-assert, write the test bottom-up.
+Write the last part of your test first: start with the expectation (or the
+assert) and write the test bottom-up.
 
 Starting the test at the end might feel strange, as you may be inclined to write
 your test from top to bottom, from set-up, through invocation of production
@@ -19,37 +19,35 @@ code, to expectation. This may feel the wrong way around.
 ![start with the expectation, person holding a finish flag](/attachments/blogposts/2021/tdd/start-at-expectation.jpg)
 {: class="post-image post-image-50" }
 
-Think of it like when you have to write a report (like you had to do when you
-were at school): a good approach is to first write up the conclusions, and then
-write the rest of the report leading to those conclusions. Writing a test is
-similar in this way.
+Think of it like writing a report - you might remember having to write reports
+when you were at school: a good approach is to first write up the conclusions,
+and then write the rest of the report leading to those conclusions. Writing a
+test by starting with the expectation works in a similar way.
 
-## Focus on the outcome 
+## Focus on outcomes
 
-The test will focus on a desired outcome, which is often easier to express than
-the set up code needed. You will also notice duplication in set up code more
-clearly. Starting with the expectation is harder than just copy-pasting the
-previous test and changing some words. It forces you to think of desired
-behaviour and interfaces right from the beginning.
+Focusing on the expectation first means focusing on the desired outcome.
+Sometimes this is easier to express than the set-up code needed. You will also
+notice duplication in set-up code more clearly. 
 
-By starting with the expectation, we focus on the test outcomes and work
-backward from there. Once the expectation is clear, we write the minimally
-required setup and code to get to our outcome.
+Starting with the expectation is harder than just copy-pasting the previous test
+and changing some lines. It forces you to think of desired behaviour and
+interfaces right from the beginning. You suddenly have to state clearly what you
+are working towards.
 
-It is ok to have it feel wrong and awkward. Starting with an expectation, 
-you inject a little deliberate practice in your day to day work. 
+From the expectation we work backwards to complete the test. We write the
+minimally required set-up and code to get to our outcome.
 
 ## Example
 
 Let's look at an example from our [Online Agile Fluency® Diagnostic
 application](/2020/09/25/hexagonal-frontend-example.html). This application
-support a facilitator in running a workshop with a development team. This is
-represented in the code by a concept _DiagnosticSession_. We would like to
-enable co-facilitation, so we want to add a sharing feature to the
-DiagnosticSession class. 
+supports a facilitator in running a workshop with a development team. In the code, we represent such a workshop by a concept _DiagnosticSession_. 
 
-How do we start? First create a session? No, let's start with the
-expected outcome: a shared session is accessible for the co-facilitator:
+We would like to enable co-facilitation of workshops and add a sharing feature
+to the DiagnosticSession class. So how do we start? Create a session, do
+something with it? No, let's start with the expected outcome: a shared session
+is accessible for the co-facilitator:
 
 ```python
 def test_sharing_makes_it_accessible_for_the_secondary_facilitator():
@@ -57,7 +55,7 @@ def test_sharing_makes_it_accessible_for_the_secondary_facilitator():
   assert_that(session.is_accessible_for(co_facilitator), is_(True))
 ```
 
-Then we can add the behaviour-under-test:
+Then we can add the behaviour under test:
 
 ```python
 def test_sharing_makes_it_accessible_for_the_secondary_facilitator(self):
@@ -66,7 +64,7 @@ def test_sharing_makes_it_accessible_for_the_secondary_facilitator(self):
   assert_that(session.is_accessible_for(co_facilitator), is_(True))
 ```
 
-And finally, we add the setup code:
+And finally, we add the set-up code:
 
 ```python
 def test_sharing_makes_it_accessible_for_the_secondary_facilitator(self):
@@ -80,24 +78,26 @@ def test_sharing_makes_it_accessible_for_the_secondary_facilitator(self):
 
 ## Effects
 
-We force ourselves to state our intent first, which helps in design. This again
-provides a low-cost, fast feedback loop, helping us to get clear where we want
-to go.
+We force ourselves to state our intent first, which helps in thinking about design. This provides a low-cost, fast feedback loop, helping us to get clear where we want to go.
 
-The test is focused on the outcome, which helps to reduce clutter, unnecessary
-setup code. We prevent our test from wandering around, instead it will go
-straight to its goal.
+It is ok to have it feel wrong and awkward. Starting with an expectation, 
+we inject a little deliberate practice in your day to day work. 
+
+Focusing a test on the outcome, helps to reduce wandering tests, clutter, and
+unnecessary set-up code. We create tests that go straight to their goals.
 
 ## Legacy code
 
 You may believe that this does not apply to legacy code. Quite the contrary:
-although it can be harder, it will help you identify better, less cluttered, and
-more focused interfaces for existing code. The effort may be big, but so is the
-feeling of increased understanding and relief after you've done it.
+although it can be harder to state the outcome, it will help you identify
+better, less cluttered, and more focused interfaces for existing code. The
+initial investment may be big, but so is the feeling of increased understanding
+and relief after you've done it.
 
 ## Further reading
 
-Starting with the expectation comes from Kent Beck's Test Driven Development, By Example: he describes the _Assert First_ pattern.
+The idea of starting with the expectation comes from Kent Beck's [Test Driven
+Development, By Example](https://www.oreilly.com/library/view/test-driven-development/0321146530/); he describes a pattern called _Assert First_.
 
 @@Behaviour Driven Development / Formulation link? 
 
