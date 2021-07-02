@@ -42,4 +42,3 @@ public void notifiesOwnerIfPaid() {
 ## Further reading
 
 The One Assertion Per Test rule was originally coined by eXtreme Programmer Dave Astels (of RSpec fame) back in 2004 https://www.artima.com/weblogs/viewpost.jsp?thread=35578
-
