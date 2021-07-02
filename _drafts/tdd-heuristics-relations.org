@@ -1,0 +1,29 @@
+#+TITLE: Tdd Heuristics Relations
+
+
+All relations are 'depends on', or 'is useful for'
+#+begin_src dot :file tdd-heuristics-dependencies.png :cmdline -Tpng :exports none
+digraph {
+  ActStupid [label="Act Stupid in implementation" ]
+  ActStupid -> DTSTTCPW
+  Faking ->  "Act Stupid in implementation"  [label="useful for" ]
+  DTSTTCPW -> Faking [label="is allowed"]
+  DTSTTCPW -> Cheating [label="is allowed"]
+  DTSTTCPW [label="Do The Simplest Thing That Could Possibly Work (DTSTTCPW)"]
+  ZeroOneN [label="0,1,n"]
+  ZeroOneN -> Faking [label="For the 0 case"]
+  ZeroOneN -> ActStupid
+  ZeroOneN -> "Start with a negative case"
+  "Not just happy paths" -> "Start with a negative case"
+  BlankPieceOfPaper -> ZeroOneN [label="resolve with"]
+  ZeroOneN -> StarterTest [label="is related to"]
+  ZeroOneN -> OneToMany [label="is related to"]
+  ZeroOneN -> Zombies [label="is related to"]
+}
+
+#+end_src
+
+#+RESULTS:
+[[file:tdd-heuristics-dependencies.png]]
+
+[[file:file]]
