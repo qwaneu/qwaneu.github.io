@@ -12,9 +12,10 @@ image: /attachments/blogposts/2021/tdd/start-at-expectation.jpg
 Write the last part of your test first: start with the expectation (or the
 assert) and write the test bottom-up.
 
-Starting the test at the end might feel strange, as you may be inclined to write
+Starting the test at the end, where the expectation (or assert) is
+may feel strange. You may be inclined to write
 your test from top to bottom, from set-up, through invocation of production
-code, to expectation. This may feel the wrong way around.
+code, to expectation. Starting with the expectation may feel the wrong way around.
 
 ![start with the expectation, person holding a finish flag](/attachments/blogposts/2021/tdd/start-at-expectation.jpg)
 {: class="post-image post-image-50" }
@@ -99,7 +100,33 @@ and relief after you've done it.
 The idea of starting with the expectation comes from Kent Beck's [Test Driven
 Development, By Example](https://www.oreilly.com/library/view/test-driven-development/0321146530/); he describes a pattern called _Assert First_.
 
+[JMock](http://jmock.org/oopsla2004.pdf) contributed to this way of thinking, as it forced us to write expected calls as the first thing in the method. This was counter-intuitive at first, but did force us to think about one of the interaction we expectat first, before we write code to set up the test.
 @@Behaviour Driven Development / Formulation link? 
+
+Here is a snippet from [Mock Roles, not Objects](http://jmock.org/oopsla2004.pdf)  by Steve Freeman, Nat Pryce, Tim Mackinnon, and Joe Walnes, to illustrate the idea:
+``` java
+public class TimedCacheTest {
+public void testLoadsObjectThatIsNotCached() {
+    // we expect to call load
+    // exactly once with the key,
+    // this will return the given value
+    mockLoader.expect(once())
+      .method("load").with( eq(KEY) )
+      .will(returnValue(VALUE));
+   ...
+```
+
+In effect JMOCK forced us to work Then-First, so we get Then-When-Given or Then-Given-When, or when we don't need much set-up, just Then-When. Thinking first about what interactions are desired, how the API should be named, what parameters to pass in, and what to return, and who to interact with.
+
+Thinking more outside in, we often use Chris Matts' "In order to <achieve some value>" story format, as described by Elizabeth Keogh in [RIP As a... I want... So that...](https://sirenian.livejournal.com/47679.html):
+
+```
+In order to <achieve some value>
+As a <role>
+I want <some feature>.
+```
+
+Here we have a high-level form of expectation first.
 
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
 
