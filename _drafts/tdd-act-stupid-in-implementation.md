@@ -66,8 +66,30 @@ little code as possible to make it pass.
 
 ## Further reading
 
-@@links!
+The [Do the simplest thing that could possibly
+work](https://ronjeffries.com/xprog/articles/practices/pracsimplest/) rule@@
+originates from eXtreme Programming. This rule focuses on radical simplicity in
+your code. By keeping it in mind, you intend to refrain from thinking ahead of
+all kinds of possible scenarios and creating generic solutions. 
 
+By keeping the code as simple as possible (and working), we don't code ourselves
+into a corner. On the contrary, we keep more options open because there is less
+code getting in the way when we need to change it later on.
+
+Keeping things simple has all kinds of second order effects, like this little
+gem from Kent Beck which we found on the [Do The Simplest Thing That Could
+Possibly Work page on the C2
+wiki](http://c2.com/xp/DoTheSimplestThingThatCouldPossiblyWork.html):
+
+> There are second order effects to asking yourself "What is the simplest thing that could possibly work?" -- KentBeck
+> -   You get done sooner
+> -   Your work is easier to communicate
+> -   Duplication is obvious, so the needs and means for refactoring are clearer
+> -   Tests are easier to write
+> -   The code is easier to performance tune Or, at least, there will be more scope for tuning performance
+> -   You feel less stress, which enhances all of the above 
+
+@@ https://www.artima.com/articles/the-simplest-thing-that-could-possibly-work ?
 
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
 

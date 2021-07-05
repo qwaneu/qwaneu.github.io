@@ -4,10 +4,10 @@ Overzicht & werklijst van heuristics/guidelines
 **Guidelines & heuristics for TDD**
 V Think about design in the test
 V Wishful thinking
-> Start with the expectation
+V Start with the expectation
+> 0, 1, N
 > Act stupid in implementation
 > Faking & Cheating
-> 0, 1, N
 - Triangulation
 - Make the change easy, then make the change (refactor after and before)
 
