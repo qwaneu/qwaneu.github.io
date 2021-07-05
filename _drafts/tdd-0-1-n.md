@@ -185,7 +185,7 @@ patterns in the [Test Driven Development, By Example](https://www.oreilly.com/li
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
 
 <aside>
-  <p>Join us for one of our Test Driven Development courses. Deliberate practice and learning by doing may make your wishes come true..
+  <p>Join us for one of our Test Driven Development courses. 
   </p>
   <p><div>
     <a href="/training/test-driven-development">Find out more</a>
