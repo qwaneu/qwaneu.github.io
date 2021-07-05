@@ -18,7 +18,7 @@ then generalize it to multiple cases.
 ![0-1-N.jpg](/attachments/blogposts/2021/tdd/0-1-N.jpg)
 {: class="post-image post-image-50" }
 
-## 0
+## Zero
 
 We start with the 'zero' case, e.g. there is nothing available, there is no
 supply, there are no choices to be made. This could also be a negative case,
@@ -34,48 +34,127 @@ complicated decisions about data structures, iteration, mapping, etc. We get a
 bit of feedback earlier on and we buy ourselves some time to think about the
 code we're growing.
 
-If we would be test-driving code to implement a drinks vending machine, we would
-start with _delivers nothing when there are no choices available_ as the zero
-case.
+Let's look at an example from our [Online Agile Fluency® Diagnostic
+application](/2020/09/25/hexagonal-frontend-example.html). This application
+supports a facilitator in running a workshop with a development team where team
+members fill in a survey. The facilitator can download the aggregated survey
+results - called a *Rollup* or Rollup Chart - in CSV format. The CSV contains a
+line per survey question.
+
+To test drive the conversion from the Rollup and Survey domain objects to CSV,
+we start with the zero case: no survey questions. This should return a CSV with
+just the column headings:
 
 ```python
-def delivers_nothing_when_no_choices_available()
-  ...
-  assert_equal(machine.deliver(Choice.COLA), equal_to(Can.Nothing))
+class TestMappingRollupToCSV:
+  def test_creates_csv_with_a_line_per_rollup_question(self):
+    questionnaire = aQuestionnaire()
+    rollup = Rollup.empty_rollup(questionnaire,
+                                 facilitator_name='the facilitator',
+                                 team='Team')
+
+    assert as_rollup_csv(rollup) == dedent('''\
+          id,question,zone,consensus,consensus value''')
 ```
 
-This triggers us to create a `VendingMachine` class having a `deliver` method, but there's not much to the implementation yet.
+The function as_rollup_csv is the code-under-test. The Python `dedent` function
+is just for convenience, it removes leading and trailing spaces and preserves
+line breaks, so that we can layout our expected value in a more readable way.
 
-## 1
+We make this test work by implementing just the bare minimum:
+
+```python
+def as_rollup_csv(rollup):
+    return 'id,question,zone,consensus,consensus value'
+```
+
+## One
 
 After we have implemented the 'zero' case, we write a test for the singular
 case. We focus on getting the code to work for just this case. Even if we are
-already thinking of a generic solution with dictionaries, collections, or streams, we postpone this for now. We will get to that in the 'N' step.
+already thinking of a generic solution with dictionaries, collections, or
+streams, we postpone this for now. We will get to that in the 'N' step.
 
-For the drinks vending machine, _delivers a coke when choosing cola_ could be
-the 1 step.
+For the Rollup to CSV conversion, we add a test for a single survey question:
 
 ```python
-def delivers_coke_when_choosing_cola()
-  ...
-  assert_equal(machine.deliver(Choice.COLA), equal_to(Can.Coke))
+  def test_creates_csv_with_a_line_for_a_rollup_question(self):
+    questionnaire = aQuestionnaireWithQuestions(
+            aValidQuestion(id=aValidID(33), letter='A',
+                           question_text='one,two,three',
+                           zone=Zone.Optimizing))
+    rollup = Rollup.empty_rollup(questionnaire,
+                                 facilitator_name='the facilitator',
+                                 team='Team')
+
+    assert as_rollup_csv(self.rollup) == dedent('''\
+            id,question,zone,consensus,consensus value
+            A,"one,two,three",optimizing,,''')
 ```
 
-Again, we keep the implementation as simple as possibler - we'll write more
-about that later.
+We update the production code, but again we don't do more than strictly necessary. We only make it work for the first question in the list.
 
-## N
+```python
+def as_rollup_csv(rollup):
+  q = rollup.rollup_questions[0]
+  lines = ['id,question,zone,consensus,consensus value']
+  lines = lines + ['{letter},"{question_text}",{zone},{consensus_label},{consensus}'.format(
+          letter=q.letter, 
+          question_text=q.question_text, 
+          zone=str(q.zone), 
+          consensus_label=as_consensus_label(q.consensus), 
+          consensus=as_consensus_value(q.consensus))]
+  return '\n'.join(lines)
+```
+
+## Many
 
 After we have finished the singular case, we write a test for multiple cases.
 This test forces us to generalize the code. By taking the 0 and 1 steps first,
 we have given our brain some extra time to percolate on a good design.
 
-For the drinks vending machine, we write the _delivers a can of choice_ test. 
+We write a test that involves more than one survey question:
 
 ```python
-def delivers_can_of_choice()
-  ...
+  def test_creates_csv_with_a_line_per_rollup_question(self):
+    questionnaire = aQuestionnaireWithQuestions(
+            aValidQuestion(id=aValidID(33), letter='A',
+                           question_text='one,two,three',
+                           zone=Zone.Optimizing),
+            aValidQuestion(id=aValidID(44),letter='B',
+                           question_text='something', 
+                           zone=Zone.Optimizing))
+    rollup = Rollup.empty_rollup(questionnaire,
+                                 facilitator_name='the facilitator',
+                                 team='Team')
+
+    assert as_rollup_csv(self.rollup) == dedent('''\
+            id,question,zone,consensus,consensus value
+            A,"one,two,three",optimizing,,
+            B,"something",optimizing,,''')
 ```
+
+To make this work, we transform the list we already had into a list
+comprehension:
+
+```python
+def as_rollup_csv(rollup):
+    lines = ['id,question,zone,consensus,consensus value']
+    lines = lines + ['{letter},"{question_text}",{zone},{consensus_label},{consensus}'.format(
+            letter=q.letter, 
+            question_text=q.question_text, 
+            zone=str(q.zone), 
+            consensus_label=as_consensus_label(q.consensus), 
+            consensus=as_consensus_value(q.consensus)) for q in rollup.rollup_questions]
+    return '\n'.join(lines)
+```
+
+Our three tests have some duplication. Now that our production code is ok, we
+can refactor our tests. We could drop the first two tests now, because the
+`test_creates_csv_with_a_line_per_rollup_question` test sufficiently covers the
+headings and iteration over questions. Does this mean we wasted time and
+characters on those tests? No, the tests were helpful in getting to our goal in
+baby steps.
 
 ## Effects
 
