@@ -48,8 +48,8 @@ just the column headings:
 ```python
 class TestMappingRollupToCSV:
   def test_creates_csv_with_a_line_per_rollup_question(self):
-    questionnaire = aQuestionnaire()
-    rollup = Rollup.empty_rollup(questionnaire,
+    survey = aQuestionnaire()
+    rollup = Rollup.empty_rollup(survey,
                                  facilitator_name='the facilitator',
                                  team='Team')
 
@@ -79,11 +79,11 @@ For the Rollup to CSV conversion, we add a test for a single survey question:
 
 ```python
   def test_creates_csv_with_a_line_for_a_rollup_question(self):
-    questionnaire = aQuestionnaireWithQuestions(
+    survey = aSurveyWithQuestions(
             aValidQuestion(id=aValidID(33), letter='A',
                            question_text='one,two,three',
                            zone=Zone.Optimizing))
-    rollup = Rollup.empty_rollup(questionnaire,
+    rollup = Rollup.empty_rollup(survey,
                                  facilitator_name='the facilitator',
                                  team='Team')
 
@@ -117,14 +117,14 @@ We write a test that involves more than one survey question:
 
 ```python
   def test_creates_csv_with_a_line_per_rollup_question(self):
-    questionnaire = aQuestionnaireWithQuestions(
+    survey = aSurveyWithQuestions(
             aValidQuestion(id=aValidID(33), letter='A',
                            question_text='one,two,three',
                            zone=Zone.Optimizing),
             aValidQuestion(id=aValidID(44),letter='B',
                            question_text='something', 
                            zone=Zone.Optimizing))
-    rollup = Rollup.empty_rollup(questionnaire,
+    rollup = Rollup.empty_rollup(survey,
                                  facilitator_name='the facilitator',
                                  team='Team')
 

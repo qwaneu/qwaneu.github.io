@@ -9,12 +9,15 @@ author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: 
 ---
 
-@@intro-samenvatting heuristic
+Once we have a failing test, how do we get to green quickly and in a simple way?
+If we can get away with faking it, we do that. It is sometimes the simplest way
+to get the test to pass, and to remind us to write the next test case.
 
-One way of [acting stupid in implementation](/@@) is to let the test pass by
-faking it, for example by returning the expected value as a constant. This is
-allowed, we even recommend it! If you can get away with faking, it means you
-need another test case to force yourself to write a more generic implementation.
+Making a test pass by faking or cheating, for example by returning the expected
+value as a constant, is an example of [acting stupid in implementation](/@@). In
+TDD cheating is allowed, we even recommend it! If you can get away with faking,
+it means you need another test case to force yourself to write a more generic
+implementation.
 
 Faking might feel weird at the beginning, but it helps to proceed towards your 
 goal in baby steps and have continuous progress. 
@@ -25,17 +28,20 @@ corner.
 
 ## Example 
 
-Let's take another look at the CSV conversion code we looked at in the [0, 1, N post](@@). We were test driving the conversion from aggregated survey results ( represented by Rollup domain object) to CSV.
+Let's take another look at the CSV conversion code we looked at in the [0, 1, N
+post](/@@). We were test driving the conversion from aggregated survey results (
+represented by Rollup domain object) to CSV.
 
-We wrote a test for a survey with a single question, which should result in a single line in the CSV (after the header line):
+We wrote a test for a survey with a single question, which should result in a
+single line in the CSV (after the header line):
 
 ```python
   def test_creates_csv_with_a_line_for_a_rollup_question(self):
-    questionnaire = aQuestionnaireWithQuestions(
+    survey = aSurveyWithQuestions(
             aValidQuestion(id=aValidID(33), letter='A',
                            question_text='one,two,three',
                            zone=Zone.Optimizing))
-    rollup = Rollup.empty_rollup(questionnaire,
+    rollup = Rollup.empty_rollup(survey,
                                  facilitator_name='the facilitator',
                                  team='Team')
 
@@ -77,7 +83,9 @@ good enough as a baby step towards our goal.
 
 ## Further reading
 
-@@TDD by example
+In [Test Driven Development, By
+Example](https://www.oreilly.com/library/view/test-driven-development/0321146530/),
+Kent Beck introduced the _Fake It ('Til You Make It)_ pattern.
 
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
 

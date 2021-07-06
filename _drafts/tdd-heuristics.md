@@ -1,22 +1,18 @@
 Overzicht & werklijst van heuristics/guidelines
 
 
-**Guidelines & heuristics for TDD**
+**Guidelines & heuristics for TDD & (unit) tests**
 V Think about design in the test
 V Wishful thinking
 V Start with the expectation
 > 0, 1, N
 > Act stupid in implementation
 > Faking & Cheating
-- Triangulation
-- Make the change easy, then make the change (refactor after and before)
-
-- What is a heuristic
- - http://wirfs-brock.com/blog/2019/03/20/growing-your-personal-design-heuristics/
-
-**Guidelines & heuristics for (unit) tests**
-- Test name describes the action and the expected result
 > One (conceptual) assert per test
+- Triangulation
+- (new) Removing duplication between test & production code
+- Make the change easy, then make the change (refactor after and before)
+- Test name describes the action and the expected result
 - Test cases follow common setup
 - Take as much care for test code as you do for production code
 - Tests are independent - always start from a clean slate
@@ -25,7 +21,10 @@ V Start with the expectation
 - Fix one failing test at a time
 - What is a unit test?
 - (new) Mirroring
-- (new) Focus on relevant data
+- (new) Focus on relevant data (TDD by example: "Evident data")
+
+- What is a heuristic
+ - http://wirfs-brock.com/blog/2019/03/20/growing-your-personal-design-heuristics/
 
 **Other**
 - Rules for simple design
