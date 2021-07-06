@@ -6,12 +6,15 @@ tags:
   - feedback
   - eXtreme Programming
 author: Marc Evers, Willem van den Ende, Rob Westgeest
-image: 
+image: /attachments/blogposts/2021/tdd/pretend-play.png
 ---
 
 Once we have a failing test, how do we get to green quickly and in a simple way?
 If we can get away with faking it, we do that. It is sometimes the simplest way
 to get the test to pass, and to remind us to write the next test case.
+
+![pretend play - faking it](/attachments/blogposts/2021/tdd/pretend-play.png)
+{: class="post-image post-image-50" }
 
 Making a test pass by faking or cheating, for example by returning the expected
 value as a constant, is an example of [acting stupid in implementation](/@@). In
