@@ -8,15 +8,15 @@ V Start with the expectation
 > 0, 1, N
 > Act stupid in implementation
 > Faking & Cheating
-> One (conceptual) assert per test
+~ One (conceptual) assert per test
+~ Given-When-Then (or Arrange-Act-Assert)
+~ Test name describes the action and the expected result
 - Triangulation
 - (new) Removing duplication between test & production code
 - Make the change easy, then make the change (refactor after and before)
-- Test name describes the action and the expected result
 - Test cases follow common setup
 - Take as much care for test code as you do for production code
 - Tests are independent - always start from a clean slate
-- Given-When-Then (or Arrange-Act-Assert)
 - No more than one failing test at a time
 - Fix one failing test at a time
 - What is a unit test?

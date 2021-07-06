@@ -60,9 +60,43 @@ initially:
   [order-of-magnitude improvements tend to change the game, like we wrote
   earlier](/2020/11/27/paying-the-price-of-fast-tests.html).
 
-![@@diagram of effects]()
+Let's illustrate this using a Diagram of Effects.
 
-## Examples
+![step 1]()
+
+The impact of improvements might be small, but they do have impact, they reduce developer toil for instance, or reduce technical debt, or make the whole delivery process a bit more smooth. Over time, this helps improve productivity. Now productivity in development is difficult to get a grip on, like we wrote before. Here we mean "getting more done with the same effort" (or "getting the same done with less effort").
+
+![step 2]()
+
+Higher productivity leads to lower lead time - the time from making a change to
+having it running in production (@@DORA/Accelerate). It will also increase
+development capacity - which you can decide to spend on features or decide to
+spend on more improvements (the black/white square is a management decision -
+the organization gets to decide here).
+
+![step 3]()
+
+The important thing with many small acts of kindness and love, especially in the
+inner feedback loop of software development (i.e. build-test-integrate), is the
+multiplicative effects: both the number of small improvements we do and the fact
+that the improvements affect processes and actions that we do over and over
+again, every hour, every day, multiply the impact of improvements
+
+![step 3 full diagram]()
+
+So if we decide to spend our gained capacity on doing even more small
+improvements, we get a virtuous cycle. Over time, we reap more and more
+benefits. This means that by investing in the small improvements, we will create
+even more capacity over time, which will eventually also benefit delivery of
+features. If we decide to focus on features only, we don't get the increase and
+we keep on muddling through.
+
+In practice, we have to make trade-offs between time invested in small
+improvements and developing features. Still, as we persist in doing a stream of
+small improvements next to feature work, it will pay off eventually. The delayed
+payoff could make this hard to sell. 
+
+## Example
 
 A team at a client that was maintaining multiple legacy systems was struggling
 with 'productivity' (at least in the eyes of their internal customers). Some of
@@ -75,9 +109,29 @@ they allocated less time for customer work). On the longer term (1-2 years) the
 improvements had started to make a big differences, making it much easier,
 faster, cheaper to make new changes.
 
-## Further reading
+## Further reading & watching
 
 Ursula Le Guinn on male magicians like Gandalf (I know, I suggested Gandalf, and then inevitably something pops up in my twitter feed.)
 
 https://jessitron.com/2021/01/18/when-costs-are-nonlinear-keep-it-small/
 
+In [this video on Why Your Agile Transformation
+Failed](https://www.youtube.com/watch?v=-wNH6YgZQtw), Jason Gorman illustrates
+the effect of improving the inner (build-test) feedback loop of software
+development and how improving that loop has much more impact than improving the
+outer loops. The effect of small improvements in the inner get multiplied.
+
+A Diagram of Effects is a powerful technique to make sense of what is going on
+in a team or an organization. We learned in from Gerald Weinberg and recommend
+his [Quality Software Management
+series](http://geraldmweinberg.com/Site/QSM_vol_1.html). If you'd like to learn
+more, or read our whitepaper [Promise is
+Debt](/attachments/ebooks/qwan-systems-book.pdf) (PDF).
+
+<aside>
+  <p>TDB
+  </p>
+  <p><div>
+    <a href="/training/test-driven-development">Find out more</a>
+  </div></p>
+</aside>
