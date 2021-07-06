@@ -9,10 +9,10 @@ author: Marc Evers, Willem van den Ende
 image: 
 ---
 
-> "Saruman believes that it is only great power that can hold evil in check. But
+> Saruman believes that it is only great power that can hold evil in check. But
 that is not what I have found. I have found it is the small things. Everyday
 deeds of ordinary folk that keeps the darkness at bay. Simple acts of kindness
-and love." -- Gandalf (J.R.R. Tolkien, The Hobbit)
+and love. -- Gandalf (J.R.R. Tolkien, The Hobbit)
 
 In [Maximizing Developer
 Effectiveness](https://martinfowler.com/articles/developer-effectiveness.html),
@@ -60,21 +60,30 @@ initially:
   [order-of-magnitude improvements tend to change the game, like we wrote
   earlier](/2020/11/27/paying-the-price-of-fast-tests.html).
 
-Let's illustrate this using a Diagram of Effects.
+Let's illustrate this using a diagram of effects.
 
-![step 1]()
+![step 1](/attachments/blogposts/2021/tdd/simple-acts-of-kindness-1.jpg)
+{: class="post-image" }
 
-The impact of improvements might be small, but they do have impact, they reduce developer toil for instance, or reduce technical debt, or make the whole delivery process a bit more smooth. Over time, this helps improve productivity. Now productivity in development is difficult to get a grip on, like we wrote before. Here we mean "getting more done with the same effort" (or "getting the same done with less effort").
+The impact of improvements might be small, but they do have impact, they reduce
+developer toil for instance, or reduce technical debt, or make the whole
+delivery process a bit more smooth. Over time, this helps improve productivity.
+Now productivity in development is difficult to get a grip on, like we wrote
+before in our [Under Pressure post](/2020/10/26/under-pressure.html). Here we
+mean "getting more done with the same effort" (or "getting the same done with
+less effort").
 
-![step 2]()
+![step 2](/attachments/blogposts/2021/tdd/simple-acts-of-kindness-2.jpg)
+{: class="post-image" }
 
 Higher productivity leads to lower lead time - the time from making a change to
-having it running in production (@@DORA/Accelerate). It will also increase
-development capacity - which you can decide to spend on features or decide to
-spend on more improvements (the black/white square is a management decision -
-the organization gets to decide here).
+having it running in production. It will also increase development capacity -
+which you can decide to spend on features or decide to spend on more
+improvements (the black/white square is a management decision - the organization
+gets to decide here).
 
-![step 3]()
+![step 3](/attachments/blogposts/2021/tdd/simple-acts-of-kindness-3.jpg)
+{: class="post-image" }
 
 The important thing with many small acts of kindness and love, especially in the
 inner feedback loop of software development (i.e. build-test-integrate), is the
@@ -82,7 +91,8 @@ multiplicative effects: both the number of small improvements we do and the fact
 that the improvements affect processes and actions that we do over and over
 again, every hour, every day, multiply the impact of improvements
 
-![step 3 full diagram]()
+![step 4 full diagram](/attachments/blogposts/2021/tdd/simple-acts-of-kindness-4.jpg)
+{: class="post-image" }
 
 So if we decide to spend our gained capacity on doing even more small
 improvements, we get a virtuous cycle. Over time, we reap more and more
@@ -120,6 +130,8 @@ Failed](https://www.youtube.com/watch?v=-wNH6YgZQtw), Jason Gorman illustrates
 the effect of improving the inner (build-test) feedback loop of software
 development and how improving that loop has much more impact than improving the
 outer loops. The effect of small improvements in the inner get multiplied.
+
+lower lead time - the time from making a change to having it running in production @@DORA/Accelerate
 
 A Diagram of Effects is a powerful technique to make sense of what is going on
 in a team or an organization. We learned in from Gerald Weinberg and recommend
