@@ -3,10 +3,21 @@
 
 All relations are 'depends on', or 'is useful for'
 #+begin_src dot :file tdd-heuristics-dependencies.png :cmdline -Tpng :exports none
-digraph {
+digraph G {
+  rankdir="LR"
+  graph [fontsize=10 fontname="Verdana"];
+  node [shape=record fontsize=10 fontname="Verdana"];
+  edge [fontsize=10 fontname="Verdana"];
+
+  subgraph TestHeuristics {
+    TestNameDescribesActionAndResult
+    TestHeuristics -> IndependentTests
+    TestHeuristics -> Mirroring
+    TestHeuristics -> FocusOnRelevantData
+  }
   ActStupid [label="Act Stupid in implementation" ]
   ActStupid -> DTSTTCPW
-  Faking ->  "Act Stupid in implementation"  [label="useful for" ]
+  Faking -> ActStupid  [label="useful for" ]
   DTSTTCPW -> Faking [label="is allowed"]
   DTSTTCPW -> Cheating [label="is allowed"]
   DTSTTCPW [label="Do The Simplest Thing That Could Possibly Work (DTSTTCPW)"]
@@ -15,10 +26,33 @@ digraph {
   ZeroOneN -> ActStupid
   ZeroOneN -> "Start with a negative case"
   "Not just happy paths" -> "Start with a negative case"
-  BlankPieceOfPaper -> ZeroOneN [label="resolve with"]
+  Challenges -> BlankPieceOfPaper -> ZeroOneN [label="resolve with"]
   ZeroOneN -> StarterTest [label="is related to"]
   ZeroOneN -> OneToMany [label="is related to"]
   ZeroOneN -> Zombies [label="is related to"]
+  Triangulation -> ZeroOneN [label="is an example of?"]
+  TDDHeuristics ->  MakeTheChangeEasy
+  MakeTheChangeEasy [label="Make the change easy, then make the change"]
+  WhatIsAHeuristic
+  OneFailingTestMax [label ="No more than one failing test at a time"]
+  FixOneFailingTestAtATime [label = "Fix one failing test at a time"]
+  ZeroOneN -> OneFailingTestMax
+  FixOneFailingTestAtATime -> OneFailingTestMax [label="Strive towards"]
+  IndependentTests
+  Other -> PracticePracticePractice
+  FocusOnRelevantData
+  WhatIsAUnitTest
+  Defintions -> WhatIsAUnitTest
+  Defintions -> WhatIsAHeuristic
+  Other -> TestBehaviour
+  TestBehaviour [label="Test Behaviour rather than state"]
+  Other -> ThankAndMoveOn
+  Other -> RulesForSimpleDesign
+  TDDHeuristics -> WishfulThinking
+  TDDHeuristics -> StartWithExpectation
+  TDDHeuristics -> ThinkAboutDesignInTest
+  TDDHeuristics -> Triangulation
+  TDDHeuristics -> FakingAndCheating
 }
 
 #+end_src
