@@ -144,7 +144,7 @@ When we sourced the Gandalf quote, there was a lively discussion on twitter arou
 
 This is what led us to [Olivia Butlers' work](https://www.brainpickings.org/2020/08/23/octavia-butler-parable-leaders/) around leaders. 
 
-[Jessica Kerr](https://jessitron.com/2021/01/18/when-costs-are-nonlinear-keep-it-small/) also has an antidote against too much efficiency (talking about security updates):
+[Jessica Kerr](https://jessitron.com/2021/01/18/when-costs-are-nonlinear-keep-it-small/) also uses small acts an antidote against too much efficiency (talking about security updates):
 >Do the easy boring job regularly, instead of the hard scary job in a panic.
 
 In [this video on Why Your Agile Transformation
