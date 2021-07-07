@@ -24,7 +24,7 @@ by Olivia Butler, as quoted by [brainpickings](https://www.brainpickings.org/202
 
 ## What does this mean for a developmer?
 
-We want to embrace change, without making our lives more difficult in the process.
+We want to [embrace change](https://en.wikipedia.org/wiki/Extreme_programming), without making our lives more difficult in the process.
 
 More specific for developers, in [Maximizing Developer
 Effectiveness](https://martinfowler.com/articles/developer-effectiveness.html),
@@ -149,23 +149,21 @@ https://jessitron.com/2021/01/18/when-costs-are-nonlinear-keep-it-small/
 
 In [this video on Why Your Agile Transformation
 Failed](https://www.youtube.com/watch?v=-wNH6YgZQtw), Jason Gorman illustrates
-the effect of improving the inner (build-test) feedback loop of software
-development and how improving that loop has much more impact than improving the
-outer loops. The effect of small improvements in the inner get multiplied.
+how the effect of improving the inner (build-test) feedback loop of software gets multiplied.
 
 lower lead time - the time from making a change to having it running in production @@DORA/Accelerate
 
 A Diagram of Effects is a powerful technique to make sense of what is going on
-in a team or an organization. We learned in from Gerald Weinberg and recommend
+in a team or an organization. We learned from Gerald Weinberg and recommend
 his [Quality Software Management
 series](http://geraldmweinberg.com/Site/QSM_vol_1.html). If you'd like to learn
 more, or read our whitepaper [Promise is
 Debt](/attachments/ebooks/qwan-systems-book.pdf) (PDF).
 
 <aside>
-  <p>TDB
+  <p>Sometimes we are also 'the agile repair shop', arriving after happy, handwaving consultants have abandoned the sinking ship of an agile transformation. Then the orginisation invites us to work on some simple acts together, and then experience effective change. We have some days available in September and onwards:
   </p>
   <p><div>
-    <a href="/training/test-driven-development">Find out more</a>
+    <a href="/consulting">Talk to us, the first conversation is free.</a>
   </div></p>
 </aside>
