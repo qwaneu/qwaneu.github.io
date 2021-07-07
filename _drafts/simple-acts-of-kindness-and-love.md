@@ -154,8 +154,8 @@ around Ursula Le Guinn's take on male magicians like Gandalf:
 
 This is what led us to [Olivia Butlers' work](https://www.brainpickings.org/2020/08/23/octavia-butler-parable-leaders/) around leaders. 
 
-> This is a nonlinear relationship. The changes interact, and so batching them up increases the cost of the batch by more than the cost of the change you’re adding. Batching is less efficient.  
-> -- Jessica Kerr, [When costs are nonlinear, keep it small](https://jessitron.com/2021/01/18/when-costs-are-nonlinear-keep-it-small/)
+[Jessica Kerr](https://jessitron.com/2021/01/18/when-costs-are-nonlinear-keep-it-small/) also uses small acts an antidote against too much efficiency (talking about preventative maintenance):
+>Do the easy boring job regularly, instead of the hard scary job in a panic.
 
 In [this video on Why Your Agile Transformation
 Failed](https://www.youtube.com/watch?v=-wNH6YgZQtw), Jason Gorman illustrates
