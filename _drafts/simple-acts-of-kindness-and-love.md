@@ -81,6 +81,8 @@ Let's illustrate this using a diagram of effects.
 The impact of improvements might be small, but they do have impact. They reduce
 developer toil for instance, or reduce technical debt, or make the whole
 delivery process a bit more smooth. Over time, this helps improve productivity.
+The time delay is denoted by the || symbol.
+
 Now productivity in development is difficult to get a grip on, like we wrote
 before in our [Under Pressure post](/2020/10/26/under-pressure.html). Here we
 mean "getting more done with the same effort" (or "getting the same done with
