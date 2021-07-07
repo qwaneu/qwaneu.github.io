@@ -2,9 +2,8 @@ Overzicht & werklijst van heuristics/guidelines
 
 
 **Guidelines & heuristics for TDD & (unit) tests**
-V Think about design in the test
-V Wishful thinking
-V Start with the expectation
+V [Think about design in the test](https://www.qwan.eu/2021/06/28/tdd-think-about-design-in-test.html)
+V [Wishful thinking](https://www.qwan.eu/2021/07/01/tdd-wishful-thinking.html)
 > 0, 1, N
 > Act stupid in implementation
 > Faking & Cheating
@@ -27,6 +26,7 @@ V Start with the expectation
  - http://wirfs-brock.com/blog/2019/03/20/growing-your-personal-design-heuristics/
 
 **Other**
+V [TDD still relevant in 2021](https://www.qwan.eu/2021/06/24/tdd-still-relevant-in-2021.html)
 - Rules for simple design
 - Practice, Practice, Practice
 - Sometimes we thank a test for its' service and move on
