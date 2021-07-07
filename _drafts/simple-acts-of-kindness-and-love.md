@@ -144,8 +144,8 @@ When we sourced the Gandalf quote, there was a lively discussion on twitter arou
 
 This is what led us to [Olivia Butlers' work](https://www.brainpickings.org/2020/08/23/octavia-butler-parable-leaders/) around leaders. 
 
-https://jessitron.com/2021/01/18/when-costs-are-nonlinear-keep-it-small/
->This is a nonlinear relationship. The changes interact, and so batching them up increases the cost of the batch by more than the cost of the change you’re adding. Batching is less efficient.
+[Jessica Kerr](https://jessitron.com/2021/01/18/when-costs-are-nonlinear-keep-it-small/) also has an antidote against too much efficiency (talking about security updates):
+>Do the easy boring job regularly, instead of the hard scary job in a panic.
 
 In [this video on Why Your Agile Transformation
 Failed](https://www.youtube.com/watch?v=-wNH6YgZQtw), Jason Gorman illustrates
