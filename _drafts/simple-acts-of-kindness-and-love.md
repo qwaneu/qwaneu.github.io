@@ -9,12 +9,24 @@ author: Marc Evers, Willem van den Ende
 image: 
 ---
 
+Today we're writing about how simple acts improve feedback loops, which has a compounding effect in development teams over time. The title has literary inspiration: 
+
 > Saruman believes that it is only great power that can hold evil in check. But
 that is not what I have found. I have found it is the small things. Everyday
 deeds of ordinary folk that keeps the darkness at bay. Simple acts of kindness
 and love. -- Gandalf (J.R.R. Tolkien, The Hobbit)
 
-In [Maximizing Developer
+So why then, would we do this?
+
+> Kindness Eases Change
+
+by Olivia Butler, as quoted by [brainpickings](https://www.brainpickings.org/2020/08/23/octavia-butler-parable-leaders/) 
+
+## What does this mean for a developmer?
+
+We want to embrace change, without making our lives more difficult in the process.
+
+More specific for developers, in [Maximizing Developer
 Effectiveness](https://martinfowler.com/articles/developer-effectiveness.html),
 Tim Cochran writes about the importance of shortening feedback loops in
 development. Fast feedback is important for developers, to prevent waiting and
@@ -46,7 +58,7 @@ initially:
 - doing small improvements every day gets you in the habit of just doing these
   improvements; it will require less mental effort to think about them or decide
   to do it
-- growing a habit of doing many small improvement means that you get well versed
+- growing a habit of doing many small improvements means that you get well versed
   in doing it. This means that you will grow better at it over time, making it
   easier to do even more improvements
 - "learning to see" - the more you do the small improvements, the better you are
@@ -96,34 +108,44 @@ again, every hour, every day, multiply the impact of improvements
 
 So if we decide to spend our gained capacity on doing even more small
 improvements, we get a virtuous cycle. Over time, we reap more and more
-benefits. This means that by investing in the small improvements, we will create
+benefits. This means that by investing in these small improvements, we will create
 even more capacity over time, which will eventually also benefit delivery of
 features. If we decide to focus on features only, we don't get the increase and
 we keep on muddling through.
 
-In practice, we have to make trade-offs between time invested in small
-improvements and developing features. Still, as we persist in doing a stream of
-small improvements next to feature work, it will pay off eventually. The delayed
-payoff could make this hard to sell. 
+Getting used to making small improvements also lowers the barrier to experiment with subsequent improvements.
 
-## Example
+We have to make trade-offs between time invested in small
+improvements and developing features. When we persist in doing a stream of
+small improvements next to feature work, we will reap the benefits eventually. The delayed
+payoff can make this hard to sell though. 
 
-A team at a client that was maintaining multiple legacy systems was struggling
-with 'productivity' (at least in the eyes of their internal customers). Some of
-the code was 20 years old, and it was quite difficult to make changes in a
+
+## Examples
+
+A team at a client that maintained multiple legacy systems. They were struggling
+with 'productivity', at least in the eyes of their internal customers. Some of
+the code was twenty years old, and it was quite difficult to make changes in a
 responsible way. After some tough conversations with management and customers,
-they started allocating a fix budget per sprint to work on the legacy code, do
+they started allocating a fixed budget per sprint to work on the legacy code, do
 step by step improvements through refactoring. Initially this did not show any
-improvement (in a way they were even less productive for their customers because
-they allocated less time for customer work). On the longer term (1-2 years) the
+improvement. In a way they were even less productive for their customers because
+they allocated less time for customer work. On the longer term (1-2 years) the
 improvements had started to make a big differences, making it much easier,
 faster, cheaper to make new changes.
 
+A team at another client maintained a single legacy system that generated all of the revenue for the client. The client set up a separate team to develop a replacement system from a clean sheet design. Eventually one of us guided the new team in making small improvements (because, productivity and if you do a new thing using the same way of working as before, you'll get the same outcome). The original team saw that, and started to allocate fourty percent of their time to improvements. After half a year of doing that, the original team was going so fast, that the company kept the 'legacy' product and repurposed the new development for another market.
+
 ## Further reading & watching
 
-Ursula Le Guinn on male magicians like Gandalf (I know, I suggested Gandalf, and then inevitably something pops up in my twitter feed.)
+When we sourced the Gandalf quote, there was a lively discussion on twitter around Ursula Le Guinn's take on male magicians like Gandalf: 
+
+>The Gandalf model of wizardly power – the idea, dumbly replicated by J.K. Rowling’s Dumbledore, that asexual male mages hold the world in balance – was never compatible with Le Guin’s deep unease about overt expressions of power." As quoted in [It's not Jung, it's mine](https://www.lrb.co.uk/the-paper/v43/n02/colin-burrow/it-s-not-jung-s-it-s-mine)
+
+This is what led us to [Olivia Butlers' work](https://www.brainpickings.org/2020/08/23/octavia-butler-parable-leaders/) around leaders. 
 
 https://jessitron.com/2021/01/18/when-costs-are-nonlinear-keep-it-small/
+>This is a nonlinear relationship. The changes interact, and so batching them up increases the cost of the batch by more than the cost of the change you’re adding. Batching is less efficient.
 
 In [this video on Why Your Agile Transformation
 Failed](https://www.youtube.com/watch?v=-wNH6YgZQtw), Jason Gorman illustrates
