@@ -11,7 +11,7 @@ image: /attachments/blogposts/2021/tdd/0-1-N.jpg
 
 Where do we start when test-driving a new piece of code? All options are open,
 but we risk getting stuck because of the blank-piece-of-paper feeling. Because
-we want to take small steps towards the end result, use the 0, 1, N guideline:
+we want to take baby steps towards the end result, use the 0, 1, N guideline:
 we start with some 'zero' or edge case, then make it work for a single case,
 then generalize it to multiple cases.
 
@@ -38,7 +38,7 @@ Let's look at an example from our [Online Agile Fluency® Diagnostic
 application](/2020/09/25/hexagonal-frontend-example.html). This application
 supports a facilitator in running a workshop with a development team where team
 members fill in a survey. The facilitator can download the aggregated survey
-results - called a *Rollup* or Rollup Chart - in CSV format. The CSV contains a
+results - called a *Rollup* or Rollup Chart - in Comma Separated Values format. The CSV contains a
 line per survey question.
 
 To test drive the conversion from the Rollup and Survey domain objects to CSV,
@@ -161,7 +161,7 @@ baby steps.
 The 0, 1, N guidelines helps getting over that 'blank piece of paper' feeling,
 which is often the biggest hurdle to get started. You don't need to have a
 complete overview of all the next tests to write. You are likely to find more
-cases after you start,
+cases after you start.
 
 Starting with a negative case prevents you from only writing tests for the happy
 flow. It is often the smallest step you can take. Completing a step feels good

@@ -42,11 +42,13 @@ digraph G {
   Other -> PracticePracticePractice
   FocusOnRelevantData
   WhatIsAUnitTest
+  BabySteps -> ZeroOneN
   Defintions -> WhatIsAUnitTest
   Defintions -> WhatIsAHeuristic
   Other -> TestBehaviour
   TestBehaviour [label="Test Behaviour rather than state"]
-  Other -> ThankAndMoveOn
+  Other -> ThankAndMoveOn -> ZeroOneN [label="one occurrence documented"]
+  ScaffoldingTests -> ThankAndMoveOn [label="sometimes old scaffolding does not add value"]
   Other -> RulesForSimpleDesign
   TDDHeuristics -> WishfulThinking
   TDDHeuristics -> StartWithExpectation
