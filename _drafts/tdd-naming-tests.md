@@ -17,6 +17,12 @@ the object under test (in particular in a test report or when you look at your
 tests collapsed in your IDE). A good test name will also make the test more
 readable.
 
+
+@@for example based tests
+
+@@+spec based tests; examples from wereview, afdop frontend
+
+
 ![]() @@add screenshot of list of tests
 
 

@@ -4,17 +4,19 @@ Overzicht & werklijst van heuristics/guidelines
 **Guidelines & heuristics for TDD & (unit) tests**
 V [Think about design in the test](https://www.qwan.eu/2021/06/28/tdd-think-about-design-in-test.html)
 V [Wishful thinking](https://www.qwan.eu/2021/07/01/tdd-wishful-thinking.html)
-> 0, 1, N
+V [Start with expectation](https://www.qwan.eu/2021/07/05/tdd-start-with-expectation.html)
+V [0, 1, N](https://www.qwan.eu/2021/07/09/tdd-0-1-n.html)
 > Act stupid in implementation
 > Faking & Cheating
 ~ One (conceptual) assert per test
 ~ Given-When-Then (or Arrange-Act-Assert)
 ~ Test name describes the action and the expected result
-- Triangulation
+~ Triangulation
 - (new) Removing duplication between test & production code
-- Make the change easy, then make the change (refactor after and before)
+- (new) Make the change easy, then make the change (refactor after and before)
 - Test cases follow common setup
 - Take as much care for test code as you do for production code
+- (new) Glanceable tests
 - Tests are independent - always start from a clean slate
 - No more than one failing test at a time
 - Fix one failing test at a time
