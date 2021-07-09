@@ -32,6 +32,13 @@ V [TDD still relevant in 2021](https://www.qwan.eu/2021/06/24/tdd-still-relevant
 - Sometimes we thank a test for its' service and move on
 - Test behaviour rather than state
 
+- simple acts of kindness and love
+  Is gerelateerd, maar gaat niet direct over TDD. mischien in een post naar verwijzend.
+  - elke test first is zo'n small act
+  - refactoring, renaming zijn small acts
+  - je CI verbeteren zodat je tests het laten falen is a small act
+  - fix one failing test at a time is one 
+
 Principles?
 - YAGNI
 - OAOO, DRY
