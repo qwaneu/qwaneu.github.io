@@ -41,6 +41,19 @@ in there.
 This heuristic helps thinking Given-When-Then: the test name gives a summary 
 of the When and the Then.
 
+## notes
+
+show some spec based tests.
+Side note: when the set up is extracted out (in purescript or haskell often injected in) it might not be that useful. In some languages we can move the order of our expectation/assert function, so that it can go in the middle of a sentence. If the test is glanceable, the string above it may be reduntant.
+
+@@example from WeReview
+
+actual `shouldEqual` expected
+
+(side note, might be separate post This struck me first in some property based tests, where it was really hard to give the test a name, but after extractions, the test itself was quite simple).
+
+Post needed: glanceable tests.
+
 ## Further reading
 
 @@meer!
