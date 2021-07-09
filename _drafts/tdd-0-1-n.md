@@ -38,8 +38,8 @@ Let's look at an example from our [Online Agile Fluency® Diagnostic
 application](/2020/09/25/hexagonal-frontend-example.html). This application
 supports a facilitator in running a workshop with a development team where team
 members fill in a survey. The facilitator can download the aggregated survey
-results - called a *Rollup* or Rollup Chart - in Comma Separated Values format. The CSV contains a
-line per survey question.
+results - called a *Rollup* or Rollup Chart - in Comma Separated Values format.
+The CSV contains a line per survey question.
 
 To test drive the conversion from the Rollup and Survey domain objects to CSV,
 we start with the zero case: no survey questions. This should return a CSV with
@@ -53,13 +53,10 @@ class TestMappingRollupToCSV:
                                  facilitator_name='the facilitator',
                                  team='Team')
 
-    assert as_rollup_csv(rollup) == dedent('''\
-          id,question,zone,consensus,consensus value''')
+    assert as_rollup_csv(rollup) == 'id,question,zone,consensus,consensus value'
 ```
 
-The function as_rollup_csv is the code-under-test. The Python `dedent` function
-is just for convenience, it removes leading and trailing spaces and preserves
-line breaks, so that we can layout our expected value in a more readable way.
+The function `as_rollup_csv` is the code-under-test. 
 
 We make this test work by implementing just the bare minimum:
 
@@ -91,6 +88,9 @@ For the Rollup to CSV conversion, we add a test for a single survey question:
             id,question,zone,consensus,consensus value
             A,"one,two,three",optimizing,,''')
 ```
+
+The Python `dedent` function is just for convenience, it removes leading spaces,
+and allows us to write our expected value in a more readable way.
 
 We update the production code, but again we don't do more than strictly necessary. We only make it work for the first question in the list.
 
