@@ -185,7 +185,7 @@ patterns in the [Test Driven Development, By Example](https://www.oreilly.com/li
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
 
 <aside>
-  <p>Join us for one of our Test Driven Development courses. 
+  <p>Clients often first send zero participants to our courses. Then they send one, then N. We have TDD open enrollment courses scheduled for the fall, have a look! 
   </p>
   <p><div>
     <a href="/training/test-driven-development">Find out more</a>
