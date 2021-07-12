@@ -17,7 +17,7 @@ to get the test to pass, and to remind us to write the next test case.
 {: class="post-image post-image-50" }
 
 Making a test pass by faking or cheating, for example by returning the expected
-value as a constant, is an example of [acting stupid in implementation](/@@). In
+value as a constant, is an example of [acting dumb in implementation](/@@). In
 TDD cheating is allowed, we even recommend it! If you can get away with faking,
 it means you need another test case to force yourself to write a more generic
 implementation.
