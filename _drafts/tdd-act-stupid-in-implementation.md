@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "TDD Heuristics: Act stupid in implementation"
+title: "TDD Heuristics: Act Stupid in Implementation"
 tags:
   - test driven development
   - feedback
   - eXtreme Programming
 author: Marc Evers, Willem van den Ende, Rob Westgeest
-image: 
+image: /attachments/blogposts/2021/tdd/act-stupid.jpg
 ---
 
 When we have written a failing test, we try to make it work in the simplest
@@ -18,6 +18,9 @@ and straightforward. We do the bare minimum to make the test green, not even the
 tiniest bit more. We don't write complicated code or conditionals to make the
 test pass. If we would need complicated code, it's simpler and better to use the
 proper (but still simple) implementation instead.
+
+![act stupid in implementation - person shrugging](/attachments/blogposts/2021/tdd/act-stupid.jpg)
+{: class="post-image post-image-50" }
 
 ## Example
 
