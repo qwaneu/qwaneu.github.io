@@ -23,6 +23,7 @@ V [0, 1, N](https://www.qwan.eu/2021/07/09/tdd-0-1-n.html)
 - What is a unit test?
 - (new) Mirroring
 - (new) Focus on relevant data (TDD by example: "Evident data")
+- start with a negative case (zit in [0, 1, N])
 
 - What is a heuristic
  - http://wirfs-brock.com/blog/2019/03/20/growing-your-personal-design-heuristics/
