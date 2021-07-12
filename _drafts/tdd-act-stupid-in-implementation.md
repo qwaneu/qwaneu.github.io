@@ -10,7 +10,7 @@ image: /attachments/blogposts/2021/tdd/act-stupid.jpg
 ---
 
 When we have written a failing test, we try to make it work in the simplest
-possible way - _do the simplest thing that could possibly work_. Cheating and
+possible way - _do the simplest thing that could possibly work_. We prefer baby steps, so at each step we understand precisely what we are doing, even if we have not solved the whole problem yet.Cheating and
 faking are allowed.
 
 We act stupid in implementation. With 'stupid' we mean keeping it very simple
@@ -52,7 +52,7 @@ class VendingMachine {
 ```
 
 The `==` is sufficient to make our test pass, even though we know that
-eventually we need a '>='. We don't have a test for this case yet however, so we
+we will need a '>=' eventually. We don't have a test for this case yet @@babysteps, so we
 go for the simpler equality. In this way, we know that we have to write a new
 test, for instance _delivers drink when paid more than the price_.
 
@@ -64,7 +64,7 @@ tend to end up with a simpler and more elegant solution than we initially
 imagined. As developers we tend to be good thinking up complicated solutions and
 handling these, this guideline helps us to arrive at simpler code.
 
-By taking the small steps, we force ourselves to add tests for edge cases. We
+By taking small steps, we force ourselves to add tests for edge cases. We
 know that `==` is not good enough, so we write an extra test that will fail
 initially. It is the path of least resistance towards covering both happy paths
 and edge scenarios.
@@ -74,8 +74,7 @@ boundaries correct. The _Act Stupid in Implementation_ guideline helps us
 getting this right. It saved us a lot of issues.
 
 _Act Stupid in Implementation_ works well in a 'ping-pong' pair programming
-setting, where one writes the test, and the other tries to get away with as
-little code as possible to make it pass. 
+setting, where one person writes the test, and the other tries to get away with writing the bare minimum amount code needed to make the test pass. This is great fun to do, and really sharpens our sense for what is minimal.
 
 ## Further reading
 
