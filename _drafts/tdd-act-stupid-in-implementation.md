@@ -9,10 +9,11 @@ author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: 
 ---
 
-When making it work, _do the simplest thing that could possibly work_ in
-production code, so that the test will pass. Cheating and faking are allowed.
+When we have written a failing test, we try to make it work in the simplest
+possible way - _do the simplest thing that could possibly work_. Cheating and
+faking are allowed.
 
-We act stupid in implementation. With 'Stupid' we mean keeping it very simple
+We act stupid in implementation. With 'stupid' we mean keeping it very simple
 and straightforward. We do the bare minimum to make the test green, not even the
 tiniest bit more. We don't write complicated code or conditionals to make the
 test pass. If we would need complicated code, it's simpler and better to use the
@@ -20,47 +21,56 @@ proper (but still simple) implementation instead.
 
 ## Example
 
-Another example for our drinks vending machine: it delivers a drink when you
-have paid the exact price. To make a test for this case pass, we will need some
-comparison. We prefer to start with just checking equality and not add
-greater/lesser than yet, although we will need that eventually.
-
+Let's look at another example from the drinks vending machine we mentioned
+earlier. We write a test for: the vending machine delivers a drink when you have
+paid the exact price. 
 ```java
-public void deliversWhenPaid() {
+@Test
+public void deliversWhenPaidExactAmount() {
   ...
   machine.pay(1);
   assertThat(machine.deliver(Choice.Cola), is(expectedItem));
 }
+```
 
+To make this test pass, we need to perform some comparison. Maybe you're
+thinking of something like checking if the amount paid is less than or equal to
+the price of the drink, but we prefer to start with just checking equality.
+
+```java
 class VendingMachine {
   public Optional<Can> deliver(Choice choice) {
     ...
-    if (amountPaid == price) { // not >=, unless we have a test that demands it!
+    if (amountPaid == price) {
       ...
     }
   }
 }
 ```
 
-This feels awkward, because we write almost nothing. We 'know' what the
-implementation should be; we know that we eventually should have a greater than
-or equal operator here. But we don't have a test for this case yet, so we go for
-the slightly simpler equality.
+The `==` is sufficient to make our test pass, even though we know that
+eventually we need a '>='. We don't have a test for this case yet however, so we
+go for the simpler equality. In this way, we know that we have to write a new
+test, for instance _delivers drink when paid more than the price_.
 
 ## Effects
 
-Even though we often think we already know the 'proper' solution, we still apply
-this guideline to take baby steps towards our goals. We noticed that we often
-end up with a simpler and more elegant solution than we initially imagined. As
-developers we tend to be good thinking up complicated solutions and handling
-these, this guideline helps us to arrive at simpler code.
+Even though we often have the 'proper' solution already in our heads, we still
+apply this guideline to take baby steps towards our goals. We noticed that we
+tend to end up with a simpler and more elegant solution than we initially
+imagined. As developers we tend to be good thinking up complicated solutions and
+handling these, this guideline helps us to arrive at simpler code.
 
 By taking the small steps, we force ourselves to add tests for edge cases. We
-know that the == is not good enough, so we write an extra test (_delivers item
-when paid too much_) that will fail initially. It is the path of least
-resistance towards covering both happy paths and edge scenarios.
+know that `==` is not good enough, so we write an extra test that will fail
+initially. It is the path of least resistance towards covering both happy paths
+and edge scenarios.
 
-Acting Stupid in Implementation works well in a 'ping-pong' pair programming
+We are notoriously bad at getting our comparators right and getting the -1/+1
+boundaries correct. The _Act Stupid in Implementation_ guideline helps us
+getting this right. It saved us a lot of issues.
+
+_Act Stupid in Implementation_ works well in a 'ping-pong' pair programming
 setting, where one writes the test, and the other tries to get away with as
 little code as possible to make it pass. 
 
@@ -89,7 +99,7 @@ wiki](http://c2.com/xp/DoTheSimplestThingThatCouldPossiblyWork.html):
 > -   The code is easier to performance tune Or, at least, there will be more scope for tuning performance
 > -   You feel less stress, which enhances all of the above 
 
-@@ https://www.artima.com/articles/the-simplest-thing-that-could-possibly-work ?
+Read more about the [Simplest Thing That Could Possibly Work](https://www.artima.com/articles/the-simplest-thing-that-could-possibly-work)
 
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
 
