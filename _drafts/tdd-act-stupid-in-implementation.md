@@ -62,7 +62,7 @@ Even though we often have the 'proper' solution already in our heads, we still
 apply this guideline to take baby steps towards our goals. We noticed that we
 tend to end up with a simpler and more elegant solution than we initially
 imagined. As developers we tend to be good thinking up complicated solutions and
-handling these, this guideline helps us to arrive at simpler code.
+handling these, this guideline helps us to arrive at simpler code. Which also gives us less to handle later on.
 
 By taking small steps, we force ourselves to add tests for edge cases. We
 know that `==` is not good enough, so we write an extra test that will fail
@@ -78,13 +78,13 @@ setting, where one person writes the test, and the other tries to get away with 
 
 ## Further reading
 
-The [Do the simplest thing that could possibly
-work](https://ronjeffries.com/xprog/articles/practices/pracsimplest/) rule@@
+[Do the simplest thing that could possibly
+work](https://ronjeffries.com/xprog/articles/practices/pracsimplest/) rule@@ ?
 originates from eXtreme Programming. This rule focuses on radical simplicity in
 your code. By keeping it in mind, you intend to refrain from thinking ahead of
 all kinds of possible scenarios and creating generic solutions. 
 
-By keeping the code as simple as possible (and working), we don't code ourselves
+By keeping the working code as simple as possible, we don't code ourselves
 into a corner. On the contrary, we keep more options open because there is less
 code getting in the way when we need to change it later on.
 
@@ -106,9 +106,9 @@ Read more about the [Simplest Thing That Could Possibly Work](https://www.artima
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
 
 <aside>
-  <p>Join us for one of our Test Driven Development courses. Deliberate practice and learning by doing may make your wishes come true..
+  <p>Be smart, act stupid in implementation! Join us for a Test Driven Development course. Deliberate practice and learning by doing may make your wishes come true...
   </p>
   <p><div>
-    <a href="/training/test-driven-development">Find out more</a>
+    <a href="/training/test-driven-development">Check availability</a>
   </div></p>
 </aside>
