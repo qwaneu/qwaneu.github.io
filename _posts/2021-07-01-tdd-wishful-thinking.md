@@ -124,7 +124,12 @@ Learn more about BDD and formulating tests through the recently published book [
 
 We use [Interaction diagrams](https://en.wikipedia.org/wiki/Unified_Modeling_Language#Interaction_diagrams) sparingly. If we do use them while writing tests we find the [sequence diagram](https://en.wikipedia.org/wiki/Sequence_diagram) on a napkin or whiteboard useful. Especially with potentially complicated interactions or mock objects.
 
+Elisabeth Hendrickson wrote a post about Wishful Thinking and Test Driven
+Development - [The Long Way is Shorter](https://www.curiousduck.io/the-long-way-is-shorter/)
+
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
+
+_Updated 13-07-2021: added a link to Elisabeth's wishful thinking post_
 
 <aside>
   <p>Learn Wish Driven Development (WDD) and join us for one of our Test Driven Development courses. Deliberate practice and learning by doing may make your wishes come true..
