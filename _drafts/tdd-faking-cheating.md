@@ -17,9 +17,10 @@ to get the test to pass, and to remind us to write the next test case.
 {: class="post-image post-image-50" }
 
 Making a test pass by faking or cheating, for example by returning the expected
-value as a constant, is an example of [acting dumb in implementation](/@@). In
-TDD cheating is allowed, we even recommend it! If you can get away with faking,
-it means you need another test case to force yourself to write a more generic
+value as a constant, is an example of [acting dumb in
+implementation](/2021/07/12/tdd-act-dumb-in-implementation.html). In TDD
+cheating is allowed, we even recommend it! If you can get away with faking, it
+means you need another test case to force yourself to write a more generic
 implementation.
 
 Faking might feel weird at the beginning, but it helps to proceed towards your 
@@ -32,8 +33,8 @@ corner.
 ## Example 
 
 Let's take another look at the CSV conversion code we looked at in the [0, 1, N
-post](/@@). We were test driving the conversion from aggregated survey results (
-represented by Rollup domain object) to CSV.
+post](/2021/07/09/tdd-0-1-n.html). We were test driving the conversion from
+aggregated survey results (represented by Rollup domain object) to CSV.
 
 We wrote a test for a survey with a single question, which should result in a
 single line in the CSV (after the header line):
