@@ -78,6 +78,8 @@ The Given-When-Then way of writing scenarios comes from Dan North and Chris
 Matts, who [introduced the concept of Behaviour Driven Development
 (BDD)](https://dannorth.net/introducing-bdd/) in the early 2000s. 
 
+@@ [Specification by Example](https://gojko.net/books/specification-by-example/) by Gojko Adzic
+
 @@ Cucumber/Formulation link?
 
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
