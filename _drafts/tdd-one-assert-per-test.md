@@ -12,22 +12,48 @@ image:
 We do not like long test scenarios with loads of different asserts. 
 A test case having many expectations is difficult to understand when it fails.
 
-> ![assertsMany.jpg](assertsMany.jpg){width=180px}\  
+![assertsMany.jpg](/attachments/blogposts/2021/tdd/assertsMany.jpg)
+{: class="post-image post-image-50" }
 
-A test should have one (and only one) reason to fail. For each mistake,
-only one test should fail.
+Our guideline is that a test should have one (and only one) reason to fail. Per
+test we have a single assert or expectation. Sometimes it is more convenient to
+have a few asserts, e.g. asserting multiple properties of the same thing. We
+tend to regard this as conceptually one assert.
 
-> ![oneassert.png](oneassert.png){width=180px}\  
+![oneassert.png](/attachments/blogposts/2021/tdd/oneassert.png)
+{: class="post-image post-image-50" }
 
-Test one thing per test:
+## Example 
+
+Let's look at an example in Java, from some order processing application.
 
 ```java
 public void savesOrderAndNotifiesOwnerIfPaid() {
-  // this test asserts different behaviours:
+  var order = aValidOrder()
+                .with(aValidOrderItem("book").withPrice(20).build())
+                .thatIsOpen()
+                .build();
+  var repository = mock(Orders.class);
+  var notifier = mock(Notifier.class);
+  var checkout = new CheckoutOrder(repository, notifier);
+  checkout.execute(order);
   verify(repository).save(order);
   verify(notifier).notify("owner@x.com", orderNumber)
 }
+```
 
+This test asserts (using Mockito mocks) that an order is saved in the repository
+and that a notification is sent out, using `notifier` - two quite different
+expected outcomes.
+
+This test might not look problematic at first, but it is still a bit harder to
+read and a bit more work when it would fail. In this case the test name already
+hints we are covering two aspects here, but sometimes asserting multiple things
+makes it hard to provide a meaningful name or description.
+
+We prefer to split up this test into two separate tests.
+
+```java
 // Preferably, we split them up:
 public void savesOrderIfPaid() {
   ....
@@ -39,6 +65,46 @@ public void notifiesOwnerIfPaid() {
 }
 ```
 
+We make sure our tests run fast, so an extra test won't affect our feedback loop
+negatively. Using [test data builders]() like we are doing here enables us to
+keep the setup per test short and explicit.
+
+We have seen worse examples of multiple asserts per test
+
+@@example of a wandering test
+
+If this test fails, it will take some effort to find out why it failed. We have
+to trace the whole scenario up to the failing assert. The test name or
+description won't help us much here. A wandering test like this hampers the
+quick feedback loop from our automated tests.
+
+What can we do about this test? Again, splitting is the magic word here, and
+applying the Given-When-Then pattern: each assert is a 'then', with a
+corresponding 'when' just before it. We pull out the then+when into a separate
+test, and set up the object under test in the appropriate state. Again, test
+data builders can be very helpful here.
+
+@@ example of an extracted test
+
+## Effects
+
+Thinking 'one (conceptual) assert per test' helps us to create short, focused tests that will provide specific feedback when failing.
+
+Focusing on a single assert will help us see code that is doing too much: this
+issue might not be that the test wants to assert two things, but the fact that
+the code under test is doing two things. Can/should we refactor the code?
+
 ## Further reading
 
-The One Assertion Per Test rule was originally coined by eXtreme Programmer Dave Astels (of RSpec fame) back in 2004 https://www.artima.com/weblogs/viewpost.jsp?thread=35578
+The One Assertion Per Test rule was originally coined by eXtreme Programmer Dave Astels (of [RSpec](https://rspec.info/) fame) [back in 2004](https://www.artima.com/weblogs/viewpost.jsp?thread=35578).
+
+
+_This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
+
+<aside>
+  <p>Join us for one of our Test Driven Development courses. 
+  </p>
+  <p><div>
+    <a href="/training/test-driven-development">Find out more</a>
+  </div></p>
+</aside>
