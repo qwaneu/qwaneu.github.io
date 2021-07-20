@@ -87,11 +87,11 @@ us from introducing logic that we don't need yet - or that we don't need anyway.
 Because faking helps to keep the code simple, it enables us to work at a higher
 pace - more faster test-fail-code-refactor cycles.
 
-Struggling with the awkward feeling? A different way of looking at faking and
-cheating, like returning a constant value, is that we initially provide a very
-specific implementation, which we generalize later on. The fake is correct
-behaviour, but correct for a very limited scope only. It's too specific, but
-good enough as a baby step towards our goal.
+Struggling with that awkward feeling? A different way of looking at faking and
+cheating is that we initially provide a very specific implementation, which we
+generalize later on. The fake is correct behaviour, but correct for a very
+limited scope only. It is too specific, but good enough as a baby step towards
+our goal.
 
 ## Further reading
 
@@ -99,12 +99,14 @@ In [Test Driven Development, By
 Example](https://www.oreilly.com/library/view/test-driven-development/0321146530/),
 Kent Beck introduced the _Fake It ('Til You Make It)_ pattern.
 
+We have made exensive use of The Simplest Thing That Could possibly work in [Act dumb in implementation](/2021/07/12/tdd-act-dumb-in-implementation.html).
+
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
 
 <aside>
-  <p>Stop faking TDD and learn it the proper way! Join us for one of our Test Driven Development courses. 
+  <p>Faking makes more sense when you practice it. Join us for a Test Driven Development course in the fall.
   </p>
   <p><div>
-    <a href="/training/test-driven-development">Find out more</a>
+    <a href="/training/test-driven-development">Check availability</a>
   </div></p>
 </aside>
