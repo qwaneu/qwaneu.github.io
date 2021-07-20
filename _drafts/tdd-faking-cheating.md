@@ -32,10 +32,10 @@ corner.
 
 ## Example 
 
-Let's take another look at the Comma Separated Values conversion code we looked
-at in the [0, 1, N post](/2021/07/09/tdd-0-1-n.html). We were test driving the
-conversion from aggregated survey results (represented by Rollup domain object)
-to CSV.
+Let's take another look at the Comma Separated Values (CSV) conversion code we
+looked at in the [0, 1, N post](/2021/07/09/tdd-0-1-n.html). We were test
+driving the conversion from aggregated survey results (represented by Rollup
+domain object) to CSV.
 
 We wrote a test for a survey with a single question, which should result in a
 single line in the CSV (after the header line):
@@ -70,14 +70,12 @@ faking like this feels awkward, it urges us to do something about it.
 
 There are two other techniques to resolve this that we use often use: 
 
-- _Triangulation_: Generalize based on two or more examples (but no less). We can write a next test that will force us to generalize the code.
+- _Triangulation_: generalize based on two or more examples (but no less). We can write a next test that will force us to generalize the code.
+- _Remove duplication beween code and test_: we can see it as a matter of
+  duplication between the test code and the production code. The question values
+  are both in the setup code of the test and in the fake production code. 
 
-
-- _Remove duplication beween code and test_: We can see this as a matter of duplication
-between the test code and the production code: the question values are both in
-the setup code of the test and in the fake production code. 
-
-We will explain these later in this [series](/blog-by-tag#tag-test-driven-development).
+We will explain these later in this [series on Test Driven Development](/blog-by-tag#tag-test-driven-development).
 
 ## Effects
 
@@ -99,7 +97,7 @@ In [Test Driven Development, By
 Example](https://www.oreilly.com/library/view/test-driven-development/0321146530/),
 Kent Beck introduced the _Fake It ('Til You Make It)_ pattern.
 
-We have made exensive use of The Simplest Thing That Could possibly work in [Act dumb in implementation](/2021/07/12/tdd-act-dumb-in-implementation.html).
+We have made extensive use of _The Simplest Thing That Could Possibly Work_ in [Act dumb in implementation](/2021/07/12/tdd-act-dumb-in-implementation.html).
 
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
 
