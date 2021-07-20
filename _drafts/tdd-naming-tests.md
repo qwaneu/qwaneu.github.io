@@ -32,7 +32,10 @@ test to be sure.
 ```python
 class TestSignIn:
   def test_no_password(self):
-    ...
+    facilitator = aValidFacilitator(email='henk@qwan.eu', hashed_password=None)
+    assert_that(facilitator.authenticate('pwd', PasswordHasher()), 
+      equal_to(Failure(message='Password mismatch for \'{}\''.format(anonymize('henk@qwan.eu')))))
+
   def test_no_match(self):
     ...
   def test_blocked(self):
@@ -50,15 +53,9 @@ Applying the _Test name describes action and expected result_ heuristic, we get 
 
 ```python
 class TestSignIn:
-  @pytest.fixture(autouse=True)
-  def setup(self):
-    self.hasher = PasswordHasher()
-    self.facilitator = aValidFacilitator(email='henk@qwan.eu', 
-                                         hashed_password=self.hasher.hash('Str0ngP@ssw0rd'))
-
   def test_fails_when_facilitator_does_not_have_a_password_yet(self):
     facilitator = aValidFacilitator(email='henk@qwan.eu', hashed_password=None)
-    assert_that(facilitator.authenticate('pwd', self.hasher), 
+    assert_that(facilitator.authenticate('pwd', PasswordHasher()), 
       equal_to(Failure(message='Password mismatch for \'{}\''.format(anonymize('henk@qwan.eu')))))
 
   def test_fails_when_password_does_not_match(self):
@@ -72,13 +69,11 @@ class TestSignIn:
 ```
 
 Testing frameworks that use a spec based format provide more options to use
-descriptions for test. They also allow for grouping test and providing a
-description for the group of tests. Here's an example from the front end code of
-our [Online Agile Fluency® Diagnostic
-application](/2020/09/25/hexagonal-frontend-example.html). The front end
-component has a Facilitator domain class representing the facilitator of a
-workshop. The behaviour of Facilitator includes validating inputs like this
-excerpt shows:
+descriptions for test. They allow for grouping tests and providing a
+description for a group of tests. Here's another example from the Online Agile
+Fluency® Diagnostic application, from the front end component this time. It has
+a Facilitator domain class representing the facilitator of a workshop. The
+behaviour of Facilitator includes validating inputs:
 
 ```js
 describe('Facilitator', () => {
@@ -105,7 +100,7 @@ way invalid.
 Test names can sometimes feel superflous. If the test implementation is self
 explanatory. Does the name of the test add much in the following code?
 
-``` purescript
+```haskell
  describe "Home route" do
     it "parsed from forward slash" do
        (match "/") `shouldEqual` Home
@@ -116,8 +111,10 @@ second reading, the name alludes to 'parsing', which is a concern that is not
 necessarily obvious from the test body. But '/' being equal to the home route in
 a web application is common knowledge in the domain. 
 
-In the context of the test's implementation, this name does not add much, but there is a context in which it is very helpful: the IDE or CI pipeline. Good, descriptive names for tests help create an overview of
-all tests. The overview becomes a kind of behaviour specification of the code.
+In the context of the test's implementation, this name does not add much, but
+there is a context in which it is very helpful: the IDE or CI pipeline. Good,
+descriptive names for tests help create an overview of all tests. The overview
+becomes a kind of behaviour specification of the code.
 
 ![IDE showing a list of successful tests, which reads as a kind of specification](/attachments/blogposts/2021/tdd/tests-as-spec-in-ide.png)
 {: class="post-image" }
@@ -161,36 +158,37 @@ sentence.
 
 If the test is glanceable, the heading above the test body may be redundant. We
 will write more about _glanceable tests_ in a future post, here is a small
-example from the [WeReview](https://wereviewhq.com) product, a conference session management system we
-have developed:
+example from the [WeReview](https://wereviewhq.com) product, a conference
+session management system we have developed (written in [PureScript](https://www.purescript.org/)):
 
-
-``` purescript
+```haskell
  describe "A Place" do
    describe "validation" do
      it "passes when no field is empty" do
        shouldPassValidation noEmptyFields
 ```
 
-Glanceable tests need good naming for their headings, as well as thoughtful refactoring of the bodies. 
+Glanceable tests need good naming for their headings, as well as thoughtful
+refactoring of the bodies. 
 
 ## Further reading
-
-@@meer!
 
 [Specification by Example](https://gojko.net/books/specification-by-example/) by Gojko Adzic
 
 [Behaviour Driven Development (BDD)](https://dannorth.net/introducing-bdd/)
 
-For more inspiration, also take a look at RSpec - [rspec.info](http://rspec.info/)
+For more inspiration, also take a look at [RSpec](http://rspec.info/).
 
+WeReview is used by Software Acumen to organize conferences like the upcoming
+[Lean Agile Exchange](https://www.leanagileexchange.net/) (online, 21-22 October
+2021)
 
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
 
 <aside>
-  <p>Stop faking TDD and learn it the proper way! Join us for one of our Test Driven Development courses. 
+  <p>Join us for one of our Test Driven Development courses. 
   </p>
   <p><div>
-    <a href="/training/test-driven-development">Find out more</a>
+    <a href="/training/test-driven-development">Check availability</a>
   </div></p>
 </aside>
