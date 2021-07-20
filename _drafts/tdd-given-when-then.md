@@ -6,28 +6,51 @@ tags:
   - feedback
   - eXtreme Programming
 author: Marc Evers, Willem van den Ende, Rob Westgeest
-image: 
+image: /attachments/blogposts/2021/tdd/gwt.png
 ---
 
-How do I structure my tests, so that they are understable and focused on the behaviour of the system under test?
+How do I structure my tests, so that they are understable and focused on the
+behaviour of the system under test?
 
 Given-When-Then and Arrange-Act-Assert are two similar ways of structuring your
 test cases to make them easier to understand at a glance. This test structure
 also helps to keep your test focused on a single concern.
 
-_Given_ a state or situation (which you set up in the test)
-
-_When_ I do something or an event happens 
-
-_Then_ I expect an outcome (assert) or interaction between collaborators (mock verify)
+<div class="shout-out">
+  <div>
+    <img src="/attachments/blogposts/2021/tdd/gwt.png" alt="letters: G W T">
+  </div>
+  <div>
+<p style="text-align: left; padding-bottom: 0.3em;">
+<strong>Given</strong> a state or situation (which you set up in the test)
+</p>
+<p style="text-align: left; padding-bottom: 0.3em;">
+<strong>When</strong> I do something or an event happens 
+n </p>
+<p style="text-align: left; padding-bottom: 0.3em;">
+<strong>Then</strong> I expect an outcome (assert) or interaction between collaborators (mock verify)
+</p>
+  </div>
+</div>
 
 Or
 
-_Arrange_ a state or situation
-
-_Act_ to do something or trigger an event
-
-_Assert_ the expected outcome or collaborator interaction
+<div class="shout-out">
+  <div>
+    <img src="/attachments/blogposts/2021/tdd/aaa.png" alt="letters: A A A">
+  </div>
+  <div>
+<p style="text-align: left; padding-bottom: 0.3em;">
+<strong>Arrange</strong> a state or situation (which you set up in the test)
+</p>
+<p style="text-align: left; padding-bottom: 0.3em;">
+<strong>Act</strong> to do something or an event happens 
+n </p>
+<p style="text-align: left; padding-bottom: 0.3em;">
+<strong>Assert</strong> the expected an outcome collaborator interaction
+</p>
+  </div>
+</div>
 
 Given-When-Then originates from Behaviour Driven Development. Thinking
 Given-When-Then helps to think in terms of behaviour rather than internal state.
@@ -63,11 +86,13 @@ in a test. They keep us from having our tests wandering around.
 
 The behaviour-focus of Given-When-Then nudges us towards seeing the thing we're
 testing (whether it's an object, module, system) more as a black box. This helps
-prevent tests highly coupled to implementation details.
+prevent tests highly coupled to implementation details. Given-When-Then helps a
+bit more here than Act-Arrange-Assert, which is a bit more focused on the
+mechanics of the test.
 
 The patterns are also suitable for formulating acceptance test scenarios, and
 help involve everyone in the conversation - developers, testers, product owner,
-...
+etc.
 
 ## Further reading
 
@@ -78,9 +103,9 @@ The Given-When-Then way of writing scenarios comes from Dan North and Chris
 Matts, who [introduced the concept of Behaviour Driven Development
 (BDD)](https://dannorth.net/introducing-bdd/) in the early 2000s. 
 
-@@ [Specification by Example](https://gojko.net/books/specification-by-example/) by Gojko Adzic
+[Specification by Example](https://gojko.net/books/specification-by-example/) by Gojko Adzic
 
-@@ Cucumber/Formulation link?
+[The BDD Books - Formulation, Document examples with Given/When/Then](https://leanpub.com/bddbooks-formulation) by Seb Rose and Gáspár Nagy
 
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
 

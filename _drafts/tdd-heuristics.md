@@ -13,10 +13,10 @@ V Faking & Cheating
 > Test name describes the action and the expected result
 ~ Triangulation
 - (new) Removing duplication between test & production code
+~ (new) Glanceable tests
 - (new) Make the change easy, then make the change (refactor after and before) source: Kent Beck
 - Test cases follow common setup
 - Take as much care for test code as you do for production code
-- (new) Glanceable tests
 - Tests are independent - always start from a clean slate
 - No more than one failing test at a time
 - Fix one failing test at a time
