@@ -13,7 +13,7 @@ V Act dumb in implementation
 ~ Test name describes the action and the expected result
 ~ Triangulation
 - (new) Removing duplication between test & production code
-- (new) Make the change easy, then make the change (refactor after and before)
+- (new) Make the change easy, then make the change (refactor after and before) source: Kent Beck
 - Test cases follow common setup
 - Take as much care for test code as you do for production code
 - (new) Glanceable tests
@@ -24,6 +24,7 @@ V Act dumb in implementation
 - (new) Mirroring
 - (new) Focus on relevant data (TDD by example: "Evident data")
 - start with a negative case (zit in [0, 1, N])
+- (new) Composed Method, for tests / everything at same level of abstraction
 
 - What is a heuristic
  - http://wirfs-brock.com/blog/2019/03/20/growing-your-personal-design-heuristics/
