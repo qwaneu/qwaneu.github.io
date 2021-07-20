@@ -102,11 +102,22 @@ contains information on any validation errors, currently represented by e.g.
 `emailMissing` which means that the email attribute is missing or in some other
 way invalid.
 
-@@+examples from wereview
+Test names can sometimes feel superflous. If the test implementation is self
+explanatory. Does the name of the test add much in the following code?
 
-A benefit of choosing good, descriptive names for tests is that the overview of
-all tests, e.g. when running your tests from an IDE, becomes a kind of behaviour
-specification of the code.
+``` purescript
+ describe "Home route" do
+    it "parsed from forward slash" do
+       (match "/") `shouldEqual` Home
+```
+
+I find the (match "/") `shouldEqual` Home clearer than the name. Although, on
+second reading, the name alludes to 'parsing', which is a concern that is not
+necessarily obvious from the test body. But '/' being equal to the home route in
+a web application is common knowledge in the domain. 
+
+In the context of the test's implementation, this name does not add much, but there is a context in which it is very helpful: the IDE or CI pipeline. Good, descriptive names for tests help create an overview of
+all tests. The overview becomes a kind of behaviour specification of the code.
 
 ![IDE showing a list of successful tests, which reads as a kind of specification](/attachments/blogposts/2021/tdd/tests-as-spec-in-ide.png)
 {: class="post-image" }
@@ -146,13 +157,22 @@ When we extract the set up code and other parts of the test out into functions,
 this heuristic can become less useful. If we can make the test itself short and
 glanceable, the test becomes self-evident. In some languages we can move the
 order of our expectation function, so that it can go in the middle of a
-sentence. If the test is glanceable, the string above it may be redundant. We
+sentence. 
+
+If the test is glanceable, the heading above the test body may be redundant. We
 will write more about _glanceable tests_ in a future post, here is a small
-example from the WeReview project, a conference session management system we
+example from the [WeReview](https://wereviewhq.com) product, a conference session management system we
 have developed:
 
-@@example from WeReview
-actual `shouldEqual` expected
+
+``` purescript
+ describe "A Place" do
+   describe "validation" do
+     it "passes when no field is empty" do
+       shouldPassValidation noEmptyFields
+```
+
+Glanceable tests need good naming for their headings, as well as thoughtful refactoring of the bodies. 
 
 ## Further reading
 
