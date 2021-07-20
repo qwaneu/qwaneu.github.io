@@ -7,7 +7,7 @@ V [Wishful thinking](https://www.qwan.eu/2021/07/01/tdd-wishful-thinking.html)
 V [Start with expectation](https://www.qwan.eu/2021/07/05/tdd-start-with-expectation.html)
 V [0, 1, N](https://www.qwan.eu/2021/07/09/tdd-0-1-n.html)
 V Act dumb in implementation
-> Faking & Cheating
+V Faking & Cheating
 ~ Given-When-Then (or Arrange-Act-Assert)
 ~ One (conceptual) assert per test
 ~ Test name describes the action and the expected result
