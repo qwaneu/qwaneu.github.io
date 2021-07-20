@@ -9,7 +9,7 @@ author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: /attachments/blogposts/2021/tdd/pretend-play.png
 ---
 
-Once we have a failing test, how do we get to green quickly and in a simple way?
+Once we have a failing test, how do we get to green quickly?
 If we can get away with faking it, we do that. It is sometimes the simplest way
 to get the test to pass, and to remind us to write the next test case.
 
@@ -24,7 +24,7 @@ means you need another test case to force yourself to write a more generic
 implementation.
 
 Faking might feel weird at the beginning, but it helps to proceed towards your 
-goal in baby steps and have continuous progress. 
+goal in baby steps. You will make progress continuously. 
 
 When we fake, we do it with simple code - no ifs, no boolean flags. We've
 learned that if we try to fake with flags or ifs, we'll code ourselves into a
@@ -32,9 +32,10 @@ corner.
 
 ## Example 
 
-Let's take another look at the CSV conversion code we looked at in the [0, 1, N
-post](/2021/07/09/tdd-0-1-n.html). We were test driving the conversion from
-aggregated survey results (represented by Rollup domain object) to CSV.
+Let's take another look at the Comma Separated Values conversion code we looked
+at in the [0, 1, N post](/2021/07/09/tdd-0-1-n.html). We were test driving the
+conversion from aggregated survey results (represented by Rollup domain object)
+to CSV.
 
 We wrote a test for a survey with a single question, which should result in a
 single line in the CSV (after the header line):
@@ -54,7 +55,8 @@ single line in the CSV (after the header line):
             A,"one,two,three",optimizing,,''')
 ```
 
-We can implement this by cheating: we just return the literal string that we are asserting.
+We can implement this by cheating: we just return the literal string that we are
+asserting.
 
 ```python
 def as_rollup_csv(rollup):
@@ -65,11 +67,17 @@ def as_rollup_csv(rollup):
 This is perfectly fine, as there is no test that asks for anything else. Because
 faking like this feels awkward, it urges us to do something about it. 
 
-We can either write a next test that will force us to generalize the code,
-through a technique called _Triangulation_ or see it as a matter of duplication
+
+There are two other techniques to resolve this that we use often use: 
+
+- _Triangulation_: Generalize based on two or more examples (but no less). We can write a next test that will force us to generalize the code.
+
+
+- _Remove duplication beween code and test_: We can see this as a matter of duplication
 between the test code and the production code: the question values are both in
-the setup code of the test and in the fake production code. We will write more
-about these two techniques later in this [series](/blog-by-tag#tag-test-driven-development).
+the setup code of the test and in the fake production code. 
+
+We will explain these later in this [series](/blog-by-tag#tag-test-driven-development).
 
 ## Effects
 
