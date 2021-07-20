@@ -8,9 +8,9 @@ V [Start with expectation](https://www.qwan.eu/2021/07/05/tdd-start-with-expecta
 V [0, 1, N](https://www.qwan.eu/2021/07/09/tdd-0-1-n.html)
 V Act dumb in implementation
 V Faking & Cheating
-~ Given-When-Then (or Arrange-Act-Assert)
-~ One (conceptual) assert per test
-~ Test name describes the action and the expected result
+> Given-When-Then (or Arrange-Act-Assert)
+> One (conceptual) assert per test
+> Test name describes the action and the expected result
 ~ Triangulation
 - (new) Removing duplication between test & production code
 - (new) Make the change easy, then make the change (refactor after and before) source: Kent Beck

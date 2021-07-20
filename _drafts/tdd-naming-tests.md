@@ -23,10 +23,30 @@ Here's an example from the back-end code of our [Online Agile Fluency®
 Diagnostic application](/2020/09/25/hexagonal-frontend-example.html). The
 back-end component uses Python and pytest. The domain class `Facilitator`
 represents facilitators who can run workshops. This class knows (among other
-things) how to authenticate a facilitator. The test for this responsibility
-looks like this:
+things) how to authenticate a facilitator. We have grouped the tests for this
+reponsibility into a separate test class `TestSignIn`, part of the
+`test_facilitator.py` file. If we would name our tests like in the example
+below, we do get a hint of what is being tested, but we'll have to inspect the
+test to be sure.
 
-@@example of a badly named test?
+```python
+class TestSignIn:
+  def test_no_password(self):
+    ...
+  def test_no_match(self):
+    ...
+  def test_blocked(self):
+    ...
+  def test_blocked_no_match(self):
+    ...
+  def test_succeeds(self):
+    ...
+```
+
+Note that `pytest` uses naming conventions to find test classes and individual
+test functions, which clutters the names a bit.
+
+Applying the _Test name describes action and expected result_ heuristic, we get tests that tell a more complete and precise story of how the Facilitator behaves:
 
 ```python
 class TestSignIn:
@@ -50,9 +70,6 @@ class TestSignIn:
   def test_succeeds_when_user_exist_and_password_matches(self):
     ...
 ```
-
-`pytest` uses naming conventions to find test classes and individual test
-functions, which clutters the names a bit.
 
 Testing frameworks that use a spec based format provide more options to use
 descriptions for test. They also allow for grouping test and providing a
@@ -79,23 +96,20 @@ describe('Facilitator', () => {
     ...
 ```
 
+The `aValidFacilitator` function is a [test data builder]() to construct a
+specific Facilitator instance. The `errors` property of the facilitator object
+contains information on any validation errors, currently represented by e.g.
+`emailMissing` which means that the email attribute is missing or in some other
+way invalid.
+
 @@+examples from wereview
 
-A nice benefit of choosing good, descriptive names for tests is that the
-overview of all tests, e.g. when running your tests from an IDE, becomes a kind
-of behaviour specification of the code.
+A benefit of choosing good, descriptive names for tests is that the overview of
+all tests, e.g. when running your tests from an IDE, becomes a kind of behaviour
+specification of the code.
 
 ![IDE showing a list of successful tests, which reads as a kind of specification](/attachments/blogposts/2021/tdd/tests-as-spec-in-ide.png)
 {: class="post-image" }
-
-
-```java
-// A nondescriptive name: 
-public void testDeliver() { ...
-
-// We prefer: 
-public void deliversCanWhenPaidEnough() { ...
-```
 
 ## Effects 
 
@@ -123,18 +137,22 @@ summary of the When and the Then.
 
 ## Considerations
 
-This test naming heuristic focuses mostly on example based tests, not so much on property based tests or approval tests.
+The heuristic of putting the action/event and expected result in the test name
+or description is mostly applicable for example based tests, not so much on
+property based tests or approval tests. For property based tests, we use the
+name or description to reflect an invariant of the code under test.
 
-show some spec based tests.
-Side note: when the set up is extracted out (in purescript or haskell often injected in) it might not be that useful. In some languages we can move the order of our expectation/assert function, so that it can go in the middle of a sentence. If the test is glanceable, the string above it may be reduntant.
+When we extract the set up code and other parts of the test out into functions,
+this heuristic can become less useful. If we can make the test itself short and
+glanceable, the test becomes self-evident. In some languages we can move the
+order of our expectation function, so that it can go in the middle of a
+sentence. If the test is glanceable, the string above it may be redundant. We
+will write more about _glanceable tests_ in a future post, here is a small
+example from the WeReview project, a conference session management system we
+have developed:
 
 @@example from WeReview
-
 actual `shouldEqual` expected
-
-(side note, might be separate post This struck me first in some property based tests, where it was really hard to give the test a name, but after extractions, the test itself was quite simple).
-
-Post needed: glanceable tests.
 
 ## Further reading
 
@@ -144,7 +162,7 @@ Post needed: glanceable tests.
 
 [Behaviour Driven Development (BDD)](https://dannorth.net/introducing-bdd/)
 
-For more inspiration, take a look at RSpec - [rspec.info](http://rspec.info/)
+For more inspiration, also take a look at RSpec - [rspec.info](http://rspec.info/)
 
 
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
