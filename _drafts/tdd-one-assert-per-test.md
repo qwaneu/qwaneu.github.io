@@ -69,20 +69,73 @@ We make sure our tests run fast, so an extra test won't affect our feedback loop
 negatively. Using [test data builders]() like we are doing here enables us to
 keep the setup per test short and explicit.
 
-We have seen worse examples of multiple asserts per test
+We have seen worse examples of multiple asserts per test. The following one is taken from WeReview. 
+Have a read through and make a note about the different parts you recognize, and what they could possibly mean.
 
-@@example of a wandering test
+
+``` javascript
+describe('Propose a session', () => {
+    it('given I am administrator, when I create a CFS then I can propose a session, and I can see the submitted session', () => {
+        cy.visit('/');
+        login_as_administrator();
+
+        const conferenceName = 'cypress test conference - admin login' // 1
+        const conferenceCode = 'admin2029';
+        cy.get('#shortCode').type(conferenceCode);
+        cy.get('#displayName').type(conferenceName);
+        cy.get('#addEvent').click();
+        cy.contains('Data updated successfully');
+        cy.contains(conferenceName).click();
+
+        const fields = proposal_fields_one_presenter(conferenceCode); // 2
+        const text_fields = fields.text_fields;
+        fill_in_selects_and_text_fields(fields);
+  
+        cy.contains('Submit').click();
+        cy.contains('Your session was saved');
+
+        cy.visit(`/event/visiblesessions/${conferenceCode}`);  // 3
+        cy.contains(text_fields["session-title"]).click();
+
+        cy.contains(text_fields["session-title"]);            // 4
+        cy.contains(text_fields.themes);
+        cy.contains(text_fields["session-anything-else"]);
+        cy.contains('Recording Permission');
+        cy.contains('42'); // session cap
+    });
+});
+```
 
 If this test fails, it will take some effort to find out why it failed. We have
 to trace the whole scenario up to the failing assert. The test name or
-description won't help us much here. A wandering test like this hampers the
-quick feedback loop from our automated tests.
+description won't help us much here. The test is made with cypress, the
+development tooling will help identify the failing test, but it still takes
+time. And when we run it in CI we still have to find the failing line. A
+wandering test like this hampers the quick feedback loop from our automated
+tests.
 
+We can distinguish four conceptual blocks:
+
+1. Given we are administrator, When we craete a conference, then we get a success confirmation and we can navigate to the 'organise' page for that conference.
+2. Given a session idea  When we propose it Then we get confirmation of successful receipt
+3. Given I am administrator When there is a session proposal Then I can visit it
+4. Given I am an administrator When I visit the session proposals' page then I can see all the values entered by the proposer.
+
+(1. still has two ands, but we are making progress)
+
+Naming these parts also suggests are tests are less thorough than they could be. e.g. Instead of 'all the fields' we are checking a sample. 'All the fields' is significant, because not all roles can do that.
+ 
 What can we do about this test? Again, splitting is the magic word here, and
 applying the Given-When-Then pattern: each assert is a 'then', with a
 corresponding 'when' just before it. We pull out the then+when into a separate
-test, and set up the object under test in the appropriate state. Again, test
-data builders can be very helpful here.
+test, and set up the object under test in the appropriate state. 
+
+What can help against wandering tests:
+
+- test data builders
+- extract methods
+
+In this case, we already have a test data builder: `proposal_fields_one_presenter`. And still we have multiple conceptual asserts.
 
 @@ example of an extracted test
 
