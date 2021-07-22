@@ -25,7 +25,7 @@ V Faking & Cheating
 - (new) Focus on relevant data (TDD by example: "Evident data")
 - start with a negative case (zit in [0, 1, N])
 - (new) Composed Method, for tests / everything at same level of abstraction
-
+- (new) factor out support code (not necessarily all common code, sometimes we need to re-tell a story)
 - What is a heuristic
  - http://wirfs-brock.com/blog/2019/03/20/growing-your-personal-design-heuristics/
 
