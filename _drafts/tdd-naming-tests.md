@@ -6,16 +6,17 @@ tags:
   - feedback
   - eXtreme Programming
 author: Marc Evers, Willem van den Ende, Rob Westgeest
-image: 
+image: /attachments/blogposts/2021/tdd/chuttersnap-JChRnikx0tM-unsplash.jpg
 ---
 
 We use test names or test descriptions to tell what the test is about: what is
 the action or event, what is the expected result?
 
+![picture of a stack of colorful name cards](/attachments/blogposts/2021/tdd/chuttersnap-JChRnikx0tM-unsplash.jpg)
+{: class="post-image post-image-50" }
+
 If we name our tests like this, a test case will read like a specification of
-the object under test (in particular in a test report or when you look at your
-tests collapsed in your IDE). A good test name will also make the test more
-readable.
+the object under test. A good test name will also make the test more readable.
 
 ## Example
 
@@ -71,7 +72,7 @@ class TestSignIn:
 Testing frameworks that use a spec based format provide more options to use
 descriptions for test. They allow for grouping tests and providing a
 description for a group of tests. Here's another example from the Online Agile
-Fluency® Diagnostic application, from the front end component this time. It has
+Fluency Diagnostic application, from the front end component this time. It has
 a Facilitator domain class representing the facilitator of a workshop. The
 behaviour of Facilitator includes validating inputs:
 
@@ -92,13 +93,12 @@ describe('Facilitator', () => {
 ```
 
 The `aValidFacilitator` function is a [test data builder]() to construct a
-specific Facilitator instance. The `errors` property of the facilitator object
-contains information on any validation errors, currently represented by e.g.
+Facilitator instance. The `errors` property of the facilitator object contains
+information on any validation errors, currently represented by e.g.
 `emailMissing` which means that the email attribute is missing or in some other
 way invalid.
 
-Test names can sometimes feel superflous. If the test implementation is self
-explanatory. Does the name of the test add much in the following code?
+Test names can sometimes feel superflous. If the test implementation is self-explanatory. Does the name of the test add much in the following code?
 
 ```haskell
  describe "Home route" do
@@ -106,10 +106,10 @@ explanatory. Does the name of the test add much in the following code?
        (match "/") `shouldEqual` Home
 ```
 
-I find the (match "/") `shouldEqual` Home clearer than the name. Although, on
-second reading, the name alludes to 'parsing', which is a concern that is not
-necessarily obvious from the test body. But '/' being equal to the home route in
-a web application is common knowledge in the domain. 
+We find the ```(match "/") `shouldEqual` Home``` clearer than the name.
+Although, on second reading, the name alludes to 'parsing', which is a concern
+that is not necessarily obvious from the test body. But '/' being equal to the
+home route in a web application is common knowledge in the domain. 
 
 In the context of the test's implementation, this name does not add much, but
 there is a context in which it is very helpful: the IDE or CI pipeline. Good,
@@ -126,7 +126,7 @@ exactly we're trying to do in the test. If it is hard to find a good name, we
 probably don't understand what we are trying to capture in the test.
 
 Before we even write the actual (failing) test, we start with the name or
-description. Following the _ Test name describes action and expected result_
+description. Following the _Test name describes action and expected result_
 heuristic helps working in a more behaviour driven style (BDD). This provides
 better readable tests less coupled to implementation details. The tests will act
 more as a form of documentation.
@@ -140,13 +140,13 @@ into the behaviour of the system under test, we take care to update the
 description to reflect our understanding and intent better, making life easier
 for those who come after us (which includes ourselves).
 
-This heuristic helps thinking [Given-When-Then](@@): the test name gives a
-summary of the When and the Then.
+This heuristic helps thinking in terms of _Given-When-Then_: the test name gives
+a summary of the _When_ and the _Then_.
 
 ## Considerations
 
-The heuristic of putting the action/event and expected result in the test name
-or description is mostly applicable for example based tests, not so much on
+The heuristic of putting the action or event and expected result in the test
+name or description is mostly applicable for example based tests, not so much on
 property based tests or approval tests. For property based tests, we use the
 name or description to reflect an invariant of the code under test.
 
@@ -179,9 +179,15 @@ refactoring of the bodies.
 
 For more inspiration, also take a look at [RSpec](http://rspec.info/).
 
-WeReview is used by Software Acumen to organize conferences like the upcoming
+Some more options for naming your tests: [7 Popular Unit Test Naming
+Conventions](https://dzone.com/articles/7-popular-unit-test-naming) by Ajitesh
+Kumar (2014)
+
+_WeReview_ is used by Software Acumen to organize conferences like the upcoming
 [Lean Agile Exchange](https://www.leanagileexchange.net/) (online, 21-22 October
 2021)
+
+Photo by <a href="https://unsplash.com/@chuttersnap?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">CHUTTERSNAP</a> on <a href="https://unsplash.com/s/photos/name-card?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
 
