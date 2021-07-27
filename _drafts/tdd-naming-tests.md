@@ -10,7 +10,7 @@ image: /attachments/blogposts/2021/tdd/chuttersnap-JChRnikx0tM-unsplash.jpg
 ---
 
 We use test names or test descriptions to tell what the test is about: what is
-the action or event, what is the expected result?
+the action or event, what is the expected result.
 
 ![picture of a stack of colorful name cards](/attachments/blogposts/2021/tdd/chuttersnap-JChRnikx0tM-unsplash.jpg)
 {: class="post-image post-image-50" }
@@ -26,17 +26,16 @@ back-end component uses Python and pytest. The domain class `Facilitator`
 represents facilitators who can run workshops. This class knows (among other
 things) how to authenticate a facilitator. We have grouped the tests for this
 reponsibility into a separate test class `TestSignIn`, part of the
-`test_facilitator.py` file. If we would name our tests like in the example
-below, we do get a hint of what is being tested, but we'll have to inspect the
-test to be sure.
+`test_facilitator.py` file. 
+
+If we would name our tests like this, the names only give a hint of what is
+being tested (if we're lucky), but we'll have to inspect the test implementation
+to be sure.
 
 ```python
 class TestSignIn:
   def test_no_password(self):
-    facilitator = aValidFacilitator(email='henk@qwan.eu', hashed_password=None)
-    assert_that(facilitator.authenticate('pwd', PasswordHasher()), 
-      equal_to(Failure(message='Password mismatch for \'{}\''.format(anonymize('henk@qwan.eu')))))
-
+    ...
   def test_no_match(self):
     ...
   def test_blocked(self):
@@ -47,18 +46,14 @@ class TestSignIn:
     ...
 ```
 
-Note that `pytest` uses naming conventions to find test classes and individual
-test functions, which clutters the names a bit.
-
-Applying the _Test name describes action and expected result_ heuristic, we get tests that tell a more complete and precise story of how the Facilitator behaves:
+Applying the _Test name describes action and expected result_ heuristic, we get
+tests that tell a more complete and precise story of how the Facilitator
+behaves:
 
 ```python
 class TestSignIn:
   def test_fails_when_facilitator_does_not_have_a_password_yet(self):
-    facilitator = aValidFacilitator(email='henk@qwan.eu', hashed_password=None)
-    assert_that(facilitator.authenticate('pwd', PasswordHasher()), 
-      equal_to(Failure(message='Password mismatch for \'{}\''.format(anonymize('henk@qwan.eu')))))
-
+    ...
   def test_fails_when_password_does_not_match(self):
     ...
   def test_fails_with_blocked_is_true_when_user_is_blocked(self):
@@ -69,12 +64,15 @@ class TestSignIn:
     ...
 ```
 
+`pytest` uses naming conventions to find test classes and test functions, which
+clutters the names a bit.
+
 Testing frameworks that use a spec based format provide more options to use
-descriptions for test. They allow for grouping tests and providing a
-description for a group of tests. Here's another example from the Online Agile
-Fluency Diagnostic application, from the front end component this time. It has
-a Facilitator domain class representing the facilitator of a workshop. The
-behaviour of Facilitator includes validating inputs:
+descriptions for test. They allow for grouping tests and providing a description
+for a group of tests. Here's another example from the Online Agile Fluency
+Diagnostic application, from the front end component this time. It also has a
+Facilitator domain class representing the facilitator of a workshop. The
+behaviour of this Facilitator class includes validating inputs:
 
 ```js
 describe('Facilitator', () => {
@@ -92,11 +90,11 @@ describe('Facilitator', () => {
     ...
 ```
 
-The `aValidFacilitator` function is a [test data builder]() to construct a
-Facilitator instance. The `errors` property of the facilitator object contains
-information on any validation errors, currently represented by e.g.
-`emailMissing` which means that the email attribute is missing or in some other
-way invalid.
+The `aValidFacilitator` function is a [test data
+builder](/2020/10/09/test-data-builders.html) to construct a Facilitator
+instance. The `errors` property of the facilitator object contains information
+on any validation errors, currently represented by e.g. `emailMissing` which
+means that the email attribute is missing or in some other way invalid.
 
 Test names can sometimes feel superflous. If the test implementation is self-explanatory. Does the name of the test add much in the following code?
 
@@ -158,7 +156,7 @@ sentence.
 
 If the test is glanceable, the heading above the test body may be redundant. We
 will write more about _glanceable tests_ in a future post, here is a small
-example from the [WeReview](https://wereviewhq.com) product, a conference
+example from [WeReview](https://wereviewhq.com), a conference
 session management system we have developed (written in [PureScript](https://www.purescript.org/)):
 
 ```haskell
@@ -173,13 +171,10 @@ refactoring of the bodies.
 
 ## Further reading
 
-[Specification by Example](https://gojko.net/books/specification-by-example/) by Gojko Adzic
-
-[Behaviour Driven Development (BDD)](https://dannorth.net/introducing-bdd/)
-
-For more inspiration, also take a look at [RSpec](http://rspec.info/).
-
-Some more options for naming your tests: [7 Popular Unit Test Naming
+by Gojko Adzic
+- [Behaviour Driven Development (BDD)](https://dannorth.net/introducing-bdd/)
+- [Specification by Example](https://gojko.net/books/specification-by-example/) - For more inspiration, also take a look at [RSpec](http://rspec.info/).
+- Some more options for naming your tests: [7 Popular Unit Test Naming
 Conventions](https://dzone.com/articles/7-popular-unit-test-naming) by Ajitesh
 Kumar (2014)
 
@@ -192,7 +187,7 @@ Photo by <a href="https://unsplash.com/@chuttersnap?utm_source=unsplash&utm_medi
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
 
 <aside>
-  <p>Join us for one of our Test Driven Development courses. 
+  <p>Join us for one of our Test Driven Development courses and get to practice applying this and other heuristics. 
   </p>
   <p><div>
     <a href="/training/test-driven-development">Check availability</a>
