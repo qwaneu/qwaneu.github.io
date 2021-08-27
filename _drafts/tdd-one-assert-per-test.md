@@ -164,13 +164,15 @@ describe('When I Propose a session', () => {
      // Given goes here
     it('Then I get get confirmation of success', () => {
         const fields = proposal_fields_one_presenter(conferenceCode); 
-        const text_fields = fields.text_fields;
+        const text_fields = fields.text_fields; // 1
         fill_in_selects_and_text_fields(fields);
         cy.contains('Submit').click();
         cy.contains('Your session was saved');
 ```
 
 Now we spot opportunities for better readability.
+
+The line marked with // 1 
 
 ``` javascript
 describe('When I Propose a session', () => {
