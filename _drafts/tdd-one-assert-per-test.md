@@ -264,9 +264,9 @@ _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test
 <em>Photo by <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Spiske</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></em>
 
 <aside>
-  <p>Join us for one of our Test Driven Development courses. 
+  <p>We have TDD courses scheduled for this fall in C++, Kotlin, Java and Typescript.
   </p>
   <p><div>
-    <a href="/training/test-driven-development">Find out more</a>
+    <a href="/training">Have a look.</a>
   </div></p>
 </aside>
