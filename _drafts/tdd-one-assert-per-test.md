@@ -72,7 +72,11 @@ We make sure our tests run fast, so an extra test won't affect our feedback loop
 negatively. Using [test data builders]() like we are doing here enables us to
 keep the setup per test short and explicit.
 
-We have seen worse examples of multiple asserts per test. The following one is taken from WeReview. 
+We have seen worse examples of multiple asserts per test. 
+
+# Example - All the contains
+
+The following one is taken from WeReview. It is written in javascript, using Cypress to drive a UI.
 Have a read through and make a note about the different parts you recognize, and what they could possibly mean.
 
 
@@ -111,29 +115,33 @@ describe('Propose a session', () => {
 
 If this test fails, it will take some effort to find out why it failed. We have
 to trace the whole scenario up to the failing assert. The test name or
-description won't help us much here. The test is made with cypress, the
+description won't help us much here. Cypress' interactive
 development tooling will help identify the failing test, but it still takes
-time. And when we run it in CI we still have to find the failing line. A
-wandering test like this hampers the quick feedback loop from our automated
+time. And when we run the test in a CI environment we still have to find the failing line. A
+_wandering test_ like this hampers the quick feedback loop we crave from our automated
 tests.
+
+
+Let's compare our notes. There are ten instances of`cy.contains`, so ten asserts? But wait, there is more! each ` cy.get` and `cy.visit` is also an assertion. If the target for `get` is missing, or visiting `cy.visit`'s destination fails, the test fails too. This is a feature in cypress, and it should encourage us to focus our test more closely.
 
 We can distinguish four conceptual blocks:
 
 1. Given we are administrator, When we craete a conference, then we get a success confirmation and we can navigate to the 'organise' page for that conference.
-2. Given a session idea  When we propose it Then we get confirmation of successful receipt
-3. Given I am administrator When there is a session proposal Then I can visit it
+2. Given a session idea, When we propose it, Then we get confirmation of successful receipt
+3. Given I am administrator, When there is a session proposal, Then I can visit it
 4. Given I am an administrator When I visit the session proposals' page then I can see all the values entered by the proposer.
 
-(1. still has two ands, but we are making progress)
+Point 1. still has two _and_s, but we are making progress. Baby steps.
 
-Naming these parts also suggests are tests are less thorough than they could be. e.g. Instead of 'all the fields' we are checking a sample. 'All the fields' is significant, because not all roles can do that.
+Naming these parts also suggests tests are less thorough than they could be. e.g. Instead of 'all the values entered by the proposer' we are checking a sample. 'All the values' is significant, because not all roles are allowed to see all the values.
  
-What can we do about this test? Again, splitting is the magic word here, and
-applying the Given-When-Then pattern: each assert is a 'then', with a
-corresponding 'when' just before it. We pull out the then+when into a separate
-test, and set up the object under test in the appropriate state. 
+What can we do about this test? As in the first example, we need to split it up in order to get to one (conceptual) assert.
 
-What can help against wandering tests:
+We can apply the Given-When-Then pattern: In this test, each assert is a 'then', with a
+corresponding 'when' just before it. We can pull out the then+when into a separate
+test, and set up the object under test (the Given) in the appropriate state. 
+
+# What can help against wandering tests:
 
 - test data builders
 - extract methods
@@ -146,7 +154,7 @@ In this case, we already have a test data builder: `proposal_fields_one_presente
 
 Thinking 'one (conceptual) assert per test' helps us to create short, focused tests that will provide specific feedback when failing.
 
-Focusing on a single assert will help us see code that is doing too much: this
+Focusing on a single assert will help us see code that is doing too much: the
 issue might not be that the test wants to assert two things, but the fact that
 the code under test is doing two things. Can/should we refactor the code?
 
