@@ -6,7 +6,7 @@ tags:
   - feedback
   - eXtreme Programming
 author: Marc Evers, Willem van den Ende, Rob Westgeest
-image: 
+image: /attachments/blogposts/2021/tdd/markus-spiske-7PMGUqYQpYc-unsplash.jpg
 ---
 
 We do not like long test scenarios with loads of different asserts. A test case
@@ -14,16 +14,13 @@ that has many expectations is difficult to understand when it fails. We then
 have to dig inside the test's implementation to see what exactly went wrong
 where. Before we know it, we fall in to a lengthy debugging session.
 
-![assertsMany.jpg](/attachments/blogposts/2021/tdd/assertsMany.jpg)
+![rubber stamp with 'geprüft' (approved)](/attachments/blogposts/2021/tdd/markus-spiske-7PMGUqYQpYc-unsplash.jpg)
 {: class="post-image post-image-50" }
 
 Our guideline is that a test should have one (and only one) reason to fail. Per
 test we have a single assert or expectation. Sometimes it is more convenient to
 have a few asserts, e.g. asserting multiple properties of the same thing. We
 tend to regard this as conceptually one assert.
-
-![oneassert.png](/attachments/blogposts/2021/tdd/oneassert.png)
-{: class="post-image post-image-50" }
 
 ## Example - And, and, and  
 
@@ -189,6 +186,9 @@ Some things that are helpful against wandering tests are:
 - [Test data builders](/2020/10/09/test-data-builders.html)
 - Extract Method refactorings
 
+![assertsMany.jpg](/attachments/blogposts/2021/tdd/assertsMany.jpg)
+{: class="post-image post-image-50" }
+
 In the WeReview example test, we already have a test data builder:
 `proposal_fields_one_presenter`. And still we have multiple conceptual asserts.
 
@@ -202,11 +202,22 @@ Focusing on a single assert will help us see code that is doing too much: the
 issue might not be that the test wants to assert two things, but the fact that
 the code under test is doing two things. Can/should we refactor the code?
 
+![oneassert.png](/attachments/blogposts/2021/tdd/oneassert.jpg)
+{: class="post-image post-image-50" }
+
 ## Further reading
 
 The _One Assertion Per Test_ rule [was originally coined back in 2004](https://www.artima.com/weblogs/viewpost.jsp?thread=35578) by eXtreme Programmer Dave Astels (of [RSpec](https://rspec.info/) fame).
 
+The *Given-When-Then* way of structuring tests comes from Dan North and Chris
+Matts, who [introduced the concept of Behaviour Driven Development
+(BDD)](https://dannorth.net/introducing-bdd/) in the early 2000s. 
+
+[The BDD Books - Formulation, Document examples with Given/When/Then](https://leanpub.com/bddbooks-formulation) by Seb Rose and Gáspár Nagy
+
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
+
+<em>Photo by <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Spiske</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></em>
 
 <aside>
   <p>Join us for one of our Test Driven Development courses. 
