@@ -225,7 +225,7 @@ for multiple tests.
 The other thing that jumped out, now there is less code, was that
 `proposal_fields_one_presenter` is an implementation detail. We don't really
 care what is filled in, as long as it is a valid proposal. Having taken a step
-back with our four-way split, we can see this can play the role of `Given a
+back with our four-way split, we  ee this can play the role of `Given a
 session idea`. 
 
 ``` javascript
@@ -257,7 +257,7 @@ The *Given-When-Then* way of structuring tests comes from Dan North and Chris
 Matts, who [introduced the concept of Behaviour Driven Development
 (BDD)](https://dannorth.net/introducing-bdd/) in the early 2000s. 
 
-[The BDD Books - Formulation, Document examples with Given/When/Then](https://leanpub.com/bddbooks-formulation) by Seb Rose and Gáspár Nagy
+The book [Formulation, Document examples with Given/When/Then](https://leanpub.com/bddbooks-formulation) by Seb Rose and Gáspár Nagy goes more in detail on how to write readable Given/When/Then specs.
 
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
 
