@@ -10,7 +10,7 @@ image:
 ---
 
 We do not like long test scenarios with loads of different asserts. 
-A test case having many expectations is difficult to understand when it fails.
+A test case that has many expectations is difficult to understand when it fails, as we then have to dig inside the tests' implementation to see what exactly went wrong where. Before we know it we fall in to a lengthy debugging session.
 
 ![assertsMany.jpg](/attachments/blogposts/2021/tdd/assertsMany.jpg)
 {: class="post-image post-image-50" }
@@ -23,9 +23,9 @@ tend to regard this as conceptually one assert.
 ![oneassert.png](/attachments/blogposts/2021/tdd/oneassert.png)
 {: class="post-image post-image-50" }
 
-## Example 
+## Example - And, and, and  
 
-Let's look at an example in Java, from some order processing application.
+Let's look at an example in Java, from an order processing application.
 
 ```java
 public void savesOrderAndNotifiesOwnerIfPaid() {
@@ -43,15 +43,18 @@ public void savesOrderAndNotifiesOwnerIfPaid() {
 ```
 
 This test asserts (using Mockito mocks) that an order is saved in the repository
-and that a notification is sent out, using `notifier` - two quite different
+_and_ that a notification is sent out, using `notifier`. These are two quite different
 expected outcomes.
 
-This test might not look problematic at first, but it is still a bit harder to
-read and a bit more work when it would fail. In this case the test name already
-hints we are covering two aspects here, but sometimes asserting multiple things
-makes it hard to provide a meaningful name or description.
+This test might not look problematic at first. It is however harder to
+read and more work to figure out what went wrong when it fails. In this case the test name already
+hints we are covering two aspects. 
 
-We prefer to split up this test into two separate tests.
+> *And* suggests there is a test on each side.
+
+Asserting multiple things makes it hard to provide a meaningful name or description.
+
+We prefer to split up this test into two separate tests. A literal split would suggest `savesOrder` and `notifiesOwnerIfPaid`,  but `IfPaid` is significant on the left to, so it becomes `savesOrderIfPaid`.
 
 ```java
 // Preferably, we split them up:
