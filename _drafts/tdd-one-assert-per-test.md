@@ -152,9 +152,10 @@ We can apply the *Given-When-Then* pattern: In this test, each assert is a
 then+when into a separate test, and set up the object under test (the Given) in
 the appropriate state. 
 
-## wishful thinking
+## Wishful thinking
 
-That is quite a lot of work to do. Let's take a seemingly simple one, number 2, 
+Spitting the test like this is quite a lot of work to do. Let's take a seemingly
+simple one, number 2, 
 
 2. *Given* a session idea, *When* we propose it, *Then* we get confirmation of successful receipt
 
@@ -169,7 +170,7 @@ describe('When I Propose a session', () => {
         cy.contains('Your session was saved');
 ```
 
-Now we spot opportunities for more readability.
+Now we spot opportunities for better readability.
 
 ``` javascript
 describe('When I Propose a session', () => {
@@ -180,7 +181,6 @@ describe('When I Propose a session', () => {
         cy.contains('Submit').click();
         cy.contains('Your session was saved');
 ```
-
 
 # What can help against wandering tests
 
@@ -204,7 +204,7 @@ the code under test is doing two things. Can/should we refactor the code?
 
 ## Further reading
 
-The One Assertion Per Test rule was originally coined by eXtreme Programmer Dave Astels (of [RSpec](https://rspec.info/) fame) [back in 2004](https://www.artima.com/weblogs/viewpost.jsp?thread=35578).
+The _One Assertion Per Test_ rule [was originally coined back in 2004](https://www.artima.com/weblogs/viewpost.jsp?thread=35578) by eXtreme Programmer Dave Astels (of [RSpec](https://rspec.info/) fame).
 
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
 
