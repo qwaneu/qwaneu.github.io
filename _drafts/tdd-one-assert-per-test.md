@@ -152,6 +152,36 @@ We can apply the *Given-When-Then* pattern: In this test, each assert is a
 then+when into a separate test, and set up the object under test (the Given) in
 the appropriate state. 
 
+## wishful thinking
+
+That is quite a lot of work to do. Let's take a seemingly simple one, number 2, 
+
+2. *Given* a session idea, *When* we propose it, *Then* we get confirmation of successful receipt
+
+``` javascript
+describe('When I Propose a session', () => {
+     // Given goes here
+    it('Then I get get confirmation of success', () => {
+        const fields = proposal_fields_one_presenter(conferenceCode); 
+        const text_fields = fields.text_fields;
+        fill_in_selects_and_text_fields(fields);
+        cy.contains('Submit').click();
+        cy.contains('Your session was saved');
+```
+
+Now we spot opportunities for more readability.
+
+``` javascript
+describe('When I Propose a session', () => {
+     // Given remains wishful 
+    it('Then I get get confirmation of success', () => {
+        const fields = proposal_fields_one_presenter(conferenceCode); 
+        fill_in_selects_and_text_fields(fields);
+        cy.contains('Submit').click();
+        cy.contains('Your session was saved');
+```
+
+
 # What can help against wandering tests
 
 Some things that are helpful against wandering tests are:
