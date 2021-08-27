@@ -8,7 +8,7 @@ author: Willem van den Ende
 image: /attachments/blogposts/2019/w.png
 ---
 
-For a production application I'm using [PUX](https://github.com/alexmingoia/purescript-pux), a purescript wrapper around React. In the way we use it for [WeReview](https://wereview.eu) we are experiencing performance and usability issues, beyond the slow rendering.
+For a production application I'm using [PUX](https://github.com/alexmingoia/purescript-pux), a purescript wrapper around React. In the way we use it for [WeReview](https://wereviewhq.com) we are experiencing performance and usability issues, beyond the slow rendering.
 
 We also have stayed behind several versions because we don't want to rewrite our html in a different way (from lists/arrays to monadic) for no gain to our end users. So if we have to rewrite anyway, we might as well try some more performant options. Feedback from our users was that they like the more expensive parts of the UI, so we better get to work to make them fast.
 
