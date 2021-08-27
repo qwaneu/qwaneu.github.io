@@ -157,14 +157,17 @@ Some things that are helpful against wandering tests are:
 - [Test data builders](/2020/10/09/test-data-builders.html)
 - Extract Method refactorings
 
+![assertsMany.jpg](/attachments/blogposts/2021/tdd/assertsMany.jpg)
+{: class="post-image post-image-50" }
+
 Let's see what one or more extract method refactorings could provide us here.
 
 ## Wishful thinking
 
 Spitting the test like this is quite a lot of work to do. Let's take a seemingly
-simple one, number 2, 
+simple one, number 2: 
 
-2. *Given* a session idea, *When* we propose it, *Then* we get confirmation of successful receipt
+***Given* a session idea, *When* we propose it, *Then* we get confirmation of successful receipt**
 
 ``` javascript
 describe('When I Propose a session', () => {
@@ -177,9 +180,11 @@ describe('When I Propose a session', () => {
         cy.contains('Your session was saved');
 ```
 
-Now we spot opportunities for better readability. The line marked with // 1 is redundant for this test. But we can't refactor that, because _we are not on green_. We are missing the Given.
+Now we spot opportunities for better readability. The line marked with `// 1` is
+redundant for this test. But we can't refactor that, because _we are not on
+green_. We are missing the Given.
 
-After some discussion we sketched and executed the following:
+After some discussion, we sketched and executed the following:
 
 ``` javascript
 function given_a_conference({conferenceCode, conferenceName}) {
@@ -210,20 +215,28 @@ describe('When I Propose a session', () => {
 });
 ```
 
-We found out that the wishful given was a _Given_ that we overlooked - we need a conference. Extracting `given_a_conference` affords us the opportunity to change that later, so it makes a conference available without going through the UI. There was a `create_conference` function already, but that didn't quite do what we need here. Choosing this name also gives us the option open to reuse a conference for multiple tests if we so wish.
+We found out that the wishful *given* was a given that we overlooked - we need a
+conference. Extracting `given_a_conference` affords us the opportunity to change
+that later, so it makes a conference available without going through the UI.
+There was a `create_conference` function already, but that didn't quite do what
+we need here. Choosing this name also gives us the option to reuse a conference
+for multiple tests.
 
-The other thing that jumped out, now there was less code, was that `proposal_fields_one_presenter` is an implementation detail. We don't really care what is filled in, as long as it is a valid proposal. Having taken a step back with our four-way split, we can see this can play the role of `Given a session idea`. 
+The other thing that jumped out, now there is less code, was that
+`proposal_fields_one_presenter` is an implementation detail. We don't really
+care what is filled in, as long as it is a valid proposal. Having taken a step
+back with our four-way split, we can see this can play the role of `Given a
+session idea`. 
 
 ``` javascript
     const given_a_session_idea = proposal_fields_one_presenter;
 ```
 
-![assertsMany.jpg](/attachments/blogposts/2021/tdd/assertsMany.jpg)
-{: class="post-image post-image-50" }
+We do a bit of functional programming and assign the detailed function to a
+different name in the test's `describe` block.
 
-We do a bit of functional programming and assign the detailed function to a different name in the tests' `describe` block.
-
-There is still some implementation-ish stuff left, but we believe the test has moved forward in readability.
+There is still some implementation-ish stuff left, but we believe the test has
+moved forward in readability.
 
 ## Effects
 
