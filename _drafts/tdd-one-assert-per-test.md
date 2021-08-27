@@ -149,6 +149,16 @@ We can apply the *Given-When-Then* pattern: In this test, each assert is a
 then+when into a separate test, and set up the object under test (the Given) in
 the appropriate state. 
 
+
+# What can help against wandering tests
+
+Some things that are helpful against wandering tests are:
+
+- [Test data builders](/2020/10/09/test-data-builders.html)
+- Extract Method refactorings
+
+Let's see what one or more extract method refactorings could provide us here.
+
 ## Wishful thinking
 
 Spitting the test like this is quite a lot of work to do. Let's take a seemingly
@@ -158,41 +168,62 @@ simple one, number 2,
 
 ``` javascript
 describe('When I Propose a session', () => {
-     // Given goes here
-    it('Then I get get confirmation of success', () => {
-        const fields = proposal_fields_one_presenter(conferenceCode); 
-        const text_fields = fields.text_fields;
-        fill_in_selects_and_text_fields(fields);
-        cy.contains('Submit').click();
-        cy.contains('Your session was saved');
-```
-
-Now we spot opportunities for better readability.
-
-``` javascript
-describe('When I Propose a session', () => {
      // Given remains wishful 
     it('Then I get get confirmation of success', () => {
         const fields = proposal_fields_one_presenter(conferenceCode); 
+        const text_fields = fields.text_fields; // 1
         fill_in_selects_and_text_fields(fields);
         cy.contains('Submit').click();
         cy.contains('Your session was saved');
 ```
 
-# What can help against wandering tests
+Now we spot opportunities for better readability. The line marked with // 1 is redundant for this test. But we can't refactor that, because _we are not on green_. We are missing the Given.
 
-Some things that are helpful against wandering tests are:
+After some discussion we sketched and executed the following:
 
-- [Test data builders](/2020/10/09/test-data-builders.html)
-- Extract Method refactorings
+``` javascript
+function given_a_conference({conferenceCode, conferenceName}) {
+        cy.visit('/');
+        login_as_administrator();
+        cy.get('#shortCode').type(conferenceCode);
+        cy.get('#displayName').type(conferenceName);
+        cy.get('#addEvent').click();
+        cy.contains('Data updated successfully');
+        cy.contains(conferenceName).click();
+} 
+
+describe('When I Propose a session', () => {
+    const conferenceName = 'cypress test conference - admin login'
+    const conferenceCode = 'admin2029';
+    const given_a_session_idea = proposal_fields_one_presenter;
+
+    before(() => {
+        given_a_conference({conferenceCode, conferenceName});
+    });
+    it('Then I get confirmation of success', () => {
+        const fields = given_a_session_idea(conferenceCode);
+        fill_in_selects_and_text_fields(fields);
+
+        cy.contains('Submit').click();
+        cy.contains('Your session was saved');
+    });
+});
+```
+
+We found out that the wishful given was a _Given_ that we overlooked - we need a conference. Extracting `given_a_conference` affords us the opportunity to change that later, so it makes a conference available without going through the UI. There was a `create_conference` function already, but that didn't quite do what we need here. Choosing this name also gives us the option open to reuse a conference for multiple tests if we so wish.
+
+The other thing that jumped out, now there was less code, was that `proposal_fields_one_presenter` is an implementation detail. We don't really care what is filled in, as long as it is a valid proposal. Having taken a step back with our four-way split, we can see this can play the role of `Given a session idea`. 
+
+``` javascript
+    const given_a_session_idea = proposal_fields_one_presenter;
+```
 
 ![assertsMany.jpg](/attachments/blogposts/2021/tdd/assertsMany.jpg)
 {: class="post-image post-image-50" }
 
-In the WeReview example test, we already have a test data builder:
-`proposal_fields_one_presenter`. And still we have multiple conceptual asserts.
+We do a bit of functional programming and assign the detailed function to a different name in the tests' `describe` block.
 
-@@ example of an extracted test
+There is still some implementation-ish stuff left, but we believe the test has moved forward in readability.
 
 ## Effects
 
