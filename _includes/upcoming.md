@@ -1,8 +1,7 @@
 ## Upcoming courses
 
 | _Course_ | _Date & time_ | _Location_ | _Language_ | _Fee_ |
-| [Systems Thinking for Sustainable Delivery](/training/systems-thinking) | 16 June 2021, 9:00-17:00 CEST | Remote | English | registration closed |
-| [Test Driven Development in Python](/training/test-driven-development) | 30 August & 1 September 2021, 9:00-17:00 CEST | Remote | English | €995 - [register](/training/register) |
+| [Test Driven Development in Python](/training/test-driven-development) | 30 August & 1 September 2021, 9:00-17:00 CEST | Remote | English | registration closed |
 | [Workshop Hexagonal Architecture Hands On](/training/hexagonal-architecture) | 8 September 2021, 9:00-17:00 CEST | Remote | English | €495 - [register](/training/register) |
 | [Workshop Domain Driven Design](/training/ddd-introduction) | 15 September, 9:00-17:00 CEST | Remote | English | €495 - [register](/training/register) |
 | [Test Driven Development in Java](/training/test-driven-development) | 20 & 22 September 2021, 9:00-17:00 CEST | Remote | English | €995 - [register](/training/register) |
