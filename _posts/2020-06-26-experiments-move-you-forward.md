@@ -21,7 +21,7 @@ now. The idea is not viable now, or maybe never. And there, our first
 action-biased pattern
 [Proof of Concept](https://www.cnpatterns.org/organization-culture/proof-of-concept-poc) is staring us in the face. I even wrote it in yesterdays post.
 
-The pattern language has some more action-biased patterns up its sleeve, e.g.
+The [Cloud Native pattern language](http://www.cnpatterns.org/) has some more action-biased patterns up its sleeve, e.g.
 the [Research through Action](http://www.cnpatterns.org/strategy-risk-reduction/research-through-action) pattern:
 
 > The challenges are new and complex, information is scarce, and the company is
