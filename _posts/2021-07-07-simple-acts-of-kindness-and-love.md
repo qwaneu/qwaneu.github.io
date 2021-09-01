@@ -2,6 +2,7 @@
 layout: post
 title: Simple acts of kindness and love
 tags:
+  - productivity
   - agile fluency
   - feedback
   - systems thinking

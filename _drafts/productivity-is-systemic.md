@@ -2,6 +2,7 @@
 layout: post
 title: Productivity is systemic
 tags:
+  - productivity
   - agile fluency
   - feedback
   - systems thinking
@@ -60,22 +61,22 @@ productivity is not a matter of meticulously analysing the current situation,
 designing a desired state and planning actions to bridge that state. Instead,
 the suitable approach is one of sense-making, gaining situational awareness in
 the direction the system is inclined to move (dispositioned), and then thinking
-up some experiments that are in line with what you have learned. Experiments
-because you cannot be sure if will succeed so you'd rather keep a possible
-negative effect small (but still run the experiment, because you never know what
-more you'll discover).
+up some [experiments](/2020/06/26/experiments-move-you-forward.html) that are in line with what you have learned. Do experiments
+because you cannot be sure if they will succeed so you'd rather keep a possible
+negative effect small. Still run the experiment, because you never know what
+more you'll discover.
 
 This is management's job! This is where you can have true leverage in the organization's performance.
 
-When I say management's job, this is not restricted to those who have 'manager' in their job title, although it should at least come from there (@@vgl. Geerts transformatie moet vanuit de lijn komen). If we succeed at having teams develop more reflective capability and systemic thinking skills of their own, they can can learn to do this on their own. So we mean 'management' here eventually in the sense like Gerald Weinberg uses it in his Quality Software Management series @@todo: uitwerken.
+When I say management's job, this is not restricted to those who have 'manager' in their job title, although it should at least come from there (@@vgl. Geerts transformatie moet vanuit de lijn komen). If we succeed at having teams develop more reflective capability and systemic thinking skills of their own, they can can learn to do this on their own. So we mean 'management' here eventually in the sense like Gerald Weinberg uses it in his Quality Software Management series @@todo: uitwerken, also refer to leanpub version.
 
 So you could find some things that is keeping productivity low:
-- the team is missing skills - so they need to learn and train; this requires
+- _Missing skills_ - so they need to learn and train; this requires
   support and investment (training courses and time to practice; if you expect
   people to learn everything in their evening hours, you're not taking
   productivity seriously, and you're harming people with families, you're
   depriving people of their rest, an important pillar of high performance)
-- the team needs to wait for others outside the team, e.g. for approvals,
+- _Handoffs_: the team needs to wait for others outside the team, e.g. for approvals,
   reviews, or they have to wait on long builds, nightly test run results, etc.
   Waiting is destructive for productivity. It is quite useless to urge people to
   fill the waiting time with other work, because waiting breaks focus, people
@@ -84,13 +85,13 @@ So you could find some things that is keeping productivity low:
   is impacting end to end ("concept to cash") development performance, e.g. with
   value stream mapping. Reorganize to eliminate waiting; relentlessly improve
   builds and CI/CD pipelines so that they will give their feedback within 15
-  minutes - see Charity Majors' post on [Why are my tests so slow?]
-  (https://charity.wtf/2020/12/31/why-are-my-tests-so-slow-a-list-of-likely-suspects-anti-patterns-and-unresolved-personal-trauma)
-- the team is working in a kind of 'good enough' mode, almost complacent, there
-  seems to be no sense of urgency. So [create a sense of
+  minutes - see Charity Majors' post on [Why are my tests so slow?](https://charity.wtf/2020/12/31/why-are-my-tests-so-slow-a-list-of-likely-suspects-anti-patterns-and-unresolved-personal-trauma)
+- _Complacency_: the team is working in a kind of 'good enough' mode, there
+  is no sense of urgency. So [create a sense of
   urgency](/2020/10/26/under-pressure.html), make sure they understand the why.
   In the light of a short term delivery date, a complacent team can suddenly become a focused, productive team.
-- the team is working as a collection of individuals instead of a team, everyone
+- _Penny Wise, Pound Foolish_. Does your investment in e.g. CI/CD pipelines, developer workstations, software, webcams, headsets etc. match your wage bill, or do you have an IT service desk that says 'No' on every request, causing lost productivity costing hundreds of dollars per hour to save a few dollars per year on basic equipment?
+- _Productive individuals_ the team is working as a loose collection of individuals instead of a team, everyone
   does his/her own tasks, some are very busy, others finish early and don't know
   what to do next. Invest in team coaching, teach them about flow.
 
@@ -126,4 +127,20 @@ from today to tomorrow, but on the longer term it can result in order of
 magnitude improvements, e.g. delivering software daily instead of monthly. And
 order of magnitude improvements change the game, for the team as well as for
 business.
+
+@@todo draw the DOE that is hidden in the text above, might also work as cover graphic.
+
+Further reading
+---------------
+
+
+@@todo heading above does not render properly with ## (in emacs and jekyll). It does work with underline strangely enough
+
+- Willem wrote about how [experiments move you forward](/2020/06/26/experiments-move-you-forward.html). Experimentation is also a system, the more you do it, the lower the cost per experiment gets.
+
+- We have more posts on [productivity from management and team perspectives](/blog-by-tag/#tag-productivity). Some more systemic, like the current post, others more focused on e.g. [(counter-)productive use of automated tests](/2020/11/27/paying-the-price-of-fast-tests.html).
+
+- @@todo QSM reference might be easier here than further above.
+
+@@todo call to action
 

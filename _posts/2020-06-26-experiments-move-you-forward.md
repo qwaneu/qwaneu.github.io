@@ -2,10 +2,12 @@
 layout: post
 title: Experiments move you forward
 tags:
+  - productivity
   - research
   - patterns
   - strategy
 author: Willem van den Ende
+image: /attachments/blogposts/2020/ExperimentsMove.svg 
 ---
 
 Even when it doesn't feel like it.

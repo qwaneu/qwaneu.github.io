@@ -2,6 +2,7 @@
 layout: post
 title: Under pressure
 tags:
+  - productivity
   - agile fluency
   - continuous delivery
   - systems thinking

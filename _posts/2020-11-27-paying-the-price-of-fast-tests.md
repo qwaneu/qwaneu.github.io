@@ -2,6 +2,7 @@
 layout: post
 title: Paying the price of fast(er) tests
 tags:
+  - productivity
   - continuous delivery
   - systems thinking
   - test driven development
