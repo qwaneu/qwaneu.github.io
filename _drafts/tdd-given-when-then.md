@@ -73,43 +73,40 @@ canOfChoice.should == Can.Coke
 
 Note that we normally don't put "given/when/then" or "arrange/act/assert"
 comments in our test code. We try to keep our tests simple and straightforward,
-often extracting setup code into a `before` or in separate functions, and/or
-using test data builders. We strive for _glanceable_ tests, where we can see the
-given, the when and the then parts rightaway.
+often extracting setup code into a `before`, like we did [in the previous post](2021/08/27/tdd-one-assert-per-test.html). We also use 
+[test data builders](/2020/10/09/test-data-builders.html) instead of or in addition to a setup code. We strive for _glanceable_ tests, where we can see the
+_given_, the _when_ and the _then_ parts rightaway. It acts more as an idiom than a literal implementation.
 
 ## Effects
 
-Given-When-Then help us focus on behaviour of the system under test. They help
-us keeping focused on what we are actually trying to cover in a test. They keep
-us from having our tests wandering around.
+Given-When-Then focuses on behaviour of the system under test: what are we actually trying to do?
+It prevents our tests from wandering around.
 
-The behaviour focus of Given-When-Then nudges us towards seeing the thing we're
-testing more as a black box - whether it's a function, object, module, or
-system. This helps prevent tests highly coupled to implementation details.
-Given-When-Then helps a bit more here than Act-Arrange-Assert, which is more
-focused on the mechanics of the test.
+The behaviour focus of Given-When-Then nudges us towards treating the _thing under test_
+as a black box - whether it's a function, object, module, or
+system. This reduces coupling of tests to implementation.
+We find Given-When-Then more helpful for this than Act-Arrange-Assert, which is more
+focused on the internal mechanics of the test.
 
-This pattern is also suitable for formulating acceptance test scenarios, and
-help involve everyone in the conversation - developers, testers, product owner,
-etc.
+This idiom also works to formulate acceptance test scenarios, and
+can draw wider audience into the conversation, e.g. developers, testers, product owners, managers and users.
 
 ## Further reading
 
-The _Arrange-Act-Assert_ pattern comes from Bill Wake. He has done a [nice
-write-up](http://xp123.com/articles/3a-arrange-act-assert/).
+The [_Arrange-Act-Assert_ idiom](http://xp123.com/articles/3a-arrange-act-assert/) originates from Bill Wake. 
 
-The *Given-When-Then* way of writing scenarios comes from Dan North and Chris
+We learnt the *Given-When-Then* way of writing scenarios from Dan North and Chris
 Matts, who [introduced the concept of Behaviour Driven Development
 (BDD)](https://dannorth.net/introducing-bdd/) in the early 2000s. 
 
-To learn more about behaviour driven development and writing good scenarios, we recommend:
+To learn more about behaviour driven development and writing good scenarios, we recommend the books:
 - [Specification by Example](https://gojko.net/books/specification-by-example/) by Gojko Adzic
-- [The BDD Books - Formulation, Document examples with Given/When/Then](https://leanpub.com/bddbooks-formulation) by Seb Rose and Gáspár Nagy
+- [Formulation, Document examples with Given/When/Then](https://leanpub.com/bddbooks-formulation) by Seb Rose and Gáspár Nagy
 
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
 
 <aside>
-  <p>Given that you strive to become better at software development, When you attend one of our courses, Then ... Join us for one of our Test Driven Development courses. 
+  <p>Given that you strive to become better at software development, When you attend one of our courses, Then join us for a Test Driven Development courses. 
   </p>
   <p><div>
     <a href="/training/test-driven-development">Find out more</a>
