@@ -44,6 +44,9 @@ class VendingMachine {
 
 ## Further reading
 
+
+https://dzone.com/articles/three-modes-of-tdd ?
+
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
 
 <aside>

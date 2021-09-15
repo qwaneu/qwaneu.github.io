@@ -9,11 +9,11 @@ V [0, 1, N](https://www.qwan.eu/2021/07/09/tdd-0-1-n.html)
 V Act dumb in implementation
 V Faking & Cheating
 V Test name describes the action and the expected result
-> Given-When-Then (or Arrange-Act-Assert)
-> One (conceptual) assert per test
+V Given-When-Then (or Arrange-Act-Assert)
+V One (conceptual) assert per test
 ~ Triangulation
-- (new) Removing duplication between test & production code
 ~ (new) Glanceable tests
+- (new) Removing duplication between test & production code
 - (new) Make the change easy, then make the change (refactor after and before) source: Kent Beck
 - Test cases follow common setup
 - Take as much care for test code as you do for production code
@@ -21,7 +21,8 @@ V Test name describes the action and the expected result
 - No more than one failing test at a time
 - Fix one failing test at a time
 - What is a unit test?
-- (new) Mirroring
+- (new) Mirroring; James Shore calls this Collaborator-Based Isolation
+ https://www.jamesshore.com/v2/blog/2018/testing-without-mocks#isolation
 - (new) Focus on relevant data (TDD by example: "Evident data")
 - start with a negative case (zit in [0, 1, N])
 - (new) Composed Method, for tests / everything at same level of abstraction

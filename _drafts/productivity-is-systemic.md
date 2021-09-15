@@ -16,13 +16,20 @@ We talk to managers, who say they'd like their teams to be more productive (or '
 
 Freelance developers get hired to help out with a legacy migration project, get fired because they are too slow (struggling with the legacy and delayed feedback loops in the organization)
 
+- [Productivity (revisited)](#productivity-revisited)
+- [Productivity is (mostly) a property of the system](#productivity-is-mostly-a-property-of-the-system)
+- [The 'system' is management's job](#the-system-is-managements-job)
+- [Management is not only the manager's job](#management-is-not-only-the-managers-job)
+- [Sometimes it's the individual](#sometimes-its-the-individual)
+- [Productivity is an enabler for everything else](#productivity-is-an-enabler-for-everything-else)
+- [Further reading](#further-reading)
 
 ## Productivity (revisited)
 
 Measuring productivity in software development is a hard topic. 
 We have written about it before, and proposed a useable working definition.
 
-What often happens in agile organizations is focusing on the effort spent, like
+What often happens in agile organizations is focusing on the effo`rt spent, like
 story points. Gojko Adzic writes about this in [The Play, the points, and the
 biggest lie in
 software](https://gojko.net/2021/01/11/the-play-the-points-the-lie.html)
