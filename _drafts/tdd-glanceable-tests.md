@@ -50,6 +50,7 @@ shouldFailValidation e = isValid e `shouldEqual` false
 shouldPassValidation :: forall eff a. (Valid a) => a -> Aff eff Unit
 shouldPassValidation e = isValid e `shouldEqual` true
 ```
+The name helps reveal intent at the places where it is used, even though there is very little code inside of it.
 
 we elide the `shouldEqual` true and how to pass the thing into isValid. Fewer moving parts when reading can help understanding code, and that includes tests, as long as the function has a clear name in the context where it is used.
 
@@ -70,3 +71,9 @@ it "fails when travellingFrom is not valid" do
 ```
 
 The tests for `expense request` follow a similar pattern as the tests for Place, with shouldFailValidation, objects for empty and nonEmpty etc. If I had to construct the Place object here, it would just detract from the intent of the test. It would merely add line noise.
+
+# Further reading
+
+Intention revealing code - smalltalk best practice patterns
+
+the word glanceable originates from the 1950s (dictionary.com)
