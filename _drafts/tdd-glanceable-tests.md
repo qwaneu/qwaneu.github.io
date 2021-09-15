@@ -134,6 +134,20 @@ story we are trying to tell to someone else (our colleagues, our future selves).
 
 # Further reading
 
-Intention revealing code - smalltalk best practice patterns
+In his classic book Smalltalk Best Practice Patterns, Kent Beck decsribes two idioms: Intention Revealing Message and Intention Revealing Selector
+Intention revealing code - 
 
 the word glanceable originates from the 1950s (dictionary.com)
+
+In his Effective Unit Testing book, Lasse Koskela describes a number of testing
+smells that concern readability and maintainability of unit tests.
+
+_This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
+
+<aside>
+  <p>...
+  </p>
+  <p><div>
+    <a href="/training/test-driven-development">Check availability</a>
+  </div></p>
+</aside>

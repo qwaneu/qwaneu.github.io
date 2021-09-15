@@ -49,20 +49,45 @@ change just fits in. Some useful techniques are:
 
 # Example
 
-Example: changing the signature of a widely used function.
+Let's look an example from **. In our backend code (Python), we have a
+Facilitator class with a function to extend the facilitator's license by a year.
 
+```python
+class Facilitator:
+  ...
+  def extend_license(self):
+    current_expiry_date = self.license_valid_until
+    try:
+      new_license_valid_until = current_expiry_date.replace(year=current_expiry_date.year + 1)
+    except ValueError:
+      new_license_valid_until = current_expiry_date + timedelta(days=366)
+    return replace(self, license_valid_until=new_license_valid_until)
+
+class TestExtendLicense:
+  def test_extends_the_license_for_a_year(self):
+    facilitator = aValidFacilitator(license_valid_until=date(2020,1,29))
+    assert_that(facilitator.extend_license().license_valid_until, equal_to(date(2021,1,29)))
+
+  def test_handles_29th_of_feb_and_makes_if_march_first(self):
+    facilitator = aValidFacilitator(license_valid_until=date(2020,2,29))
+    assert_that(facilitator.extend_license().license_valid_until, equal_to(date(2021,3,1)))
+    ...
 ```
-TODO: example code
-```
 
-Just changing the function's signature would cause multiple tests to fail. What options do we have here?
+We are using test data builders to set up a facilitator. A facilitator has a
+`license_valid_until` date property that we check.
 
-- introduce an overload of this function with the new signature; make the
-  existing function call the new function with a default value (alternatively,
-  depending on your programming language, you would introduce a default
-  parameter value); run the tests; if they are successful, you can decide either
-  to keep both functions or start replacing calls to the old one one by one,
-  running tests in between
+Let's say we would like to change the signature of the `extend_license` function
+to have a `days` parameter (the number of days to extend the license; this could
+also be months, or maybe an absolute date, but this doens't matter for now).
+
+Just making the change would break all existing tests that use `extend_license`. What other options do we have here?
+
+- introduce the parameter with a default value; the tests should remain green;
+  then you can start adding parameter values to the tests, one by one, and
+  remove the default value when all invocations have been changed;
+  alternatively, depending on your programming language, you would introduce an
+  overload for the function
 - create a helper function in the test that wraps the call; use this helper
   function everywhere, and make sure the tests are green; now the dependency on
   the function is in one place, so it is relatively straightforward to make the
@@ -72,7 +97,9 @@ Just changing the function's signature would cause multiple tests to fail. What 
   in control)
 - maybe the tests contain too many duplicated calls to the function anyway; does
   it belong to the 'Given' part of the test? Can/should we move it to the setup
-  code?
+  code? This is not the case in the tests above, the `extend_license`
+  invocations are the behaviour under test - they are part of the 'When', not
+  the 'Given'
 
 # Effects
 
@@ -91,6 +118,8 @@ continuous delivery).
 # Further reading
 
 TODO
+
+_This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
 
 <aside>
   <p>Join us for one of our Test Driven Development courses. 

@@ -21,3 +21,20 @@ information about the impact of changes).
 
 Tests need to be clean, readable, fast, explicit, intention revealing!
 So in the refactor step of the TDD cycle, we take care of our test code as well.
+
+# Further reading
+
+In his Effective Unit Testing book, Lasse Koskela describes a number of unit
+testing smells and ways to improve these.
+
+https://www.kdgregory.com/index.php?page=junit.refactoring ??
+
+_This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
+
+<aside>
+  <p>...
+  </p>
+  <p><div>
+    <a href="/training/test-driven-development">Check availability</a>
+  </div></p>
+</aside>

@@ -11,11 +11,11 @@ V Faking & Cheating
 V Test name describes the action and the expected result
 V Given-When-Then (or Arrange-Act-Assert)
 V One (conceptual) assert per test
+> (new) Glanceable tests
 ~ Triangulation
-~ (new) Glanceable tests
 ~ Caring for your tests
-~ Fix one failing test at a time
-  + No more than one failing test at a time
+~ Fix one failing test at a time / No more than one failing test at a time
+- Rules for simple design
 - (new) Removing duplication between test & production code
 - (new) Make the change easy, then make the change (refactor after and before) source: Kent Beck
 - Test cases follow common setup
@@ -32,7 +32,6 @@ V One (conceptual) assert per test
 
 **Other**
 V [TDD still relevant in 2021](https://www.qwan.eu/2021/06/24/tdd-still-relevant-in-2021.html)
-- Rules for simple design
 - Practice, Practice, Practice
 - Sometimes we thank a test for its' service and move on
 - Test behaviour rather than state
