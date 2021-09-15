@@ -10,11 +10,11 @@ author: Willem van den Ende, Marc Evers, Rob Westgeest
 image: 
 ---
 
-As we spend much more time reading code than writing code, we'd like our code to
-be glanceable - by glancing at the code, we want to quickly understand its
+As we spend more time reading code than writing it, we'd like our code to
+be glanceable. By glancing at the code, we want to quickly understand its
 intent. Glanceability is a useful property, for production code as well as test
 code. Test code is there to help us out, so being able to quickly grasp what the
-test is about will facilitate us in updating code.
+test is about will help future us, and others, keep our tests habitable.
 
 Glanceable, as defined by [Dictionary.com](https://www.dictionary.com/browse/glanceable):
 
