@@ -13,13 +13,13 @@ V Given-When-Then (or Arrange-Act-Assert)
 V One (conceptual) assert per test
 ~ Triangulation
 ~ (new) Glanceable tests
+~ Caring for your tests
+~ Fix one failing test at a time
+  + No more than one failing test at a time
 - (new) Removing duplication between test & production code
 - (new) Make the change easy, then make the change (refactor after and before) source: Kent Beck
 - Test cases follow common setup
-- Take as much care for test code as you do for production code
 - Tests are independent - always start from a clean slate
-- No more than one failing test at a time
-- Fix one failing test at a time
 - What is a unit test?
 - (new) Mirroring; James Shore calls this Collaborator-Based Isolation
  https://www.jamesshore.com/v2/blog/2018/testing-without-mocks#isolation
