@@ -35,9 +35,6 @@ In the TDD cycle, we take time for refactoring the code in the last step of the 
 Let's look at an example from Wereview: the `PlaceSpec` test (written in PureScript).
 
 ```haskell
-type PlaceSpec = forall eff. Spec (random :: RANDOM | eff) Unit
-
-placeSpec :: PlaceSpec
 placeSpec = do
  describe "A Place" do
    it "implements Eq on all its' fields" $
@@ -58,33 +55,55 @@ placeSpec = do
        shouldFailValidation $ mkPlace (City "") (Country "")
 ```
 
-Describe invariant heuristic (no action and expected outcome). Instead a
+## Some tests don't require an action
+
+Heuristics are a 
+
+TODO Describe invariant heuristic (no action and expected outcome). Instead a
 relation that always holds. (it is never empty). as alluded to in naming test
 post (@@link).
 
-`noEmptyFields` is an example of a test that is so glanceable that the test name does not add much. (see [test naming post](TODO: linkje))
+`noEmptyFields` is an example of a test that is so glanceable that the test name does not add much. (see [test naming post](/2021/07/27/tdd-naming-tests.html)
 
-"converts itself" is not a great name. "human readable text is never empty"
-
-One could wonder whether it was worth extracting two short one-liners into functions. We believe these extractions help making the code more glanceable:
+Seeing this code again, I realise "converts itself" is not a great name. "Human readable text is never empty" is better. In the best `Haskell` tradition I used a one letter name for the `Place` value. No clue why I called it `e` now. Maybe for expected? Let's name it place, that reads better in the tests' call site:
 
 ```haskell
-shouldFailValidation :: forall eff a. (Valid a) => a -> Aff eff Unit
+   describe "Human readable text" do
+     it "is never empty" do
+       quickCheck \(place :: Place) -> (humanReadable place) /== []
+```
+
+The inside is not that glanceable, especially if you haven't seen a property based test before, but at least we can understand the outside. A closer reading tells us that a number of arbitrary `Place` objects will be generated, and when made `humanReadable` it never equals an empty list.
+
+One could wonder whether it was worth extracting two short one-liners into functions. We believe these extractions make the code more glanceable:
+
+```haskell
 shouldFailValidation e = isValid e `shouldEqual` false
 
-shouldPassValidation :: forall eff a. (Valid a) => a -> Aff eff Unit
 shouldPassValidation e = isValid e `shouldEqual` true
 ```
 
-The name helps reveal intent at the places where it is used, even though there
+The function names reveal intent at the places where it is used, even though there
 is very little code inside of it.
 
-We elide the `shouldEqual` true and how to pass the thing into `isValid`. Fewer
-moving parts when reading can help understanding code, and that includes tests,
-as long as the function has a clear name in the context where it is used.
+If we were to inline this, we'd have to read the inside everywhere. Fewer moving
+parts to read aid understanding code, and that includes tests. We do have to
+make sure that the function has a clear name in the context where it is used,
+otherwise these extractions hurt more than they help.
 
-At first I considered using the abstraction below for the empty city and
-country, like so:
+> Extract method refactorings are often more about the place where they are called, than the place where they are defined.
+
+> We prioritize making the whole more readable, even when we have to introduce more parts.
+
+## Don't use an abstraction you already have when it is a bad fit
+
+One of the tests above is about failing validation when some fields are empty:
+
+```haskell
+     it "fails when country is empty" do
+       shouldFailValidation $ mkPlace (City "") (Country "")
+```
+At first I considered using the abstraction `invalidPlace` I had lying around instead of spelling out the empty `City` and `Country`:
 
 ```haskell
 invalidPlace :: Place
@@ -92,19 +111,51 @@ invalidPlace = mkPlace (City "") (Country "")
 ```
 
 As you can see in the test above, I have two different tests now, one for empty
-city and empty country. If I was really worried, I could make four of them.
-Having `invalidPlace` would make it less clear _how_ the Place is not valid.
-This often takes some iteration to get it right.
+city and one for empty country. If I was really worried, I could follow the logic and make four of them.
+Having `invalidPlace` would make it less clear _how_ the `Place` is not valid.
+These trade-offs often take some iteration to get right.
 
 Instead, I have used `invalidPlace` and its' sibling `validPlace` to construct
-larger objects for test that contain a `Place`. In the larger context I don't
+larger objects for tests that contain a `Place`. In the larger context I don't
 want to think about what exactly it is constructed of, so it makes the test more
 glanceable there:
 
 ```haskell
 it "fails when travellingFrom is not valid" do
-   shouldFailValidation $ mkExpenseRequestDetail $ nonEmpty {travellingFrom = invalidPlace}
+   shouldFailValidation ( mkExpenseRequestDetail ( nonEmpty {travellingFrom = invalidPlace}))
 ```
+
+But wait, what is `nonEmpty`? This was sort of clear in the context of the test, as it had three different `it` blocs using it with a different field being set to invalid each time. In the ... light of this post, it is not so clear. We may have missed an opportunity for better naming. I'm tempted to show you what nonEmpty is made of, but that would deny the opportunity to improve my naming...
+
+```haskell
+it "fails when travellingFrom is not valid" do
+   shouldFailValidation ( mkExpenseRequestDetail ( 
+       nonEmptyExpenseRequestDetailData {travellingFrom = invalidPlace}))
+```
+
+But now the method is so long that it is no longer glanceable... Let's have a look at our data structure:
+
+```haskell
+nonEmpty ::  { travellingFrom :: Place
+    , travellingTo :: Place
+    , pleaseExplain :: String
+    }
+nonEmpty =
+  {travellingFrom: validPlace,
+   travellingTo: validPlace,
+   pleaseExplain: "explanation"}
+```
+
+Three fields, and we wrote three tests for each fields' invalid state. Dis
+
+```haskell
+it "fails when travellingFrom is not valid" do
+   shouldFailValidation ( mkExpenseRequestDetail ( 
+       validExpenseRequestDetailParameters {travellingFrom = invalidPlace}))
+```
+
+Marc: why is expenseRequestDetail called an expenseRequestDetail? 
+Willem: because we had an expense request, and it needed more details, where previously it didn't have much. And we couldn't come up with a more meaningful name. The stakeholders wanted to get some idea of expense requesters' itinerary, and people may want to explain more, so there is an explanation field.
 
 The tests for `expense request` follow a similar pattern as the tests for Place,
 with `shouldFailValidation`, objects for `empty` and `nonEmpty` etc. If I had to
@@ -113,7 +164,9 @@ test. It would merely add line noise.
 
 # What makes a test glanceable
 
-- clear names (of tests and variables) that communicatie intent rather than implementation
+Let's recap, and add a bit. What makes a test glanceable?:
+
+- clear names of tests and variables. Names communicatie intent rather than implementation
 - composed method - all lines of code at the same level of abstraction
 - helper functions that hide implementation details and express intent through good names
 - setup details (the 'Given' - link to GWT post) hidden in a setup/before or other helper function
@@ -134,10 +187,34 @@ story we are trying to tell to someone else (our colleagues, our future selves).
 
 # Further reading
 
-In his classic book Smalltalk Best Practice Patterns, Kent Beck decsribes two idioms: Intention Revealing Message and Intention Revealing Selector
-Intention revealing code - 
+We learned a number of heuristics we learnt from Kent Beck's classic book
+Smalltalk Best Practice Patterns:
 
-the word glanceable originates from the 1950s (dictionary.com)
+- **Composed method** - all lines of code at the same level of abstraction
+- **Intention revealing message** - name the method or function for the context
+  in which it is used - smalltalk best practice patterns
+- **Intention revealing selector**: name the method or function for its'
+  meaning, not for its internal mechanics.
+
+The word glanceable originates from the 1950s (dictionary.com)
+
+Re-reading the code, and discussing it with Marc surfaced assumptions I made
+when writing the original code sole. The code, and my understanding of it
+improved as a consequence of taking it out of its' production context and
+discussing it. 
+
+Rebecca Wirfs-Brock wrote in [How to think about design principles]
+
+https://twitter.com/rebeccawb/status/1281248011427786752 
+
+> Carl von Clausewitz, “Principles and rules are intended to provide a thinking
+> man [or woman, in my case] with a frame of reference.” "I find it refreshing to
+> occasionally step back to deeply examine why one design option seems better than
+> another. I get uneasy when tribal knowledge about “the way things work around
+> here” or vague, hard-to-express sentiments are the only reasons for a particular
+> decision. I guarantee that if you discuss with your colleagues the nuanced
+> reasons for making a particular design choice, you’ll learn more about putting
+> design principles into practice. "
 
 In his Effective Unit Testing book, Lasse Koskela describes a number of testing
 smells that concern readability and maintainability of unit tests.
@@ -151,3 +228,4 @@ _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test
     <a href="/training/test-driven-development">Check availability</a>
   </div></p>
 </aside>
+
