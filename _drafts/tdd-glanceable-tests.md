@@ -7,7 +7,7 @@ tags:
   - eXtreme Programming
   - refactoring
 author: Willem van den Ende
-image: 
+image:
 ---
 
 As we spend more time reading code than writing it, we'd like our code to
@@ -28,6 +28,8 @@ necessary. One thing we strive for is *glanceable tests*.
 > 
 > From: [Dictionary.com](https://www.dictionary.com/browse/glanceable)
 
+In this post we'll discuss some of the micro trade-offs that go into making tests glanceable.
+
 # Example 
 
 Let's look at an example from the [WeReview](https://wereviewhq.com) conference
@@ -39,8 +41,6 @@ placeSpec = do
  describe "A Place" do
    it "implements Eq on all its' fields" $
      quickCheck \(r :: Place) -> r === r
-   it "can write and read itself to a javascript (Foreign) object" $
-     quickCheck \(ev :: Place) -> (read (toFire ev)) === (Right ev)
    describe "converts itself into human readable text" do
      it "is never empty" do
        quickCheck \(e :: Place) -> (humanReadable e) /== []
@@ -55,17 +55,28 @@ placeSpec = do
        shouldFailValidation $ mkPlace (City "") (Country "")
 ```
 
+This is a fair amount of code, let's look at some of the aspects that we believe
+make this more, and in some places less, glanceable.
+
 ## Some tests don't require an action
 
-Heuristics are a 
+Heuristics are flexible, and made for quick decisions. We make use of that
+flexibility here, by quickly going against the grain of a heuristice we
+described earlier: [Test name describes action and expected
+result](/2021/07/27/tdd-naming-tests.html).
 
-TODO Describe invariant heuristic (no action and expected outcome). Instead a
-relation that always holds. (it is never empty). as alluded to in naming test
-post (@@link).
+Look at the "it is never empty" test. There is no action and expected outcome,
+but a relation that always holds. We call this the _invariant heuristic_.
+Apologies for the easter egg of a heurstic-in-a-heuristic, we may write about
+the invarariant heuristic properly at some point.
 
-`noEmptyFields` is an example of a test that is so glanceable that the test name does not add much. (see [test naming post](/2021/07/27/tdd-naming-tests.html)
+`noEmptyFields` is an example of a test that is so glanceable that the test name does not add much. 
 
-Seeing this code again, I realise "converts itself" is not a great name. "Human readable text is never empty" is better. In the best `Haskell` tradition I used a one letter name for the `Place` value. No clue why I called it `e` now. Maybe for expected? Let's name it place, that reads better in the tests' call site:
+Seeing this code again, I realise "converts itself" is not a great name. "Human
+readable text is never empty" is better. In the best `Haskell` tradition I used
+a one letter name for the `Place` value. No clue why I called it `e` now. Maybe
+for expected value? Let's name it `place`, that reads better in the tests' call
+site:
 
 ```haskell
    describe "Human readable text" do
@@ -73,9 +84,25 @@ Seeing this code again, I realise "converts itself" is not a great name. "Human 
        quickCheck \(place :: Place) -> (humanReadable place) /== []
 ```
 
-The inside is not that glanceable, especially if you haven't seen a property based test before, but at least we can understand the outside. A closer reading tells us that a number of arbitrary `Place` objects will be generated, and when made `humanReadable` it never equals an empty list.
+The inside is not that glanceable, especially if you haven't seen a property
+based test before, but at least we can understand the outside. Let us try to
+read this code together.
 
-One could wonder whether it was worth extracting two short one-liners into functions. We believe these extractions make the code more glanceable:
+How can we read this? A developer new to a team, when we read code together, 
+insisted on naming all the operators in words. This turned out to be
+enlightening, and I thought I should do that more often (and I still should).
+Maybe we should have a _pronounce the operators_ heuristic for code reading.
+
+What do we see here? The `\==` operator is specific to the quickCheck library I
+use, so we could name it 'never equals'. Now we read 'for all generated places,
+a humanReadable place `never equals` the empty list'.
+
+Extract for glanceability
+-------
+
+We extracted two oneliners for pass and fail validation into functions. One
+could wonder whether it was worth extracting these two, because they are very
+short. We believe these extractions make the code more glanceable:
 
 ```haskell
 shouldFailValidation e = isValid e `shouldEqual` false
@@ -86,16 +113,21 @@ shouldPassValidation e = isValid e `shouldEqual` true
 The function names reveal intent at the places where it is used, even though
 there is very little code inside of it.
 
-If we were to inline this, we'd have to read the inside everywhere. Fewer moving
-parts to read aid understanding code, and that includes tests. We do have to
-make sure that the function has a clear name in the context where it is used,
-otherwise these extractions hurt more than they help.
+If we were to inline this, we'd have to read the inside everywhere. A few
+symbols don't hurt so much, but it adds up and eventually it becomes line
+noise. Fewer moving parts aid in understanding code, and that includes
+tests. We do have to make sure that the function has a clear name in the context
+where it is used, otherwise these extractions hurt more than they help.
 
 > An *Extract Method* refactoring is often more about the place where the method
 > is called, than the place where it is defined.
 
 > We prioritize making the whole more readable, even when we have to introduce
 > more parts.
+
+One of the goals of encapsulation is letting the whole pay for the price of the
+parts. If we don't need to look inside functions, because the name and parameters are clear, then it
+matters less how many layers there are.
 
 ## Don't use an abstraction you already have when it is a bad fit
 
@@ -105,34 +137,49 @@ One of the tests above is about failing validation when some fields are empty:
      it "fails when country is empty" do
        shouldFailValidation $ mkPlace (City "") (Country "")
 ```
-At first I considered using the abstraction `invalidPlace` I had lying around instead of spelling out the empty `City` and `Country`:
+At first I considered re-using the abstraction `invalidPlace` we already had lying around instead of spelling out the empty `City` and `Country`. `invalidPlace` is defined as follows:
 
 ```haskell
 invalidPlace :: Place
 invalidPlace = mkPlace (City "") (Country "")
 ```
 
-As you can see in the test above, I have two different tests now, one for empty
-city and one for empty country. If I was really worried, I could follow the
+As you can see in the test above, we have exactly two different tests now, one for empty
+city and one for empty country. If we were really worried, we could follow the
 logic and make four of them. Having `invalidPlace` would make it less clear
 _how_ the `Place` is not valid. These trade-offs often take some iteration to
 get right.
 
-Instead, I have used `invalidPlace` and its sibling `validPlace` to construct
-larger objects for tests that contain a `Place`. In the larger context I don't
-want to think about what exactly it is constructed of, so it makes the test more
-glanceable there:
+Some extractions make sense in a larger context
+-----
+
+Moving on from the example above, we look at a test for a client of `Place`, the
+poorly named `ExpenseRequestDetail`. 
+
+@@note similar patterns make glanceability repeatable
+The tests for `expense request` and it's `detail` follow a similar pattern as
+the tests for Place, with `shouldFailValidation`, objects for `empty` and
+`nonEmpty` etc.
+
+In the test below we have used `invalidPlace` to construct
+a larger objects for test. In this larger context we don't
+want to think about what exactly a `Place`` is constructed of, so it makes the test
+more glanceable:
 
 ```haskell
 it "fails when travellingFrom is not valid" do
    shouldFailValidation ( mkExpenseRequestDetail ( nonEmpty {travellingFrom = invalidPlace}))
 ```
 
-But wait, what is `nonEmpty`? This was sort of clear in the context of the test,
-as it had three different `it` blocks using it with a different field being set
-to invalid each time. In the ... light of this post, it is not so clear. We may
-have missed an opportunity for better naming. I'm tempted to show you what
-`nonEmpty` is made of, but that would deny the opportunity to improve naming...
+We use `shouldFailValidation` again, but wait, what is `nonEmpty`? 
+
+This made sense at the time of writing the test, as it had three neighbouring
+`it` blocks that used `nonEmpty` with a different field being set to invalid
+each time. Looking at it again, we noticed having to read and re-read the blocks
+together in order to make sense of a single one. That is not particularly
+glanceable. We may have missed an opportunity for better naming. We are tempted
+to show you what `nonEmpty` is made of, but that would deny us the opportunity
+to improve said naming...
 
 ```haskell
 it "fails when travellingFrom is not valid" do
@@ -140,8 +187,9 @@ it "fails when travellingFrom is not valid" do
        nonEmptyExpenseRequestDetailData {travellingFrom = invalidPlace}))
 ```
 
-But now the method is so long that it is no longer glanceable... let's have a
-look at our data structure:
+we renamed `nonEmpty` to `nonEmptyExpenseRequestDetailData` But now the method
+is so long that it is no longer glanceable. Let's have a look at our data
+structure:
 
 ```haskell
 nonEmpty ::  { travellingFrom :: Place
@@ -154,7 +202,10 @@ nonEmpty =
    pleaseExplain: "explanation"}
 ```
 
-Three fields, and we wrote three tests for each field's invalid state. Dis
+Three fields, and we wrote three tests for each field's invalid state. We use [purescript's record update syntax](https://github.com/purescript/documentation/blob/master/language/Records.md#record-update) to change one value in turn. The non empty expense request detail starts out its' life as a valid object. In other languages we might have used a [Test Data Builder](/2020/10/09/test-data-builders.html).
+
+After some back and forth, we settled on `validExpenseRequestDetailParameters`
+for now. Not shorter, but slightly less bad than what we had:
 
 ```haskell
 it "fails when travellingFrom is not valid" do
@@ -162,20 +213,27 @@ it "fails when travellingFrom is not valid" do
        validExpenseRequestDetailParameters {travellingFrom = invalidPlace}))
 ```
 
-When showing this code, Marc asked, why is `expenseRequestDetail` called an
-`expenseRequestDetail`? My response was that I had an expense request,
-and it needed more details, where previously it didn't have many. And I
-couldn't come up with a more meaningful name. The stakeholders wanted to get
-some idea of expense requester's itinerary, and people may want to explain more,
-so there is an explanation field.
+We leave improving the glanceability of this as an exercise to the reader (post
+yours in a tweet, perhaps?). 
 
-The tests for `expense request` follow a similar pattern as the tests for Place,
-with `shouldFailValidation`, objects for `empty` and `nonEmpty` etc. If I had to
-construct the Place object here, it would just detract from the intent of the
-test. It would merely add line noise.
+
+Notes on the synthesis of poorly named things
+----
+
+Why do we name things poorly?
+
+When showing this code, Marc asked, why is `expenseRequestDetail` called an
+`expenseRequestDetail`? My response was that I had an expense request, and it
+needed more details, where previously it didn't have many. And I couldn't come
+up with a more meaningful name at the time. The stakeholders wanted to get some
+idea of expense requester's itinerary, and people may want to explain more, so
+there is an explanation field. I made it, I named it as best as I could at the
+time, and moved on. In hindsight, `Itinerary` would be a better name.
+
 
 # What makes a test glanceable
 
+@@TODO what do we recap, what do we add, should we add our new heuristics?
 Let's recap, and add a bit. What makes a test glanceable?:
 
 - **Clear names of tests and variables**: names communicatie intent rather than implementation.

@@ -123,8 +123,13 @@ Since the NewSession object is being observed by the component, missing fields a
 
 ### Injecting modules
 
-The component receives a `facilitatorModule` object as a property. This is our 'state object'. We have decided to inject this dependency through props, because we don't like singletons or global variables for managing our dependencies, nor do we like dependency injection magic. _We want to be in control of our dependencies._
-To activate Vue change detection on the state within this object, we need to include it in the data part - hence the `facilitator: this.facilitatorModule`.
+The component receives a `facilitatorModule` object as a property. This is our
+'state object'. We have decided to inject this dependency through props, because
+we don't like singletons or global variables for managing our dependencies, nor
+do we like dependency injection magic. _We want to be in control of our
+dependencies._ To activate Vue change detection on the state within this object,
+we need to include it in the data part - hence the `facilitator:
+this.facilitatorModule`.
 
 ### Some rules of thumb
 
