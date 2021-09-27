@@ -259,7 +259,7 @@ it "fails when travellingFrom is not valid" do
 
 # Effects
 
-Glanceability of tests helps a lot when a test fails: we will quickly
+Glanceability of tests supports us when a test fails: we will quickly
 understand the test's intent, so that we can fix it rightaway.
 
 Glanceable tests are a form of [living
@@ -301,7 +301,7 @@ Rebecca Wirfs-Brock wrote in [Principles in Practice](http://wirfs-brock.com/PDF
 > making a particular design choice, you’ll learn more about putting design
 > principles into practice. "
 
-In his [Effective Unit Testing
+In [Effective Unit Testing
 book](https://www.goodreads.com/book/show/17282399-effective-unit-testing),
 Lasse Koskela describes a number of testing smells that concern readability and
 maintainability of unit tests.
@@ -310,12 +310,9 @@ Eyes pictures credits: [Linux xeyes tool](https://www.x.org/releases/X11R7.6/doc
 
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
 
-<aside>
-  <p>Writing glanceable tests is a skill. Join us in one of our Test Driven Development course to learn by doing.
-  </p>
-  <p><div>
-    <a href="/training/test-driven-development">Check availability</a>
-  </div></p>
-</aside>
+<aside> <p>Writing glanceable tests is a skill that becomes better with
+  practice. Join us in one of our Test Driven Development course to learn by
+  doing. </p> <p><div> <a href="/training/test-driven-development">Check
+  availability</a> </div></p> </aside>
 
 ![xeyes screenshot](/attachments/blogposts/2021/tdd/xeyes-2.png)
