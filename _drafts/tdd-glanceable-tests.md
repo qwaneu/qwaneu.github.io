@@ -11,7 +11,7 @@ image: /attachments/blogposts/2021/tdd/xeyes-1.png
 ---
 
 As we spend more time reading code than writing it, we'd like our code to
-be glanceable. By glancing at the code, we want to quickly understand its
+be **glanceable**. By glancing at the code, we want to quickly understand its
 intent. Glanceability is a useful property, for production code as well as test
 code. Test code is there to help us out, so being able to quickly grasp what the
 test is about will help future us, and others, keep our tests habitable.
@@ -226,18 +226,17 @@ Why is the glanceability here less than desired?
 Notes on the synthesis of poorly named things
 ----
 
-When Willem showed this code to Marc,he asked, 
+When Willem showed this code to Marc, he asked: _"why is `expenseRequestDetail` called an `expenseRequestDetail`?"_
 
-> why is`expenseRequestDetail` called an `expenseRequestDetail`?
+Willem's response was that he had an expense request, and it needed more
+details, where previously it didn't have many. And he couldn't come up with a
+more meaningful name at the time. Willem said: _"The stakeholders wanted to get
+some idea of expense requester's itinerary"_, and people may want to explain
+more, so there is an explanation field. Willem made it and named it as best as
+he could at the time, and moved on. Hearing himself say `Itinerary`, this may
+have been a better name in hindsight.
 
-Willems response was that he had an expense request, and it needed more details,
-where previously it didn't have many. And he couldn't come up with a more
-meaningful name at the time. Willem said: "The stakeholders wanted to get some idea of expense
-requester's itinerary", and people may want to explain more, so there is an
-explanation field. Willem made it and named it as best as he could at the time, and
-moved on. Hearing himself say `Itinerary`, this may have beeen a better name in hindsight.
-
-It is never to0 late to rename
+It is never too late to rename
 -----
 
 Now we can use the new name `Itinerary` in our spec:
