@@ -202,7 +202,12 @@ nonEmpty =
    pleaseExplain: "explanation"}
 ```
 
-Three fields, and we wrote three tests for each field's invalid state. We use [purescript's record update syntax](https://github.com/purescript/documentation/blob/master/language/Records.md#record-update) to change one value in turn. The non empty expense request detail starts out its' life as a valid object. In other languages we might have used a [Test Data Builder](/2020/10/09/test-data-builders.html).
+Three fields, and we wrote three tests for each field's invalid state. We use
+[purescript's record update
+syntax](https://github.com/purescript/documentation/blob/master/language/Records.md#record-update)
+to change one value in turn. The non empty expense request detail starts out
+its' life as a valid object. In other languages we might have used a [Test Data
+Builder](/2020/10/09/test-data-builders.html).
 
 After some back and forth, we settled on `validExpenseRequestDetailParameters`
 for now. Not shorter, but slightly less bad than what we had:
@@ -213,35 +218,41 @@ it "fails when travellingFrom is not valid" do
        validExpenseRequestDetailParameters {travellingFrom = invalidPlace}))
 ```
 
-We leave improving the glanceability of this as an exercise to the reader (post
-yours in a tweet, perhaps?). 
-
+Why is the glanceability here less than desired?
 
 Notes on the synthesis of poorly named things
 ----
 
-Why do we name things poorly?
+When showing this code, Marc asked, why is
+`expenseRequestDetail` called an `expenseRequestDetail`? My response was that I
+had an expense request, and it needed more details, where previously it didn't
+have many. And I couldn't come up with a more meaningful name at the time. The
+stakeholders wanted to get some idea of expense requester's itinerary, and
+people may want to explain more, so there is an explanation field. I made it, I
+named it as best as I could at the time, and moved on. In hindsight, `Itinerary`
+would be a better name.
 
-When showing this code, Marc asked, why is `expenseRequestDetail` called an
-`expenseRequestDetail`? My response was that I had an expense request, and it
-needed more details, where previously it didn't have many. And I couldn't come
-up with a more meaningful name at the time. The stakeholders wanted to get some
-idea of expense requester's itinerary, and people may want to explain more, so
-there is an explanation field. I made it, I named it as best as I could at the
-time, and moved on. In hindsight, `Itinerary` would be a better name.
+Now we can use the new name `Itinerary` in our spec:
 
+```haskell
+it "fails when travellingFrom is not valid" do
+   shouldFailValidation ( mkItinerary ( 
+       validItineraryValues {travellingFrom = invalidPlace}))
+```
 
-# What makes a test glanceable
+# These are just some of my glanceable things
 
-@@TODO what do we recap, what do we add, should we add our new heuristics?
-Let's recap, and add a bit. What makes a test glanceable?:
-
-- **Clear names of tests and variables**: names communicatie intent rather than implementation.
-- **Composed method**: having all lines of code in a function at the same level of abstraction.
-- **Helper functions** that hide implementation details and express intent through good names.
-- **Hiding setup details**, usually the [Given](/2021/09/02/tdd-given-when-then.html) part of the test, in a `setup`, `beforeEach` or other helper function.
-- **[Test data builders](/2020/10/09/test-data-builders.html)** that help
-  express different configurations of (domain) objects clearly and concisely.
+- **Intention revealing names**: test descriptions and function names communicatie intent rather than implementation.
+- **Composed method**: having all lines of code in a test at the same level of abstraction.
+- **Helpers** that hide implementation details and express intent through good
+  names. E.g. custom matchers and custom assertions.
+- **Hiddden setup details**, usually the
+  [Given](/2021/09/02/tdd-given-when-then.html) part of the test, in a `setup`,
+  `beforeEach` or injecting initial state.
+- **Exposed relevant data** expected values in a test should be understandable without cross-referencing.
+- **Wisely (un)used annotations** the test body should be self contained.
+- **[Test data builders](/2020/10/09/test-data-builders.html)** express
+  different configurations of domain objects clearly and concisely.
 
 # Effects
 
