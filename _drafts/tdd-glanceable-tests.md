@@ -31,13 +31,13 @@ necessary. One thing we strive for is *glanceable tests*.
 > 
 > From: [Dictionary.com](https://www.dictionary.com/browse/glanceable)
 
-In this post we'll discuss some of the micro trade-offs that go into making tests glanceable.
+In this post, we'll discuss some of the micro trade-offs that go into making tests glanceable.
 
 # Example 
 
 Let's look at an example from the [WeReview](https://wereviewhq.com) conference
 session management system we have developed: the `PlaceSpec` test, written in
-PureScript).
+PureScript.
 
 ```haskell
 placeSpec = do
@@ -78,7 +78,7 @@ the invarariant heuristic properly at some point.
 Seeing this code again, I realise "converts itself" is not a great name. "Human
 readable text is never empty" is better. In the best `Haskell` tradition I used
 a one letter name for the `Place` value. No clue why I called it `e` now. Maybe
-for expected value? Let's name it `place`, that reads better in the tests' call
+for expected value? Let's name it `place`, that reads better in the test's call
 site:
 
 ```haskell
@@ -159,14 +159,15 @@ Some extractions make sense in a larger context
 Moving on from the example above, we look at a test for a client of `Place`, the
 poorly named `ExpenseRequestDetail`. 
 
-@@note similar patterns make glanceability repeatable
 The tests for `expense request` and its `detail` follow a similar pattern as
 the tests for Place, with `shouldFailValidation`, objects for `empty` and
 `nonEmpty`, etc.
 
+> Similar patterns make glanceability repeatable.
+
 In the test below we have used `invalidPlace` to construct a larger objects for
-test. In this larger context we don't want to think about what exactly a
-`Place`` is constructed of, so it makes the test more glanceable:
+test. In this larger context, we don't want to think about what exactly a
+`Place` is constructed of, so it makes the test more glanceable:
 
 ```haskell
 it "fails when travellingFrom is not valid" do
@@ -189,7 +190,7 @@ it "fails when travellingFrom is not valid" do
        nonEmptyExpenseRequestDetailData {travellingFrom = invalidPlace}))
 ```
 
-we renamed `nonEmpty` to `nonEmptyExpenseRequestDetailData` But now the method
+We renamed `nonEmpty` to `nonEmptyExpenseRequestDetailData`, but now the method
 is so long that it is no longer glanceable. Let's have a look at our data
 structure:
 
@@ -208,7 +209,7 @@ Three fields, and we wrote three tests for each field's invalid state. We use
 [PureScript's record update
 syntax](https://github.com/purescript/documentation/blob/master/language/Records.md#record-update)
 to change one value in turn. The non empty expense request detail starts out
-its' life as a valid object. In other languages we might have used a [Test Data
+its life as a valid object. In other languages we might have used a [Test Data
 Builder](/2020/10/09/test-data-builders.html).
 
 After some back and forth, we settled on `validExpenseRequestDetailParameters`
@@ -254,12 +255,12 @@ Enough code already.
 - **Intention revealing names**: test descriptions and function names communicatie intent rather than implementation.
 - **Composed method**: having all lines of code in a test at the same level of abstraction.
 - **Helpers** that hide implementation details and express intent through good
-  names. E.g. custom matchers and custom assertions.
-- **Hiddden setup details**, usually the
+  names, like custom matchers and custom assertions.
+- **Hidden setup details**, usually the
   [Given](/2021/09/02/tdd-given-when-then.html) part of the test, in a `setup`,
   `beforeEach` or injecting initial state.
 - **Exposed relevant data** expected values in a test should be understandable without cross-referencing.
-- **Wisely (un)used annotations** the test body should be self contained.
+- **Wisely (un)used annotations**: the test body should be self-contained.
 - **[Test data builders](/2020/10/09/test-data-builders.html)** express
   different configurations of domain objects clearly and concisely.
 
