@@ -47,8 +47,8 @@ Rob explains hard problems in a simple way, so the problems and the solutions ar
 ### QWAN Partners - company info
 
 _Westgeest Consultancy_  
-Elsakkersstraat 25  
-5081 GL Hilvarenbeek  
+Ypelaerstraat 7  
+5081 BS Hilvarenbeek  
 The Netherlands  
 Chamber of Commerce Tilburg: 18071671  
 VAT: NL 820447900 B01

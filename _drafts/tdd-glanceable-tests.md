@@ -7,7 +7,7 @@ tags:
   - eXtreme Programming
   - refactoring
 author: Willem van den Ende
-image:
+image: /attachments/blogposts/2021/tdd/xeyes-1.png
 ---
 
 As we spend more time reading code than writing it, we'd like our code to
@@ -15,6 +15,9 @@ be glanceable. By glancing at the code, we want to quickly understand its
 intent. Glanceability is a useful property, for production code as well as test
 code. Test code is there to help us out, so being able to quickly grasp what the
 test is about will help future us, and others, keep our tests habitable.
+
+![xeyes screenshot](/attachments/blogposts/2021/tdd/xeyes-1.png)
+{: class="post-image" }
 
 In the [Test Driven Development
 cycle](http://localhost:8082/2021/06/24/tdd-still-relevant-in-2021.html), we
@@ -144,11 +147,11 @@ invalidPlace :: Place
 invalidPlace = mkPlace (City "") (Country "")
 ```
 
-As you can see in the test above, we have exactly two different tests now, one for empty
-city and one for empty country. If we were really worried, we could follow the
-logic and make four of them. Having `invalidPlace` would make it less clear
-_how_ the `Place` is not valid. These trade-offs often take some iteration to
-get right.
+As you can see in the test above, we have exactly two different tests now, one
+for empty city and one for empty country. If we were really worried, we could
+follow the logic and make four of them. Having `invalidPlace` would make it less
+clear _how_ the `Place` is not valid. These trade-offs often take some iteration
+to get right.
 
 Some extractions make sense in a larger context
 -----
@@ -157,14 +160,13 @@ Moving on from the example above, we look at a test for a client of `Place`, the
 poorly named `ExpenseRequestDetail`. 
 
 @@note similar patterns make glanceability repeatable
-The tests for `expense request` and it's `detail` follow a similar pattern as
+The tests for `expense request` and its `detail` follow a similar pattern as
 the tests for Place, with `shouldFailValidation`, objects for `empty` and
-`nonEmpty` etc.
+`nonEmpty`, etc.
 
-In the test below we have used `invalidPlace` to construct
-a larger objects for test. In this larger context we don't
-want to think about what exactly a `Place`` is constructed of, so it makes the test
-more glanceable:
+In the test below we have used `invalidPlace` to construct a larger objects for
+test. In this larger context we don't want to think about what exactly a
+`Place`` is constructed of, so it makes the test more glanceable:
 
 ```haskell
 it "fails when travellingFrom is not valid" do
@@ -203,7 +205,7 @@ nonEmpty =
 ```
 
 Three fields, and we wrote three tests for each field's invalid state. We use
-[purescript's record update
+[PureScript's record update
 syntax](https://github.com/purescript/documentation/blob/master/language/Records.md#record-update)
 to change one value in turn. The non empty expense request detail starts out
 its' life as a valid object. In other languages we might have used a [Test Data
@@ -256,7 +258,7 @@ it "fails when travellingFrom is not valid" do
 
 # Effects
 
-Glanceability of tests helps a lot when a test fails: we will quickly
+Glanceability of tests supports us when a test fails: we will quickly
 understand the test's intent, so that we can fix it rightaway.
 
 Glanceable tests are a form of [living
@@ -303,9 +305,13 @@ book](https://www.goodreads.com/book/show/17282399-effective-unit-testing),
 Lasse Koskela describes a number of testing smells that concern readability and
 maintainability of unit tests.
 
+Eyes pictures credits: [Linux xeyes tool](https://www.x.org/releases/X11R7.6/doc/man/man1/xeyes.1.xhtml).
+
 _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test-driven-development)._
 
 <aside> <p>Writing glanceable tests is a skill that becomes better with
   practice. Join us in one of our Test Driven Development course to learn by
   doing. </p> <p><div> <a href="/training/test-driven-development">Check
   availability</a> </div></p> </aside>
+
+![xeyes screenshot](/attachments/blogposts/2021/tdd/xeyes-2.png)
