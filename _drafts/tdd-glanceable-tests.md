@@ -225,14 +225,19 @@ Why is the glanceability here less than desired?
 Notes on the synthesis of poorly named things
 ----
 
-When showing this code, Marc asked, why is
-`expenseRequestDetail` called an `expenseRequestDetail`? My response was that I
-had an expense request, and it needed more details, where previously it didn't
-have many. And I couldn't come up with a more meaningful name at the time. The
-stakeholders wanted to get some idea of expense requester's itinerary, and
-people may want to explain more, so there is an explanation field. I made it, I
-named it as best as I could at the time, and moved on. In hindsight, `Itinerary`
-would be a better name.
+When Willem showed this code to Marc,he asked, 
+
+> why is`expenseRequestDetail` called an `expenseRequestDetail`?
+
+Willems response was that he had an expense request, and it needed more details,
+where previously it didn't have many. And he couldn't come up with a more
+meaningful name at the time. Willem said: "The stakeholders wanted to get some idea of expense
+requester's itinerary", and people may want to explain more, so there is an
+explanation field. Willem made it and named it as best as he could at the time, and
+moved on. Hearing himself say `Itinerary`, this may have beeen a better name in hindsight.
+
+It is never to0 late to rename
+-----
 
 Now we can use the new name `Itinerary` in our spec:
 
@@ -241,6 +246,8 @@ it "fails when travellingFrom is not valid" do
    shouldFailValidation ( mkItinerary ( 
        validItineraryValues {travellingFrom = invalidPlace}))
 ```
+
+Enough code already. 
 
 # These are just some of my glanceable things
 
