@@ -11,11 +11,12 @@ V Faking & Cheating
 V Test name describes the action and the expected result
 V Given-When-Then (or Arrange-Act-Assert)
 V One (conceptual) assert per test
-> (new) Glanceable tests
+V (new) [Glanceable tests](https://www.qwan.eu/2021/09/27/tdd-glanceable-tests.html)
 ~ Triangulation
 ~ Caring for your tests
 ~ Fix one failing test at a time / No more than one failing test at a time
-- Rules for simple design
+~ What is a heuristic
+- (expanding) Rules for simple design
 - (new) Removing duplication between test & production code
 - (new) Make the change easy, then make the change (refactor after and before) source: Kent Beck
 - Test cases follow common setup
@@ -27,8 +28,9 @@ V One (conceptual) assert per test
 - start with a negative case (zit in [0, 1, N])
 - (new) Composed Method, for tests / everything at same level of abstraction
 - (new) factor out support code (not necessarily all common code, sometimes we need to re-tell a story)
-- What is a heuristic
  - http://wirfs-brock.com/blog/2019/03/20/growing-your-personal-design-heuristics/
+- (new) the need for speed - why tests should be fast
+ (see tests should be independent, what is a unit test, focus on relevant data)
 
 **Other**
 V [TDD still relevant in 2021](https://www.qwan.eu/2021/06/24/tdd-still-relevant-in-2021.html)

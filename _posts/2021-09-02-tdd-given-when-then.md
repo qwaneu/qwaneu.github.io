@@ -73,9 +73,12 @@ canOfChoice.should == Can.Coke
 
 Note that we normally don't put "given/when/then" or "arrange/act/assert"
 comments in our test code. We try to keep our tests simple and straightforward,
-often extracting setup code into a `before`, like we did [in the previous post](2021/08/27/tdd-one-assert-per-test.html). We also use 
-[test data builders](/2020/10/09/test-data-builders.html) instead of or in addition to a setup code. We strive for _glanceable_ tests, where we can see the
-_given_, the _when_ and the _then_ parts rightaway. It acts more as an idiom than a literal implementation.
+often extracting setup code into a `before`, like we did [in the previous
+post](2021/08/27/tdd-one-assert-per-test.html). We also use [test data
+builders](/2020/10/09/test-data-builders.html) instead of or in addition to a
+setup code. We strive for [glanceable tests](/2021/09/27/tdd-glanceable-tests.html), where we can see the _given_, the
+_when_ and the _then_ parts rightaway. It acts more as an idiom than a literal
+implementation.
 
 ## Effects
 

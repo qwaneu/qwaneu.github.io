@@ -12,7 +12,7 @@
 
 - re-review / re-read the code a month after shipping Code looks different out
  of the rush of making it, and after having forgotten some of the details. (see
- glanceable tests post for an example). (for the 25th anniversary of
+ [glanceable tests post](/2021/09/27/tdd-glanceable-tests.html) for an example). (for the 25th anniversary of
  cyberchair - fixing a bug after a year, it could have been someone else).
 
 -- misc posts:
