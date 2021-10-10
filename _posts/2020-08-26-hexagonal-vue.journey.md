@@ -107,7 +107,7 @@ Although the [Vue Test Utils](https://vue-test-utils.vuejs.org/) library greatly
     expect(wrapper.find('#reset-button').attributes().disabled).toBeTruthy()
   })
 ```
-Although it is short and Vue Test Utils makes it relatively easy to write fast UI component tests, the intent of the test tends to disappear a bit behind the testing mechanisms. We also need some _awaits_ to make sure input changes have been processed fully. **We'd like our test to be _glanceable_: at a glance, we'd to understand the _given_, the _when_ and the _then_ of a test.** Growing our own  higher level DSL (domain specific language) around Vue Test Utils could help here.
+Although it is short and Vue Test Utils makes it relatively easy to write fast UI component tests, the intent of the test tends to disappear a bit behind the testing mechanisms. We also need some _awaits_ to make sure input changes have been processed fully. **We'd like our test to be [glanceable](/2021/09/27/tdd-glanceable-tests.html): at a glance, we'd to understand the _given_, the _when_ and the _then_ of a test.** Growing our own  higher level DSL (domain specific language) around Vue Test Utils could help here.
 
 ### High coupling
 

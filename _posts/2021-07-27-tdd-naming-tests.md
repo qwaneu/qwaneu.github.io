@@ -150,12 +150,12 @@ name or description to reflect an invariant of the code under test.
 
 When we extract the set up code and other parts of the test out into functions,
 this heuristic can become less useful. If we can make the test itself short and
-glanceable, the test becomes self-evident. In some languages we can move the
+[glanceable](/2021/09/27/tdd-glanceable-tests.html), the test becomes self-evident. In some languages we can move the
 order of our expectation function, so that it can go in the middle of a
 sentence. 
 
 If the test is glanceable, the heading above the test body may be redundant. We
-will write more about _glanceable tests_ in a future post, here is a small
+will write more about _[glanceable tests](/2021/09/27/tdd-glanceable-tests.html)_ in a future post, here is a small
 example from [WeReview](https://wereviewhq.com), a conference
 session management system we have developed (written in [PureScript](https://www.purescript.org/)):
 
@@ -166,7 +166,7 @@ session management system we have developed (written in [PureScript](https://www
        shouldPassValidation noEmptyFields
 ```
 
-Glanceable tests need good naming for their headings, as well as thoughtful
+[Glanceable tests](/2021/09/27/tdd-glanceable-tests.html) need good naming for their headings, as well as thoughtful
 refactoring of the bodies. 
 
 ## Further reading

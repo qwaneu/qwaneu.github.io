@@ -25,7 +25,11 @@ From page 1 of Koens book. Time to order and read it, perhaps.
 
 Further reading
 ----
+discussion of the Method: Conducting the Engineer's Approach to Problem Solving
+
 
 thinking of 'groping towards understanding' I think from C2 wiki or chris matts' blog. ah, Richard Feynman -
 
 > We seem gradually to be groping toward an understanding of the world of subatomic particles, but we really do not know how far we have yet to go in this task.
+
+Rebecca wirfs brock on heuristics 

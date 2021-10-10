@@ -6,7 +6,7 @@ tags:
   - feedback
   - eXtreme Programming
   - refactoring
-author: Willem van den Ende
+author: Willem van den Ende, Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2021/tdd/xeyes-1.png
 ---
 
@@ -31,7 +31,9 @@ necessary. One thing we strive for is *glanceable tests*.
 > 
 > From: [Dictionary.com](https://www.dictionary.com/browse/glanceable)
 
-In this post, we'll discuss some of the micro trade-offs that go into making tests glanceable.
+In this installment of our [Series on TDD
+heuristics](/blog-by-tag#tag-test-driven-development), we'll discuss some of the
+micro trade-offs that go into making tests glanceable.
 
 # Example 
 
