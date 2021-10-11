@@ -31,6 +31,8 @@ V (new) [Glanceable tests](https://www.qwan.eu/2021/09/27/tdd-glanceable-tests.h
  - http://wirfs-brock.com/blog/2019/03/20/growing-your-personal-design-heuristics/
 - (new) the need for speed - why tests should be fast
  (see tests should be independent, what is a unit test, focus on relevant data)
+- (new) Mind the failure feedback
+(will you understand the failure tomorrow or next year?)
 
 **Other**
 V [TDD still relevant in 2021](https://www.qwan.eu/2021/06/24/tdd-still-relevant-in-2021.html)
