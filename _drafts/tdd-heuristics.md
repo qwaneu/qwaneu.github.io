@@ -6,16 +6,17 @@ V [Think about design in the test](https://www.qwan.eu/2021/06/28/tdd-think-abou
 V [Wishful thinking](https://www.qwan.eu/2021/07/01/tdd-wishful-thinking.html)
 V [Start with expectation](https://www.qwan.eu/2021/07/05/tdd-start-with-expectation.html)
 V [0, 1, N](https://www.qwan.eu/2021/07/09/tdd-0-1-n.html)
-V Act dumb in implementation
-V Faking & Cheating
-V Test name describes the action and the expected result
-V Given-When-Then (or Arrange-Act-Assert)
-V One (conceptual) assert per test
+V [Act dumb in implementation](https://www.qwan.eu/2021/07/12/tdd-act-dumb-in-implementation.html)
+V [Faking & Cheating](https://www.qwan.eu/2021/07/20/tdd-faking-cheating.html)
+V [Test name describes the action and the expected result](https://www.qwan.eu/2021/07/27/tdd-naming-tests.html)
+V [Given-When-Then or Arrange-Act-Assert](https://www.qwan.eu/2021/09/02/tdd-given-when-then.html)
+V [One (conceptual) assert per test](https://www.qwan.eu/2021/08/27/tdd-one-assert-per-test.html)
 V (new) [Glanceable tests](https://www.qwan.eu/2021/09/27/tdd-glanceable-tests.html)
 ~ Triangulation
 ~ Caring for your tests
 ~ Fix one failing test at a time / No more than one failing test at a time
 ~ What is a heuristic
+  - http://wirfs-brock.com/blog/2019/03/20/growing-your-personal-design-heuristics/ Also references 'discussion of the method'.
 - (expanding) Rules for simple design
 - (new) Removing duplication between test & production code
 - (new) Make the change easy, then make the change (refactor after and before) source: Kent Beck
@@ -28,11 +29,14 @@ V (new) [Glanceable tests](https://www.qwan.eu/2021/09/27/tdd-glanceable-tests.h
 - start with a negative case (zit in [0, 1, N])
 - (new) Composed Method, for tests / everything at same level of abstraction
 - (new) factor out support code (not necessarily all common code, sometimes we need to re-tell a story)
- - http://wirfs-brock.com/blog/2019/03/20/growing-your-personal-design-heuristics/
 - (new) the need for speed - why tests should be fast
  (see tests should be independent, what is a unit test, focus on relevant data)
-- (new) Mind the failure feedback
-(will you understand the failure tomorrow or next year?)
+- (new) Mind the failure feedback (draft post in willems' essays based on C++ enum that gives huh feedback)
+  Based on Robs' remark for the afterword: maybe the enum is quick and convenient, but not the best representation given the hoops we have to jump through to let it give decent feedback. So whether we address it (e.g. in a training session) or not, depends on how long we plan to keep it around.
+(reason: will you understand the failure tomorrow or next year?)
+- (new) Make failing test without needing to change others
+  (put on the board based on a training - it is tempting to change a bunch of tests e.g. when adding parameters). Also see: code golf.
+- (new) pre-and post-conditions (see twitter thread with Steve Freeman)
 
 **Other**
 V [TDD still relevant in 2021](https://www.qwan.eu/2021/06/24/tdd-still-relevant-in-2021.html)
