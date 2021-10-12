@@ -11,11 +11,12 @@ image:
 A heuristic is the most suitable definition of it that we can find at the time of posting, given the limits of our time and understanding.
 
 We hope to have demonstrated a main use of heuristics by example. We engineer
-this blog post, we want to have a working definition of Heuristic to refer to in
+this blog post, because we want to have a working definition of Heuristic to refer to in
 our [test driven development](/blog-by-tag#tag-test-driven-development), and
 can't possibly comprehend everything that has been written about it, before the
 time to publish about it has past.
 
+Why did we just use the word engineering?
 
 Definition
 ------
@@ -77,3 +78,9 @@ Toolkit](http://wirfs-brock.com/blog/2019/03/20/growing-your-personal-design-heu
 The XKCD comic contained therein depicts a group decision process that looks
 eerily familiar. We particularly like "Always give yourself a chance to
 retreat". For us, the trick remains to keep reminding ourselves to use that chance to retreat.
+
+<aside>
+  <p>Struggling with an engineering challenge?</p>
+  <p><div>
+    <a href="/consulting">Talk to us, the first conversation is free.</a>
+  </div></p>
