@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What is a heuristic
+title: What is a heuristic?
 tags:
   - test driven development
   - feedback
