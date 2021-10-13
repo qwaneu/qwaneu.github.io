@@ -55,7 +55,7 @@ From page 1 of Koen's book:
 
 > You and I are participating in a magnificent experiment to see whether Nature's latest wrinkle, the human species armed with its new weapon, intelligence, has survival value.
 
- We've ordered the book, but it seems to be taking a while to arrive from the US. In the meantime we'll continue to write up some of our [TDD heuristics](/blog-by-tag#tag-test-driven-development).
+We've ordered the book, but it seems to be taking a while to arrive from the US. In the meantime we'll continue to write up some of our [TDD heuristics](/blog-by-tag#tag-test-driven-development).
 
 We hope to write more on heuristics once the book arrives, but for now, within the limits of our current understanding of heuristics, this post must do.
 
