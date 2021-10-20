@@ -309,7 +309,7 @@ A Diagram of Effects is a powerful technique to make sense of what is going on i
 
 _Maximizing the amount of work not done_ is one of the [twelve principles of the Agile Manifesto](https://agilemanifesto.org/principles.html).
 
-If you'd like to learn more about the Agile Fluency model and how it can help your teams grow, we recommend reading the [eBook](https://www.agilefluency.org/ebook.php) (PDF).
+If you'd like to learn more about the Agile Fluency model and how it can help your teams grow, we recommend reading [the article by Jim and Diana](https://www.martinfowler.com/articles/agileFluency.html).
 
 On the topic of slack and sustainable pace, I recommend the book by
 Jon Fitch & Max Frenzel, [Time Off - A Practical Guide to Building Your Rest Ethic and Finding Success Without the Stress](https://maxfrenzel.com/time-off) (2020)
