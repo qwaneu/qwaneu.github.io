@@ -12,11 +12,10 @@ V [Test name describes the action and the expected result](https://www.qwan.eu/2
 V [Given-When-Then or Arrange-Act-Assert](https://www.qwan.eu/2021/09/02/tdd-given-when-then.html)
 V [One (conceptual) assert per test](https://www.qwan.eu/2021/08/27/tdd-one-assert-per-test.html)
 V (new) [Glanceable tests](https://www.qwan.eu/2021/09/27/tdd-glanceable-tests.html)
+V What is a heuristic
 ~ Triangulation
 ~ Caring for your tests
 ~ Fix one failing test at a time / No more than one failing test at a time
-~ What is a heuristic
-  - http://wirfs-brock.com/blog/2019/03/20/growing-your-personal-design-heuristics/ Also references 'discussion of the method'.
 - (expanding) Rules for simple design
 - (new) Removing duplication between test & production code
 - (new) Make the change easy, then make the change (refactor after and before) source: Kent Beck
