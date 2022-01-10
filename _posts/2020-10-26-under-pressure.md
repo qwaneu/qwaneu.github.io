@@ -263,7 +263,7 @@ could use a bit of help or coaching, to find a [sustainable pace](https://sustai
 
 Helping a team to build in slack in the way of working is crucial, because of
 the paradox: allowing slack in your schedule reduces the time available for
-work, so teams tend to skip on this, for instance working throughout the lunch
+work, so teams tend to skimp on this, for instance working throughout the lunch
 instead of taking a walk or enjoying a good foosball match. But slack in your
 schedule will in the end save time and lead to better solutions.
 
