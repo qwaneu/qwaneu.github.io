@@ -140,12 +140,10 @@ off, making it much easier, faster, cheaper to make new changes.
 A team at another client maintained a single legacy system that generated all of
 the revenue for the client. The client set up a separate team to develop a
 replacement system from a clean sheet design. Eventually one of us guided the
-new team in making small improvements - because, productivity and if you do a
-new thing using the same way of working as before, you'll get the same outcome.
-The original team saw this, and started allocating fourty percent of their time
-to improvements. After half a year, the original team was going so fast, that
-the company kept the 'legacy' product and repurposed the new development for
-another market.
+new team in making small improvements. The original team saw this, and started
+allocating fourty percent of their time to improvements. After half a year, the
+original team was going so fast, that the company kept the 'legacy' product and
+repurposed the new development for another market.
 
 ## Further reading & watching
 
