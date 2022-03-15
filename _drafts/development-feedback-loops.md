@@ -1,33 +1,134 @@
+---
+layout: post
+title: The three feedback loops in software product development
+tags:
+  - productivity
+  - agile fluency
+  - feedback
+  - systems thinking
+author: Marc Evers
+image: 
+---
 
+# Three feedback loops in software product development - summary
 
-# The three loops
+Looking at software product development, we can distinguish 3 important feedback
+loops.
+
+Improvements in the inner loop have the most impact, because the loop is
+iterated over most. Any effects (whether good or bad) get multiplied. This means
+that continuous attention to an investment in technical excellence is essential.
 
 ![initial whiteboard sketch](/attachments/blogposts/2022/3-feedback-loops-sketch.jpg)
 
-# Summary
+Many 'agile transformations' tend to focus on the middle and outer loops only,
+which is necessary but not sufficient. According to Jason Gorman, this is the
+reason most agile transformations fail.
 
-Looking at software product development, we can distinguish 3 important feedback loops.
+For effective, sustainable development, we need to work on all three feedback
+loops eventually. Focusing on the middle and outer loops is not sufficient, but
+focusing mostly on the inner loop isn't sufficient either. Productivity and ROI
+come from the interplay between the loops. You still can decide to focus on a
+specific loop at specific points in time, but over time you need to tend to all
+three.
 
-Improvements in the inner loop have the most impact, because the loop is iterated over most. Any effects (whether good or bad) get multiplied. This means that continuous attention to an investment in technical excellence is essential.
+The three feedback loops is a model and a model is a simplification. We think it
+provides a useful lens on the systemic effects in software product development
+and helps to find more effective (and efficient) interventions.
 
-Many 'agile transformations' tend to focus on the middle and outer loops only, which is necessary but not sufficient. According to Jason Gorman, this is the reason most agile transformations fail.
+Looking through the frame of the 3 loops allows us to investigate: length of the
+feedback loops, delays, handovers of work, waiting for decision making, "rework"
+(work going through the loop again because it is not good enough; cf. failure
+demand)
 
-For effective, sustainable development, we need to work on all three feedback loops eventually. Focusing on the middle and outer loops is not sufficient, but focusing mostly on the inner loop isn't sufficient either. Productivity and ROI come from the interplay between the loops. You still can decide to focus on a specific loop at specific points in time, but over time you need to tend to all three.
+# Middle loop - getting valuable work done
 
-The three feedback loops is a model and a model is a simplification. We think it provides a useful lens on the systemic effects in software product development and helps to find more effective (and efficient) interventions.
+Middle loop: "Simplicity--the art of maximizing the amount of work not done--is
+essential." (Agile Manifesto principle 10, although this applies to the other 2
+loops as well)
 
-Looking through the frame of the 3 loops allows us to investigate: length of the feedback loops, delays, handovers of work, waiting for decision making, "rework" (work going through the loop again because it is not good enough; cf. failure demand)
+Leverage in the middle loop can be substantial, e.g. in 'chaotic' organizations
+mostly based on individual contributors rather than teams. Structuring work,
+managing flow, focusing on value, and continuous improvement can make a huge
+initial difference. This is what the Scrum idea of "Doing Twice the Work in Half
+the Time" albeit a bit misleading is about. A bit of focus and maximizing the
+amount of work not done can be shockingly effective.
 
+The three loops are about
+- decision making
+- getting feedback & information
+- to steer & improve
 
-
-
-# Three feedback loops in software product development
-
-"Good morning! One thing I'd like to add one thing to the 3 loops view on product development we used in the retro: even though you need to work on all 3 loops for being effective, (small) improvements in the inner development loop have the biggest effect because of multiplication effects. So it pays to invest time in improving build times, fixing flaky tests, getting quicker PR feedback, etc." (message by Marc to the team at ZorgDomein)
+# Inner loop - technical excellence
 
 Inner loop has most leverage: "Continuous attention to technical excellence and good design enhances agility." (Agile Manifesto principle 9)
 
-Middle loop: "Simplicity--the art of maximizing the amount of work not done--is essential." (Agile Manifesto principle 10, although this applies to the other 2 loops as well)
+Small improvements that effect the speed of the inner loop or the length of the
+feedback loops can have a big impact, because it gets multiplied the most. As an
+example, shaving off a few seconds of your unit test run will benefit you every
+time you run the tests, many, many times a day. This all adds up, for every line
+of code you change, many times for every user story you work on.
+
+Small improvements in the inner development loop have the biggest effect because
+of multiplication effects. So it pays to invest time in improving build times,
+fixing flaky tests, getting quicker pull request feedback, doing pair
+programming instead of pull requests.
+
+Another way in which the inner loop has a big leverage: "if you go very fast,
+you will get much faster feedback on whether things are going the right way"
+(quote Rob). So technical excellence enables a speedup in the middle loop
+("becoming better faster") and in the outer loop - faster discovery, market
+testing, etc.
+
+# Why most agile transformations fail, according to Jason...
+
+Most agile initiatives tend to focus on this loop (and often the outer loop as
+well). The inner loop is not paid attention to. Investing in the middle and
+outer loops only will bring some benefits for most organizations, but they won't
+realize their potential.
+
+Most agile transformations miss out the huge leverage of investing in the inner loop.
+
+# ...but you need to work on all three - the loops interact
+
+The 3 loops interact. The inner loop is a big enabler for the other two loops.
+The middle loop ensures flow and can create a urgency for e.g. investing in
+inner loop improvements.
+
+In the end, you need to work on all three loops: without investment in the outer
+loop you are unable to deliver to your users'/stakeholders' needs. Without
+investing in the middle loop, not much will come out of development. Without
+investing in the inner loop, delivery will be slow and defect-rich.
+
+You need to work on all 3 loops for effective product delivery. 
+
+# Big gains, need investment
+
+Inner loop improvements can have a huge impact, they also require investment.
+Becoming highly skilled at software development takes practice, training,
+mentoring. Learning how do deliver running, tested software on shorter and
+shorter loops is a hard skill.
+
+Many organizations tend to underinvest, urging developers to focus on 'writing
+software'. Or they see training mostly as an individual employment benefit with
+limited training budgets. 
+
+Training often seen as something for the individual, and as a fringe benefit (? "secundaire arbeidsvoorwaarde"). This misses the point of structurally improving the inner loop in a teams based environment. 
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">
+Too many companies think “coaching” is a benefit they might offer under the learning &amp; development budget, when actually it is an existential concern for any technical team. 
+<a href="https://t.co/Z3Ih1CRZJr">https://t.co/Z3Ih1CRZJr</a></p>&mdash; Beth (@bethcodes) <a href="https://twitter.com/bethcodes/status/1437153928362160131?ref_src=twsrc%5Etfw">September 12, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+Another important aspect is in a team based context (and you basically need team
+based work for any serious development effort) it is about *team* capabilities.
+You need to train & coach teams. This is another bit point of leverage. It also
+requires a different frame of thinking, not software development = many hands
+programming.
+
+# Stuff
+
+Power of tiny gains graph: https://twitter.com/AlexAndBooks_/status/1497956168949448708
 
 # Sources
 
@@ -52,18 +153,15 @@ Martin Fowler, [Is High Quality Software Worth the Cost?](https://www.martinfowl
 # Follow up posts:
 
 ## Improving the inner loop?
+
 - what does improving the inner loop means? e.g. "smoothness of delivery", no more flakey tests, shift left
 
-## Serious investment in the inner loop
-- improving inner loop is necessity but it requires serious investment, e.g. training and coaching 
- 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">
-Too many companies think “coaching” is a benefit they might offer under the learning &amp; development budget, when actually it is an existential concern for any technical team. 
-<a href="https://t.co/Z3Ih1CRZJr">https://t.co/Z3Ih1CRZJr</a></p>&mdash; Beth (@bethcodes) <a href="https://twitter.com/bethcodes/status/1437153928362160131?ref_src=twsrc%5Etfw">September 12, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+## Team capabilities investment - a different perspective
 
-Training often seen as something for the individual, and as a fringe benefit (? "secundaire arbeidsvoorwaarde"). This misses the point of structurally improving the inner loop in a teams based environment. 
 
-Team > individuals + it's about team capabilities. We need to train & coach teams. This is another bit point of leverage. It also requires a different frame of thinking, not software development = many hands programming (we are still learning what software product development really is)
+Focusing on training as employment benefit & training/learning for individuals:
+the *conflict* of getting more skilled vs delivering something now lands on the
+developer's desk! This conflict shouldn't be there.
 
 ## 3 feedback loops seen from complex systems perspective
 
