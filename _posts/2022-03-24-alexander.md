@@ -1,7 +1,9 @@
 ---
 layout: post
-title: Short tribute to Christopher Alexander
+title: Christopher Alexander
 tags:
+  - architecture
+  - agile
   - patterns
 author: Marc Evers
 image: 
