@@ -41,7 +41,10 @@ feedback loops, delays, handovers of work, waiting for decision making, "rework"
 (work going through the loop again because it is not good enough; cf. failure
 demand)
 
-# Middle loop - getting valuable work done
+# Outer loop - product loop
+
+
+# Middle loop - getting valuable work done loop
 
 Middle loop: "Simplicity--the art of maximizing the amount of work not done--is
 essential." (Agile Manifesto principle 10, although this applies to the other 2
@@ -59,7 +62,7 @@ The three loops are about
 - getting feedback & information
 - to steer & improve
 
-# Inner loop - technical excellence
+# Inner loop - technical excellence loop
 
 Inner loop has most leverage: "Continuous attention to technical excellence and good design enhances agility." (Agile Manifesto principle 9)
 

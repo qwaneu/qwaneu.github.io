@@ -6,7 +6,6 @@ tags:
   - agile
   - patterns
 author: Marc Evers
-image: 
 ---
 
 > **Being alive**  

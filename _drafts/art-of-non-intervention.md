@@ -43,7 +43,7 @@ them into waiting for/relying on the facilitator to solve things for them.
 
 # Interventions can weaken a system
 
-
+Weinberg/Secrets of Consulting quote
 
 # In complex systems, there is no neutral position
 
