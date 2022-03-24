@@ -75,6 +75,6 @@ _Signpost photo by <a href="https://unsplash.com/@mikeballet?utm_source=unsplash
 <aside>
   <p>Struggling with an engineering challenge?</p>
   <p><div>
-    <a href="/consulting">Talk to us, the first conversation is free.</a>
+    <a href="/consulting">Talk to us, the first conversation is free!</a>
   </div></p>
 </aside>
