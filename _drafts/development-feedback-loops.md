@@ -41,8 +41,22 @@ feedback loops, delays, handovers of work, waiting for decision making, "rework"
 (work going through the loop again because it is not good enough; cf. failure
 demand)
 
+
+The three loops are about
+- decision making
+- getting feedback & information
+- to steer & improve
+
+
 # Outer loop - product loop
 
+
+Stuff that happens here:
+- (small) releases
+- roadmaps (+link roadmapping post Paul Dyson)
+- steering on value
+- dimensional planning
+- user story mapping
 
 # Middle loop - getting valuable work done loop
 
@@ -57,10 +71,11 @@ initial difference. This is what the Scrum idea of "Doing Twice the Work in Half
 the Time" albeit a bit misleading is about. A bit of focus and maximizing the
 amount of work not done can be shockingly effective.
 
-The three loops are about
-- decision making
-- getting feedback & information
-- to steer & improve
+Stuff that happens here:
+- sprints / kanban
+- velocity
+- work-in-progress limits
+- impediments
 
 # Inner loop - technical excellence loop
 
@@ -83,6 +98,15 @@ you will get much faster feedback on whether things are going the right way"
 ("becoming better faster") and in the outer loop - faster discovery, market
 testing, etc.
 
+Stuff that happens here:
+- pair programming
+- TDD, relentless refactoring
+- smoothness of delivery
+- pull requests + reviews
+- working in baby steps / MMMST (Mike Hill)
+- tiny deltas of value
+- frontend <-> backend 
+
 # Why most agile transformations fail, according to Jason...
 
 Most agile initiatives tend to focus on this loop (and often the outer loop as
@@ -104,6 +128,8 @@ investing in the middle loop, not much will come out of development. Without
 investing in the inner loop, delivery will be slow and defect-rich.
 
 You need to work on all 3 loops for effective product delivery. 
+
++ plaatje met loops die elkaar beinvloeden
 
 # Big gains, need investment
 

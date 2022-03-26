@@ -43,15 +43,29 @@ them into waiting for/relying on the facilitator to solve things for them.
 
 # Interventions can weaken a system
 
-Weinberg/Secrets of Consulting quote
+Doing interventions in a team or an organization can have short-term positive effects, but on the longer term, it can weaken the system. A team can grow dependent on the consultant to fix things, to compensate for dysfunctional patterns. The consultant becomes an indispensible part of the system to be effective. The longer this happens, the more difficult it becomes to leave, and the more impactful leaving will be.
+
+It is like Gerald M. Weinberg already described 35 years ago in his Secrets of Consulting book as "Marvin's First and Second Great Secrets":
+
+> "Ninety percent of all illness cures itself - with absolutely no intervention from the doctor. Deal gently with systems that should be able to cure themselves."
+
+> "Repeatedly curing a system that can cure itself will eventually create a system that can't."
 
 # In complex systems, there is no neutral position
 
-One cannot take a neutral stance in a group, team, with a partner, ... I will
-have influence on this system, whether I intend it or not. Moving myself
-'outside' the system, standing on the sidelines, "just watching", not wanting to
-be part of it, does not remove me from the system. Instead taking this stance
-will often have unintended consequences.
+One cannot take a neutral stance in a group, team, with a partner, ... When I am
+part of a system, I will have influence on this system, whether I intend it or
+not. Moving myself 'outside' the system, standing on the sidelines, "just
+watching", not wanting to be part of it, does not remove me from the system.
+Instead taking this stance will often have unintended consequences.
+
+This also means that as a consultant, I might think I'm standing on the sidelines, observing the team, now and then prodding them to bring about change. In practice I am part of this, I need to be part of this to have influence. I'm in the system, even if I'm pretending to be standing outside. So when taking the 'outside' stance, I will influence the team even when I'm not prodding.
+
+The system will also influence me! I'm part of the system, influencing is mutual. Again, Weinberg wrote about this in Secrets of Consulting, as "Prescott's Pickle Principle" - seeing consultants as cucumbers in an organization jar of brine ;) 
+
+> "Cucumbers get more pickled than brine gets cucumbered. A small system that tries to change a big system through long and continued contact is more likely to be changed itself."
+
+"Change is for other people" we sometimes joke as consultants, sometimes we think we're independent and it's just the organization needing to change. But we know that change is as much for us consultants as well.
 
 # 
 
@@ -62,4 +76,6 @@ will often have unintended consequences.
 Weinberg, Secrets of Consulting ...
 
 Open Space Technology
+
+Satir Coping stances
 
