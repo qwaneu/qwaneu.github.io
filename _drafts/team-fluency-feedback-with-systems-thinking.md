@@ -6,13 +6,22 @@ tags:
   - feedback
   - systems thinking
 author: Marc Evers, Rob Westgeest
-image: 
+image: /attachments/blogposts/2021/afd-techdebt-example.jpg
 ---
 
 To get a better insight in how a team can grow, and to get to an investment plan, we apply the principles and tools from Agile Fluency. In this post, we'll share how we run a team diagnostic and arrive at recommendations for the team to grow and for management to support and invest. The examples are based on an actual diagnostic we ran with a team, but we have blurred any confidential information.
 
-@@TODO: iets over AF loops met eigen diagram?
+- [Engaging with management and the teams](#engaging-with-management-and-the-teams)
+- [Making sense of what's been said](#making-sense-of-whats-been-said)
+- [An example pattern - handling technical debt](#an-example-pattern---handling-technical-debt)
+- [Considerations](#considerations)
+- [Next steps](#next-steps)
 
+@@twee uitkomsten (fb Willem 28-03-2022):
+- waar deelnemers zelf mee komen
+- ons perspectief
+
+# Engaging with management and the teams
 
 We start out with a conversation with management (i.e. people who have the authority to decide on investments the team needs). Together we come to what objectives they have for the team and what fluency zone is appropriate: focusing, delivering or optimizing.
 
@@ -32,7 +41,14 @@ The survey statements trigger quite deep conversations from the team. We listen 
 
 ![example diagnostic notes](/attachments/blogposts/2021/afd-notes-example.jpg)
 
-We do not provide advice or recommendations in the diagnostic session. We take our notes, have a good night of sleep and then try to make sense of it. We are especially interested in any systemic effects at play, things that keep the system the way it is, things that are self-reinforcing and risk running out of control. We know from experience that by diving a bit deeper we can find possible interventions that have much more lasting impact. It prevents us and the team from focusing on symptoms alone.
+We do not directly provide advice or recommendations in the diagnostic session. We take our notes, have a good night of sleep and then try to make sense of it. We are especially interested in any systemic effects at play, things that keep the system the way it is, things that are self-reinforcing and risk running out of control. We know from experience that by diving a bit deeper we can find possible interventions that have much more lasting impact. It prevents us and the team from focusing on symptoms alone.
+
+We do see that teams already get new insights and ideas for action from the
+diagnostic session itself. The conversations that take place already have
+impact. In a complex system like a team, observing also means influencing:
+*diagnosis = intervention*.
+
+# Making sense of what's been said
 
 To make sense of all the details we have heard, we use a technique called Diagrams of Effects (DoE). It originate from the field of systems thinking, we learned it from Gerald Weinberg. In a DoE, we try to map the system in terms of variables and their causal relations. 
 
@@ -68,6 +84,8 @@ Especially if our efforts result in such a big, complicated diagram, we look for
 
 We have also found a number of self-reinforcing loops in the diagrams, represented by the snowball pictures. 
 
+# An example pattern - handling technical debt
+
 Let's have a look at one of the sub-DoEs. It is about handling technical debt.
 When we present a DoE like this to a team, we build it up in steps, so that we take the team along with our story. 
 
@@ -79,11 +97,13 @@ Reducing technical debt as a project is one way of tackling this. It requires mo
 
 Alternatively (or additionally), the team can tackle technical debt by refactoring in (many, many) baby steps. By keeping the actual steps small, enables the team to get in a state where they are continuously working on technical debt in a more predictable way, while keeping capacity for other work as well. Tackling technical debt in this way is a skill however and working in very small, highly controlled steps as well, so some investment (mostly time, and perhaps a bit of training) is needed here.
 
+# Considerations
+
 When reporting back to management, we sometimes create specific DoEs, focusing more on management perspective, or we re-use the DoEs we showed the team (with the team's permission). 
 
 Another benefit of DoEs, besides going beyond symptoms and getting to more effective interventions, is that is is blameless and non-personal: it shifts the focus away from individual's behaviour, to the systemic aspects, to how things are organized and how that affects behaviour. This is in line with e.g. Deming's statement that [90-95% of performance is governed by the
 system](https://deming.org/dr-deming-called-for-the-elimination-of-the-annual-performance-appraisal/).
 
-And then?
+# Next steps
 
 The feedback we provide to the team and to management is quite rich, so we let them sleep on it. We meet up with the team to check up how it is going, to help them identify experiments they could run. 
