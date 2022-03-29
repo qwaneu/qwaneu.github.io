@@ -291,3 +291,10 @@ find Product Hurricane Maps useful and wanted something in writing to share.
 Your feedback would be most welcome!
 
 Thanks to Rob Westgeest, Marc Evers and Lilian Nijboer for feedback on drafts (and Rob for referring to the video).
+  
+<aside>
+  <p>Would you like to explore Product Hurricane Maps?</p>
+  <p><div>
+    <a href="/consulting">Talk to us, the first conversation is free!</a>
+  </div></p>
+</aside>
