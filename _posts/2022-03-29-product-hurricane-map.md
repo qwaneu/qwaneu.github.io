@@ -7,19 +7,20 @@ author: Willem van den Ende
 image: /attachments/blogposts/2022/2018-Steve-Freeman-Product-Hurricane-Map.png
 ---
 
-Context:
+
+Recently we got asked is "How do we (as a development team or larger group) 'sell' technical debt to stakeholders?".
+
+Context
 ========
 
 A team has a shared understanding of the importance of keeping quality
 (in the broadest sense) high, and technical debt low. The team also has
-a shared understanding of how much it would cost to bring components
-they use up to scratch. The team has difficulty communicating
-cost/benefits of improved quality to stakeholders when discussing
+a shared understanding of how much it would cost to bring components they use up to scratch.
+Several of the components need extensive (re)work when used.  The team has difficulty communicating cost/benefits of improved quality to stakeholders when discussing
 timelines for product roadmaps.
 
-A we got asked is "How do we (as a development team or larger group) 'sell' technical debt to stakeholders?".
 
-Solution:
+Solution
 =========
 
 Produce a product hurricane map, setting out features on the product
@@ -30,14 +31,14 @@ The team and stakeholders negotiate on which features are (not) in scope
 and when. Stakeholders do not get the option to negotiate the extent to
 which technical debt is adressed.
 
-Resulting context:
+Resulting context
 ==================
 
 Reducing number of defects, and code that is easier to work with leads
 to smoother flow for subsequent features, and eventually faster
-delivery, with fewer issues when the feature is delivered to the users.
+delivery, with fewer issues when the feature is delivered to the users. Stakeholders can make informed cost/value decisions.
 
-Mechanics:
+Mechanics
 ==========
 
 We learnt about product hurricane maps from a presentation by Steve Freeman. A hurricane map can look like this (with Steve on the left of it):
@@ -62,36 +63,164 @@ other groups\' roadmaps.
 Let\'s put the example map in our own table,so we can have a play with
 it:
 
-  Stories (Backlog)/ Component      Aldgate   Bank   Chesham   Debden   Farringdon
-  --------------------------------- --------- ------ --------- -------- ------------
-  Technical debt (days to remove)   20        500    2         100      10
-  Fast input for frequent users                      ✔                  
-  Reconciliation for sales staff    ✔                                   ✔
-  Easy input for infrequent users                    ✔                  
-  Scale to 100x customers           ✔                                   
-  Chinese version                                              ✔        
-  Separate hosting for USA                                              
-
-The only feature we can get without addtional work is \"Separate hosting
-for USA\". Everything else involves work. Luckily nobody needs the
-\"Bank\" component that would take 500 days to bring up to standard.
-\"Bank\" will be left alone, unless it needs e.g. security updates
-(leaving components \'alone\', and deciding when to perform upgrades of
-its\' dependencies is a separate topic).
-
-If we replace the check marks by numbers, we can see the totals for each
-item in the backlog (could be stories, epics or whatever you want to
-call future features):
-
-  Stories (Backlog)/ Component      Aldgate   Bank   Chesham   Debden   Farringdon   Total   
-  --------------------------------- --------- ------ --------- -------- ------------ ------- --
-  Technical debt (days to remove)   20        500    2         100      10           662     
-  Fast input for frequent users                      2                               2       
-  Reconciliation for sales staff    20                                  10           30      
-  Easy input for infrequent users                    2                               2       
-  Scale to 100x customers           20                                               20      
-  Chinese version                                              100                   100     
-  Separate hosting for USA                                                           0       
+<table>
+<thead>
+<tr class="header">
+<th>Stories (Backlog)/ Component</th>
+<th>Aldgate</th>
+<th>Bank</th>
+<th>Chesham</th>
+<th>Debden</th>
+<th>Farringdon</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Technical debt (days to remove)</td>
+<td>20</td>
+<td>500</td>
+<td>2</td>
+<td>100</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>Fast input for frequent users</td>
+<td></td>
+<td></td>
+<td>✔</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Reconciliation for sales staff</td>
+<td>✔</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✔</td>
+</tr>
+<tr class="even">
+<td>Easy input for infrequent users</td>
+<td></td>
+<td></td>
+<td>✔</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Scale to 100x customers</td>
+<td>✔</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Chinese version</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✔</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Separate hosting for USA</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The only feature we can get without addtional work is "Separate hosting for USA". Everything else involves work. Luckily nobody needs the "Bank" component that would take 500 days to bring up to standard. "Bank" will be left alone, unless it needs e.g. security updates (leaving components 'alone', and deciding when to perform upgrades of its' dependencies is a separate topic).</p>
+<p>If we replace the check marks by numbers, we can see the totals for each item in the backlog (could be stories, epics or whatever you want to call future features):</p>
+<table>
+<thead>
+<tr class="header">
+<th>Stories (Backlog)/ Component</th>
+<th>Aldgate</th>
+<th>Bank</th>
+<th>Chesham</th>
+<th>Debden</th>
+<th>Farringdon</th>
+<th>Total</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Technical debt (days to remove)</td>
+<td>20</td>
+<td>500</td>
+<td>2</td>
+<td>100</td>
+<td>10</td>
+<td>662</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Fast input for frequent users</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Reconciliation for sales staff</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td></td>
+<td>10</td>
+<td>30</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Easy input for infrequent users</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Scale to 100x customers</td>
+<td>20</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>20</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Chinese version</td>
+<td></td>
+<td></td>
+<td></td>
+<td>100</td>
+<td></td>
+<td>100</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Separate hosting for USA</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 What we can see here, is there is a total of 662 guestimated days of
 work to address technical debt, but since Bank is not needed in the near
@@ -135,19 +264,18 @@ What to do when the team does not yet have consensus on tech debt for their comp
 =======================================================================================
 
 Spend some time reaching consensus. [Quality
-Views](id:4c95c325-5172-4cf2-86f2-5a75de308d3c) can help - colour an
+Views]( https://blog.colinbreck.com/reflections-on-using-quality-views/#fn1) By Colin Breck can help - colour an
 architecture diagram of components by tech debt, and track over time.
-The hurricane map leaves out the relations between the components.
+The hurricane map leaves out the relations between the components. Quality views leave out the relations between the features.
 
 Further viewing and reading
 ===========================
 
 The video we based this post on: [Steve Freeman: A Bluffer\'s Guide to
 Technical Debt for other people - SCLConf 2018 -
-YouTube](id:c74c616a-0992-451e-b74f-b0d623726764). This has a lot more
-detail - we focused just on the visualization here.
+YouTube](https://www.youtube.com/watch?v=jXpJVsv3Iec). This has a lot more
+detail - we focused just on the visualization here. Steve discusses Skills Liquidity for instance, which can help smoothing out flow by being aware of skills the team has and can develop.
 
-[Quality Views](id:4c95c325-5172-4cf2-86f2-5a75de308d3c) by Colin Breck,
-for when the team does not yet have consensus on what the quality of the
-components they use is, or when the team wants to track quality over
-time.
+Thank you for reading all this far. This is just a quick post, because we find hurricane maps useful and wanted something in writing to share. Your feedback would be most welcome. 
+
+Thanks to Rob Westgeest, Marc Evers and Lilian Nijboer for feedback on drafts (and Rob for referring to the video).
