@@ -41,9 +41,16 @@ e.g. intervening when a question arises when participants are co-creating the
 program on the wall. People will figure it out. Intervening too soon will nudge
 them into waiting for/relying on the facilitator to solve things for them.
 
+@@plaatjes!
+
 # Interventions can weaken a system
 
-Doing interventions in a team or an organization can have short-term positive effects, but on the longer term, it can weaken the system. A team can grow dependent on the consultant to fix things, to compensate for dysfunctional patterns. The consultant becomes an indispensible part of the system to be effective. The longer this happens, the more difficult it becomes to leave, and the more impactful leaving will be.
+Doing interventions in a team or an organization can have short-term positive
+effects, but on the longer term, it can weaken the system. A team can grow
+dependent on the consultant to fix things, to compensate for dysfunctional
+patterns. The consultant becomes an indispensible part of the system to be
+effective. The longer this happens, the more difficult it becomes to leave, and
+the more impactful leaving will be.
 
 It is like Gerald M. Weinberg already described 35 years ago in his Secrets of Consulting book as "Marvin's First and Second Great Secrets":
 
