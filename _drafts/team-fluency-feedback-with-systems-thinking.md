@@ -117,8 +117,9 @@ Some examples of the variables we have found for this team:
 In this example, the darker post-its represents variables related to the
 Delivering zone, and the lighter ones related to Focusing and Optimizing.
 
-You might notice that these variables look quite generic, like they could have
-been written for your team. @@
+You may recognize a pattern in these variables. If your team has a similar
+context, the patterns may match, and you can reuse them. We see similar patterns
+recurring when working with different teams.
 
 Then we get to the daunting task of finding relations between the variables. We
 do this together as facilitators. We start drawing causal edges and challenge
