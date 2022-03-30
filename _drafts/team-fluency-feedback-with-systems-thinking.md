@@ -76,15 +76,15 @@ retrospectives.
 
 The survey statements trigger deep conversations with and within the team. We
 listen for signals - like someone saying "we have hardly any serious issues" -
-and probe about what is really going on. In a time span of two hours we get a
-huge amount of rich information of how the team works and how it interacts with
-its context. Too much to keep in our heads, so we make many, many notes - and
-process the notes immediately afterwords in some markdown document, like this: 
+and probe about what is really going on. In a time span of two hours we get rich
+information of how the team works and how it interacts with its context. Too
+much to keep in our heads, so we make many, many notes - and process the notes
+immediately afterwards in a document, like this: 
 
 ![impression of the written and typed notes we take during a diagnostic workshop](/attachments/blogposts/2021/afd-notes-example.jpg)
 
 We do not directly provide advice or recommendations during the diagnostic
-workshop. We have a good night of sleep and then try to make sense of it. We are
+workshop. We have a good night's sleep and then try to make sense of it. We are
 especially interested in any systemic effects at play, things that keep the
 system the way it is and things that are self-reinforcing and could run out of
 control. By taking a systemic perspective, we can find possible interventions
