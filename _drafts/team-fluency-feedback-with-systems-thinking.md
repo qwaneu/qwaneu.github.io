@@ -11,11 +11,11 @@ image: /attachments/blogposts/2021/afd-techdebt-example.jpg
 
 To get a better insight in how a team can grow and what support they need from
 their organization, we use the Agile Fluency® model and associated tools. In
-this post, we'll share how we run an Agile Fluency team diagnostic session and
+this post, we'll share how we run an Agile Fluency team diagnostic workshop and
 how we arrive at specific recommendations both for the team and for their
 management. 
 
-The examples are based on an actual diagnostic session we have ran with a team,
+The examples are based on an actual diagnostic workshop we have ran with a team,
 but we have blurred any confidential information. We assume basic knowledge of
 the [Agile Fluency model](https://www.agilefluency.org/model.php) and its zones.
 
@@ -25,9 +25,10 @@ the [Agile Fluency model](https://www.agilefluency.org/model.php) and its zones.
 - [Considerations](#considerations)
 - [Next steps](#next-steps)
 
-@@twee uitkomsten (fb Willem 28-03-2022):
-- waar deelnemers zelf mee komen
-- ons perspectief
+The diagnostic workshop has two kinds of output:
+- insights the participants gain
+- our perspective, based on what we see and hear from the team, and patterns we
+  know and feel fit the context of the team
 
 # Engaging with management and the teams
 
@@ -56,7 +57,7 @@ is.
 
 We provide a team feedback on how fluent they are in the different capabilities
 required to get quality software out of the door now and in the future. We use
-the information from the diagnostic session to indicate direction for growth.
+the information from the diagnostic workshop to indicate direction for growth.
 Because we have co-created a detailed self-assessment, we can provide a much
 more specific direction for growth than what usually comes out of a team
 retrospective.
@@ -80,10 +81,10 @@ huge amount of rich information of how the team works and how it interacts with
 its context. Too much to keep in our heads, so we make many, many notes - and
 process the notes immediately afterwords in some markdown document, like this: 
 
-![impression of the written and typed notes we take during a diagnostic session](/attachments/blogposts/2021/afd-notes-example.jpg)
+![impression of the written and typed notes we take during a diagnostic workshop](/attachments/blogposts/2021/afd-notes-example.jpg)
 
 We do not directly provide advice or recommendations during the diagnostic
-session. We have a good night of sleep and then try to make sense of it. We are
+workshop. We have a good night of sleep and then try to make sense of it. We are
 especially interested in any systemic effects at play, things that keep the
 system the way it is and things that are self-reinforcing and could run out of
 control. By taking a systemic perspective, we can find possible interventions
