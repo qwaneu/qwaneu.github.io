@@ -91,9 +91,9 @@ control. By taking a systemic perspective, we can find possible interventions
 for the team and management that have more impact. It prevents from focusing on
 symptoms alone.
 
-Often, teams already get new insights and ideas for action from the diagnostic
-workshop itself. This is to be expected in a complex system like a team, where
-observing also means influencing - *diagnosis = intervention*.
+> Often, teams already get new insights and ideas for action from the diagnostic
+> workshop itself. This is to be expected in a complex system like a team, where
+> observing also means influencing - *diagnosis = intervention*.
 
 # Making sense of what's been said
 
@@ -209,6 +209,19 @@ is governed by the system](https://deming.org/dr-deming-called-for-the-eliminati
 The feedback we provide to the team and to management is quite rich, so we let
 them sleep on it. We meet up with the team to check up how it is going, to help
 them identify experiments they could run. 
+
+# References 
+
+- Gerald M. Weinberg, [Quality Software Management Vol. 1 Systems Thinking (1991)](https://geraldmweinberg.com/Site/QSM_vol_1.html)
+- [Agile Fluency Model e-book](https://www.agilefluency.org/ebook.php)
+- [Agile Fluency Project](https://www.agilefluency.org)
+
+For more examples of diagrams of effects, see our previous posts:
+- [Under pressure](/2020/10/26/under-pressure.html)
+- [Paying the price of fast(er) tests](/2020/11/27/paying-the-price-of-fast-tests.html)
+- [Simple acts of kindness and love](/2021/07/07/simple-acts-of-kindness-and-love.html)
+
+_Credits: thanks Willem for encouraging us to actually publish this post!_
 
 <aside>
   <h3>From good enough to team greatness</h3>
