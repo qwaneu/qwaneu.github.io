@@ -9,77 +9,77 @@ author: Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2021/afd-techdebt-example.jpg
 ---
 
-To get a better insight in how a team can grow and what support they need from
+To get better insights in how a team can grow and what support they need from
 their organization, we use the Agile Fluency® model and associated tools. In
 this post, we'll share how we run an Agile Fluency team diagnostic workshop and
-how we arrive at specific recommendations both for the team and for their
-management. 
+how we arrive at recommendations for both the team and their management. 
 
-The examples are based on an actual diagnostic workshop we have ran with a team,
-but we have blurred any confidential information. We assume basic knowledge of
-the [Agile Fluency model](https://www.agilefluency.org/model.php) and its zones.
+The example pictures are based on an actual diagnostic workshop we have ran with
+a team, but we have blurred confidential information like team names. We assume
+the reader has basic knowledge of the [Agile Fluency model](https://www.agilefluency.org/model.php) and its zones.
 
 - [Engaging with management and the teams](#engaging-with-management-and-the-teams)
 - [Making sense of what's been said](#making-sense-of-whats-been-said)
 - [An example pattern - handling technical debt](#an-example-pattern---handling-technical-debt)
 - [Considerations](#considerations)
 - [Next steps](#next-steps)
-
-The diagnostic workshop has two kinds of output:
-- insights the participants gain
-- our perspective, based on what we see and hear from the team, and patterns we
-  know and feel fit the context of the team
+- [References](#references)
 
 # Engaging with management and the teams
 
 We start out with a conversation with management, i.e. the people who have the
-authority to decide on investments the team needs. Together with management, we
-decide on objectives for the team and the appropriate fluency zone: focusing,
+authority to decide on any investments the team needs. Together with management,
+we decide on objectives for the team and an appropriate fluency zone: focusing,
 delivering or optimizing.
 
 Then we schedule and run a diagnostic workshop with the whole team. This
 workshop is an extended team retrospective. Each team member individually fills
-in a survey, then we discuss the aggregated results together. The survey
+in a survey and we discuss the aggregated results together. The survey
 consists of a number of method-agnostic statements about team behaviour. Each
-team members indicate if the team shows that before on a scale from Never to
-Always.
+team member indicates if the team shows that before on a scale from *Never* to
+*Always*.
 
 The aggregated results look like this:
 
 ![an example rollup chart showing the aggregated survey results for a team](/attachments/blogposts/2021/afd-rollups-example.jpg)
 
-The dots represent the different team members, the answers marked green
-represent the consensus we arrive at collaboratively. Consensus is not about
-perfect agreement, it is about a good-enough answer for where the team currently
-is.
+The dots represent answers from different team members, the squares marked green
+represent the consensus answer we arrive at together with the team. It is not
+about perfect agreement, we aim for a good-enough answer indicative of where the
+team currently is.
 
-> These results do not represent the team's maturity! It is not a race to the top! 
+> The results do not represent the team's 'maturity'! Team growth is not a race to the top! 
 
-We provide a team feedback on how fluent they are in the different capabilities
-required to get quality software out of the door now and in the future. We use
-the information from the diagnostic workshop to indicate direction for growth.
-Because we have co-created a detailed self-assessment, we can provide a much
-more specific direction for growth than what usually comes out of a team
-retrospective.
+This workshop gives us rich information on how fluent the team is in the
+different capabilities required to get quality software out of the door now and
+in the future. We use the information to provide feedback and indicate direction
+for growth. Because we have co-created a detailed self-assessment, we can
+provide a much more specific direction for growth than what usually comes out of
+a team retrospective.
 
-The fact that the team from the example is not fully fluent in everything does
-not mean that they are a problematic team. On the contrary, this is a team that
-is doing quite well, they are delivering changes to production almost every day
-and have low defect rates. Even though they are doing well, they still have
-opportunities to grow further.
+> A diagnostic workshop has two kinds of output:
+>- insights the participants gain themselves
+>- our insights based on what we see and hear from the team and based on patterns from our experience
 
-So the exact survey answers are not so relevant, it is all about the
-conversation that takes place in the workshop. The team has a conversation about
-how they work. Sharing different perspectives and perceptions is already hugely
-valuable. Many of the teams we meet do not get to such a depth in their sprint
-retrospectives. 
+Looking at the results above, we see that not all consensus answers are marked
+'Always' (the rightmost column), in other words, they are not fluent in
+everything. This does not mean that they are a problematic team! On the
+contrary, this team is doing quite well, delivering changes to production every
+day with low defect rates. They still have opportunities however for further
+growth.
+
+# It's the conversation that matters
+
+The exact survey answers are not that relevant, it is all about the
+conversations that take place. The team has a conversation about how they work.
+Sharing different perspectives and perceptions is already hugely valuable. Many
+of the teams we meet do not go that deep in their regular sprint retrospectives. 
 
 The survey statements trigger deep conversations with and within the team. We
 listen for signals - like someone saying "we have hardly any serious issues" -
-and probe about what is really going on. In a time span of two hours we get rich
+and probe what is really going on. In a time span of two hours we get rich
 information of how the team works and how it interacts with its context. Too
-much to keep in our heads, so we make many, many notes - and process the notes
-immediately afterwards in a document, like this: 
+much to keep in our heads, so we make many, many notes, like this: 
 
 ![impression of the written and typed notes we take during a diagnostic workshop](/attachments/blogposts/2021/afd-notes-example.jpg)
 
@@ -92,22 +92,23 @@ for the team and management that have more impact. It prevents from focusing on
 symptoms alone.
 
 > Often, teams already get new insights and ideas for action from the diagnostic
-> workshop itself. This is to be expected in a complex system like a team, where
-> observing also means influencing - *diagnosis = intervention*.
+> workshop itself. This is to be expected in a complex adaptive system like a
+> team, where you cannot observing without influencing - "diagnosis is
+> intervention".
 
 # Making sense of what's been said
 
-To make sense of all the details, we use a technique called Diagrams of Effects
-(DoE), from the field of systems thinking. In a DoE, we try to map the system in
-terms of variables and how these variables influence each other. 
+To make sense of all the details, we use a technique called Diagrams of Effects,
+from the field of systems thinking. In a diagram of effects, we map the
+system in terms of variables and how these variables influence each other. 
 
 We start out with writing down candidate variables on post-its. A variable is
 something that can increase or decrease, something that you can measure or
-observe in practice. Initially it is mostly brainstorming and diverging:
+observe in practice. Initially it is mostly a diverging brainstorm activity, where we mostly note down variables that we heard in the team conversation:
 
 ![initial brainstorm of variables with many post-its, in this case on a Miro board](/attachments/blogposts/2021/afd-many-postits.jpg)
 
-Some examples of the variables we have found for this team: 
+Some examples of the variables we have identified for this team: 
 - Smoothness of delivery to production
 - Size of business increments
 - Defects in CI/CD pipeline
@@ -116,11 +117,7 @@ Some examples of the variables we have found for this team:
 - Slow down by technical debt
 
 In this example, the darker post-its represents variables related to the
-Delivering zone, and the lighter ones related to Focusing and Optimizing.
-
-You may recognize a pattern in these variables. If your team has a similar
-context, the patterns may match, and you can reuse them. We see similar patterns
-recurring when working with different teams.
+Delivering zone, and the lighter ones are related to Focusing and Optimizing.
 
 Then we get to the daunting task of finding relations between the variables. We
 do this together as facilitators. We start drawing causal edges and challenge
@@ -134,21 +131,19 @@ Black edges mean a *same* effect: if one variable goes up, the other also tends
 to go up. Red edges mean an *opposite* effect: if one variable goes up, the
 other tends to go down.
 
-We sometimes add some explanation or write down some themes we notice, like the
-purple post-its in this case. Or we add some benefits that are relevant for
-management and show how these relate to the system (green post-its in this
-example).
+We sometimes add an explanation or some themes we noticed (the purple notes in
+this diagram). Or we add some benefits that are relevant for management and show
+how these relate to the system (the green notes).
 
-The diagram we create is not the truth. It represents how we (as facilitators)
+The diagram we create is not the truth! It represents how we (as facilitators)
 perceive the system, based on what we heard from management and from the team,
-what we heard between the lines, and our own experience. We will not present the
-complicated diagram shown above as 'the way things are'. Instead, we use the
-diagram to illustrate how we see the system, and how we think the team can make
-more effective steps for growth. We use diagrams of effects as a kind of
-'intuition support system'.
+what we heard between the lines, and our own experience. We will not present
+such a diagram as 'the way things are'. Instead, we use these diagrams to
+illustrate how we see the system, and how we think the team can make more
+effective steps for growth.
 
-If our efforts result in such a big, complicated diagram, we look for ways to
-present it in a more manageable way. In this case, we noticed that there were
+The diagram show above is way to big and complicated, so we look for ways to
+present it in a more manageable way. Here, we noticed that there were
 actually 3 systems in place. Of course, everything is connected, but splitting
 it up in three smaller diagrams allows us to present our feedback in a more
 focused way:
@@ -158,11 +153,15 @@ focused way:
 We have identified a number of self-reinforcing loops in the diagrams,
 represented by the small snowballs. 
 
+> You may recognize some of the variables and dynamics we describe. If your team
+> has a similar context, you will probably see similar patterns at play. Having
+> done fluency workshops with different teams in different organizations, we
+> also see similar patterns recurring.
+
 # An example pattern - handling technical debt
 
-Let's have a look at one of the sub-diagrams. It is about handling technical
-debt. When we present a diagram like this to a team, we build it up in steps, so
-that we take the team along with our story. 
+Let's have a look at one of the smaller diagrams. It is about handling technical
+debt. 
 
 ![example diagram of effects about handling technical debt](/attachments/blogposts/2021/afd-techdebt-example.jpg)
 
@@ -174,32 +173,36 @@ organization's *Trust in the team*, which negatively impacts the *quality of
 both functional and technical decisions*. This increases *Technical debt*, and
 so on.
 
-A way of tackling this is reducing technical debt as a project. This requires
+A way of tackling this is reducing _technical debt as a project_. This requires
 more visibility of technical debt in terms of short term and long term business
-impact. Tackling technical debt as a projects has all kinds of disadvantages,
+impact. Tackling technical debt as a project does have several disadvantages,
 like increasing the length of development feedback loops. A technical debt
 project tends to be complex and unpredictable, which impacts *Forecast
-reliability* negatively. This is why we put a big 'Beware!' in the diagram. This
-way of tackling technical debt is not inherently bad, we do find it important to
-be aware of the downsides of this approach.
+reliability* negatively. This is why we put a big **Beware!** in the diagram.
+Although this way of tackling technical debt is not inherently bad, we find it
+important to be aware of the downsides of this approach.
 
-An alternative way is the team tackling technical debt by refactoring in (many,
-many) baby steps. By keeping the actual steps small, the team can get in a state
-where they are continuously working on technical debt in a more predictable way,
-while having sufficient time for other work as well. Tackling technical debt in
-this way requires some skill however, as working in very small, highly
-controlled steps sounds simple but is actually quite hard. A team needs practice
-time and perhaps some training and mentoring to master these skills.
+A different way of handling technical debt is by refactoring in many, many baby
+steps. By keeping the steps small, the team can get in a state where they are
+continuously working on technical debt in a more predictable way, while having
+sufficient time for other work as well. Tackling technical debt in this way
+requires skills however. Working in tiny, highly controlled steps sounds simple
+but is actually hard. A team needs practice time and possibly training and
+mentoring to master this skill.
+
+Note that when we present a diagram like this to a team as part of our feedback,
+we will build it up in a number of steps, so that we can take the team along
+with the story. 
 
 # Considerations
 
 When we report back to management, we sometimes create specific diagrams of
 effects from a management perspective. Sometimes we re-use the diagrams we
-shared the team, if the team consents to that. 
+shared with the team, but only if the team consents to that.
 
 Diagrams of effects help to go beyond symptoms and find more effective
 interventions. In addition, diagrams of effects are non-personal and
-blameless.They shift the focus away from an individual's behaviour, to the
+blameless. They shift the focus away from an individual's behaviour, to
 systemic aspects, to how things are organized and how that affects behaviour.
 This is in line with for instance Deming's statement that [90-95% of performance
 is governed by the system](https://deming.org/dr-deming-called-for-the-elimination-of-the-annual-performance-appraisal/).
@@ -207,21 +210,23 @@ is governed by the system](https://deming.org/dr-deming-called-for-the-eliminati
 # Next steps
 
 The feedback we provide to the team and to management is quite rich, so we let
-them sleep on it. We meet up with the team to check up how it is going, to help
-them identify experiments they could run. 
+them sleep on it. We meet up with the team to check up how it is going and help
+identify experiments.
 
 # References 
 
-- Gerald M. Weinberg, [Quality Software Management Vol. 1 Systems Thinking (1991)](https://geraldmweinberg.com/Site/QSM_vol_1.html)
 - [Agile Fluency Model e-book](https://www.agilefluency.org/ebook.php)
 - [Agile Fluency Project](https://www.agilefluency.org)
+- We learned diagrams of effects from Gerald M. Weinberg, [Quality Software Management Vol. 1 Systems Thinking (1991)](https://geraldmweinberg.com/Site/QSM_vol_1.html)
+- Mike Hill wrote a series of posts about the value of taking baby steps: [Many
+  More Much Smaller Steps](https://www.geepawhill.org/2021/09/29/many-more-much-smaller-steps-first-sketch/)
 
 For more examples of diagrams of effects, see our previous posts:
 - [Under pressure](/2020/10/26/under-pressure.html)
 - [Paying the price of fast(er) tests](/2020/11/27/paying-the-price-of-fast-tests.html)
 - [Simple acts of kindness and love](/2021/07/07/simple-acts-of-kindness-and-love.html)
 
-_Credits: thanks Willem for encouraging us to actually publish this post!_
+_Credits: thanks Willem for encouraging us to finally finish this post_
 
 <aside>
   <h3>From good enough to team greatness</h3>
