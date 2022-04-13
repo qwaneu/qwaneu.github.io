@@ -9,7 +9,7 @@ author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: /attachments/blogposts/2022/ronan-furuta--Zjf67HKrls-unsplash.jpg
 ---
 
-When you are changing an interface or API that is widely used interface, it can
+When you are changing an interface or API that is widely used, it can
 be tempting to do the change in one go and break a lot of tests at once,
 assuming you can just fix them. You risk ending up chasing failing tests around
 for hours, with lack of good feedback why they fail. Furthermore, you risk
@@ -109,7 +109,7 @@ do we have here?
   programming languages like Java, you would introduce an **overload for the
   function** instead of using a default value.
 - Create a **helper function** in the test that wraps the call. Use this helper
-  function everywhere, and make sure the tests remain green. You have isolated the dependency on the function in this helper function, so it is relatively straightforward to make the change. Strictly speaking you would still have multiple failing tests if you make the change, as all tests are affected through the helper function. They fail however because of that single invocation and you are much more in control.
+  function everywhere, and make sure the tests remain green. You have isolated the dependency on the function in this helper function, so it is relatively straightforward to make the change. Strictly speaking you would still have multiple failing tests if you make the change, as all tests are affected through the helper function. They fail, however, because of that single invocation and you are much more in control.
 - Perhaps the tests contain too many duplicated calls to the function anyway.
   Does the invocation belong to the ['Given'
   part](/2021/09/02/tdd-given-when-then.html) of the test? Should we **move it
