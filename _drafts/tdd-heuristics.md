@@ -13,9 +13,9 @@ V [Given-When-Then or Arrange-Act-Assert](https://www.qwan.eu/2021/09/02/tdd-giv
 V [One (conceptual) assert per test](https://www.qwan.eu/2021/08/27/tdd-one-assert-per-test.html)
 V (new) [Glanceable tests](https://www.qwan.eu/2021/09/27/tdd-glanceable-tests.html)
 V What is a heuristic
+V Fix one failing test at a time / No more than one failing test at a time
 ~ Triangulation
 ~ Caring for your tests
-~ Fix one failing test at a time / No more than one failing test at a time
 - (expanding) Rules for simple design
 - (new) Removing duplication between test & production code
 - (new) Make the change easy, then make the change (refactor after and before) source: Kent Beck
