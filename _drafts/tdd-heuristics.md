@@ -1,7 +1,36 @@
-Overzicht & werklijst van heuristics/guidelines
+# Overzicht & werklijst van heuristics/guidelines
 
+## Overview
 
-**Guidelines & heuristics for TDD & (unit) tests**
+- Think about design in the test
+- Wishful thinking
+- 0, 1, N
+- Act dumb in implementation
+- Faking & Cheating
+- Test name describes the action and the expected result
+- Given-When-Then or Arrange-Act-Assert
+- One (conceptual) assert per test
+- Test cases follow common setup
+- Glanceable tests
+- Triangulation
+- Removing duplication between test & production code
+- Care for your tests
+- Make the change easy, then make the change (refactor after and before, Kent Beck)
+- Tests are independent - always start from a clean slate
+- Mirroring (James Shore calls this Collaborator-Based Isolation)
+- Focus on relevant data (TDD by example: "Evident data")
+- Start with a negative case (zit in [0, 1, N])
+- Composed Method, for tests / everything at same level of abstraction
+- Factor out support code (not necessarily all common code, sometimes we need to re-tell a story)
+- The need for speed - why tests should be fast
+- Mind the failure feedback
+- Make failing test without needing to change others
+
+- *What is a unit test?*
+- *Rules for simple design*
+
+# Guidelines & heuristics for TDD & (unit) tests
+
 V [Think about design in the test](https://www.qwan.eu/2021/06/28/tdd-think-about-design-in-test.html)
 V [Wishful thinking](https://www.qwan.eu/2021/07/01/tdd-wishful-thinking.html)
 V [Start with expectation](https://www.qwan.eu/2021/07/05/tdd-start-with-expectation.html)
@@ -11,9 +40,9 @@ V [Faking & Cheating](https://www.qwan.eu/2021/07/20/tdd-faking-cheating.html)
 V [Test name describes the action and the expected result](https://www.qwan.eu/2021/07/27/tdd-naming-tests.html)
 V [Given-When-Then or Arrange-Act-Assert](https://www.qwan.eu/2021/09/02/tdd-given-when-then.html)
 V [One (conceptual) assert per test](https://www.qwan.eu/2021/08/27/tdd-one-assert-per-test.html)
-V (new) [Glanceable tests](https://www.qwan.eu/2021/09/27/tdd-glanceable-tests.html)
-V What is a heuristic
-V Fix one failing test at a time / No more than one failing test at a time
+V [Glanceable tests](https://www.qwan.eu/2021/09/27/tdd-glanceable-tests.html)
+V [What is a heuristic](https://www.qwan.eu/2021/10/13/what-is-a-heuristic.html)
+V [One failing test at a time](https://www.qwan.eu/2022/04/13/tdd-one-failing-test-at-a-time.html)
 ~ Triangulation
 ~ Caring for your tests
 - (expanding) Rules for simple design
