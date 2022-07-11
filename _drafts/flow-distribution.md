@@ -12,14 +12,17 @@ image:
 # Introduction
 subtitle: use flow distribution to visualize where to find time.
 
+
 "We have no time to improve" is something we hear regularly when consulting. Our knee jerk response is the old dutch proverb: 
 
    You don't have time, you make time".
 
+In our experience, improvements pay off faster than people believe, so it is worth making time to improve.
+
 # A vicious cycle
 This is easier said than done. Where do you find the time, and how do you exploit the time you found as a team?
 
-(implementatiedetail, misschien schrappen, begint ook gelijk met AF, maar dit is breder. AF misschien voor in de sales blurb onderaan). We frequently do architecture and process reviews for different companies. Using Agile Fluency diagnostic workshops to get insight in team capabilities. We see some patterns emerging.
+(implementatiedetail, is meer voor ons waar het uitkomt. misschien schrappen, begint ook gelijk met AF, maar dit is breder. AF misschien voor in de sales blurb onderaan, het staat ook verderop). We frequently do architecture and process reviews for different companies. Using Agile Fluency diagnostic workshops to get insight in team capabilities. We see some patterns emerging.
 
 We talk to many teams in big organizations. When we ask them about what share of
 their time they spend on fixing defects, this is more often than not 50%.
@@ -118,10 +121,12 @@ been turned into a virtuous one.
 
 ![flow distribution: eventually defect work goes down and the increase of feature work will be substantial](/attachments/blogposts/2022/flowdistribution-5.jpg)
 
-
 # References
 
 - Mik Kersten, Project to Product (2018)
 - Mike Hill wrote a series of posts about the value of taking baby steps: [Many
   More Much Smaller Steps](https://www.geepawhill.org/2021/09/29/many-more-much-smaller-steps-first-sketch/)
 
+# @@TODO call to action
+
+These insights emerged from architecture and process reviews we did for various companies. Using Agile Fluency diagnostic workshops clients and teams quickly get insight in team capabilities and improvement actions. Talk to us to see what this can mean for you and your organisation. 

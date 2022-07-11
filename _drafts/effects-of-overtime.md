@@ -1,4 +1,4 @@
 # Introduction
 
-continuation of the flow distribution post
+continuation of the flow distribution post. TBD.
  
