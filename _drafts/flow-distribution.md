@@ -6,14 +6,20 @@ tags:
   - agile fluency
   - feedback
   - systems thinking
-author: Marc Evers
+author: Marc Evers, Willem van den Ende
 image: 
 ---
+# Introduction
+subtitle: use flow distribution to visualize where to find time.
 
+"We have no time to improve" is something we hear regularly when consulting. Our knee jerk response is the old dutch proverb: 
 
-We frequently do architecture and process reviews for different companies. Using Agile Fluency diagnostic workshops to get insight in team capabilities.
+   You don't have time, you make time".
 
-We see some patterns emerging.
+# A vicious cycle
+This is easier said than done. Where do you find the time, and how do you exploit the time you found as a team?
+
+(implementatiedetail, misschien schrappen, begint ook gelijk met AF, maar dit is breder. AF misschien voor in de sales blurb onderaan). We frequently do architecture and process reviews for different companies. Using Agile Fluency diagnostic workshops to get insight in team capabilities. We see some patterns emerging.
 
 We talk to many teams in big organizations. When we ask them about what share of
 their time they spend on fixing defects, this is more often than not 50%.
@@ -23,14 +29,17 @@ team.
 
 Often, these teams feel so much pressure that they do not feel they have time
 for any improvements, however promising these might seem. For instance adding
-automated tests, making builds more stable, ...
+automated tests, making builds more stable, or even something as basic as
+simplifying build scripts so that all developers can add tests or split files.
 
 These teams seem to be caught in a vicious cycle that becomes worse over time,
 as defects tend to increase when improvements are left out. Improvements like
-adding unit and other automated tests often have a noticeable effect on the
-longer term, which makes it hard to claim time for these. Investing in
+adding unit and other automated tests are often understood to have a noticeable effect only on the
+medium to long term, which makes it hard to claim time for these. Investing in
 improvements would have a devastating effect on the amount the feature work the
 team could get done. Or has it?
+
+@TODO sketch this in a diagram of effects as well (possibly miro)
 
 # Getting insight in your work: flow distribution 
 
@@ -43,37 +52,37 @@ We see that many teams are spending 50% of their time on defects, leaving only
 
 ![flow distribution: a lot of companies are spending half of their time on average on defects](/attachments/blogposts/2022/flowdistribution-1.jpg)
 
-This kind of visualization of what share of their time a teams spends on what is
-called the **flow distribution**, a concept from the "Project to Product" book
+This kind of visualization of what share of their time a teams spends on is
+called a **flow distribution**, we learnt this from the book "Project to Product"
 by Mik Kersten. Visualizing the flow distribution of your work can give valuable
 and sometimes painful insights in what you spend your time on.
 
 If we zoom in on the 'feature work', we see some interesting things. As these
-teams are struggling with lot of defect work, they don't have / take time for
+teams are struggling with a high volume of defect work, they "don't have time" for
 improvements, e.g. keeping the code base in good shape. So technical debt
 accumulates and puts a tax on all the work. Everything is just harder to
 understand, harder to change.
 
 Furthermore, there are even more defects than the team initially thinks there
-are. In the fluency workshops, we always ask about the testing process before
+are. In our agile fluency workshops, we always ask about the testing process before
 things are delivered to production. Often, there is late testing or a separate
 testing group that tests bigger batches at the end of development. 
 
 Because these defects do not escape to production or to customers, the team
 tends to think it is not that bad, or sometimes they think this is normal in
-software development. 
+software development. On top of that we have only mentioned the time software developers spend on defets, we have not even started to count the number of testers or customer support people needed to get the system in a good state for customers.
 
 These activities surface defects, that are fed back to the developers. The
 longer this feedback loop, the more effort it takes to understand and fix these
 defects. This is a more than linear effect: defects that are found later have a
-way larger impact. So this eats away a significant share of the 'feature' time.
+much larger impact. So this eats away a significant share of the 'feature' time.
 
 ![flow distribution: of the time not spend on bugs, a small part is spent on features, the rest on struggles with technical debt and fixing issues that come back from test](/attachments/blogposts/2022/flowdistribution-2.jpg)
 
 The net time spent on delivering value is even smaller than you'd initially
 expect. No wonder that people think the team is slow and management puts a lot
-of pressure on them (even though the pressure actually has the opposite effect
-of what management intends to achieve).
+of pressure on them. Even though the pressure actually has the opposite effect
+of what management intends to achieve.
 
 # You can always make time for improvements, but start small
 
@@ -87,8 +96,8 @@ development cycle feedback loops. Getting better feedback on development work
 earlier will provide gains on the short term.
 
 The challenge is to start out with tiny improvement efforts. This might be for
-instance doing a walkthrough of the code together when a developer has finished
-something, instead of waiting for pull request feedback.
+instance pair programming, or doing a walkthrough of the code together when a
+developer has finished something, instead of waiting for pull request feedback.
 
 ![flow distribution: a small amount of time dedicated to improvements will affect technical debt and defects eventually, but it in the short term it will already affect the issues coming back from test](/attachments/blogposts/2022/flowdistribution-3.jpg)
 
@@ -109,9 +118,6 @@ been turned into a virtuous one.
 
 ![flow distribution: eventually defect work goes down and the increase of feature work will be substantial](/attachments/blogposts/2022/flowdistribution-5.jpg)
 
-# Effects of overtime
-
-@@ aparte blog post
 
 # References
 
