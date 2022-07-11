@@ -86,6 +86,8 @@ Sadly, Alexander passed away last week. I appreciate him for his contributions
 to our field and for the influence he has had on me.
 
 _Updated 27-03-2022: added links to Dorian Taylor's post and Alexander's OOPSLA'96 keynote video_
+
+_Updated 02-04-2022: added a link to The Guardian's Christopher Alexander obituary_
 # References
 
 Do get your copy of [The Timeless Way](https://www.patternlanguage.com/bookstore/timeless-way-of-building.html), and read & enjoy! Also have a look at [A Pattern Language](https://www.patternlanguage.com/bookstore/pattern-language.html).
@@ -100,3 +102,6 @@ Paul Dyson wrote down his story about how he met Christopher Alexander [in a ser
 Richard P. Gabriel's *Patterns of Software* book is [freely downloadable as a PDF](https://www.dreamsongs.com/Files/PatternsOfSoftware.pdf).
 
 Dorian Taylor wrote an [in-depth review of Alexanders work](https://dorian.substack.com/p/at-any-given-moment-in-a-process). He also provides a link to Alexander's [Patterns in Architecture talk](https://www.youtube.com/watch?v=98LdFA-_zfA) at the OOPSLA conference in 1996.
+
+The Guardian published a [Christopher Alexander obituary -
+Architect and theorist who believed in creating human-centred buildings, drawing on new technology and ancient traditions](https://www.theguardian.com/artanddesign/2022/mar/29/christopher-alexander-obituary)
