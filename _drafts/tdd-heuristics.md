@@ -47,7 +47,7 @@ V [One failing test at a time](https://www.qwan.eu/2022/04/13/tdd-one-failing-te
 ~ Caring for your tests
 - (expanding) Rules for simple design
 - (new) Removing duplication between test & production code
-- (new) Make the change easy, then make the change (refactor after and before) source: Kent Beck
+- (new) Make the change easy, then make the change (refactor after and before) source: Kent Beck "First make the change easy (warning: this might be hard), then make the easy change." (original Kent Beck quote?)
 - Test cases follow common setup
 - Tests are independent - always start from a clean slate
 - What is a unit test?
