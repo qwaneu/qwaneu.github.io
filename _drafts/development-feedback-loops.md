@@ -179,6 +179,8 @@ Related to XP: BDD has inner and outer loop - https://twitter.com/AntonyMarcano/
 
 Martin Fowler, [Is High Quality Software Worth the Cost?](https://www.martinfowler.com/articles/is-quality-worth-cost.html)
 
+Willem-Jan Ageling, [Scrum Has Three Learning Cycles — Are These Devaluing Your Learning Through Empiricism?](https://medium.com/serious-scrum/scrum-has-three-learning-cycles-are-these-devaluating-your-learning-through-empiricism-d8090c94f44e)
+
 # Follow up posts:
 
 ## Improving the inner loop?
