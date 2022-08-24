@@ -25,7 +25,7 @@ This is easier said than done. Where do you find the time, and how do you exploi
 We talk to many teams in large organizations. When we ask them about what share of
 their time they spend on fixing defects, this is more often than not 50%.
 Because the defect work is taking such a large share, the teams can get little
-customer value work ('feature work') done, which increases the pressure on the
+work with customer value ('_feature work_') done, which increases the pressure on the
 team.
 
 Often, these teams feel so much pressure that they do not feel they have time
@@ -34,13 +34,16 @@ automated tests, making builds more stable, or even something as basic as
 simplifying build scripts so that all developers can add tests or split files.
 
 These teams seem to be caught in a vicious cycle that becomes worse over time,
-as defects tend to increase when improvements are left out. Improvements like
-adding unit and other automated tests are often understood to have a noticeable effect only on the
-medium to long term, which makes it hard to claim time for these. Investing in
+as defects tend to increase when improvements are left out. Why is this?
+
+These improvements are often understood to only have a noticeable effect on the
+medium to long term, which makes it hard to set aside time for these. Investing in
 improvements would have a devastating effect on the amount the feature work the
 team could get done. Or has it?
 
 @TODO sketch this in a diagram of effects as well (possibly miro)
+@TODO abe lincoln quote about spending 45 mins of an hour sharpening the saw (maybe for outro)
+
 
 # Getting insight in your work: flow distribution 
 
