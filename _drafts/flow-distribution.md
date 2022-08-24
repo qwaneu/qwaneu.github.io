@@ -1,30 +1,28 @@
 ---
 layout: post
-title: We have no time to improve
+title: We have no time to improve! - use flow distribution to visualize where to find time.
 tags:
   - productivity
   - agile fluency
   - feedback
+  - lean
   - systems thinking
 author: Marc Evers, Willem van den Ende
-image: 
+excerpt_separator: <!--more-->
+image: /attachments/blogposts/2022/flowdistribution-1.jpg
 ---
-# Introduction
-subtitle: use flow distribution to visualize where to find time.
 
+"We have no time to improve" is something we hear regularly. Our knee jerk response is the old dutch proverb: 
 
-"We have no time to improve" is something we hear regularly when consulting. Our knee jerk response is the old dutch proverb: 
+> You don't have time, you make time.
 
-   You don't have time, you make time".
-
-In our experience, improvements pay off faster than people believe, so it is worth making time to improve.
+In our experience, improvements pay off faster than people believe, so it is worth making time to improve. See how we use flow distribution to make this visible.
+<!--more-->
 
 # A vicious cycle
 This is easier said than done. Where do you find the time, and how do you exploit the time you found as a team?
 
-(implementatiedetail, is meer voor ons waar het uitkomt. misschien schrappen, begint ook gelijk met AF, maar dit is breder. AF misschien voor in de sales blurb onderaan, het staat ook verderop). We frequently do architecture and process reviews for different companies. Using Agile Fluency diagnostic workshops to get insight in team capabilities. We see some patterns emerging.
-
-We talk to many teams in big organizations. When we ask them about what share of
+We talk to many teams in large organizations. When we ask them about what share of
 their time they spend on fixing defects, this is more often than not 50%.
 Because the defect work is taking such a large share, the teams can get little
 customer value work ('feature work') done, which increases the pressure on the
