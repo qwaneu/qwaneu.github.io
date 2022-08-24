@@ -86,3 +86,4 @@ Open Space Technology
 
 Satir Coping stances
 
+Ben Linders over dit onderwerp? https://www.benlinders.com/2015/why-doing-nothing-can-be-the-best-thing-to-do/
