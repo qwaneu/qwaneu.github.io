@@ -23,13 +23,13 @@ In our experience, improvements pay off faster than people believe, so it is wor
 This is easier said than done. Where do you find the time, and how do you exploit the time you found as a team?
 
 We talk to many teams in large organizations. When we ask them about what share of
-their time they spend on fixing defects, this is more often than not 50%.
-Because the defect work is taking such a large share, the teams can get little
-work with customer value ('_feature work_') done, which increases the pressure on the
+their *time* they *spend* on *fixing defects*, this is more often than not 50%.
+Because the defect work is taking such a large share of their team, the teams can get little
+work with *customer value* ('_feature work_') done, which increases the pressure on the
 team.
 
-Often, these teams feel so much pressure that they do not feel they have time
-for any improvements, however promising these might seem. For instance adding
+Often, these teams feel so much *pressure* that they do not feel they have *time
+for* any *improvements*, however promising these might seem. For instance adding
 automated tests, making builds more stable, or even something as basic as
 simplifying build scripts so that all developers can add tests or split files.
 
@@ -41,8 +41,6 @@ medium to long term, which makes it hard to set aside time for these. Investing 
 improvements would have a devastating effect on the amount the feature work the
 team could get done. Or has it?
 
-@TODO sketch this in a diagram of effects as well (possibly miro)
-@TODO abe lincoln quote about spending 45 mins of an hour sharpening the saw (maybe for outro)
 
 
 # Getting insight in your work: flow distribution 
@@ -122,6 +120,12 @@ been turned into a virtuous one.
 
 ![flow distribution: eventually defect work goes down and the increase of feature work will be substantial](/attachments/blogposts/2022/flowdistribution-5.jpg)
 
+As Abraham Lincoln once said:
+
+> “If I only had an hour to chop down a tree, I would spend the first 45 minutes sharpening my axe.” – Abraham Lincoln
+
+Improvements may pay off sooner than you or I believe. We've often seen and experienced it, and as often need to remind ourselves and our clients about this.
+
 # References
 
 - Mik Kersten, Project to Product (2018)
@@ -130,4 +134,13 @@ been turned into a virtuous one.
 
 # @@TODO call to action
 
-These insights emerged from architecture and process reviews we did for various companies. Using Agile Fluency diagnostic workshops clients and teams quickly get insight in team capabilities and improvement actions. Talk to us to see what this can mean for you and your organisation. 
+
+<aside>
+  <h3>Improve faster than you believed possible</h3>
+  <p>
+These insights emerged from architecture and process reviews we did for various companies. Using Agile Fluency diagnostic workshops clients and teams quickly get insight in team capabilities and improvement actions. 
+  </p>
+  <p><div>
+    <a href="/consulting">Talk to us to see what value this can add for you and your organisation. 
+  </div></p>
+</aside>
