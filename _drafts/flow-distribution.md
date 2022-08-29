@@ -41,7 +41,7 @@ medium to long term, which makes it hard to set aside time for these. Investing 
 improvements would have a devastating effect on the amount the feature work the
 team could get done. Or has it?
 
-
+# @@TODO add diagram of effects from Miro
 
 # Getting insight in your work: flow distribution 
 
@@ -131,9 +131,6 @@ Improvements may pay off sooner than you or I believe. We've often seen and expe
 - Mik Kersten, Project to Product (2018)
 - Mike Hill wrote a series of posts about the value of taking baby steps: [Many
   More Much Smaller Steps](https://www.geepawhill.org/2021/09/29/many-more-much-smaller-steps-first-sketch/)
-
-# @@TODO call to action
-
 
 <aside>
   <h3>Improve faster than you believed possible</h3>
