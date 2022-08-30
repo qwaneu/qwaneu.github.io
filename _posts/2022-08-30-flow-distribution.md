@@ -136,6 +136,8 @@ Improvements may pay off sooner than you or I believe. We've often seen and expe
 - Mike Hill wrote a series of posts about the value of taking baby steps: [Many
   More Much Smaller Steps](https://www.geepawhill.org/2021/09/29/many-more-much-smaller-steps-first-sketch/)
 
+Credits: Thanks to Lilian Nijboer for giving the nod of approval, and Rob Westgeest for making the Miro causal loop diagram less square.
+
 <aside>
   <h3>Improve faster than you believed possible</h3>
   <p>
