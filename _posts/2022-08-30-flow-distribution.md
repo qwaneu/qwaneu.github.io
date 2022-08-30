@@ -70,7 +70,7 @@ accumulates and puts a tax on all the work. Everything is just harder to
 understand, harder to change.
 
 Furthermore, there are even more defects than the team initially thinks there
-are. In our agile fluency workshops, we always ask about the testing process before
+are. In our <a href="https://www.agilefluency.org/diagnostic.php">Agile Fluency®</a> workshops, we always ask about the testing process before
 things are delivered to production. Often, there is late testing or a separate
 testing group that tests bigger batches at the end of development. 
 
