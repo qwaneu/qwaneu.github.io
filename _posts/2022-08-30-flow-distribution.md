@@ -142,6 +142,6 @@ Improvements may pay off sooner than you or I believe. We've often seen and expe
 These insights emerged from architecture and process reviews we did for various companies. Using Agile Fluency diagnostic workshops clients and teams quickly get insight in team capabilities and improvement actions. 
   </p>
   <p><div>
-    <a href="/consulting">Talk to us to see what value this can add for you and your organisation. 
+    <a href="/contact">Talk to us</a>
   </div></p>
 </aside>
