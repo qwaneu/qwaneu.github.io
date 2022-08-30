@@ -41,7 +41,11 @@ medium to long term, which makes it hard to set aside time for these. Investing 
 improvements would have a devastating effect on the amount the feature work the
 team could get done. Or has it?
 
-# @@TODO add diagram of effects from Miro
+![A vicious cycle drawn from the previous text. No time improvements leads to more defects, less time for customer value, which in turn leads to more pressure. More defects also add to the pressure, and both defects and pressure lead to more time spent on defects. More time spent on fixing defects in turn leads to less time for improvements, completing the vicious cycle.  
+](/attachments/blogposts/2022/flow-distribution-time-for-improvements.jpg)
+*A vicious cycle - less time for improvements leads to more defects.*
+
+This cycle can also turn virtuous - if we make time for improvements, we can reduce the number of defects, and increase the time available for customer value. Lets' see how to do that with a flow distribution as visualization aid.
 
 # Getting insight in your work: flow distribution 
 
