@@ -10,15 +10,15 @@ author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: 
 ---
 
-Continuous attention to, and investing in, techical excellence is essential. Why? 
+Continuous attention to investing in techical excellence is essential. Why? 
 Looking at software product development, we can distinguish 3 important feedback loops: the *product loop*, the *getting valuable work done loop* and the *technical excellence loop*. The faster the technical excellence loop on the inside goes, the faster the outside loops can go.
 
 
 ![Three loops drawn inside out - technical excellence loop, getting valuable things done loop and product loop](/attachments/blogposts/2022/three-loops-intro.svg)
 
 Improvements in the inner loop have the most impact, because the loop is
-iterated over most. Any effects (whether good or bad) get multiplied. This means
-that _continuous attention to an investment in technical excellence_ is essential.
+iterated over most. Any effects, good or bad,  get multiplied. This means
+that _continuous attention to investment in technical excellence_ is essential.
 
 Many 'agile transformations' tend to focus on the middle and outer loops only,
 which is necessary but not sufficient. According to Jason Gorman, [this is the
@@ -33,12 +33,17 @@ three.
 
 The three feedback loops is a model and a model is a simplification. We think it
 provides a useful lens on the systemic effects in software product development
-and helps to find more effective (and efficient) interventions.
+and helps to find more effective and efficient interventions.
 
-Looking through the frame of the 3 loops allows us to investigate: length of the
-feedback loops, delays, handovers of work, waiting for decision making, "rework"
-(work going through the loop again because it is not good enough; cf. failure
-demand)
+Looking through the frame of the 3 loops allows us to investigate: 
+
+- length of the feedback loops, 
+- delays, 
+- handovers , 
+- waiting for decision making, 
+- and "rework" 
+
+A bit more on why we put "rework" in scare quotes. We love iteration. Iteration is often a necesary condition for iteration. What we don't like to see is work going through the loop again because it is not good enough. 
 
 The three loops are about
 - decision making
