@@ -29,7 +29,7 @@ Freelance developers get hired to help out with a legacy migration project, get 
 Measuring productivity in software development is a hard topic. 
 We have written about it before, and proposed a useable working definition.
 
-What often happens in agile organizations is focusing on the effo`rt spent, like
+What often happens in agile organizations is focusing on the effort spent, like
 story points. Gojko Adzic writes about this in [The Play, the points, and the
 biggest lie in
 software](https://gojko.net/2021/01/11/the-play-the-points-the-lie.html)
