@@ -5,3 +5,6 @@ _site
 vendor
 /.bundle/config
 *.cache
+/_drafts/*.pdf
+/_drafts/*.gz
+/_drafts/*.tex
