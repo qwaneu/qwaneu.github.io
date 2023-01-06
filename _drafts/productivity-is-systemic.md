@@ -140,14 +140,15 @@ business.
 Further reading
 ---------------
 
-
-@@todo heading above does not render properly with ## (in emacs and jekyll). It does work with underline strangely enough
-
 - Willem wrote about how [experiments move you forward](/2020/06/26/experiments-move-you-forward.html). Experimentation is also a system, the more you do it, the lower the cost per experiment gets.
-
 - We have more posts on [productivity from management and team perspectives](/blog-by-tag/#tag-productivity). Some more systemic, like the current post, others more focused on e.g. [(counter-)productive use of automated tests](/2020/11/27/paying-the-price-of-fast-tests.html).
-
 - @@todo QSM reference might be easier here than further above.
+- [Under Pressure](/2020/10/26/under-pressure.html)
 
-@@todo call to action
-
+<aside>
+  <h3>@@ TODO Call to action</h3>
+  <p>call</p>
+  <p><div>
+    <a href="/consulting">Learn more about our consultancy services</a>
+  </div></p>
+</aside>
