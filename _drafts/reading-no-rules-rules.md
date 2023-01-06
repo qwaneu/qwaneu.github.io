@@ -34,8 +34,8 @@ Netflix wanted a culture of freedom and responsibility
 
 The book describes the current way of working and how they arrived at this
 through experimenting and adjusting. The risk of book like this is that people
-take the current state and try to copy it. Copying the motions of Netflix (or
-some other successful company) won't help you. 
+take the current state and try to copy it. Copying the motions of Netflix or
+some other successful company won't help you. 
 
 A complex system like an organization has history. The past/road followed led to
 the current state of affairs. Copying the motions won't get you far, as you are
@@ -55,8 +55,10 @@ Willem wrote about this pattern of copying others without thinking and adaptatio
 
 ## Hiring "Top Performers"
 
-Netflix focuses on hiring "top performers". Prevent employees that pull down morale, by not being good enough, by slacking or being a jerk (no matter how brilliant a person seems to be).
-Netflix also pays employees above market. No performance-based bonuses
+Netflix focuses on hiring "top performers". Prevent employees that pull down
+morale, by not being good enough, by slacking or being a jerk (no matter how
+brilliant a person seems to be). Netflix also pays employees above market. No
+performance-based bonuses
 
 So they hire top performers, provide a vision and context, and some enabling constraints and expect them to do their thing. Treat them as the adult they are. And they say that "Performance is contagious" - focusing on high performing people reinforces itself.
 
@@ -68,10 +70,10 @@ around. Does anyone remember counting lines of code as a measure of productivity
 development is a team sport. 
 
 The performance of a high performing team is more than the sum of the
-performance of its members. I'm Not saying Netflix is taking a wrong approach, their
-results until recently show the opposite, but what 'top performer' means does not become clear
-from the book, I'd be interested to learn more, especially for software
-development.
+performance of its members. I'm Not saying Netflix is taking a wrong approach,
+their results until recently show the opposite, but what 'top performer' means
+does not become clear from the book, I'd be interested to learn more, especially
+for software development.
 
 Performance of an individual is is always a function of the
 individual's capabilities and the context the person is working in. Although the
@@ -83,27 +85,24 @@ explicitly.
 An organization is not a family; a family stays together regardless of
 "performance". 
 
-Netflix asks people (managers, employees themselves) to
-frequently do the Keeper Test: "If a person on your team were to quit tomorrow,
-would you try to change their mind? Or would you accept their resignation,
-perhaps with a little relief? If the latter, you should give them a severance
-package now, and look for a star, someone you would fight to keep."
+Netflix asks both managers and employees to frequently do the Keeper Test: "If a
+person on your team were to quit tomorrow, would you try to change their mind?
+Or would you accept their resignation, perhaps with a little relief? If the
+latter, you should give them a severance package now, and look for a star,
+someone you would fight to keep."
 
 They focus on "top performance". If someone shows adequate performance, they
-will let go of this person, with a generous severance (again above market and
-above what is required by law). So they take a proactive approach to employees
-that are not a good fit (compared to other companies who start some painful
-improvement program, just wait until the employee leaves by him/herself, or
-bully the employee away). Note that attrition is similar to market averages so
-it is not working out worse for them.
+will let go of this person with a generous severance - again above market and
+above what is required by law. So they take a proactive approach to employees
+that are not a good fit. Compare this to other companies that start some painful
+improvement program, and just wait until the employee leaves by themselves, or
+companies that would bully the employee away. Note that attrition is similar to
+market averages so it is not working out worse for them.
 
 ## Radical candor 
 
 Frequent candid feedback has high leverage: it "exponentially magnifies the
-speed and effectiveness of your team or workforce"
-
-Build feedback in; coach employees to give/receive feedback effectively.
-"Feedback anywhere, anytime"
+speed and effectiveness of your team or workforce". So build feedback in and coach employees to give/receive feedback effectively - "feedback anywhere, anytime".
 
 4A Feedback Guidelines:
 1. Aim to Assist - give constructive feedback, with positive intent
@@ -114,7 +113,7 @@ Build feedback in; coach employees to give/receive feedback effectively.
 Netflix experimented with 360 feedback. What they learned:
 - do not do them anonymously
 - don't tie the feedback to performance reviews
-- live 360s, in a small group, e.g. over dinner; can take hours (uncomfortable, but effective); use start/stop/continue
+- live 360s, in a small group, e.g. over dinner; this can take hours and can feel uncomfortable, but it is effective; use start/stop/continue
 
 ## Remove controls
 
@@ -129,9 +128,10 @@ people make more mistakes, and burn out more easily.
 
 ## Trust leads to trustworthiness
 
-Lead with context; prerequisites: high talent density, goal is innovation (not
-error prevention, like in a context where safety is critical), loosely coupled
-system (with high alignment)
+Lead with context. Prerequisites for this are: 
+- a high talent density
+- the goal is innovation, not error prevention, like in a context where safety is critical
+- the system is loosely coupled, with high alignment
 
 If someone does something dumb, don't blame that person, but ask yourself what
 context did you fail to set. I like this systemic perspective, it is in line with Deming's statement that [90-95% of performance is governed by the
