@@ -37,13 +37,14 @@ sometimes not. Different preferences for approaching a problem seem to
 be most pronounced here. 
 
 Experimenting in a pair can then feel like a [Three legged
-race](http://fun.familyeducation.com/outdoor-games/activity/36835.html)
-and might not be the fastest and most fun way to proceed. Even something
-seemingly trivial like browsing the web together can be frustrating.
-Willem reads fast and wide, having 10 plus tabs open is not an
-exception. Others read narrow and in detail, trying to understand
-everything in one go. Going off alone for a set amount of time, and
-coming back with conclusions from the experiment is more fruitful in those circumstancees. That gives two perspectives on the same problem that are more independent.
+race](http://fun.familyeducation.com/outdoor-games/activity/36835.html) and
+might not be the fastest and most fun way to proceed. Even something seemingly
+trivial like browsing the web together can be frustrating. Willem reads fast and
+wide, having 10 plus tabs open is not an exception. Others read narrow and in
+detail, trying to understand everything in one go. Going off alone for a set
+amount of time, and coming back with conclusions from the experiment is more
+fruitful in those circumstancees. That gives two perspectives on the same
+problem that are more independent.
 
 We do sketch out designs, but to that rarely. We do it at the beginning of
 a significant chunk of work. We sketch design during pair programming when we wonder how
