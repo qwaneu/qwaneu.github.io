@@ -138,6 +138,7 @@ business.
 @@todo draw the DOE that is hidden in the text above, might also work as cover graphic.
 
 
+This visual attemps to show non-linear growth. This is often hard to comprehend, a 1% change a day means a massive change at the end of the year.
 
 Further reading
 ---------------
