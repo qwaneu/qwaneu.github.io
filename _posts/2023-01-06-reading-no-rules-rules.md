@@ -51,7 +51,7 @@ article described a snapshot in time, as Spotify is continuously evolving and
 adapting to change. Unfortunately many organizations didn't read Henrik's
 disclaimer in the article and starting copying the motions.
 
-Willem wrote about this pattern of copying others without thinking and adaptation in [Cargo cults and angry chaos monkeys](/2020/09/07/cargo-cults-and-angry-chaos-monkeys.md)
+Willem wrote about this pattern of copying others without thinking and adaptation in [Cargo cults and angry chaos monkeys](/2020/09/07/cargo-cults-and-angry-chaos-monkeys.html)
 
 ## Hiring "Top Performers"
 
@@ -69,10 +69,11 @@ not well understood topic, with lots of bad or meaningless research
 around. Does anyone remember counting lines of code as a measure of productivity?. Some still believe in that to this day. The research cited in the book focuses very much on individual performance, while software
 development is a team sport. 
 
-The performance of a high performing team is more than the sum of the performance of its members. I'm not saying Netflix is taking a wrong approach, their
-results until recently show the opposite, but what 'top performer' means does not become clear
-from the book, I'd be interested to learn more, especially for software
-development.
+The performance of a high performing team is more than the sum of the
+performance of its members. I'm not saying Netflix is taking a wrong approach,
+their results until recently show the opposite, but what 'top performer' means
+does not become clear from the book, I'd be interested to learn more, especially
+for software development.
 
 Performance of an individual is is always a function of the
 individual's capabilities and the context the person is working in. Although the
