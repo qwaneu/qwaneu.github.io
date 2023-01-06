@@ -19,7 +19,7 @@ things however. We love dependency injection.
 
 TDD 
 
-TDD leads to loosely coupled code: @@arguments
+TDD leads to loosely coupled code: @@arguments : maybe finish tdd-modularity idea/post first, and reference it here.
 
 ## What we see in practice
 
