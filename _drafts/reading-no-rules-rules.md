@@ -12,7 +12,7 @@ image: /attachments/blogposts/2021/no-rules-rules-cover.jpg
 
 What I like about the book is the story behind the way of working and the
 current 'rules'/practices of Netflix. The book shows how Hastings manages the
-company as a complex system: providing enabling constraints(not too many),
+company as a complex system: providing enabling constraints (not too many),
 trying it out, see where it fails, and adjusting the constraints.
 
 The things I don't like are woven in further down. 
@@ -89,14 +89,13 @@ would you try to change their mind? Or would you accept their resignation,
 perhaps with a little relief? If the latter, you should give them a severance
 package now, and look for a star, someone you would fight to keep."
 
-They focus on "top performance". If someone shows adequate performance, they will
-let go of this person, with a generous severance (again above market and above
-what is required by law). So they take a proactive approach to employees that
-are not a good fit (compared to other companies who start some painful
+They focus on "top performance". If someone shows adequate performance, they
+will let go of this person, with a generous severance (again above market and
+above what is required by law). So they take a proactive approach to employees
+that are not a good fit (compared to other companies who start some painful
 improvement program, just wait until the employee leaves by him/herself, or
 bully the employee away). Note that attrition is similar to market averages so
 it is not working out worse for them.
-
 
 ## Radical candor 
 
@@ -123,24 +122,23 @@ No holiday policies; no travel and expense policies. Instead of 'pessimistic
 control' (always asking for permission), they apply 'optimistic control',
 finance checks samples after the fact. If people overspend, this does not mean a reprimand, but it triggers to have another look at context. 
 
-Remark from Willem: no policies can also mean that people do not take holiday, because they feel pressured to work. In this context the 'Keeper test' and 'Top performer' focus may be harmful to the employees health and the company's performance, as tired people make more mistakes, and burn out more easily.
+No policies can also mean that people do not take holiday, because they feel
+pressured to work. In this context the 'Keeper test' and 'Top performer' focus
+may be harmful to the employees health and the company's performance, as tired
+people make more mistakes, and burn out more easily.
 
-
-# Trust leads to trustworthiness
+## Trust leads to trustworthiness
 
 Lead with context; prerequisites: high talent density, goal is innovation (not
 error prevention, like in a context where safety is critical), loosely coupled
 system (with high alignment)
 
 If someone does something dumb, don't blame that person, but ask yourself what
-context did you fail to set. I like this systemic perspective, it is in line with
-Deming's statement that [90-95% of performance is governed by the
+context did you fail to set. I like this systemic perspective, it is in line with Deming's statement that [90-95% of performance is governed by the
 system](https://deming.org/dr-deming-called-for-the-elimination-of-the-annual-performance-appraisal/).
 Contrast with imposing more rules creates an inflexible context where people
 cannot thrive. This highlights a main job of management: working on the system,
 creating a context where good results emerge.
-
-## Expanding to different cultures
 
 ## Conclusion
 
@@ -154,13 +152,16 @@ to grasp.
 
 Like with many other books and articles it bears the risk of people copy-pasting
 the current Netflix practices. If you want to take things from the book to your
-own organization, focus on the principles and prepare for a journey of trying things
-out, finding it doesn't work and tweaking it until it does, with a
+own organization, focus on the principles and prepare for a journey of trying
+things out, finding it doesn't work and tweaking it until it does, with a
 preference for setting context and trusting people to fix things.
 
-@@ CTA
-If you want to discuss your context and its' challenges - contact us. 
+_Credits: thanks to Willem for editing and helping to get this post published._
 
-
- 
-
+<aside>
+  <p>If you'd like to discuss your context and your challenges, let's have a coffee.
+  </p>
+  <p><div>
+    <a href="/contact">Contact us</a>
+  </div></p>
+</aside>
