@@ -6,10 +6,10 @@ tags:
   - agile fluency
   - feedback
   - systems thinking
-author: Marc Evers
+author: Marc Evers, Willem van den Ende
 image: 
 ---
-
+  
 Productivity of software development teams - difficult to get a grip on but everyone wants teams to be more productive. 
 
 We talk to managers, who say they'd like their teams to be more productive (or 'go faster').
@@ -137,6 +137,8 @@ business.
 
 @@todo draw the DOE that is hidden in the text above, might also work as cover graphic.
 
+
+
 Further reading
 ---------------
 
@@ -148,6 +150,9 @@ Further reading
 - We have more posts on [productivity from management and team perspectives](/blog-by-tag/#tag-productivity). Some more systemic, like the current post, others more focused on e.g. [(counter-)productive use of automated tests](/2020/11/27/paying-the-price-of-fast-tests.html).
 
 - @@todo QSM reference might be easier here than further above.
+
+- @@todo jessitron on you want acceleration
+
 
 @@todo call to action
 
