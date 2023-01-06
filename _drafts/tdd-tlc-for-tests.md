@@ -9,6 +9,8 @@ author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: 
 ---
 
+@@merge with 'refactoring tests' ? this is a stronger title and fits in with the heuristics
+
 ## Take as much care for test code as you do for production code
 
 The tests are an important part of your software product. They will not only guide 
