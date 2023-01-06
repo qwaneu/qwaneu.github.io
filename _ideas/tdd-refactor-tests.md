@@ -1,3 +1,4 @@
+refer to our give your tests some love workshop
 
 ## Further reading
 
