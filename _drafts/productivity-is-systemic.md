@@ -6,10 +6,10 @@ tags:
   - agile fluency
   - feedback
   - systems thinking
-author: Marc Evers
+author: Marc Evers, Willem van den Ende
 image: 
 ---
-
+  
 Productivity of software development teams - difficult to get a grip on but everyone wants teams to be more productive. 
 
 We talk to managers, who say they'd like their teams to be more productive (or 'go faster').
@@ -29,7 +29,7 @@ Freelance developers get hired to help out with a legacy migration project, get 
 Measuring productivity in software development is a hard topic. 
 We have written about it before, and proposed a useable working definition.
 
-What often happens in agile organizations is focusing on the effo`rt spent, like
+What often happens in agile organizations is focusing on the effort spent, like
 story points. Gojko Adzic writes about this in [The Play, the points, and the
 biggest lie in
 software](https://gojko.net/2021/01/11/the-play-the-points-the-lie.html)
@@ -137,17 +137,22 @@ business.
 
 @@todo draw the DOE that is hidden in the text above, might also work as cover graphic.
 
+
+This visual attemps to show non-linear growth. This is often hard to comprehend, a 1% change a day means a massive change at the end of the year.
+
 Further reading
 ---------------
 
-
-@@todo heading above does not render properly with ## (in emacs and jekyll). It does work with underline strangely enough
-
 - Willem wrote about how [experiments move you forward](/2020/06/26/experiments-move-you-forward.html). Experimentation is also a system, the more you do it, the lower the cost per experiment gets.
-
 - We have more posts on [productivity from management and team perspectives](/blog-by-tag/#tag-productivity). Some more systemic, like the current post, others more focused on e.g. [(counter-)productive use of automated tests](/2020/11/27/paying-the-price-of-fast-tests.html).
-
 - @@todo QSM reference might be easier here than further above.
+- [Under Pressure](/2020/10/26/under-pressure.html)
+- @@todo jessitron on you want acceleration
 
-@@todo call to action
-
+<aside>
+  <h3>@@ TODO Call to action</h3>
+  <p>call</p>
+  <p><div>
+    <a href="/consulting">Learn more about our consultancy services</a>
+  </div></p>
+</aside>

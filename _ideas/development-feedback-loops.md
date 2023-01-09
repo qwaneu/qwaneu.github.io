@@ -6,24 +6,23 @@ tags:
   - agile fluency
   - feedback
   - systems thinking
-author: Marc Evers
+author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: 
 ---
 
-# Three feedback loops in software product development - summary
+Continuous attention to investing in techical excellence is essential. Why? 
+Looking at software product development, we can distinguish 3 important feedback loops: the *product loop*, the *getting valuable work done loop* and the *technical excellence loop*. The faster the technical excellence loop on the inside goes, the faster the outside loops can go.
 
-Looking at software product development, we can distinguish 3 important feedback
-loops.
+
+![Three loops drawn inside out - technical excellence loop, getting valuable things done loop and product loop](/attachments/blogposts/2022/three-loops-intro.svg)
 
 Improvements in the inner loop have the most impact, because the loop is
-iterated over most. Any effects (whether good or bad) get multiplied. This means
-that continuous attention to an investment in technical excellence is essential.
-
-![initial whiteboard sketch](/attachments/blogposts/2022/3-feedback-loops-sketch.jpg)
+iterated over most. Any effects, good or bad,  get multiplied. This means
+that _continuous attention to investment in technical excellence_ is essential.
 
 Many 'agile transformations' tend to focus on the middle and outer loops only,
-which is necessary but not sufficient. According to Jason Gorman, this is the
-reason most agile transformations fail.
+which is necessary but not sufficient. According to Jason Gorman, [this is the
+reason most agile transformations fail](https://www.youtube.com/watch?v=-wNH6YgZQtw).
 
 For effective, sustainable development, we need to work on all three feedback
 loops eventually. Focusing on the middle and outer loops is not sufficient, but
@@ -34,19 +33,25 @@ three.
 
 The three feedback loops is a model and a model is a simplification. We think it
 provides a useful lens on the systemic effects in software product development
-and helps to find more effective (and efficient) interventions.
+and helps to find more effective and efficient interventions.
 
-Looking through the frame of the 3 loops allows us to investigate: length of the
-feedback loops, delays, handovers of work, waiting for decision making, "rework"
-(work going through the loop again because it is not good enough; cf. failure
-demand)
+Looking through the frame of the 3 loops allows us to investigate: 
 
+- length of the feedback loops, 
+- delays, 
+- handovers , 
+- waiting for decision making, 
+- and "rework" 
+
+A bit more on why we put "rework" in scare quotes. We love iteration. Iteration is often a necesary condition for iteration. What we don't like to see is work going through the loop again because it is not good enough. 
 
 The three loops are about
 - decision making
 - getting feedback & information
 - to steer & improve
 
+
+![initial whiteboard sketch](/attachments/blogposts/2022/3-feedback-loops-sketch.jpg)
 
 # Outer loop - product loop
 
@@ -81,7 +86,7 @@ Stuff that happens here:
 
 Inner loop has most leverage: "Continuous attention to technical excellence and good design enhances agility." (Agile Manifesto principle 9)
 
-Small improvements that effect the speed of the inner loop or the length of the
+Small improvements that affect the speed of the inner loop or the length of the
 feedback loops can have a big impact, because it gets multiplied the most. As an
 example, shaving off a few seconds of your unit test run will benefit you every
 time you run the tests, many, many times a day. This all adds up, for every line
@@ -92,9 +97,11 @@ of multiplication effects. So it pays to invest time in improving build times,
 fixing flaky tests, getting quicker pull request feedback, doing pair
 programming instead of pull requests.
 
-Another way in which the inner loop has a big leverage: "if you go very fast,
-you will get much faster feedback on whether things are going the right way"
-(quote Rob). So technical excellence enables a speedup in the middle loop
+Another way in which the inner loop has a big leverage. As Rob says 
+> "if you go very fast, you will get much faster feedback on whether things are going the right way"
+. 
+
+So technical excellence enables a speedup in the middle loop
 ("becoming better faster") and in the outer loop - faster discovery, market
 testing, etc.
 

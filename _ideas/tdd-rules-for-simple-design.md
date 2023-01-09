@@ -54,4 +54,3 @@ Wider considerations of clean code, also from the @betsythemuffin tread (@TODO c
 >logic puzzles rather than a tool whose use always has political implications
 
 Something about design patterns
->>>>>>> 804a341... Groping towards publishable posts
