@@ -135,10 +135,10 @@ magnitude improvements, e.g. delivering software daily instead of monthly. And
 order of magnitude improvements change the game, for the team as well as for
 business.
 
-@@todo draw the DOE that is hidden in the text above, might also work as cover graphic.
+![Diagram of Effects. Small improvements lead to time for valuable work lead to time for improvements and the circle is round. After several small improvements there might be a game changer.](/attachments/blogposts/2023/time-for-improvement-game-changer.svg)
 
-
-This visual attemps to show non-linear growth. This is often hard to comprehend, a 1% change a day means a massive change at the end of the year.
+This visual attemps to show non-linear growth. This is often hard to comprehend,
+a 1% change a day means a massive change at the end of the year.
 
 Further reading
 ---------------
