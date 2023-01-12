@@ -11,14 +11,17 @@ image:
 ---
   
 Productivity of software development teams is difficult to get a grip on, but
-virtually everyone wants teams to be more productive. We often talk to managers, who say they'd like their teams to be more productive, or in their words 'go faster'.
+virtually everyone wants teams to be more productive. We often talk to managers,
+who say they'd like their teams to be more productive, or in their words 'go
+faster'. Today we write a bit more about what we see around productivity in
+software development, and how seeing productivity as a property of a system can
+help you spot symptoms, fire-fighting and work towards more durable solutions.
 
 
 - [Productivity (revisited)](#productivity-revisited)
 - [Productivity is (mostly) a property of the system](#productivity-is-mostly-a-property-of-the-system)
 - [The 'system' is management's job](#the-system-is-managements-job)
-- [Management is not only the manager's job](#management-is-not-only-the-managers-job)
-- [Sometimes it's the individual](#sometimes-its-the-individual)
+- [Sometimes it is the individual](#sometimes-it-is-the-individual)
 - [Productivity is an enabler for everything else](#productivity-is-an-enabler-for-everything-else)
 - [Further reading](#further-reading)
 
@@ -28,7 +31,7 @@ Measuring productivity in software development is a hard topic. What often
 happens in agile organizations is focusing on the effort spent, like story
 points. Gojko Adzic writes about this in [The Play, the points, and the biggest
 lie in software](https://gojko.net/2021/01/11/the-play-the-points-the-lie.html)
-(measuring productivity is hard, measuring value delivered is even harder)
+Measuring productivity is hard, measuring value delivered is even harder.
 
 ## Productivity is (mostly) a property of the system
 
