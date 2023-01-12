@@ -10,11 +10,9 @@ author: Marc Evers, Willem van den Ende
 image: 
 ---
   
-Productivity of software development teams - difficult to get a grip on but everyone wants teams to be more productive. 
+Productivity of software development teams is difficult to get a grip on, but
+virtually everyone wants teams to be more productive. We often talk to managers, who say they'd like their teams to be more productive, or in their words 'go faster'.
 
-We talk to managers, who say they'd like their teams to be more productive (or 'go faster').
-
-Freelance developers get hired to help out with a legacy migration project, get fired because they are too slow (struggling with the legacy and delayed feedback loops in the organization)
 
 - [Productivity (revisited)](#productivity-revisited)
 - [Productivity is (mostly) a property of the system](#productivity-is-mostly-a-property-of-the-system)
@@ -26,13 +24,10 @@ Freelance developers get hired to help out with a legacy migration project, get 
 
 ## Productivity (revisited)
 
-Measuring productivity in software development is a hard topic. 
-We have written about it before, and proposed a useable working definition.
-
-What often happens in agile organizations is focusing on the effort spent, like
-story points. Gojko Adzic writes about this in [The Play, the points, and the
-biggest lie in
-software](https://gojko.net/2021/01/11/the-play-the-points-the-lie.html)
+Measuring productivity in software development is a hard topic. What often
+happens in agile organizations is focusing on the effort spent, like story
+points. Gojko Adzic writes about this in [The Play, the points, and the biggest
+lie in software](https://gojko.net/2021/01/11/the-play-the-points-the-lie.html)
 (measuring productivity is hard, measuring value delivered is even harder)
 
 ## Productivity is (mostly) a property of the system
@@ -55,6 +50,10 @@ maintenance is free, it will drag down a team's performance more and more, while
 it's not the team's fault - "No: your software team does not suck if they make
 slow progress on a legacy code base."
 
+Sometimes freelance developers get hired to help out with a legacy migration project, and then get
+fired because they are too slow, as they too struggle with the legacy and delayed feedback
+loops in the organization. This can happen to the best of us.
+
 ## The 'system' is management's job
 
 So if a team's productivity is not good enough, look at the system to learn what
@@ -68,14 +67,20 @@ productivity is not a matter of meticulously analysing the current situation,
 designing a desired state and planning actions to bridge that state. Instead,
 the suitable approach is one of sense-making, gaining situational awareness in
 the direction the system is inclined to move (dispositioned), and then thinking
-up some [experiments](/2020/06/26/experiments-move-you-forward.html) that are in line with what you have learned. Do experiments
-because you cannot be sure if they will succeed so you'd rather keep a possible
-negative effect small. Still run the experiment, because you never know what
-more you'll discover.
+up some [experiments](/2020/06/26/experiments-move-you-forward.html) that are in
+line with what you have learned. Do experiments because you cannot be sure if
+they will succeed so you'd rather keep a possible negative effect small. Still
+run the experiment, because you never know what more you'll discover.
 
 This is management's job! This is where you can have true leverage in the organization's performance.
 
-When I say management's job, this is not restricted to those who have 'manager' in their job title, although it should at least come from there (@@vgl. Geerts transformatie moet vanuit de lijn komen). If we succeed at having teams develop more reflective capability and systemic thinking skills of their own, they can can learn to do this on their own. So we mean 'management' here eventually in the sense like Gerald Weinberg uses it in his Quality Software Management series @@todo: uitwerken, also refer to leanpub version.
+When I say management's job, this is not restricted to those who have 'manager'
+in their job title, although it should at least come from there (@@vgl. Geerts
+transformatie moet vanuit de lijn komen). If we succeed at having teams develop
+more reflective capability and systemic thinking skills of their own, they can
+can learn to do this on their own. So we mean 'management' here eventually in
+the sense like Gerald Weinberg uses it in his Quality Software Management series
+@@todo: uitwerken, also refer to leanpub version.
 
 So you could find some things that is keeping productivity low:
 - _Missing skills_ - so they need to learn and train; this requires
@@ -83,24 +88,30 @@ So you could find some things that is keeping productivity low:
   people to learn everything in their evening hours, you're not taking
   productivity seriously, and you're harming people with families, you're
   depriving people of their rest, an important pillar of high performance)
-- _Handoffs_: the team needs to wait for others outside the team, e.g. for approvals,
-  reviews, or they have to wait on long builds, nightly test run results, etc.
-  Waiting is destructive for productivity. It is quite useless to urge people to
-  fill the waiting time with other work, because waiting breaks focus, people
-  lose time in task switching. This can be a tougher one to break; create
-  collaborative awareness of where there is waiting in the process and how that
-  is impacting end to end ("concept to cash") development performance, e.g. with
-  value stream mapping. Reorganize to eliminate waiting; relentlessly improve
-  builds and CI/CD pipelines so that they will give their feedback within 15
-  minutes - see Charity Majors' post on [Why are my tests so slow?](https://charity.wtf/2020/12/31/why-are-my-tests-so-slow-a-list-of-likely-suspects-anti-patterns-and-unresolved-personal-trauma)
+- _Handoffs_: the team needs to wait for others outside the team, e.g. for
+  approvals, reviews, or they have to wait on long builds, nightly test run
+  results, etc. Waiting is destructive for productivity. It is quite useless to
+  urge people to fill the waiting time with other work, because waiting breaks
+  focus, people lose time in task switching. This can be a tougher one to break;
+  create collaborative awareness of where there is waiting in the process and
+  how that is impacting end to end ("concept to cash") development performance,
+  e.g. with value stream mapping. Reorganize to eliminate waiting; relentlessly
+  improve builds and CI/CD pipelines so that they will give their feedback
+  within 15 minutes - see Charity Majors' post on [Why are my tests so
+  slow?](https://charity.wtf/2020/12/31/why-are-my-tests-so-slow-a-list-of-likely-suspects-anti-patterns-and-unresolved-personal-trauma)
 - _Complacency_: the team is working in a kind of 'good enough' mode, there
   is no sense of urgency. So [create a sense of
   urgency](/2020/10/26/under-pressure.html), make sure they understand the why.
   In the light of a short term delivery date, a complacent team can suddenly become a focused, productive team.
-- _Penny Wise, Pound Foolish_. Does your investment in e.g. CI/CD pipelines, developer workstations, software, webcams, headsets etc. match your wage bill, or do you have an IT service desk that says 'No' on every request, causing lost productivity costing hundreds of dollars per hour to save a few dollars per year on basic equipment?
-- _Productive individuals_ the team is working as a loose collection of individuals instead of a team, everyone
-  does his/her own tasks, some are very busy, others finish early and don't know
-  what to do next. Invest in team coaching, teach them about flow.
+- _Penny Wise, Pound Foolish_. Does your investment in e.g. CI/CD pipelines,
+  developer workstations, software, webcams, headsets etc. match your wage bill,
+  or do you have an IT service desk that says 'No' on every request, causing
+  lost productivity costing hundreds of dollars per hour to save a few dollars
+  per year on basic equipment?
+- _Productive individuals_ the team is working as a loose collection of
+  individuals instead of a team, everyone does his/her own tasks, some are very
+  busy, others finish early and don't know what to do next. Invest in team
+  coaching, teach them about flow.
 
 And don't focus on individual utilization! By optimizing everyone's utilization,
 you are guaranteed to cause horrible development performance. Your goal is to
@@ -124,6 +135,8 @@ productive team. The organizational context will quickly become the next
 bottleneck. Before acting on individuals, first ask yourself, how does the
 system generate the behaviour we are seeing?
 
+So is it the individual, or is their behaviour a symptom of underlying problems?
+
 ## Productivity is an enabler for everything else
 
 Focus on improving productivity, by many small improvement decisions will create
@@ -146,7 +159,8 @@ Further reading
   perspectives](/blog-by-tag/#tag-productivity). Some more systemic, like the
   current post, others more focused on e.g. [(counter-)productive use of
   automated tests](/2020/11/27/paying-the-price-of-fast-tests.html).
-- [Under Pressure](/2020/10/26/under-pressure.html)
+- [Under Pressure](/2020/10/26/under-pressure.html) How to make space for
+  improvements when the pressure is on.
 
 <aside>
   <h3>Have a coffee with us </h3>
