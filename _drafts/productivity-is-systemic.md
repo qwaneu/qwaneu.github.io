@@ -17,8 +17,7 @@ virtually everyone wants teams to be more productive. We often talk to managers,
 - [Productivity (revisited)](#productivity-revisited)
 - [Productivity is (mostly) a property of the system](#productivity-is-mostly-a-property-of-the-system)
 - [The 'system' is management's job](#the-system-is-managements-job)
-- [Management is not only the manager's job](#management-is-not-only-the-managers-job)
-- [Sometimes it's the individual](#sometimes-its-the-individual)
+- [Sometimes it is the individual](#sometimes-it-is-the-individual)
 - [Productivity is an enabler for everything else](#productivity-is-an-enabler-for-everything-else)
 - [Further reading](#further-reading)
 
