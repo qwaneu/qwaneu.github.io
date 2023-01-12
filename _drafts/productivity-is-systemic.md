@@ -108,23 +108,21 @@ deliver better software sooner, your goal is not to keep people busy. If you
 want to keep people busy, suggest them a hobby. 
 
 
-## Management is not only the manager's job
-
-@@verwijzing/quote Weinberg over management als ieders verantwoordelijkheid o.i.d.
-
-## Sometimes it's the individual
+## Sometimes it is the individual
 
 One developer can drag down a team, by slacking off, or with a negative attitude
 or by working on his own instead of collaborating (being a rock star instead of
 a team player), or being a 'brilliant jerk'.
 
 This sometimes happens and this will negatively impact the team's performance.
-This is still management's job to handle this!
+It is still management's job to handle this! Management hired, and hopefully,
+coaches the team members.
 
-You can fix low performance by having a talk with someone who is dragging down
-the team, or even removing him. This does not necessarily lead to a highly
+You could fix low performance by having a talk with someone who is dragging down
+the team, or even removing them. This does not necessarily lead to a highly
 productive team. The organizational context will quickly become the next
-bottleneck.
+bottleneck. Before acting on individuals, first ask yourself, how does the
+system generate the behaviour we are seeing?
 
 ## Productivity is an enabler for everything else
 
@@ -137,20 +135,21 @@ business.
 
 ![Diagram of Effects. Small improvements lead to time for valuable work lead to time for improvements and the circle is round. After several small improvements there might be a game changer.](/attachments/blogposts/2023/time-for-improvement-game-changer.svg)
 
-This visual attemps to show non-linear growth. This is often hard to comprehend,
-a 1% change a day means a massive change at the end of the year.
 
 Further reading
 ---------------
 
-- Willem wrote about how [experiments move you forward](/2020/06/26/experiments-move-you-forward.html). Experimentation is also a system, the more you do it, the lower the cost per experiment gets.
-- We have more posts on [productivity from management and team perspectives](/blog-by-tag/#tag-productivity). Some more systemic, like the current post, others more focused on e.g. [(counter-)productive use of automated tests](/2020/11/27/paying-the-price-of-fast-tests.html).
-- @@todo QSM reference might be easier here than further above.
+- We wrote about how [experiments move you
+  forward](/2020/06/26/experiments-move-you-forward.html). Experimentation is
+  also a system, the more you do it, the lower the cost per experiment gets.
+- We have more posts on [productivity from management and team
+  perspectives](/blog-by-tag/#tag-productivity). Some more systemic, like the
+  current post, others more focused on e.g. [(counter-)productive use of
+  automated tests](/2020/11/27/paying-the-price-of-fast-tests.html).
 - [Under Pressure](/2020/10/26/under-pressure.html)
-- @@todo jessitron on you want acceleration
 
 <aside>
-  <h3>@@ TODO Call to action</h3>
+  <h3>Have a coffee with us </h3>
   <p>call</p>
   <p><div>
     <a href="/consulting">Learn more about our consultancy services</a>
