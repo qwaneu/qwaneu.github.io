@@ -15,3 +15,4 @@ Management
   leanpub congruent change)
 - Psychological safety and continuous coaching are necessary for people to
   evolve into adding managing others to managing themselves
+- Coaching and mentoring

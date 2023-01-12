@@ -164,7 +164,6 @@ Further reading
 
 <aside>
   <h3>Have a coffee with us </h3>
-  <p>call</p>
   <p><div>
     <a href="/consulting">Learn more about our consultancy services</a>
   </div></p>
