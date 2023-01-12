@@ -7,7 +7,7 @@ tags:
   - feedback
   - systems thinking
 author: Marc Evers, Willem van den Ende
-image: 
+image: /attachments/blogposts/2023/time-for-improvement-game-changer.svg
 ---
   
 Productivity of software development teams is difficult to get a grip on, but
