@@ -65,7 +65,7 @@ you notice, that will probably make this worse. It requires some deep,
 collaborative reflection using intuition support techniques like Diagrams of
 Effects, Cynefin, constraint mapping, value stream mapping.
 
-A team is a complex system (@@Cynefin linkje). This means that improving
+A team is a complex system. This means that improving
 productivity is not a matter of meticulously analysing the current situation,
 designing a desired state and planning actions to bridge that state. Instead,
 the suitable approach is one of sense-making, gaining situational awareness in
@@ -78,12 +78,10 @@ run the experiment, because you never know what more you'll discover.
 This is management's job! This is where you can have true leverage in the organization's performance.
 
 When I say management's job, this is not restricted to those who have 'manager'
-in their job title, although it should at least come from there (@@vgl. Geerts
-transformatie moet vanuit de lijn komen). If we succeed at having teams develop
+in their job title, although it should at least come from there. If we succeed at having teams develop
 more reflective capability and systemic thinking skills of their own, they can
 can learn to do this on their own. So we mean 'management' here eventually in
-the sense like Gerald Weinberg uses it in his Quality Software Management series
-@@todo: uitwerken, also refer to leanpub version.
+the sense like Gerald Weinberg uses it in his Quality Software Management series.
 
 So you could find some things that is keeping productivity low:
 - _Missing skills_ - so they need to learn and train; this requires
