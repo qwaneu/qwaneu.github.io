@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Do you communicate through code, discussion or drawing?
+title: How do you communicate when pair programming?
 tags:
 - eXtreme Programming
 - programming
 - test driven development
 
 author: Willem van den Ende
-image: 
+image: /attachments/blogposts/2023/do-you-draw-when-pair-programming.png)
 
 Sally Ann Freudenberg once asked how developers communicate during pair
 programming. Do you talk, draw, or let the code or tests talk?
@@ -54,6 +54,9 @@ design session with the rest of the team. When we have a wider team, otherwise w
 We talk continuously, preferably with code or a sketch in hand.
 Without code it is just idle speculation.
 
+![One drawing with several different styles, a doodle with a brickwork pattern
+in the background, some arrows back and forth and circles and arrows. Also some
+abstract people and sketch for a dialog.](/attachments/blogposts/2023/do-you-draw-when-pair-programming.png)
 
 How do you communicate during programming, and when do you choose which
 option?
