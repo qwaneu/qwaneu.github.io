@@ -59,6 +59,12 @@ and keeping our minds open to change, because without tests and code we are only
 How do you communicate during programming, and when do you choose which
 option? Is it different from when you work solo?
 
+<aside>
+<h3>Do you want to experiment with pair programming?</h3>
+<p>Whether you are doing it and want to improve, wish to have more people in your organisation practice pair programming, or want to reflect on your way of working by doing deliberate practice, pair programming is embedded as the default way of learning in all of our courses. We also have a dedicated day on pair programming, but that is currently only available off-menu. Feel free to ask us about it!
+</p>
+<div>
+<a href="/training">Book a course</a>
+</div>
+</aside>
 
-If you want to experiment with pair programming, join one of our courses. Or ask for our pair
-programming course that is currently only available off-menu, but was great to run and attend. 
