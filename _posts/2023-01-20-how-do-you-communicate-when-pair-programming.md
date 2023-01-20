@@ -44,14 +44,16 @@ amount of time, and coming back with conclusions from the experiment is more
 fruitful in those circumstancees. That gives two perspectives on the same
 problem that are more independent. To sketch or not to sketch is up to each, on their own then. Sketches can be a good aid to discuss the outcomes.
 
-We do sketch out designs, but do rarely go into great detail. We sketch at the beginning of
-a significant chunk of work. We sketch design during pair programming when we wonder how
-to wire things up.  Sometimes when we are stuck we do a spontaneous
-design session with the rest of the team. If there is a team, otherwise we [step away from the keyboard](https://www.nationalgeographic.co.uk/history-and-civilisation/2022/08/the-science-of-why-you-have-great-ideas-in-the-shower "National Geographic on the science of having great ideas in the shower"), and a sketch will likely come to us when we get back. I have done some of my best work this way.
+One way to see what communication mode you miss most, is to try 'Silent pairing' - pair work without speaking. Rob and I once tried this remotely, programming with only a shared terminal and a text editor between us. The only thing we were allowed to say was 'ding!' to indicate whose turn it was. We used ping-poing pair programming, writing tests and code in turn. It was fascinating to only let the tests do the talking. We were both going in different directions, but figuring out what direction the other had in mind was challenging, and fun.
 
 ![One drawing with several different styles, a doodle with a brickwork pattern
 in the background, some arrows back and forth and circles and arrows. Also some
 abstract people and sketch for a dialog.](/attachments/blogposts/2023/do-you-draw-when-pair-programming.png)
+
+We do sketch out designs, but do rarely go into great detail. We sketch at the beginning of
+a significant chunk of work. We sketch design during pair programming when we wonder how
+to wire things up.  Sometimes when we are stuck we do a spontaneous
+design session with the rest of the team. If there is a team, otherwise we [step away from the keyboard](https://www.nationalgeographic.co.uk/history-and-civilisation/2022/08/the-science-of-why-you-have-great-ideas-in-the-shower "National Geographic on the science of having great ideas in the shower"), and a sketch will likely come to us when we get back. I have done some of my best work this way.
 
 We talk continuously, preferably with code or a sketch in hand. Often we use boxes and arrows, sometimes loose UML diagrams, e.g. sequence diagrams when we are designing services or have an interaction between objects that we don't understand well enough just yet. But always loosely,
 and keeping our minds open to change, because without tests and code we are only speculating.
