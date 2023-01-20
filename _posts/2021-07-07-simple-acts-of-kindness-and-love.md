@@ -10,7 +10,8 @@ author: Marc Evers, Willem van den Ende
 image: /attachments/blogposts/2021/tdd/simple-acts-of-kindness-1.jpg
 ---
 
-Today we're writing about how simple acts improve feedback loops, which has a compounding effect in development teams over time. 
+Today we're writing about how simple acts improve feedback loops, which has a
+compounding effect in development teams over time.
 
 The title of this post has literary inspiration: 
 
