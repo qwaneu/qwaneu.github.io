@@ -97,3 +97,7 @@ crucial step towards maintainable code.
 > We like tools and practices that force us to think about design decisions and trade-offs
 
 ## References
+
+James Shore, [The Problem With Dependency Injection Frameworks
+](https://www.jamesshore.com/v2/blog/2023/the-problem-with-dependency-injection-frameworks)
+

@@ -10,7 +10,7 @@ author: Willem van den Ende
 image: /attachments/blogposts/2023/do-you-draw-when-pair-programming.png
 --- 
 
-[Sally Ann Freudenberg](https://salfreudenberg.wordpress.com) once asked how do developers communicate during pair
+[Sallyann Freudenberg](https://salfreudenberg.wordpress.com) once asked how do developers communicate during pair
 programming. Do you talk, draw, or let the code or tests talk?
 
 we often say: 
@@ -32,19 +32,19 @@ When the path ahead is clear, the flow of test-fail-run-refactor is smooth.
 We pair relentlessly.
 
 When it is clear what needs to be done for the user, but not how to
-implement it, we do a small experiment. Also known as an architectural
-spike (Mike Hill has a great [introduction to spikes](https://www.geepawhill.org/2020/06/02/an-intro-to-spikes/)]) Sometimes it works to do it in a pair,
+implement it, we do a small experiment. This is also known as an architectural
+spike - Mike Hill has a great [introduction to spikes](https://www.geepawhill.org/2020/06/02/an-intro-to-spikes/). Sometimes it works to do it in a pair,
 sometimes not. Different preferences for approaching a problem seem to
 be most pronounced here. 
 
-Experimenting in a pair can then feel like a [Three legged
+Experimenting in a pair can then feel like a [three-legged
 race](http://fun.familyeducation.com/outdoor-games/activity/36835.html) and
 might not be the fastest and most fun way to proceed. Going off alone for a set
 amount of time, and coming back with conclusions from the experiment is more
-fruitful in those circumstancees. That gives two perspectives on the same
+fruitful in those circumstances. That gives two perspectives on the same
 problem that are more independent. To sketch or not to sketch is up to each, on their own then. Sketches can be a good aid to discuss the outcomes.
 
-One way to see what communication mode you miss most, is to try 'Silent pairing' - pair work without speaking. Rob and I once tried this remotely, programming with only a shared terminal and a text editor between us. The only thing we were allowed to say was 'ding!' to indicate whose turn it was. We used ping-poing pair programming, writing tests and code in turn. It was fascinating to only let the tests do the talking. We were both going in different directions, but figuring out what direction the other had in mind was challenging, and fun.
+One way to see what communication mode you miss most, is to try 'Silent pairing' - pair work without speaking. Rob and I once tried this remotely, programming with only a shared terminal and a text editor between us. The only thing we were allowed to say was 'ding!' to indicate whose turn it was. We used ping-pong pair programming, writing tests and code in turn. It was fascinating to only let the tests do the talking. We were both going in different directions, but figuring out what direction the other had in mind was challenging, and fun.
 
 ![One drawing with several different styles, a doodle with a brickwork pattern
 in the background, some arrows back and forth and circles and arrows. Also some
@@ -63,10 +63,11 @@ option? Is it different from when you work solo?
 
 <aside>
 <h3>Do you want to experiment with pair programming?</h3>
-<p>Whether you are doing it and want to improve, wish to have more people in your organisation practice pair programming, or want to reflect on your way of working by doing deliberate practice, pair programming is embedded as the default way of learning in all of our courses. We also have a dedicated day on pair programming, but that is currently only available off-menu. Feel free to ask us about it!
+<p>Whether you are doing it and want to improve, wish to have more people in your organisation practice pair programming, or want to reflect on your way of working by doing deliberate practice, pair programming is embedded as the default way of learning in all of our courses. 
+</p>
+<p>We also have a dedicated day on pair programming, but that is currently only available off-menu. Feel free to ask us about it!
 </p>
 <div>
 <a href="/training">Book a course</a>
 </div>
 </aside>
-
