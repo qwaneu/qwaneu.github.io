@@ -24,21 +24,21 @@ image:
 
  
   <script src="https://d3js.org/d3.v3.min.js"></script>
-  <div id="start" style="width:60%; float:left"></div>
-  <div style="width:35%; float:right">
-  <div id="prod-loop-div">
-    <label for="prod-loop-speed">Product</label>
-    <input id="prod-loop-speed"/>
-  </div>
-  <div id="gtd-loop-div">
-    <label for="gtd-loop-speed">Getting Things Done Loop</label>
-    <input id="gtd-loop-speed"/>
-  </div>
-  <div id="te-loop-div">
-    <label for="te-loop-speed">Technical Excellence Loop</label>
-    <input id="te-loop-speed"/>
-  </div>
-  </div>
+  <div id="start"></div>
+  <div style="width:35%">
+    <div id="prod-loop-div">
+      <label for="prod-loop-speed">Product</label>
+      <input id="prod-loop-speed"/>
+    </div>
+    <div id="gtd-loop-div">
+      <label for="gtd-loop-speed">Getting Things Done Loop</label>
+      <input id="gtd-loop-speed"/>
+    </div>
+    <div id="te-loop-div">
+      <label for="te-loop-speed">Technical Excellence Loop</label>
+      <input id="te-loop-speed"/>
+    </div>
+    </div>
 <script>
 
 var mode = 0;
