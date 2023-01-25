@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The three feedback loops in software product development
+title: Three feedback loops in software product development
 tags:
   - productivity
   - agile fluency
@@ -10,7 +10,11 @@ author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: 
 ---
 
-Continuous attention to investing in techical excellence is essential. Why? 
+Agile Manifesto principle:
+
+> Continuous attention to technical excellence and good design enhances agility.
+
+Continuous attention to investing in technical excellence is essential. Why? 
 Looking at software product development, we can distinguish 3 important feedback loops: the *product loop*, the *getting valuable work done loop* and the *technical excellence loop*. The faster the technical excellence loop on the inside goes, the faster the outside loops can go.
 
 
