@@ -22,7 +22,13 @@ agile "transformaties" en zo die utieindelijk wel wat opleveren maar niet de ver
 
 intro vd 3 fb loops, met bronverwijzing (Jason en AFM)
 
+- Technical Excellence loop
+- Working together + getting things done loop
+- Product loop
+
 met plaatje in de trand vh ZorgDomein logo, maar dan met wat overlapping vd cirkels
+
+(nog uitleggen waarom we niet gewoon de AFM terminologie gebruiken? wij nemen hier een net ander perspectief: feedback loops ipv capabilities)
 
 # Leverage effects
 
