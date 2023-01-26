@@ -14,6 +14,8 @@ image:
 
 agile "transformaties" en zo die utieindelijk wel wat opleveren maar niet de verwachte verbetering; iedereen doet scrum maar het duurt nog steeds lang en kost nog steeds veel; en dan loopt iedereen ook nog eens tegen tech debt aan
 
+(Don't mention the spanish scrumquisition)
+
 # wat nu? moeten we dan juist vol op de tech excellence inzetten? 
 
 (ref naar Jason); nee, we introduceren in deze post een perspectief op sw dev, sw dev is interplay tussen 3 feedback loops, alledrie hebben ze liefde en aandacht nodig
