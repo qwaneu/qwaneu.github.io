@@ -10,7 +10,7 @@ author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: /attachments/blogposts/2023/3-loops.jpg
 ---
 
-# introduction
+# Introduction
 
 We are seeing 'agile transformations' and other improvement initiatives that deliver some improvement, but not as much as initially hoped for.
 Groups work somewhat iteratively, but delivering valuable product with software inside still takes too long and costs too much. All the while, technical debt continues to mount.
