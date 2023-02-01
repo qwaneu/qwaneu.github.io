@@ -5,6 +5,7 @@ tags:
   - productivity
   - agile fluency
   - feedback
+  - product development
   - systems thinking
 author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: /attachments/blogposts/2023/3-loops.jpg
@@ -83,10 +84,10 @@ The Product loops is about building the right product and finding what's valuabl
 Stuff that can happen here:
 - (Small) releases, MVPs (minimum viable product)
 - Business value
-- [Roadmapping](//2022/03/29/product-hurricane-map.html) 
+- [Roadmapping](/2022/03/29/product-hurricane-map.html) 
 - Steering on value
-- Dimensional planning
-- User story mapping
+- [Dimensional planning](/2020/09/02/dimensional-planning.html)
+- [User story mapping](https://blog.piecemealgrowth.net/working-with-user-story-mapping)
 - Outcomes & impact
 - Weighted Shortest Job First (WSJF)
 
@@ -98,7 +99,8 @@ The technical excellence loop goes through more, and quicker cycles than the
 other loops. This means that improvements made here have a faster pay off, as
 well as a higher return on investment - this loop has the highest leverage. 
 
-> One of the [Agile Manifesto principles](http://agilemanifesto.org/principles.html) refers to this: *Continuous attention to technical excellence and good design enhances agility.*
+> As the [Agile Manifesto](http://agilemanifesto.org/principles.html) states:  
+> *Continuous attention to technical excellence and good design enhances agility.*
 
 Small improvements that affect the speed of the Technical Excellence loop or the
 length of the feedback loops can have a big impact, because it gets multiplied
@@ -110,7 +112,7 @@ on.
 It pays to invest time in improving build times, fixing flaky tests, getting
 quicker pull request feedback, doing pair programming instead of pull requests.
 
-Improvements in this loop have even more benefits, as Rob says 
+Improvements in this loop have even more benefits, as Rob says:
 > if you go very fast, you will get much faster feedback on whether things are going the right way. 
 
 So technical excellence enables a speedup in the Working Together, Getting Things Done loop - getting small slices of high quality software running and tested earlier- and in the Product loop - faster discovery, earlier market
@@ -135,7 +137,7 @@ Kerr's post on
 [Velocity defeats itself. Get acceleration instead](https://jessitron.com/2022/12/22/velocity-defeats-itself-get-acceleration-instead/).
 The direction has to come from the interplay with the other loops.
 
-Lets' have a look at some counter examples:
+Let's have a look at some counter examples:
 
 - Developers invest in technical solutions while ignoring the voice of the
   stakeholders. This makes us go faster on a road to nowhere.
@@ -144,7 +146,7 @@ Lets' have a look at some counter examples:
   capability to deliver is likely to lead to disappointed stakeholders and
   developers.
 - Only improve the Working Together, Getting Things Done loop: we find better
-  ways of moving post-its (or JIRA issues) and reflecting on them, but when
+  ways of moving post-its or JIRA issues and reflecting on them, but when
   developers aren't able to move the tickets, we might be going somewhere, but
   very slowly with lots of 'clever' fixing to make our solution work for
   customers.
