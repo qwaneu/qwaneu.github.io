@@ -83,12 +83,7 @@ The Product loops is about building the right product and finding what's valuabl
 Stuff that can happen here:
 - (Small) releases, MVPs (minimum viable product)
 - Business value
-<<<<<<< HEAD
-- (Small) releases, MVPs (minimum valuable product)
 - [Roadmapping](//2022/03/29/product-hurricane-map.html) 
-=======
-- [Roadmapping]({% post_url 2022-03-29-product-hurricane-map %}) 
->>>>>>> 960d76c0666fd14ad5375c53da3ea58abef79716
 - Steering on value
 - Dimensional planning
 - User story mapping
@@ -105,11 +100,12 @@ well as a higher return on investment - this loop has the highest leverage.
 
 > One of the [Agile Manifesto principles](http://agilemanifesto.org/principles.html) refers to this: *Continuous attention to technical excellence and good design enhances agility.*
 
-Small improvements that affect the speed of the inner loop or the length of the
-feedback loops can have a big impact, because it gets multiplied the most.
-Shaving off a few seconds of your unit test run for example will benefit you
-every time you run the tests, many, many times a day. This all adds up, for
-every line of code you change, many times for every user story you work on.
+Small improvements that affect the speed of the Technical Excellence loop or the
+length of the feedback loops can have a big impact, because it gets multiplied
+the most. Shaving off a few seconds of your unit test run for example will
+benefit you every time you run the tests, many, many times a day. This all adds
+up, for every line of code you change, many times for every user story you work
+on.
 
 It pays to invest time in improving build times, fixing flaky tests, getting
 quicker pull request feedback, doing pair programming instead of pull requests.
@@ -126,14 +122,9 @@ individually instead of in teams. Learning to work as a team, structuring the
 work, managing flow, focusing on value, and frequent reflection and improvement
 will make a huge initial difference. Focusing on flow and value and maximizing the amount of work not done can help in getting more things done sooner.
 
-<<<<<<< HEAD
 The loops reinforce each other also in other ways: by doing frequent reflection
-and improving on Working Together, we set ourselves up also for discovering
-better ways of growing our technical excellence.
-=======
-The loops reinforce each other also in other ways: by shortening feedback loops in Working Together and doing frequent reflection, we set ourselves up also for discovering better ways of developing software and growing our technical excellence.
-
->>>>>>> 960d76c0666fd14ad5375c53da3ea58abef79716
+and improving on Working Together, we set ourselves up for discovering
+better ways of developing software.
 
 # We need a whole systems approach
 
