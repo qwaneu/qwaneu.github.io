@@ -10,28 +10,27 @@ author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: 
 ---
 
-# intro met aanleiding
+# introduction
 
-agile "transformaties" en zo die utieindelijk wel wat opleveren maar niet de verwachte verbetering; iedereen doet scrum maar het duurt nog steeds lang en kost nog steeds veel; en dan loopt iedereen ook nog eens tegen tech debt aan
+We are seeing 'agile transformations' and other improvement initiatives that deliver some improvement, but not as much as initially hoped for.
+Groups work somewhat iteratively, but delivering valuable product with software inside still takes too long and costs too much. All the while, technical debt continues to mount.
 
-(Don't mention the spanish scrumquisition)
+# So now what? Should we bet the house on technical excellence?
 
-# wat nu? moeten we dan juist vol op de tech excellence inzetten? 
+(ref to Jason). No, in this post we introduce a part of our perspective on software development. Software development is an interplay between three feedback loops. All three need love and care. 
 
-(ref naar Jason); nee, we introduceren in deze post een perspectief op sw dev, sw dev is interplay tussen 3 feedback loops, alledrie hebben ze liefde en aandacht nodig
 
 # A systemic perspective: three interdependent feedback loops
 
-intro vd 3 fb loops, met bronverwijzing (Jason en AFM)
+This is a work in progress, informed by a Jason gorman demonstrating the influence of technical excellence on speed, as well as the agile fluency model (R TM C) that we have used to generate conversations with clients. We are using a slightly different terminology here, as we are exploring the space, we focus more on how the feedback loops function and interact with each other, less on specific capabilities.
+
+So the three loops we consider here are, from inside to outside:
 
 - Technical Excellence loop
 - Working together + getting things done loop
 - Product loop
 
 met plaatje in de trand vh ZorgDomein logo, maar dan met wat overlapping vd cirkels
-
-(nog uitleggen waarom we niet gewoon de AFM terminologie gebruiken? wij nemen hier een net ander perspectief: feedback loops ipv capabilities)a
-(nee, als iemand dat opvalt kunnen we dat alsnog uitleggen in een follow up post.)
 
 # Leverage effects
 
@@ -51,6 +50,8 @@ iets over hoe je het verder kan gebruiken
 
 # References
 
+
+Michel Grootjans video, cross-training / upskilling can reduce the need for communication / waiting.
 
 + how is this perspective helpful to you?
 
