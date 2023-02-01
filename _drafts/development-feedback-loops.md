@@ -168,11 +168,10 @@ The three loops perspective also helps to show development teams that improving 
 > The magic often happens in the gaps - things that could be done, but are actually picked up by no one.
 
 
-+ how is this perspective helpful to you?
 
 <aside>
 <h3>Feedback coffee</h3>
-<p>We'd love to hear about how feedback loops (don't) work in your organisation.</p>
+<p>We'd love to hear about how feedback loops (don't) work in your organisation. We would also love to hear if this perspective works for you, things that are missing or that we got wrong.</p>
 <p></p>
 <div>
 <a href="/contact">Talk to us</a>
