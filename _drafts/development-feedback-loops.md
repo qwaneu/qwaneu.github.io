@@ -36,10 +36,7 @@ This is a work in progress. It is informed by Jason Gormans' talk, as well as
 the [Agile Fluency® Model](/blog-by-tag#tag-agile-fluency) that we have used to
 generate conversations with clients. The feedback loops we will describe are close to the
 three Agile Fluency zones, but we focus more on the effects of feedback and how
-the loops interact instead of skills. We are using a slightly different
-terminology here, as we are exploring the space, we focus more on how the
-feedback loops function and interact with each other, less on specific
-capabilities.
+the loops interact instead of specific capabilities.
 
 In software development, we see three feedback loops at play. These loops are,
 from inside to outside:
