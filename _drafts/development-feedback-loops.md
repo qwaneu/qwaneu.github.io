@@ -82,7 +82,8 @@ The Product loops is about building the right product and finding what's valuabl
 Stuff that happens here:
 - (Small) releases, MVPs (minimum viable product)
 - Business value
-- Roadmapping
+- (Small) releases, MVPs (minimum valuable product)
+- [Roadmapping]({% post_url 2022-03-29-product-hurricane-map %}) 
 - Steering on value
 - Dimensional planning
 - User story mapping
