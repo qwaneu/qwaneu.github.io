@@ -15,6 +15,8 @@ image:
 We are seeing 'agile transformations' and other improvement initiatives that deliver some improvement, but not as much as initially hoped for.
 Groups work somewhat iteratively, but delivering valuable product with software inside still takes too long and costs too much. All the while, technical debt continues to mount.
 
+
+
 # So now what? Should we bet the house on technical excellence?
 
 (ref to Jason). No, in this post we introduce a part of our perspective on software development. Software development is an interplay between three feedback loops. All three need love and care. 
@@ -50,6 +52,7 @@ Lets' have a look at some counter examples:
 - Sales sell too many things that don't exist yet, or aren't feasible yet. There is always a tension, but improving in the sales capacity with a lack of capability to deliver is likely to lead to disappointed stakehoders and developers. 
 - Only improve the getting things done loop: We find better ways of moving post-its, and reflecting on them (or JIRA tickets), but when development can't actually move the tickets, we might be going somewhere, but very slowly with lots of 'clever' fixing to make our solution work for customers.
 - Product: better vision (e.g. good strategy, great event storms, UX studies) without a solid organisation of teams and communication with developers will once again lead to disappointment.
+- Product ignores liability leading to multi-billion dollar lawsuits.
 
 # how is this perspective helpful?
 
