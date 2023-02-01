@@ -129,6 +129,7 @@ Lets' have a look at some counter examples:
 - Sales sell too many things that don't exist yet, or aren't feasible yet. There is always a tension, but improving in the sales capacity with a lack of capability to deliver is likely to lead to disappointed stakeholders and developers. 
 - Only improve the getting things done loop: We find better ways of moving post-its, and reflecting on them (or JIRA tickets), but when development can't actually move the tickets, we might be going somewhere, but very slowly with lots of 'clever' fixing to make our solution work for customers.
 - Product: better vision (e.g. good strategy, great event storms, UX studies) without a solid organisation of teams and communication with developers will once again lead to disappointment.
+- Product ignores liability leading to multi-billion dollar lawsuits.
 
 # how is this perspective helpful?
 
