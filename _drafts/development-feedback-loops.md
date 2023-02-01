@@ -136,6 +136,10 @@ The loops reinforce each other in more ways: by reflecting regularly and
 improving on Working Together, we set ourselves up for discovering better ways
 of developing software - improving the Technical Excellence loop.
 
+> Programming is a leverage game.  
+> Making the lever longer is *way* better than pushing the lever harder.  
+> -- Kent Beck
+
 # We need a whole systems approach
 
 Should focus mostly or exclusively on the technical excellence loop? No, it is
@@ -168,13 +172,15 @@ The three loops perspective offers a different way of looking at a software deve
 
 Our clients often find it difficult to justify developer training or developer mentoring. If you want to move your organisation towards a more agile way of working and actually get the promised benefits, you need to invest not only in something like Scrum, but also in the Technical Excellence and Product loops. 
 
+The perspective also helps to see why most agile transformations miss out the huge leverage of investing in Technical Excellence.
+
 We find that just the act of stepping away from the keyboard and reflecting with
 a group of developers leads to improved productivity, almost regardless of
 content. Some of the effects of stepping away are permanent like faster builds,
 others are temporary - practicing working in small steps, refactoring general
 skills, but they tend to atrophy under pressure.
 
-The three loops perspective also helps to show development teams that improving their work alone is not enough. 
+The three loops perspective also helps to show development teams that improving their work alone is not enough.
 
 > The magic often happens in the gaps - things that could be done, but are actually picked up by no one.
 
