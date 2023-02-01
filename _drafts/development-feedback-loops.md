@@ -7,7 +7,7 @@ tags:
   - feedback
   - systems thinking
 author: Marc Evers, Willem van den Ende, Rob Westgeest
-image: 
+image: /attachments/blogposts/2023/3-loops.jpg
 ---
 
 # introduction
