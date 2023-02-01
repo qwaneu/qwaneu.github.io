@@ -32,12 +32,9 @@ In this post we introduce a part of our systemic perspective on software develop
 
 # A systemic perspective: three interdependent feedback loops
 
-This is a work in progress. It is informed by a Jason Gorman demonstrating the
-influence of technical excellence on speed. Another source is the
-[Agile Fluency® Model](https://www.agilefluency.org/) that we have used to
-generate conversations with clients. The Agile Fluency Model focuses on team
-skill and distinguishes 3 zones representing different capabilities: Focusing,
-Delivering and Optimizing. The feedback loops we will describe are close to the
+This is a work in progress. It is informed by Jason Gormans' talk, as well as 
+the [Agile Fluency® Model](/blog-by-tag#tag-agile-fluency) that we have used to
+generate conversations with clients. The feedback loops we will describe are close to the
 three Agile Fluency zones, but we focus more on the effects of feedback and how
 the loops interact instead of skills. We are using a slightly different
 terminology here, as we are exploring the space, we focus more on how the
