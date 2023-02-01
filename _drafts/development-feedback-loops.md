@@ -48,7 +48,7 @@ In software development, we see three feedback loops at play. These loops are,
 from inside to outside:
 
 - "Technical Excellence" loop
-- "Working together, getting things done" loop
+- "Working Together, Getting Things Done" loop
 - "Product" loop
 
 ![three loops partially overlapping](/attachments/blogposts/2023/3-loops.jpg)
@@ -65,21 +65,31 @@ Stuff that happens here:
 - Relentless refactoring
 - CI/CD (continuous integration & continuous delivery)
 - Pair programming
-- Pull requests, code reviews, walkthroughs
+- Pull requests, code reviews, code walkthroughs
 - Working in baby steps, like Mike Hill's [Many More Much Smaller Steps](https://www.geepawhill.org/series/many-more-much-smaller-steps)
 
 ## Working Together, Getting Things Done
 
+The Working Together, Getting Things Done loop is about how we work together, as a team and with other people like product owners, architects, stakeholders, and our way of working. Scrum for instance is a framework for this feedback loop, being all about how we work together in a focused way to deliver the most valuable thing first.
 
 Stuff that happens here:
-- sprints / kanban
-- velocity
-- work-in-progress limits
-- impediments
-
+- Sprints, iterations, daily stand-ups, weekly plannings
+- Team dynamics & team coaching
+- Retrospectives
+- Kanban, continuous flow, work-in-progress limits
+- Planning, velocity
+- Impediments & impediment resolving
+- Working in pairs or ensemble, mobbing
 
 ## Product
 
+Stuff that happens here:
+- (Small) releases, MVPs (minimum valuable product)
+- Roadmapping (+link roadmapping post Paul Dyson)
+- Steering on value
+- Dimensional planning
+- User story mapping
+- Outcomes & impact
 
 # Leverage effects
 
