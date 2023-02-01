@@ -34,15 +34,25 @@ met plaatje in de trand vh ZorgDomein logo, maar dan met wat overlapping vd cirk
 
 # Leverage effects
 
-iets over leverage effect van improvements in de tech excellence loop
+At our clients the technical excellence loop goes through more, and quicker cycles than the other loops. This means that improvements made here have a faster pay off, as well as a higher return on investment.
+
+(thinking of a fake chart where the area below the tech excellence improvement grows faster, sort of like a CFD for the three loops)
+
 
 # We need a whole systems approach (holistic approach?)
 
-maar en dus moeten we vooral focussen op de tech excellence loop? nee, alle 3 hebben ze liefde & aandacht nodig (+ bespreken wat er gebeurt als je op 1 vd 3 focust en de andere onderbelicht of underfunded laat)
+Doest hat mean we should focus exclusively on the technical excellence loop? No, Velocity is a vector, it has a quantity and a direction (ref @jessitron on velocity / accelleration). We can improve the quantity in the technical excellence loop, but direction has to come from the interplay with the other loops. 
+
+Lets' have a look at some counter examples:
+
+- Developers invest in technical solutions while ignoring the voice of the stakeholders. This makes us go faster on a road to nowhere.
+- Sales sell too many things that don't exist yet, or aren't feasible yet. There is always a tension, but improving in the sales capacity with a lack of capability to deliver is likely to lead to disappointed stakehoders and developers. 
+- Only improve the getting things done loop: We find better ways of moving post-its, and reflecting on them (or JIRA tickets), but when development can't actually move the tickets, we might be going somewhere, but very slowly with lots of 'clever' fixing to make our solution work for customers.
+- Product: better vision (e.g. good strategy, great event storms, UX studies) without a solid organisation of teams and communication with developers will once again lead to disappointment.
 
 # how is this perspective helpful?
 
-iets over hoe je het verder kan gebruiken
+Clients often find it difficult to justify e.g. developer training. We find that just the act of stepping away from the keyboard and reflecting with a group of developers (almost regardless of content) leads to improved productivity. Some of the effects of stepping away are permanent (e.g. better builds), but others are temporary (practicing working in small steps, refactoring are general skills, but they tend to atrophy under pressure).
 
 # closing notes
 
