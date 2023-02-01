@@ -157,17 +157,15 @@ Let's have a look at some counter examples:
 
 # How is this perspective helpful?
 
-It helps to take a couple of steps back. Take a good hard look at improvement initiatives that are ongoing, what they are delivering (or not), and identify gaps, if any.
+The three loops perspective offers a different way of looking at a software development organization. It helps to take a couple of steps back. Take a good hard look at improvement initiatives that are ongoing, what they are delivering (or not), and identify gaps, if any.
 
-Clients often find it difficult to justify developer training or developer mentoring. We find that just the act of stepping away from the keyboard and reflecting with a group of developers (almost regardless of content) leads to improved productivity. Some of the effects of stepping away are permanent (e.g. better builds), but others are temporary (practicing working in small steps, refactoring are general skills, but they tend to atrophy under pressure).
+Our clients often find it difficult to justify developer training or developer mentoring. If you want to move your organisation towards a more agile way of working and actually get the promised benefits, you need to invest not only in something like Scrum, but also in the Technical Excellence and Product loops. 
 
-It also helps to show development teams that improving their work alone is not enough. The magic often happens in the gaps - things that could be done, but are actually picked up by no one.
+We find that just the act of stepping away from the keyboard and reflecting with a group of developers leads to improved productivity, almost regardless of content. Some of the effects of stepping away are permanent (e.g. better builds), but others are temporary (practicing working in small steps, refactoring are general skills, but they tend to atrophy under pressure).
 
+The three loops perspective also helps to show development teams that improving their work alone is not enough. 
 
-
-# Closing notes
-
-3 loops perspectief is niet allesomvattend maar biedt een nuttig perspectief (er zijn meer nuttige perspectieven)
+> The magic often happens in the gaps - things that could be done, but are actually picked up by no one.
 
 
 + how is this perspective helpful to you?
