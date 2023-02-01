@@ -22,7 +22,7 @@ Groups work somewhat iteratively, but delivering valuable product with software 
 
 # A systemic perspective: three interdependent feedback loops
 
-This is a work in progress, informed by a Jason gorman demonstrating the influence of technical excellence on speed, as well as the agile fluency model (R TM C) that we have used to generate conversations with clients. We are using a slightly different terminology here, as we are exploring the space, we focus more on how the feedback loops function and interact with each other, less on specific capabilities.
+This is a work in progress, informed by a Jason gorman's talk 'why most agile transformations fail'. demonstrating the influence of technical excellence on speed, as well as the agile fluency model (R TM C) that we have used to generate conversations with clients. We are using a slightly different terminology here, as we are exploring the space, we focus more on how the feedback loops function and interact with each other, less on specific capabilities.
 
 So the three loops we consider here are, from inside to outside:
 
@@ -62,7 +62,6 @@ Clients often find it difficult to justify e.g. developer training. We find that
 # References
 
 
-Michel Grootjans video, cross-training / upskilling can reduce the need for communication / waiting.
 
 + how is this perspective helpful to you?
 
