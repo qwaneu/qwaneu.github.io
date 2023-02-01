@@ -28,15 +28,15 @@ Jason Gorman has a video on [Why Your Agile Transformation Failed](https://www.y
 
 Does this mean that we should only focus on technical excellence? No, although we do see underinvestment in a lot of organizations and although technical excellence is a crucial enabler for getting anything out of the door, we state that you need do take a systemic stance and invest in all part of the software development system. 
 
-In this post we introduce a part of our systemic perspective on software development. We will describe a perspective on software development based on different feedback loops that are in play: **software development is an interplay between three feedback loops. All three need love and care.**
+In this post we introduce a part of our systemic perspective on software development. We will describe a perspective on software development based on different feedback loops that are in play: 
+
+> **Software development is an interplay between three feedback loops. All three need love and care.**
 
 # A systemic perspective: three interdependent feedback loops
 
-This is a work in progress. It is informed by Jason Gormans' talk, as well as 
+This is a work in progress. It is informed by Jason Gorman's talk, as well as 
 the [Agile Fluency® Model](/blog-by-tag#tag-agile-fluency) that we have used to
-generate conversations with clients. The feedback loops we will describe are close to the
-three Agile Fluency zones, but we focus more on the effects of feedback and how
-the loops interact instead of specific capabilities.
+generate conversations with clients. The feedback loops we will describe are close to the three Agile Fluency zones, but we focus more on the effects of feedback and how the loops interact instead of specific capabilities.
 
 In software development, we see three feedback loops at play. These loops are,
 from inside to outside:
@@ -58,7 +58,7 @@ Stuff that happens here:
 - Test Driven Development
 - Relentless refactoring
 - CI/CD (continuous integration & continuous delivery)
-- Pair programming
+- CI/CD pipelines
 - Pull requests, code reviews, code walkthroughs
 - Working in baby steps, like Mike Hill's [Many More Much Smaller Steps](https://www.geepawhill.org/series/many-more-much-smaller-steps)
 
@@ -77,21 +77,23 @@ Stuff that happens here:
 
 ## Product
 
+The Product loops is about building the right product and finding what's valuable for which stakeholders and users. It is about discovering valuable increments.
+
 Stuff that happens here:
-- (Small) releases, MVPs (minimum valuable product)
-- Roadmapping (+link roadmapping post Paul Dyson)
+- (Small) releases, MVPs (minimum viable product)
+- Business value
+- Roadmapping
 - Steering on value
 - Dimensional planning
 - User story mapping
 - Outcomes & impact
+- Weighted Shortest Job First (WSJF)
 
 # Leverage effects
 
 At our clients, the technical excellence loop goes through more, and quicker cycles than the other loops. This means that improvements made here have a faster pay off, as well as a higher return on investment.
 
-
-
-Inner loop has most leverage: "Continuous attention to technical excellence and good design enhances agility." (Agile Manifesto principle 9)
+The technical excellence loop has most leverage, as stated by one of the [Agile Manifesto principles](http://agilemanifesto.org/principles.html): "Continuous attention to technical excellence and good design enhances agility."
 
 Small improvements that affect the speed of the inner loop or the length of the
 feedback loops can have a big impact, because it gets multiplied the most. As an
@@ -107,25 +109,24 @@ programming instead of pull requests.
 Another way in which the inner loop has a big leverage. As Rob says 
 > "if you go very fast, you will get much faster feedback on whether things are going the right way". 
 
-Leverage in the middle loop can be substantial, e.g. in 'chaotic' organizations
-mostly based on individual contributors rather than teams. Structuring work,
-managing flow, focusing on value, and continuous improvement can make a huge
-initial difference. This is what the Scrum idea of "Doing Twice the Work in Half
-the Time" albeit a bit misleading is about. A bit of focus and maximizing the
-amount of work not done can be shockingly effective.
-
-
-
 So technical excellence enables a speedup in the middle loop
 ("becoming better faster") and in the outer loop - faster discovery, market
 testing, etc.
 
+Leverage in the middle loop can be substantial, e.g. in a 'chaotic' organization
+having individual contributors and not yet teams. Learning to work as a team,
+structuring the work, managing flow, focusing on value, and continuous
+improvement can make a huge initial difference. This is what the Scrum idea of
+"Doing Twice the Work in Half the Time" albeit a bit misleading is about. A bit
+of focus and maximizing the amount of work not done can be shockingly effective.
+
+The loops reinforce each other also in other ways: by shortening feedback loops in Working Together and doing frequent reflection, we set ourselves up also for discovering better ways of developing software and growing our technical excellence.
 
 (thinking of a fake chart where the area below the tech excellence improvement grows faster, sort of like a CFD for the three loops)
 
-# We need a whole systems approach (holistic approach?)
+# We need a whole systems approach
 
-Doest hat mean we should focus exclusively on the technical excellence loop? No, Velocity is a vector, it has a quantity and a direction (ref @jessitron on velocity / accelleration). We can improve the quantity in the technical excellence loop, but direction has to come from the interplay with the other loops. 
+Does that mean we should focus exclusively on the technical excellence loop? No, Velocity is a vector, it has a quantity and a direction (ref @jessitron on velocity / accelleration). We can improve the quantity in the technical excellence loop, but direction has to come from the interplay with the other loops. 
 
 Lets' have a look at some counter examples:
 
