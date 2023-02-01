@@ -30,7 +30,8 @@ So the three loops we consider here are, from inside to outside:
 - Working together + getting things done loop
 - Product loop
 
-met plaatje in de trand vh ZorgDomein logo, maar dan met wat overlapping vd cirkels
+![alt-text goes here](/attachments/blogposts/2023/3-loops.jpg)
+
 
 # Leverage effects
 
