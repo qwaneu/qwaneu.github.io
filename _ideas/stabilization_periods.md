@@ -44,3 +44,8 @@ So one or two week sprints might be a start. This forces communication between t
 Write about firefighting groups, or separate post?
 
 # The three loops are sometimes more separate than they need to be
+
+
+(K&S voorbeeld)
+
+Recently we worked with a client where the developers were working mostly individually, while being swamped by a high business demand and a large number of defects coming back from the field. They hardly did any reflection, because they did not feel they had time for that (they felt they did not have time for any improvement because of all the pressure and all the defects). Part of our advice was to start doing retrospectives regularly (and not only after an incident). Even if this was the only thing they would start doing, they would have a huge return on the investment of hiring us (the story has a happy end: they actually followed up on several things we recommended and made huge improvements in picking up more improvements, reducing defects and improving test coverage)

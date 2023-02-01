@@ -74,6 +74,7 @@ Stuff that happens here:
 - Planning, velocity
 - Impediments & impediment resolving
 - Working in pairs or ensemble, mobbing
+- Multidisciplinary teams
 
 ## Product
 
@@ -91,56 +92,69 @@ Stuff that happens here:
 
 # Leverage effects
 
-At our clients, the technical excellence loop goes through more, and quicker cycles than the other loops. This means that improvements made here have a faster pay off, as well as a higher return on investment.
+The technical excellence loop goes through more, and quicker cycles than the
+other loops. This means that improvements made here have a faster pay off, as
+well as a higher return on investment - this loop has the highest leverage. 
 
-The technical excellence loop has most leverage, as stated by one of the [Agile Manifesto principles](http://agilemanifesto.org/principles.html): "Continuous attention to technical excellence and good design enhances agility."
+> One of the [Agile Manifesto principles](http://agilemanifesto.org/principles.html) refers to this: *Continuous attention to technical excellence and good design enhances agility.*
 
 Small improvements that affect the speed of the inner loop or the length of the
-feedback loops can have a big impact, because it gets multiplied the most. As an
-example, shaving off a few seconds of your unit test run will benefit you every
-time you run the tests, many, many times a day. This all adds up, for every line
-of code you change, many times for every user story you work on.
+feedback loops can have a big impact, because it gets multiplied the most.
+Shaving off a few seconds of your unit test run for example will benefit you
+every time you run the tests, many, many times a day. This all adds up, for
+every line of code you change, many times for every user story you work on.
 
-Small improvements in the inner development loop have the biggest effect because
-of multiplication effects. So it pays to invest time in improving build times,
-fixing flaky tests, getting quicker pull request feedback, doing pair
-programming instead of pull requests.
+It pays to invest time in improving build times, fixing flaky tests, getting
+quicker pull request feedback, doing pair programming instead of pull requests.
 
-Another way in which the inner loop has a big leverage. As Rob says 
-> "if you go very fast, you will get much faster feedback on whether things are going the right way". 
+Improvements in this loop have even more benefits, as Rob says 
+> if you go very fast, you will get much faster feedback on whether things are going the right way. 
 
-So technical excellence enables a speedup in the middle loop
-("becoming better faster") and in the outer loop - faster discovery, market
-testing, etc.
+So technical excellence enables a speedup in the Working Together, Getting Things Done loop - getting small slices of high quality software running and tested earlier- and in the Product loop - faster discovery, earlier market
+testing. This also means that the Technical Excellence loop puts an upper bound on how fast you can discover and how fast you can deliver value.
 
-Leverage in the middle loop can be substantial, e.g. in a 'chaotic' organization
-having individual contributors and not yet teams. Learning to work as a team,
-structuring the work, managing flow, focusing on value, and continuous
-improvement can make a huge initial difference. This is what the Scrum idea of
-"Doing Twice the Work in Half the Time" albeit a bit misleading is about. A bit
-of focus and maximizing the amount of work not done can be shockingly effective.
+Leverage in the Working Together, Getting Things Done loop can also be
+substantial, for example in a chaotic organization were developers work
+individually instead of in teams. Learning to work as a team, structuring the
+work, managing flow, focusing on value, and frequent reflection and improvement
+will make a huge initial difference. Focusing on flow and value and maximizing the amount of work not done can help in getting more things done sooner.
 
-The loops reinforce each other also in other ways: by shortening feedback loops in Working Together and doing frequent reflection, we set ourselves up also for discovering better ways of developing software and growing our technical excellence.
-
-(thinking of a fake chart where the area below the tech excellence improvement grows faster, sort of like a CFD for the three loops)
+The loops reinforce each other also in other ways: by doing frequent reflection
+and improving on Working Together, we set ourselves up also for discovering
+better ways of growing our technical excellence.
 
 # We need a whole systems approach
 
-Does that mean we should focus exclusively on the technical excellence loop? No, Velocity is a vector, it has a quantity and a direction (ref @jessitron on velocity / accelleration). We can improve the quantity in the technical excellence loop, but direction has to come from the interplay with the other loops. 
+Does that mean we should focus exclusively on the technical excellence loop? No,
+it is not just about writing better code faster. It is not only about increasing
+velocity, it's about acceleration in the right direction. See also Jessica
+Kerr's post on
+[Velocity defeats itself. Get acceleration instead](https://jessitron.com/2022/12/22/velocity-defeats-itself-get-acceleration-instead/).
+The direction has to come from the interplay with the other loops.
 
 Lets' have a look at some counter examples:
 
-- Developers invest in technical solutions while ignoring the voice of the stakeholders. This makes us go faster on a road to nowhere.
-- Sales sell too many things that don't exist yet, or aren't feasible yet. There is always a tension, but improving in the sales capacity with a lack of capability to deliver is likely to lead to disappointed stakeholders and developers. 
-- Only improve the getting things done loop: We find better ways of moving post-its, and reflecting on them (or JIRA tickets), but when development can't actually move the tickets, we might be going somewhere, but very slowly with lots of 'clever' fixing to make our solution work for customers.
-- Product: better vision (e.g. good strategy, great event storms, UX studies) without a solid organisation of teams and communication with developers will once again lead to disappointment.
+- Developers invest in technical solutions while ignoring the voice of the
+  stakeholders. This makes us go faster on a road to nowhere.
+- Sales sell too many things that don't exist yet or aren't feasible yet. There
+  is always a tension, but improving in the sales capacity with a lack of
+  capability to deliver is likely to lead to disappointed stakeholders and
+  developers.
+- Only improve the Working Together, Getting Things Done loop: we find better
+  ways of moving post-its (or JIRA issues) and reflecting on them, but when
+  developers aren't able to move the tickets, we might be going somewhere, but
+  very slowly with lots of 'clever' fixing to make our solution work for
+  customers.
+- Product: better vision - for example through good strategy, Event Storms, UX
+  studies - without a solid organisation of teams and communication with
+  developers will once again lead to disappointment.
 - Product ignores liability leading to multi-billion dollar lawsuits.
 
-# how is this perspective helpful?
+# How is this perspective helpful?
 
-Clients often find it difficult to justify e.g. developer training. We find that just the act of stepping away from the keyboard and reflecting with a group of developers (almost regardless of content) leads to improved productivity. Some of the effects of stepping away are permanent (e.g. better builds), but others are temporary (practicing working in small steps, refactoring are general skills, but they tend to atrophy under pressure).
+Clients often find it difficult to justify developer training or developer mentoring. We find that just the act of stepping away from the keyboard and reflecting with a group of developers (almost regardless of content) leads to improved productivity. Some of the effects of stepping away are permanent (e.g. better builds), but others are temporary (practicing working in small steps, refactoring are general skills, but they tend to atrophy under pressure).
 
-# closing notes
+# Closing notes
 
 3 loops perspectief is niet allesomvattend maar biedt een nuttig perspectief (er zijn meer nuttige perspectieven)
 
