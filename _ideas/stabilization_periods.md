@@ -35,4 +35,12 @@ Michel Grootjans has a video where he shows a model of a group of individuals, w
 
 Often what we see is worse. Michel has, in his video, the QA person as part of the team. Often we still see this happening outside of the team.
 
+# can we fix this with un-interruptible sprints inside of a longer release cycle?
+
+Maybe, if your sprints are short enough. If the sprints are longer than changes in your environment, you will loose goodwil with your external clients, at best. At worst, the organization can not perform as desired and will cease to exist.
+
+So one or two week sprints might be a start. This forces communication between the team members and stakeholders on a regular basis, and will encourage to find smaller things to deliver (once again, see branch by abstraction). Maybe slightly less urgent work then can be turned into regular work, and there is a regular moment to reflect on the urgent work, and what can be done to prevent it from happening, if anything.
+
+Write about firefighting groups, or separate post?
+
 # The three loops are sometimes more separate than they need to be
