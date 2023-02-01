@@ -84,7 +84,7 @@ Stuff that happens here:
 - (Small) releases, MVPs (minimum viable product)
 - Business value
 - (Small) releases, MVPs (minimum valuable product)
-- [Roadmapping]({% post_url 2022-03-29-product-hurricane-map %}) 
+- [Roadmapping](//2022/03/29/product-hurricane-map.html) 
 - Steering on value
 - Dimensional planning
 - User story mapping
