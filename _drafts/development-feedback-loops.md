@@ -9,6 +9,7 @@ tags:
   - systems thinking
 author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: /attachments/blogposts/2023/3-loops.jpg
+excerpt: Where to focus improvement efforts in an organisation is difficult, especially with software and multiple stakeholders. Let's look at it with three different feedback loops, to see if we are focusing on the 'right' stuff.
 ---
 
 # Introduction
