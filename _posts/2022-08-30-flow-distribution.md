@@ -76,7 +76,7 @@ testing group that tests bigger batches at the end of development.
 
 Because these defects do not escape to production or to customers, the team
 tends to think it is not that bad, or sometimes they think this is normal in
-software development. On top of that we have only mentioned the time software developers spend on defets, we have not even started to count the number of testers or customer support people needed to get the system in a good state for customers.
+software development. On top of that we have only mentioned the time software developers spend on defects, we have not even started to count the number of testers or customer support people needed to get the system in a good state for customers.
 
 These activities surface defects, that are fed back to the developers. The
 longer this feedback loop, the more effort it takes to understand and fix these
