@@ -31,21 +31,18 @@ QWAN we like our rubber ducks to talk to, but actual people add that little extr
 5.  [So what was it like to dictate a blog post?](#orgd3bb1de)
 
 
-
 <a id="orgd709a33"></a>
-
-# introduction
+# Introduction
 
 At first I wasn&rsquo;t convinced this was the best place to do it -
 previously most people would go into sessions, and I didn&rsquo;t always find things I
 wanted to go to. A conference can be a time-effective way to have
 conversations - no need to set up meetings. Having said that, [Allison Beaumont](https://www.software-acumen.com/team/),
 one of the organisers, will be pleased to know that I also went to many sessions and
-enjoyed them. She didn't have to say "Willem, shouldn't you be at a session?" :-) . 
+enjoyed them. She didn't have to say "Willem, shouldn't you be at a session?" :-) this time.
 
 <a id="org533f749"></a>
-
-## what convinced me
+## What convinced me
 
 Ceri Newton Sanguinar convinced me there would be at least one person to have
 long conversations with (Ceri :-) ). Luckily, there were more. I guess with more work
@@ -58,7 +55,6 @@ good conversation.
 
 
 <a id="orgcead00a"></a>
-
 # Writing style influenced by chat - talk to the blog
 
 The way this post is written is influenced by a conversation with [Jit Gosai](https://www.jitgo.uk). We
@@ -79,10 +75,7 @@ edited a fair bit after dictation, but it was a very fruitful seed.
 <a id="org3661ffb"></a>
 
 # And then there were sessions.
-
-
 <a id="org4c45ab6"></a>
-
 ## Emily Webber
 
 From [Emily&rsquo;s Webber&rsquo;s ](https://emilywebber.co.uk)talk I took away that I really like working in
@@ -98,7 +91,6 @@ more about their interests.
 
 
 <a id="org930cf91"></a>
-
 ## Charity Majors
 
 I enjoyed [Charity Majors](https://charity.wtf/about/ )&rsquo; talk as well. She also is not very keen on the definition of continuous
@@ -107,9 +99,7 @@ was very much better explained than mine. Basically, if someone needs to push a 
 deploy, that&rsquo;s a bit sad, because that will encourage delays and waiting times,
 or reduce confidence in the software that you have.
 
-
 <a id="org1c0b4fc"></a>
-
 ## TDD game
 
 Like [JitterTed&rsquo;s TDD game](https://ted.dev/products/jitterted-tdd-game.html?utm_source=topnotice&utm_medium=website&utm_campaign=ordertoday). I had seen it floating by, it&rsquo;s a card game about
@@ -119,10 +109,7 @@ late, but the facilitators kindly let me observe. I think I&rsquo;d like a game 
 emphasises different aspects of TDD - this game focuses on predicting whether a
 test will pass or fail when writing it. My thinking is - why not do this with
 code, as it is aimed at developers? I&rsquo;ll play this some more, Wouter Lagerweij bought a deck, hopefully he&rsquo;ll bring it to [XP2023.](https://www.agilealliance.org/xp2023/)
-
-
 <a id="org4452727"></a>
-
 ## Matthew Skelton
 
 I&rsquo;d have to check my notes to remember what the talk was about, but it was very well
@@ -131,10 +118,7 @@ decks by open sourcing them and doing a revenue share with a company that prints
 prints and sells the cards. I was thinking of making some more card decks after
 our refactoring cards, but yeah, putting cards in envelopes is not something
 I particularly enjoy.
-
-
 <a id="org7bd01a7"></a>
-
 ## Ceri Newton-Sargunar and John Clapham on a road trip
 
 I also had some very good conversations with
@@ -147,10 +131,7 @@ other was fun. Some things don&rsquo;t come across nearly as well in public writ
 Some things only come alive when I&rsquo;m working through a problem with a client
 and they sort of, that when you see them at the conference, well, the lived
 experience may be quite interesting, but it just does not resonate.
-
-
 <a id="org463b307"></a>
-
 ## That was the end of the walk, but I also ran into Neill Vass
 
 It was also great to meet Neil Vass in person. Maybe I&rsquo;ve met him before, but I
@@ -160,10 +141,7 @@ don&rsquo;t see every day. We had a good chat about transdisplinary teams, and h
 &ldquo;teams these days&rdquo; seem very specialized, whereas &rsquo;in the old days&rsquo; everyone did
 whatever needed to be done to achieve a good outcome. [Neil&rsquo;s blog has notes from
 agile manchester as well](https://neil-vass.com/blog/).
-
-
 <a id="orga62968e"></a>
-
 ## Ensemble programming, further explored
 
 Unexpectedly for me, I am on the fence on ensemble programming.
@@ -171,27 +149,19 @@ I like to be able to do things with one or two people. When you need at least
 three, it gets expensive quickly. When you&rsquo;re bootstrapping, you need to convince a
 bunch of people to spend their time with you for no immediate rewards.
 
-Strong style ensemble-ing is as fascinating as I find it frustrating. It&rsquo;s interesting to see the things that you easily view at a
-keyboard and then trying to explain them to someone else. While trying to get them done.
+So being able to attend a workshop was very useful, to better understand the practice and its' potential. Strong style ensemble-ing is as fascinating as I find it frustrating. It&rsquo;s interesting to see the things that you easily view at a keyboard and then trying to explain them to someone else. While trying to get them done.
 It&rsquo;s a bit like pulling teeth. But I also can see if you practice this and you
 become more gelled, it will become fluid again. But practicing it like this,
 when you practice, it creates an awareness that you&rsquo;re not easily going to get from
 other forms of working.
-
-
 <a id="orgd92b282"></a>
-
 ## Sorry Allison, I did skip some sessions
 
 So yeah, I a good time at the conference and the bar(s). I did skip our two
 sessions because I got stuck in in a good way. It was also
 good to meet up with Marc Dalgarno again. I haven&rsquo;t seen him in a while.
-
-
 <a id="org282878b"></a>
-
 # Wrapping up
-
 Before Ceri&rsquo;s encouragement, I wasn&rsquo;t confident that Agile
 Manchester would be a place to have those conversations. Because in previous
 years, before the pandemic, most people would go to sessions, and I wouldn&rsquo;t
@@ -202,12 +172,8 @@ This time was different, I did go to more sessions, as I found more of them inte
 novel, but for instance with Charity Majors&rsquo; talk, if
 something is explained really well it gives me a more precise vocabulary to think
 and talk about these things. Which helps move me forward.
-
-
 <a id="orgd3bb1de"></a>
-
 # So what was it like to dictate a blog post?
-
 Seven minutes in or so I said it felt a bit like FreeWriting - just writing
 without editing, emptying your thoughts on the page. At some point, there is
 nothing, and then you write something like &ldquo;I don&rsquo;t know what to write&rdquo; until
@@ -218,5 +184,6 @@ editing to whip 15 minutes of talking into some sort of shape, but it is still r
 fast for me. At least I got some of my reflections on paper. I hope you find them useful. There are still bits missing, but I hope this works as an impression of Agile Manchester 2023. Please let me know on linked-in or
 mastodon, any feedback is greatly appreciated.
 
-P.S. after editing there are some more things I may want to write about, like meeting Rob Bowley and the spontaneous SPA/OT mini reunion at the pub, as well as Giovanni Asproni's talk. But shipping is a feature, your blog must have it :-). See you next time!
+![View on manchester over a river, as seen from the tram. On a sluice gate graffity says:'give it to me hard like Y2K'.](/attachments/blogposts/2023/agile_manchester_y2k.jpeg)
+P.S. After editing there are some more things I may want to write about, like meeting Rob Bowley and the spontaneous SPA/OT mini reunion at the pub, Giovanni Asproni's talk, Thierry De Pauws' very personal pre-conference talk about delaying decisions etc. But shipping is a feature, your blog must have it :-). See you next time!
 
