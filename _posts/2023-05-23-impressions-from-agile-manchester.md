@@ -187,3 +187,6 @@ mastodon, any feedback is greatly appreciated.
 ![View on manchester over a river, as seen from the tram. On a sluice gate graffity says:'give it to me hard like Y2K'.](/attachments/blogposts/2023/agile_manchester_y2k.jpeg)
 P.S. After editing there are some more things I may want to write about, like meeting Rob Bowley and the spontaneous SPA/OT mini reunion at the pub, Giovanni Asproni's talk, Thierry De Pauws' very personal pre-conference talk about delaying decisions etc. But shipping is a feature, your blog must have it :-). See you next time!
 
+# Credits
+
+Thanks to Ceri for encouraging blog posts in general ('what have you got to lose?') and Oana Juncu for encouraging this one in particular.
