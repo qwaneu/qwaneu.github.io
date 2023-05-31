@@ -24,7 +24,7 @@ Our website only uses cookies for enabling the Google Forms based contact form a
   <td class="cookie-table-cell">track your cookie consent status</td>
 </tr>
 <tr>
-  <td class="cookie-table-cell">_ga<br>_gid<br>_gat_gtag_UA_175095301_1</td>
+  <td class="cookie-table-cell">_ga<br>_ga_3KRFSQDFHN</td>
   <td class="cookie-table-cell">Google Analytics, collect page view statistics</td>
 </tr>
 </table>
