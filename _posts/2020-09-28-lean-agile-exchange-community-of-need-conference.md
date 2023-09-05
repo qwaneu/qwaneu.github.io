@@ -5,6 +5,7 @@ tags:
   - conferences
   - lean
   - agile
+  - community
 author: Willem van den Ende
 image: /attachments/blogposts/2020/leanagilecloud.png
 ---
