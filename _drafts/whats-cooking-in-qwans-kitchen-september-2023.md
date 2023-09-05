@@ -7,7 +7,7 @@ author: Willem van den Ende
 image: 
 ---
 
-@@todo image (can be a newspaper or a pan)
+@@todo image (can be a newspaper or a pan). or stick together lean agile scotland and agile cambridge logos.
 @@todo check links
 
 What's cooking in QWAN's kitchen - September 2023.
@@ -21,11 +21,17 @@ October will see the first installment of our cloud native software architecture
 
 # Conference workshops on Stigmergy
 
-We've got workshops accepted at conferences that we also sponsor. Acceptance is independent of sponsorship - our other session, a talk on Event Storming, did not make it for these conferences, for instance. We participate in and sponsor these conferences, because they are [Community of Needs]() conferences that allow our field to evolve, and let us learn and make useful connections.
+We've got workshops accepted at conferences that we also sponsor. Acceptance is independent of sponsorship - our other session, a talk on Event Storming, did not make it for these conferences, for instance. We participate in and sponsor these conferences, because they are [Community of Need](https://www.qwan.eu/2020/09/28/lean-agile-exchange-community-of-need-conference.html) conferences that allow our field to evolve, and let us learn with others about what works and what does not, and make useful connections.
 
-Stigmergy is a mechanism of indirect coordination where actors modify their local environment. They leave traces for others to follow.
+## What is stigmergy?
 
-Join us to explore how the traces ants leave applies to our practice of software development.
+Stigmergy is a mechanism of indirect coordination where actors modify their
+local environment. They leave traces for others to follow. Join us to explore
+how the traces ants leave applies to our practice of software development. The
+trace left by an individual action stimulates the performance of a next action
+by the same or different agent. We believe stigmergy is a useful concept within
+the context of software development, possibly as a way to reduce cognitive load
+for teams. Doing this as a workshop allows us all to explore and learn together.
 
 ## Lean Agile Scotland
 
@@ -38,14 +44,15 @@ This workshop is going to be highly interactive and experiential. It should be g
 
 ## Agile Cambridge
 
-Agile Cambridge will follow the trail of Stigmergy. Willem and Marc will deliver a slightly shorter (90 mins instead of 120 ), but no less interactive workshop. [contact us for a 10% discount](/contact).
+Agile Cambridge will follow the trail of Stigmergy. Willem and Marc will deliver a slightly shorter (90 mins instead of 120 ), but no less interactive workshop. [contact us for a 10% discount](/contact). 
 
-## Talking to people
-As one of our colleagues said: "We'd rather write blog posts than talk to people". We've found that going out, and hearing for ourselves is very valuable, but it is not something all of us do naturally. Conferences help, but there is a world of people we know outside of conferences, and staying in touch is not always trivial.
 
-Willem and Rob are running some shorter workshops with clients in the Eindhoven area in the week of 9 October. That means Willem will be in the Netherlands for at least several days. He'd love to catch up with people, contact him if you want to have a chat or a drink.
-
-# Call To Action - talk to us, if you can't make it to these conferences
-
-We're happy to have conversations on the phone, online or in person.
+<aside>
+  <p>
+We're happy to have conversations on the phone, online or in person - we are all traveling a bit more.
 Otherwise, we'll look forward to to seeing you at one of these conferences!
+  </p>
+  <p><div>
+    <a href="/contact">Contact us</a>
+  </div></p>
+</aside>
