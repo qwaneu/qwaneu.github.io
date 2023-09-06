@@ -2,13 +2,11 @@
 layout: post
 title: 
 tags:
-- updates
+- news
+- conferences
 author: Willem van den Ende
-image: 
+image: /attachments/blogposts/2023/lascot-stigmergy.png 
 ---
-
-@@todo image (can be a newspaper or a pan). or stick together lean agile scotland and agile cambridge logos.
-@@todo check links
 
 What's cooking in QWAN's kitchen - September 2023.
 
@@ -41,10 +39,11 @@ https://leanagile.scot/programme/stigmergy-driven-development) . There are still
 places available, [contact us for a 10% discount](/contact).
 This workshop is going to be highly interactive and experiential. It should be good fun!
 
+![image announcing our session for 13 september 14:00 to 16:00, whiteboard with smiley post-it in background.](/attachments/blogposts/2023/lascot-stigmergy.png)
 
 ## Agile Cambridge
 
-Agile Cambridge will follow the trail of Stigmergy. Willem and Marc will deliver a slightly shorter (90 mins instead of 120 ), but no less interactive workshop. [contact us for a 10% discount](/contact). 
+Agile Cambridge will follow the trail of Stigmergy. On 29 September Willem and Marc will deliver a slightly shorter (90 mins instead of 120 ), but no less [interactive workshop](https://agilecambridge.net/programme/stigmergy-driven-development). [contact us for a 10% discount](/contact). 
 
 
 <aside>
