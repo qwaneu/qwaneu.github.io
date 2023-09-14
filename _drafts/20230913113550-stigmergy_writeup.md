@@ -10,13 +10,7 @@ image:
 
 1.  [Stigmergy is a reinforcing feedback loop](#org94e087b)
 2.  [Story 1 - Headphones](#org7d2bf87)
-    1.  [Poster](#org1bc2707)
-    2.  [Describe poster](#org129d9b9)
 3.  [Story 2 - Code, for better or worse](#org4b4b1c1)
-    1.  [Poster](#org2de58cf)
-    2.  [Describe poster](#org1efa4ea)
-        1.  [Desireable code](#org74f31dc)
-        2.  [Less desireable code](#org04c73f0)
 4.  [Common themes](#orgdbba649)
 5.  [Takeaways from participants](#org53b002e)
     1.  [Find small experiments. Just do them](#orgfe39024)
@@ -26,9 +20,10 @@ image:
     5.  [Focus on the desired outcome to turn things around](#org3489a6b)
 6.  [Call to action](#orge83e92a)
 
-Rob and Willem ran a workshop at Lean Agile Scotland 2023 on Stigmergy. @@LINK.
+Rob and Willem ran a workshop at Lean Agile Scotland 2023 on Stigmergy. Two groups thought about how their actions shape their environment, which in turn encourages more actions.
 
-From [Stigmergy as a Universal Coordination Mechanism: components, varieties and applications](20230912213842-from_stigmergy_as_a_universal_coordination_mechanism_components_varieties_and_applications.md)
+The paper [Stigmergy as a Universal Coordination Mechanism: components, varieties and applications](http://pespmc1.vub.ac.be/Papers/Stigmergy-Springer.pdf
+) introduces the concept of Stigmergy as follows:
 
 > The concept of stigmergy was introduced by the French entomologist Pierre-Paul Grassé (Grassé, 1959) to describe a mechanism of coordination used by insects. The principle is that work performed by an agent leaves a trace in the environment that stimulates the performance of subsequent work—by the same or other agent&ldquo;s.
 > 
