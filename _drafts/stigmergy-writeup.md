@@ -35,14 +35,14 @@ The paper [Stigmergy as a Universal Coordination Mechanism: components, varietie
 # Stigmergy is a reinforcing feedback loop
 
 > Actions stimulate their own continued execution via the intermediary of the marks they make—where a mark is a perceivable effect, trace or product of an action.
+ - [Stigmergy as a Universal Coordination Mechanism: components, varieties and applications](http://pespmc1.vub.ac.be/Papers/Stigmergy-Springer.pdf)
 
-So actions lead to traces leading to more actions.
-From [Stigmergy as a Universal Coordination Mechanism: components, varieties and applications](20230912213842-from_stigmergy_as_a_universal_coordination_mechanism_components_varieties_and_applications.md)
+Actions lead to traces leading to more actions. @@Draw diagram
 
 We had two groups, everyone told a story that could be stigmergic, and then the
 group decided two to take forward. One &rsquo;good&rsquo; and one &rsquo;bad. We mentioned the
 &rsquo;gray zone&rsquo; in the introduction - in human systems it is not always easy to
-make clear what is stigmergy - traces in the environment, and what is copying
+make clear what is stigmergic - traces in the environment -, and what is copying
 behaviour of others.
 
 
@@ -65,13 +65,14 @@ behaviour of others.
 
 # Story 2 - Code, for better or worse
 
-The brainstorm in this group predominantly resulted in code that was good replicating, and code that was less desireable also replicating.
+The quiet brainstorm in this group let to talk about all the good code and the bad code that can be. And the gray code of course. They all replicate, but there are subtle differences.
 
 
 <a id="org2de58cf"></a>
 
 ## Poster
 
+![Poster with post-it notes, explained below.](/attachments/blogposts/2023/lascot-stigmergy-code.jpg)
 
 <a id="org1efa4ea"></a>
 
