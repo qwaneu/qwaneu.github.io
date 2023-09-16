@@ -9,3 +9,4 @@ vendor
 /_drafts/*.gz
 /_drafts/*.tex
 /_drafts/.DS_Store
+.DS_Store

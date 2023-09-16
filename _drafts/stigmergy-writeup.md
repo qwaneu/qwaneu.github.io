@@ -63,10 +63,9 @@ behaviour of others.
 
 <a id="org4b4b1c1"></a>
 
-# Story 2 - Code, for better or worse
+# Story 2 - Code, for better or for worse
 
 The quiet brainstorm in this group let to talk about all the good code and the bad code that can be. And the gray code of course. They all replicate, but there are subtle differences.
-
 
 <a id="org2de58cf"></a>
 
@@ -76,9 +75,25 @@ The quiet brainstorm in this group let to talk about all the good code and the b
 
 <a id="org1efa4ea"></a>
 
-## Describe poster
 
+We looked at the traces 'good' code and 'bad' code leave, and what effects it has on the people that work with it.
 
+### Good code
+
+* Can serve as a template
+* "It was obvious" (for a newcomer)
+* Is easy to follow
+* (working with it leads to) Shared understanding
+* (helps in) Finding your way around
+* (helps in) Understanding the Bigger Picture
+* Corporate standard by example. This requiered some 
+
+### Bad code
+
+* Reproducing bad patterns
+* Hard to test and change
+* Nobody understands the bigger picture
+* Nobody dares to try - one of the participants told the story of monkeys reaching the ceiling @@link / expand
 <a id="org74f31dc"></a>
 
 ### Desireable code
