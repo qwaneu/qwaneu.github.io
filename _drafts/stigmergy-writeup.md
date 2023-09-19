@@ -3,8 +3,8 @@ layout: post
 title: Stigmergy workshop at lean agile scotlond - write up
 tags:
 - conferences
-author: Willem van den Ende, Rob Westgeest
-image: 
+author: Willem van den Ende
+image: /attachments/blogposts/2023/lascot-stigmergy-retro-neil-vass.jpg
 ---
 # Table of Contents
 
@@ -20,7 +20,7 @@ image:
     5.  [Focus on the desired outcome to turn things around](#org3489a6b)
 6.  [Call to action](#orge83e92a)
 
-Rob and Willem ran a workshop at Lean Agile Scotland 2023 on Stigmergy. Two groups thought about how their actions shape their environment, which in turn encourages more actions.
+Rob and I ran a workshop at Lean Agile Scotland 2023 on Stigmergy. Two groups thought about how their actions shape their environment, which in turn encourages more actions.
 
 The paper [Stigmergy as a Universal Coordination Mechanism: components, varieties and applications](http://pespmc1.vub.ac.be/Papers/Stigmergy-Springer.pdf
 ) introduces the concept of Stigmergy as follows:
@@ -29,6 +29,9 @@ The paper [Stigmergy as a Universal Coordination Mechanism: components, varietie
 > 
 > The insight came from Grassé’s observation of how termites repair their nest. He noted that initially termites wander around more or less randomly, carrying mud and depositing it here or there. However, the deposits that are created in this haphazard way then stimulate the insects to add more mud in the same place. Thus, the small heaps quickly grow into columns that eventually come together to form an intricate cathedral of interlocking arches. The only communication between the termites is indirect: the partially executed work of the ones provides information to the others about where to make their own contribution.
 
+It made a couple of particpants think about how their actions influence their environment and vice versa.
+
+![post it saying: Thanks to Willem and Rob for and inspiring workshop on stigmergy, I will start leaving traiils ... With dots going round the corner to form a path.](/attachments/blogposts/2023/lascot-stigmergy-retro-neil-vass.jpg)
 
 <a id="org94e087b"></a>
 
@@ -55,6 +58,7 @@ behaviour of others.
 
 ## Poster
 
+![alt-text goes here](/attachments/blogposts/2023/lascot-stigmergy-headphones.png)
 
 <a id="org129d9b9"></a>
 
