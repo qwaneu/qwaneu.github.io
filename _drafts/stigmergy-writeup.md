@@ -3,25 +3,26 @@ layout: post
 title: Stigmergy workshop at Lean Agile Scotland
 tags:
 - conferences
+- patterns
+- systems thinking
 author: Willem van den Ende
 image: /attachments/blogposts/2023/lascot-stigmergy-retro-neil-vass.jpg
 ---
+
+Rob and I ran a workshop at [Lean Agile Scotland 2023](https://leanagile.scot/) on Stigmergy. Two groups thought about how their actions shape their environment, which in turn encourages more actions.
+
 
 # Table of Contents
 
 1.  [Stigmergy is a reinforcing feedback loop](#org94e087b)
 2.  [Story 1 - Headphones](#org7d2bf87)
 3.  [Story 2 - Code, for better or worse](#org4b4b1c1)
-4.  [Common themes](#orgdbba649)
 5.  [Takeaways from participants](#org53b002e)
     1.  [Find small experiments. Just do them](#orgfe39024)
     2.  [Model behaviour, and focus on the trail in addition](#org5d8ade3)
     3.  [Little things](#org5d541c4)
     4.  [Remote people - find things that leave traces](#orgf3881b8)
     5.  [Focus on the desired outcome to turn things around](#org3489a6b)
-6.  [Call to action](#orge83e92a)
-
-Rob and I ran a workshop at [Lean Agile Scotland 2023](https://leanagile.scot/) on Stigmergy. Two groups thought about how their actions shape their environment, which in turn encourages more actions.
 
 The paper [Stigmergy as a Universal Coordination Mechanism: components, varieties and applications](http://pespmc1.vub.ac.be/Papers/Stigmergy-Springer.pdf
 ) introduces the concept of Stigmergy as follows:
@@ -154,12 +155,6 @@ And finally we had some more reflection, coming to acceptance and awareness:
 - Good can turn to bad
 - Accept the gray (some code is good to some people, solving some problem in some context)
 
-<a id="orgdbba649"></a>
-
-# Common themes
-
-The posters did / did not have common themes @@TODO or to delete / leave for later
-
 <a id="org53b002e"></a>
 
 # Takeaways from participants
@@ -200,9 +195,11 @@ For instance interactive boards (e.g. Miro) in addition to ticketing systems tha
 Wouter Lagerweij: Something that was stigmergic in one environment was producing detailed reports about activity. It was not entirely clear why they were needed and who used them. They added business level outcomes, in addition to the usual reporting (instead of fighting against the reporting). Eventually people lost interest in the detailed reports, because the business level outcomes were what they really needed.
 
 
-<a id="orge83e92a"></a>
-
-# Call to action
-
-We will be running this session at [Agile Cambridge](https://agilecambridge.net/programme-2023) and [XP Days Benelux](https://xpdaysbenelux.org/), come join us. We are also considering running one online - contact us if you would like to participate in that.
-
+<aside>
+  <p>
+We will be running this session at Agile Cambridge and XP Days Benelux, come join us. We are also considering running one online - contact us if you would like to participate in that.
+  </p>
+  <p><div>
+    <a href="/contact">Contact us</a>
+  </div></p>
+</aside>
