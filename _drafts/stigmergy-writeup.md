@@ -57,12 +57,13 @@ behaviour of others.
 
 ## Poster
 
-![alt-text goes here](/attachments/blogposts/2023/lascot-stigmergy-headphones.png)
+![Poster of headphones story with post-its, written out below.](/attachments/blogposts/2023/lascot-stigmergy-headphones.png)
 
 <a id="org129d9b9"></a>
 
 ## Describe poster
 
+Wearing headphones in a noisy office is contageous. One person starts wearing headphones. Someone else sees this, and also starts wearing headphones. Until everyone wears headphones and direct communication is very difficult.
 
 <a id="org4b4b1c1"></a>
 
@@ -89,7 +90,7 @@ We looked at the traces 'good' code and 'bad' code leave, and what effects it ha
 * (working with it leads to) Shared understanding
 * (helps in) Finding your way around
 * (helps in) Understanding the Bigger Picture
-* Corporate standard by example. This required some 
+* Corporate standard by example. This required some explanation.
 
 ### Bad code
 
@@ -114,18 +115,27 @@ Reinforcement tactics discussed were praising making use of desireable code, hig
 
 It is still code that works, and replicates in similar ways to desireable code.
 
-Ways to remediate:
+Ways to remediate and other reflections. We didn't separate the stigmergic and 'other' (e.g. facilitation) solutions on this poster, this is an improvement for next time.
 
-1.  Identify the most popular place to copy, improve that place
+Stigmergic solutions (change the environment):
 
-    **\*\***
+- Identify the most popular place to copy, improve that place, so that new copies are better.
+- Convention over configuration - extract scaffolds for code generation (also called archetypes or templates)
 
+
+Facilitation:
+- Create shared understanding
+- Challenge the status quo - shake things up.
+
+And finally we had some more reflection, coming to acceptance and awareness:
+- Good can turn to bad
+- Accept the gray (some code is good to some people, solving some problem in some context)
 
 <a id="orgdbba649"></a>
 
 # Common themes
 
-The posters did / did not have common themes
+The posters did / did not have common themes @@TODO or to delete / leave for later
 
 <a id="org53b002e"></a>
 
