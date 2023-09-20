@@ -75,7 +75,7 @@ The quiet brainstorm in this group let to talk about all the good code and the b
 
 ## Poster
 
-![Poster with post-it notes, explained below.](/attachments/blogposts/2023/lascot-stigmergy-code.jpg)
+![Poster with post-it notes, explained below.](/attachments/blogposts/2023/lascot-stigmergy-code.png)
 
 <a id="org1efa4ea"></a>
 
