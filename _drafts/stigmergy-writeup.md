@@ -38,10 +38,10 @@ It made a couple of participants think about how their actions influence their e
 
 # Stigmergy is a reinforcing feedback loop
 
-> Actions stimulate their own continued execution via the intermediary of the marks they make—where a mark is a perceivable effect, trace or product of an action.
- - [Stigmergy as a Universal Coordination Mechanism: components, varieties and applications](http://pespmc1.vub.ac.be/Papers/Stigmergy-Springer.pdf)
+> Actions stimulate their own continued execution via the intermediary of the marks they make—where a mark is a perceivable effect, trace or product of an action.  
+ -- [Stigmergy as a Universal Coordination Mechanism: components, varieties and applications](http://pespmc1.vub.ac.be/Papers/Stigmergy-Springer.pdf)
 
-Actions lead to traces leading to more actions. @@Draw diagram
+Actions lead to traces leading to more actions.
 
 We had two groups, everyone told a story that could be stigmergic, and then the
 group decided two to take forward. One &rsquo;good&rsquo; and one &rsquo;bad. We mentioned the
@@ -96,7 +96,7 @@ We looked at the traces 'good' code and 'bad' code leave, and what effects it ha
 * Reproducing bad patterns
 * Hard to test and change
 * Nobody understands the bigger picture
-* Nobody dares to try - one of the participants told the story of monkeys reaching the ceiling @@link / expand
+* Nobody dares to try - one of the participants told [the story of monkeys reaching the ceiling](https://skeptics.stackexchange.com/questions/6828/was-the-experiment-with-five-monkeys-a-ladder-a-banana-and-a-water-spray-condu)
 <a id="org74f31dc"></a>
 
 ### Desireable code
@@ -136,14 +136,14 @@ The posters did / did not have common themes
 
 ## Find small experiments. Just do them
 
-For instance, if you spend a lot of time fixing versus developing (and assuming you work alone? or publish as a team?), track your own dev / fix ratio and publish that on the company chat (slack, teams etc.)
+For instance, if you spend a lot of time fixing versus developing (and assuming you work alone? or publish as a team?), track your own development / fix ratio and publish that on the company chat (Slack, Teams, etc.)
 
 
 <a id="org5d8ade3"></a>
 
 ## Model behaviour, and focus on the trail in addition
 
-(Wouter Lagerweij). When mentoring or leading teams we often model behaviour. If in addition to that, we can leave traces of our work for others to follow, the results will last longer when we are gone.
+Wouter Lagerweij: when mentoring or leading teams we often model behaviour. If in addition to that, we can leave traces of our work for others to follow, the results will last longer when we are gone.
 
 
 <a id="org5d541c4"></a>
@@ -164,12 +164,12 @@ For instance interactive boards (e.g. Miro) in addition to ticketing systems tha
 
 ## Focus on the desired outcome to turn things around
 
-(Wouter Lagerweij) Something that was stigmergic in one environment was producing detailed reports about activity. It was not entirely clear why they were needed and who used them. They added business level outcomes, in addition to the usual reporting (instead of fighting against the reporting). Eventually people lost interest in the detailed reports, because the business level outcomes were what they really needed.
+Wouter Lagerweij: Something that was stigmergic in one environment was producing detailed reports about activity. It was not entirely clear why they were needed and who used them. They added business level outcomes, in addition to the usual reporting (instead of fighting against the reporting). Eventually people lost interest in the detailed reports, because the business level outcomes were what they really needed.
 
 
 <a id="orge83e92a"></a>
 
 # Call to action
 
-We will be running this session at Agile Cambridge and [XP Days Benelux](https://xpdaysbenelux.org/), come join us. We are also considering running one online - contact us if you would like to participate in that.
+We will be running this session at [Agile Cambridge](https://agilecambridge.net/programme-2023) and [XP Days Benelux](https://xpdaysbenelux.org/), come join us. We are also considering running one online - contact us if you would like to participate in that.
 
