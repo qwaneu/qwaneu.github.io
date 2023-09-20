@@ -65,6 +65,29 @@ behaviour of others.
 
 Wearing headphones in a noisy office is contageous. One person starts wearing headphones. Someone else sees this, and also starts wearing headphones. Until everyone wears headphones and direct communication is very difficult.
 
+Symptons (purple stickies)
+- Wearing my headphones invites others to wear headphones
+- Headphones put other people off
+
+Break existing trail:
+
+Stigmergic remediations (change the environment, often can be started by one person)
+- Put up a "Please do disturb sign
+
+Facilitation / set example:
+- Wear earmuffs and other ways of _making it ridiculuously absurd_
+- Interrupt the headphone workers
+- Take extraneous chat elsewhere
+
+Make a new trail:
+- Start giving vital information VERBALLY
+- Have more interactive working situations. e.g:
+ - Start pairing
+ - Whiteboarding
+ - Start mobbing on issues
+
+This poster is fairly stigmergic, but even then, some of the turn-arounds are more facilitation, setting examples.
+
 <a id="org4b4b1c1"></a>
 
 # Story 2 - Code, for better or for worse
