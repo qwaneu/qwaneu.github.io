@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Stigmergy workshop at lean agile scotlond - write up
+title: Stigmergy workshop at Lean Agile Scotland
 tags:
 - conferences
 author: Willem van den Ende
 image: /attachments/blogposts/2023/lascot-stigmergy-retro-neil-vass.jpg
 ---
+
 # Table of Contents
 
 1.  [Stigmergy is a reinforcing feedback loop](#org94e087b)
@@ -20,18 +21,18 @@ image: /attachments/blogposts/2023/lascot-stigmergy-retro-neil-vass.jpg
     5.  [Focus on the desired outcome to turn things around](#org3489a6b)
 6.  [Call to action](#orge83e92a)
 
-Rob and I ran a workshop at Lean Agile Scotland 2023 on Stigmergy. Two groups thought about how their actions shape their environment, which in turn encourages more actions.
+Rob and I ran a workshop at [Lean Agile Scotland 2023](https://leanagile.scot/) on Stigmergy. Two groups thought about how their actions shape their environment, which in turn encourages more actions.
 
 The paper [Stigmergy as a Universal Coordination Mechanism: components, varieties and applications](http://pespmc1.vub.ac.be/Papers/Stigmergy-Springer.pdf
 ) introduces the concept of Stigmergy as follows:
 
-> The concept of stigmergy was introduced by the French entomologist Pierre-Paul Grassé (Grassé, 1959) to describe a mechanism of coordination used by insects. The principle is that work performed by an agent leaves a trace in the environment that stimulates the performance of subsequent work—by the same or other agent&ldquo;s.
+> The concept of stigmergy was introduced by the French entomologist Pierre-Paul Grassé (Grassé, 1959) to describe a mechanism of coordination used by insects. The principle is that work performed by an agent leaves a trace in the environment that stimulates the performance of subsequent work—by the same or other agent's.
 > 
 > The insight came from Grassé’s observation of how termites repair their nest. He noted that initially termites wander around more or less randomly, carrying mud and depositing it here or there. However, the deposits that are created in this haphazard way then stimulate the insects to add more mud in the same place. Thus, the small heaps quickly grow into columns that eventually come together to form an intricate cathedral of interlocking arches. The only communication between the termites is indirect: the partially executed work of the ones provides information to the others about where to make their own contribution.
 
-It made a couple of particpants think about how their actions influence their environment and vice versa.
+It made a couple of participants think about how their actions influence their environment and vice versa.
 
-![post it saying: Thanks to Willem and Rob for and inspiring workshop on stigmergy, I will start leaving traiils ... With dots going round the corner to form a path.](/attachments/blogposts/2023/lascot-stigmergy-retro-neil-vass.jpg)
+![post it saying: Thanks to Willem and Rob for and inspiring workshop on stigmergy, I will start leaving trails ... With dots going round the corner to form a path.](/attachments/blogposts/2023/lascot-stigmergy-retro-neil-vass.jpg)
 
 <a id="org94e087b"></a>
 
@@ -45,14 +46,12 @@ Actions lead to traces leading to more actions. @@Draw diagram
 We had two groups, everyone told a story that could be stigmergic, and then the
 group decided two to take forward. One &rsquo;good&rsquo; and one &rsquo;bad. We mentioned the
 &rsquo;gray zone&rsquo; in the introduction - in human systems it is not always easy to
-make clear what is stigmergic - traces in the environment -, and what is copying
+make clear what is stigmergic - traces in the environment - and what is copying
 behaviour of others.
-
 
 <a id="org7d2bf87"></a>
 
 # Story 1 - Headphones
-
 
 <a id="org1bc2707"></a>
 
@@ -90,7 +89,7 @@ We looked at the traces 'good' code and 'bad' code leave, and what effects it ha
 * (working with it leads to) Shared understanding
 * (helps in) Finding your way around
 * (helps in) Understanding the Bigger Picture
-* Corporate standard by example. This requiered some 
+* Corporate standard by example. This required some 
 
 ### Bad code
 
@@ -106,7 +105,7 @@ Most surprising outcome here was that approachable code (part of the discussion 
 
 As an aside a few of the participants re-trained as a developers,  and found this kind of code very helpful to get started in their jobs.
 
-Reinforcement tactics discussed were praising making use of desireable code, highlighting good examples, and making it easier to replicate, in the form of templates, scaffolding or archetypes (spring calls scaffolds archetypes, I believe it boils down to the same thing).
+Reinforcement tactics discussed were praising making use of desireable code, highlighting good examples, and making it easier to replicate, in the form of templates, scaffolding or archetypes (Spring calls scaffolds archetypes, I believe it boils down to the same thing).
 
 
 <a id="org04c73f0"></a>
@@ -127,7 +126,6 @@ Ways to remediate:
 # Common themes
 
 The posters did / did not have common themes
-
 
 <a id="org53b002e"></a>
 
@@ -159,7 +157,7 @@ Apply them, and see what happens
 
 ## Remote people - find things that leave traces
 
-For instance interactive boards (e.g. miro) in addition to ticketing systems that may not leave enough traces for others to follow.
+For instance interactive boards (e.g. Miro) in addition to ticketing systems that may not leave enough traces for others to follow.
 
 
 <a id="org3489a6b"></a>
@@ -173,5 +171,5 @@ For instance interactive boards (e.g. miro) in addition to ticketing systems tha
 
 # Call to action
 
-We will be running this session at Agile Cambridge and XP Days benelux, come join us. We are also considering running one online - contact us if you would like to participate in that.
+We will be running this session at Agile Cambridge and [XP Days Benelux](https://xpdaysbenelux.org/), come join us. We are also considering running one online - contact us if you would like to participate in that.
 
