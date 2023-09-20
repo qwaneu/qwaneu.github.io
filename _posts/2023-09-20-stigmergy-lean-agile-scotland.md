@@ -18,11 +18,6 @@ Rob and I ran a workshop at [Lean Agile Scotland 2023](https://leanagile.scot/) 
 2.  [Story 1 - Headphones](#org7d2bf87)
 3.  [Story 2 - Code, for better or worse](#org4b4b1c1)
 5.  [Takeaways from participants](#org53b002e)
-    1.  [Find small experiments. Just do them](#orgfe39024)
-    2.  [Model behaviour, and focus on the trail in addition](#org5d8ade3)
-    3.  [Little things](#org5d541c4)
-    4.  [Remote people - find things that leave traces](#orgf3881b8)
-    5.  [Focus on the desired outcome to turn things around](#org3489a6b)
 
 The paper [Stigmergy as a Universal Coordination Mechanism: components, varieties and applications](http://pespmc1.vub.ac.be/Papers/Stigmergy-Springer.pdf
 ) introduces the concept of Stigmergy as follows:
