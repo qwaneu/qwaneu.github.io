@@ -3,8 +3,6 @@ title: Training Courses
 layout: other-accessible
 ---
 
-{% include upcoming.md %}
-
 Our training courses are intensive and hands-on. We offer both open enrolment courses and customized in-company courses, on-site and remote. We work with small groups up to 14 participants to ensure an optimal learning experience.
 
 We deliver our courses in English, Dutch, German or French (together with our German and French partners).
@@ -20,7 +18,7 @@ If you have a need that is not covered by an existing course, [we are happy to m
         <h2 class="entry-title"><a href="/training/agile-engineering">Agile Engineering</a></h2>
         <div class="post-meta">Deliver software with confidence & joy</div>
         <p>
-        Agile/Scrum provides great focus on delivering in short cycles. To keep on delivering quality software with confidence, you need to master agile engineering principles & practices.
+        Agile, Lean and Scrum provide great focus on delivering in short cycles. To keep on delivering quality software with confidence, you need to master agile engineering principles & practices.
         </p>
         <a class="btn read-more" href="/training/agile-engineering">Read More</a>
       </div>
