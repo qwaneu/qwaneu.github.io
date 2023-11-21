@@ -49,6 +49,6 @@ What do you do for warmups? What do you get out of it?
 <p>Attend [the warmups workshop](https://www.propile.xpdaysbenelux.org/public/session/view/9dlCQJPzPzfHIvn4SDxQ) and share your warmup with us! There are still tickets for XP Days, there is a great line up of sessions and attendees.</p>
 <p></p>
 <div> 
-<a href="https://www.tickettailor.com/events/xpdaysbenelux/862353#">Buy tickets</a>
+<a href="https://www.propile.xpdaysbenelux.org/public/session/view/9dlCQJPzPzfHIvn4SDxQ">Join the workshop</a>
 </div>
 </aside>
