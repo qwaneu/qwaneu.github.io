@@ -7,7 +7,7 @@ tags:
  - conferences
  - feedback
 author: Willem van den Ende, Rob Westgeest
-image: /attachments/blogposts/2023/hatching-warmups.svg
+image: /attachments/blogposts/2023/hatching_warmups.png
 ---
 
 Marc and Rob are running a workshop on warmups at XP Days benelux. It is a workshop to share the ways we warm up for practice. This is what I learnt from drawing warmups.
