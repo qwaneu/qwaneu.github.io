@@ -46,7 +46,7 @@ What do you do for warmups? What do you get out of it?
 
 <aside>
 <h3>Come see us at XP Days Benelux this week</h3>
-<p>Attend this workshop and share your warmup with us! There are still tickets for XP Days, there is a great line up of sessions and attendees.</p>
+<p>Attend [the warmups workshop](https://www.propile.xpdaysbenelux.org/public/session/view/9dlCQJPzPzfHIvn4SDxQ) and share your warmup with us! There are still tickets for XP Days, there is a great line up of sessions and attendees.</p>
 <p></p>
 <div> 
 <a href="https://www.tickettailor.com/events/xpdaysbenelux/862353#">Buy tickets</a>
