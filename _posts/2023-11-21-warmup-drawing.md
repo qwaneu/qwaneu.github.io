@@ -24,6 +24,8 @@ Handwriting and drawing have not been my strong points for a long time. The tric
 
 This warmup is surprisingly simple, and works with or without the app. It has you drawing lots of lines, circles and ellipsis. I tend to make a new layer in concepts and do a part of the warmup whenever I feel like it (sort of little and often). 
 
+[Warmup template and written instructions](https://concepts.app/en/learntodraw/learn-to-draw-part-1/?utm_source=youtube&utm_medium=link)
+
 I find that whenever I do it, I am more likely to come up with something to draw. Sometimes I stop the warmup to draw something that pops up.
 
 As Rob said:
