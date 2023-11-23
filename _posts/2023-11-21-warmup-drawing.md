@@ -10,7 +10,7 @@ author: Willem van den Ende, Rob Westgeest
 image: /attachments/blogposts/2023/hatching_warmups.png
 ---
 
-Marc and Rob are running a workshop on warmups at [XP Days Benelux](https://https://xpdaysbenelux.org/). It is a workshop to share the ways we warm up for practice. This is what I learnt from drawing warmups.
+Marc and Rob are running a workshop on warmups at [XP Days Benelux](https://xpdaysbenelux.org/). It is a workshop to share the ways we warm up for practice. This is what I learnt from drawing warmups.
 
 The workshop makes space for warmups with and without code. I did practice some code, but thought drawing would be fun for a blog post. I should have known that this stuff works, but still am surprised by the power of small exercises.
 
@@ -48,7 +48,7 @@ What do you do for warmups? What do you get out of it?
 
 <aside>
 <h3>Come see us at XP Days Benelux this week</h3>
-<p>Attend <a href="https://www.propile.xpdaysbenelux.org/public/session/view/9dlCQJPzPzfHIvn4SDxQ">the warmups workshop</a> and share your warmup with us! There are still tickets for XP Days, there is a great line up of sessions and attendees.</p>
+<p>Attend our warmups workshop and share your warmup with us! There are still tickets for XP Days, there is a great line up of sessions and attendees.</p>
 <p></p>
 <div> 
 <a href="https://www.propile.xpdaysbenelux.org/public/session/view/9dlCQJPzPzfHIvn4SDxQ">Join the workshop</a>
