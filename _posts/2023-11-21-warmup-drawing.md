@@ -7,7 +7,7 @@ tags:
  - conferences
  - feedback
 author: Willem van den Ende, Rob Westgeest
-image: /attachments/blogposts/2023/hatching-warmups.svg
+image: /attachments/blogposts/2023/hatching_warmups.png
 ---
 
 Marc and Rob are running a workshop on warmups at XP Days benelux. It is a workshop to share the ways we warm up for practice. This is what I learnt from drawing warmups.
@@ -51,6 +51,6 @@ What do you do for warmups? What do you get out of it?
 <p>Attend [the warmups workshop](https://www.propile.xpdaysbenelux.org/public/session/view/9dlCQJPzPzfHIvn4SDxQ) and share your warmup with us! There are still tickets for XP Days, there is a great line up of sessions and attendees.</p>
 <p></p>
 <div> 
-<a href="https://www.tickettailor.com/events/xpdaysbenelux/862353#">Buy tickets</a>
+<a href="https://www.propile.xpdaysbenelux.org/public/session/view/9dlCQJPzPzfHIvn4SDxQ">Join the workshop</a>
 </div>
 </aside>
