@@ -59,7 +59,7 @@ If you have a need that is not covered by an existing course, [we are happy to m
         <p>
         Issues in teams and organisations are often tough to tackle. In retrospectives we tend to focus on symptoms. Learn techniques to explore systems behind symptoms and to act effectively. 
         </p>
-        <a class="btn read-more" href="/training/mastering-legacy-code">Read More</a>
+        <a class="btn read-more" href="/training/systems-thinking">Read More</a>
       </div>
     </article>
 
