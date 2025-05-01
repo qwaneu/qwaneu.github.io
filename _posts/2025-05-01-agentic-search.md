@@ -3,7 +3,7 @@ layout: post
 title: I accidentally made a shallow research tool 
 tags:
 - LLM, 
-author: Willem van den Ende, Rob Westgeest, Marc Evers
+author: Willem van den Ende
 image: 
 ---
 
