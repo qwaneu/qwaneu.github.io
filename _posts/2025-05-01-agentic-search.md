@@ -34,7 +34,7 @@ As the [tiny Local Language Model that could](https://huggingface.co/Qwen/Qwen3-
 
 I couldn't resist playing with it. I found my original intro a bit to dry and duplicated. If you want a differtent one, run this
 
-```
+``` bash
 echo "I accidentally made a local shallow research tool, while learning about Large Language Models. Based on your prompt, it will search duck duck go and present the most compelling urls, with an interpretation guided by your prompt." \
   | llm -m qwen3:0.6B 'Remove duplication from this text, and make it more clear, touting the benefits of the tool'
 ```
@@ -56,7 +56,8 @@ One of the more interesting new models is a larger model, that consists of a num
 I was also doing some _deep research_ with ChatGPT on doing searches and working with text from webpages. I have enjoyed the new 'deep research' functionality, and have been playing with googles' AI Studio and LM notebook, that also allow you to add links and documents, and let an LLM work on that. I wanted to have more of that locally. I have been piping my notes into [llm](https://github.com/simonw/llm) and played with doing that directly with `curl` like so:
 
 ``` bash
-curl https://blog.logrocket.com/product-management/assumption-mapping-guide-examples | llm prompt -m mistral7 'Summarize the previous, explain what assumption mapping is, and what the benefits are'
+curl https://blog.logrocket.com/product-management/assumption-mapping-guide-examples \ 
+  | llm prompt -m mistral7 'Summarize the previous, explain what assumption mapping is, and what the benefits are'
 ```
 
 I needed to try a few models on that, as the javascript in the webpage confused some of them. So then it becomes more of an engineering problem than a whimsical query: how do I get the text out cleanly? Can I do this with multiple pages at a time?
