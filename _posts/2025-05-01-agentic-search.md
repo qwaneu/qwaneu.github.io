@@ -7,18 +7,43 @@ author: Willem van den Ende, Rob Westgeest, Marc Evers
 image: 
 ---
 
-I accidentally made a local shallow research tool, while learning about Large Language Models. Based on your prompt, it will search duck duck go and present the most compelling urls, with an interpretation guided by your prompt.
+I accidentally made a local shallow research tool, while learning about Large Language Models. As a small LLM put it: "This tool simplifies your research process, making it more effective and efficient for deep learning".
+
 
 
 Summary
 =====
 
-This archtectural spike lets you use a large language model to search the web, and get links and summaries as you wish. Where is the code? [on QWAN's freshly minted git server](https://gitea.apps.sustainabledelivery.com/mostalive/agentic-search/src/branch/main/) There are also [more detailed notes on some queries](https://gitea.apps.sustainabledelivery.com/mostalive/agentic-search/src/branch/main/notes)
+This archtectural spike lets you use an LLM to search the web and get links and summaries as you wish. Where is the code? [on QWAN's freshly minted git server](https://gitea.apps.sustainabledelivery.com/mostalive/agentic-search/src/branch/main/) There are also [more detailed notes on some queries](https://gitea.apps.sustainabledelivery.com/mostalive/agentic-search/src/branch/main/notes)
 
 It is fun to use, and gives me search queries and results I would not necessarily have come up with myself. I like serendipity.
 
+
+What is it good for, in more words?
+----
+
+As the [tiny Local Language Model that could](https://huggingface.co/Qwen/Qwen3-0.6B) once said:
+
+>  **Optimize Your Research with a Local, Efficient Tool**
+>
+>  Our local shallow research tool is now fully optimized for clarity and speed. By leveraging the most compelling URLs, we ensure your findings are not only accurate but also directly tied to your learning objectives.  
+>  **Key Benefits:**
+>    1. **Efficiency:** Rapid access to the most relevant resources, saving time and effort. 
+>    2. **Clarity:** Direct and easy-to-understand interpretations of the data, ensuring your learning is focused. 
+>    3. **Customization:** Tailored for your specific context, delivering the best possible outcomes.
+
+I couldn't resist playing with it. I found my original intro a bit to dry and duplicated. If you want a differtent one, run this
+
+```
+echo "I accidentally made a local shallow research tool, while learning about Large Language Models. Based on your prompt, it will search duck duck go and present the most compelling urls, with an interpretation guided by your prompt." \
+  | llm -m qwen3:0.6B 'Remove duplication from this text, and make it more clear, touting the benefits of the tool'
+```
+
+Link to the `llm` tool further down.
+
 Backstory
 =====
+
 
 I have been enjoying ChatGPT's deep research feature that came out recently. I'll tell you about that later. I also have been enjoying local Large Language Models (LLMs) for programming and sometimes summarizing sources or my own writing. For programming the qwen2-coder models 
 
@@ -43,7 +68,7 @@ Surprisingly hard. The devil is always in the details. But I can't complain abou
 Jargon buster
 ===
 
-If you've been as baffled as I have by some terminology in this space, congratulations, you have now seen example of [Retrieval Augmented Generation (RAG)](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/). 
+If you've been as baffled as I have by some terminology in this space, congratulations, you have now seen example of [Retrieval Augmented Generation (RAG)](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/). In this case, using search and urls to increase the knowledge availble to the model to reason about. 
 
 And 'agentic' in our case means giving an LLM a description of some tools that it can use in textual form (well, actually, JSON),  a way for it to communicate back in text what tool it wants to use and how, and an interpreter with plugins that can transform that into an actual function call, or external tool invocation. It is text, functions and (random) numbers all the way down.
 
