@@ -13,7 +13,7 @@ I accidentally made a local shallow research tool, while learning about Large La
 Summary
 =====
 
-The "Agentic Search" archtectural spike lets you use a large language model to search the web, and get links and summaries as you wish. [on QWAN's freshly minted git server](https://gitea.apps.sustainabledelivery.com/mostalive/agentic-search/src/branch/main/) There are also [more detailed notes on some queries](https://gitea.apps.sustainabledelivery.com/mostalive/agentic-search/src/branch/main/notes)
+This archtectural spike lets you use a large language model to search the web, and get links and summaries as you wish. Where is the code? [on QWAN's freshly minted git server](https://gitea.apps.sustainabledelivery.com/mostalive/agentic-search/src/branch/main/) There are also [more detailed notes on some queries](https://gitea.apps.sustainabledelivery.com/mostalive/agentic-search/src/branch/main/notes)
 
 It is fun to use, and gives me search queries and results I would not necessarily have come up with myself. I like serendipity.
 
@@ -40,13 +40,19 @@ ChatGPTs suggestions were interesting, and I learnt a bit about how LLMs were do
 
 Surprisingly hard. The devil is always in the details. But I can't complain about having a walking skeleton my own search and summarize tool that runs locally on my laptop after a days work, in much less than 100 lines of python code. Especially since until last week, I only used LLM tools out of the box, and did not do any programming with them. I'm quite happy with that!
 
-I've colleted some Heuristics so far, and there are some next steps and further reading after that.
+Jargon buster
+===
+
+If you've been as baffled as I have by some terminology in this space, congratulations, you have now seen example of [Retrieval Augmented Generation (RAG)](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/). 
+
+And 'agentic' in our case means giving an LLM a description of some tools that it can use in textual form (well, actually, JSON),  a way for it to communicate back in text what tool it wants to use and how, and an interpreter with plugins that can transform that into an actual function call, or external tool invocation. It is text, functions and (random) numbers all the way down.
 
 
-Heuristics, shot from the hip
+
+Bonus content: Heuristics, quick and dirty
 =====
 
-I might split these out into separate posts later, but thought these rules of thumb might be of use if you consider working with LLMs. It was useful for me to write them out at least, and reflect on how I was working while putting this architectural spike together.
+I've colleted some Heuristics so far, and there are some next steps and further reading after that. I might split these out into separate posts later, but thought these rules of thumb might be of use if you consider working with LLMs. It was useful for me to write them out at least, and reflect on how I was working while putting this architectural spike together.
 
 Heuristic - start small, increase power in models as needed
 -------
