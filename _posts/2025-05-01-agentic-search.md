@@ -2,7 +2,7 @@
 layout: post
 title: I accidentally made a shallow research tool 
 tags:
-- LLM, 
+- LLM 
 author: Willem van den Ende
 image: 
 ---
