@@ -32,7 +32,7 @@ As the [tiny Local Language Model that could](https://huggingface.co/Qwen/Qwen3-
 >    2. **Clarity:** Direct and easy-to-understand interpretations of the data, ensuring your learning is focused. 
 >    3. **Customization:** Tailored for your specific context, delivering the best possible outcomes.
 
-I couldn't resist playing with it. I found my original intro a bit to dry and duplicated. If you want a differtent one, run this
+I couldn't resist playing with it. I found my original intro a bit to dry and duplicated. If you want a different one, run this
 
 ``` bash
 echo "I accidentally made a local shallow research tool, while learning about Large Language Models. Based on your prompt, it will search duck duck go and present the most compelling urls, with an interpretation guided by your prompt." \
