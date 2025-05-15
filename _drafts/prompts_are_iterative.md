@@ -10,6 +10,10 @@ image:
 
 Wouter Lagerweij remarked *TODO exact quote** that he should practice writing prompts more. If at first you don't succeed etc. 
 
+I also heard people saying that they are not confident in writing prompts, and should go on a course to learn how to prompt. That is an option, of course. I also think that if you can ask questions, you can create a feedback loop in which you 
+
+
+
 While trying to get useful results out of [my happy shallow research accident](), I was unsure for how to best prompt the model to use the available tools (searching the web, and fetching urls). The exact question has gotten lost in time, I did not use the `llm` tool that keeps track of questions and answers it seems (I could not find the question). 
 
 
@@ -19,13 +23,26 @@ Asking questions is a skill, practice makes better
 
 I find that, like in Test Driven Development, wishful thinking is great. And the barrier to ask your computer a question is low. So making a habit of asking questions works wonders. It works better if you don't have to think about remembering the questions and answers, hence the next item:
 
-Use a tool that remembers your questions and answers {#reflect-on-questions}
+Keep a notebook
+----
+
+Keep a *Prompt Engineering Notebook* - PEN . A PEN pal helps you think out loud, and keep track of your experiments. 
+
+
+Next iteration is :
+
+Use tools that remembers your questions and answers {#reflect-on-questions}
 -----
 
 As mentioned, I forgot to copy-paste the prompt I used to ask the model about its agentic capabilities. I can guess from the answer, but it is not ideal. And I had to copy-paste them in my notes, which also does not always happen.
 
+The web chats of ChatGPT, google Gemini, and many open source models keep a list of chats on the left hand side (I am playing with Mollama on Ipad at the moment - screenshot), you can add chats to the left, and read back through your chats.
 
 The `llm` tool logs all of your questions, answers and metadata (e.g. how many tokens were used, which model was involved, time of request) and makes them searchable. 
+
+This fits well in my natural habitat for writing and experimenting. I often work with a terminal, and use a text editor instead of a word processor to write. Tools like `llm` integrate well with that way of working. 
+
+
 
 Disable the AI in your editor while writing prompts
 -----
