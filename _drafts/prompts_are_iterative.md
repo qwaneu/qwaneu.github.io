@@ -7,73 +7,122 @@ author: Willem van den Ende
 image: 
 ---
 
+I find that wishful thinking is great. And the barrier to ask your computer a question is low. So make a habit of asking your computer questions. It can work wonders, and if not, it might get you rolling on the floor laughing. 
 
-Wouter Lagerweij remarked *TODO exact quote** that he should practice writing prompts more. If at first you don't succeed etc. 
+I have collected a few tips that work well for me, and might work well for you.
 
-I also heard people saying that they are not confident in writing prompts, and should go on a course to learn how to prompt. That is an option, of course. I also think that if you can ask questions, you can create a feedback loop in which you 
-
-
-
-While trying to get useful results out of [my happy shallow research accident](), I was unsure for how to best prompt the model to use the available tools (searching the web, and fetching urls). The exact question has gotten lost in time, I did not use the `llm` tool that keeps track of questions and answers it seems (I could not find the question). 
-
-
-
-Asking questions is a skill, practice makes better
------
-
-I find that, like in Test Driven Development, wishful thinking is great. And the barrier to ask your computer a question is low. So making a habit of asking questions works wonders. It works better if you don't have to think about remembering the questions and answers, hence the next item:
-
-Keep a notebook
+Who is this post for? 
 ----
 
-Keep a *Prompt Engineering Notebook* - PEN . A PEN pal helps you think out loud, and keep track of your experiments. 
+- you want to do more with large language models (e.g ChatGPT), but don't feel confident
+
+- you feel somewhat confident, but can use more practice.
+
+I heard someone in the first categoy saying that they are not confident in writing prompts, and should go on a course to learn how to prompt. That is an option, of course. I also think that if you can ask questions, you can create a feedback loop in which you ask questions, look at the answer, and reflect on the process. You probably will reflect, consciously or not. Deliberate practice works.
+
+Wouter Lagerweij is in the first category - he remarked that he should practice writing prompts more. I believe this is the right thing to do - deliberate practice works well here. And I've found it a lot of fun.
+
+
+
+(we have a double introduction here, maybe rewrite the second one). Possibly the term 'Prompt engineering' doesn't help in the context of a casual user who is figuring out how to get more out of LLMs for their daily work.
+
+(this might go in the conclusion)
+There is a time and place for precise terminology, but casual use is probably not that place. Just sit back, relax and enjoy the ride!
+
+Everything you always wanted to know about *subject* but didn't dare to ask.
+
+So how do we practice?
+====
+
+- Ask the LLM how to ask it questions and give it instructions (reflective prompting)
+- Just do it
+- Keep a <strikethrough>notebook</strikethrough> PEN pal
+- Let the computer make the notebook
+- Invite the computer into your notebook
+- Pitfall: Disable auto-complete when writing prompts
+
+
+Just do it!
+-----
+
+*Just install the cloud app already* I tend to overcomplicate things. So I've made it easy to just use llms. I still have a ChatGPT subscription, and installed the app on my phone and tablet, so if I have some time to kill, I can mess around with it. There is also gemini inside google docs (I did not manage to switch this off), with a workspace subscription, and google workspace.
+
+I also like my privacy, I am still looking for good IOS apps for phone and tablet. I am trying `mollama` it seems allright, but is quite technical in it's look and feel and had trouble loading a message - suggestiosn welcome!
+
+Run *local models on your computer**
+I'll write about installing local models on your laptop separately, if anyone is interested. This field moves fast, and some tools will get you started, but also might leave you scratching your head.
+
+**TODO*** link 'some tools** to ollama
+
+Let the model tell you how to ask it questions - MIP, Model Informs Prompt {#model-informs-prompt}
+-----
+
+While trying to get useful results out of [my happy shallow research accident](), I was unsure for how to best prompt the model to use the available tools (searching the web, and fetching urls).
+
+It can work surprisingly well to 'just' ask them what they can do, or how to ask certain kinds of questions. Models are trained in different ways. They will all tell you something different, and you can use that to your advantage.
+
+Examples:
+
+_ How can I best ask you a question?_. Or making the first one more specific with *topic*:
+-_How can I best ask you a refactoring question?_. The answer will be different from one model to the next.
+
+Sometimes these prompts deliver bland results. For instance, asking my go-to local model `mlx-community/Qwen3-30B-A3B-8bit` 'How can I best ask you programming questions?** was not necessarily super insightful, but the common pitfalls were kind of interesting:
+
+**TODO*** replace the jargon in 'my local' with a link to the hugging face page of the model
+
+>> **7. Avoid Common Pitfalls**
+   - Don’t just post a code snippet and say "It doesn’t work.**  
+   - Avoid asking for entire solutions without showing your own effort.  
+   - Don’t ask for help with homework or assignments unless you’ve already tried solving it yourself.
+
+It is the kind of thing you might read on stack overflow as a recommendation. I don't think the model cares if you have put in any effort, or if it is a homework assignment! But saying more than "it doesn't work" does tend to help, encouring the model (in the instruction) 
+
+
+Keep a <strikethrough>notebook</strikethrough> PEN pal
+----
+
+**TODO** check if the strikethrough works
+
+Keep ing a *Prompt Engineering Notebook* - PEN can help. A PEN pal helps you think out loud, and keep track of your experiments. I use some command line tools that don't have an editor, writing longer prompts in an editor or word processor can help you clarify your thoughts before the model goes mental with it.
+
+Literal pen pals can also help. There are some private slack channels in which I think out loud, documenting my adventures, getting questions and feedback. I occasionally write summaries of long threads. This helps me clarify my thoughts, and the feedback and seeing others' approaches is valuable. 
+
 
 
 Next iteration is :
 
-Use tools that remembers your questions and answers {#reflect-on-questions}
+Let the computer be your notebook {#reflect-on-questions}
 -----
-
-As mentioned, I forgot to copy-paste the prompt I used to ask the model about its agentic capabilities. I can guess from the answer, but it is not ideal. And I had to copy-paste them in my notes, which also does not always happen.
 
 The web chats of ChatGPT, google Gemini, and many open source models keep a list of chats on the left hand side (I am playing with Mollama on Ipad at the moment - screenshot), you can add chats to the left, and read back through your chats.
 
-The `llm` tool logs all of your questions, answers and metadata (e.g. how many tokens were used, which model was involved, time of request) and makes them searchable. 
+Locally, I use he `llm` tool logs all of your questions, answers and metadata (e.g. how many tokens were used, which model was involved, time of request) and makes them searchable. 
 
-This fits well in my natural habitat for writing and experimenting. I often work with a terminal, and use a text editor instead of a word processor to write. Tools like `llm` integrate well with that way of working. 
+This fits well in my natural habitat for writing and experimenting. I often work with a terminal, and use a text editor instead of a word processor to write. Tools like `llm** integrate well with that way of working. 
+
+**TODO** provide link to llm tools
 
 
-
-Disable the AI in your editor while writing prompts
+Pitfall: Disable auto-complete when writing prompts
 -----
 
-Unless you want even more serendipity. I was writing a prompt, because I couldnt find a particular skill concept I remember hearing about, and PyCharm completed a full sentence, that had little bearing on what I wanted to ask.
+Some environments come with llm powered auto complete. Also known as _spicy autocomplete_. I am not a fan, not for code, and even less when I am trying to prompt. This is probably down to my way of working, YMMV. When writing, I am focused on getting ideas on paper, and don't necessarily pay much attention to what the computer is doing.
+
+. I was writing a prompt, because I couldnt find a particular skill concept I remember hearing about, and PyCharm completed a full sentence, that had little bearing on what I wanted to ask.
 Yesterdays opening prompt had a 'compelling URL' - compelling is not a word I would use in that context, so I suspect I may have autocompleted the prompt in a flash. That did get a funny result though.
 
-
-Let the model tell you how to ask it questions {#model-informs-prompt}
------
-
-Models are trained in different ways. It can work surprisingly well to 'just' ask them what they can do, or how to ask certain kinds of questions.
-
-
-Asking `mlx-community/Qwen3-30B-A3B-8bit` 'How can I best ask you programming questions?' was not necessarily super insightful, but the common pitfalls were kind of interesting:
-
->> **7. Avoid Common Pitfalls**
-    - Don’t just post a code snippet and say "It doesn’t work.**  
-   - Avoid asking for entire solutions without showing your own effort.  
-   - Don’t ask for help with homework or assignments unless you’ve already tried solving it yourself.
-
-It is the kind of thing you might read on stack overflow as a recommendation. 
-
-_What are you good at?_ Often gives me good results. or _How can I best ask you a refactoring question?_. The answer will be different from one model to the next.
+Unless you want even more serendipity, and see what the computer would think you should ask, as you are writing a question. I prefer to be more deliberate about it, which brings us to the next one:
 
 Let the model tell you what it can do 
 ------
 
+What are you good at?_ Often gives me good results. I used a variation of this prompt with [local model](TODO link)
+
 This was fun. I copied it somewhere - is it in the qwen3 repo? No, but the llm tool will have the history **TODO find prompt explanation**
 
-The question was not about asking questions, or generic what can you do. I was trying to figure out how to get the model to search (TODO link to agentic search)  2025/05/01/agentic-search.html
+The question was not about asking questions, or generic what can you do. I was trying to figure out how to get the model to search (TODO link to agentic search**  2025/05/01/agentic-search.html
+
+**TODO*** put the headings in a quote block, as they work as a brief explanation for things to think about when prompting.
 
 Pair thinking for one
 ----
