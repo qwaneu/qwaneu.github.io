@@ -10,3 +10,5 @@ vendor
 /_drafts/*.tex
 /_drafts/.DS_Store
 .DS_Store
+/out.jsonl
+/.idea/
