@@ -21,4 +21,4 @@ Afterthought
 
 This is of course also about giving myself license to post shorter posts. I&rsquo;m editing some of my explorations in large language models into posts, and they are either long and meandering, or short. I hope you&rsquo;ll enjoy a couple of short ones. And of course I also enjoy long posts, for instance this one [on how Jurgen Appelo use the theory of constraints to decide where to use LLMs for writing novels.](https://substack.jurgenappelo.com/p/humans-are-the-bottleneck) 
 
-P.S. I needed to find links for Rob and Simon. I had my LinkedIn feed open for a few moments, and a post from Rob bubbled up, pointing to Simon. So a feed has its' upsides. But still. Write and publish that post on a blog somewhere!
+P.S. I needed to find links for Rob and Simon. I had my LinkedIn feed open for a few moments, and a post from Rob bubbled up, pointing to Simon. So a feed has upsides. But still. Write and publish that post on a blog somewhere!
