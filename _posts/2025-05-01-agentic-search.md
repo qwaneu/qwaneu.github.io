@@ -14,7 +14,7 @@ I accidentally made a local shallow research tool, while learning about Large La
 Summary
 =====
 
-This archtectural spike lets you use an LLM to search the web and get links and summaries as you wish. Where is the code? [on QWAN's freshly minted git server](https://gitea.apps.sustainabledelivery.com/mostalive/agentic-search/src/branch/main/) There are also [more detailed notes on some queries](https://gitea.apps.sustainabledelivery.com/mostalive/agentic-search/src/branch/main/notes)
+This architectural spike lets you use an LLM to search the web and get links and summaries as you wish. Where is the code? [on QWAN's freshly minted git server](https://gitea.apps.sustainabledelivery.com/mostalive/agentic-search/src/branch/main/) There are also [more detailed notes on some queries](https://gitea.apps.sustainabledelivery.com/mostalive/agentic-search/src/branch/main/notes)
 
 It is fun to use, and gives me search queries and results I would not necessarily have come up with myself. I like serendipity.
 

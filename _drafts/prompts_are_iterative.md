@@ -122,7 +122,7 @@ This was fun. I copied it somewhere - is it in the qwen3 repo? No, but the llm t
 
 The question was not about asking questions, or generic what can you do. I was trying to figure out how to get the model to search (TODO link to agentic search**  2025/05/01/agentic-search.html
 
-**TODO*** put the headings in a quote block, as they work as a brief explanation for things to think about when prompting.
+**TODO*** put the headings in a quote block, as they work as a brief explanation for things to think about when prompting. And they work for a variety of tasks.
 
 Pair thinking for one
 ----
