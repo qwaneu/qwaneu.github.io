@@ -13,7 +13,7 @@ We have created a case that we use for teaching both strategic and tactical doma
 
 We are happy to announce that we are making this case publicly available, under the [Creative Commons Attribution-ShareAlike 4.0 license](https://creativecommons.org/licenses/by-sa/4.0/). This means you can use the case freely, also for commercial purposes, as long as you give appropriate credit. If you make derivative work (e.g. an improved or extended version), it should be distributed under the same license.
 
-You can [download the EdiTrain case here (PDF)]().
+You can [download the EdiTrain case here (PDF)](/attachments/editrain-20250602.pdf).
 
 ![zoomed out picture of an event storming result in Miro](/attachments/blogposts/2025/eventstorm-in-miro.png)
 
@@ -21,7 +21,8 @@ We use the case in combination with event storming exercises, to teach e.g. big 
 
 Give it a try, and share your experiences with us (and the rest of the world)! We've had fun using it, we are curious how it works for you and what suggestions for improvement or extension you will come up with.
 
-> Short text about what is Event Storming
+> **What is Event Storming?**  
+> [Event storming](https://www.avanscoperta.it/it/eventstorming/) is a collaborative design practice invented by Alberto Brandolini. It is a group brainstorming process using paper, post-its and pens, to collaboratively build a shared model of a domain.
 
 <aside>
   <p>
