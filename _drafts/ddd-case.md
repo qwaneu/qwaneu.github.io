@@ -1,7 +1,7 @@
 ---
 layout: post
 title: EdiTrain - our DDD Event Storming case
-tags:  
+tags:
  - DDD
 author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: /images/training_highres.png
