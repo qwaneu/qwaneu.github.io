@@ -72,10 +72,10 @@ recommended. Basic programming skills are required.
 ## Practical information
 
 * Duration: 2 days
-* Training infrastructure (including laptops) will be taken care of
-* This training is available as open enrolment and in-house.
+* Shared development environment will be taken care of. Participants only need a current web browser on their machine to participate.
+* This training is currently only available in-house. 
 * This training is available as half day follow up on our [test driven development training](/training/test-driven-development).
 
-## Register
+## Booking
 
-Please refer to [Mastering legacy code on Springest](https://www.springest.nl//qwan/mastering-legacy-code){:target="_blank"} for dates and registration or [contact us directly](/#contact).
+[Contact us directly](/#contact) to have a chat about how we can tailor a course to your needs, based on the materials that we have developed over the years.
