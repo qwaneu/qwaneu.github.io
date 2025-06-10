@@ -47,10 +47,11 @@ If you participate in this course, you will:
 
 ## Topics
 
-The first day is introductory, with an overview of refactorings, code
+The first day is introductory, working hands-on with refactorings, code
  smells, and how to break dependencies by finding seams in the code. We
  will do this through a mix of presentations, demonstrations and small
- exercises. You will also learn about the systemic causes and effects of
+ exercises. We use our refactoring cards **TODO image and link**
+ You will also learn about the systemic causes and effects of
  design debt and how refactoring in small steps can help you break out of
  a vicious cycle.
 
