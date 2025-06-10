@@ -2,7 +2,7 @@
 layout: post
 title: Publish short posts
 tags:
-- writing, LLM
+- writing
 author: Willem van den Ende
 image: /attachments/blogposts/2025/publishloop.svg
 ---
