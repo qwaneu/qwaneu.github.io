@@ -1,13 +1,5 @@
 ---
 layout: post
-title: Prompts are iterative 
-tags:
-- LLM
-author: Willem van den Ende
-image: 
----
----
-layout: post
 title: Prompts are iterative  - just do it!
 tags:
 - LLM
