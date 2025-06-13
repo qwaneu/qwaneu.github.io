@@ -15,24 +15,38 @@ needs by connecting the architecture and implementation to an evolving model of
 the problem domain. It can be applied as an agile approach to software
 development whilst recognising complexity.
 
-Mastering DDD and working from your domain will help you develop higher quality
-software products that will be better maintainable in the long run. It will
-guide your architecture and component decisions.
+Working from your domain using DDD patterns and practices will guide your architecture and component decisions. This will help you develop higher quality
+software products that will be better maintainable in the long run. 
 
 ## Goal
 
-Get an overview of Domain Driven Design; learn the basic concepts and modelling
-techniques like Domains, Bounded Contexts, Aggregates, Context Mapping, and
-Event Storming.
+Get an overview of Domain Driven Design and learn the basic concepts and modelling
+patterns and practices like subdomains, bounded contexts, aggregates, context mapping, and event storming.
+
+After this workshop, you will be able to:
+- explain what DDD is and what it is not;
+- use event storming to facilitate a domain modelling session;
+- explain patterns like subdomains, bounded contexts and aggregates and what they are intended for;
+- create a context map based on the outcome of an event storming session;
+- evaluate context boundaries using heuristics.
 
 ## Means
 
 We introduce Domain Driven Design as an approach to modelling and application
 architecture. We will guide you through the different techniques and patterns
-with lively hands-on modelling exercises. 
+with lively, hands-on collaborative modelling exercises. 
 
 This workshop focuses on the domain modelling aspect of DDD. Implementation and
 coding aspects are covered by the [Implementing Domain Driven Design workshop](/training/implementing-ddd).
+
+## Outline
+
+- presentation: Domain Driven Design - what & why
+- create a domain model collaboratively using event storming
+- find subdomains
+- identify bounded contexts & create a context map
+- do systems design with event storming: commands, policies, read models
+- find aggregates using heuristics
 
 ## Audience & prerequisites
 
@@ -50,5 +64,3 @@ recommended.
 * No laptops required
 
 [Please contact us for registration](/contact)
-
-{% include upcoming.md %}

@@ -1,34 +1,49 @@
 ---
-title: Domain Driven Design - Advanced Topics
+title: CQRS & Event Sourcing
 layout: other
-summary: Tackling Complexity with Patterns and clear trade-offs
+summary: Tackling complexity through CQRS and Event Sourcing with clear trade-offs
 tags: [modelling, domain driven design, architecture, event storming]
 ---
 
-Goal
---
+Domain Driven Design (DDD) connects stakeholders - users, business, developers - through shared language, connecting architecture and implementation to an evolving model of the problem domain. 
 
-Gain a deep understanding and hands-on experience of CQRS and Event Sourcing. From concepts to code.
+In our [Introducing DDD course](/training/ddd-introduction.md) we introduce DDD and its main modelling patterns and practices and our [Implementing DDD course](/training/implementing-ddd) covers translating a domain model into code. This course goes a step further and zooms in on two DDD architectural patterns that can help maintaining a grip on complexity and supporting scaling an application: Command Query Responsibility Segregation (CQRS) and Event Sourcing.
 
-Means
-----
-** TODO link to introducing DDD course**
-Domain-driven design (DDD) connects stakeholders (including the users) through shared language. But the devil is in the details.  This course day connects architecture and implementation to an evolving model of the problem domain. 
+**Command Query Responsibility Segregation (CQRS)** is a design pattern that separates handling commands and queries in an application. CQRS can lead to improved scalability, performance and maintenance.
 
-While the Implementing DDD course makes a beginning with translating a domain model into code, this workshop goes a step further into two DDD architectural patterns that, when needed, can maintain a grip on complexity and support scaling an application: Command Query Responsibility Segregation (CQRS** and Event Sourcing.
+**Event Sourcing** means storing the history of an application's state as a sequence of events. Instead of storing an aggregate's state, the state is dynamically derived from the events that have happened. This enables a more robust and fault-tolerant system. It also provides a clear audit trail, making it easier to recover from failures and facilitating reproducing faults when a system does not behave as expected.
 
-**Command Query Responsibility Segregation (CQRS)** is a design pattern that separates the responsibilities of handling commands and queries in an application. CQRS can lead to improved scalability, performance and maintenance.
+## Goal
 
-**Event Sourcing*** is about storing the history of an application's state as a sequence of events. Applying this pattern leads to storing events that have happened on an aggregate, and deriving the current state from the events. This approach results in a more robust and fault-tolerant system, as it provides a clear audit trail, makes it easier to recover from failures and facilitates reproducing faults when a system does not behave as expected.
+In this course, you will delve into CQRS and Event Sourcing, from concepts to code. Through a combination of theory and hands-on exercises, you will learn how to apply these patterns, including:
 
-Attendees perform hands-on exercises on both, and we will, as always, discuss trade-offs. For instance, Applying Event Sourcing and CQRS requires a higher initial investment. The benefits of e.g. replayable state or easier scaling must be worth it in a particular situation. Design patterns solve a problem in a context, and DDD patterns are no exception. If the context is not a good fit, don't apply the pattern.
+- separate write models and read models;
+- create meaningful APIs;
+- implement Event Sourcing to store events instead of current state;
+- handle domain model evolution and versioning;
+- optimize performance and concurrency control;
+- create a view derived from an event journal.
 
-Audience & prerequisites
----
+By the end of this course, you will have a deep understanding of CQRS and Event Sourcing, including benefits, trade-offs and applicability of these patterns. You will be able to apply these concepts to your own projects to improve maintainability, scalability, and performance.
 
-Software developers, architects; this workshop is suitable both for junior developers who want to grow and for more senior developers who’d like to sharpen their skills. Programming experience is required for this workshop.
+## Means
 
-Prerequisites courses:
----
-Introduction to Domain Driven Design
-Implementing Domain Driven Design
+Through a mix of theory, hands-on programming exercises, and discussion, we will cover the patterns and their trade-offs. Applying Event Sourcing and CQRS requires for instance a higher initial investment. The benefits, e.g. replayable state or easier scaling, must be worth it in a particular situation. 
+
+## Audience & prerequisites
+
+Software developers, architects. This workshop is suitable both for junior developers who want to grow and for more senior developers who’d like to sharpen their skills. Programming experience is required for this workshop.
+
+Prerequisites: participants should be familiar with DDD and its main patterns and they should know how these different patterns can be implemented in code. 
+This is covered by these workshops:
+
+- [Introduction to Domain Driven Design](/training/ddd-introduction.md)
+- [Implementing Domain Driven Design](/training/implementing-ddd)
+
+## Practical information
+
+* Duration: 1 day
+* Laptops required
+* This training is available as in-house training only.
+
+[Please contact us for registration](/contact)
