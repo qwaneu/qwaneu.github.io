@@ -7,7 +7,7 @@ tags: [modelling, domain driven design, architecture, event storming]
 
 Domain Driven Design (DDD) connects stakeholders - users, business, developers - through shared language, connecting architecture and implementation to an evolving model of the problem domain. 
 
-In our [Introducing DDD course](/training/ddd-introduction.md) we introduce DDD and its main modelling patterns and practices and our [Implementing DDD course](/training/implementing-ddd) covers translating a domain model into code. This course goes a step further and zooms in on two DDD architectural patterns that can help maintaining a grip on complexity and supporting scaling an application: Command Query Responsibility Segregation (CQRS) and Event Sourcing.
+In [Introducing DDD](/training/ddd-introduction.md), we introduce DDD and its main modelling patterns and practices and our [Implementing DDD](/training/implementing-ddd) course covers translating a domain model into code. This course goes a step further and zooms in on two DDD architectural patterns that can help maintaining a grip on complexity and supporting scaling an application: Command Query Responsibility Segregation (CQRS) and Event Sourcing.
 
 **Command Query Responsibility Segregation (CQRS)** is a design pattern that separates handling commands and queries in an application. CQRS can lead to improved scalability, performance and maintenance.
 
@@ -42,7 +42,7 @@ This is covered by these workshops:
 
 ## Practical information
 
-* Duration: 1 day
+* Duration: 1 or 2 days
 * Laptops required
 * This training is available as in-house training only.
 

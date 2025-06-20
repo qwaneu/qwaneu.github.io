@@ -65,7 +65,7 @@ If you have a need that is not covered by an existing course, [we are happy to m
 
     <article class="post-wrap">
       <div class="post">
-        <h2 class="entry-title"><a href="/training/ddd-introduction">Domain Driven Design Introduction</a></h2>
+        <h2 class="entry-title"><a href="/training/ddd-introduction">Introduction to Domain Driven Design</a></h2>
         <div class="post-meta">
         Making sense of software complexity
         </div>

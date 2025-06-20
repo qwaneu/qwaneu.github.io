@@ -60,7 +60,7 @@ recommended.
 
 ## Practical information
 
-* Duration: 1 day
+* Duration: 1 or 2 days
 * No laptops required
 
 [Please contact us for registration](/contact)
