@@ -21,6 +21,15 @@ em {
   font-style: italic;
 }
 
+.trainingpage-layout {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 1em;
+  column-gap: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
 .blogpage-layout {
   display: grid;
   grid-template-columns: auto 14em;
