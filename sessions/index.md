@@ -12,7 +12,7 @@ If you find something interesting and you would like to see it at an event near 
 ---
 
 - [Extreme Vibe Coding](2025/extreme_vibe_coding.md)
-- [Going down the waterfall iteratively - modling a view to our vibes](2025/iterative_waterfall_molding.md)
+- [Going down the waterfall iteratively - molding a view to our vibes](2025/iterative_waterfall_molding.md)
 
 Vintage
 ----
