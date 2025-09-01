@@ -47,10 +47,11 @@ If you participate in this course, you will:
 
 ## Topics
 
-The first day is introductory, with an overview of refactorings, code
+The first day is introductory, working hands-on with refactorings, code
  smells, and how to break dependencies by finding seams in the code. We
  will do this through a mix of presentations, demonstrations and small
- exercises. You will also learn about the systemic causes and effects of
+ exercises. We use our refactoring cards **TODO image and link**
+ You will also learn about the systemic causes and effects of
  design debt and how refactoring in small steps can help you break out of
  a vicious cycle.
 
@@ -72,10 +73,10 @@ recommended. Basic programming skills are required.
 ## Practical information
 
 * Duration: 2 days
-* Training infrastructure (including laptops) will be taken care of
-* This training is available as open enrolment and in-house.
+* Shared development environment will be taken care of. Participants only need a current web browser on their machine to participate.
+* This training is currently only available in-house. 
 * This training is available as half day follow up on our [test driven development training](/training/test-driven-development).
 
-## Register
+## Booking
 
-Please refer to [Mastering legacy code on Springest](https://www.springest.nl//qwan/mastering-legacy-code){:target="_blank"} for dates and registration or [contact us directly](/#contact).
+[Contact us directly](/#contact) to have a chat about how we can tailor a course to your needs, based on the materials that we have developed over the years.

@@ -56,6 +56,6 @@ This course is meant for managers, project leaders, IT customers, scrum masters,
 * No laptops required
 * This training is available as open enrolment and in-house.
 
-[Register for this course](/training/register)
+[Please contact us for registration](/contact)
 
 {% include upcoming.md %}
