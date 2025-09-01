@@ -3,7 +3,7 @@ title: Conference and meetup sessions
 layout: other-accessible
 ---
 
-Initially proposed for XP Days Benelux 2025 by Wouter Lagerweij and Willem van den Ende
+Accepted for XP Days Benelux 2025 by Wouter Lagerweij and Willem van den Ende
 
 # eXtreme Vibe Coding
 
