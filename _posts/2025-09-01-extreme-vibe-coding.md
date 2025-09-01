@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Extreme Vibe Coding
+title: Extreme Vibe Coding at XP Days Benelux
 tags:
 - LLM 
 author: Willem van den Ende
