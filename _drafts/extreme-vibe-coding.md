@@ -4,7 +4,7 @@ title: Extreme Vibe Coding
 tags:
 - LLM 
 author: Willem van den Ende
-image: 
+image: /attachments/blogposts/2025/xp_days2023_cropped.jpeg)
 ---
 
 Wouter Lagerweij and I will be running the [eXtreme Vibe Coding](/sessions/2025/extreme_vibe_coding.html) session in a one hour slot at XP Days Benelux 2025, in the Kapellerput in Heeze, NL on 27 or 28 November. We will be there for both days, and probably the pre-conference dinner.
@@ -13,6 +13,8 @@ What I like about XP days, is that it is still a place for experimental sessions
 
 I got a message from the XP Days Programme Committee last Saturday, asking if our
 session [eXtreme Vibe Coding](/sessions/2025/extreme_vibe_coding.html) could be done in 60 instead of the proposed 90 minutes. It can, but it might be a bit more live demo than hands-on work by the participants. 
+
+![A plenary session at XP Days Benelux 2023, someone presenting to a large gathering of onlookers, standing around. ](/attachments/blogposts/2025/xp_days2023_cropped.jpeg)
 
 I see now that we didn't put the timetable for the 60 minutes version in the  [session description](/sessions/2025/extreme_vibe_coding.html). We briefly discussed it while coming up with the session, and prefer more hands-on. The workaround I came up with while thinking about the committees' message was doinge a Birds of a Feather session in the evening to go more in-depth with those who are up for it. So here is hoping it gets scheduled for the first day. 
 
