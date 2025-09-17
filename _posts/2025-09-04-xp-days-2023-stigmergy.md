@@ -85,10 +85,14 @@ This story looked at how workshop templates spread and evolve as facilitators re
 
 ## Feedback and Reflections
 
+It's great when participants bring an attitude of experimentation. Kapellerput exemplifies this:
+
+
 > "I've never done this before, so I think I can do it!" – Pipi Longstocking
 
 (From a bag at the venue)
 
 The feedback was overwhelmingly positive. This was the third run of this workshop, and the first where participants tried to apply stigmergy to their own context. As organizers, we found it a good, fun experience.
 
-XP Days remains a place to run experimental sessions early and often. This isn't always clear to all people attending.
+XP Days remains a place to run experimental sessions early and often, which is great to see. Also nice to see that they appreciate sessions that work on the whole _and_ the parts (seeing, thinking, doing). Wouter Lagerweij and Willem will be running an experiment this november: [eXtreme Vibe coding](/2025/09/01/extreme-vibe-coding.html). See you there?
+
