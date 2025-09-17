@@ -23,4 +23,4 @@ Personally, I find working with a pair is great to question my assumptions, have
 
 We don't often run our full length pair programming workshop, but when we do it is fun and appears to stick with participants. _The Drawing Carousel_ is an integral part of it. Working in pairs, whether it is on code, product or anything really, is a skill that can be improved with deliberate practice.
 
-We are hoping to see you there, have a look at [the programme](https://xpdaysbenelux.org/programme-2025/).t
+We are hoping to see you there, have a look at [the programme](https://xpdaysbenelux.org/programme-2025/).
