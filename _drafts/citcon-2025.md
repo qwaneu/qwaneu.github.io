@@ -4,7 +4,7 @@ title: Citcon 2025
 tags:
 - community, conferences
 author: Willem van den Ende
-image: 
+image: /attachments/blogposts/2025/citcon2025-opening.jpeg
 ---
 
 I made a last minute-ish decision to attend CITCON friday night and saturday. I don't normally attend conferences on the weekend, as I prefer to spend time with family. But this was in my neck of the woods - it was in Woking, my side of London - only about 2 hr drive from Bath. And I thought it would be fun to see some people in real life, and possibly learn something. Since it is an open space conference, their is a fair chance that interesting topics turn up, in sessions and outside. I was not disappointed, to say the least. I also got a chance to run a zeroth session on moldable development and my and Stephan Eggermonts' adventures with making sense of generated typescript.
@@ -34,6 +34,18 @@ The [CITCON wiki](https://citconf.com/wiki/index.php) has an [overview of the se
 That left me free to explain why I feel Compilers should be in the curriculum (this warrants a separate rant post "why your software engineering program should have a compilers course", as some universities are dropping this). I just had so much fun doing the intro to compilers course at the University of Twente, and shortly after I started working, it turned out to be very practical. 
 
 The course was quite challenging, and had additional levels that you could do for extra credit, which me and my pair did. In hindsight, this removed barriers to considering these things. I never made my own programming language or intricate domain specific languages, but it lowered the barrier to selecting, say, XML parsers, having a feeling for how to integrate these things in to web applications and when to swap one for another (or break it open and make modifications if needed). Having written some parsing code just days before, this seemed like a natural fit. Apparently my 'practical' take was unexpected. Which is good. I was glad to hear that Imperial College has compilers in the program still, and hope this inspires to keep it. 
+
+## Observability + Experimentation = product signals
+
+Session by Gojko Adzic. It looks like his blog post [from bugs to beam](https://gojko.net/2024/09/30/from-bugs-to-beam/) covers the theory behind it. This session was an open discussion with an investigation in actual cases. Attend the next conference if you want to know more, because this is about all I can say. I learnt a lot. And it encouraged me to take one product out of stealth sooner rather than later. 
+
+I learnt quite a few things about retaining clients for software as a service. And maybe getting new ones in, although that is less obvious.
+
+## Spec Driven Development - WTF?
+
+Another one by Gojko Adzic. We tried the 'new' spec framework by Microsoft. It was fun to sit around a screen with a few interested people of different backgrounds and see if using a framework to generate prompts is worthwile. To me it felt like they captured some of the things I did with claude code all the way back in July, but there are better ways now. It seems like a great way to burn a lot of tokens quickly. Our own prompting could have been a bit better, so we could have gotten better results, but still. I am generating a lot less documentation in the process of producing software than I was before - you still have to read at least some of it up front, and when things go sideways (as they did) you have to read more, and there is a lot. At the end of the session, we had no working software, but were through the subscription limit for the next 4 hours. 
+
+This was still an hour well spent, now I have one thing on my radar less to worry about, and working with these tools in an informal group setting is a lot of fun. None of us was very impressed by the Given/When/Then 's produced, but good taste comes from experience, and experience comes from making mistakes. The structured multiple-choice questions were neat, but not enough were generated, so Claude Code went off and chose an old version of NodeJS (I have seen it do this on a regular basis, and prompt to search for recent long term support versions of everything when I do a new architectural spike. I would expect a framework to do this, but it did not generate the appropriate prompt).
 
 
 
