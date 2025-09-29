@@ -48,6 +48,14 @@ Another one by Gojko Adzic. We tried the 'new' spec framework by Microsoft. It w
 This was still an hour well spent, now I have one thing on my radar less to worry about, and working with these tools in an informal group setting is a lot of fun. None of us was very impressed by the Given/When/Then 's produced, but good taste comes from experience, and experience comes from making mistakes. The structured multiple-choice questions were neat, but not enough were generated, so Claude Code went off and chose an old version of NodeJS (I have seen it do this on a regular basis, and prompt to search for recent long term support versions of everything when I do a new architectural spike. I would expect a framework to do this, but it did not generate the appropriate prompt).
 
 
+## AI and Legacy Code
+
+I think this one was hosted by  [Roland Eschenburg](https://citconf.com/wiki/index.php?title=Roland_Eschenburg) but I am not sure, please correct me if I am wrong. This was a larger group discussion, not limited to AI (which is what you get with a bunch of systemic thinkers in the room). Various tips about using large language models to generate documentation and do smaller refactorings in batch. It felt there was largely consensus on the need to co-create buy in to invest in fast feedback loops (both socio and technical). Some classic DORA metrics also entered the chat - don't only look at the new shiny, but how long does it take the organisation to rectify a customer problem?
+
+# Wrap up
+
+I am still decompressing, it took me a while to write this down. I got some direct inspiration for bootstrapping product, as well as more of a feel from what is going on in the field than I get from (social) media.
+
 
 
 
