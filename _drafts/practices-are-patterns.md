@@ -9,33 +9,35 @@ author: Marc Evers
 image: /attachments/blogposts/2025/forces.png
 ---
 
-In this post, we'd like to offer a different perspective on practices.
 
 People try something in their team, it works great, then they go out in the
-world trying to sell everyone on that practice (yes, we did that too when we
-started out with eXtreme Programming in the early 2000s). When such a "best practice" goes out in the wild, it will work for some, but less so for others. We end up with "Why you should do Test Driven Development (TDD)" vs "TDD does not work" posts, which do not help advancing our field.
+world trying to sell everyone on that practice. We may have done this too when 
+eXtreme Programming worked much better for us than expected in the early 2000s. When such a "best practice" goes out in the wild, it will work for some, but less so for others. We end up with "Why you should do Test Driven Development (TDD)" versus "TDD does not work" posts. This kind of dialectic does nothing to advance our field. We find it more useful to understand _how_ a practice works _why_ it works, _where_ it works, and where it doesn't. Over the years, we have been pleasantly surprised to find that some of our favourite practices work in more contexts than we expected. That still does not mean they work everywhere. When a practice is not a good fit, this can teach us something about how it works.
 
-A practice fits in a context. It resolves specific forces in a specific context. So it is actually a pattern. 
+In this post, we'd like to offer a different perspective on practices:
+
+> A practice fits in a context. It resolves specific forces in a specific context. If we have a minimum of three instances where it works, it constitutes _a pattern_. 
 
 ![Depiction of set of forces interacting in a context](/attachments/blogposts/2025/forces.png)
 
 ## Introduction
 
-Our trade and this year's "methodologies" (agile, scrum, DevOps, SAFe, cloud native, ...) are full of "best practices"; vendors, consultants, coaches push these on the organisations and teams they work with; 
+Our trade is full of "best practices". Scare quotes intentional. So are the flavour of the months' "methodologies", e.g agile, scrum, DevOps, SAFe, cloud native, spec kit, the list goes on. Vendors, consultants, coaches and enthusiastic employees push these on the organisations they work with; 
 
-we saw this with agile; teams were coached (often actually more coerced) into adopting scrum practices like sprints, daily standups, backlog refinements, sprint retrospectives, roles like product owners and scrum masters (under promises of delivering faster, doing more work in less time, being agile)
+We saw this with agile. Teams were coached, or rather more often coerced, into adopting scrum practices like sprints, daily standups, backlog refinements, sprint retrospectives. And roles like product owners and scrum masters where created without much thought as to how they would function to deliver value. How? With promises of delivering faster, doing more work in less time, "being agile".
 
-sometimes this works, teams become more productive
-other teams complain about all those meetings, talk about 'rituals', going through the motions, eagerly waiting to get back at "work"; even though the agile coach, scrum consultant, or scrum master explained why the team is doing these, the developers; "this practice worked for me (so it should also good for you!)"
+We are using 'agile' as an example here, but you might see the same with emerging practices around working with Large Language Models (LLMs). **TODO FOOTNOTE?:** [2]  Many people conflate 'agile' with 'scrum', just as many people conflate 'AI' with "LLM"
 
+Sometimes this works: teams become more productive. For some definition of productive. **TODO NOTE TO MARC** _productivity is ill defined (see Dr Cat Hicks). May benefit from a footnote and a link, defining productivity is a side-quest in this post_
+Other teams complain about 'all these meetings', they talk about 'rituals', 'going through the motions', eagerly waiting to get back to "real work"; even though the agile coach, scrum consultant, or scrum master explained why the team is doing these. "this practice worked for me, so it should also work for you! Just wait and see!)"
 
-working in short cycles is a good thing right? just like daily checking in with the team on progress and impediments so we can help each other out, or reflecting frequently and adjusting how we work? so what are we missing? is this a matter of the team is not doing the practices well enough? do we need more explanation on why these "best practices" are good?
+Working in short cycles is a good thing right? just like checking in every day with the team on progress and impediments, so that we can help each other out, or reflecting frequently and adjusting how we work? So what are we missing? Is this a matter of the team not doing the practices well enough? Do we need more explanation on why these "best practices" are good? To the consultant, this may sound like sound advice. To the recipients, this is likely to come across as "you are holding it wrong".
 
 ## A different perspective on practices
 
-We think part of the problem is how we think about/regard practices. Often people regard a practice in isolation, as something that is (generally) a good thing to do; as things that have proven themselves in the field, so we should be able to apply them; often it's used as a kind of recipe that we can follow to achieve 'goodness' (the practice has already proven itself so we don't need to)
+We think part of the problem is how we think about practices. Oftentimes people regard a practice in isolation. A practice is seen as something that is generally a good thing to do. This 'thing' has proven itself in the field, therefore we should be able to apply it. The practice is used as a kind of recipe that we can follow to achieve 'goodness'. No need to determine whether this practice will work, or is working for us. The practice has already proven itself so we don't need to.
 
-We use a different perspective on practices; see practices not as isolated good or proven things you can do, but as patterns:
+We use a different perspective on practices. We see practices not as an isolated good or universally proven things you can do, but as patterns:
 
 
 <div class="shout-out">
@@ -50,7 +52,12 @@ We use a different perspective on practices; see practices not as isolated good 
   </div>
 </div>
 
-The original Extreme Programming book already hinted at this by presenting practices being part of a web of practices which support each other; a practice works in the context of other practices.
+Both eXtreme Programming and Scrum emerged from the design patterns community in the 1990s. Scrum was published as a pattern language in 1998. XP emerged on the C2 Wiki, originally known as the "Portland Pattern repository". 
+**TODO links to XP on the C2 wiki and the Scrum patterns paper. also there was https://www.scrumplop.org/** https://www.researchgate.net/publication/2464945_SCRUM_An_extension_pattern_language_for_hyperproductive_software_development (1998) , more easily downloaded from https://www.scruminc.com/wp-content/uploads/2014/05/Scrum-A-Pattern-Language-for-Software-Development.pdf
+
+The first edition of eXtreme Programming explained echoes this, by presenting practices as part of a web of practices which support each other. 
+
+**TODO NOTE there are contexts in which 'best practice' is useful (see wardley maps, ah, wardley maps are mentioned further down or wearing seatbelts in a car), or when a routine culture is sufficient for a context**
 
 ![Extreme Programming web of practices (partial)](/attachments/blogposts/2025/xp-web-partial.png)
 
@@ -58,10 +65,10 @@ So a practice resolves forces in a specific context. That means that whenever we
 
 TBD: examples + counter example
 
-It also means that when we are enthusiastic about a practice or think it is a very good idea, we should present not only the practice itself but also share something about the forces it intends to resolve, the possible consequences, the trade-offs behind it.
+It also means that when we are enthusiastic about a practice or think it is a very good idea, we should present not only the practice itself, but also share something about the forces it intends to resolve, the possible consequences, and the trade-offs behind it.
 
-TBD: example
-
+TBD: example (**TODO**I don't have the 2nd edition of James Shore's book, but the first one contained contra indications for practices, could be online - a link might make this piece more self-contained, just lift the 'when not to' section).
+  * [ ] 
 ## From best to good fit
 
 This also helps getting rid of calling something a "*best* practice", which we are so eager to do in our trade. A "best practices" implies that there is nothing better and detaches a practice from context - 'best' often implies 'universally applicable'. It takes away opportunity to discuss actual fit to the situation at hand ('best' leaves little room for arguing) or considering trade-offs ('best' implies all trade-offs are in favor of this practice).
@@ -72,16 +79,16 @@ If we seek 'best' i.e. universally applicable things,
 these tend to be at a different level, more like principles. [Simon Wardley's
 doctrine principles](https://learnwardleymapping.com/doctrine/) - standard ways
 of operating and techniques that you almost always should apply - is a good
-example. These principles are at a higher abstraction level than something concrete like a Definition of Done. This enables generativity for the principles - fitting/applying it to your specific context.
-
+example. These principles are at a higher abstraction level than something concrete like a Definition of Done. This enables generativity for the principles: you have to adjust the fit before applying it to your specific context.
 
 TBD (of aparte post?): unintended consequences; eg story points; bad or good!
 (-> you might learn sth new about context/applicability; unintended consequences could also be beneficial!); example: mocks (well-defined, bounded applicability, widely used outside, people hate mocks)
+**WILLEM note - dit is een aparte post denk ik. ik weet ook niet of Definition of Done nu vaak 'concreet' genoeg is. misschien een ander voorbeeld dan DoD. TDD, Sprint'?**
 
 ## Discovering context
 
 So how do you learn what context a practice is a good fit for? Practices are usually discovered:
-1. Someone tries something or observes specific behaviour, for example: when there is a serious & urgent production issue, teams tend to work closely together, sync'ing frequently so that they can steer their efforts and incorporate new insights effectively; together with the observation that when people do a meeting standing up, the meeting tends to be short & focused; this gave rise to trying daily standups, not just for emergency work but also for normal work (broadening the applicability).
+1. Someone tries something or observes specific behaviour. For example: when there is a serious and urgent production issue, teams tend to work closely together. They sync frequently so that they can steer their efforts and incorporate new insights effectively. Together with the observation that when people do a meeting standing up, the meeting tends to be short and focused. This gave rise to trying daily standups, not just for emergency work but also for normal work, thus broadening the applicability.
 2. Having discovered such a behaviour, they start sharing it, e.g. at conferences or meetups, in blog posts. Their message is basically "this worked well for me, I think it is useful for others as well".
 3. More people start "selling" the practice. They advice to teams to start do it or coach/mentor/guide/force them into doing it.
 4. As more and more teams are trying it, there will be success and failure stories. This often follows a kind of hype cycle, first people are overly enthusiastic, then the "it does not work" critics come along. Both the success and failure stories are actually useful, because they provide information about the boundaries of bounded applicability and the consequences.
