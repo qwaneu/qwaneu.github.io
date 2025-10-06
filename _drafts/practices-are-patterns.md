@@ -26,7 +26,7 @@ Our trade is full of "best practices". Scare quotes intentional. So are the flav
 
 We saw this with agile. Teams were coached, or rather more often coerced, into adopting scrum practices like sprints, daily standups, backlog refinements, sprint retrospectives. And roles like product owners and scrum masters where created without much thought as to how they would function to deliver value. How? With promises of delivering faster, doing more work in less time, "being agile".
 
-We are using 'agile' as an example here, but you might see the same with emerging practices around working with Large Language Models (LLMs). **TODO FOOTNOTE?:** [2]  Many people conflate 'agile' with 'scrum', just as many people conflate 'AI' with "LLM"
+We are using 'agile' as an example here, but you might see the same with emerging practices around working with Large Language Models (LLMs) for instance. 
 
 Sometimes this works: teams become more productive. For some definition of productive. **TODO NOTE TO MARC** _productivity is ill defined (see Dr Cat Hicks. AH cool, noted down below. forward ref?). May benefit from a footnote and a link, defining productivity is a side-quest in this post_
 Other teams complain about 'all these meetings', they talk about 'rituals', 'going through the motions', eagerly waiting to get back to "real work"; even though the agile coach, scrum consultant, or scrum master explained why the team is doing these. "this practice worked for me, so it should also work for you! Just wait and see!)"
@@ -37,7 +37,7 @@ Working in short cycles is a good thing right? just like checking in every day w
 
 We think part of the problem is how we think about practices. Oftentimes people regard a practice in isolation. A practice is seen as something that is generally a good thing to do. This 'thing' has proven itself in the field, therefore we should be able to apply it. The practice is used as a kind of recipe that we can follow to achieve 'goodness'. No need to determine whether this practice will work, or is working for us. The practice has already proven itself so we don't need to.
 
-We use a different perspective on practices. We see practices not as an isolated good or universally proven things you can do, but as patterns:
+We use a different perspective on practices. We see practices not as an isolated good or universally proven things you can do, but as <a href="/blog-by-tag#tag-patterns">patterns</a>
 
 
 <div class="shout-out">
@@ -46,14 +46,17 @@ We use a different perspective on practices. We see practices not as an isolated
   </div>
   <div>
     <p style="text-align: left;"><strong>What is a pattern?</strong></p>
-    <p style="text-align: left;">'Pattern' has different related definitions, we like to use the one by [Christopher Alexander](/2022/03/24/alexander.html) from he 1970s (which has also been a source for software design [patterns](/blog-by-tag#tag-patterns):</p>
-    <p style="text-align: left;"><em>"Each pattern describes a problem which occurs over and over again in our environment, and then describes the core of the solution to that problem, in such a way that you can use this solution a million times over, without ever doing it the same way twice.”</em> (A Pattern Language, p.x)</p>
-    <p style="text-align: left;">A pattern describes the context (which includes the larger patterns it completes), the problem, and the solution as a field of relationships required to solve the stated problem in that context.</p>
+    <p style="text-align: left;">'Pattern' has different related definitions, we use the one by <a href="/2022/03/24/alexander.html">Christopher Alexander</a> from his book <a href="https://www.patternlanguage.com/bookstore/pattern-language.html">A Pattern Language</a>:</p>
+    <p style="text-align: left;"><em>"Each pattern describes a problem which occurs over and over again in our environment, and then describes the core of the solution to that problem, in such a way that you can use this solution a million times over, without ever doing it the same way twice.”</em> 
+    </p>
   </div>
 </div>
 
-Both eXtreme Programming and Scrum emerged from the design patterns community in the 1990s. Scrum was published as a pattern language in 1998. XP emerged on the C2 Wiki, originally known as the "Portland Pattern repository". 
-**TODO links to XP on the C2 wiki and the Scrum patterns paper. also there was https://www.scrumplop.org/** https://www.researchgate.net/publication/2464945_SCRUM_An_extension_pattern_language_for_hyperproductive_software_development (1998) , more easily downloaded from https://www.scruminc.com/wp-content/uploads/2014/05/Scrum-A-Pattern-Language-for-Software-Development.pdf
+A **pattern** describes the **context**, the **problem**, and the **solution** as a _field of relationships_ required to solve the stated problem in that context.
+
+The context includes the larger patterns it completes. The pattern description often describes counter-indications for when the pattern is not applicable. 
+
+Both eXtreme Programming and Scrum emerged from the design patterns community in the 1990s. Scrum was published as a pattern language in 1998. XP emerged on the C2 Wiki, originally known as the "Portland Pattern repository". See the references section.
 
 The first edition of eXtreme Programming explained echoes this, by presenting practices as part of a web of practices which support each other. 
 
@@ -117,12 +120,18 @@ So what does this way of looking at practices bring us?
 > This is not a new perspective by the way. <a href="http://www.extremeprogramming.org/">Extreme Programming</a> with its 12 practices and underlying principles and values was born from in the 1990s from the patterns community. This has been an important source for us on how to look at practices.  
 > Another source has been the Cynefin sensemaking framework, e.g. for the concept of <a href="https://cynefin.io/wiki/Bounded_Applicability">bounded applicability</a> of practices.
 
-## References
+## Further reading 
 
 - Christopher Alexander, [The Timeless Way of Building](https://www.patternlanguage.com/bookstore/timeless-way-of-building.html) &  [A Pattern Language](https://www.patternlanguage.com/bookstore/pattern-language.html)
 - [Cynefin framework](https://cynefin.io/wiki/Cynefin)
 - Kent Beck, [Extreme Programming Explained (1st edition)](https://openlibrary.org/books/OL18104604M/Extreme_programming_explained)
 - Cat Hicks' [Research on software teams](https://www.drcathicks.com/research)
+- Various authors, [Scrum, A Pattern Language for Software Development ](https://www.scruminc.com/wp-content/uploads/2014/05/Scrum-A-Pattern-Language-for-Software-Development.pdf). For dating, [research gate Scrum pattern language](
+https://www.researchgate.net/publication/2464945_SCRUM_An_extension_pattern_language_for_hyperproductive_software_development) - 
+ 
+
+**TODO links to XP on the C2 wiki and the Scrum patterns paper. also there was 
+
 
 
 <aside>
