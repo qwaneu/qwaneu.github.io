@@ -117,8 +117,6 @@ So what does this way of looking at practices bring us?
 **TODO** the nothing new bit can now be integrated above.
 
 > **Nothing new?**  
-> This is not a new perspective by the way. <a href="http://www.extremeprogramming.org/">Extreme Programming</a> with its 12 practices and underlying principles and values was born from in the 1990s from the patterns community. This has been an important source for us on how to look at practices.  
-> Another source has been the Cynefin sensemaking framework, e.g. for the concept of <a href="https://cynefin.io/wiki/Bounded_Applicability">bounded applicability</a> of practices.
 
 ## Further reading 
 
@@ -128,9 +126,9 @@ So what does this way of looking at practices bring us?
 - Cat Hicks' [Research on software teams](https://www.drcathicks.com/research)
 - Various authors, [Scrum, A Pattern Language for Software Development ](https://www.scruminc.com/wp-content/uploads/2014/05/Scrum-A-Pattern-Language-for-Software-Development.pdf). For dating, [research gate Scrum pattern language](
 https://www.researchgate.net/publication/2464945_SCRUM_An_extension_pattern_language_for_hyperproductive_software_development) - 
- 
+- The Cynefin sensemaking framework, e.g. for the concept of <a href="https://cynefin.io/wiki/Bounded_Applicability">bounded applicability</a> of practices.
 
-**TODO links to XP on the C2 wiki and the Scrum patterns paper. also there was 
+**TODO links to XP on the C2 wiki
 
 
 
