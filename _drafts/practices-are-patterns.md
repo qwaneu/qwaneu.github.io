@@ -10,35 +10,40 @@ image: /attachments/blogposts/2025/forces.png
 ---
 
 
-People try something in their team, it works great, then they go out in the
-world trying to sell everyone on that practice. We may have done this too when 
-eXtreme Programming worked much better for us than expected in the early 2000s. When such a "best practice" goes out in the wild, it will work for some, but less so for others. We end up with "Why you should do Test Driven Development (TDD)" versus "TDD does not work" posts. This kind of dialectic does nothing to advance our field. We find it more useful to understand _how_ a practice works _why_ it works, _where_ it works, and where it doesn't. Over the years, we have been pleasantly surprised to find that some of our favourite practices work in more contexts than we expected. That still does not mean they work everywhere. When a practice is not a good fit, this can teach us something about how it works.
+People try something in their team, it works great, and then they go out in the
+world trying to sell everyone on that practice. We've done this too when 
+eXtreme Programming worked much better for us than expected in the early 2000s. When such a "best practice" goes out in the wild, it will work for some, but less so for others. So we end up with "Why you should do Test Driven Development (TDD)" versus "TDD does not work" positions. 
 
-In this post, we'd like to offer a different perspective on practices:
+This kind of dialectic does nothing to advance our field. We find it more useful to understand _how_ a practice works, _why_ it works, _where_ it works, and where it doesn't. Over the years, we have been pleasantly surprised to find that some of our favourite practices work in more contexts than we expected. That still does not mean they work everywhere. When a practice is not a good fit, it teaches us something about how it works.
 
-> A practice fits in a context. It resolves specific forces in a specific context. If we have a minimum of three instances where it works, it constitutes _a pattern_. 
+In this post, we will present a different perspective on practices:
 
-![Depiction of set of forces interacting in a context](/attachments/blogposts/2025/forces.png)
+> A practice fits in a context. It resolves specific forces in a specific context. If we have a minimum of three instances where it works, it constitutes _a pattern_.
+
+
+![Depiction of set of forces interacting in a context](/attachments/blogposts/2025/forces.png){: class="post-image post-image-50" }
+
 
 ## Introduction
 
-Our trade is full of "best practices". Scare quotes intentional. So are the flavour of the months' "methodologies", e.g agile, scrum, DevOps, SAFe, cloud native, spec kit, the list goes on. Vendors, consultants, coaches and enthusiastic employees push these on the organisations they work with; 
+Our trade is full of "best practices", scare quotes intentional. So are the flavour of the months' "methodologies", like Agile, Scrum, DevOps, SAFe, Cloud Native, Spec Kit, the list goes on. Vendors, consultants, coaches and enthusiastic employees push these on the organisations they work with. 
 
-We saw this with agile. Teams were coached, or rather more often coerced, into adopting scrum practices like sprints, daily standups, backlog refinements, sprint retrospectives. And roles like product owners and scrum masters where created without much thought as to how they would function to deliver value. How? With promises of delivering faster, doing more work in less time, "being agile".
+We saw this with agile. Teams were coached, or often coerced, into adopting Scrum practices like sprints, daily standups, backlog refinements, sprint retrospectives. Roles like product owners and scrum masters where created without much thought as to how they would function to deliver value. How? Through promises of delivering faster, doing more work in less time, "being agile".
 
 We are using 'agile' as an example here, but you might see the same with emerging practices around working with Large Language Models (LLMs) for instance. 
 
-Sometimes this works: teams become more productive. For some definition of productive. **TODO NOTE TO MARC** _productivity is ill defined (see Dr Cat Hicks. AH cool, noted down below. forward ref?). May benefit from a footnote and a link, defining productivity is a side-quest in this post_
-Other teams complain about 'all these meetings', they talk about 'rituals', 'going through the motions', eagerly waiting to get back to "real work"; even though the agile coach, scrum consultant, or scrum master explained why the team is doing these. "this practice worked for me, so it should also work for you! Just wait and see!)"
+Sometimes this works and a team becomes more productive - for some definition of [productive](/2023/01/12/productivity-is-systemic.html), as productivity is ill defined for software teams.
+Many other teams complain about "all these meetings", they talk about "rituals", they're going through the motions, eagerly waiting to get back to the "real work", even though the agile coach, scrum consultant, or scrum master explained the why of these practices.
 
-Working in short cycles is a good thing right? just like checking in every day with the team on progress and impediments, so that we can help each other out, or reflecting frequently and adjusting how we work? So what are we missing? Is this a matter of the team not doing the practices well enough? Do we need more explanation on why these "best practices" are good? To the consultant, this may sound like sound advice. To the recipients, this is likely to come across as "you are holding it wrong".
+Working in short cycles is a good thing right? Just like checking in every day with the team on progress and impediments, so that we can help each other out? Or reflecting frequently and adjusting the way we work? So what are we missing? Is the team not doing the practices well enough? Do we need to explain more? To the consultant, this may sound like sound advice. To the recipients, this is likely to come across as "you are holding it wrong".
 
-## A different perspective on practices
+## A different perspective
 
-We think part of the problem is how we think about practices. Oftentimes people regard a practice in isolation. A practice is seen as something that is generally a good thing to do. This 'thing' has proven itself in the field, therefore we should be able to apply it. The practice is used as a kind of recipe that we can follow to achieve 'goodness'. No need to determine whether this practice will work, or is working for us. The practice has already proven itself so we don't need to.
+We think part of the problem is how we think about practices. We often regard a practice in isolation, as something that is a generally good thing to do. This thing has proven itself in the field, therefore we should be able to apply it. We use the practice as a recipe, to achieve "goodness". No need to determine whether this practice will work - the practice has already proven itself so we don't need to.
 
-We use a different perspective on practices. We see practices not as an isolated good or universally proven things you can do, but as <a href="/blog-by-tag#tag-patterns">patterns</a>
+We see practices not as an isolated good or universally proven things you can do, but as <a href="/blog-by-tag#tag-patterns">patterns</a>.
 
+## Patterns
 
 <div class="shout-out">
   <div>
@@ -46,93 +51,72 @@ We use a different perspective on practices. We see practices not as an isolated
   </div>
   <div>
     <p style="text-align: left;"><strong>What is a pattern?</strong></p>
-    <p style="text-align: left;">'Pattern' has different related definitions, we use the one by <a href="/2022/03/24/alexander.html">Christopher Alexander</a> from his book <a href="https://www.patternlanguage.com/bookstore/pattern-language.html">A Pattern Language</a>:</p>
+    <p style="text-align: left;">We use the pattern concept from <a href="/2022/03/24/alexander.html">Christopher Alexander</a> from his book <a href="https://www.patternlanguage.com/bookstore/pattern-language.html">A Pattern Language</a>:</p>
     <p style="text-align: left;"><em>"Each pattern describes a problem which occurs over and over again in our environment, and then describes the core of the solution to that problem, in such a way that you can use this solution a million times over, without ever doing it the same way twice.”</em> 
     </p>
   </div>
 </div>
 
-A **pattern** describes the **context**, the **problem**, and the **solution** as a _field of relationships_ required to solve the stated problem in that context.
+A **pattern** describes the **context**, the **problem**, and the **solution** as a _field of relationships_ required to solve the stated problem in that context. The context includes the larger patterns it completes. The pattern description often describes counter-indications for when the pattern is not applicable. 
 
-The context includes the larger patterns it completes. The pattern description often describes counter-indications for when the pattern is not applicable. 
+Both eXtreme Programming (XP) and Scrum emerged from the Design Patterns community in the 1990s. Scrum was published as a pattern language in 1998. XP emerged on the [C2 Wiki](https://wiki.c2.com/), originally known as the "Portland Pattern repository".
 
-Both eXtreme Programming and Scrum emerged from the design patterns community in the 1990s. Scrum was published as a pattern language in 1998. XP emerged on the C2 Wiki, originally known as the "Portland Pattern repository". See the references section.
+The first edition of the eXtreme Programming Explained boek echoes this, by presenting practices as part of a web of practices which support each other. 
 
-The first edition of eXtreme Programming explained echoes this, by presenting practices as part of a web of practices which support each other. 
+![Extreme Programming web of practices (partial)](/attachments/blogposts/2025/xp-web-partial.png){: class="post-image post-image-70" }
 
-**TODO NOTE there are contexts in which 'best practice' is useful (see wardley maps, ah, wardley maps are mentioned further down or wearing seatbelts in a car), or when a routine culture is sufficient for a context**
-
-![Extreme Programming web of practices (partial)](/attachments/blogposts/2025/xp-web-partial.png)
-
-So a practice resolves forces in a specific context. That means that whenever we are talking about a practice, or recommending one, or trying to implement one, we need to be aware of the applicable context for this practice and how it fits the current context.
+So a practice resolves forces in a specific context. That means that whenever we are talking about a practice, or recommending one, or trying to implement one, we need to be aware of the applicable context and how the practice fits.
 
 TBD: examples + counter example
 
-It also means that when we are enthusiastic about a practice or think it is a very good idea, we should present not only the practice itself, but also share something about the forces it intends to resolve, the possible consequences, and the trade-offs behind it.
+It also means that when we are enthusiastic about a practice, we should present not only the practice itself, but also the forces it intends to resolve, possible consequences, and trade-offs.
 
 TBD: example (**TODO**I don't have the 2nd edition of James Shore's book, but the first one contained contra indications for practices, could be online - a link might make this piece more self-contained, just lift the 'when not to' section).
-  * [ ] 
+
 ## From best to good fit
 
-This also helps getting rid of calling something a "*best* practice", which we are so eager to do in our trade. A "best practices" implies that there is nothing better and detaches a practice from context - 'best' often implies 'universally applicable'. It takes away opportunity to discuss actual fit to the situation at hand ('best' leaves little room for arguing) or considering trade-offs ('best' implies all trade-offs are in favor of this practice).
+This also helps getting rid of calling something a "*best* practice". A "best practice" implies that there is nothing better and detaches a practice from context. It removes the opportunity to discuss actual fit to the situation at hand or considering trade-offs - "best" implies all trade-offs are in favor of this practice.
 
-So no 'best practice', but rather 'good practice' (leaving room for situation fitness and finding even better practices) or - even more appropriate - a practice that is a good fit for this situation.
-
-If we seek 'best' i.e. universally applicable things,
-these tend to be at a different level, more like principles. [Simon Wardley's
-doctrine principles](https://learnwardleymapping.com/doctrine/) - standard ways
-of operating and techniques that you almost always should apply - is a good
-example. These principles are at a higher abstraction level than something concrete like a Definition of Done. This enables generativity for the principles: you have to adjust the fit before applying it to your specific context.
-
-TBD (of aparte post?): unintended consequences; eg story points; bad or good!
-(-> you might learn sth new about context/applicability; unintended consequences could also be beneficial!); example: mocks (well-defined, bounded applicability, widely used outside, people hate mocks)
-**WILLEM note - dit is een aparte post denk ik. ik weet ook niet of Definition of Done nu vaak 'concreet' genoeg is. misschien een ander voorbeeld dan DoD. TDD, Sprint'?**
+If we seek "best" i.e. universally applicable things, these tend to be at a different level, more like principles. A good example are [Simon Wardley's
+doctrine principles](https://learnwardleymapping.com/doctrine/), standard ways
+of operating and techniques that you almost always should apply. These are at a higher abstraction level than something concrete like a Definition of Done. This enables generativity for the principles: you have to adjust the fit before applying it to your specific context.
 
 ## Discovering context
 
-So how do you learn what context a practice is a good fit for? Practices are usually discovered:
-1. Someone tries something or observes specific behaviour. For example: when there is a serious and urgent production issue, teams tend to work closely together. They sync frequently so that they can steer their efforts and incorporate new insights effectively. Together with the observation that when people do a meeting standing up, the meeting tends to be short and focused. This gave rise to trying daily standups, not just for emergency work but also for normal work, thus broadening the applicability.
-2. Having discovered such a behaviour, the finders start sharing it. You then see the behaviour pop up for instance at conferences, meetups, or blogposts. Their message is basically "this worked well for me, I think it is useful for others as well".
-3. More people start "selling" the practice. They advise teams or organsiations to start doing it or coach/mentor/guide/force them into doing it.
-4. As more and more teams are trying it, there will be success and failure stories. This often follows a kind of hype cycle, first people are overly enthusiastic, then the "it does not work" critics come along. Both the success and failure stories are actually useful, because they provide information about the boundaries of bounded applicability and the consequences.
+So how do you learn what context a practice is a good fit for? Let's take a look at how practices are often discovered:
+
+1. *Someone tries something or observes behaviour*. For example, teams tend to work closely together, when there is a urgent production issue. They synchronize work frequently so that they can redirect their efforts while they discover new insights. Someone also observed that when people do a meeting standing up, the meeting tends to be short and focused. This gave rise to daily standups, not just for emergency work but also for normal work, broadening the applicability.
+2. *The person starts sharing this as something that works well*. The idea pops up at conferences, at meetups, in blog posts. Their message is basically "this worked for me, I think it is useful for others as well".
+3. *More people start trying and selling the practice*. They advise teams or organisations to start doing it or coach/mentor/guide/force them into doing it.
+4. *As more and more teams are trying it, there will be success and failure stories*. This tends to follow the hype cycle, first people are overly enthusiastic, then the "can't possibly work" critics come along. 
 
 Unfortunately, as mentioned in the introduction, the "it works" "no it does not" debate that emerges from step 4 is not very useful.
+Both success and failure stories are actually useful, because they provide information about the boundaries of bounded applicability and the consequences.
 
-Although much evidence for practices remains anecdotal, often worsened with appeals to authority, there is also a slowly growing body of evidence coming from research. Initiatives like the annual [DORA research](https://dora.dev) and the [research done by Cat Hicks](https://www.drcathicks.com/research) provide more and more insights.
+Although much evidence for practices remains anecdotal, often worsened with appeals to authority, there is a growing body of evidence coming from initiatives like the annual [DORA research report](https://dora.dev) and the [research done by Cat Hicks](https://www.drcathicks.com/research), which provide more and more insights in what works why
 
 ## Implications 
 
 So what does this way of looking at practices bring us?
 
-- Regarding a practice in isolation is not useful, and could even be harmful. To apply a practice properly, we need to know which forces it resolves, the underlying trade-offs and consequences, and any counter-indications. 
-- We don't find it useful to talk about why a practice works or does not work. Writing an agitated blog post about "why Test Driven Development does not work" is not useful. Sharing how you tried TDD and how you found a specific situation where it was a lot of work and provided limited benefits does provide useful knowledge.
-- Copying a practice that seems to be working for someone else without taking situation and history into account will probably not give the desired results. The value of studying the visible behaviour of successful teams or organisations do is limited without context knowledge.
-- Don't impose or "install" a practice on someone or a system like team, group, or organisation. Focus on how it fits the situation at hand. Disregarding context can even backfire - people picking up a dislike for e.g. Test Driven Development because it has been pushed upon them with proper regard for the context they are in. [THIS MAY BE A SEPARATE POST Based on 2 encounters at agile cambridge 2025 Conversely, if a practice works in a team, apart from osmosing new team members, also help them understand the underlying theory. We sometimes encounter people lucky enough to have their first job in a functioning XP team, who then struggle to explain these practices to the next team. Also see antony marcano on different dora levels. if you are up and to the right, it is difficult to see for those in the middle. ]
-- Failure stories are as important as success stories, as long as these are beyond the "I tried this for 30 minutes and it didn't work". Failure stories help find boundaries and trade-offs. Furthermore, people learn more from failure stories than success stories (+Snowden reference?).
-- A practice is pattern; it is not a recipe. It is not something you can follow blindly, to get a guaranteed result. Learning a practice often involves some (or substantial) skills and know-how. It also needs to be made fit it to the situation. Heuristics can help if these are available. Stories from others can also help. (TODO link to heuristics category in our blog)
-- It can still be useful to experiment with a practice - "let's try this and see what happens". Make this an informed "try"; look for success or failure indicators, and for unintended consequences. You might learn something new about context or applicability; unintended consequences can also be beneficial!
-(**TODO**I wrote this before seeing the experiment, I think the note about giving enough time is important, but am too tired to merge both bullets right now)
-- [ ] (continuing on the 30mins observationa above) Even after carefully considering the context and trade-offss, we find it most effective to introduce a practice as an _experiment_. The people who will apply the pattern, agree to use the practice to the best of their ability, with plenty of reflection in between, for a significant period of time, say six weeks. The proof (or refutation) of the pudding is in the eating.
+- Regarding a practice in isolation is not useful, and could even be harmful. To apply a practice properly, we need to know which forces it resolves, its trade-offs, consequences, and any counter-indications.
+- We don't find it useful to talk about why a practice works or does not work. Writing an agitated blog post about "why Test Driven Development does not work" is not useful. Sharing how you tried Test Driven Development in a specific situation, where it turned out to be a lot of work with limited benefits does provide useful knowledge.
+- Copying a practice that seems to be working for someone else without taking situation and history into account will probably not give the desired results (although you might be lucky). 
+- Don't impose or "install" a practice on someone or a system like team, group, or organisation. Focus on how it fits the situation at hand. Disregarding context can backfire - people picking up a dislike for e.g. Test Driven Development because it has been pushed upon them with proper regard for their situation.
+- Failure stories are as important as success stories, as long as these are beyond the "I tried this for 30 minutes and it didn't work". Failure stories help find boundaries and trade-offs. Furthermore, people learn more from failure stories than success stories.
+- A practice is pattern, not a recipe. You cannot follow it blindly and expect a guaranteed outcome. Learning a practice often involves learning skills and know-how. <a href="/blog-by-tag#tag-heuristics">Heuristics</a> can help, as well as stories from others.
+- Even after carefully considering context and trade-offs, we find it most effective to introduce a practice as an _experiment_. The people who will apply the pattern, agree to use the practice to the best of their ability, with plenty of reflection in between, for a significant period of time, say six weeks. The proof (or refutation) of the pudding is in the eating. Look for success or failure indicators, and notice unintended consequences. You might learn something new about context or applicability.
 
-**TODO** the nothing new bit can now be integrated above.
-
-> **Nothing new?**  
-> This is not a new perspective by the way. <a href="http://www.extremeprogramming.org/">Extreme Programming</a> with its 12 practices and underlying principles and values was born from in the 1990s from the patterns community. This has been an important source for us on how to look at practices.  
-> Another source has been the Cynefin sensemaking framework, e.g. for the concept of <a href="https://cynefin.io/wiki/Bounded_Applicability">bounded applicability</a> of practices.
 
 ## Further reading 
 
 - Christopher Alexander, [The Timeless Way of Building](https://www.patternlanguage.com/bookstore/timeless-way-of-building.html) &  [A Pattern Language](https://www.patternlanguage.com/bookstore/pattern-language.html)
-- [Cynefin framework](https://cynefin.io/wiki/Cynefin)
+- [Cynefin sense-making framework](https://cynefin.io/wiki/Cynefin) & the concept of [bounded applicability](https://cynefin.io/wiki/Bounded_Applicability")
 - Kent Beck, [Extreme Programming Explained (1st edition)](https://openlibrary.org/books/OL18104604M/Extreme_programming_explained)
 - Cat Hicks' [Research on software teams](https://www.drcathicks.com/research)
 - Various authors, [Scrum, A Pattern Language for Software Development ](https://www.scruminc.com/wp-content/uploads/2014/05/Scrum-A-Pattern-Language-for-Software-Development.pdf). For dating, [research gate Scrum pattern language](
 https://www.researchgate.net/publication/2464945_SCRUM_An_extension_pattern_language_for_hyperproductive_software_development) - 
- 
-
-**TODO links to XP on the C2 wiki and the Scrum patterns paper. also there was 
-
-
+- [C2 Wiki](https://wiki.c2.com/); [C2 Wiki page on eXtreme Programming](https://wiki.c2.com/?ExtremeProgramming)
 
 <aside>
   <h3>TBD</h3>
