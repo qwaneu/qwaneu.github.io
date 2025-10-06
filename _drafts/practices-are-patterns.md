@@ -61,17 +61,15 @@ A **pattern** describes the **context**, the **problem**, and the **solution** a
 
 Both eXtreme Programming (XP) and Scrum emerged from the Design Patterns community in the 1990s. Scrum was published as a pattern language in 1998. XP emerged on the [C2 Wiki](https://wiki.c2.com/), originally known as the "Portland Pattern repository".
 
-The first edition of the eXtreme Programming Explained boek echoes this, by presenting practices as part of a web of practices which support each other. 
+The first edition of the eXtreme Programming Explained book echoes this, by presenting practices as part of a web of practices which support each other. 
 
 ![Extreme Programming web of practices (partial)](/attachments/blogposts/2025/xp-web-partial.png){: class="post-image post-image-70" }
 
 So a practice resolves forces in a specific context. That means that whenever we are talking about a practice, or recommending one, or trying to implement one, we need to be aware of the applicable context and how the practice fits.
 
-TBD: examples + counter example
+Take the practice of using a [Definition of Done](https://agilealliance.org/glossary/definition-of-done/) for instance. It is often pushed as a "best practice", but we have met many teams where the Definition of Done was collecting dust on the wall (or in a corner on Confluence). A Definition of Done is helpful when where there is ambiguity around when feature is done. Agreeing on an explicit checklist of criteria can help the team.
 
-It also means that when we are enthusiastic about a practice, we should present not only the practice itself, but also the forces it intends to resolve, possible consequences, and trade-offs.
-
-TBD: example (**TODO**I don't have the 2nd edition of James Shore's book, but the first one contained contra indications for practices, could be online - a link might make this piece more self-contained, just lift the 'when not to' section).
+It also means that when we are enthusiastic about a practice, we should present not only the practice itself, but also the forces it intends to resolve, possible consequences, and trade-offs. A nice example is how Jim Shore describes [the practice of retrospectives](https://www.jamesshore.com/v2/books/aoad1/retrospectives) in his Art of Agile Development book, providing contra-indications when retrospectives might not work.
 
 ## From best to good fit
 
@@ -79,7 +77,7 @@ This also helps getting rid of calling something a "*best* practice". A "best pr
 
 If we seek "best" i.e. universally applicable things, these tend to be at a different level, more like principles. A good example are [Simon Wardley's
 doctrine principles](https://learnwardleymapping.com/doctrine/), standard ways
-of operating and techniques that you almost always should apply. These are at a higher abstraction level than something concrete like a Definition of Done. This enables generativity for the principles: you have to adjust the fit before applying it to your specific context.
+of operating and techniques that you almost always should apply. A doctrine pattern like "Focus on user needs" is more abstract than for instance a Definition of Done. This enables generativity for the principles: you have to adjust the fit before applying it to your specific context.
 
 ## Discovering context
 
@@ -107,24 +105,23 @@ So what does this way of looking at practices bring us?
 - A practice is pattern, not a recipe. You cannot follow it blindly and expect a guaranteed outcome. Learning a practice often involves learning skills and know-how. <a href="/blog-by-tag#tag-heuristics">Heuristics</a> can help, as well as stories from others.
 - Even after carefully considering context and trade-offs, we find it most effective to introduce a practice as an _experiment_. The people who will apply the pattern, agree to use the practice to the best of their ability, with plenty of reflection in between, for a significant period of time, say six weeks. The proof (or refutation) of the pudding is in the eating. Look for success or failure indicators, and notice unintended consequences. You might learn something new about context or applicability.
 
-**TODO** the nothing new bit can now be integrated above.
-
-> **Nothing new?**  
-
 ## Further reading 
 
 - Christopher Alexander, [The Timeless Way of Building](https://www.patternlanguage.com/bookstore/timeless-way-of-building.html) &  [A Pattern Language](https://www.patternlanguage.com/bookstore/pattern-language.html)
 - [Cynefin sense-making framework](https://cynefin.io/wiki/Cynefin) & the concept of [bounded applicability](https://cynefin.io/wiki/Bounded_Applicability")
 - Kent Beck, [Extreme Programming Explained (1st edition)](https://openlibrary.org/books/OL18104604M/Extreme_programming_explained)
 - Cat Hicks' [Research on software teams](https://www.drcathicks.com/research)
-- Various authors, [Scrum, A Pattern Language for Software Development ](https://www.scruminc.com/wp-content/uploads/2014/05/Scrum-A-Pattern-Language-for-Software-Development.pdf). For dating, [research gate Scrum pattern language](
-https://www.researchgate.net/publication/2464945_SCRUM_An_extension_pattern_language_for_hyperproductive_software_development) - 
-- [C2 Wiki](https://wiki.c2.com/); [C2 Wiki page on eXtreme Programming](https://wiki.c2.com/?ExtremeProgramming)
+- Various authors, [Scrum, A Pattern Language for Software Development ](https://www.scruminc.com/wp-content/uploads/2014/05/Scrum-A-Pattern-Language-for-Software-Development.pdf) ([originally from 1998](
+https://www.researchgate.net/publication/2464945_SCRUM_An_extension_pattern_language_for_hyperproductive_software_development))
+- [C2 Wiki](https://wiki.c2.com/)
+- [eXtreme Programming page on the C2 Wiki](https://wiki.c2.com/?ExtremeProgramming)
+- The original [Domain Driven Design book](https://archive.org/download/ebooks_202003/Eric%20Evans/Domain-driven%20Design%20%281503%29/Domain-Driven%20Design_%20Tackling%20Complexity%20in%20the%20Heart%20of%20Software.pdf) was also written as a collection of patterns
 
 <aside>
-  <h3>TBD</h3>
-  <p>TBD</p>
+  <p>
+What practices fit your situation? Let's discover this together.
+  </p>
   <p><div>
-    <a href="/consulting">Learn more about our consultancy services</a>
+    <a href="/contact">Contact us when you're interested!</a>
   </div></p>
 </aside>
