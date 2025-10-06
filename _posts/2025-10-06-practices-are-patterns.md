@@ -2,9 +2,11 @@
 layout: post
 title: Practices are Patterns
 tags:
-  - architecture
+  - agile
   - patterns
+  - complexity
   - systems thinking
+  - eXtreme Programming
 author: Marc Evers
 image: /attachments/blogposts/2025/forces.png
 ---
@@ -91,7 +93,7 @@ So how do you learn what context a practice is a good fit for? Let's take a look
 Unfortunately, as mentioned in the introduction, the "it works" "no it does not" debate that emerges from step 4 is not very useful.
 Both success and failure stories are actually useful, because they provide information about the boundaries of bounded applicability and the consequences.
 
-Although much evidence for practices remains anecdotal, often worsened with appeals to authority, there is a growing body of evidence coming from initiatives like the annual [DORA research report](https://dora.dev) and the [research done by Cat Hicks](https://www.drcathicks.com/research), which provide more and more insights in what works why
+Although much evidence for practices remains anecdotal, often worsened with appeals to authority, there is a growing body of evidence coming from initiatives like the annual [DORA research report](https://dora.dev) and the [research done by Cat Hicks](https://www.drcathicks.com/research), which provide more and more insights in what works why.
 
 ## Implications 
 
