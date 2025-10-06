@@ -46,7 +46,7 @@ We use a different perspective on practices. We see practices not as an isolated
   </div>
   <div>
     <p style="text-align: left;"><strong>What is a pattern?</strong></p>
-    <p style="text-align: left;">'Pattern' has different related definitions, we like to use the one by Christopher Alexander from he 1970s (which has also been a source for software design patterns):</p>
+    <p style="text-align: left;">'Pattern' has different related definitions, we like to use the one by [Christopher Alexander](/2022/03/24/alexander.html) from he 1970s (which has also been a source for software design [patterns](/blog-by-tag#tag-patterns):</p>
     <p style="text-align: left;"><em>"Each pattern describes a problem which occurs over and over again in our environment, and then describes the core of the solution to that problem, in such a way that you can use this solution a million times over, without ever doing it the same way twice.”</em> (A Pattern Language, p.x)</p>
     <p style="text-align: left;">A pattern describes the context (which includes the larger patterns it completes), the problem, and the solution as a field of relationships required to solve the stated problem in that context.</p>
   </div>
