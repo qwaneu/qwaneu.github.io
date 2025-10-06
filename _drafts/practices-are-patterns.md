@@ -107,6 +107,9 @@ So what does this way of looking at practices bring us?
 - A practice is pattern, not a recipe. You cannot follow it blindly and expect a guaranteed outcome. Learning a practice often involves learning skills and know-how. <a href="/blog-by-tag#tag-heuristics">Heuristics</a> can help, as well as stories from others.
 - Even after carefully considering context and trade-offs, we find it most effective to introduce a practice as an _experiment_. The people who will apply the pattern, agree to use the practice to the best of their ability, with plenty of reflection in between, for a significant period of time, say six weeks. The proof (or refutation) of the pudding is in the eating. Look for success or failure indicators, and notice unintended consequences. You might learn something new about context or applicability.
 
+**TODO** the nothing new bit can now be integrated above.
+
+> **Nothing new?**  
 
 ## Further reading 
 

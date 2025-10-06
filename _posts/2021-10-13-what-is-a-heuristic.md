@@ -5,6 +5,7 @@ tags:
   - test driven development
   - feedback
   - books
+  - heuristics
 author: Willem van den Ende, Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2021/tdd/tom-wheatley-CYyVIx3Y648-unsplash.jpg
 ---
