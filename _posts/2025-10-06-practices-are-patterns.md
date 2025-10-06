@@ -7,7 +7,7 @@ tags:
   - complexity
   - systems thinking
   - eXtreme Programming
-author: Marc Evers
+author: Marc Evers, Willem van den Ende
 image: /attachments/blogposts/2025/forces.png
 ---
 
