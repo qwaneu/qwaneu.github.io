@@ -30,7 +30,7 @@ In this post, we will present a different perspective on practices:
 
 Our trade is full of "best practices", scare quotes intentional. So are the flavour of the months' "methodologies", like Agile, Scrum, DevOps, SAFe, Cloud Native, Spec Kit, the list goes on. Vendors, consultants, coaches and enthusiastic employees push these on the organisations they work with. 
 
-We saw this with agile. Teams were coached, or often coerced, into adopting Scrum practices like sprints, daily standups, backlog refinements, sprint retrospectives. Roles like product owners and scrum masters where created without much thought as to how they would function to deliver value. How? Through promises of delivering faster, doing more work in less time, "being agile".
+We saw this with agile. Teams were coached, or often coerced, into adopting Scrum practices like sprints, daily standups, backlog refinements, sprint retrospectives. Roles like product owners and scrum masters were created without much thought as to how they would function to deliver value. How? Through promises of delivering faster, doing more work in less time, "being agile".
 
 We are using 'agile' as an example here, but you might see the same with emerging practices around working with Large Language Models (LLMs) for instance. 
 
