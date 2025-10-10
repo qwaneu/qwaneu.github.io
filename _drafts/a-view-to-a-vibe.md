@@ -5,17 +5,18 @@
  - moldable development
  - LLM
  author: Willem van den Ende
- image: 
+ image: /attachments/blogposts/2025/gt-ts-black-and-green-squares.svg
 ---
 
-Since April, I've been experimenting more intensively with augmented code generation, quite often with a clear-ish vision, a pair, tests and other of our [favourite engineering practices](2025/10/06/practices-are-patterns.html). I may have been successful in getting a line of business application to a point wher 80% of the features can be co-created with LLM augmented development. 20% is still hard. 
+Since April, I've been experimenting more intensively with augmented code generation, quite often with a clear-ish vision, a pair, tests and other of our [favourite engineering practices](2025/10/06/practices-are-patterns.html). I may have been successful in getting a line of business application to a point where 80% of the features can be co-created with LLM augmented development. 20% is still hard. 
 
 ## Sometimes typing is the bottleneck
 
 When you have many ideas, the bottleneck consists of refining ideas, exploring options. LLMs helped me go back and forth on my ideas (although they tend to agree, so you have to be careful how to phrase questions, or run them multiple times) is generating code. LLM Augmented Development, or LL-MAD for short helps in generating code. Sometimes to explore options, sometimes to go into production. Ideally we want to work in steps, and work incrementally. 
 
-## And then the bottleneck moves to judging
-The bottlenecks then shifts to judging the output. Explorory testing (see vasco duarte podcast) to judge the output works. Putting on a product managers' hat and looking at the cycle time, how many attempts are needed to get back to a stable state (tests green, exploratory tests pass, tests of satisfactory quality) works, but is slow. We made two graphic web front-ends (each over 600 tests, 5000 and 30000 lines of production javascript code as measured by [cloc]). They each validated some of our assumptions. The larger one had some annoying defects. The smaller one could not evolve further. Both gave rise to a system metaphor - Massive Multiplayer Co-operative Online Game (MMCOG) that made the designs in both of them obsolete. Progresss!
+## And then the bottleneck moves to assessing
+
+The bottlenecks then shifts to assessing the output. Explorory testing (see vasco duarte podcast) to assess the output works. Putting on a product managers' hat and looking at the cycle time, how many attempts are needed to get back to a stable state (tests green, exploratory tests pass, tests of satisfactory quality) works, but is slow. We made two graphic web front-ends (each over 600 tests, 5000 and 30000 lines of production javascript code as measured by [cloc]). They each validated some of our assumptions. The larger one had some annoying defects. The smaller one could not evolve further. Both gave rise to a system metaphor - Massive Multiplayer Co-operative Online Game (MMCOG) that made the designs in both of them obsolete. Progresss!
 
 Editors note: Discussions about design have been kept generic, so as to not to distract from the narrative, and hopefully make it accessible for a larger audience.
 
@@ -36,6 +37,21 @@ We wanted to see the dependencies in the generated code, both inside and to the 
 Working in small steps, and making progress remains one of our favourite practices.
 
 ## More squares - where are the tests? 
+
+
+![Four of the squares are now green. one square is smaller than the other three.](/attachments/blogposts/2025/gt-ts-black-squares.svg)
+
+space
+
+![tbd](/attachments/blogposts/2025/gt-ts-black-and-green-squares.svg)
+
+
+gt-ts-dependencies-dominance-tree.svg
+gt-ts-imports-three-test-files.svg
+gt-ts-black-squares.svg
+gt-ts-dependencies-force-layout.svg
+gt-ts-dependencies-circle.svg 
+gt-ts-imports-more-test-files.svg
 
 
 ## How are our dependencies going?
@@ -65,6 +81,8 @@ Not sure if this belongs in the post. The relation with linting is iterative. LL
 Assessment is the process of understanding a situation around a system enough to make a decision - Tudor Girba. 
 
 Post about our favourite practices.
+
+The value of dumb questions - Stephan is getting better at glamorous toolkit by me asking beginner questions. I don't know w 
 
 -> situational awarenes
 
