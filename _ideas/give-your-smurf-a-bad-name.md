@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Choose a bad name to trigger better naming
+title: Give your smurf a bad name - choose a bad name to trigger better naming
 tags:
 - 
 author: Willem van den Ende, Marc Evers
-image: 
+image: /attachments/blogposts/2025/smurf.jpg
 ---
 
 "Choose a bad name to trigger better naming" is a heuristic we often use when programming, but it also works for prose, the ordinary language people use in speaking or writing. 
