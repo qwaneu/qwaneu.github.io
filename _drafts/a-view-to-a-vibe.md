@@ -79,8 +79,12 @@ We went back to the block views from earlier, and added the imports as small squ
 
 CONTINUE HERE
 ![tbd](/attachments/blogposts/2025/gt-ts-imports-three-test-files.svg)
+
+second run, having the agent generate tests:
+
 ![tbd](/attachments/blogposts/2025/gt-ts-imports-more-test-files.svg)
 
+We can see that this was a success in the sense that we have more tests, but a failure, in that the tests are tightly coupled to other files. I would expect two coloured blocks, one for a test framework maybe and one for a domain object. Five or six imports for a test file is a lot. Might be ok for an integration test if there is no facade, but not here.
 
 ## Relation with linting
 
