@@ -8,9 +8,7 @@
  image: 
 ---
 
-Since April, I've been experimenting more intensively with augmented code generation, quite often with a clear-ish vision, tests and other of our favourite engineering practices **TODO link to practices are paterns post**. Before that I was too busy at a client that had an AI policy that was too ambigous for us **TODO footnote**, so we decided to delete all assistant, and only do chats with e.g. local LLMs, and when we did use public ones, we changed the domain. (this is worth a separate short post - exploit symmetry between domains to hide your intention from LLMs)
-
-Since april ... practices. I may have been successful in getting a line of business application to a point wher 80% of the features can be co-created with LLM augmented development. 20% is still hard. This is the domain of spikes - build many to throw away, you will anyway [TODO brooks reference]  - that is its' own post. 
+Since April, I've been experimenting more intensively with augmented code generation, quite often with a clear-ish vision, a pair, tests and other of our [favourite engineering practices](2025/10/06/practices-are-patterns.html). I may have been successful in getting a line of business application to a point wher 80% of the features can be co-created with LLM augmented development. 20% is still hard. 
 
 ## Sometimes typing is the bottleneck
 
@@ -28,14 +26,47 @@ But. The next time, I did not want to find out after six large stories that we c
 
 We want to ship working software, that is of value to the people it serves. Frequently. Feedback is not always pleasant, but usually useful, and helps us go forward, or retrace our steps when necessary. 
 
+Creating this is an iterative process. It starts with gut feel. Or, as Stephan says, this is where experience comes in handy. We are looking to get insight in the code, at a high level, with details ready to hand. One perspective leads to another.
+
+
+## Baby steps - get the view you need, not the view you want
+
+I wanted to see the dependencies in the generated code, both inside and to the outside. 
+
+## More squares - where are the tests? 
+
+
+## How are our dependencies going?
+
+
+## Know where to stop
+
+
+## Relation with linting
+
+Not sure if this belongs in the post. The relation with linting is iterative. LL-MAD makes it easy to create linting rules that work well enough, but as with regular development, the amount of linting and the timing of it matters. As Steve Freeman said at CITCON, it is a bummer when a long build fails, because in the last step, after all the compilation steps and tests have been done, a linter finds that an incorrect amount of spaces was used for indentation and rejects the build. Coding assistants can get in a loop when they try to commit, and are prevented because of linting. The linting feedback may not neatly fit into the current context. We are experimenting with where to put what linting rules and tools. 
+
+
 # Further reading
 
 - Adrian Cockroft
 - Vasco Duarte podcast
 - Mythical man month
+- Tudor Girba - [Developers spend most of their time figuring the system out](https://lepiter.io/feenk/developers-spend-most-of-their-time-figuri-9q25taswlbzjc5rsufndeu0py/)
 
+# Credits
+
+[Stephan Eggermont](https://www.legacycode.nl) was instrumental in co-creating the visualisations and editing the blogpost.
 
 # Cutting room floor 
+
+Assessment is the process of understanding a situation around a system enough to make a decision - Tudor Girba. 
+
+Post about our favourite practices.
+
+-> situational awarenes
+
+Follow up post: treemap for the larger repos - what kinds of file live where? 
 
 I'm working on a successor for WeReview - a conference session review system (needs one liner. stephan?) and, with Stephan Eggermont in stealth on something that has Multiplayer Online Collaborative Game as systems metaphor. We'll refer to this as 'Game' going forward. FOOTNOTE this metaphor only came about as a result of several rounds of experimentation. It is, I think, paying off, because it allows us to think of designs that are relatively simple, and libraries and designs that we can re-purpose or re-use.
 
@@ -54,3 +85,7 @@ The other frontend spike is in typescript - this also has a backend, but just fo
 Visualizations do not need to be pretty or have legends - we made them, and use them every day, so I know what the colors mean. Green = test, Red is :w
  
 spec-driven development is a post for another day, might be good for a few clicks. I still have to read the documents - llms can produce a lot more documentation than I can read in detail. So there too, I need a birds eye view with precision
+
+Before that I was too busy at a client that had an AI policy that was too ambigous for us **TODO footnote**, so we decided to delete all assistant, and only do chats with e.g. local LLMs, and when we did use public ones, we changed the domain. (this is worth a separate short post - exploit symmetry between domains to hide your intention from LLMs)
+
+This is the domain of spikes - build many to throw away, you will anyway [TODO brooks reference]  - that is its' own post. 
