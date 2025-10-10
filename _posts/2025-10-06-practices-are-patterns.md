@@ -11,7 +11,6 @@ author: Marc Evers, Willem van den Ende
 image: /attachments/blogposts/2025/forces.png
 ---
 
-
 People try something in their team, it works great, and then they go out in the
 world trying to sell everyone on that practice. We've done this too when 
 eXtreme Programming worked much better for us than expected in the early 2000s. When such a "best practice" goes out in the wild, it will work for some, but less so for others. So we end up with "Why you should do Test Driven Development (TDD)" versus "TDD does not work" positions. 
@@ -23,7 +22,8 @@ In this post, we will present a different perspective on practices:
 > A practice fits in a context. It resolves specific forces in a specific context. If we have a minimum of three instances where it works, it constitutes _a pattern_.
 
 
-![Depiction of set of forces interacting in a context](/attachments/blogposts/2025/forces.png){: class="post-image post-image-50" }
+![Depiction of set of forces interacting in a context](/attachments/blogposts/2025/forces.png)
+{: class="post-image post-image-30" }
 
 
 ## Introduction
@@ -65,7 +65,8 @@ Both eXtreme Programming (XP) and Scrum emerged from the Design Patterns communi
 
 The first edition of the eXtreme Programming Explained book echoes this, by presenting practices as part of a web of practices which support each other. 
 
-![Extreme Programming web of practices (partial)](/attachments/blogposts/2025/xp-web-partial.png){: class="post-image post-image-70" }
+![Extreme Programming web of practices (partial)](/attachments/blogposts/2025/xp-web-partial.png)
+{: class="post-image post-image-70" }
 
 So a practice resolves forces in a specific context. That means that whenever we are talking about a practice, or recommending one, or trying to implement one, we need to be aware of the applicable context and how the practice fits.
 
