@@ -46,18 +46,40 @@ space
 ![tbd](/attachments/blogposts/2025/gt-ts-black-and-green-squares.svg)
 
 
-gt-ts-dependencies-dominance-tree.svg
-gt-ts-imports-three-test-files.svg
-gt-ts-black-squares.svg
-gt-ts-dependencies-force-layout.svg
-gt-ts-dependencies-circle.svg 
-gt-ts-imports-more-test-files.svg
 
 
 ## How are our dependencies going?
 
+We first plotted them in a circle. This does not tell us much about how the dependencies are going, but it looks pretty.
+
+![tbd](/attachments/blogposts/2025/gt-ts-dependencies-circle.svg)
+
+For me it was a useful exploration to see some of the visualisations available in Glamorous Toolkit.
+Next up we tried a 'dominance tree'. This gives us a bit more oversight. But still a bit cluttered. 
+
+![tbd](/attachments/blogposts/2025/gt-ts-dependencies-dominance-tree.svg)
+
+The 'force layout' option was more like what I had in mind when I thought about dependencies:
+
+![tbd](/attachments/blogposts/2025/gt-ts-dependencies-force-layout.svg)
+
+I still can not see at a glance which files have more imports than I expect. Stephan suggested a different kind of view. 
+
+You may have noticed You may notice that not all files have arrows pointing to them in the previous diagram. Knowing where to stop is important, because we build tools, so that we can build useful software, they are a means to an end. We can live with precise, but imperfect views.
 
 ## Know where to stop
+
+ These files were re-exported through a kind of 'facade' files. We could also parse the  'export' lines in the code, but we had enough information that we decided to bin this experiment. We learnt that using a particular kind of framework is useful, and that we want to create the initial tests and structure by hand. Hoping that that gives enough context for a LLM to fill in some of the boilerplate.
+
+## A birds-eye view, with details ready to hand
+
+Each of the file names in the previous graphs, and the blocks in the visualizations below, you can click for more details. You can go to the source of the file, or in the case of the imports, click on a small square and see exactly what import it refers to. We want images based on facts, not beliefs **TODO** link to a tudor girba post, or wardley.
+
+We went back to the block views from earlier, and added the imports as small squares inside. This went in a number of steps, but the post is getting long, so I will spare you the details.
+
+CONTINUE HERE
+![tbd](/attachments/blogposts/2025/gt-ts-imports-three-test-files.svg)
+![tbd](/attachments/blogposts/2025/gt-ts-imports-more-test-files.svg)
 
 
 ## Relation with linting
@@ -83,6 +105,10 @@ Assessment is the process of understanding a situation around a system enough to
 Post about our favourite practices.
 
 The value of dumb questions - Stephan is getting better at glamorous toolkit by me asking beginner questions. I don't know w 
+
+We did make a. maybe separate post about making a custom view on the analyzer for dependencies and imports.
+
+How to export images from Glamorous Toolkit for blogposts. SVG has interesting aspects.
 
 -> situational awarenes
 
