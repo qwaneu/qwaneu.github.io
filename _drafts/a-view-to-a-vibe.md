@@ -14,37 +14,37 @@ Whether we are working in a team on fresh or vintage code, or working 'LL-MAD' (
 
 When generating software with an agent, sometimes it is hard to assess the output of a coding agent by 'just' looking at the outcomes, and some of the outputs. Does this step provide value? Are the exploratory tests satisfying? can we maintain a sustainable pace? When the code base has become too large, and the LLM can not make more progress, we are stuck. We don't want to go hands-on on code that is not malleable. There is value in knowing why the LLM got stuck, and once we find that out, having automated checks and visuals to inform us about the direction of travel. We can take a step back, or start over and run another experiment.
 
-We tried having the coding agent (mostly Claude code) generate documentation with diagrams. This works, but it is a lot of text to read, and you can't be sure which of the words and pictures are facts, and which ones are beliefs. These documents mostly have value to reflect back to us what the coding agent makes of our code base. If we want to use these reports to steer the direction of travel, we have to go in ourselves, and read the code. This is time consuming and error prone. Often the code looks good enough, and people are not necessarily good at spotting the faulty outliers.
+We tried having the coding agent (mostly Claude code) generate documentation with diagrams. This works, but it generates a lot of text to read, and you can't be sure which of the words and pictures are facts, and which ones are beliefs. These documents mostly have value to reflect back to us what the coding agent makes of our code base. If we want to use these reports to steer the direction of travel, we have to go in ourselves, and read the code. This is time consuming and error prone. On the surface, the code looks good enough, and people are not good at spotting the faulty outliers.
 
-So let's take you through some of the diagrams we made to assess whether a small typescript front-end that Claude Code generated overnight for a web-based game has a decent structure, and if it could responsibly add tests to it when we found there were to few. 
+So let's take you through some of the diagrams we made to assess whether a small Typescript front-end that Claude Code generated overnight for a web-based game has a decent structure, and if it could responsibly add tests to it when we found there were to few. 
 
 
-## Sometimes creating code the bottleneck
+## Sometimes creating code is the bottleneck
 
-When you have many ideas, the bottleneck consists of refining ideas, exploring options.
+When you have many ideas, the bottleneck is refining ideas and exploring options.
 We can explore options in several ways. When it comes to 'can we build this?', we can pair, we can chat back and forth with an LLM, or create code. We love doing architectural spikes, and we love working in small increments. Architectural spikes are rarely a problem. If we intend to throw away the code after the learning happened, we don't need to look at the code in depth. If we want to make a next step, however, we need to have confidence that our system is sustainable and the code malleable.
 
 LLMs helped me go back and forth on my ideas. LLM Augmented Development, or LL-MAD for short helps in generating code. Sometimes to explore options, sometimes to go into production. Ideally we want to work in steps, and work incrementally. We can generate a lot more code, in a lot less time than before. How can we assess whether it is any good, in a reasonable amount of time? 
 
 ## ...and then the bottleneck moves to assessing
 
-The bottlenecks then shifts to assessing the output. We need exploratory testing to assess the output works. Putting on a product manager's hat and looking at the cycle time works, as long as we can go in one move from one stable state to another. A stable state is roughly: are the tests green, do the exploratory tests pass, are the tests of satisfactory quality? If the assesment ends its' work in an unstable state, how do we know? And how many tries does it take to get back to a stable state. We can e.g. read the code, discusss with the assistant, but it is slow gooing. We made two graphic web front-ends (each over 600 tests, 5000 and 30000 lines of production javascript code as measured by [cloc]). They each validated some of our assumptions. The larger one had some annoying defects. The smaller one could not evolve further. Both gave rise to a system metaphor - Massive Multiplayer Co-operative Online Game (MMCOG) that made the designs in both of them obsolete. Progress!
+The bottlenecks then shifts to assessing the output. We need exploratory testing to assess the output works. Putting on a product manager's hat and looking at the cycle time works, as long as we can go in one move from one stable state to another. A stable state is roughly: are the tests green, do the exploratory tests pass, are the tests of satisfactory quality? If the assessment ends its' work in an unstable state, how do we know? And how many tries does it take to get back to a stable state. We can e.g. read the code, discuss with the assistant, but it is slow going. We made two graphic web front-ends (each over 600 tests, 5000 and 30000 lines of production Javascript code as measured by [Cloc](https://github.com/AlDanial/cloc)). They each validated some of our assumptions. The larger one had some annoying defects. The smaller one could not evolve further. Both gave rise to a system metaphor - Massive Multiplayer Co-operative Online Game (MMCOG) that made the designs in both of them obsolete. Progress!
 
-Editors note: Discussions about design have been kept generic, so as to not to distract from the narrative, and hopefully make it accessible for a larger audience.
+> Editors note: discussions about design have been kept generic, so as to not to distract from the narrative, and hopefully make it accessible for a larger audience.
 
-But. The next time, I did not want to find out after six large stories that we could not continue developing. Now that we have a good metaphor, I want to make incremental progress. To do check the output, I will have to read code. But if I let the assistant run while I sleep, I may have several thousand lines of changes to wade through. Sometimes it took me an hour or more to identify that new components had been made where I did not expect them.
+But the next time, I did not want to find out after six large stories that we could not continue developing. Now that we have a good metaphor, I want to make incremental progress. To check the output, I will have to read code. But if I let the assistant run while I sleep, I may have several thousand lines of changes to wade through. Sometimes it took me an hour or more to identify that new components had been made where I did not expect them.
 
 
 # A birds-eye view, with precision
 
-We want to ship working software, that is of value to the people it serves. Frequently. Feedback is not always pleasant, but usually useful, and helps us go forward, or retrace our steps when necessary. 
+We want to ship working software, that is of value to the people it serves. Feedback is not always pleasant, but usually useful, and helps us go forward, or retrace our steps when necessary. 
 
-Creating this is an iterative process. It starts with gut feel. Or, as Stephan says, this is where experience comes in handy. We are looking to get insight in the code, at a high level, with details ready to hand. One perspective leads to another.
+Creating this is an iterative process. It starts with gut feel. Or, as [Stephan](https://www.legacycode.nl) says, this is where experience comes in handy. We are looking to get insight in the code, at a high level, with details ready to hand. One perspective leads to another.
 
 
 ## Baby steps - get the view you need, not the view you want
 
-We wanted to see the dependencies in the generated code, both inside and to the outside. As a first step we had a look at the directory structure and searched through the files. We will spare you these views, they are relatively uninteresting to look at. But it does help to get a foothold, and a sense of space. And they weren't the views we wanted, but the views we needed to be able to make the next step.
+We wanted to see the dependencies in the generated code, both inside and to the outside. As a first step, we had a look at the directory structure and searched through the files. We will spare you these views, they are relatively uninteresting to look at. But it does help to get a foothold and a sense of space. They weren't the views we wanted, but the views we needed to be able to make the next step.
 
 Working in small steps, and making progress remains one of our favourite practices.
 
@@ -62,20 +62,20 @@ space
 
 ## How are our dependencies going?
 
-We first plotted them in a circle. This does not tell us much about how the dependencies are going, but it looks pretty.
+We first plotted the dependencies in a circle. This does not tell us much about how the dependencies are going, but it looks pretty.
 
 ![tbd](/attachments/blogposts/2025/gt-ts-dependencies-circle.svg)
 
-For me it was a useful exploration to see some of the visualisations available in Glamorous Toolkit.
-Next up we tried a 'dominance tree'. This gives us a bit more oversight. But still a bit cluttered. 
+For me it was a useful exploration to see some of the visualisations available in [Glamorous Toolkit](https://gtoolkit.com/).
+Next up we tried a 'dominance tree'. This gives us a bit more oversight, but still a bit cluttered. 
 
 ![tbd](/attachments/blogposts/2025/gt-ts-dependencies-dominance-tree.svg)
 
-The 'force layout' option was more like what I had in mind when I thought about dependencies:
+The 'force layout' option was more like what I had in mind when I thought about dependencies.
 
 ![tbd](/attachments/blogposts/2025/gt-ts-dependencies-force-layout.svg)
 
-I still can not see at a glance which files have more imports than I expect. Stephan suggested a different kind of view. 
+I still cannot see at a glance which files have more imports than I expect. Stephan suggested a different kind of view. 
 
 You may have noticed that not all files have arrows pointing to them in the previous diagram. We didn't need them to make an assessment. Knowing where to stop is important. 
 
