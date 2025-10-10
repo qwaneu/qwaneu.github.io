@@ -12,8 +12,6 @@ Since April, I've been experimenting more intensively with augmented code genera
 
 Whether we are working in a team on fresh or vintage code, or working 'LL-MAD' (LLM Assisted Development), there is value in having fact-based views that we can make on the fly as we ask questions. Iterating on what we know, what we want to know, and what questions we can and should ask.
 
-Since April, I've gone deeper into working with 'agents' like Aider and Claude Code to hash out ideas, in text and in code.
-
 When generating software with an agent, sometimes it is hard to assess the output of a coding agent by 'just' looking at the outcomes, and some of the outputs. Does this step provide value? Are the exploratory tests satisfying? can we maintain a sustainable pace? When the code base has become too large, and the LLM can not make more progress, we are stuck. We don't want to go hands-on on code that is not malleable. There is value in knowing why the LLM got stuck, and once we find that out, having automated checks and visuals to inform us about the direction of travel. We can take a step back, or start over and run another experiment.
 
 We tried having the coding agent (mostly Claude code) generate documentation with diagrams. This works, but it is a lot of text to read, and you can't be sure which of the words and pictures are facts, and which ones are beliefs. These documents mostly have value to reflect back to us what the coding agent makes of our code base. If we want to use these reports to steer the direction of travel, we have to go in ourselves, and read the code. This is time consuming and error prone. Often the code looks good enough, and people are not necessarily good at spotting the faulty outliers.
