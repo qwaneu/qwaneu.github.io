@@ -12,14 +12,30 @@ Since April, I've been experimenting more intensively with augmented code genera
 
 Since april ... practices. I may have been successful in getting a line of business application to a point wher 80% of the features can be co-created with LLM augmented development. 20% is still hard. This is the domain of spikes - build many to throw away, you will anyway [TODO brooks reference]  - that is its' own post. 
 
-When you have many ideas, the bottleneck consists of refining ideas, exploring options. LLMs helped me go back and forth on my ideas (although they tend to agree, so you have to be careful how to phrase questions, or run them multiple times) is generating code. LLM Augmented Development, or LL-MAD for short helps in generating code. Sometimes to explore options, sometimes to go into production. Ideally we want to work in steps, and work incrementally. The bottlenecks then shifts to judging the output. Explorory testing (see vasco duarte podcast) to judge the output works. Putting on a product managers' hat and looking at the cycle time, how many attempts are needed to get back to a stable state (tests green, exploratory tests pass, tests of satisfactory quality) works, but is slow. We made two graphic web front-ends (each over 600 tests, 5000 and 30000 lines of production javascript code as measured by [cloc]). They each validated some of our assumptions. The larger one had some annoying defects. The smaller one could not evolve further. Both gave rise to a system metaphor - Massive Multiplayer Co-operative Online Game (MMCOG) that made the designs in both of them obsolete. Progresss!
+## Sometimes typing is the bottleneck
+
+When you have many ideas, the bottleneck consists of refining ideas, exploring options. LLMs helped me go back and forth on my ideas (although they tend to agree, so you have to be careful how to phrase questions, or run them multiple times) is generating code. LLM Augmented Development, or LL-MAD for short helps in generating code. Sometimes to explore options, sometimes to go into production. Ideally we want to work in steps, and work incrementally. 
+
+## And then the bottleneck moves to judging
+The bottlenecks then shifts to judging the output. Explorory testing (see vasco duarte podcast) to judge the output works. Putting on a product managers' hat and looking at the cycle time, how many attempts are needed to get back to a stable state (tests green, exploratory tests pass, tests of satisfactory quality) works, but is slow. We made two graphic web front-ends (each over 600 tests, 5000 and 30000 lines of production javascript code as measured by [cloc]). They each validated some of our assumptions. The larger one had some annoying defects. The smaller one could not evolve further. Both gave rise to a system metaphor - Massive Multiplayer Co-operative Online Game (MMCOG) that made the designs in both of them obsolete. Progresss!
 
 Editors note: Discussions about design have been kept generic, so as to not to distract from the narrative, and hopefully make it accessible for a larger audience.
 
 But. The next time, I did not want to find out after six large stories that we could not continue developing. Now that we have a good metaphor, I want to make incremental progress. To do check the output, I will have to read code. But if I let the assistant run while I sleep, I may have several thousand lines of changes to wade through. Sometimes it took me an hour or more to identify that new components had been made where I did not expect them.
 
 
+# A birds-eye view, with precision
 
+We want to ship working software, that is of value to the people it serves. Frequently. Feedback is not always pleasant, but usually useful, and helps us go forward, or retrace our steps when necessary. 
+
+# Further reading
+
+- Adrian Cockroft
+- Vasco Duarte podcast
+- Mythical man month
+
+
+# Cutting room floor 
 
 I'm working on a successor for WeReview - a conference session review system (needs one liner. stephan?) and, with Stephan Eggermont in stealth on something that has Multiplayer Online Collaborative Game as systems metaphor. We'll refer to this as 'Game' going forward. FOOTNOTE this metaphor only came about as a result of several rounds of experimentation. It is, I think, paying off, because it allows us to think of designs that are relatively simple, and libraries and designs that we can re-purpose or re-use.
 
@@ -37,3 +53,4 @@ The other frontend spike is in typescript - this also has a backend, but just fo
 
 Visualizations do not need to be pretty or have legends - we made them, and use them every day, so I know what the colors mean. Green = test, Red is :w
  
+spec-driven development is a post for another day, might be good for a few clicks. I still have to read the documents - llms can produce a lot more documentation than I can read in detail. So there too, I need a birds eye view with precision
