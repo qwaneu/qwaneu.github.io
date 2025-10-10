@@ -8,15 +8,15 @@
  image: /attachments/blogposts/2025/gt-ts-black-and-green-squares.svg
 ---
 
-Since April, I've been experimenting more intensively with augmented code generation, quite often with a clear-ish vision, a pair, tests and other of our [favourite engineering practices](2025/10/06/practices-are-patterns.html). I may have been successful in getting a line of business application to a point where 80% of the features can be co-created with LLM augmented development. 20% is still hard. 
+Since April, I've been experimenting more intensively with augmented code generation, quite often with a clear-ish vision, a pair, tests and some of our other [favourite engineering practices](2025/10/06/practices-are-patterns.html). I may have been successful in getting a line of business application to a point where 80% of the features can be co-created with LLM augmented development. 20% is still hard. 
 
-## Sometimes typing is the bottleneck
+## Sometimes typing is the bottleneck...
 
-When you have many ideas, the bottleneck consists of refining ideas, exploring options. LLMs helped me go back and forth on my ideas (although they tend to agree, so you have to be careful how to phrase questions, or run them multiple times) is generating code. LLM Augmented Development, or LL-MAD for short helps in generating code. Sometimes to explore options, sometimes to go into production. Ideally we want to work in steps, and work incrementally. 
+When you have many ideas, the bottleneck consists of refining ideas, exploring options. LLMs helped me go back and forth on my ideas (although they tend to agree, so you have to be careful how to phrase questions, or run them multiple times). LLM Augmented Development - LL-MAD for short - helps in generating code. Sometimes to explore options, sometimes to go into production. Ideally we want to work in steps, and work incrementally. 
 
-## And then the bottleneck moves to assessing
+## ...and then the bottleneck moves to assessing
 
-The bottlenecks then shifts to assessing the output. Explorory testing (see vasco duarte podcast) to assess the output works. Putting on a product managers' hat and looking at the cycle time, how many attempts are needed to get back to a stable state (tests green, exploratory tests pass, tests of satisfactory quality) works, but is slow. We made two graphic web front-ends (each over 600 tests, 5000 and 30000 lines of production javascript code as measured by [cloc]). They each validated some of our assumptions. The larger one had some annoying defects. The smaller one could not evolve further. Both gave rise to a system metaphor - Massive Multiplayer Co-operative Online Game (MMCOG) that made the designs in both of them obsolete. Progresss!
+The bottlenecks then shifts to assessing the output. We need exploratory testing to assess the output works. Putting on a product manager's hat and looking at the cycle time, how many attempts are needed to get back to a stable state (tests green, exploratory tests pass, tests of satisfactory quality) works, but is slow. We made two graphic web front-ends (each over 600 tests, 5000 and 30000 lines of production javascript code as measured by [cloc]). They each validated some of our assumptions. The larger one had some annoying defects. The smaller one could not evolve further. Both gave rise to a system metaphor - Massive Multiplayer Co-operative Online Game (MMCOG) that made the designs in both of them obsolete. Progress!
 
 Editors note: Discussions about design have been kept generic, so as to not to distract from the narrative, and hopefully make it accessible for a larger audience.
 
@@ -75,7 +75,7 @@ The views in the next session were not what I wanted, but what we needed. I had 
 
 ## A birds-eye view, with details ready to hand
 
-Each of the file names in the previous graphs, and the blocks in the visualizations below, you can click for more details. You can go to the source of the file, or in the case of the imports, click on a small square and see exactly what import it refers to. We want images based on facts, not beliefs **TODO** link to a tudor girba post, or wardley.
+Each of the file names in the previous graphs, and the blocks in the visualizations below, you can click for more details. You can go to the source of the file, or in the case of the imports, click on a small square and see exactly what import it refers to. We want images based on facts, not beliefs **TODO** link to a Tudor Girba post, or Wardley.
 
 We went back to the block views from earlier, and added the imports as small squares inside. This went in a number of steps, but the post is getting long, so I will spare you the details.
 
@@ -115,9 +115,9 @@ The value of dumb questions - Stephan is getting better at glamorous toolkit by 
 
 We did make a. maybe separate post about making a custom view on the analyzer for dependencies and imports.
 
-How to export images from Glamorous Toolkit for blogposts. SVG has interesting aspects.
+How to export images from Glamorous Toolkit for blog posts. SVG has interesting aspects.
 
--> situational awarenes
+-> situational awareness
 
 Follow up post: treemap for the larger repos - what kinds of file live where? 
 
@@ -125,9 +125,9 @@ I'm working on a successor for WeReview - a conference session review system (ne
 
 I left out the Massive, because as we are iterating, we are also finding smaller applications, which could help us launch sooner. FOOTNOTE investing with your own money.
 
-One of the engineering practices I adapted later, was pair programming. And pair business deveopment. Which leads to bottlnecks FOOTNOTE like generating ideas faster than we can keep track of. 
+One of the engineering practices I adapted later, was pair programming. And pair business development. Which leads to bottlenecks FOOTNOTE like generating ideas faster than we can keep track of. 
 
-For WeReview, using Claude Code turned out to be surprisingly succesful, at least initially. Generating a couple of models and screens was quite fluid, in conversation. The initial WeReview uses dependencies for some of its' features that are no longer maintained, and they do not all have suitable alternatives. So in our imaginary wardley map, things are moving from Product to Custom built. Just to sustain the product as it is. 
+For WeReview, using Claude Code turned out to be surprisingly successful, at least initially. Generating a couple of models and screens was quite fluid, in conversation. The initial WeReview uses dependencies for some of its' features that are no longer maintained, and they do not all have suitable alternatives. So in our imaginary wardley map, things are moving from Product to Custom built. Just to sustain the product as it is. 
 
 For the Game, we have had some success with generating graphical front-ends. I was able to make a MacOS prototype without previous experience of MacOS development. We made two graphical web frontend prototypes of some complexity. One has over 700 tests and almost 5000 lines of production code (as measured by cloc). Lines of code is not a measure of complexity, but a measure of how much time it costs us to evaluate the outcome if we have to read through the code. 
 
@@ -137,9 +137,9 @@ The other frontend spike is in typescript - this also has a backend, but just fo
 
 Visualizations do not need to be pretty or have legends - we made them, and use them every day, so I know what the colors mean. Green = test, Red is :w
  
-spec-driven development is a post for another day, might be good for a few clicks. I still have to read the documents - llms can produce a lot more documentation than I can read in detail. So there too, I need a birds eye view with precision
+spec-driven development is a post for another day, might be good for a few clicks. I still have to read the documents - LLMs can produce a lot more documentation than I can read in detail. So there too, I need a birds eye view with precision
 
-Before that I was too busy at a client that had an AI policy that was too ambigous for us **TODO footnote**, so we decided to delete all assistant, and only do chats with e.g. local LLMs, and when we did use public ones, we changed the domain. (this is worth a separate short post - exploit symmetry between domains to hide your intention from LLMs)
+Before that I was too busy at a client that had an AI policy that was too ambiguous for us **TODO footnote**, so we decided to delete all assistant, and only do chats with e.g. local LLMs, and when we did use public ones, we changed the domain. (this is worth a separate short post - exploit symmetry between domains to hide your intention from LLMs)
 
 This is the domain of spikes - build many to throw away, you will anyway [TODO brooks reference]  - that is its' own post. 
 
