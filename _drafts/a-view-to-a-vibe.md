@@ -91,7 +91,7 @@ Each of the file names in the previous graphs, and the blocks in the visualizati
 
 We went back to the block views from earlier, and added the imports as small squares inside. This went in a number of steps, but the post is getting long, so I will spare you the details.
 
-CONTINUE HERE. explain legend, and our interpretation. Three test files, but their dependencies are ok. red is external dependencies, not too many. Reason to track red: we got burned by this in previous experiments, despite our best efforts at prompting for one of our favourite design patterns TODO link to hex arch post.
+**CONTINUE HERE**. explain legend, and our interpretation. Three test files, but their dependencies are ok. red is external dependencies, not too many. Reason to track red: we got burned by this in previous experiments, despite our best efforts at prompting for one of our favourite design patterns TODO link to hex arch post.
 
 ![tbd](/attachments/blogposts/2025/gt-ts-imports-three-test-files.svg)
 
@@ -101,12 +101,18 @@ second run, having the agent generate tests:
 
 We can see that this was a success in the sense that we have more tests, but a failure, in that the tests are tightly coupled to other files. I would expect two coloured blocks, one for a test framework maybe and one for a domain object. Five or six imports for a test file is a lot. Might be ok for an integration test if there is no facade, but not here.
 
+# Summary
+
+To be honest, making the first round of tools was quite a bit of work, we needed to do some undifferentiated heavy lifting to work with the typescript code. Having said that, the vast majority of what we needed to work with Typescript code was already there. It was mostly making connections between a file and its' relations, and creating some custom views that made it easier to navigate said relations interactively. Not something we can easily show in a blog post.
+
+While writing this post, we got more ideas, of course. But we did not need more to make the assessment we needed. The spike was a success in the sense that we know the Game metaphor works, and that related tools can save us from writing code, while having a simple system to work on.
+
 ## Relation with linting
 
 Not sure if this belongs in the post. The relation with linting is iterative. LL-MAD makes it easy to create linting rules that work well enough, but as with regular development, the amount of linting and the timing of it matters. As Steve Freeman said at CITCON, it is a bummer when a long build fails, because in the last step, after all the compilation steps and tests have been done, a linter finds that an incorrect amount of spaces was used for indentation and rejects the build. Coding assistants can get in a loop when they try to commit, and are prevented because of linting. The linting feedback may not neatly fit into the current context. We are experimenting with where to put what linting rules and tools. 
 
 
-# Further reading
+# Further reading 
 
 - Adrian Cockroft
 - Vasco Duarte podcast
