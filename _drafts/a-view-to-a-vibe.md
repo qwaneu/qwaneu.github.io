@@ -65,11 +65,13 @@ The 'force layout' option was more like what I had in mind when I thought about 
 
 I still can not see at a glance which files have more imports than I expect. Stephan suggested a different kind of view. 
 
-You may have noticed You may notice that not all files have arrows pointing to them in the previous diagram. Knowing where to stop is important, because we build tools, so that we can build useful software, they are a means to an end. We can live with precise, but imperfect views.
+You may have noticed that not all files have arrows pointing to them in the previous diagram. We didn't need them to make an assessment. Knowing where to stop is important. 
 
 ## Know where to stop
 
- These files were re-exported through a kind of 'facade' files. We could also parse the  'export' lines in the code, but we had enough information that we decided to bin this experiment. We learnt that using a particular kind of framework is useful, and that we want to create the initial tests and structure by hand. Hoping that that gives enough context for a LLM to fill in some of the boilerplate.
+We build tools, so that we can build useful software, not tools to build tools. We can live with precise, but imperfect views. As long as they provide enough information to make an assessment. Situational awareness is what we are after.
+
+The views in the next session were not what I wanted, but what we needed. I had asked for boxes and arrows, but it turned out that boxes-in-boxes was much more useful.
 
 ## A birds-eye view, with details ready to hand
 
@@ -77,7 +79,8 @@ Each of the file names in the previous graphs, and the blocks in the visualizati
 
 We went back to the block views from earlier, and added the imports as small squares inside. This went in a number of steps, but the post is getting long, so I will spare you the details.
 
-CONTINUE HERE
+CONTINUE HERE. explain legend, and our interpretation. Three test files, but their dependencies are ok. red is external dependencies, not too many. Reason to track red: we got burned by this in previous experiments, despite our best efforts at prompting for one of our favourite design patterns TODO link to hex arch post.
+
 ![tbd](/attachments/blogposts/2025/gt-ts-imports-three-test-files.svg)
 
 second run, having the agent generate tests:
@@ -139,3 +142,6 @@ spec-driven development is a post for another day, might be good for a few click
 Before that I was too busy at a client that had an AI policy that was too ambigous for us **TODO footnote**, so we decided to delete all assistant, and only do chats with e.g. local LLMs, and when we did use public ones, we changed the domain. (this is worth a separate short post - exploit symmetry between domains to hide your intention from LLMs)
 
 This is the domain of spikes - build many to throw away, you will anyway [TODO brooks reference]  - that is its' own post. 
+
+
+ These files were re-exported through a kind of 'facade' files. We could also parse the  'export' lines in the code, but we had enough information that we decided to bin this experiment. We learnt that using a particular kind of framework is useful, and that we want to create the initial tests and structure by hand. Hoping that that gives enough context for a LLM to fill in some of the boilerplate.
