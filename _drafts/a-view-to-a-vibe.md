@@ -31,7 +31,9 @@ Creating this is an iterative process. It starts with gut feel. Or, as Stephan s
 
 ## Baby steps - get the view you need, not the view you want
 
-I wanted to see the dependencies in the generated code, both inside and to the outside. 
+We wanted to see the dependencies in the generated code, both inside and to the outside. As a first step we had a look at the directory structure and searched through the files. We will spare you these views, they are relatively uninteresting to look at. But it does help to get a foothold, and a sense of space. And they weren't the views we wanted, but the views we needed to be able to make the next step.
+
+Working in small steps, and making progress remains one of our favourite practices.
 
 ## More squares - where are the tests? 
 
