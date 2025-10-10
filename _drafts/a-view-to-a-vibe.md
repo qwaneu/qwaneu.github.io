@@ -4,7 +4,7 @@
  tags:
  - moldable development
  - LLM
- author: Willem van den Ende
+ author: Willem van den Ende, Stephan Eggermont, Marc Evers
  image: /attachments/blogposts/2025/gt-ts-black-and-green-squares.svg
 ---
 
@@ -28,7 +28,7 @@ LLMs helped me go back and forth on my ideas. LLM Augmented Development, or LL-M
 
 ## ...and then the bottleneck moves to assessing
 
-The bottlenecks then shifts to assessing the output. We need exploratory testing to assess the output works. Putting on a product manager's hat and looking at the cycle time, how many attempts are needed to get back to a stable state (tests green, exploratory tests pass, tests of satisfactory quality) works, but is slow. We made two graphic web front-ends (each over 600 tests, 5000 and 30000 lines of production javascript code as measured by [cloc]). They each validated some of our assumptions. The larger one had some annoying defects. The smaller one could not evolve further. Both gave rise to a system metaphor - Massive Multiplayer Co-operative Online Game (MMCOG) that made the designs in both of them obsolete. Progress!
+The bottlenecks then shifts to assessing the output. We need exploratory testing to assess the output works. Putting on a product manager's hat and looking at the cycle time works, as long as we can go in one move from one stable state to another. A stable state is roughly: are the tests green, do the exploratory tests pass, are the tests of satisfactory quality? If the assesment ends its' work in an unstable state, how do we know? And how many tries does it take to get back to a stable state. We can e.g. read the code, discusss with the assistant, but it is slow gooing. We made two graphic web front-ends (each over 600 tests, 5000 and 30000 lines of production javascript code as measured by [cloc]). They each validated some of our assumptions. The larger one had some annoying defects. The smaller one could not evolve further. Both gave rise to a system metaphor - Massive Multiplayer Co-operative Online Game (MMCOG) that made the designs in both of them obsolete. Progress!
 
 Editors note: Discussions about design have been kept generic, so as to not to distract from the narrative, and hopefully make it accessible for a larger audience.
 
