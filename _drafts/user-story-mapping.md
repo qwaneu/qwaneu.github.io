@@ -78,7 +78,7 @@ Would you like to know more? Jeff Patton has [written useful materials on story
 > This is a slightly updated repost of a [blog post](https://blog.piecemealgrowth.net/working-with-user-story-mapping) that we published earlier in 2009.
 
 <aside>
-  <p><strong>Would you like to learn more?</strong</p>
+  <p><strong>Would you like to learn more?</strong></p>
   <p>We can guide you in applying user story mapping for your products, e.g. by facilitating a user story mapping workshop for your product or by running a product planning simulation where you and your team get to experiment hands-on with story mapping.</p>
 
   <p><div>
