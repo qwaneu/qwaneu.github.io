@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1117" height="1733">
+	<rect fill="white" width="1116.5" height="1732.804"/>
+	<clipPath id="cl_46">
+		<rect width="1116.5" height="1732.804"/>
+	</clipPath>
+	<g clip-path="url(#cl_46)">
+		<rect transform="matrix(24.4488 0 0 24.4488 264.864 524.119)" width="2.4377506" height="2.4377506"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 403.583 524.119)" width="1.5797836" height="1.5797836"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 540.85 524.119)" width="3.568671" height="3.568671"/>
+		<rect fill="lime" transform="matrix(24.4488 0 0 24.4488 676.998 524.119)" width="2.5599067" height="2.5599067"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 810.554 524.119)" width="2.9965117" height="2.9965117"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 264.864 660.266)" width="3.0817072" height="3.0817072"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 403.583 660.266)" width="3.3021145" height="3.3021145"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 540.85 660.266)" width="3.4367986" height="3.4367986"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 676.998 660.266)" width="3.2743888" height="3.2743888"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 810.554 660.266)" width="3.3224261" height="3.3224261"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 264.864 793.189)" width="3.4500952" height="3.4500952"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 403.583 793.189)" width="3.3752978" height="3.3752978"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 540.85 793.189)" width="3.1958997" height="3.1958997"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 676.998 793.189)" width="3.2636361" height="3.2636361"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 810.554 793.189)" width="3.3471348" height="3.3471348"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 264.864 926.438)" width="3.6738501" height="3.6738501"/>
+		<rect fill="lime" transform="matrix(24.4488 0 0 24.4488 403.583 926.438)" width="3.6144753" height="3.6144753"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 540.85 926.438)" width="2.7315888" height="2.7315888"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 676.998 926.438)" width="3.4626975" height="3.4626975"/>
+		<rect fill="lime" transform="matrix(24.4488 0 0 24.4488 810.554 926.438)" width="3.3364596" height="3.3364596"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 264.864 1065.16)" width="2.7041504" height="2.7041504"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 403.583 1065.16)" width="2.923244" height="2.923244"/>
+		<rect fill="lime" transform="matrix(24.4488 0 0 24.4488 540.85 1065.16)" width="3.3816564" height="3.3816564"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 676.998 1065.16)" width="2.6560981" height="2.6560981"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 810.554 1065.16)" width="1.7403626" height="1.7403626"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 264.864 1196.73)" width="2.0086002" height="2.0086002"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 403.583 1196.73)" width="2.0606978" height="2.0606978"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 540.85 1196.73)" width="2.1003706" height="2.1003706"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 676.998 1196.73)" width="1.7403626" height="1.7403626"/>
+		<rect transform="matrix(24.4488 0 0 24.4488 810.554 1196.73)" width="2.3483047" height="2.3483047"/>
+	</g>
+</svg>
