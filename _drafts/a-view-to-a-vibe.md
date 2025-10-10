@@ -8,11 +8,16 @@
  image: /attachments/blogposts/2025/gt-ts-black-and-green-squares.svg
 ---
 
-Since April, I've been experimenting more intensively with augmented code generation, quite often with a clear-ish vision, a pair, tests and other of our [favourite engineering practices](2025/10/06/practices-are-patterns.html). I may have been successful in getting a line of business application to a point where 80% of the features can be co-created with LLM augmented development. 20% is still hard. 
+Since April, I've been experimenting more intensively with augmented code generation, quite often with a clear-ish vision, a pair, tests and other of our [favourite engineering practices](2025/10/06/practices-are-patterns.html). 
+
+Sometimes it is hard to judge the output of a coding agent by 'just' looking at the outcomes: are the exploratory tests satisfying, can we maintain a sustainable pace. When the code base has become to large, and the LLM can not make more progress, we are stuck. There is value in knowing why it got stuck, and once we find that out, having automated checks and visuals to inform us about the direction of travel.
+
 
 ## Sometimes typing is the bottleneck
 
-When you have many ideas, the bottleneck consists of refining ideas, exploring options. LLMs helped me go back and forth on my ideas (although they tend to agree, so you have to be careful how to phrase questions, or run them multiple times) is generating code. LLM Augmented Development, or LL-MAD for short helps in generating code. Sometimes to explore options, sometimes to go into production. Ideally we want to work in steps, and work incrementally. 
+When you have many ideas, the bottleneck consists of refining ideas, exploring options. LLMs helped me go back and forth on my ideas. (although they tend to agree, so you have to be careful how to phrase questions, or run them multiple times) is generating code. LLM Augmented Development, or LL-MAD for short helps in generating code. Sometimes to explore options, sometimes to go into production. Ideally we want to work in steps, and work incrementally. 
+
+...ideas. We can explore options in several ways. When it comes to 'can we build this', we can pair, we can chat back and forth with an LLM, or create code. We love doing architectural spikes, and we love 
 
 ## And then the bottleneck moves to assessing
 
@@ -145,3 +150,4 @@ This is the domain of spikes - build many to throw away, you will anyway [TODO b
 
 
  These files were re-exported through a kind of 'facade' files. We could also parse the  'export' lines in the code, but we had enough information that we decided to bin this experiment. We learnt that using a particular kind of framework is useful, and that we want to create the initial tests and structure by hand. Hoping that that gives enough context for a LLM to fill in some of the boilerplate.
+I may have been successful in getting a line of business application to a point where 80% of the features can be co-created with LLM augmented development. 20% is still hard. 
