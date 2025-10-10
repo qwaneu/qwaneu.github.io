@@ -4,7 +4,7 @@
  tags:
  - moldable development
  - LLM
- author: Willem van den Ende
+ author: Willem van den Ende, Stephan Eggermont, Marc Evers
  image: /attachments/blogposts/2025/gt-ts-black-and-green-squares.svg
 ---
 
@@ -12,9 +12,7 @@ Since April, I've been experimenting more intensively with augmented code genera
 
 Whether we are working in a team on fresh or vintage code, or working 'LL-MAD' (LLM Assisted Development), there is value in having fact-based views that we can make on the fly as we ask questions. Iterating on what we know, what we want to know, and what questions we can and should ask.
 
-Since April, I've gone deeper into working with 'agents' like Aider and Claude Code to hash out ideas, in text and in code.
-
-When generating software with an agent, it is sometimes hard to assess the output of a coding agent by 'just' looking at the output and outcomes. Does this step provide value? Are the exploratory tests satisfying? Can we maintain a sustainable pace? When the code base has become too large, and the LLM cannot make more progress, we are stuck. We don't want to get hands-on on code that is not malleable. There is value in knowing why the LLM got stuck, and once we find that out, having automated checks and visuals to inform us about the direction of travel. We can take a step back, or start over and run another experiment.
+When generating software with an agent, sometimes it is hard to assess the output of a coding agent by 'just' looking at the outcomes, and some of the outputs. Does this step provide value? Are the exploratory tests satisfying? can we maintain a sustainable pace? When the code base has become too large, and the LLM can not make more progress, we are stuck. We don't want to go hands-on on code that is not malleable. There is value in knowing why the LLM got stuck, and once we find that out, having automated checks and visuals to inform us about the direction of travel. We can take a step back, or start over and run another experiment.
 
 We tried having the coding agent (mostly Claude code) generate documentation with diagrams. This works, but it generates a lot of text to read, and you can't be sure which of the words and pictures are facts, and which ones are beliefs. These documents mostly have value to reflect back to us what the coding agent makes of our code base. If we want to use these reports to steer the direction of travel, we have to go in ourselves, and read the code. This is time consuming and error prone. On the surface, the code looks good enough, and people are not good at spotting the faulty outliers.
 
@@ -30,7 +28,7 @@ LLMs helped me go back and forth on my ideas. LLM Augmented Development, or LL-M
 
 ## ...and then the bottleneck moves to assessing
 
-The bottleneck then shifts to assessing the output. We need exploratory testing to assess how the output works. Putting on a product manager's hat and looking at the cycle time, how many attempts are needed to get back to a stable state (tests green, exploratory tests pass, tests of satisfactory quality) works, but is slow. We made two graphic web front-ends (each over 600 tests, 5000 and 30000 lines of production Javascript code as measured by [Cloc](https://github.com/AlDanial/cloc)). They each validated some of our assumptions. The larger one had some annoying defects. The smaller one could not evolve further. Both gave rise to a system metaphor - Massive Multiplayer Co-operative Online Game (MMCOG) that made the designs in both of them obsolete. Progress!
+The bottlenecks then shifts to assessing the output. We need exploratory testing to assess the output works. Putting on a product manager's hat and looking at the cycle time works, as long as we can go in one move from one stable state to another. A stable state is roughly: are the tests green, do the exploratory tests pass, are the tests of satisfactory quality? If the assessment ends its' work in an unstable state, how do we know? And how many tries does it take to get back to a stable state. We can e.g. read the code, discuss with the assistant, but it is slow going. We made two graphic web front-ends (each over 600 tests, 5000 and 30000 lines of production Javascript code as measured by [Cloc](https://github.com/AlDanial/cloc)). They each validated some of our assumptions. The larger one had some annoying defects. The smaller one could not evolve further. Both gave rise to a system metaphor - Massive Multiplayer Co-operative Online Game (MMCOG) that made the designs in both of them obsolete. Progress!
 
 > Editors note: discussions about design have been kept generic, so as to not to distract from the narrative, and hopefully make it accessible for a larger audience.
 
