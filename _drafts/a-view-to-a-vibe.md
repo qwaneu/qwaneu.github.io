@@ -10,18 +10,27 @@
 
 Since April, I've been experimenting more intensively with augmented code generation, quite often with a clear-ish vision, a pair, tests and other of our [favourite engineering practices](2025/10/06/practices-are-patterns.html). 
 
-Sometimes it is hard to judge the output of a coding agent by 'just' looking at the outcomes: are the exploratory tests satisfying, can we maintain a sustainable pace. When the code base has become to large, and the LLM can not make more progress, we are stuck. There is value in knowing why it got stuck, and once we find that out, having automated checks and visuals to inform us about the direction of travel.
+Whether we are working in a team on fresh or vintage code, or working 'LL-MAD' (LLM Assisted Development), there is value in having fact-based views that we can make on the fly as we ask questions. Iterating on what we know, what we want to know, and what questions we can and should ask.
+
+Since April, I've gone deeper into working with 'agents' like Aider and Claude Code to hash out ideas, in text and in code.
+
+When generating software with an agent, sometimes it is hard to assess the output of a coding agent by 'just' looking at the outcomes, and some of the outputs. Does this step provide value? Are the exploratory tests satisfying? can we maintain a sustainable pace? When the code base has become too large, and the LLM can not make more progress, we are stuck. We don't want to go hands-on on code that is not malleable. There is value in knowing why the LLM got stuck, and once we find that out, having automated checks and visuals to inform us about the direction of travel. We can take a step back, or start over and run another experiment.
+
+We tried having the coding agent (mostly Claude code) generate documentation with diagrams. This works, but it is a lot of text to read, and you can't be sure which of the words and pictures are facts, and which ones are beliefs. These documents mostly have value to reflect back to us what the coding agent makes of our code base. If we want to use these reports to steer the direction of travel, we have to go in ourselves, and read the code. This is time consuming and error prone. Often the code looks good enough, and people are not necessarily good at spotting the faulty outliers.
+
+So let's take you through some of the diagrams we made to assess whether a small typescript front-end that Claude Code generated overnight for a web-based game has a decent structure, and if it could responsibly add tests to it when we found there were to few. 
 
 
-## Sometimes typing is the bottleneck
+## Sometimes creating code the bottleneck
 
-When you have many ideas, the bottleneck consists of refining ideas, exploring options. LLMs helped me go back and forth on my ideas. (although they tend to agree, so you have to be careful how to phrase questions, or run them multiple times) is generating code. LLM Augmented Development, or LL-MAD for short helps in generating code. Sometimes to explore options, sometimes to go into production. Ideally we want to work in steps, and work incrementally. 
+When you have many ideas, the bottleneck consists of refining ideas, exploring options.
+We can explore options in several ways. When it comes to 'can we build this?', we can pair, we can chat back and forth with an LLM, or create code. We love doing architectural spikes, and we love working in small increments. Architectural spikes are rarely a problem. If we intend to throw away the code after the learning happened, we don't need to look at the code in depth. If we want to make a next step, however, we need to have confidence that our system is sustainable and the code malleable.
 
-...ideas. We can explore options in several ways. When it comes to 'can we build this', we can pair, we can chat back and forth with an LLM, or create code. We love doing architectural spikes, and we love 
+LLMs helped me go back and forth on my ideas. LLM Augmented Development, or LL-MAD for short helps in generating code. Sometimes to explore options, sometimes to go into production. Ideally we want to work in steps, and work incrementally. We can generate a lot more code, in a lot less time than before. How can we assess whether it is any good, in a reasonable amount of time? 
 
-## And then the bottleneck moves to assessing
+## ...and then the bottleneck moves to assessing
 
-The bottlenecks then shifts to assessing the output. Explorory testing (see vasco duarte podcast) to assess the output works. Putting on a product managers' hat and looking at the cycle time, how many attempts are needed to get back to a stable state (tests green, exploratory tests pass, tests of satisfactory quality) works, but is slow. We made two graphic web front-ends (each over 600 tests, 5000 and 30000 lines of production javascript code as measured by [cloc]). They each validated some of our assumptions. The larger one had some annoying defects. The smaller one could not evolve further. Both gave rise to a system metaphor - Massive Multiplayer Co-operative Online Game (MMCOG) that made the designs in both of them obsolete. Progresss!
+The bottlenecks then shifts to assessing the output. We need exploratory testing to assess the output works. Putting on a product manager's hat and looking at the cycle time, how many attempts are needed to get back to a stable state (tests green, exploratory tests pass, tests of satisfactory quality) works, but is slow. We made two graphic web front-ends (each over 600 tests, 5000 and 30000 lines of production javascript code as measured by [cloc]). They each validated some of our assumptions. The larger one had some annoying defects. The smaller one could not evolve further. Both gave rise to a system metaphor - Massive Multiplayer Co-operative Online Game (MMCOG) that made the designs in both of them obsolete. Progress!
 
 Editors note: Discussions about design have been kept generic, so as to not to distract from the narrative, and hopefully make it accessible for a larger audience.
 
@@ -80,7 +89,7 @@ The views in the next session were not what I wanted, but what we needed. I had 
 
 ## A birds-eye view, with details ready to hand
 
-Each of the file names in the previous graphs, and the blocks in the visualizations below, you can click for more details. You can go to the source of the file, or in the case of the imports, click on a small square and see exactly what import it refers to. We want images based on facts, not beliefs **TODO** link to a tudor girba post, or wardley.
+Each of the file names in the previous graphs, and the blocks in the visualizations below, you can click for more details. You can go to the source of the file, or in the case of the imports, click on a small square and see exactly what import it refers to. We want images based on facts, not beliefs **TODO** link to a Tudor Girba post, or Wardley.
 
 We went back to the block views from earlier, and added the imports as small squares inside. This went in a number of steps, but the post is getting long, so I will spare you the details.
 
@@ -120,9 +129,9 @@ The value of dumb questions - Stephan is getting better at glamorous toolkit by 
 
 We did make a. maybe separate post about making a custom view on the analyzer for dependencies and imports.
 
-How to export images from Glamorous Toolkit for blogposts. SVG has interesting aspects.
+How to export images from Glamorous Toolkit for blog posts. SVG has interesting aspects.
 
--> situational awarenes
+-> situational awareness
 
 Follow up post: treemap for the larger repos - what kinds of file live where? 
 
@@ -130,9 +139,9 @@ I'm working on a successor for WeReview - a conference session review system (ne
 
 I left out the Massive, because as we are iterating, we are also finding smaller applications, which could help us launch sooner. FOOTNOTE investing with your own money.
 
-One of the engineering practices I adapted later, was pair programming. And pair business deveopment. Which leads to bottlnecks FOOTNOTE like generating ideas faster than we can keep track of. 
+One of the engineering practices I adapted later, was pair programming. And pair business development. Which leads to bottlenecks FOOTNOTE like generating ideas faster than we can keep track of. 
 
-For WeReview, using Claude Code turned out to be surprisingly succesful, at least initially. Generating a couple of models and screens was quite fluid, in conversation. The initial WeReview uses dependencies for some of its' features that are no longer maintained, and they do not all have suitable alternatives. So in our imaginary wardley map, things are moving from Product to Custom built. Just to sustain the product as it is. 
+For WeReview, using Claude Code turned out to be surprisingly successful, at least initially. Generating a couple of models and screens was quite fluid, in conversation. The initial WeReview uses dependencies for some of its' features that are no longer maintained, and they do not all have suitable alternatives. So in our imaginary wardley map, things are moving from Product to Custom built. Just to sustain the product as it is. 
 
 For the Game, we have had some success with generating graphical front-ends. I was able to make a MacOS prototype without previous experience of MacOS development. We made two graphical web frontend prototypes of some complexity. One has over 700 tests and almost 5000 lines of production code (as measured by cloc). Lines of code is not a measure of complexity, but a measure of how much time it costs us to evaluate the outcome if we have to read through the code. 
 
@@ -142,9 +151,9 @@ The other frontend spike is in typescript - this also has a backend, but just fo
 
 Visualizations do not need to be pretty or have legends - we made them, and use them every day, so I know what the colors mean. Green = test, Red is :w
  
-spec-driven development is a post for another day, might be good for a few clicks. I still have to read the documents - llms can produce a lot more documentation than I can read in detail. So there too, I need a birds eye view with precision
+spec-driven development is a post for another day, might be good for a few clicks. I still have to read the documents - LLMs can produce a lot more documentation than I can read in detail. So there too, I need a birds eye view with precision
 
-Before that I was too busy at a client that had an AI policy that was too ambigous for us **TODO footnote**, so we decided to delete all assistant, and only do chats with e.g. local LLMs, and when we did use public ones, we changed the domain. (this is worth a separate short post - exploit symmetry between domains to hide your intention from LLMs)
+Before that I was too busy at a client that had an AI policy that was too ambiguous for us **TODO footnote**, so we decided to delete all assistant, and only do chats with e.g. local LLMs, and when we did use public ones, we changed the domain. (this is worth a separate short post - exploit symmetry between domains to hide your intention from LLMs)
 
 This is the domain of spikes - build many to throw away, you will anyway [TODO brooks reference]  - that is its' own post. 
 
