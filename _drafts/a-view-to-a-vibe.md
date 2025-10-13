@@ -39,7 +39,7 @@ But the next time, I did not want to find out after six large stories that we co
 
 We want to ship working software, that is of value to the people it serves. Feedback is not always pleasant, but usually useful, and helps us go forward, or retrace our steps when necessary. 
 
-Creating this is an iterative process. It starts with gut feel. Or, as [Stephan](https://www.legacycode.nl) says, this is where experience comes in handy. We are looking to get insight in the code, at a high level, with details ready to hand. One perspective leads to another.
+Creating this is an iterative process. It starts with gut feel. Or, as [Stephan](https://www.legacycode.nl) says, this is where experience comes in handy. We are looking to get insight in the code, at a high level, with details ready to hand. One perspective  /leads to another.
 
 
 ## Baby steps - get the view you need, not the view you want
@@ -77,7 +77,7 @@ The 'force layout' option was more like what I had in mind when I thought about 
 
 I still cannot see at a glance which files have more imports than I expect. Stephan suggested a different kind of view. 
 
-You may have noticed that not all files have arrows pointing to them in the previous diagram. We didn't need them to make an assessment. Knowing where to stop is important. 
+We could make more improvements here, this diagram is far from perfect. For instance, you may have noticed that not all files have arrows pointing to them - they are floating in space. We didn't need these arrows to make an assessment. Knowing where to stop is important. 
 
 ## Know where to stop
 
@@ -91,15 +91,28 @@ Each of the file names in the previous graphs, and the blocks in the visualizati
 
 We went back to the block views from earlier, and added the imports as small squares inside. This went in a number of steps, but the post is getting long, so I will spare you the details.
 
-**CONTINUE HERE**. explain legend, and our interpretation. Three test files, but their dependencies are ok. red is external dependencies, not too many. Reason to track red: we got burned by this in previous experiments, despite our best efforts at prompting for one of our favourite design patterns TODO link to hex arch post.
+*legend*** From the squares view, we kept the black for implementation files, and green for test files. They are now rendered as outlines around small squares. Each small square is an import, a dependency the file needs to function. The small squares are colored as follows:
 
-![tbd](/attachments/blogposts/2025/gt-ts-imports-three-test-files.svg)
+- yellow: import inside our own code
+- red: import to an external dependency
+- cyan: zero imports in file
 
-second run, having the agent generate tests:
+The cyan was not planned, but emerged from running the visualisation. We need something to represent 'no imports', or our visualisation would crash.
+
+The red was important, because in previous experiments the coding agent would add external dependencies where we did not expect them. 
+
+**CUTTING ROOM FLOOR / ASIDE** some of the imports were unused once I ran a bit of static analysis on the files.
+
+We can now see, that the tree green test files, have ok dependencies. There are some dependencies in other files, but they are not everywhere. Not too bad, as we had not prompted for [that](/2020-09-09-how-to-keep-complexity-in-check-with-hexagonal-architecture.md) yet.
+![Dependencies plotted as squares inside](/attachments/blogposts/2025/gt-ts-imports-three-test-files.svg)
+
+Now that we have some visuals, we prompt the the agent generate tests, and have a look at the results:
 
 ![tbd](/attachments/blogposts/2025/gt-ts-imports-more-test-files.svg)
 
-We can see that this was a success in the sense that we have more tests, but a failure, in that the tests are tightly coupled to other files. I would expect two coloured blocks, one for a test framework maybe and one for a domain object. Five or six imports for a test file is a lot. Might be ok for an integration test if there is no facade, but not here.
+We can see that this was a success in the sense that we have more tests, but a failure, in that the tests are tightly coupled to other files. For focused unit tests, we  would expect a maximum of two coloured blocks, one for a test framework maybe and one for a domain object. Five or six imports for a test file is a lot. Might be ok for an integration test if there is no facade, but not here.
+
+In Glamorous Toolkit we can click on each of the blocks to see what the fact behind the block is. When we click on the outside, we get the whole file, when we click on one of the small blocks, we get the exact import. We can then choose to show these imports in isolation, together with the other imports or in the context of the rest of the file. This doesn't translate neatly to a screenshot in a blog post yet, so we have left that out for now.
 
 # Summary
 
