@@ -28,7 +28,13 @@ LLMs helped me go back and forth on my ideas. LLM Augmented Development, or LL-M
 
 ## ...and then the bottleneck moves to assessing
 
-The bottlenecks then shifts to assessing the output. We need exploratory testing to assess the output works. Putting on a product manager's hat and looking at the cycle time works, as long as we can go in one move from one stable state to another. A stable state is roughly: are the tests green, do the exploratory tests pass, are the tests of satisfactory quality? If the assessment ends its' work in an unstable state, how do we know? And how many tries does it take to get back to a stable state. We can e.g. read the code, discuss with the assistant, but it is slow going. We made two graphic web front-ends (each over 600 tests, 5000 and 30000 lines of production Javascript code as measured by [Cloc](https://github.com/AlDanial/cloc)). They each validated some of our assumptions. The larger one had some annoying defects. The smaller one could not evolve further. Both gave rise to a *system metaphor* - Massive Multiplayer Co-operative Online Game (MMCOG) that made the designs in both of them obsolete. Progress!
+The bottlenecks then shifts to assessing the output. We need exploratory testing to assess the output works. Putting on a product manager's hat and looking at the cycle time works, as long as we can go in one move from one stable state to another. A stable state is roughly: are the tests green, do the exploratory tests pass, are the tests of satisfactory quality? 
+
+If the assessment ends its' work in an unstable state, how do we know? And how many tries does it take to get back to a stable state? 
+
+We can e.g. read the code, discuss with the assistant, but it is slow going. We made two graphic web front-ends (each over 600 tests, 5000 and 30000 lines of production Javascript code as measured by [Cloc](https://github.com/AlDanial/cloc)). They each validated some of our assumptions. The larger one had some annoying defects. The smaller one could not evolve further. 
+
+Both gave rise to a *system metaphor* - Massive Multiplayer Co-operative Online Game (MMCOG) that made the designs in both of them obsolete. Progress!
 
 > Editors note: discussions about design have been kept generic, so as to not to distract from the narrative, and hopefully make it accessible for a larger audience.
 
@@ -119,11 +125,13 @@ Clicking through on a couple of the new test files confirmed our suspicion, unfo
 
 In Glamorous Toolkit we can click on each of the blocks to see what the fact behind the block is. When we click on the outside, we get the whole file, when we click on one of the small blocks, we get the exact import. We can then choose to show these imports in isolation, together with the other imports or in the context of the rest of the file. Each of these views is fully customisable, so can see what _we_ need. This doesn't translate neatly to a screenshot in a blog post yet, so we have left that out for now.
 
-# Summary
+# Conclusions
 
 To be honest, making the first round of tools was quite a bit of work, we needed to do some undifferentiated heavy lifting to work with the Typescript code. Having said that, the majority of what we needed to work with Typescript code was already there. It was mostly making connections between a file and the relations we were interested in, and creating some custom views that made it easier to navigate said relations interactively. 
 
 While writing this post, we got more ideas, of course. But we did not need more to make the assessment we needed. The spike was a success in the sense that we know the Game metaphor works, and that related tools can save us from writing code, while having a simple system to work on.
+
+Some of the aspects can also be covered with static analysis, e.g. linting. We did this in previous experiments. As agents and the tools around them evolve, we find it worthwhile to occasionally start from a blank slate, and revisit our assumptions about which checks we want, and when we want them.
 
 After an initial investment, I believe that [moldable development](https://moldabledevelopment.com/) will save us time in figuring out what we and agents develop. With or without agents, it can be difficult to keep up with what code is produced. If we turn our perspective in to views, we hit refresh, and our intuition support system shows us what we need.
 
@@ -132,6 +140,7 @@ After an initial investment, I believe that [moldable development](https://molda
 
 - Tudor Girba - [Developers spend most of their time figuring the system out](https://lepiter.io/feenk/developers-spend-most-of-their-time-figuri-9q25taswlbzjc5rsufndeu0py/)
 - Tudor Girba, Simon Wardley - [Moldable Development](https://moldabledevelopment.com/)
+
 # Credits
 
 [Stephan Eggermont](https://www.legacycode.nl) was instrumental in co-creating the visualisations and editing the blogpost. As well as editing.
