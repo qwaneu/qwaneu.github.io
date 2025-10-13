@@ -48,14 +48,16 @@ We wanted to see the dependencies in the generated code, both inside and to the 
 
 Working in small steps, and making progress remains one of our favourite practices.
 
+![Black squares. most are the same size roughly, some are smaller](/attachments/blogposts/2025/gt-ts-black-squares.svg)
+
+
 ## More squares - where are the tests? 
 
 
-![Four of the squares are now green. one square is smaller than the other three.](/attachments/blogposts/2025/gt-ts-black-squares.svg)
 
 space
 
-![tbd](/attachments/blogposts/2025/gt-ts-black-and-green-squares.svg)
+![Four of the squares are now green. one square is smaller than the other three.](/attachments/blogposts/2025/gt-ts-black-and-green-squares.svg)
 
 
 
