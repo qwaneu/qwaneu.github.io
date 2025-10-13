@@ -143,7 +143,7 @@ After an initial investment, I believe that [moldable development](https://molda
 
 # Credits
 
-- [Stephan Eggermont](https://www.legacycode.nl) was instrumental in co-creating the visualisations and editing the blogpost. As well as editing.
+- [Stephan Eggermont](https://www.domeinmodel.nl) was instrumental in co-creating the visualisations and editing the blogpost. As well as editing.
 - Marc Evers for clarifiying my intent. 
 - Participants and facilitators at [CITCON 2025](/2025/09/29/citcon-2025.html). The blog post title gelled as I was jotting down a session description on an index card. I have attempted to weave some more detailed answers to questions in the session into the post.
 
