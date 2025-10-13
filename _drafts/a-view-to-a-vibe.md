@@ -10,13 +10,13 @@
 
 Since April, I've been experimenting more intensively with augmented code generation, quite often with a clear-ish vision, a pair, tests and other of our [favourite engineering practices](2025/10/06/practices-are-patterns.html). 
 
-Whether we are working in a team on fresh or vintage code, or working 'LL-MAD' (LLM Assisted Development), there is value in having fact-based views that we can make on the fly as we ask questions. Iterating on what we know, what we want to know, and what questions we can and should ask.
+Whether we are working in a team on fresh or vintage code, or working 'LL-MAD' (Large Language Model Assisted Development), there is value in having fact-based views that we can make on the fly as we ask questions. Iterating on what we know, what we want to know, and what questions we can and should ask.
 
 When generating software with an agent, sometimes it is hard to assess the output of a coding agent by 'just' looking at the outcomes, and some of the outputs. Does this step provide value? Are the exploratory tests satisfying? can we maintain a sustainable pace? When the code base has become too large, and the LLM can not make more progress, we are stuck. We don't want to go hands-on on code that is not malleable. There is value in knowing why the LLM got stuck, and once we find that out, having automated checks and visuals to inform us about the direction of travel. We can take a step back, or start over and run another experiment.
 
 We tried having the coding agent (mostly Claude code) generate documentation with diagrams. This works, but it generates a lot of text to read, and you can't be sure which of the words and pictures are facts, and which ones are beliefs. These documents mostly have value to reflect back to us what the coding agent makes of our code base. If we want to use these reports to steer the direction of travel, we have to go in ourselves, and read the code. This is time consuming and error prone. On the surface, the code looks good enough, and people are not good at spotting the faulty outliers.
 
-So let's take you through some of the diagrams we made to assess whether a small Typescript front-end that Claude Code generated overnight for a web-based game has a decent structure, and if it could responsibly add tests to it when we found there were to few. 
+So let's take you through some of the diagrams we made to assess whether a small Typescript front-end that Claude Code generated overnight for a web-based game has a decent structure, and if it could responsibly add tests to it when we found there were to few. We will discuss the rationale for a _small_ front-end along the way.
 
 
 ## Sometimes creating code is the bottleneck
@@ -28,11 +28,11 @@ LLMs helped me go back and forth on my ideas. LLM Augmented Development, or LL-M
 
 ## ...and then the bottleneck moves to assessing
 
-The bottlenecks then shifts to assessing the output. We need exploratory testing to assess the output works. Putting on a product manager's hat and looking at the cycle time works, as long as we can go in one move from one stable state to another. A stable state is roughly: are the tests green, do the exploratory tests pass, are the tests of satisfactory quality? If the assessment ends its' work in an unstable state, how do we know? And how many tries does it take to get back to a stable state. We can e.g. read the code, discuss with the assistant, but it is slow going. We made two graphic web front-ends (each over 600 tests, 5000 and 30000 lines of production Javascript code as measured by [Cloc](https://github.com/AlDanial/cloc)). They each validated some of our assumptions. The larger one had some annoying defects. The smaller one could not evolve further. Both gave rise to a system metaphor - Massive Multiplayer Co-operative Online Game (MMCOG) that made the designs in both of them obsolete. Progress!
+The bottlenecks then shifts to assessing the output. We need exploratory testing to assess the output works. Putting on a product manager's hat and looking at the cycle time works, as long as we can go in one move from one stable state to another. A stable state is roughly: are the tests green, do the exploratory tests pass, are the tests of satisfactory quality? If the assessment ends its' work in an unstable state, how do we know? And how many tries does it take to get back to a stable state. We can e.g. read the code, discuss with the assistant, but it is slow going. We made two graphic web front-ends (each over 600 tests, 5000 and 30000 lines of production Javascript code as measured by [Cloc](https://github.com/AlDanial/cloc)). They each validated some of our assumptions. The larger one had some annoying defects. The smaller one could not evolve further. Both gave rise to a *system metaphor* - Massive Multiplayer Co-operative Online Game (MMCOG) that made the designs in both of them obsolete. Progress!
 
 > Editors note: discussions about design have been kept generic, so as to not to distract from the narrative, and hopefully make it accessible for a larger audience.
 
-But the next time, I did not want to find out after six large stories that we could not continue developing. Now that we have a good metaphor, I want to make incremental progress. To check the output, I will have to read code. But if I let the assistant run while I sleep, I may have several thousand lines of changes to wade through. Sometimes it took me an hour or more to identify that new components had been made where I did not expect them.
+But the next time, we did not want to find out after six large stories that we could not continue developing. Now that we have a good system metaphor, we want to make incremental progress. To check the output, we will have to read code. But if we let the assistant run while we sleep, we may have several thousand lines of changes to wade through. Sometimes it took me an hour or more to identify that new components had been made where we did not expect them.
 
 
 # A birds-eye view, with precision
@@ -62,7 +62,7 @@ As another baby step, we plotted the test files as green. We see that a small fr
 In the next steps we went for the names and relations, and left 'is it a test or not' and 'how large are they' aside for a bit. 
 
 
-## How are our dependencies going?
+## How are our dependencies evolving?
 
 We first plotted the dependencies in a circle. This does not tell us much about how the dependencies are going, but it looks pretty.
 
@@ -85,7 +85,7 @@ We could make more improvements here. This diagram is far from perfect. For inst
 
 We build tools, so that we can build useful software, not tools to build tools. We can live with precise, but imperfect views. As long as they provide enough information to make an assessment. Situational awareness is what we are after.
 
-The views in the next session were not what I wanted, but what we needed. I had asked for boxes and arrows, but it turned out that boxes-in-boxes was much more useful.
+The views in the next session were not what we wanted, but what we needed. I had asked for boxes and arrows, but it turned out that boxes-in-boxes was much more useful.
 
 ## A birds-eye view, with details ready to hand
 
@@ -109,19 +109,19 @@ We can now see, that the green test files, have ok dependencies. There are some 
 ![Dependencies plotted as squares inside](/attachments/blogposts/2025/gt-ts-imports-three-test-files.svg)
 
 We saw that we had few test files, and the coverage report confirmed that it was on the low side. So far we have found  generating tests by coding agents based on loose prompts a mixed bag. Let's see if the visuals can help us assess.
-W prompt the the agent generate tests, and have a look at the results:
+We prompted the the agent generate tests, and had a look at the results:
 
 ![More test files, many of them have several dependency blocks in them](/attachments/blogposts/2025/gt-ts-imports-more-test-files.svg)
 
 We can see that this was a success in the sense that we have more tests, but a failure, in that the tests are tightly coupled to other files. For focused unit tests, we  would expect a maximum of two coloured blocks, one for a test framework maybe and one for a domain object. Five or six imports for a test file is a lot. Might be ok for an integration test, but we would expect fewer new test files in that case.
 
-Clicking through on a couple of the new test files confirmed our suspicion, unfortunately. So this is a case of going in by hand, or prompting differently and rolling the dice again.
+Clicking through on a couple of the new test files confirmed our suspicion, unfortunately. These tests did not add much value. We want tests to explain the software to us _and_ prevent regressions. Only preserving behaviour is not enough. So this is a case of going in by hand, or prompting differently and rolling the dice again.
 
-In Glamorous Toolkit we can click on each of the blocks to see what the fact behind the block is. When we click on the outside, we get the whole file, when we click on one of the small blocks, we get the exact import. We can then choose to show these imports in isolation, together with the other imports or in the context of the rest of the file. This doesn't translate neatly to a screenshot in a blog post yet, so we have left that out for now.
+In Glamorous Toolkit we can click on each of the blocks to see what the fact behind the block is. When we click on the outside, we get the whole file, when we click on one of the small blocks, we get the exact import. We can then choose to show these imports in isolation, together with the other imports or in the context of the rest of the file. Each of these views is fully customisable, so can see what _we_ need. This doesn't translate neatly to a screenshot in a blog post yet, so we have left that out for now.
 
 # Summary
 
-To be honest, making the first round of tools was quite a bit of work, we needed to do some undifferentiated heavy lifting to work with the typescript code. Having said that, the majority of what we needed to work with Typescript code was already there. It was mostly making connections between a file and the relations we were interested in, and creating some custom views that made it easier to navigate said relations interactively. 
+To be honest, making the first round of tools was quite a bit of work, we needed to do some undifferentiated heavy lifting to work with the Typescript code. Having said that, the majority of what we needed to work with Typescript code was already there. It was mostly making connections between a file and the relations we were interested in, and creating some custom views that made it easier to navigate said relations interactively. 
 
 While writing this post, we got more ideas, of course. But we did not need more to make the assessment we needed. The spike was a success in the sense that we know the Game metaphor works, and that related tools can save us from writing code, while having a simple system to work on.
 
