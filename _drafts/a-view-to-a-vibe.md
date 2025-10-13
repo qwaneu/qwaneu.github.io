@@ -50,18 +50,16 @@ Working in small steps, and making progress remains one of our favourite practic
 
 ![Black squares. most are the same size roughly, some are smaller](/attachments/blogposts/2025/gt-ts-black-squares.svg)
 
-These are only squares, with no filenames. First I wanted to see where the tests were. It was interesting to not have the names of the files. It made me look inside files where I would not normally look. This was quite interesting, I learned a few things about typescript project structure and about what had been generated. I am normally biased to look into particular files (e.g. the tests).  Secret Santa for code.
+These are only squares, with no filenames. First I wanted to see where the tests were. It was interesting to not have the names of the files. It made me look inside files where I would not normally look. This was quite interesting, I learned a few things about typescript project structure and about what had been generated. I am normally biased to look into particular files (e.g. the tests). This brought some serendipity to the process. 
 
 
-## More squares - where are the tests? 
+## More SWAN - Squares Without A Name - where are the tests? 
 
-
-
-space
+As another baby step, we plotted the test files as green. We see that a small fraction of the squares are tests.
 
 ![Four of the squares are now green. one square is smaller than the other three.](/attachments/blogposts/2025/gt-ts-black-and-green-squares.svg)
 
-
+In the next steps we went for the names and relations, and left 'is it a test or not' and 'how large are they' aside for a bit. 
 
 
 ## How are our dependencies going?
@@ -81,7 +79,7 @@ The 'force layout' option was more like what I had in mind when I thought about 
 
 I still cannot see at a glance which files have more imports than I expect. Stephan suggested a different kind of view. 
 
-We could make more improvements here, this diagram is far from perfect. For instance, you may have noticed that not all files have arrows pointing to them - they are floating in space. We didn't need these arrows to make an assessment. Knowing where to stop is important. 
+We could make more improvements here. This diagram is far from perfect. For instance, you may have noticed that not all files have arrows pointing to them - they are floating in space. We didn't need these arrows to make an assessment. Knowing where to stop is important. 
 
 ## Know where to stop
 
@@ -91,11 +89,11 @@ The views in the next session were not what I wanted, but what we needed. I had 
 
 ## A birds-eye view, with details ready to hand
 
-Each of the file names in the previous graphs, and the blocks in the visualizations below, you can click for more details. You can go to the source of the file, or in the case of the imports, click on a small square and see exactly what import it refers to. We want images based on facts, not beliefs **TODO** link to a Tudor Girba post, or Wardley.
+Each of the file names in the previous graphs, and the blocks in the visualisations below, you can click for more details. You can go to the source of the file, or in the case of the imports, click on a small square and see exactly what import it refers to. We want images based on facts, not beliefs. 
 
 We went back to the block views from earlier, and added the imports as small squares inside. This went in a number of steps, but the post is getting long, so I will spare you the details.
 
-*legend*** From the squares view, we kept the black for implementation files, and green for test files. They are now rendered as outlines around small squares. Each small square is an import, a dependency the file needs to function. The small squares are colored as follows:
+*legend*** From the squares view, we kept the black for implementation files, and green for test files. They are now rendered as outlines around small squares. Each small square is an import, a dependency the file needs to function. The small squares are coloured as follows:
 
 - yellow: import inside our own code
 - red: import to an external dependency
@@ -105,79 +103,37 @@ The cyan was not planned, but emerged from running the visualisation. We need so
 
 The red was important, because in previous experiments the coding agent would add external dependencies where we did not expect them. 
 
-**CUTTING ROOM FLOOR / ASIDE** some of the imports were unused once I ran a bit of static analysis on the files.
 
-We can now see, that the tree green test files, have ok dependencies. There are some dependencies in other files, but they are not everywhere. Not too bad, as we had not prompted for [that](/2020-09-09-how-to-keep-complexity-in-check-with-hexagonal-architecture.md) yet.
+We can now see, that the green test files, have ok dependencies. There are some dependencies in other files, but they are not everywhere. Not too bad, as we had not prompted for [hexagonal architecture](/2020-09-09-how-to-keep-complexity-in-check-with-hexagonal-architecture.md) yet.
+
 ![Dependencies plotted as squares inside](/attachments/blogposts/2025/gt-ts-imports-three-test-files.svg)
 
-Now that we have some visuals, we prompt the the agent generate tests, and have a look at the results:
+We saw that we had few test files, and the coverage report confirmed that it was on the low side. So far we have found  generating tests by coding agents based on loose prompts a mixed bag. Let's see if the visuals can help us assess.
+W prompt the the agent generate tests, and have a look at the results:
 
-![tbd](/attachments/blogposts/2025/gt-ts-imports-more-test-files.svg)
+![More test files, many of them have several dependency blocks in them](/attachments/blogposts/2025/gt-ts-imports-more-test-files.svg)
 
-We can see that this was a success in the sense that we have more tests, but a failure, in that the tests are tightly coupled to other files. For focused unit tests, we  would expect a maximum of two coloured blocks, one for a test framework maybe and one for a domain object. Five or six imports for a test file is a lot. Might be ok for an integration test if there is no facade, but not here.
+We can see that this was a success in the sense that we have more tests, but a failure, in that the tests are tightly coupled to other files. For focused unit tests, we  would expect a maximum of two coloured blocks, one for a test framework maybe and one for a domain object. Five or six imports for a test file is a lot. Might be ok for an integration test, but we would expect fewer new test files in that case.
+
+Clicking through on a couple of the new test files confirmed our suspicion, unfortunately. So this is a case of going in by hand, or prompting differently and rolling the dice again.
 
 In Glamorous Toolkit we can click on each of the blocks to see what the fact behind the block is. When we click on the outside, we get the whole file, when we click on one of the small blocks, we get the exact import. We can then choose to show these imports in isolation, together with the other imports or in the context of the rest of the file. This doesn't translate neatly to a screenshot in a blog post yet, so we have left that out for now.
 
 # Summary
 
-To be honest, making the first round of tools was quite a bit of work, we needed to do some undifferentiated heavy lifting to work with the typescript code. Having said that, the vast majority of what we needed to work with Typescript code was already there. It was mostly making connections between a file and its' relations, and creating some custom views that made it easier to navigate said relations interactively. Not something we can easily show in a blog post.
+To be honest, making the first round of tools was quite a bit of work, we needed to do some undifferentiated heavy lifting to work with the typescript code. Having said that, the majority of what we needed to work with Typescript code was already there. It was mostly making connections between a file and the relations we were interested in, and creating some custom views that made it easier to navigate said relations interactively. 
 
 While writing this post, we got more ideas, of course. But we did not need more to make the assessment we needed. The spike was a success in the sense that we know the Game metaphor works, and that related tools can save us from writing code, while having a simple system to work on.
 
-## Relation with linting
-
-Not sure if this belongs in the post. The relation with linting is iterative. LL-MAD makes it easy to create linting rules that work well enough, but as with regular development, the amount of linting and the timing of it matters. As Steve Freeman said at CITCON, it is a bummer when a long build fails, because in the last step, after all the compilation steps and tests have been done, a linter finds that an incorrect amount of spaces was used for indentation and rejects the build. Coding assistants can get in a loop when they try to commit, and are prevented because of linting. The linting feedback may not neatly fit into the current context. We are experimenting with where to put what linting rules and tools. 
+After an initial investment, I believe that [moldable development](https://moldabledevelopment.com/) will save us time in figuring out what we and agents develop. With or without agents, it can be difficult to keep up with what code is produced. If we turn our perspective in to views, we hit refresh, and our intuition support system shows us what we need.
 
 
 # Further reading 
 
-- Adrian Cockroft
-- Vasco Duarte podcast
-- Mythical man month
 - Tudor Girba - [Developers spend most of their time figuring the system out](https://lepiter.io/feenk/developers-spend-most-of-their-time-figuri-9q25taswlbzjc5rsufndeu0py/)
-
+- Tudor Girba, Simon Wardley - [Moldable Development](https://moldabledevelopment.com/)
 # Credits
 
-[Stephan Eggermont](https://www.legacycode.nl) was instrumental in co-creating the visualisations and editing the blogpost.
+[Stephan Eggermont](https://www.legacycode.nl) was instrumental in co-creating the visualisations and editing the blogpost. As well as editing.
+Marc Evers for clarifiying my intent. 
 
-# Cutting room floor 
-
-Assessment is the process of understanding a situation around a system enough to make a decision - Tudor Girba. 
-
-Post about our favourite practices.
-
-The value of dumb questions - Stephan is getting better at glamorous toolkit by me asking beginner questions. I don't know w 
-
-We did make a. maybe separate post about making a custom view on the analyzer for dependencies and imports.
-
-How to export images from Glamorous Toolkit for blog posts. SVG has interesting aspects.
-
--> situational awareness
-
-Follow up post: treemap for the larger repos - what kinds of file live where? 
-
-I'm working on a successor for WeReview - a conference session review system (needs one liner. stephan?) and, with Stephan Eggermont in stealth on something that has Multiplayer Online Collaborative Game as systems metaphor. We'll refer to this as 'Game' going forward. FOOTNOTE this metaphor only came about as a result of several rounds of experimentation. It is, I think, paying off, because it allows us to think of designs that are relatively simple, and libraries and designs that we can re-purpose or re-use.
-
-I left out the Massive, because as we are iterating, we are also finding smaller applications, which could help us launch sooner. FOOTNOTE investing with your own money.
-
-One of the engineering practices I adapted later, was pair programming. And pair business development. Which leads to bottlenecks FOOTNOTE like generating ideas faster than we can keep track of. 
-
-For WeReview, using Claude Code turned out to be surprisingly successful, at least initially. Generating a couple of models and screens was quite fluid, in conversation. The initial WeReview uses dependencies for some of its' features that are no longer maintained, and they do not all have suitable alternatives. So in our imaginary wardley map, things are moving from Product to Custom built. Just to sustain the product as it is. 
-
-For the Game, we have had some success with generating graphical front-ends. I was able to make a MacOS prototype without previous experience of MacOS development. We made two graphical web frontend prototypes of some complexity. One has over 700 tests and almost 5000 lines of production code (as measured by cloc). Lines of code is not a measure of complexity, but a measure of how much time it costs us to evaluate the outcome if we have to read through the code. 
-
-We cared about the result, and glanced at the code occasionally. If we had run `cloc` earlier we could have seen the disparity between tests (>10k lines) and code (5K lines) growing. In the end, we could not add more features to it, because Claude had trouble with javascript (parameters can be present or not - explain in more detail), and having it do a typescript migration turned out to generate even more code (unwanted validations for internal code). So we parked it, until we could have a better handle at it, or use a library - this was before we came up with the Game metaphor. After the Game metaphor we found some well maintained libraries that could fulfill the same need (Wardley map ot the right). Blog post: *vibing our way to a system metaphor*
-
-The other frontend spike is in typescript - this also has a backend, but just focusing on the front-end, the backend was relatively easy to put together, it has passing tests, but also has some annoying failures (*Heuristic: What do we carry forward, if anything*). It has a little over 600 front-end tests, 1359 lines in about 30 end to end tests, almost 31000 lines of typescript code (code and tests, not split out for now, we may do a separate visualisation of this). 2500 lines of backend code, (including websockets, custom session management etc), 1800+ lines of test code.
-
-Visualizations do not need to be pretty or have legends - we made them, and use them every day, so I know what the colors mean. Green = test, Red is :w
- 
-spec-driven development is a post for another day, might be good for a few clicks. I still have to read the documents - LLMs can produce a lot more documentation than I can read in detail. So there too, I need a birds eye view with precision
-
-Before that I was too busy at a client that had an AI policy that was too ambiguous for us **TODO footnote**, so we decided to delete all assistant, and only do chats with e.g. local LLMs, and when we did use public ones, we changed the domain. (this is worth a separate short post - exploit symmetry between domains to hide your intention from LLMs)
-
-This is the domain of spikes - build many to throw away, you will anyway [TODO brooks reference]  - that is its' own post. 
-
-
- These files were re-exported through a kind of 'facade' files. We could also parse the  'export' lines in the code, but we had enough information that we decided to bin this experiment. We learnt that using a particular kind of framework is useful, and that we want to create the initial tests and structure by hand. Hoping that that gives enough context for a LLM to fill in some of the boilerplate.
-I may have been successful in getting a line of business application to a point where 80% of the features can be co-created with LLM augmented development. 20% is still hard. 
