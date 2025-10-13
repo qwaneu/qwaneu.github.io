@@ -4,7 +4,7 @@
  tags:
  - moldable development
  - LLM
- author: Willem van den Ende, Stephan Eggermont, Marc Evers
+ author: Willem van den Ende, Stephan Eggermont
  image: /attachments/blogposts/2025/gt-ts-black-and-green-squares.svg
 ---
 
@@ -55,6 +55,7 @@ We wanted to see the dependencies in the generated code, both inside and to the 
 Working in small steps, and making progress remains one of our favourite practices.
 
 ![Black squares. most are the same size roughly, some are smaller](/attachments/blogposts/2025/gt-ts-black-squares.svg)
+{: class="post-image post-image-50" }
 
 These are only squares, with no filenames. First I wanted to see where the tests were. It was interesting to not have the names of the files. It made me look inside files where I would not normally look. This was quite interesting, I learned a few things about typescript project structure and about what had been generated. I am normally biased to look into particular files (e.g. the tests). This brought some serendipity to the process. 
 
@@ -64,6 +65,7 @@ These are only squares, with no filenames. First I wanted to see where the tests
 As another baby step, we plotted the test files as green. We see that a small fraction of the squares are tests.
 
 ![Four of the squares are now green. one square is smaller than the other three.](/attachments/blogposts/2025/gt-ts-black-and-green-squares.svg)
+{: class="post-image post-image-50" }
 
 In the next steps we went for the names and relations, and left 'is it a test or not' and 'how large are they' aside for a bit. 
 
@@ -72,16 +74,19 @@ In the next steps we went for the names and relations, and left 'is it a test or
 
 We first plotted the dependencies in a circle. This does not tell us much about how the dependencies are going, but it looks pretty.
 
-![tbd](/attachments/blogposts/2025/gt-ts-dependencies-circle.svg)
+![File dependencies plotted in a circle](/attachments/blogposts/2025/gt-ts-dependencies-circle.svg)
+{: class="post-image}
 
 For me it was a useful exploration to see some of the visualisations available in [Glamorous Toolkit](https://gtoolkit.com/).
 Next up we tried a 'dominance tree'. This gives us a bit more oversight, but still a bit cluttered. 
 
-![tbd](/attachments/blogposts/2025/gt-ts-dependencies-dominance-tree.svg)
+![Dominance tree view of file dependencies](/attachments/blogposts/2025/gt-ts-dependencies-dominance-tree.svg)
+{: class="post-image}
 
 The 'force layout' option was more like what I had in mind when I thought about dependencies.
 
-![tbd](/attachments/blogposts/2025/gt-ts-dependencies-force-layout.svg)
+![Dominance tree view of file dependencies, after a 'force layout'](/attachments/blogposts/2025/gt-ts-dependencies-force-layout.svg)
+{: class="post-image}
 
 I still cannot see at a glance which files have more imports than I expect. Stephan suggested a different kind of view. 
 
@@ -113,11 +118,13 @@ The red was important, because in previous experiments the coding agent would ad
 We can now see, that the green test files, have ok dependencies. There are some dependencies in other files, but they are not everywhere. Not too bad, as we had not prompted for [hexagonal architecture](/2020-09-09-how-to-keep-complexity-in-check-with-hexagonal-architecture.md) yet.
 
 ![Dependencies plotted as squares inside](/attachments/blogposts/2025/gt-ts-imports-three-test-files.svg)
+{: class="post-image post-image-50" }
 
 We saw that we had few test files, and the coverage report confirmed that it was on the low side. So far we have found  generating tests by coding agents based on loose prompts a mixed bag. Let's see if the visuals can help us assess.
 We prompted the the agent generate tests, and had a look at the results:
 
 ![More test files, many of them have several dependency blocks in them](/attachments/blogposts/2025/gt-ts-imports-more-test-files.svg)
+{: class="post-image post-image-50" }
 
 We can see that this was a success in the sense that we have more tests, but a failure, in that the tests are tightly coupled to other files. For focused unit tests, we  would expect a maximum of two coloured blocks, one for a test framework maybe and one for a domain object. Five or six imports for a test file is a lot. Might be ok for an integration test, but we would expect fewer new test files in that case.
 
@@ -144,7 +151,7 @@ After an initial investment, I believe that [moldable development](https://molda
 # Credits
 
 - [Stephan Eggermont](https://www.domeinmodel.nl) was instrumental in co-creating the visualisations and editing the blogpost. As well as editing.
-- Marc Evers for clarifiying my intent. 
+- Marc Evers for clarifying my intent. 
 - Participants and facilitators at [CITCON 2025](/2025/09/29/citcon-2025.html). The blog post title gelled as I was jotting down a session description on an index card. I have attempted to weave some more detailed answers to questions in the session into the post.
 
 <aside>
