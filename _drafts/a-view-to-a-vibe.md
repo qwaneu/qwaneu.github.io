@@ -50,6 +50,8 @@ Working in small steps, and making progress remains one of our favourite practic
 
 ![Black squares. most are the same size roughly, some are smaller](/attachments/blogposts/2025/gt-ts-black-squares.svg)
 
+These are only squares, with no filenames. First I wanted to see where the tests were. It was interesting to not have the names of the files. It made me look inside files where I would not normally look. This was quite interesting, I learned a few things about typescript project structure and about what had been generated. I am normally biased to look into particular files (e.g. the tests).  Secret Santa for code.
+
 
 ## More squares - where are the tests? 
 
