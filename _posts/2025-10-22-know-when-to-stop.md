@@ -10,9 +10,9 @@
 
 Building your own tools is kind of addictive. Once [we learn how to make productive tools](/2025/10/13/a-view-to-a-vibe.html), it can be hard to stop. There is much to see in a code base. But as we learned from using static analysers to find code smells in the past, you want just enough information for what you are doing right now. 
 
-## Make new mistakes
+## Make better mistakes
 
-We do not track what was important in the past, but has been resolved, because we learnt from mistakes and are not making these any more. We want to learn from the mistakes we, and our coding agents, are making right now.
+We do not track what was important in the past, but has been resolved in the meantime by [better practices](/2025/10/06/practices-are-patterns.html). We learnt from mistakes and are not making these any more. We want to learn from the mistakes we, and our coding agents, are making right now.
 
 We want to create insight. And we want to do that continuously, in small steps.
 
