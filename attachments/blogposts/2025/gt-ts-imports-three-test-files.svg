@@ -1,0 +1,983 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="907.65869"
+   height="1526.516"
+   version="1.1"
+   id="svg108"
+   sodipodi:docname="gt-ts-imports-three-test-files.svg"
+   inkscape:version="1.4.2 (ebf0e940, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs108" />
+  <sodipodi:namedview
+     id="namedview108"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.35355339"
+     inkscape:cx="425.67828"
+     inkscape:cy="763.67532"
+     inkscape:window-width="1720"
+     inkscape:window-height="1097"
+     inkscape:window-x="0"
+     inkscape:window-y="44"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg108" />
+  <clipPath
+     id="cl_1dd">
+    <rect
+       width="1324"
+       height="1732.804"
+       id="rect2"
+       x="0"
+       y="0" />
+  </clipPath>
+  <g
+     clip-path="url(#cl_1dd)"
+     id="g108"
+     transform="translate(-208.17,-103.143)">
+    <rect
+       fill="#00ff00"
+       transform="matrix(10.3143,0,0,10.3143,208.17,103.143)"
+       width="9"
+       height="23"
+       id="rect3"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1de">
+      <rect
+         x="208.17038"
+         y="103.1431"
+         width="92.828766"
+         height="237.2291"
+         id="rect4" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1de)"
+       id="g7">
+      <rect
+         fill="#ff0000"
+         transform="matrix(10.3143,0,0,10.3143,228.799,123.772)"
+         width="5"
+         height="5"
+         id="rect5"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,228.799,195.972)"
+         width="5"
+         height="5"
+         id="rect6"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,228.799,268.172)"
+         width="5"
+         height="5"
+         id="rect7"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       transform="matrix(10.3143,0,0,10.3143,579.486,103.143)"
+       width="16"
+       height="16"
+       id="rect8"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1df">
+      <rect
+         x="579.48553"
+         y="103.1431"
+         width="165.02893"
+         height="165.02896"
+         id="rect9" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1df)"
+       id="g13">
+      <rect
+         fill="#ff0000"
+         transform="matrix(10.3143,0,0,10.3143,600.114,123.772)"
+         width="5"
+         height="5"
+         id="rect10"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,672.314,123.772)"
+         width="5"
+         height="5"
+         id="rect11"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,600.114,195.972)"
+         width="5"
+         height="5"
+         id="rect12"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,672.314,195.972)"
+         width="5"
+         height="5"
+         id="rect13"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       transform="matrix(10.3143,0,0,10.3143,765.143,103.143)"
+       width="9"
+       height="23"
+       id="rect14"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1e0">
+      <rect
+         x="765.14307"
+         y="103.1431"
+         width="92.828796"
+         height="237.2291"
+         id="rect15" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1e0)"
+       id="g18">
+      <rect
+         fill="#ff0000"
+         transform="matrix(10.3143,0,0,10.3143,785.772,123.772)"
+         width="5"
+         height="5"
+         id="rect16"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,785.772,195.972)"
+         width="5"
+         height="5"
+         id="rect17"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,785.772,268.172)"
+         width="5"
+         height="5"
+         id="rect18"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       transform="matrix(10.3143,0,0,10.3143,208.17,361.001)"
+       width="16"
+       height="30"
+       id="rect19"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1e1">
+      <rect
+         x="208.17039"
+         y="361.00079"
+         width="165.02895"
+         height="309.42926"
+         id="rect20" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1e1)"
+       id="g28">
+      <rect
+         fill="#ff0000"
+         transform="matrix(10.3143,0,0,10.3143,228.799,381.629)"
+         width="5"
+         height="5"
+         id="rect21"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,300.999,381.629)"
+         width="5"
+         height="5"
+         id="rect22"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,228.799,453.83)"
+         width="5"
+         height="5"
+         id="rect23"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,300.999,453.83)"
+         width="5"
+         height="5"
+         id="rect24"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,228.799,526.03)"
+         width="5"
+         height="5"
+         id="rect25"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,300.999,526.03)"
+         width="5"
+         height="5"
+         id="rect26"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,228.799,598.23)"
+         width="5"
+         height="5"
+         id="rect27"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,300.999,598.23)"
+         width="5"
+         height="5"
+         id="rect28"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       transform="matrix(10.3143,0,0,10.3143,393.828,361.001)"
+       width="11"
+       height="11"
+       id="rect29"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1e2">
+      <rect
+         x="393.82794"
+         y="361.00079"
+         width="113.4574"
+         height="113.4574"
+         id="rect30" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1e2)"
+       id="g31">
+      <rect
+         fill="#00ffff"
+         transform="matrix(10.3143,0,0,10.3143,424.771,391.944)"
+         width="5"
+         height="5"
+         id="rect31"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       transform="matrix(10.3143,0,0,10.3143,579.486,361.001)"
+       width="9"
+       height="9"
+       id="rect32"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1e3">
+      <rect
+         x="579.48553"
+         y="361.00079"
+         width="92.828796"
+         height="92.828796"
+         id="rect33" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1e3)"
+       id="g34">
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,600.114,381.629)"
+         width="5"
+         height="5"
+         id="rect34"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       transform="matrix(10.3143,0,0,10.3143,1023,361.001)"
+       width="9"
+       height="9"
+       id="rect35"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1e4">
+      <rect
+         x="1023.0008"
+         y="361.00079"
+         width="92.828796"
+         height="92.828796"
+         id="rect36" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1e4)"
+       id="g37">
+      <rect
+         fill="#ff0000"
+         transform="matrix(10.3143,0,0,10.3143,1043.63,381.629)"
+         width="5"
+         height="5"
+         id="rect37"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       transform="matrix(10.3143,0,0,10.3143,208.17,691.059)"
+       width="9"
+       height="9"
+       id="rect38"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1e5">
+      <rect
+         x="208.17039"
+         y="691.05872"
+         width="92.828781"
+         height="92.828796"
+         id="rect39" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1e5)"
+       id="g40">
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,228.799,711.687)"
+         width="5"
+         height="5"
+         id="rect40"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       fill="#00ff00"
+       transform="matrix(10.3143,0,0,10.3143,393.828,691.059)"
+       width="9"
+       height="16"
+       id="rect41"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1e6">
+      <rect
+         x="393.82794"
+         y="691.05872"
+         width="92.828796"
+         height="165.02893"
+         id="rect42" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1e6)"
+       id="g44">
+      <rect
+         fill="#ff0000"
+         transform="matrix(10.3143,0,0,10.3143,414.457,711.687)"
+         width="5"
+         height="5"
+         id="rect43"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,414.457,783.888)"
+         width="5"
+         height="5"
+         id="rect44"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       transform="matrix(10.3143,0,0,10.3143,579.486,691.059)"
+       width="9"
+       height="9"
+       id="rect45"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1e7">
+      <rect
+         x="579.48553"
+         y="691.05872"
+         width="92.828796"
+         height="92.828796"
+         id="rect46" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1e7)"
+       id="g47">
+      <rect
+         fill="#ff0000"
+         transform="matrix(10.3143,0,0,10.3143,600.114,711.687)"
+         width="5"
+         height="5"
+         id="rect47"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       transform="matrix(10.3143,0,0,10.3143,765.143,691.059)"
+       width="9"
+       height="9"
+       id="rect48"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1e8">
+      <rect
+         x="765.14307"
+         y="691.05872"
+         width="92.828796"
+         height="92.828796"
+         id="rect49" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1e8)"
+       id="g50">
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,785.772,711.687)"
+         width="5"
+         height="5"
+         id="rect50"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       transform="matrix(10.3143,0,0,10.3143,1023,691.059)"
+       width="9"
+       height="16"
+       id="rect51"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1e9">
+      <rect
+         x="1023.0008"
+         y="691.05872"
+         width="92.828796"
+         height="165.02893"
+         id="rect52" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1e9)"
+       id="g54">
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,1043.63,711.687)"
+         width="5"
+         height="5"
+         id="rect53"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,1043.63,783.888)"
+         width="5"
+         height="5"
+         id="rect54"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       transform="matrix(10.3143,0,0,10.3143,393.828,876.716)"
+       width="9"
+       height="16"
+       id="rect55"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1ea">
+      <rect
+         x="393.82794"
+         y="876.71631"
+         width="92.828796"
+         height="165.02893"
+         id="rect56" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1ea)"
+       id="g58">
+      <rect
+         fill="#ff0000"
+         transform="matrix(10.3143,0,0,10.3143,414.457,897.345)"
+         width="5"
+         height="5"
+         id="rect57"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,414.457,969.545)"
+         width="5"
+         height="5"
+         id="rect58"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       transform="matrix(10.3143,0,0,10.3143,579.486,876.716)"
+       width="9"
+       height="23"
+       id="rect59"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1eb">
+      <rect
+         x="579.48553"
+         y="876.71631"
+         width="92.828796"
+         height="237.22913"
+         id="rect60" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1eb)"
+       id="g63">
+      <rect
+         fill="#ff0000"
+         transform="matrix(10.3143,0,0,10.3143,600.114,897.345)"
+         width="5"
+         height="5"
+         id="rect61"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,600.114,969.545)"
+         width="5"
+         height="5"
+         id="rect62"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,600.114,1041.75)"
+         width="5"
+         height="5"
+         id="rect63"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       transform="matrix(10.3143,0,0,10.3143,765.143,876.716)"
+       width="9"
+       height="9"
+       id="rect64"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1ec">
+      <rect
+         x="765.14307"
+         y="876.71631"
+         width="92.828796"
+         height="92.828796"
+         id="rect65" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1ec)"
+       id="g66">
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,785.772,897.345)"
+         width="5"
+         height="5"
+         id="rect66"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       fill="#00ff00"
+       transform="matrix(10.3143,0,0,10.3143,208.17,1134.57)"
+       width="9"
+       height="16"
+       id="rect67"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1ed">
+      <rect
+         x="208.17039"
+         y="1134.574"
+         width="92.828781"
+         height="165.02893"
+         id="rect68" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1ed)"
+       id="g70">
+      <rect
+         fill="#ff0000"
+         transform="matrix(10.3143,0,0,10.3143,228.799,1155.2)"
+         width="5"
+         height="5"
+         id="rect69"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,228.799,1227.4)"
+         width="5"
+         height="5"
+         id="rect70"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       transform="matrix(10.3143,0,0,10.3143,393.828,1134.57)"
+       width="9"
+       height="9"
+       id="rect71"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1ee">
+      <rect
+         x="393.82794"
+         y="1134.574"
+         width="92.828796"
+         height="92.828735"
+         id="rect72" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1ee)"
+       id="g73">
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,414.457,1155.2)"
+         width="5"
+         height="5"
+         id="rect73"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       transform="matrix(10.3143,0,0,10.3143,1023,1134.57)"
+       width="9"
+       height="9"
+       id="rect74"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1ef">
+      <rect
+         x="1023.0008"
+         y="1134.574"
+         width="92.828796"
+         height="92.828735"
+         id="rect75" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1ef)"
+       id="g76">
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,1043.63,1155.2)"
+         width="5"
+         height="5"
+         id="rect76"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       transform="matrix(10.3143,0,0,10.3143,208.17,1320.23)"
+       width="16"
+       height="16"
+       id="rect77"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1f0">
+      <rect
+         x="208.17039"
+         y="1320.2316"
+         width="165.02895"
+         height="165.02893"
+         id="rect78" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1f0)"
+       id="g82">
+      <rect
+         fill="#ff0000"
+         transform="matrix(10.3143,0,0,10.3143,228.799,1340.86)"
+         width="5"
+         height="5"
+         id="rect79"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,300.999,1340.86)"
+         width="5"
+         height="5"
+         id="rect80"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,228.799,1413.06)"
+         width="5"
+         height="5"
+         id="rect81"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,300.999,1413.06)"
+         width="5"
+         height="5"
+         id="rect82"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       transform="matrix(10.3143,0,0,10.3143,393.828,1320.23)"
+       width="16"
+       height="23"
+       id="rect83"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1f1">
+      <rect
+         x="393.82794"
+         y="1320.2316"
+         width="165.02893"
+         height="237.22913"
+         id="rect84" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1f1)"
+       id="g89">
+      <rect
+         fill="#ff0000"
+         transform="matrix(10.3143,0,0,10.3143,414.457,1340.86)"
+         width="5"
+         height="5"
+         id="rect85"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,486.657,1340.86)"
+         width="5"
+         height="5"
+         id="rect86"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,414.457,1413.06)"
+         width="5"
+         height="5"
+         id="rect87"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,486.657,1413.06)"
+         width="5"
+         height="5"
+         id="rect88"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,414.457,1485.26)"
+         width="5"
+         height="5"
+         id="rect89"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       transform="matrix(10.3143,0,0,10.3143,579.486,1320.23)"
+       width="9"
+       height="9"
+       id="rect90"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1f2">
+      <rect
+         x="579.48553"
+         y="1320.2316"
+         width="92.828796"
+         height="92.828735"
+         id="rect91" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1f2)"
+       id="g92">
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,600.114,1340.86)"
+         width="5"
+         height="5"
+         id="rect92"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       transform="matrix(10.3143,0,0,10.3143,765.143,1320.23)"
+       width="23"
+       height="30"
+       id="rect93"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1f3">
+      <rect
+         x="765.14307"
+         y="1320.2316"
+         width="237.22913"
+         height="309.42932"
+         id="rect94" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1f3)"
+       id="g104">
+      <rect
+         fill="#ff0000"
+         transform="matrix(10.3143,0,0,10.3143,785.772,1340.86)"
+         width="5"
+         height="5"
+         id="rect95"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,857.972,1340.86)"
+         width="5"
+         height="5"
+         id="rect96"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,930.172,1340.86)"
+         width="5"
+         height="5"
+         id="rect97"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,785.772,1413.06)"
+         width="5"
+         height="5"
+         id="rect98"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,857.972,1413.06)"
+         width="5"
+         height="5"
+         id="rect99"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,930.172,1413.06)"
+         width="5"
+         height="5"
+         id="rect100"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,785.772,1485.26)"
+         width="5"
+         height="5"
+         id="rect101"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,857.972,1485.26)"
+         width="5"
+         height="5"
+         id="rect102"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,930.172,1485.26)"
+         width="5"
+         height="5"
+         id="rect103"
+         x="0"
+         y="0" />
+      <rect
+         fill="#ffff00"
+         transform="matrix(10.3143,0,0,10.3143,785.772,1557.46)"
+         width="5"
+         height="5"
+         id="rect104"
+         x="0"
+         y="0" />
+    </g>
+    <rect
+       fill="#00ff00"
+       transform="matrix(10.3143,0,0,10.3143,1023,1320.23)"
+       width="9"
+       height="9"
+       id="rect105"
+       x="0"
+       y="0" />
+    <clipPath
+       id="cl_1f4">
+      <rect
+         x="1023.0008"
+         y="1320.2316"
+         width="92.828796"
+         height="92.828735"
+         id="rect106" />
+    </clipPath>
+    <g
+       clip-path="url(#cl_1f4)"
+       id="g107">
+      <rect
+         fill="#ff0000"
+         transform="matrix(10.3143,0,0,10.3143,1043.63,1340.86)"
+         width="5"
+         height="5"
+         id="rect107"
+         x="0"
+         y="0" />
+    </g>
+  </g>
+</svg>
