@@ -44,6 +44,8 @@ In this case we decided to **bin** the code and keep the learning. We also decid
 
 ## In closing
 
+The two mouse-over tooltips were quickly made, now that we have a foundation of typescript tooling. They provided enough insight for a quick discussion and ***bin it** decision.
+
 Refactoring can be fast and light work, but it is often difficult to step away from the dependencies in front of you. Sometimes it is easier to think with a new box than to think outside of the existing box.
 
 ## Credits
