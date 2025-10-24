@@ -23,9 +23,7 @@ Let's look at some examples from (agile) software development.
 
 **Test automation** - the practice of test automation is nowadays mostly in the knowable area. Tooling, libraries, and know-how is available for writing automated tests for all kinds of situations. Automated tests provide feedback about changes and confidence to bring changes to production. More and more test automation practices are evolving into good practices that are likely to bring  benefits - as long as you keep the context in mind.
 
-**Behaviour-based vs structure/state-based tests** - test automation generally works, but there are a lot of details to be filled in. How the tests are written can have a big impact on speed, maintainability, and the ability to refactor. Many tests we see in practice are unit tests that are tightly coupled to the code structure, checking internal state. The unintended consequences are fragile tests and painful refactorings. State based and structure based automated tests have a limited applicability, but for general use they are not a good fit. 
-
-@TBD what context are they a good fit?
+**Behaviour-based vs structure/state-based tests** - test automation generally works, but there are a lot of details to be filled in. How the tests are written can have a big impact on speed, maintainability, and the ability to refactor. Many tests we see in practice are unit tests that are tightly coupled to the code structure, checking internal state. The unintended consequences are fragile tests and painful refactorings. State based and structure based automated tests have a limited applicability, e.g. for testing adapters and mapping, or for creating initial tests for existing entangled code. They are not a good fir for general use.
 
 **Story points** - story points is a much-lamented estimation and forecasting practice intended to help a team make quick, good enough forecasts based on the amount of work finished in the previous time period ("yesterday's weather"), while staying away from time based estimates. The applicable context of this practice lies within team boundaries. Story points have been used way outside this context. Sometimes management demands velocity to go up (which will just inflate the numbers) or compares teams based on their velocity. Making estimates can then have big consequences for developers, which reduces estimation reliability and usefulness.
 
@@ -37,13 +35,19 @@ We need to run small experiments to learn how a practice works in the situation 
 
 Because the situation is unknowable we need to engage and see what emerges - there will be unintended consequences - they're not a bug but a feature! They might be bad but also good. Paying attention is key; keeping our mind open for what emerges enables us to grab an opportunity when it comes by.
 
-TBD examples!
+**Short iterations** - working in short 1-2 week timeboxes (iterations, sprints) from an ordered backlog is a practice that was intended for a development team to have focus and be productive without being distracted or switching context all the time. This is a helpful practice where a team is suffering under a high workload and continuously changing priorities, and because of this not getting anything done. 
+
+In practice, we have observed all kind of different effects. Teams trying to work in short iterations, but not able to finish work inside the timebox. "Let's make our timebox longer" is often proposed. Other teams are successful with short iterations, but get into a relentless cycle of focused delivery, an unsustainable "story factory", which burns out developers eventually. Some teams are successful and are also limiting their work in process, but then saving all finished work until the end of the sprint, where the sprint starts feeling as a constraint to be more productive.
+
+So what is happening here? Short iterations is not a practice that directly results in higher productivity. Expecting a direct influence leads to disappointment, and the statement that "sprints don't work for us", or event "sprints don't work". Instead, short iterations is a practice that creates enabling constraints, which initially will make friction and problems visible. So don't shoot the messenger! The friction and problems that become visible depend on the specific situation and may vary - doing short iterations will have different consequences for different teams!
+
+Pushing short sprints to a team that is already productive and close to practising one piece flow (more kanban style), the timebox might feel constraining in the wrong way. It can still be useful to regularly gauge progress and reflect on the process, but that is actually a different practice.
+
+## How to embrace unintended consequences
 
 Having too strong of an opinion of what the benefits should be will hinder us. It will narrow our perspective, making us look for the thing we expect, sticking to familiar patterns. We subconsciously start filtering away the outliers. Or we try harder, hoping the anomaly will just go away. 
 
 Unintended consequences are not an anomaly. They're the delta between our assumptions, wishes, hypotheses and what happens in reality.
-
-## How to embrace unintended consequences
 
 Some guidelines when picking up a new practice:
 
@@ -56,6 +60,7 @@ Some guidelines when picking up a new practice:
 
 - The distinction between knowable and unknowable and the ideas of complex context and emergent practice comes from the [Cynefin sense-making framework](https://cynefin.io/wiki/Cynefin). There are different methods available for finding out if something is knowable or complex.
 - There is a nice book called [Learning Histories](https://www.learninghistories.nl/post/nieuw-boek-learning-histories-vat-krijgen-op-je-organisatiecultuur) by Rik Peters which focuses on organisational culture basically being the resultant of its history (all the events that happened). This book is currently only available in Dutch.
+- Read more about enabling constraints and other types of constraints on the [Cynefin wiki](https://cynefin.io/wiki/Constraints).
 
 <aside>
   <p>
