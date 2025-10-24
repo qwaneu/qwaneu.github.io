@@ -17,7 +17,8 @@ In this post we want to zoom in on some specific forms of knowledge that play a 
 As 'knowledge' is a broad concept with different possible meanings, we will use it here in a more restricted scope
 
 Let's use [Wikipedia's page on knowledge](https://en.wikipedia.org/wiki/Knowledge) as a starting point:
-> "Knowledge is an awareness of facts, a familiarity with individuals and situations, or a practical skill. (...) It often involves the possession of information learned through experience and can be understood as a cognitive success or an epistemic contact with reality, like making a discovery. (...)
+> "Knowledge is an awareness of facts, a familiarity with individuals and situations, or a practical skill. (...)  
+> It often involves the possession of information learned through experience and can be understood as a cognitive success or an epistemic contact with reality, like making a discovery. (...)  
 > Knowledge is often understood as a state of an individual person, but it can also refer to a characteristic of a group of people as group knowledge, social knowledge, or collective knowledge. Some social sciences understand knowledge as a broad social phenomenon that is similar to culture." (as of 24 October 2025)
 
 We take a pragmatic perspective on knowledge: knowledge informs/steers behaviour; in software development, developers use knowledge to make decisions about architecture, design, code structure, tests, etc.
@@ -57,16 +58,61 @@ People often refer to this as "culture" (team culture, organisation culture), bu
 
 What does this mean for a software team? 
 
+A team has a history (which starts forming the day the team starts forming), and something you could call a "team culture". It's "the way we do things in this team", often unspoken rules, norms and values. It's not written in documents or on the wiki, but you pick it up / feel it soon enough when you join the team. It is also about systemic order - who comes before who - and power. High impact events (often negative) are highly influential in forming "team culture". It is not always and not fully a conscious thing; it also plays at the subconscious level.
+
+This plays a role in how a team makes decisions, also on technical things.
+
+For example, a team member might dismiss a proposal for change saying "we tried this (a very long time ago) and it did not work", from a strong belief (even if all assumptions are outdated by now). Even worse, team members have this belief subconsciously but are unable to state it explicitly; instead, they will show all kinds of behaviour that look like "resisting" the proposed change.
+
+Systemic knowledge is powerful, keeps e.g. a team together and can help a team to "survive" high pressure and setbacks. This stability also means that this is harder to bring change.
+
+@@TBD: needs a few concrete examples!
+
 ## Stigmergic knowledge
+
+[Stigmergy](https://en.wikipedia.org/wiki/Stigmergy) is a concept originally from biology. It is a mechanism of indirect coordination where actors modify their local environment. They leave traces for others to follow. The
+trace left by an individual action stimulates the performance of a next action
+by the same or different agent.
+
+We believe that the concept of stigmergy is also useful within a software development context. If we see the code and other artifacts as (parts of) the environment the team works in, we can also observe signs left behind in those artifacts that influence developers' behaviour.
+
+This is not about having explicit agreements in a team on how to solve specific things in code or what to put where. It is about the shape of code (and other artifacts) influence the behaviour, for bad or good.
+
+If we work in a code base riddled with null checks, the path of least resistance is keep on doing null checks in new code. We tend to follow the desire paths that are already there. This is not a bad thing nor a lack of discipline. It is actually our brain's nature to preserve energy as much as possible. Instead of spending/wasting brain power on rethinking everything, it takes less energy to follow the paths that are already there.
+
+This can lead to undesirable behaviour. If we have an entangled code base with anemic data objects, lots of null checks, lots of procedural code, it will nudge developers to do more of it. If we want to move away to more maintainable code, we will have to go against the flow (which costs a lot of energy).
+
+We can also apply this intentionally, realizing that every line of code we write will serve as an example for others, whether we like it or not. We can work on creating desire paths, nudging our future colleagues (and future self) towards something better.
+
+@@TBD example from workshop: async org, team starts with ADRs, spreads across teams
+
+Not everything in code is stigmergy? code can also contain codified knowledge (e.g. domain concepts) as mentioned before, it can contain comments about what (not) to do, a wiki/docs with some rules and guidelines, ... code is also a form of explicit knowledge - it is a codified interpretation of the problem and a solution deemed appropriate (usually without having codified the rationale) 
 
 ## Consequences
 
+**Conflicting sources of knowledge** - we could agree as a team on specific rules on how we do stuff in the code (explicit knowledge). This could however conflict with the existing stigmergic knowledge. There might even be a conflict with how some team members have learned how to do things (tacit knowledge). This can make it more challenging to bring change than you'd expect. Especially under pressure, when the tacit and stigmergic knowledge will be the path of least resistance. Being aware of the different types of knowledge at play is helpful.
+
+**Resistance to change** - when wanting to change/improve something. be aware of the types of knowledge at play and how these e.g. keep the system as it is ("resisting change"). ... [Resistance as a Resource](https://dhemery.com/articles/resistance_as_a_resource/)
+
+**An extra reason to invest in code quality** - ... for the stigmergic effects
+
+**Investing in teams** - need to invest in team skills and development skills, give proper attention to team forming and other team dynamics; contributing to tacit and systemic knowledge. Don't over-focusing on "documentation" (although it is important for what can be codified!)
+
 ## How does this help
 
+@@of wordt dit gedekt door 'Consequences'?
 
 ## Related work / Further reading
 
-- Ikujiro Nonaka & Hirotaka Takeuchi, The Knowledge Creating Company (1995); note: Takeuchi & Nonaka also authored the New New Product Development Game article (in 1986) which was an important source for Scrum as we know it.
+- Ikujiro Nonaka & Hirotaka Takeuchi, The Knowledge Creating Company (1995); note: Takeuchi & Nonaka also authored the [New New Product Development Game](https://hbr.org/1986/01/the-new-new-product-development-game) article (in 1986) which was an important source for Scrum as we know it.
 - The [ASHEN framework](https://cynefin.io/wiki/ASHEN) is a method for mapping knowledge in an organisation.
-- 
-- 
+- There is a nice book called [Learning Histories](https://www.learninghistories.nl/post/nieuw-boek-learning-histories-vat-krijgen-op-je-organisatiecultuur) by Rik Peters which focuses on organisational culture basically being the resultant of its history (all the events that happened). This book is currently only available in Dutch. 
+
+<aside>
+  <p>
+Something
+  </p>
+  <p><div>
+    <a href="/contact">Contact us when you're interested!</a>
+  </div></p>
+</aside>
