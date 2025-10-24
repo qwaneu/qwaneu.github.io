@@ -21,11 +21,11 @@ An important contribution of user story mapping is its focus on the users, the u
 
 ## We love small user stories
 
-We prefer small user stories that can be build in 1 or 2 days. Small stories are easier to estimate, you deliver working software in small steps (working software daily), you get early feedback and a continuous feeling of accomplishment. We don't need to do extensive task planning, because making a quick list of tasks just in time on an index card is sufficient.
+We prefer small user stories that can be build in 1 or 2 days. They are easier to estimate, you can deliver working software daily, you get early feedback often, and you get a continuous feeling of accomplishment. The need extensive task planning is reduced, because making a quick list of tasks just in time on an index card is sufficient.
 
 ## Limitations of traditional agile planning approaches
 
-We ran into a number of limitations of small stories. It becomes increasingly more difficult to understand the system as a whole through all the small stories. Some of our customers had trouble seeing the forest for the trees. We were also lacking a way to manage coherent sets of dependent stories. These start off as epics or themes, but once they are split up, it becomes hard to keep track of what belongs to what and how far each theme or epic has been done.
+We ran into a number of limitations of small stories. It becomes increasingly more difficult to understand the system as a whole through all the stories. Some of our customers had trouble seeing the forest for the trees. We were also lacking a way to manage coherent sets of dependent stories. These start off as epics or themes, but once they are split up, it becomes hard to keep track of what belongs to what and how far each theme or epic has been done.
 
 !['Where to Go' by Jeff Hitchcock - depicting a long, empty, winding road in a landscape with mountains](/attachments/blogposts/2025/where_to_go.jpg) 
 {: class="post-image post-image-50" }  
@@ -69,9 +69,13 @@ User story mapping brings a number of benefits:
 * It facilitates release planning and enables a better conversation about defining delivering value early and managing risks. Building a walking skeleton can give early feedback on market and technical risks.
 * By introducing the user's perspective and the rationale behind the system, user story mapping shifts the dialogue to the actual business value of the software. We only build features when the story map shows a rationale for that feature. A story map helps focus on the essential parts of the system. We have also used story maps to make teams aware that you don't need to build all those features. A subset is often sufficient to help users achieve their goals.
 * By focusing on user goals, activities, and tasks first instead of software features, you keep more options open regarding ways of realizing / supporting those goals and activities. Manual workarounds can be a good alternative more often than you'd think.
-* It augments rather than replaces practices from e.g. Scrum or eXtreme Programming and it plays well with techniques like [Event Storming](https://www.eventstorming.com/), which provides input for activities and tasks, [Dimensional Planning](/2020/09/02/dimensional-planning) to slice releases, and [Example Mapping](https://cucumber.io/blog/bdd/example-mapping-introduction/) to carve out user stories and tests.
+* It augments rather than replaces practices from e.g. Scrum or eXtreme Programming and it plays well with techniques like [Event Storming](/2025/06/02/ddd-case), which provides input for activities and tasks, [Dimensional Planning](/2020/09/02/dimensional-planning) to slice releases, and [Example Mapping](https://cucumber.io/blog/bdd/example-mapping-introduction/) to carve out user stories and tests.
 
-Would you like to know more? Jeff Patton has [written useful materials on story mapping](https://www.agileproductdesign.com).
+## Further reading 
+
+* In his book [The Product Owner's Guide to Escaping Legacy](https://escapinglegacy.com/), our colleague Wouter Lagerweij describes an approach to working with legacy systems which leverages story mapping.
+* Jeff Patton offers [useful materials on story mapping](https://www.agileproductdesign.com).
+* [Dimensional Planning](/2020/09/02/dimensional-planning) is a useful way to slice releases, based on what's good enough and what you are willing to pay for.
 
 > This is an updated version of a [blog post](https://blog.piecemealgrowth.net/working-with-user-story-mapping) that we published earlier in 2009.
 
