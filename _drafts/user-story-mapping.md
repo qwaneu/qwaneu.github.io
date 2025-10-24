@@ -77,7 +77,7 @@ Would you like to know more? Jeff Patton has [written useful materials on story
 
 <aside>
   <p><strong>Would you like to learn more?</strong></p>
-  <p>We can guide you in applying user story mapping for your products, e.g. by facilitating a user story mapping workshop for your product or by running a our <a href="/training/user-story-mapping-dimensional-planning">User Story Mapping & Dimensional Planning workshop</a> to experiment hands-on with story mapping.</p>
+  <p>We can guide you in applying user story mapping for your products, e.g. by facilitating a user story mapping workshop for your product or by running a our *User Story Mapping & Dimensional Planning workshop* to experiment hands-on with story mapping.</p>
 
   <p><div>
     <a href="/contact">Contact us when you're interested!</a>
