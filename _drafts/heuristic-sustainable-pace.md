@@ -32,3 +32,6 @@ Now I have better, incremental and iterative tooling (link to a view to a vibe),
 I still find that downtime, being away from work is important. Not just for my mental health, but also for the product. Spikes that are past the past the point of simplicity (TODO, express better) can be better contemplated away from the keyboard.
 
 That code that didn't look quite right? let it be for a couple of days, write it again, TDD as if you meant it while waiting for your pair to show up (LINK to warm ups). Bask in the glow of focused, well tested code. And then merge it with the parts that came out of the coding agent that were good enough. Gradually raising the stakes (Jamie Dobson pattern and/or Spike and Stabilise)
+
+Touch grass. (find my sustainable pace message on linkedin)
+
