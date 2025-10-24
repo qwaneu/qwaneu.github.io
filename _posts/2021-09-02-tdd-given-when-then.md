@@ -5,11 +5,12 @@ tags:
   - test driven development
   - feedback
   - eXtreme Programming
+  - heuristics
 author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: /attachments/blogposts/2021/tdd/gwt.png
 ---
 
-How do I structure my tests, so that they are understable and focused on the
+How do I structure my tests, so that they are understandable and focused on the
 behaviour of the system under test? Given-When-Then and Arrange-Act-Assert are
 two similar ways of structuring your test cases to make them easier to
 understand at a glance. This test structure also helps to keep your test focused
@@ -77,7 +78,7 @@ often extracting setup code into a `before`, like we did [in the previous
 post](2021/08/27/tdd-one-assert-per-test.html). We also use [test data
 builders](/2020/10/09/test-data-builders.html) instead of or in addition to a
 setup code. We strive for [glanceable tests](/2021/09/27/tdd-glanceable-tests.html), where we can see the _given_, the
-_when_ and the _then_ parts rightaway. It acts more as an idiom than a literal
+_when_ and the _then_ parts right away. It acts more as an idiom than a literal
 implementation.
 
 ## Effects

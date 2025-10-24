@@ -5,6 +5,7 @@ tags:
   - test driven development
   - feedback
   - eXtreme Programming
+  - heuristics
 author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: /attachments/blogposts/2021/tdd/markus-spiske-7PMGUqYQpYc-unsplash.jpg
 ---
@@ -123,7 +124,7 @@ this hampers the quick feedback loop we crave from our automated tests.
 
 Let's compare our notes. There are ten instances of`cy.contains`, so ten
 asserts? But wait, there is more! each ` cy.get` and `cy.visit`are also
-assertionss. If the target for `get` is missing, or visiting `cy.visit`'s
+assertions. If the target for `get` is missing, or visiting `cy.visit`'s
 destination fails, the test fails too. This is a feature in Cypress, and it
 should encourage us to focus our test more closely.
 

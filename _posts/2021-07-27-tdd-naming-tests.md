@@ -5,6 +5,7 @@ tags:
   - test driven development
   - feedback
   - eXtreme Programming
+  - heuristics
 author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: /attachments/blogposts/2021/tdd/chuttersnap-JChRnikx0tM-unsplash.jpg
 ---
@@ -12,7 +13,7 @@ image: /attachments/blogposts/2021/tdd/chuttersnap-JChRnikx0tM-unsplash.jpg
 We use test names or test descriptions to tell what the test is about: what is
 the action or event, what is the expected result.
 
-![picture of a stack of colorful name cards](/attachments/blogposts/2021/tdd/chuttersnap-JChRnikx0tM-unsplash.jpg)
+![picture of a stack of colourful name cards](/attachments/blogposts/2021/tdd/chuttersnap-JChRnikx0tM-unsplash.jpg)
 {: class="post-image post-image-50" }
 
 If we name our tests like this, a test case will read like a specification of
@@ -25,7 +26,7 @@ Diagnostic application](/2020/09/25/hexagonal-frontend-example.html). The
 back-end component uses Python and pytest. The domain class `Facilitator`
 represents facilitators who can run workshops. This class knows (among other
 things) how to authenticate a facilitator. We have grouped the tests for this
-reponsibility into a separate test class `TestSignIn`, part of the
+responsibility into a separate test class `TestSignIn`, part of the
 `test_facilitator.py` file. 
 
 If we would name our tests like this, the names only give a hint of what is
@@ -96,7 +97,7 @@ instance. The `errors` property of the facilitator object contains information
 on any validation errors, currently represented by e.g. `emailMissing` which
 means that the email attribute is missing or in some other way invalid.
 
-Test names can sometimes feel superflous. If the test implementation is self-explanatory. Does the name of the test add much in the following code?
+Test names can sometimes feel superfluous. If the test implementation is self-explanatory. Does the name of the test add much in the following code?
 
 ```haskell
  describe "Home route" do
