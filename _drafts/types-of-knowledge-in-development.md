@@ -7,7 +7,7 @@ tags:
   - design
   - systems thinking
 author: Marc Evers
-image: 
+image: TODO - create image representing 4 types (with some people figures in it)
 ---
 
 Software delivery is "knowledge work". Developing software means knowledge creation - knowledge about solving customer problems and balancing trade-offs, knowledge about operating the software well, knowledge to be able to continue developing the software in the future.
@@ -47,7 +47,8 @@ Because we cannot codify tacit knowledge, we cannot document everything that a d
 Earlier on, the idea was that tacit knowledge could be transformed into explicit knowledge through socialization and externalization, but more recent insights are that tacit knowledge is mostly uncodifiable and literally embodied - part of a person's body.
 
 > **What about heuristics?**  
-> A [heuristic](/2021/10/13/what-is-a-heuristic) is an explicit form that refers to some tacit knowledge. It is not a codification of the knowledge itself, but it can help transfer the knowledge (by having a name or short description for it) and enable a conversation about it. 
+> A [heuristic](/2021/10/13/what-is-a-heuristic) is an explicit form that refers to some tacit knowledge. It is not a codification of the knowledge itself, but it can help transfer the knowledge (by having a name or short description for it) and enable a conversation about it.  
+> Heuristics are a bit between explicit and tacit; a part is codified in a few words or sentences, and this is related to tacit knowledge. You still need social & experiential learning to transfer the whole thing, but heuristics help make tacit knowledge visible and discussable.
 
 ## Systemic knowledge
 
@@ -71,6 +72,8 @@ Systemic knowledge is powerful, keeps e.g. a team together and can help a team t
 
 Example: developing a habit of continuously doing small improvements, in code, tests, way of working, etc is very beneficial. We wrote about this earlier, in [Simple Acts of Kindness and Love](/2021/07/07/simple-acts-of-kindness-and-love).
 If this is an individual developer's habit, the effect for the whole team might be limited. Or worse, if the team norm is a focus on just creating features fast and the rest works this way, it will cost a lot of energy for that individual to stick to the habit - rowing against the stream. When that individual leaves, nothing changes. Developing such a habit as a team is more difficult, but once the habit is there, it's much more powerful. The habit is not dependent on a single individual any more.
+
+How can you influence this? (given that you cannot change history) You can learn about a team's history and the pivotal events that formed the team. Story telling and doing simulations/games can help to create shared experiences (see also ASHEN reference).
 
 ## Stigmergic knowledge
 
@@ -105,7 +108,7 @@ Not everything in code is stigmergy? code can also contain codified knowledge (e
 ## Related work & further reading
 
 - Ikujiro Nonaka & Hirotaka Takeuchi, The Knowledge Creating Company (1995); note: Takeuchi & Nonaka also authored the [New New Product Development Game](https://hbr.org/1986/01/the-new-new-product-development-game) article (in 1986) which was an important source for Scrum as we know it.
-- The [ASHEN framework](https://cynefin.io/wiki/ASHEN) is a method for mapping knowledge in an organisation.
+- The [ASHEN framework](https://cynefin.io/wiki/ASHEN) is a method for mapping knowledge in an organisation. It has parallels: Artifacts = explicit knowledge, Skills = tacit knowledge; Heuristics = tacit/explicit; Experience = systemic knowledge
 - There is a nice book called [Learning Histories](https://www.learninghistories.nl/post/nieuw-boek-learning-histories-vat-krijgen-op-je-organisatiecultuur) by Rik Peters which focuses on organisational culture basically being the resultant of its history (all the events that happened). This book is currently only available in Dutch. 
 - We have run some exploratory workshops on stigmergy within a software context, at [Agile Cambridge 2023](/2023/11/25/stigmergy-agile-cambridge) and [Lean Agile Scotland 2023](/2023/09/20/stigmergy-lean-agile-scotland).
 
