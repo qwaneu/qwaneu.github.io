@@ -10,18 +10,16 @@ author: Marc Evers
 image: 
 ---
 
-Software delivery is "knowledge work". Knowledge is a broad concept, there is a whole field of knowledge management, there's a body of knowledge about learning and training.
+Software delivery is "knowledge work". Developing software means knowledge creation - knowledge about solving customer problems and balancing trade-offs, knowledge about operating the software well, knowledge to be able to continue developing the software in the future.
 
 In this post we want to zoom in on some specific forms of knowledge that play a role in software development. Knowing these types of knowledge enables you to make effective use of them but also to recognize the effects. It can help you to recognize when you are working "against the system" or where it's beneficial to direct your efforts.
 
-As 'knowledge' is a broad concept with different possible meanings, we will use it here in a more restricted scope
-
-Let's use [Wikipedia's page on knowledge](https://en.wikipedia.org/wiki/Knowledge) as a starting point:
+Knowledge is a broad concept, there is a whole field of knowledge management, there's a body of knowledge about learning and training. For know, we use a working definition based on [Wikipedia's page on knowledge](https://en.wikipedia.org/wiki/Knowledge) (as of 24 October 2025):
 > "Knowledge is an awareness of facts, a familiarity with individuals and situations, or a practical skill. (...)  
 > It often involves the possession of information learned through experience and can be understood as a cognitive success or an epistemic contact with reality, like making a discovery. (...)  
-> Knowledge is often understood as a state of an individual person, but it can also refer to a characteristic of a group of people as group knowledge, social knowledge, or collective knowledge. Some social sciences understand knowledge as a broad social phenomenon that is similar to culture." (as of 24 October 2025)
+> Knowledge is often understood as a state of an individual person, but it can also refer to a characteristic of a group of people as group knowledge, social knowledge, or collective knowledge. Some social sciences understand knowledge as a broad social phenomenon that is similar to culture."
 
-We take a pragmatic perspective on knowledge: knowledge informs/steers behaviour; in software development, developers use knowledge to make decisions about architecture, design, code structure, tests, etc.
+We take a pragmatic perspective: **knowledge informs/steers behaviour**; in software development, developers use knowledge to make decisions about architecture, design, code structure, tests, etc.
 
 Software development from a socio-technical perspective: it's not just the software that we are developing and maintaining, but also the teams and organisation structures around it, with their know-how (knowledge).
 
@@ -29,10 +27,10 @@ That sounds great but it is still quite broad and vague. Let's make it more conc
 
 Combining ideas from knowledge management, biology and systemic thinking, we distinguish these four types of knowledge that play an important role in software development:
 
-1. Explicit knowledge - knowledge that we can express and codify
-2. Tacit knowledge - implicit, embodied, personal know-how
-3. Systemic knowledge - knowledge embedded in the human systems we are part of, "culture"
-4. Stigmergic knowledge - knowledge that is part of an environment
+1. **Explicit knowledge** - things that we can express and codify
+2. **Tacit knowledge** - implicit, embodied, personal know-how
+3. **Systemic knowledge** - embedded in the human systems we are part of, "culture"
+4. **Stigmergic knowledge** - being part of the environment we work in
 
 ## Explicit knowledge - what we can express and codify 
 
@@ -40,13 +38,16 @@ Explicit knowledge has been codified, in documents, procedures, manuals, instruc
 
 Note: we're using 'codify' here in the sense of expressing something explicitly in some (natural, formal, or semi-formal) language. This can include source code, e.g. representing domain concepts and domain language explicitly in classes and names in the code. There is however more to code, as we will show below.
 
-### Tacit - embodied knowledge
+## Tacit - embodied knowledge
 
-Tacit knowledge is know-how, skills, experience, intuition possessed by people, which are not codified and are hard to express or codify. Often this is embodied knowledge, e.g. riding a bicycle, playing a music instrument. Because tacit knowledge is not/hardly codifiable, it needs a different approach for transferring it. Transferring these kind of skills requires social and experiential learning. E.g. apprenticeships, learning by doing guided by an expert.
+Tacit knowledge is know-how, skills, experience, intuition possessed by people, which are not codified and are hard to express or codify. Often this is embodied knowledge, e.g. riding a bicycle, playing a music instrument. Because tacit knowledge is hardly codifiable, it needs a different approach for transferring it. Transferring these kind of skills requires social and experiential learning. E.g. apprenticeships, learning by doing guided by an expert.
 
 Because we cannot codify tacit knowledge, we cannot document everything that a developer needs to know. To share tacit knowledge, we need forms of social and experiential learning within the team. For example: if a team works with pull requests, a pull request review using written text is an unsuitable form to convey know-how from a more senior developer to a less skilled developer. For effective knowledge transfer, they need to sit and work together.
 
 Earlier on, the idea was that tacit knowledge could be transformed into explicit knowledge through socialization and externalization, but more recent insights are that tacit knowledge is mostly uncodifiable and literally embodied - part of a person's body.
+
+> **What about heuristics?**  
+> A [heuristic](/2021/10/13/what-is-a-heuristic) is an explicit form that refers to some tacit knowledge. It is not a codification of the knowledge itself, but it can help transfer the knowledge (by having a name or short description for it) and enable a conversation about it. 
 
 ## Systemic knowledge
 
@@ -68,6 +69,9 @@ Systemic knowledge is powerful, keeps e.g. a team together and can help a team t
 
 @@TBD: needs a few concrete examples!
 
+Example: developing a habit of continuously doing small improvements, in code, tests, way of working, etc is very beneficial. We wrote about this earlier, in [Simple Acts of Kindness and Love](/2021/07/07/simple-acts-of-kindness-and-love).
+If this is an individual developer's habit, the effect for the whole team might be limited. Or worse, if the team norm is a focus on just creating features fast and the rest works this way, it will cost a lot of energy for that individual to stick to the habit - rowing against the stream. When that individual leaves, nothing changes. Developing such a habit as a team is more difficult, but once the habit is there, it's much more powerful. The habit is not dependent on a single individual any more.
+
 ## Stigmergic knowledge
 
 [Stigmergy](https://en.wikipedia.org/wiki/Stigmergy) is a concept originally from biology. It is a mechanism of indirect coordination where actors modify their local environment. They leave traces for others to follow. The
@@ -88,7 +92,7 @@ We can also apply this intentionally, realizing that every line of code we write
 
 Not everything in code is stigmergy? code can also contain codified knowledge (e.g. domain concepts) as mentioned before, it can contain comments about what (not) to do, a wiki/docs with some rules and guidelines, ... code is also a form of explicit knowledge - it is a codified interpretation of the problem and a solution deemed appropriate (usually without having codified the rationale) 
 
-## Consequences
+## Consequences / how does this help?
 
 **Conflicting sources of knowledge** - we could agree as a team on specific rules on how we do stuff in the code (explicit knowledge). This could however conflict with the existing stigmergic knowledge. There might even be a conflict with how some team members have learned how to do things (tacit knowledge). This can make it more challenging to bring change than you'd expect. Especially under pressure, when the tacit and stigmergic knowledge will be the path of least resistance. Being aware of the different types of knowledge at play is helpful.
 
@@ -98,15 +102,12 @@ Not everything in code is stigmergy? code can also contain codified knowledge (e
 
 **Investing in teams** - need to invest in team skills and development skills, give proper attention to team forming and other team dynamics; contributing to tacit and systemic knowledge. Don't over-focusing on "documentation" (although it is important for what can be codified!)
 
-## How does this help
-
-@@of wordt dit gedekt door 'Consequences'?
-
-## Related work / Further reading
+## Related work & further reading
 
 - Ikujiro Nonaka & Hirotaka Takeuchi, The Knowledge Creating Company (1995); note: Takeuchi & Nonaka also authored the [New New Product Development Game](https://hbr.org/1986/01/the-new-new-product-development-game) article (in 1986) which was an important source for Scrum as we know it.
 - The [ASHEN framework](https://cynefin.io/wiki/ASHEN) is a method for mapping knowledge in an organisation.
 - There is a nice book called [Learning Histories](https://www.learninghistories.nl/post/nieuw-boek-learning-histories-vat-krijgen-op-je-organisatiecultuur) by Rik Peters which focuses on organisational culture basically being the resultant of its history (all the events that happened). This book is currently only available in Dutch. 
+- We have run some exploratory workshops on stigmergy within a software context, at [Agile Cambridge 2023](/2023/11/25/stigmergy-agile-cambridge) and [Lean Agile Scotland 2023](/2023/09/20/stigmergy-lean-agile-scotland).
 
 <aside>
   <p>
