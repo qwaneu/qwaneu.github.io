@@ -30,7 +30,7 @@ We did have some discussion on what to print in the hovers. We decided to show t
 
 ![Screenshot, two test files with green border, one implementation file. Two hovers, one with an import, one with a file name](/attachments/blogposts/2025/show-imports-in-view-and-filename.png)
 
-While some tests had reasonable imports, others had too many. And it was getting worse as we iterated. More often than not, LLMs find it a lot easier to write code than to re-rwite or remove it. So the blocks, and our failing prompts, were telling us that it was time to go in by hand. Going in by hand told us it was time to abort this as a spike, and start again, keeping what we learnt for the next round.
+While some tests had reasonable imports, others had too many. And it was getting worse as we iterated. More often than not, LLMs find it a lot easier to write code than to re-write or remove it. So the blocks, and our failing prompts, were telling us that it was time to go in by hand. Going in by hand told us it was time to abort this as a spike, and start again, keeping what we learnt for the next round.
 
 ## Keep, fix, or bin?
 
@@ -50,7 +50,7 @@ Refactoring can be fast and light work, but it is often difficult to step away f
 
 ## Credits
 
-Stephan Eggermont for pair programming with me on the visualisation, and having a productive conversation on which tools to make, and where to stop.
+[Stephan Eggermont](https://www.domeinmodel.nl) for pair programming with me on the visualisation, and having a productive conversation on which tools to make, and where to stop.
 
 <aside>
   <p>
