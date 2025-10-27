@@ -69,7 +69,7 @@ Surprisingly hard. The devil is always in the details. But I can't complain abou
 Jargon buster
 ---
 
-If you've been as baffled as I have by some terminology in this space, congratulations, you have now seen example of [Retrieval Augmented Generation (RAG)](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/). In this case, using search and urls to increase the knowledge availble to the model to reason about. 
+If you've been as baffled as I have by some terminology in this space, congratulations, you have now seen example of [Retrieval Augmented Generation (RAG)](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/). In this case, using search and urls to increase the knowledge available to the model to reason about. 
 
 And 'agentic' in our case means giving an LLM a description of some tools that it can use in textual form (well, actually, JSON),  a way for it to communicate back in text what tool it wants to use and how, and an interpreter with plugins that can transform that into an actual function call, or external tool invocation. It is text, functions and (random) numbers all the way down.
 
@@ -81,7 +81,7 @@ Not sure. I think I will continue using my local search and summarize, mixed wit
 
 I might make some improvements to the tool - have a proper CLI with the model and prompt as parameter. It would also be fun to have a chat interface, and I am wondering, since the LLM tool (see below) already provides that, if something like this could work as a plugin for that.
 
-The tool is not very observable. For some things I have to look inside the `<think>` blocks the LLM provides, the search tool does provide some logging, and I let the Jetbrains AI assistant with Google Gsemini add some error handling and reporting. Progress is a long (depending on how many turns the model needs) list of dots, would be nice to have a spinner for instance. 
+The tool is not very observable. For some things I have to look inside the `<think>` blocks the LLM provides, the search tool does provide some logging, and I let the Jetbrains AI assistant with Google Gemini add some error handling and reporting. Progress is a long (depending on how many turns the model needs) list of dots, would be nice to have a spinner for instance. 
 
 I started writing some [Rules of thumb](#heuristics), I've included them as bonus content in this post, as they also contain some learning from playing with the agentic search. These might turn into one or more separate posts. I got some feedback from Wouter Lagerweij, which already led to yet another heuristic. 
 

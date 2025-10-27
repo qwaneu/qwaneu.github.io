@@ -16,7 +16,9 @@
     "plaintext"
   ],
   "cSpell.words": [
+    "Adzic",
     "agentic",
+    "anemic",
     "Brandolini",
     "CITCON",
     "cloc",
@@ -28,13 +30,21 @@
     "Evers",
     "favourite",
     "Freudenberg",
+    "Gáspár",
     "generativity",
     "Girba",
+    "glanceability",
+    "Glanceability",
+    "glanceable",
+    "Gojko",
     "Gorman",
     "Heeze",
     "Kanban",
+    "Koskela",
     "Lagerweij",
     "Nijboer",
+    "pytest",
+    "QWAN's",
     "qwen",
     "replayable",
     "roadmap",
@@ -43,6 +53,8 @@
     "standups",
     "stigmergic",
     "stigmergy",
+    "timebox",
+    "timeboxes",
     "Vasco",
     "vibing",
     "walkthrough",
@@ -51,7 +63,9 @@
     "Wardley's",
     "Westgeest",
     "Willem",
+    "Wirfs",
     "Wouter",
-    "WSJF"
+    "WSJF",
+    "xeyes"
   ]
 }
