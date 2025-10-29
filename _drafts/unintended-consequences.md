@@ -11,7 +11,7 @@ author: Marc Evers
 image: /attachments/blogposts/2025/jackinthebox.jpg
 ---
 
-Why do we introduce a new practice? We see a colleague/friend/influencer telling success stories about it. Eager to get those benefits, we start out experimenting and learn how well it is living up to our expectations. We also start seeing other unanticipated effects - distractions, anomalies? Or learning opportunities? In this post we advocate for embracing unintended consequences.
+Why and when do we introduce a new practice? We see a colleague/friend/influencer telling success stories about it. Eager to get those benefits, we start out experimenting and learn how well it is living up to our expectations. We also start seeing other unanticipated effects - distractions, anomalies? Or learning opportunities? In this post we advocate for embracing unintended consequences.
 
 ## Knowable context, good practices
 
@@ -29,25 +29,27 @@ Let's look at some examples from (agile) software development.
 
 ## Complex context, emergent practices
 
-If we are in a complex context, where things are not knowable and only coherent in retrospect, things work differently. We don't have good or best practices, but we are discovering practices and their applicability along the way.
+If the context is complex, where things are not knowable and only coherent in retrospect, things work differently. There are no good or best practices, but we are discovering practices and their applicability along the way.
 
-We need to run small experiments to learn how a practice works in the situation we're in. We want to look for success and failure indicators, so that we can amplify or dampen quickly. We don't want our experiment to turn into a bet-your-company experiment...
+We need to run small experiments to learn how a practice works in the situation we're in. We look for success and failure indicators, so that we can amplify or dampen quickly. We don't want any bet-your-company experiments...
 
-Because the situation is unknowable we need to engage and see what emerges - there will be unintended consequences - they're not a bug but a feature! They might be bad but also good. Paying attention is key; keeping our mind open for what emerges enables us to grab an opportunity when it comes by.
+We need to engage and see what emerges. There will be unintended consequences...they're a feature, not a bug! They might be bad as well as good. Paying attention is key. Keep your mind open for what emerges and grab an opportunity when it comes by.
 
-**Short iterations** - working in short 1-2 week timeboxes (iterations, sprints) from an ordered backlog is a practice that was intended for a development team to have focus and be productive without being distracted or switching context all the time. This is a helpful practice where a team is suffering under a high workload and continuously changing priorities, and because of this not getting anything done. 
+**Short iterations** - for example, working in short timeboxes of 1-2 weeks(iterations, sprints) from an ordered backlog is a practice that was intended to provide focus for a development team and be productive without distractions and context switches. This practice is helpful where a team is e.g. is suffering under a high workload and continuously changing priorities, and not getting anything done.
 
-In practice, we have observed all kind of different effects. Teams trying to work in short iterations, but not able to finish work inside the timebox. "Let's make our timebox longer" is often proposed. Other teams are successful with short iterations, but get into a relentless cycle of focused delivery, an unsustainable "story factory", which burns out developers eventually. Some teams are successful and are also limiting their work in process, but then saving all finished work until the end of the sprint, where the sprint starts feeling as a constraint to be more productive.
+In practice, we have observed all kind of different effects. Teams trying to work in short iterations, but not able to finish work inside the timebox. "Let's make our timebox longer" is often proposed. Other teams are successful with short iterations, but become an unsustainable "story factory", which burns out developers eventually. Some teams start limiting their work in process, but then save all finished work until the end of the sprint, where the sprint starts feeling as a constraint to be more productive.
 
-So what is happening here? Short iterations is not a practice that directly results in higher productivity. Expecting a direct influence leads to disappointment, and the statement that "sprints don't work for us", or event "sprints don't work". Instead, short iterations is a practice that creates enabling constraints, which initially will make friction and problems visible. So don't shoot the messenger! The friction and problems that become visible depend on the specific situation and may vary - doing short iterations will have different consequences for different teams!
+So what is happening here? Short iterations is not a practice that directly results in higher productivity. Instead it creates enabling constraints, which initially will create friction and make problems visible. This can lead to feelings of "sprints don't work", but the sprint is just the messenger here. The friction that become visible depends on the specific situation and may vary - doing short iterations will have different consequences for different teams.
 
-Pushing short sprints to a team that is already productive and close to practising one piece flow (more kanban style), the timebox might feel constraining in the wrong way. It can still be useful to regularly gauge progress and reflect on the process, but that is actually a different practice.
+Pushing short sprints to a team that is already productive and close to practising one piece flow and continuous delivery, might feel constraining in the wrong way. It can still be useful to regularly gauge progress and reflect on the process, but that is actually a different practice.
 
 ## How to embrace unintended consequences
 
-Having too strong of an opinion of what the benefits should be will hinder us. It will narrow our perspective, making us look for the thing we expect, sticking to familiar patterns. We subconsciously start filtering away the outliers. Or we try harder, hoping the anomaly will just go away. 
+Focusing on the benefits a practice should have can narrow our perspective. We look for the thing we expect, sticking to familiar patterns. We subconsciously filter out outliers. Or we just try harder, hoping the anomaly will just go away. 
 
 Unintended consequences are not an anomaly. They're the delta between our assumptions, wishes, hypotheses and what happens in reality.
+
+## Guidelines for picking up a new practice 
 
 Some guidelines when picking up a new practice:
 
@@ -61,6 +63,8 @@ Some guidelines when picking up a new practice:
 - The distinction between knowable and unknowable and the ideas of complex context and emergent practice comes from the [Cynefin sense-making framework](https://cynefin.io/wiki/Cynefin). There are different methods available for finding out if something is knowable or complex.
 - There is a nice book called [Learning Histories](https://www.learninghistories.nl/post/nieuw-boek-learning-histories-vat-krijgen-op-je-organisatiecultuur) by Rik Peters which focuses on organisational culture basically being the resultant of its history (all the events that happened). This book is currently only available in Dutch.
 - Read more about enabling constraints and other types of constraints on the [Cynefin wiki](https://cynefin.io/wiki/Constraints).
+- TBD ref to enabling constraints
+
 
 <aside>
   <p>
