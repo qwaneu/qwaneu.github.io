@@ -114,6 +114,68 @@ Not everything in code is stigmergy? code can also contain codified knowledge (e
 - There is a nice book called [Learning Histories](https://www.learninghistories.nl/post/nieuw-boek-learning-histories-vat-krijgen-op-je-organisatiecultuur) by Rik Peters which focuses on organisational culture basically being the resultant of its history (all the events that happened). This book is currently only available in Dutch. 
 - We have run some exploratory workshops on stigmergy within a software context, at [Agile Cambridge 2023](/2023/11/25/stigmergy-agile-cambridge) and [Lean Agile Scotland 2023](/2023/09/20/stigmergy-lean-agile-scotland).
 
+++++++++++++++++++++++++++++++++++++
+
+- software development = creating knowledge (& encoding/capturing)
+  - learning - about customers, needs, technology, dev skills, working together
+  - building software + building team & org 
+  - generate knowledge from feedback loops
+  - feedback
+
+- diff(what we expect it to be / what it is at the end)
+
+- how are teams generating knowledge?
+
+- old code base -> frustrated -> need to relearn
+  - relearning ('spelunking') -> distribution of knowledge & capturing/embedding knowledge
+
+knowledge -> different lenses, different stages of product (3X)
+- captured knowledge vs knowledge to capture
+
+capturing/distribution
+- explicit: 
+  - codify domain model in docs & code
+  - codify software design in docs & code
+  - codify rationale
+- tacit
+  - riding a bike
+  - heuristics & principles
+  - jr devs need sr mentoring/training!
+  - microskills (when to do refact)
+  - tacit domain knowledge
+  - write down: what things are tacit
+
+- stigmeric 
+  - make it easy to do
+  - people look at code and assume it is right
+    - there's thing - I need to fit it in vs do simplest thing that works & refactoring (judgement/skills)
+    - set up things - patterns of doing things right
+    - vs micro level
+  - outside code: room setup to facilitate collaboration
+
+- systemic 
+  - starts forming the moment a group of people gets together to do/achieve sth together
+  - is persistent / durable / self-sustaining (good or bad)
+  - social & experiential learning
+  - mob/ensemble
+  - simulations - shared experiences
+  - telling stories
+    - success stories - powerful if told by peers (teams, also mgt)
+    - failure stories - actual learning
+  - vgl. Snowden "collective knowledge" https://thecynefin.co/its-information-to-data-we-need-not-dikw/
+
+
+[ ] elaborate on knowledge creation
+[ ] link naar evidence based training
+
+
+
+does it matter in the large? crappy skills but still making money?
+
+we're ok at generating knowledge; how to use it? how to keep knowledge alive? how to keep it available?
+- or is it intrinsic?
+
+
 <aside>
   <p>
 Something
