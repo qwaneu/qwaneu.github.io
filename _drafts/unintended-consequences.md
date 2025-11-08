@@ -11,21 +11,21 @@ author: Marc Evers
 image: /attachments/blogposts/2025/jackinthebox.jpg
 ---
 
-Why and when do we introduce a new practice? We see a colleague/friend/influencer telling success stories about it. Eager to get those benefits, we start out experimenting and learn how well it is living up to our expectations. We also start seeing other unanticipated effects - distractions, anomalies? Or learning opportunities? In this post we advocate for embracing unintended consequences.
+Why and when do we introduce a new practice? We see a colleague, friend, and/or influencer telling success stories about it. Eager to get the benefits, we start out experimenting and learn how well it is living up to our expectations. We also start seeing other unanticipated effects &mdash; distractions, anomalies? Or learning opportunities? In this post we advocate for embracing unintended consequences.
 
 ## Knowable context, good practices
 
-If the situation at hand is knowable, the effects of a practice are known, or we can find out with a bit of effort how to get good results - taking into account [how the practice fits our context](/2025/10/06/practices-are-patterns)!
+If the situation at hand is knowable, the effects of a practice are known, or we can find out with a bit of effort how to get good results. As long as we take into account [how a practice fits our context](/2025/10/06/practices-are-patterns)!
 
 Practices in a knowable context are largely understood, but we can still run into unintended consequences. These inform us about how well the practice fits the context, or well we are performing the practice.
 
-Let's look at some examples from (agile) software development. 
+Let's look at some examples from software development. 
 
-**Test automation** - the practice of test automation is nowadays mostly in the knowable area. Tooling, libraries, and know-how is available for writing automated tests for all kinds of situations. Automated tests provide feedback about changes and confidence to bring changes to production. More and more test automation practices are evolving into good practices that are likely to bring  benefits - as long as you keep the context in mind.
+**Test automation**: the practice of test automation is nowadays mostly in the knowable area. Tooling, libraries, and know-how is available for writing automated tests for all kinds of situations. Automated tests provide feedback about changes and confidence to bring changes to production. More and more test automation practices are evolving into good practices that are likely to bring  benefits &mdash; as long as you keep the context in mind.
 
-**Behaviour-based vs structure/state-based tests** - test automation generally works, but there are a lot of details to be filled in. How the tests are written can have a big impact on speed, maintainability, and the ability to refactor. Many tests we see in practice are unit tests that are tightly coupled to the code structure, checking internal state. The unintended consequences are fragile tests and painful refactorings. State based and structure based automated tests have a limited applicability, e.g. for testing adapters and mapping, or for creating initial tests for existing entangled code. They are not a good fir for general use.
+**Behaviour-based vs structure/state-based tests**: test automation generally works, but there are a lot of details to be filled in. How the tests are written can have a big impact on speed, maintainability, and the ability to refactor. Many tests we see in practice are unit tests that are tightly coupled to the code structure, checking internal state. The unintended consequences are fragile tests and painful refactorings. State based and structure based automated tests have a limited applicability, e.g. for testing adapters and mapping, or for creating initial tests for existing entangled code. They are not a good fir for general use.
 
-**Story points** - story points is a much-lamented estimation and forecasting practice intended to help a team make quick, good enough forecasts based on the amount of work finished in the previous time period ("yesterday's weather"), while staying away from time based estimates. The applicable context of this practice lies within team boundaries. Story points have been used way outside this context. Sometimes management demands velocity to go up (which will just inflate the numbers) or compares teams based on their velocity. Making estimates can then have big consequences for developers, which reduces estimation reliability and usefulness.
+**Story points**: story points are a much-lamented estimation and forecasting practice intended to help a team make quick, good enough forecasts based on the amount of work finished in the previous time period &mdash; [yesterday's weather](https://martinfowler.com/bliki/YesterdaysWeather.html), while staying away from time based estimates. The applicable context of this practice lies within team boundaries. Story points have been used way outside this context. Sometimes management demands velocity to go up or compares teams based on their velocity. This will just inflate the numbers or make them lose their meaning completely. Producing estimates can then have big consequences for developers, which reduces estimation reliability and usefulness.
 
 ## Complex context, emergent practices
 
@@ -33,42 +33,39 @@ If the context is complex, where things are not knowable and only coherent in re
 
 We need to run small experiments to learn how a practice works in the situation we're in. We look for success and failure indicators, so that we can amplify or dampen quickly. We don't want any bet-your-company experiments...
 
-We need to engage and see what emerges. There will be unintended consequences...they're a feature, not a bug! They might be bad as well as good. Paying attention is key. Keep your mind open for what emerges and grab an opportunity when it comes by.
+We need to engage and see what emerges. There will be unintended consequences 
+&mdash; they're a feature, not a bug! They might be bad as well as good. Paying attention is key. Keep your mind open for what emerges and grab an opportunity when it comes by.
 
-**Short iterations** - for example, working in short timeboxes of 1-2 weeks(iterations, sprints) from an ordered backlog is a practice that was intended to provide focus for a development team and be productive without distractions and context switches. This practice is helpful where a team is e.g. is suffering under a high workload and continuously changing priorities, and not getting anything done.
+Take **short iterations** for example, working in short timeboxes of 1-2 weeks(iterations, sprints) from an ordered backlog is a practice that was intended to provide focus for a development team and be productive without distractions and context switches. This practice is helpful where a team is e.g. is suffering under a high workload and continuously changing priorities, and not getting anything done.
 
-In practice, we have observed all kind of different effects. Teams trying to work in short iterations, but not able to finish work inside the timebox. "Let's make our timebox longer" is often proposed. Other teams are successful with short iterations, but become an unsustainable "story factory", which burns out developers eventually. Some teams start limiting their work in process, but then save all finished work until the end of the sprint, where the sprint starts feeling as a constraint to be more productive.
+In practice, we have observed all kind of different effects. Teams try but are not able to finish work within the timebox. Often they react by proposing to make the timebox longer. Other teams are successful with short iterations, but become an unsustainable "story factory", burning out developers eventually. Some teams limit their work in process, but save all finished work until the end of the sprint, making the sprint feel as bottleneck rather than being helpful.
 
-So what is happening here? Short iterations is not a practice that directly results in higher productivity. Instead it creates enabling constraints, which initially will create friction and make problems visible. This can lead to feelings of "sprints don't work", but the sprint is just the messenger here. The friction that become visible depends on the specific situation and may vary - doing short iterations will have different consequences for different teams.
+So what is happening here? Practising short iterations does not directly result in higher productivity. Instead it creates an enabling constraint, which will initially create friction &mdash; it will make impediments to productive work visible so that you can act on it. Sometimes it leads to feelings of _"sprints don’t work"_, but the sprint is just the messenger. Which impediments will become visible depends on the context and may vary. Doing short iterations will have different consequences for different teams.
 
-Pushing short sprints to a team that is already productive and close to practising one piece flow and continuous delivery, might feel constraining in the wrong way. It can still be useful to regularly gauge progress and reflect on the process, but that is actually a different practice.
+## Expect the unexpected
 
-## How to embrace unintended consequences
+Focusing on the benefits a practice can narrow our perspective. We tend to look for what we expect, sticking to familiar patterns. We subconsciously filter out outliers, or we just try harder, hoping they will just go away.
 
-Focusing on the benefits a practice should have can narrow our perspective. We look for the thing we expect, sticking to familiar patterns. We subconsciously filter out outliers. Or we just try harder, hoping the anomaly will just go away. 
-
-Unintended consequences are not an anomaly. They're the delta between our assumptions, wishes, hypotheses and what happens in reality.
+Unintended consequences are not an anomaly. They're the delta between our assumptions, wishes, hypotheses and reality. They provide necessary information to steer our efforts.
 
 ## Guidelines for picking up a new practice 
 
 Some guidelines when picking up a new practice:
 
-- Find out about the nature of the situation you are in or the problem at hand - Is it complicated or complex? The Cynefin framework can help here.
-- *Complicated*: look out for unintended consequences; what do they tell you about the practice or the situational fit? Are you doing the practice as it is intended?
-- *Complex*: practices as emerging, no matter what consultants and sales people tell you. Your intended benefits are a hypothesis to test. How can you observe if it works out? How can you observe if it does not work out? How can you tune or reframe your hypotheses using the emerging information?
-- Be careful in copying a "good" idea from someone else. Depending on context, it might or might not work for you. Especially in a complex context, the "apparently successful practice" actually emerged from experimentation, learning, and tuning in a specific situation. It is a result of earlier interactions. The history of the system in which it emerged makes the other context unique. Learning about the history, the path they followed, and the failures they had is way more useful than copying the practice.
+- **Know the situation you are in.** What is the nature of the situation you are in? Is it complicated or complex? The [Cynefin sense-making framework](https://cynefin.io/wiki/Cynefin) can help.
+- **A Complicated context means finding a good fit**: look out for unintended consequences; what do they tell you about the practice or the situational fit? Are you doing the practice as it is intended?
+- **A complex context means testing hypotheses**: practices as emerging, no matter what consultants and sales people tell you. Intended benefits are a hypothesis that should be tested. How can you observe if it works out? How can you observe if it goes awry? How can you tune or reframe your hypotheses using the information that emerges?
+- **Beware of copying a "good" idea from someone else**. Depending on context, it might or might not work for you. In a complex context, the "apparently successful practice" actually emerged from experimentation, learning, and tuning in a specific situation. It is a result of earlier events and interactions. The history of the system in which it emerged makes the other context unique. Learning about the history, the path they followed, and the failures they experienced is far more useful than trying to copy what they are doing.
 
 ## Further reading
 
-- The distinction between knowable and unknowable and the ideas of complex context and emergent practice comes from the [Cynefin sense-making framework](https://cynefin.io/wiki/Cynefin). There are different methods available for finding out if something is knowable or complex.
-- There is a nice book called [Learning Histories](https://www.learninghistories.nl/post/nieuw-boek-learning-histories-vat-krijgen-op-je-organisatiecultuur) by Rik Peters which focuses on organisational culture basically being the resultant of its history (all the events that happened). This book is currently only available in Dutch.
+- We are using the concepts of knowable and unknowable context, complex context and emergent practice from the [Cynefin sense-making framework](https://cynefin.io/wiki/Cynefin). There are different methods available for finding out if something is knowable or complex.
 - Read more about enabling constraints and other types of constraints on the [Cynefin wiki](https://cynefin.io/wiki/Constraints).
-- TBD ref to enabling constraints
-
+- The book [Learning Histories](https://www.learninghistories.nl/post/nieuw-boek-learning-histories-vat-krijgen-op-je-organisatiecultuur) by Rik Peters offers a useful perspective on organisational culture, being the resultant of its history (all the events that have happened). This book is currently only available in Dutch.
 
 <aside>
   <p>
-What practices fit your situation? Let's discover this together.
+What practices fit your situation? Let's discover this together, e.g. by running a Cynefin based workshop.
   </p>
   <p><div>
     <a href="/contact">Contact us when you're interested!</a>
