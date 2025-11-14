@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Four types of knowledge in development - introduction
+title: Four types of knowledge in development
 tags:
   - patterns
   - complexity
@@ -10,58 +10,32 @@ author: Marc Evers
 image: TODO - create image representing 4 types (with some people figures in it)
 ---
 
-Software delivery is knowledge intensive work. We are continuously learning, about the problems we're solving, about our users and customers, about how we can work more productively. We are building up knowledge in all kind of areas, but we are not always good at keeping the knowledge or making most use of it. Take working with legacy code for example, which often feels like a process of archaeology, rediscovering long forgotten knowledge.
+WORK IN PROGRESS
 
-In this post, we will explore different forms of knowledge that play a role in software delivery. We don't intend this to be a comprehensive overview of everything around knowledge, but rather a new, practical and helpful perspective. A richer perspective of different forms of knowledge will enable us to develop and keep knowledge more effectively. Knowing which type of knowledge needs which approach will reduce the chances of working "against the system", but rather use it to get more done with higher quality.
+per type:
+- how to capture?
+- how to distribute, how to keep it alive / available?
+- some examples
+- what does not work?
+- how do we lose this type of knowledge? (relearning)
 
-## Knowledge
 
-Knowledge is a broad concept with several definitions. There is a whole field of knowledge management. We are using this working definition based on [Wikipedia's page on knowledge](https://en.wikipedia.org/wiki/Knowledge) (as of 24 October 2025):
-> "Knowledge is an awareness of facts, a familiarity with individuals and situations, or a practical skill. (...)  
-> It often involves the possession of information learned through experience and can be understood as a cognitive success or an epistemic contact with reality, like making a discovery. (...)  
-> Knowledge is often understood as a state of an individual person, but it can also refer to a characteristic of a group of people as group knowledge, social knowledge, or collective knowledge. Some social sciences understand knowledge as a broad social phenomenon that is similar to culture."
-
-As practitioners, we focus on what knowledge brings us: **knowledge influences behaviour**. Knowledge includes both factual knowledge and know-how (skills). In software development, we use knowledge to make decisions about architecture, design, code structure, tests, etc. Whenever we use the term 'knowledge', it also includes skills and know-how.
-
-## Software development as knowledge creation
-
-Developing, delivering and operating software products is not just highly knowledge intensive, it is also a process of continuously creating knowledge (learning). We are learning:
-- about the market, about our users, stakeholders and what is value for them
-- new technologies, frameworks, libraries, algorithms, and other solution components
-- how to model our domains properly and get a deep, shared understanding
-- how to create designs and solutions that fit the trade-offs we are dealing with
-- how to work effectively with each other
-- new practices that make us more effective
-- how our software products behave in the real world with unforeseen interactions
-
-We create knowledge through creating a product *together* &mdash; the result of our learning is not just code but a socio-technical system: the code, how it is deployed, documentation, manuals, the development team and its way of working, the organization around the development team that includes product managers, UX, support, management, the community of users. The knowledge we create gets embedded in our heads, our code, our organization, in the eco-system we are part of.
-
-Feedback plays an important role in learning. From eXtreme Programming, agile development, DevOps & Lean Software Development, we already know about fast & early feedback (from the ways of DevOps) to amplify learning (one of the Lean Software Development principles).
-
-Taking this perspective of seeing software development as a process of knowledge creation (rather that just creating software applications/services) allows us to manage explicitly for creating and keeping knowledge. This is key to becoming a highly productive software delivery organisation.
-
-Knowledge plays such a pervasive role in our work. but it is also quite elusive. 
-
-## 4 types of knowledge
-
-We see four types of knowledge that play an important role in software development. This perspective is by no means comprehensive or complete, but it  aims at being useful for growing and keeping knowledge and skills in our organisations.
-
-We distinguish these four types of knowledge that play an important role in software development:
 
 1. **Explicit knowledge** - things that we can express and codify
-2. **Tacit knowledge** - implicit, embodied, personal know-how that cannot be codified
-3. **Systemic knowledge** - embedded in the human systems we are part of, the groups, teams, departments; often referred to as "culture"
-4. **Stigmergic knowledge** - embedded in the environment we work in
-
-We are combining ideas from knowledge management, biology, Cynefin and systems thinking, as well as our experiences with software organisations.
-
-Let's take a look at what these four types mean. We will dive deeper in follow-up posts, where we will elaborate on what the implications are, what works (and what doesn't) for growing and keeping that type of knowledge.
+2. **Tacit knowledge** - implicit, embodied, personal know-how
+3. **Systemic knowledge** - embedded in the human systems we are part of, "culture"
+4. **Stigmergic knowledge** - being part of the environment we work in
 
 ## Explicit knowledge - what we can express and codify 
 
 Explicit knowledge has been codified, in documents, procedures, manuals, instructions, tutorials, etc. It resides explicitly in artifacts. Explicit knowledge is externalized (not confined in someone's head) and transferable.
 
 Note: we're using 'codify' here in the sense of expressing something explicitly in some (natural, formal, or semi-formal) language. This can include source code, e.g. representing domain concepts and domain language explicitly in classes and names in the code. There is however more to code, as we will show below.
+
+  - codify domain model in docs & code
+  - codify software design in docs & code
+  - codify rationale
+
 
 ## Tacit - embodied knowledge
 
@@ -71,6 +45,19 @@ Because we cannot codify tacit knowledge, we cannot document everything that a d
 
 Earlier on, the idea was that tacit knowledge could be transformed into explicit knowledge through socialization and externalization, but more recent insights are that tacit knowledge is mostly uncodifiable and literally embodied - part of a person's body.
 
+> **What about heuristics?**  
+> A [heuristic](/2021/10/13/what-is-a-heuristic) is an explicit form that refers to some tacit knowledge. It is not a codification of the knowledge itself, but it can help transfer the knowledge (by having a name or short description for it) and enable a conversation about it.  
+> Heuristics are a bit between explicit and tacit; a part is codified in a few words or sentences, and this is related to tacit knowledge. You still need social & experiential learning to transfer the whole thing, but heuristics help make tacit knowledge visible and discussable.
+
+  - riding a bike
+  - heuristics & principles
+  - jr devs need sr mentoring/training!
+  - microskills (when to do refact)
+  - tacit domain knowledge
+  - write down: what things are tacit
+
+
+[ ] link naar evidence based training
 
 ## Systemic knowledge
 
@@ -97,6 +84,17 @@ If this is an individual developer's habit, the effect for the whole team might 
 
 How can you influence this? (given that you cannot change history) You can learn about a team's history and the pivotal events that formed the team. Story telling and doing simulations/games can help to create shared experiences (see also ASHEN reference).
 
+  - starts forming the moment a group of people gets together to do/achieve sth together
+  - is persistent / durable / self-sustaining (good or bad)
+  - social & experiential learning
+  - mob/ensemble
+  - simulations - shared experiences
+  - telling stories
+    - success stories - powerful if told by peers (teams, also mgt)
+    - failure stories - actual learning
+  - vgl. Snowden "collective knowledge" https://thecynefin.co/its-information-to-data-we-need-not-dikw/
+
+
 ## Stigmergic knowledge
 
 [Stigmergy](https://en.wikipedia.org/wiki/Stigmergy) is a concept originally from biology. It is a mechanism of indirect coordination where actors modify their local environment. They leave traces for others to follow. The
@@ -117,7 +115,15 @@ We can also apply this intentionally, realizing that every line of code we write
 
 Not everything in code is stigmergy? code can also contain codified knowledge (e.g. domain concepts) as mentioned before, it can contain comments about what (not) to do, a wiki/docs with some rules and guidelines, ... code is also a form of explicit knowledge - it is a codified interpretation of the problem and a solution deemed appropriate (usually without having codified the rationale) 
 
-## Consequences / how does this help?
+  - make it easy to do
+  - people look at code and assume it is right
+    - there's thing - I need to fit it in vs do simplest thing that works & refactoring (judgement/skills)
+    - set up things - patterns of doing things right
+    - vs micro level
+  - outside code: room setup to facilitate collaboration
+
+
+## Consequences / how does this help? (in aparte post? hierin komen de 4 samen?)
 
 **Conflicting sources of knowledge** - we could agree as a team on specific rules on how we do stuff in the code (explicit knowledge). This could however conflict with the existing stigmergic knowledge. There might even be a conflict with how some team members have learned how to do things (tacit knowledge). This can make it more challenging to bring change than you'd expect. Especially under pressure, when the tacit and stigmergic knowledge will be the path of least resistance. Being aware of the different types of knowledge at play is helpful.
 
@@ -131,13 +137,34 @@ Not everything in code is stigmergy? code can also contain codified knowledge (e
 
 - [Principles for managing knowledge
 ](https://cynefin.io/wiki/Principles_for_managing_knowledge)
-- Ikujiro Nonaka & Hirotaka Takeuchi, The Knowledge Creating Company (1995); note: Takeuchi & Nonaka also authored the [New New Product Development Game](https://hbr.org/1986/01/the-new-new-product-development-game) article (in 1986) which was an important source for Scrum as we know it. @@bit more
-- The [Agile Fluency® Model](https://www.agilefluency.org/) is also knowledge focused; specifically it focuses on growing skills as a team and becoming fluent in these skills.
+- Ikujiro Nonaka & Hirotaka Takeuchi, The Knowledge Creating Company (1995); note: Takeuchi & Nonaka also authored the [New New Product Development Game](https://hbr.org/1986/01/the-new-new-product-development-game) article (in 1986) which was an important source for Scrum as we know it.
 - The [ASHEN framework](https://cynefin.io/wiki/ASHEN) is a method for mapping knowledge in an organisation. It has parallels: Artifacts = explicit knowledge, Skills = tacit knowledge; Heuristics = tacit/explicit; Experience = systemic knowledge
 - There is a nice book called [Learning Histories](https://www.learninghistories.nl/post/nieuw-boek-learning-histories-vat-krijgen-op-je-organisatiecultuur) by Rik Peters which focuses on organisational culture basically being the resultant of its history (all the events that happened). This book is currently only available in Dutch. 
 - We have run some exploratory workshops on stigmergy within a software context, at [Agile Cambridge 2023](/2023/11/25/stigmergy-agile-cambridge) and [Lean Agile Scotland 2023](/2023/09/20/stigmergy-lean-agile-scotland).
 
+++++++++++++++++++++++++++++++++++++
 
+- diff(what we expect it to be / what it is at the end)
+
+- how are teams generating knowledge?
+
+- old code base -> frustrated -> need to relearn
+  - relearning ('spelunking') -> distribution of knowledge & capturing/embedding knowledge
+
+knowledge -> different lenses, different stages of product (3X)
+- captured knowledge vs knowledge to capture
+
+
+
+[ ] elaborate on knowledge creation
+[ ] link naar evidence based training
+
+
+
+does it matter in the large? crappy skills but still making money?
+
+we're ok at generating knowledge; how to use it? how to keep knowledge alive? how to keep it available?
+- or is it intrinsic?
 
 
 <aside>
