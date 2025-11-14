@@ -42,7 +42,7 @@ Taking this perspective of seeing software development as a process of knowledge
 
 Knowledge plays such a pervasive role in our work. but it is also quite elusive. 
 
-## 4 types of knowledge
+## 4 types of knowledge - a new perspective
 
 We see four types of knowledge that play an important role in software development. This perspective is by no means comprehensive or complete, but it  aims at being useful for growing and keeping knowledge and skills in our organisations.
 
@@ -50,8 +50,8 @@ We distinguish these four types of knowledge that play an important role in soft
 
 1. **Explicit knowledge** - things that we can express and codify
 2. **Tacit knowledge** - implicit, embodied, personal know-how that cannot be codified
-3. **Systemic knowledge** - embedded in the human systems we are part of, the groups, teams, departments; often referred to as "culture"
-4. **Stigmergic knowledge** - embedded in the environment we work in
+3. **Systemic knowledge** - embedded in the human systems we are part of, groups, teams, departments; often referred to as "culture"
+4. **Stigmergic knowledge** - embedded in the environments we work in
 
 We are combining ideas from knowledge management, biology, Cynefin and systems thinking, as well as our experiences with software organisations.
 
@@ -61,7 +61,9 @@ Let's take a look at what these four types mean. We will dive deeper in follow-u
 
 Explicit knowledge has been codified, in documents, procedures, manuals, instructions, tutorials, etc. It resides explicitly in artifacts. Explicit knowledge is externalized (not confined in someone's head) and transferable.
 
-Note: we're using 'codify' here in the sense of expressing something explicitly in some (natural, formal, or semi-formal) language. This can include source code, e.g. representing domain concepts and domain language explicitly in classes and names in the code. There is however more to code, as we will show below.
+'Codify' means expressing something explicitly in some (natural, formal, or semi-formal) language and is a broader concept than expressing something in source code.
+
+Code contains explicitly codified knowledge about the domain, about how we solve the problems for our users. It is called 'code' for a reason. Domain concepts are for example reflected in classes and functions, comments are telling us what (not) to do. What has often not been made explicit is the rationale of solutions and decisions.
 
 ## Tacit - embodied knowledge
 
@@ -97,25 +99,25 @@ If this is an individual developer's habit, the effect for the whole team might 
 
 How can you influence this? (given that you cannot change history) You can learn about a team's history and the pivotal events that formed the team. Story telling and doing simulations/games can help to create shared experiences (see also ASHEN reference).
 
+TBD: ref naar Snowden ("collective knowledge") die hier terloops iets over roept
+
 ## Stigmergic knowledge
 
 [Stigmergy](https://en.wikipedia.org/wiki/Stigmergy) is a concept originally from biology. It is a mechanism of indirect coordination where actors modify their local environment. They leave traces for others to follow. The
 trace left by an individual action stimulates the performance of a next action
 by the same or different agent.
 
-We believe that the concept of stigmergy is also useful within a software development context. If we see the code and other artifacts as (parts of) the environment the team works in, we can also observe signs left behind in those artifacts that influence developers' behaviour.
+We believe that this concept is also useful within a software development context. So what is the 'environment' there? The code and other artifacts are (parts of) the environment a team works in. 
 
-This is not about having explicit agreements in a team on how to solve specific things in code or what to put where. It is about the shape of code (and other artifacts) influence the behaviour, for bad or good.
+Artifacts like code contain all kinds of signs that influence developers' behaviour. In a code base riddled with null checks, the path of least resistance is doing more null checks. These are like desire paths. This is not a bad thing nor a matter of lack of discipline. It is actually our brain's nature to preserve energy as much as possible. Instead of spending/wasting brain power on rethinking everything, it takes less energy to follow the paths that are already there.
 
-If we work in a code base riddled with null checks, the path of least resistance is keep on doing null checks in new code. We tend to follow the desire paths that are already there. This is not a bad thing nor a lack of discipline. It is actually our brain's nature to preserve energy as much as possible. Instead of spending/wasting brain power on rethinking everything, it takes less energy to follow the paths that are already there.
+The (physical) office space also influences behaviour. Having everyone together facilitates communication and collaboration. A single wall or door in between can already have a big impact. What does this mean for working remotely?
 
-This can lead to undesirable behaviour. If we have an entangled code base with anemic data objects, lots of null checks, lots of procedural code, it will nudge developers to do more of it. If we want to move away to more maintainable code, we will have to go against the flow (which costs a lot of energy).
+Stigmergic knowledge is not about explicit team agreements on how to solve specific things in code or what to put where. It is about the shape of code and other artifacts that influence the behaviour, for bad or good.
 
-We can also apply this intentionally, realizing that every line of code we write will serve as an example for others, whether we like it or not. We can work on creating desire paths, nudging our future colleagues (and future self) towards something better.
+Not everything in code is stigmergy. Code also contains explicitly codified knowledge like domain concepts reflected in classes and names or comments telling what (not) to do. It is also codified (by definition) solution to the problems we are trying to solve. The rationale is usually not explicitly codified in our experience.
 
-@@TBD example from workshop: async org, team starts with ADRs, spreads across teams
-
-Not everything in code is stigmergy? code can also contain codified knowledge (e.g. domain concepts) as mentioned before, it can contain comments about what (not) to do, a wiki/docs with some rules and guidelines, ... code is also a form of explicit knowledge - it is a codified interpretation of the problem and a solution deemed appropriate (usually without having codified the rationale) 
+A wiki that lists rules and guidelines are explicit knowledge that tries to influence behaviour, although when the desire paths in the code run differently from what the rules on the wiki state, the desire paths usually win.
 
 ## Consequences / how does this help?
 
@@ -137,6 +139,9 @@ Not everything in code is stigmergy? code can also contain codified knowledge (e
 - There is a nice book called [Learning Histories](https://www.learninghistories.nl/post/nieuw-boek-learning-histories-vat-krijgen-op-je-organisatiecultuur) by Rik Peters which focuses on organisational culture basically being the resultant of its history (all the events that happened). This book is currently only available in Dutch. 
 - We have run some exploratory workshops on stigmergy within a software context, at [Agile Cambridge 2023](/2023/11/25/stigmergy-agile-cambridge) and [Lean Agile Scotland 2023](/2023/09/20/stigmergy-lean-agile-scotland).
 
+## Credits
+
+Thanks Willem, [Arien Kock](https://www.linkedin.com/in/arienkock), and [Patrick Vine](https://agilitymatters.wordpress.com/about/) for the conversations and sharing of ideas.
 
 
 
