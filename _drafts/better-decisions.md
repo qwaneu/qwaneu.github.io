@@ -9,14 +9,16 @@ image: /attachments/blogposts/2025/moving-bunnies-microprint-node-modules.png
 
 *What*
 
-I am running a session at the Swindon Developers meetup next Thurdsday at 6:30PM *TODO LINK*. There are still places available *Register here**. 
+I am running a session at the Swindon Developers meetup this Thurdsday at 6:30PM 
+ *. There are still some places available, so join me and [register now](https://www.meetup.com/swindon-software/events/311751879/). 0
 In this session I will demonstrate how we make better decisions by making results of work visible through tools that we built for the questions we have. The title evolved from a discussion with the host. 
 
 *So What*
 
-I showed some of these visuals to Wouter Lagerweij today, and he asked what are you using these for? Making better decisions of course ;-) 
+I showed some of these visuals to Wouter Lagerweij on friday, and he asked what are you using these for? *Making better decisions of course* ;-) 
 
-An example of a decision we made was to go slower. At first based on feedback from relatively standard 'tools' like tests, code coverage and linters, as well as roughly tracking how long it took us to make a change. We wanted to be able to detect earlier when our codebase goes off the rails, so we can intervene in time. In our experience code that 'just works'
+An example of a decision we made was to go slower. At first based on feedback from relatively standard 'tools' like tests, code coverage and linters, as well as roughly tracking how long it took us to make a change. We wanted to be able to detect earlier when our code goes the rails, so we can intervene in time. 
+
 
 Below is a view we made this week, that I'll also discuss on thursday in more detail. This *Microprint* shows all of the source files that we made in a fresh web frontend. 
 
