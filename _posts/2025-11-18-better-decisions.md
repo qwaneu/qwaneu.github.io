@@ -2,7 +2,11 @@
 layout: post
 title: What do you need to see to make better decisions?
 tags:
-- short, community, LLM, legacy code, moldable development
+- short
+- community
+- LLM
+- legacy code
+- moldable development
 author: Willem van den Ende
 image: /attachments/blogposts/2025/moving-bunnies-microprint-node-modules.png 
 ---
