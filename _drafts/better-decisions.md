@@ -24,7 +24,7 @@ Below is a view we made this week, that I'll also discuss on thursday in more de
 
 ![Thumbnails of files, longer chunks indicate longer files](/attachments/blogposts/2025/moving-bunnies-microprint-src.png)
 
-What I like about this view, is that it shows the forest *and* the trees. Or some of it. I can click on a square and jump straight through the source. I showed this view to Wouter, and we looked at one of the larger test files, the refactorings were quite obvious - introduce some builders, and see the tests become more glanceable.
+What I like about this view, is that it shows the forest *and* the trees. Or some of it. I can click on a square and jump straight through to the source. I showed this view to Wouter, and we looked at one of the larger test files, the refactorings were quite obvious - introduce some builders, and see the tests become more glanceable.
 
 This is at a point where the codebase is still relatively small, but when development is fast, you may easily miss things.
 
@@ -32,12 +32,17 @@ As thumbnail for this post, I used the same codebase, but now including `node_mo
 
 ![Thumbnails of files in src and node_modules, longer chunks indicate longer files](/attachments/blogposts/2025/moving-bunnies-microprint-node-modules.png)
 
-Stephan and I saw quite a few large files. We read through the main production depencency, and accepted it for now. It is not big enough to be a worry. The other parts are probably in the developer tooling. Not ideal, but the interface with those is not that big. So something to keep an eye on, but nothing we need to act on now.
+Stephan and I saw quite a few large files. We read through the main production dependency, and accepted it for now. It is not big enough to be a worry. The other parts are probably in the developer tooling. Not ideal, but the interface with those is not that big. So something to keep an eye on, but nothing we need to act on now.
 
-I plan to run this on some other codebases I have and contrast them. Every week has some new insights. We also made some dependency views - both what you'd expect with boxes and arrows, and others that I will go through. Hopefully we can get some participants up and running with glamorous toolkit, and they can code along. 
+I have run this on some other codebases since I started writing this post on Friday. There are subtle differences that pop up from the microprints, inspecting the files with them and the discussion in a pair. Every week has some new insights. 
 
-I love places like Swindon Developers Meetup and XP Days that make space for experimental sessions. So I hope you join me next thursday at 6:30PM in Swindon, or in two weeks at XP Days Benelux.
+For thurrsday's session we also made some dependency views - both what you'd expect with boxes and arrows, and others that I will go through. Hopefully we can get some participants up and running with glamorous toolkit, and they can code along. 
+
+I love places like Swindon Developers Meetup and XP Days that make space for experimental sessions. So I hope you join me this thursday at 6:30PM in Swindon, or in two weeks at XP Days Benelux.
 
 *Now What?*
 
 Register of course. Or if you can't make it, leave me a message here or on LinkedIn and I'll record a video separately.
+
+
+
