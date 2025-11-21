@@ -67,39 +67,28 @@ Code contains explicitly codified knowledge about the domain, about how we solve
 
 ## Tacit - embodied knowledge
 
-Tacit knowledge is know-how, skills, experience, intuition possessed by people, which are not codified and are hard to express or codify. Often this is embodied knowledge, e.g. riding a bicycle, playing a music instrument. Because tacit knowledge is hardly codifiable, it needs a different approach for transferring it. Transferring these kind of skills requires social and experiential learning. E.g. apprenticeships, learning by doing guided by an expert.
+Tacit knowledge is knowledge that cannot be codified. It encompasses know-how, skills, experience, intuition possessed by people, things which are often hard to express or explain (try explaining how to ride a bicycle for instance). Tacit knowledge is often embodied knowledge - literally [fingerspitzengefühl](https://en.wikipedia.org/wiki/Fingerspitzengef%C3%BChl). Because tacit knowledge is not codifiable, we need a different approach to transfer it: we need *social* and *experiential* learning, like apprenticeships, or other forms of expert guidance.
 
-Because we cannot codify tacit knowledge, we cannot document everything that a developer needs to know. To share tacit knowledge, we need forms of social and experiential learning within the team. For example: if a team works with pull requests, a pull request review using written text is an unsuitable form to convey know-how from a more senior developer to a less skilled developer. For effective knowledge transfer, they need to sit and work together.
-
-Earlier on, the idea was that tacit knowledge could be transformed into explicit knowledge through socialization and externalization, but more recent insights are that tacit knowledge is mostly uncodifiable and literally embodied - part of a person's body.
-
+Development skills are to some extend tacit, so we cannot write down everything a developer knows. We need forms of social and experiential learning within a development team. An example: a pull request review using written feedback is unsuitable to convey know-how from a senior developer to a junior developer. Sitting and working together creates a much better context for effective knowledge transfer: it is social, experiential (learning by doing) and situational (learning what to apply in a specific context).
 
 ## Systemic knowledge
 
-Taking a systemic perspective, a team forms a system, and is part of a larger system (department, business unit, organization, society). Team members themselves are also part of multiple systems, at work, at home, in their families.
+A special form of tacit knowledge is *systemic* or *collective* knowledge: knowledge that is not just embodied in individuals but embedded in social systems, like a team, department, organization, or any other group of people. Think of group norms, values, taboos, unspoken rules, "the way things are done here".
 
-These human systems are uniquely determined by their histories - by everything that has happened. So systems have a history and a memory, and in that way they have knowledge that influences their members' behaviour. This knowledge usually survives individual members, who might come and go. 
+These social systems are uniquely determined by their histories - everything that has happened. Systems have collective memory, which influences their members' behaviour. The whole is more than the sum of its parts: the collective knowledge survives individual members, who come and go over time. 
 
-People often refer to this as "culture" (team culture, organisation culture), but we don't find the term "culture" very helpful. What we call culture is actually an emergent property, formed by all interactions and events over time [het is een resultante?]. This means that you cannot "change culture", you can only influence the events and interactions that will take place, and you'll have to deal with the history that's already there.
+People often call this systemic knowledge "culture", but we don't find the term culture very helpful. Culture is an emergent property of a social system, formed over time by interactions and events. You cannot "change culture", you can only influence the events and interactions that will take place, and you'll have to deal with the systems as it currently manifests itself.
 
-What does this mean for a software team? 
+What does this mean for a software team? A team's systemic knowledge, or "team culture" is often not explicitly written down. You learn it when you join a team, by immersing yourself in the system. It influences team member's behaviour and affects decisions a team makes, but often at a subconscious level. It already helps to be aware of this
 
-A team has a history (which starts forming the day the team starts forming), and something you could call a "team culture". It's "the way we do things in this team", often unspoken rules, norms and values. It's not written in documents or on the wiki, but you pick it up / feel it soon enough when you join the team. It is also about systemic order - who comes before who - and power. High impact events (often negative) are highly influential in forming "team culture". It is not always and not fully a conscious thing; it also plays at the subconscious level.
+For example, a team member dismisses a proposal for change saying "we tried this [a very long time ago] and it did not work". Their belief might be strong even though the world has changed and most assumptions are outdated by now. 
 
-This plays a role in how a team makes decisions, also on technical things.
+Example: having a habit of continuously doing small improvements, in code, tests, way of working, etc is very beneficial, [we wrote about that earlier](/2021/07/07/simple-acts-of-kindness-and-love).
+If it is just an individual developer's habit, the effect for the whole team is limited, especially if the team norm is for instance just delivering features fast. It will cost that individual developer a lot of energy to stick to their habit - rowing against the stream. When the individual leaves, there will be no lasting effect on the team. Developing such a habit as a team is more difficult, but it is also much more powerful, not being dependent on a single individual.
 
-For example, a team member might dismiss a proposal for change saying "we tried this (a very long time ago) and it did not work", from a strong belief (even if all assumptions are outdated by now). Even worse, team members have this belief subconsciously but are unable to state it explicitly; instead, they will show all kinds of behaviour that look like "resisting" the proposed change.
+Systemic knowledge is powerful, both in keeping a team together and helping them survive pressure and setbacks. The downside is that this can make it more difficult to change things. It cannot be influenced directly - you cannot "change culture" directly. 
 
-Systemic knowledge is powerful, keeps e.g. a team together and can help a team to "survive" high pressure and setbacks. This stability also means that this is harder to bring change.
-
-@@TBD: needs a few concrete examples!
-
-Example: developing a habit of continuously doing small improvements, in code, tests, way of working, etc is very beneficial. We wrote about this earlier, in [Simple Acts of Kindness and Love](/2021/07/07/simple-acts-of-kindness-and-love).
-If this is an individual developer's habit, the effect for the whole team might be limited. Or worse, if the team norm is a focus on just creating features fast and the rest works this way, it will cost a lot of energy for that individual to stick to the habit - rowing against the stream. When that individual leaves, nothing changes. Developing such a habit as a team is more difficult, but once the habit is there, it's much more powerful. The habit is not dependent on a single individual any more.
-
-How can you influence this? (given that you cannot change history) You can learn about a team's history and the pivotal events that formed the team. Story telling and doing simulations/games can help to create shared experiences (see also ASHEN reference).
-
-TBD: ref naar Snowden ("collective knowledge") die hier terloops iets over roept
+It helps to learn about a team's history and any pivotal events that shaped the team. Systemic knowledge can be influenced by creating shared experiences, feeding into a team's history, for example through story telling, simulations, or games.
 
 ## Stigmergic knowledge
 
@@ -107,43 +96,37 @@ TBD: ref naar Snowden ("collective knowledge") die hier terloops iets over roept
 trace left by an individual action stimulates the performance of a next action
 by the same or different agent.
 
-We believe that this concept is also useful within a software development context. So what is the 'environment' there? The code and other artifacts are (parts of) the environment a team works in. 
+We believe that this concept is also useful within software development. The environment software teams work in is not only formed by the physical environment (office space) but also by the code, issue tracking systems, and other tools and artifacts. 
 
-Artifacts like code contain all kinds of signs that influence developers' behaviour. In a code base riddled with null checks, the path of least resistance is doing more null checks. These are like desire paths. This is not a bad thing nor a matter of lack of discipline. It is actually our brain's nature to preserve energy as much as possible. Instead of spending/wasting brain power on rethinking everything, it takes less energy to follow the paths that are already there.
+Code contain all kinds of signs that influence developers' behaviour. In a code base that is riddled with null checks, the path of least resistance is adding more null checks. These things act like desire paths. This is not primarily lack of discipline, but actually our brain's nature wanting preserve energy. Instead of spending brain power on rethinking everything, it takes less energy to follow paths that are already there.
 
-The (physical) office space also influences behaviour. Having everyone together facilitates communication and collaboration. A single wall or door in between can already have a big impact. What does this mean for working remotely?
+The shape of code and other artifacts influence developers' behaviour, which can be for bad or good. Every line of code we write can become or reinforce a desire path, so let's make sure we shape these to guide in a good direction.
 
-Stigmergic knowledge is not about explicit team agreements on how to solve specific things in code or what to put where. It is about the shape of code and other artifacts that influence the behaviour, for bad or good.
+Not everything in code and other artifacts is stigmergy:
+- Code also contains explicit knowledge, like domain concepts codified in class and function names, or comments telling what (not) to do. Code is (by definition) a codified (but not always easily decodable) solution to the problems we are trying to solve.
+- Rules, guidelines, working agreements listed on a wiki are explicit knowledge.If the desire paths in the code differ from what the rules on the wiki state however, the desire paths will usually win.
 
-Not everything in code is stigmergy. Code also contains explicitly codified knowledge like domain concepts reflected in classes and names or comments telling what (not) to do. It is also codified (by definition) solution to the problems we are trying to solve. The rationale is usually not explicitly codified in our experience.
+## How does this help us?
 
-A wiki that lists rules and guidelines are explicit knowledge that tries to influence behaviour, although when the desire paths in the code run differently from what the rules on the wiki state, the desire paths usually win.
+Being aware of these different types of knowledge provides us more options to steer a team and the software they develop in a desired direction. It also supports looking for ways of less resistance - how to influence team behaviour while putting in limited energy. Some examples:
 
-## Consequences / how does this help?
+- **Conflicting sources of knowledge** - we could write down as a team on how we do things in code (*explicit knowledge*). This could conflict with the desire paths in the code (*stigmergic knowledge*). There might even be a conflict with how some team members have learned how to do things (*tacit knowledge*). This makes it more challenging to let the team change its way of working, especially under pressure.
+- **Resistance to change** - what we initially perceive as "resistance to change" could be tacit, stigmergic and/or systemic knowledge at play making the system move in a different direction. Just having good intentions is not sufficient. It is helpful to see resistance as information about the system. See e.g.  [Resistance as a Resource](https://dhemery.com/articles/resistance_as_a_resource/).
+- **Focusing on desire paths in code** - consciously creating desire paths, considering how the code you are writing can influence colleagues (and future you) - this can make it easier for the team to make good decisions. It is also less draining than trying to correct everything afterwards, e.g. through pull request reviews.
+- **Investing in teams** - to grow team & development skills (tacit knowledge), we need proper investment and proper ways of transferring these skills. We cannot do this through documentation or just reading about it. We need social and experiential learning, through hands-on training, mentoring, working and reflecting together (*deliberate practice*).
 
-**Conflicting sources of knowledge** - we could agree as a team on specific rules on how we do stuff in the code (explicit knowledge). This could however conflict with the existing stigmergic knowledge. There might even be a conflict with how some team members have learned how to do things (tacit knowledge). This can make it more challenging to bring change than you'd expect. Especially under pressure, when the tacit and stigmergic knowledge will be the path of least resistance. Being aware of the different types of knowledge at play is helpful.
+## Further reading
 
-**Resistance to change** - when wanting to change/improve something. be aware of the types of knowledge at play and how these e.g. keep the system as it is ("resisting change"). ... [Resistance as a Resource](https://dhemery.com/articles/resistance_as_a_resource/)
-
-**An extra reason to invest in code quality** - ... for the stigmergic effects
-
-**Investing in teams** - need to invest in team skills and development skills, give proper attention to team forming and other team dynamics; contributing to tacit and systemic knowledge. Don't over-focusing on "documentation" (although it is important for what can be codified!)
-
-## Related work & further reading
-
-- [Principles for managing knowledge
-](https://cynefin.io/wiki/Principles_for_managing_knowledge)
-- Ikujiro Nonaka & Hirotaka Takeuchi, The Knowledge Creating Company (1995); note: Takeuchi & Nonaka also authored the [New New Product Development Game](https://hbr.org/1986/01/the-new-new-product-development-game) article (in 1986) which was an important source for Scrum as we know it. @@bit more
-- The [Agile Fluency® Model](https://www.agilefluency.org/) is also knowledge focused; specifically it focuses on growing skills as a team and becoming fluent in these skills.
-- The [ASHEN framework](https://cynefin.io/wiki/ASHEN) is a method for mapping knowledge in an organisation. It has parallels: Artifacts = explicit knowledge, Skills = tacit knowledge; Heuristics = tacit/explicit; Experience = systemic knowledge
-- There is a nice book called [Learning Histories](https://www.learninghistories.nl/post/nieuw-boek-learning-histories-vat-krijgen-op-je-organisatiecultuur) by Rik Peters which focuses on organisational culture basically being the resultant of its history (all the events that happened). This book is currently only available in Dutch. 
+- The [Principles for managing knowledge](https://cynefin.io/wiki/Principles_for_managing_knowledge) are useful to keep in mind, in particular when dealing with tacit or systemic knowledge.
+- Ikujiro Nonaka & Hirotaka Takeuchi, The Knowledge Creating Company (1995) and [New New Product Development Game](https://hbr.org/1986/01/the-new-new-product-development-game) (1986); the latter was an important source for Scrum as we know it.
+- The [Agile Fluency® Model](https://www.agilefluency.org/) is focused on assessing and growing team skills.
+- The [ASHEN framework](https://cynefin.io/wiki/ASHEN) is a method for mapping different types of knowledge in an organisation. 
+- There is a nice book called [Learning Histories](https://www.learninghistories.nl/post/nieuw-boek-learning-histories-vat-krijgen-op-je-organisatiecultuur) by Rik Peters which focuses on organisational culture basically being the resultant of its history (all the events that happened).
 - We have run some exploratory workshops on stigmergy within a software context, at [Agile Cambridge 2023](/2023/11/25/stigmergy-agile-cambridge) and [Lean Agile Scotland 2023](/2023/09/20/stigmergy-lean-agile-scotland).
 
 ## Credits
 
 Thanks Willem, [Arien Kock](https://www.linkedin.com/in/arienkock), and [Patrick Vine](https://agilitymatters.wordpress.com/about/) for the conversations and sharing of ideas.
-
-
 
 <aside>
   <p>
