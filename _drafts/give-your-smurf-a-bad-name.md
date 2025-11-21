@@ -14,8 +14,6 @@ Choosing good names is one of the hard parts of our job as software developers. 
 
 In earlier times, Willem would choose swear words for names. It lightens the mood, when working alone, but is not conducive for group work. Calling it "smurf" is another option, making it obvious it needs a better name.
 
-Enrique Comba Riepenhausen 
-
 ## Further reading
 
 - We wrote about one way we [name tests](/2021/07/27/tdd-naming-tests.html)
@@ -28,4 +26,3 @@ Enrique Comba Riepenhausen
 >  Like many two-person writing teams, this one produces its share of three-legged prose and redundancy.
   James McManus, New York Times Book Review, 15 Apr. 2001
 
-Something we are mindful
