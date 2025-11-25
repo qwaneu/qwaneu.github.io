@@ -7,7 +7,7 @@ tags:
   - design
   - systems thinking
 author: Marc Evers
-image: TODO - create image representing 4 types (with some people figures in it)
+image: /attachments/blogposts/2025/knowledge-types.jpg
 ---
 
 Software delivery is knowledge intensive work. We are continuously learning, about the problems we're solving, about our users and customers, about how we can work more productively. We are building up knowledge in multiple areas, but we are not always good at keeping knowledge or making most use of it. Take working with legacy code for example, which often feels like a process of archaeology, rediscovering long forgotten knowledge.
@@ -50,6 +50,9 @@ Knowledge plays a pervasive role in our work. but it is also quite elusive. We d
 4. **Stigmergic knowledge** &mdash; embedded in the physical and virtual environments we work in.
 
 We combine ideas from knowledge management, biology, Cynefin and systems thinking, as well as our experience with software organisations.
+
+![visualization of the 4 types of knowledge](/attachments/blogposts/2025/knowledge-types.jpg)
+{: class="post-image post-image-50" }
 
 Let's take a look at what these four types mean.
 
