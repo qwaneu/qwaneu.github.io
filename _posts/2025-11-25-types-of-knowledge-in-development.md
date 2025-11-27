@@ -31,7 +31,7 @@ Developing, delivering and operating software is a process of continuously creat
 - how to model our domains properly to get a deep, shared understanding;
 - how to create designs and solutions that fit our trade-offs;
 - how to work together effectively across different roles and disciplines;
-- new practices that can make us more effective ([or not](http://localhost:4000/2025/11/08/unintended-consequences.html));
+- new practices that can make us more effective ([or not](/2025/11/08/unintended-consequences.html));
 - how our software products behave in the real world with unforeseen interactions.
 
 We create knowledge through creating a something *together*. The result of our learning is not just code but a socio-technical system: the code, how it is deployed, documentation, manuals, the development team and its way of working, the organization around the development team that includes product managers, UX, support, management, the community of users. The knowledge we create gets embedded in our heads, in our code, in our organization, in the eco-systems we are part of.
