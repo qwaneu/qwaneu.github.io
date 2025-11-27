@@ -11,14 +11,14 @@ author: Willem van den Ende
 image: /attachments/blogposts/2025/moving-bunnies-microprint-node-modules.png 
 ---
 
-I am running a session at the Swindon Developers meetup this Thurdsday at 6:30PM 
+I am running a session at the Swindon Developers meetup this Thursday at 6:30PM 
  *. There are still some places available, so join me and [register now](https://www.meetup.com/swindon-software/events/311751879/). 
 In this session I will demonstrate how we make better decisions by making results of work visible through tools that we built for the questions we have. The title evolved from a discussion with the organiser, [Sean Moir](https://www.linkedin.com/in/seanmoir/). 
 
 What are we looking at, and what decisions do we make?
 ----
 
-I showed some of these visuals to [Wouter Lagerweij](https://www.lagerweij.com/about/) on friday, and he asked what are you using these for? *Making better decisions of course* ;-) 
+I showed some of these visuals to [Wouter Lagerweij](https://www.lagerweij.com/about/) on Friday, and he asked what are you using these for? *Making better decisions of course* ;-) 
 
 An example of a decision we made was to go slower. At first based on feedback from relatively standard 'tools' like tests, code coverage and linters, as well as roughly tracking how long it took us to make a change. We wanted to be able to detect earlier when our code goes the rails, so we can intervene in time. 
 
@@ -41,7 +41,7 @@ I have run this on some other codebases since I started writing this post on Fri
 
 For Thursday's session we also made some dependency views - both what you'd expect with boxes and arrows, and others that I will go through. Hopefully we can get some participants up and running with glamorous toolkit, and they can code along. 
 
-I love places like Swindon Developers Meetup and XP Days that make space for experimental sessions. So I hope you join me this thursday at 6:30PM in Swindon, or next week at [XP Days Benelux](/2025/09/01/extreme-vibe-coding.html).
+I love places like Swindon Developers Meetup and XP Days that make space for experimental sessions. So I hope you join me this Thursday at 6:30PM in Swindon, or next week at [XP Days Benelux](/2025/09/01/extreme-vibe-coding.html).
 
 What's next
 -----
