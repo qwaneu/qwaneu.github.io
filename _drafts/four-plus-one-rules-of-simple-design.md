@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The subtle art of non intervention
+title: The four plus one Rules of Simple Design
 tags:
   - productivity
   - agile fluency
