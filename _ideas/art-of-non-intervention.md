@@ -10,18 +10,20 @@ author: Marc Evers
 image: 
 ---
 
-Being a consultant, working in roles of trusted advisor, facilitator, scrum
-master, coach, mentor has taught me the subtle art of not intervening.
+Working as a consultant, facilitator and coach has taught me the subtle art of *not* intervening. However simple non-intervening sounds, it is quite difficult to put into practice. 
+
+As consultants (which includes many agile coaches and scrum masters) we tend to **do** things: help teams, talk to individuals, lead
+a group through a process. The more experienced we become, the more we know and the more we can solve - at least the more we *think* we know.
+As an external consultant paid by the hour, it is sometimes even worse - we feel we should be acting - that's what they pay us for right? They don't pay us for not doing anything and just sitting around...
 
 Not doing an intervention is a powerful intervention. Being conscious of this
 helps wielding the power towards the good. As process minded people I and many
-other agile people tend to **do** things, help teams, talk to individuals, lead
-a group through a process. Especially when paid by the hour, it sometimes feels
-we should be doing something - they don't pay us for not doing anything right?
-
-I also notice this when colleage coaches/facilitators are facilitating. They
+other agile people tend to **do** things,
+I also notice this when colleague coaches/facilitators are facilitating. They
 tend to be there, be in the lead of the group/process (because they like it, are
 good at it, the reason they became facilitators).
+
+## Running open space conferences
 
 Many years ago, Willem and I have co-created the Agile Open conference series,
 exploring Open Space Technology to run a participant-driven conference. Running
@@ -48,7 +50,7 @@ them into waiting for/relying on the facilitator to solve things for them.
 Doing interventions in a team or an organization can have short-term positive
 effects, but on the longer term, it can weaken the system. A team can grow
 dependent on the consultant to fix things, to compensate for dysfunctional
-patterns. The consultant becomes an indispensible part of the system to be
+patterns. The consultant becomes an indispensable part of the system to be
 effective. The longer this happens, the more difficult it becomes to leave, and
 the more impactful leaving will be.
 
