@@ -15,6 +15,6 @@ The first movie is [a brief demo of MicroPrints](https://www.youtube.com/watch?v
 <a href="https://www.youtube.com/watch?v=e66meXx2b3w">
 ![Willem and Stephan with visualiser code in the background](/attachments/blogposts/2025/gt-microprints/microprints-the-movie.png)</a>
 
-In today's eXtreme Vibecoding I just got to show a [micro print}(/2025/11/18/better-decisions.html), but did not have much time to explain it. This goes at a much a calmer pace, hopefully explaining how we use it to make decisions.
+In today's eXtreme Vibecoding I just got to show a [micro print](/2025/11/18/better-decisions.html), but did not have much time to explain it. This goes at a much a calmer pace, hopefully explaining how we use it to make decisions.
 
 Thanks to [Stephan Eggermont](https://domeinmodel.nl) for giving Willem a firm nudge to jump through the hoops necessary to create a channel.
