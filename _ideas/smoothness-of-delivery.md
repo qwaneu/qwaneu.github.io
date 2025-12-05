@@ -5,3 +5,4 @@
 + XP CI: 10 minute build
 + DoEs -> smoothness, defects, chunk size
 
++link to new DevEx/Friction book

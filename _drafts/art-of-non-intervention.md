@@ -25,7 +25,7 @@ As an external consultant paid by the hour, it is sometimes even worse - we feel
 
 Many years ago, Willem and I created the Agile Open conference series,
 exploring Open Space Technology to run a participant-driven conference. Running
-open spaces has been an exploration in how little facilitation a group needs to let great interactions happen. We haved moved towards minimalism: focusing on the small set of rules and principles from Open Space, setting up the
+open spaces has been an exploration in how little facilitation a group needs to let great interactions happen. We have moved towards minimalism: focusing on the small set of rules and principles from Open Space, setting up the
 spaces, and bringing ourselves to the floor. Besides that we let participants
 work out stuff by themselves. 
 
@@ -86,7 +86,6 @@ A side benefit of not intervening is that you buy yourself time and peace. This 
 <h3>Stop intervening! </h3>
 <p>Let's sit back and spend some time together; have a cup coffee and a chat, and find out how you can have lasting impact.
 </p>
-<p></p>
 <div>
 <a href="/contact">Talk to us</a>
 </div>
