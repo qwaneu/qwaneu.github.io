@@ -8,7 +8,7 @@ tags:
   - systems thinking
   - complexity
 author: Marc Evers
-image: 
+image: /attachments/blogposts/2025/nathan-anderson-abdHA3eHFXs-unsplash.jpg
 ---
 
 Working as a consultant, facilitator and coach has taught me the subtle art of *not* intervening. However simple non-intervening sounds, it is quite difficult to put into practice.
@@ -17,7 +17,7 @@ We tend to intervene because that is what we have been trained to do and what (w
 
 ## Born (and paid) to intervene
 
-As consultants, agile coaches, scrum masters, mentors we tend to act: help teams, talk to individuals, lead a group through a process, guide difficult conversations, ... Being process minded, we are interveners by trade right? Intervening is our job! Facilitators like to facilitate. Customers pay us to intervene, right? They don't pay us for not doing anything and just sitting on our hands...
+As consultants, agile coaches, scrum masters, mentors we tend to act: help teams, talk to individuals, lead a group through a process, guide difficult conversations. Being process minded, we are interveners by trade right? Intervening is our job! Facilitators like to facilitate. Customers pay us to intervene, right? They don't pay us for not doing anything and just sitting on our hands...
 
 ## Running an open space conference with minimum intervention
 
@@ -33,6 +33,9 @@ Some open space facilitators in the agile community try to control more of the e
 ## A systemic perspective
 
 From a systemic perspective, the goal of a system (like a team, department, organisation) is what it does. Its current behaviour follows the path of least resistance, like water flows.
+
+![aerial view of land - River estuary drone view](/attachments/blogposts/2025/nathan-anderson-abdHA3eHFXs-unsplash.jpg)
+{: class="post-image post-image-50" }
 
 Continuously intervening in a system means continuously putting energy in. This is like trying to redirect the flow of water with your bare hands. This sounds tiring - and it is!
 
@@ -68,6 +71,8 @@ As a side benefit of not intervening, you will get more time and peace. This is 
 - Ben Linders, [Why Doing Nothing Can Be the Best Thing To Do](https://www.benlinders.com/2015/why-doing-nothing-can-be-the-best-thing-to-do/)
 - The Agile Open conferences are still running worldwide, e.g. [Agile Open Northwest](https://www.agileopennorthwest.org/), [Agile Open Northern California](https://www.agileopennorcal.org/), [Agile Open Canada](https://www.agileopen.ca/), and [Agile Open Holland](https://agileopenholland.com/).
 - I wrote the initial draft for this post a few years ago. In the mean time I learned about [Wu wei](https://www.theschooloflife.com/article/wu-wei-doing-nothing/), a concept from Chinese philosophy. It means something like "action through inaction" or "effortless action".
+
+*Credits: Photo © 2017 Nathan Anderson - [aerial view of land - River estuary drone view](https://unsplash.com/photos/aerial-view-of-land-abdHA3eHFXs)*
 
 <aside>
 <h3>Stop intervening! </h3>
