@@ -6,7 +6,7 @@ tags:
   - agile fluency
   - feedback
   - systems thinking
-author: Marc Evers
+author: Marc Evers, Willem van den Ende
 image: 
 ---
 
@@ -61,11 +61,10 @@ We have worked in multiple teams where a few highly experienced developers wrote
 - Debasish Ghosh, [Habitability and Piecemeal Growth](https://debasishg.blogspot.com/2006/02/habitability-and-piecemeal-growth.html), some ruminations on Richard Gabriel's concept of habitability of software
 
 <aside>
-<h3>Let's keep it simple</h3>
+<h3>Let's keep things simple</h3>
 <p>Let's explore together how you can apply Simple Design in your code base, for instance through a coding dojo or training course.
 </p>
 <div>
 <a href="/contact">Talk to us</a>
 </div>
 </aside>
-
