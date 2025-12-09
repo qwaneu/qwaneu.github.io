@@ -1,6 +1,6 @@
 ---
 title: CQRS & Event Sourcing
-layout: other
+layout: training-description
 summary: Tackling complexity through CQRS and Event Sourcing with clear trade-offs
 tags: [modelling, domain driven design, architecture, event storming]
 ---

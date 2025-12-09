@@ -1,6 +1,6 @@
 ---
 title: Systems Thinking for Sustainable Delivery
-layout: other
+layout: training-description
 summary: "Issues in teams and organisations are often tough to tackle. In retrospectives we tend to focus on symptoms. Learn techniques to explore systems behind symptoms and to act effectively."
 tags: [scrum, retrospectives, systems thinking, diagrams of effects, gerald weinberg, cynefin, sensemaking, wardley mapping, strategy mapping, organizational change]
 ---
