@@ -1,9 +1,9 @@
 ---
-layout: other
+layout: other-accessible
 title: Consultancy and Mentoring
 ---
 
-We do not believe in Seagull Consulting. We deliver pragmatic, hands on consulting services.
+We do not believe in seagull consulting. We deliver pragmatic, hands on consulting services.
 
 ## How we work
 

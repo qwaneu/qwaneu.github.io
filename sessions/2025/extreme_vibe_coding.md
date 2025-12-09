@@ -53,10 +53,8 @@ Add a number of iterations where you build the checks into the prompts: either b
 
 ## Comments for the programme committee
 
-Looking half a year into the future of LAC (LLM Assisted Coding) and the impact of craft requires a crystal ball. Today's wardley maps are out of date tomorrow, because the terrain of feedback loops has shifted. 
+Looking half a year into the future of LAC (LLM Assisted Coding) and the impact of craft requires a crystal ball. Today's Wardley maps are out of date tomorrow, because the terrain of feedback loops has shifted. 
 
 We could run this workshop today with the tools we have. We aim for people working in pairs, the fallback positions are ensemble programming / coding dojo or prepared kata's. 
 
 We intend to run the exercise for ourselves several times, and try it out with small groups online. Filling 90 minutes is not the problem, the challenge is scoping it just right. We have eXtreme vibe coded a number of cases (now, probably more by november), e.g. a session review system (of course :-) ), voice-to-blog to turn dictation into blog posts with summarised key points, sticky notes board that can be driven from an LLM, small utility scripts for the day to day etc. We'll probably choose something relatively small so it is easier to see for all attendees what is going on, and we can (hopefully) keep the variation in prompt outcomes within bounds, so that we have a bounded number of outcomes each round.
-
-

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: other-accessible
 title: Our privacy policy
 ---
 
