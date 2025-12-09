@@ -122,5 +122,3 @@ Programming exercises are available in Java, C#, C++, Scala, Ruby, Python, JavaS
   </div>
 </div>
 
-{% include curvedown.html %}
-{% include footer.html %}

@@ -1,7 +1,7 @@
 <header class="content header-plain">
   <div class="name-plain" >
     <a href="/" >
-      <img src="/images/qwan_logo_only_white.svg" alt="QWAN" />
+      <img src="/images/qwan_logo_only_white.svg" alt="QWAN logo" />
     </a>
   </div>
   <nav class="mainmenu-plain" role="navigation" aria-label="menu">
@@ -15,6 +15,9 @@
   </nav>
   <nav class="ribbon ribbon--alpha" role="navigation" aria-label="breadcrumbs">
     <a class="ribbon__element" href="/">Home</a>
-    <span class="ribbon__element" >{{page.title}}</span>
+    {% if include.parent %} 
+    <a class="ribbon__element" href="{{ include.parenturl }}">{{ include.parent }}</a>
+    {% endif %}
+    <a class="ribbon__element" >{{page.title}}</a>
   </nav>
 </header>

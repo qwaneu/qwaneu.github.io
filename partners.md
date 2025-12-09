@@ -38,6 +38,3 @@ title: Partners
     </div>
   </article>
 </div>
-
-{% include curvedown.html %}
-{% include footer.html %}
