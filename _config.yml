@@ -13,8 +13,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Systemic approach to developing software organizations.
   Experts in Agile Development, Test Driven Development, Refactoring; long time eXtreme Programmers
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://qwan.eu" # the base hostname & protocol for your site
-twitter_username: qwanlc
+url: "https://qwan.eu" # the base hostname & protocol for your site
 github_username:  qwaneu
 
 exclude: [README.md, vendor]
