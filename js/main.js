@@ -46,24 +46,24 @@ $(document).ready(function() {
   }(jQuery));
 
 //Loader
-$(window).load(function() {
-	$(".loader-overlay").fadeOut("slow");
-})
+// $(window).load(function() {
+// 	$(".loader-overlay").fadeOut("slow");
+// })
 
 //Counter
-$('.counter').counterUp({
-    delay: 10,
-    time: 1000
-});
+// $('.counter').counterUp({
+//     delay: 10,
+//     time: 1000
+// });
 
-$('a[data-rel^=lightcase]').lightcase();
+// $('a[data-rel^=lightcase]').lightcase();
 
 // Instantiate MixItUp
-  $('.portfolio-items').mixItUp({
-       animation: {
-          duration: 300
-      }
-  });
+//   $('.portfolio-items').mixItUp({
+//        animation: {
+//           duration: 300
+//       }
+//   });
 
 // Carousels   
   $('.cl-client-carousel').owlCarousel({
@@ -82,14 +82,14 @@ $('a[data-rel^=lightcase]').lightcase();
       autoPlay:3000,
   });
 
-    $(".header-carousel").owlCarousel({
-        pagination:true,
-        navigation : true, // Show next and prev buttons
-        slideSpeed : 500,
-        paginationSpeed : 500,
-        singleItem:true,
-        autoPlay:true,
-    });
+    // $(".header-carousel").owlCarousel({
+    //     pagination:true,
+    //     navigation : true, // Show next and prev buttons
+    //     slideSpeed : 500,
+    //     paginationSpeed : 500,
+    //     singleItem:true,
+    //     autoPlay:true,
+    // });
 
 // Parallax
 $('.parallax-section').parallax({
@@ -112,12 +112,12 @@ $(function() {
 });
 
 // Navigation
-  $('.nav-container').onePageNav({
-    scrollSpeed: 600,
-    currentClass: 'current',
-    changeHash: true,
-    filter: ':not(.external)'
-  });
+//   $('.nav-container').onePageNav({
+//     scrollSpeed: 600,
+//     currentClass: 'current',
+//     changeHash: true,
+//     filter: ':not(.external)'
+//   });
 
 //Header Class Change on Resize
   var $window = $(window);

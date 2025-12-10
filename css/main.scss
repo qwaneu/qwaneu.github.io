@@ -61,7 +61,7 @@ a:hover {
   color: #16a085;
 }
 
-img, .overlay, input, textarea, .plan-wrap p, .filters .filter {
+img, .overlay, input, textarea, .plan-wrap p { //}, .filters .filter {
 /*transition*/
   -webkit-transition: all .12s linear;
      -moz-transition: all .12s linear;
@@ -80,7 +80,7 @@ body, input, textarea {
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6, .navigation a, .btn, .filters .filter {
+h1,h2,h3,h4,h5,h6, .navigation a, .btn { //}, .filters .filter {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 }
 
@@ -616,9 +616,9 @@ blockquote p {
   Work Section
 ********************************************************* */
 
-.recent-wrap {
-  text-align: center;
-}
+// .recent-wrap {
+//   text-align: center;
+// }
 
 .recent-work {
   background: #6578bc; /* Old browsers */
@@ -638,39 +638,39 @@ blockquote p {
           border-radius: 5px;
 }
 
-.portfolio-filter {
-  margin: 40px 0 0;
-  text-align: center;
-}
+// .portfolio-filter {
+//   margin: 40px 0 0;
+//   text-align: center;
+// }
 
-.portfolio-items .mix {
-  display: none;
-}
+// .portfolio-items .mix {
+//   display: none;
+// }
 
-.filters {
-  margin-bottom: 40px;
-}
+// .filters {
+//   margin-bottom: 40px;
+// }
 
-.filters .filter {
-  display: inline-block;
-  margin: 4px;
-  padding: 0.5em 1.65em;
-  font-size: .8em;
-  list-style: none;
-  cursor: pointer;
-  color: #484f58;
-  border: 2px solid transparent;
-/*border-radius*/
-  -webkit-border-radius: 30px;
-     -moz-border-radius: 30px;
-          border-radius: 30px;
-}
+// .filters .filter {
+//   display: inline-block;
+//   margin: 4px;
+//   padding: 0.5em 1.65em;
+//   font-size: .8em;
+//   list-style: none;
+//   cursor: pointer;
+//   color: #484f58;
+//   border: 2px solid transparent;
+// /*border-radius*/
+//   -webkit-border-radius: 30px;
+//      -moz-border-radius: 30px;
+//           border-radius: 30px;
+// }
 
-.filters .filter.active,
-.filters .filter:hover {
-  border: 2px solid #1abc9c;
-  color: #1abc9c;
-}
+// .filters .filter.active,
+// .filters .filter:hover {
+//   border: 2px solid #1abc9c;
+//   color: #1abc9c;
+// }
 
 .recent-work a {
   position: relative;
