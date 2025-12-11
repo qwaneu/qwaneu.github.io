@@ -57,8 +57,9 @@ I wanted to write a longer blog post, about how I work this week, but [Stephan](
 Further reading
 ===
 
-Programming as Theory building, by Peter Naur, original 1985 paper is available as PDF: https://pages.cs.wisc.edu/~remzi/Naur.pdf, hosted by Remzi Arpaci-Dusseau at UW-Madison. There's also a copy at gwern.net (https://gwern.net/doc/cs/algorithm/1985-naur.pdf) which includes it alongside related writings.
-The original publication was in Microprocessing and Microprogramming, Volume 15, Issue 5, May 1985 — but that's behind a paywall on ScienceDirect.
+[Programming as Theory building, by Peter Naur](https://pages.cs.wisc.edu/~remzi/Naur.pdf)
+
+
 
 <aside>
   <h3>Discovery call for TDD with AI</h3>
