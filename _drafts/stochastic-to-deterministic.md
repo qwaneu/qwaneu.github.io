@@ -41,4 +41,19 @@ Programming as theory building
 
 As we create the tools, we are building a theory, in code, of what our way of working looks like. If it is too rigid, and we need to go back to a prompt instead of a tool, this is feedback to us that our process is not exactly what we think it is. And this is ok. I like fluid ways of working. I also like software that works reliably, and am used to building things that 'just work' after they ship. So I don't have to look back, guess and debug, but can focus on the next thing.
 
+Now what?
+===
 
+I wanted to write a longer blog post, about how I work this week, but [Stephan](www.domeinmodel.nl) suggested it demanded too much of the reader. This is my attempt at surfacing some of the trial and error. I intend to write more about *meta prompting* - how I use prompts to generate stored prompts and tools, and about the specific workflow for QWAN Tracker. As Stephan said,
+
+We weten vanuit besturingstheorie, dat hoe groter de stappen die we nemen, en groter de cycle, des te beter iedere individuele beslissing moet zijn. Als we hele kleine stapjes kunnen zetten, maakt de kwaliteit van iedere individuele beslissing veel minder uit, zolang we snel kunnen toetsen of het de goede was en de beslissing terug te draaien is
+
+translate the above into english
+
+
+
+Further reading
+===
+
+Programming as Theory building, by Peter Naur, original 1985 paper is available as PDF: https://pages.cs.wisc.edu/~remzi/Naur.pdf, hosted by Remzi Arpaci-Dusseau at UW-Madison. There's also a copy at gwern.net (https://gwern.net/doc/cs/algorithm/1985-naur.pdf) which includes it alongside related writings.
+The original publication was in Microprocessing and Microprogramming, Volume 15, Issue 5, May 1985 — but that's behind a paywall on ScienceDirect.
