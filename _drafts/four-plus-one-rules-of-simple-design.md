@@ -3,8 +3,9 @@ layout: post
 title: The 4 plus 1 Rules of Simple Design
 tags:
   - productivity
-  - agile fluency
-  - feedback
+  - feedback 
+  - refactoring
+  - test driven development
   - systems thinking
 author: Marc Evers, Willem van den Ende
 image: 
@@ -12,7 +13,9 @@ image:
 
 How to keep the design of your code simple? We strive for simple code. It is something we pay attention to in the Refactoring step of the Test Driven Development cycle. But what is 'simple'? How do we stay away from discussion about taste or "simplicity is in the eye of the beholder?". 
 
-Kent Beck introduced the Rules of Simple design, a heuristic consisting of a set of 4 ordered rules that focus on what "simple" means for the design of code.Based on our experience, we have added a fifth rule to make the heuristic more context-aware.
+Kent Beck introduced the Rules of Simple design, a heuristic consisting of a set of 4 ordered rules that focus on what "simple" means for the design of code. Based on our experience, we have added a fifth rule to make the heuristic more context-aware.
+
+Willem came up with the fifth one a while back, and posted it on a social media platform. This lead to a lively discussion. One could consider that rule 5 is a special case, or an acceptance criterion of rule 2. What do you make of that? We'd appreciate your feedback.
 
 ## The four rules of Simple Design
 
@@ -39,7 +42,7 @@ At first sight, revealing intention and no duplication look like two different t
 
 Once And Only Once means that every relevant concept needs to have its place in the code (it should have a place at least once) and that concept should not be duplicated - it should be expressed only once, in a single place.
 
-This not only helps make code explicitly communicate its intent, but also makes it predictable, in the sense that know where to find things and you can be sure that that place is the only place where to look. It helps in deciding [what to put where](/2020/12/23/what-to-put-where) and what to find where.
+This not only helps make code explicitly communicate its intent, but also makes it predictable, in the sense that everyone knows where to find things and we can be sure that this is the only place where to look. It helps in deciding [what to put where](/2020/12/23/what-to-put-where) and what to find where.
 
 ## The fifth rule
 
@@ -51,7 +54,16 @@ Having worked with many different teams and developers of different background a
 
 We have worked in multiple teams where a few highly experienced developers wrote dense code at a high level of abstraction. This is not a bad thing per se, but in those cases the more junior developers did not have the experience level to work with the resulting code. This is particularly relevant when external developers join the team for a limited time period. The code they leave behind should be manageable by the remaining team.
 
-@@something about habitability of code
+Willem was confronted with this, when working in a team, where in order to ship, the code had to be significantly less abstract than what he was used to. Getting an appreciation from a teammate on a tiny abstraction with documentation was great, and also a bit confusing. Somebody noticed, and it was just the right abstraction, revealing intent to everyone. 
+
+There is a strong relation here with Richard Gabriels' notion of habitable software, from his book [Patterns of Software](https://www.dreamsongs.com/Files/PatternsOfSoftware.pdf) (PDF):
+
+>What are some of the things that contribute to uninhabitable programs? Over-
+use of abstraction and inappropriate compression come to mind. 
+
+The discourse that follows this quote is worth (re-)reading. As sense of ownership of a program's code and design can be directly correlated to how comfortable everyone involved finds it to work with.
+
+So what do you think. 5th rule, or rule 2a?
 
 ## Further reading
 
@@ -59,10 +71,11 @@ We have worked in multiple teams where a few highly experienced developers wrote
 - The source of these rules is the Simple Design practice as described in *eXtreme Programming Explained 1st edition* (p. 57): "Every piece of design in the system must be able to justify its existence on these terms."
 - A [discussion about Once And Only Once on the C2 Wiki](https://c2.com/xp/OnceAndOnlyOnce.html)
 - Debasish Ghosh, [Habitability and Piecemeal Growth](https://debasishg.blogspot.com/2006/02/habitability-and-piecemeal-growth.html), some ruminations on Richard Gabriel's concept of habitability of software
+- [Care about habitable code, and how to achieve it](https://bluefruit.co.uk/quality/care-about-habitable-code-how-achieve/) in embedded software, by Emily. No reference to Richard Gabriel, but does include some specific suggestions.
 
 <aside>
 <h3>Let's keep things simple</h3>
-<p>Let's explore together how you can apply Simple Design in your code base, for instance through a coding dojo or training course.
+<p>Let's explore together how you can apply Simple Design in your code base, for instance through a coding dojo, hands-on course or us working with you on your system.
 </p>
 <div>
 <a href="/contact">Talk to us</a>
