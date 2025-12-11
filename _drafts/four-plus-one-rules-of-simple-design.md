@@ -17,6 +17,8 @@ Kent Beck introduced the Rules of Simple design, a heuristic consisting of a set
 
 Willem came up with the fifth one a while back, and posted it on a social media platform. This lead to a lively discussion. One could consider that rule 5 is a special case, or an acceptance criterion of rule 2. What do you make of that? We'd appreciate your feedback.
 
+We've found the added emphasis on the readers and later editors of the code useful over the years.
+
 ## The four rules of Simple Design
 
 The Rules of Simple design state that the design of our code should satisfy these rules, in order of priority:
