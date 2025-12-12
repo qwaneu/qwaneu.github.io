@@ -1,6 +1,9 @@
 
 $phone: "screen and (max-width: 768px)";
 
+//
+// Header
+//
 
 nav.mainmenu-plain  {
   background-color: black;
@@ -17,18 +20,9 @@ nav.mainmenu-plain  {
   }
 }
 
-em {
-  font-style: italic;
-}
-
-.trainingpage-layout {
-  display: grid;
-  grid-template-columns: auto;
-  row-gap: 1em;
-  column-gap: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
-}
+//
+// blog
+//
 
 .blogpage-layout {
   display: grid;
@@ -51,7 +45,10 @@ em {
   }
 }
 
-/* blog summary experiment */
+//
+// Blog: summary & posts
+//
+
 .blogsummary-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30em, max-content));
@@ -290,57 +287,19 @@ em {
   }
 }
 
-.no-line-numbers {
-  td:first-of-type {
-    display: none;
-  }
-}
-
-// niet gebruikt:
-.accessiblepost {
-  font-size: 120%;
-  ul {
-    margin-bottom: 0.7em;
-    list-style: disc;
-    text-indent: 1em;
-  }
-  ol {
-    list-style: decimal;
-    text-indent: 1em;
-  }
-  a {
-    color: #006f33;
-    text-decoration-line: underline;
-    text-decoration-style: dotted;
-  }
-  p {
-    color: #525252;
-  }
-  h1 {
-    font-size: 2.1em;
-    line-height: 1.2em;
-    margin-top: 1.1em;
-    margin-bottom: 0.6em;
-  }
-
-  h2 {
-    font-size: 1.7em;
-    line-height: 1em;
-    margin-top: 1.1em;
-    margin-bottom: 0.6em;
-  }
-
-  h3 {
-    font-size: 1.5em;
-    line-height: 0.9em;
-    margin-top: 0.8em;
-    margin-bottom: 0.5em;
-  }
-}
-
 .wrap {
   padding: 3.5em 0.5em 0.5em 0.5em;
 }
+
+// .no-line-numbers {
+//   td:first-of-type {
+//     display: none;
+//   }
+// }
+
+//
+// privacy stuff
+//
 
 .cookie-table {
   width: 100%;
@@ -350,6 +309,10 @@ em {
   padding: 0.25em;
 }
 
+//
+// footer
+//
+
 footer .grid {
   padding-top: 1em;
 }
@@ -358,11 +321,17 @@ footer h3 {
   margin: 0.5em 0;
 }
 
+//
+// Client quotes carousel
+//
+
 .client-carousel-item {
   padding-bottom: 1.5em; // temp fix for client carousel height issue
 }
 
-// Client quotes & logos
+//
+// Clients & client quotes grid
+//
 
 .clients-grid {
   display: grid;
@@ -410,6 +379,10 @@ footer h3 {
   }
 }
 
+//
+// partners list
+//
+
 .partners-list {
   text-align: left;
   display: grid;
@@ -425,6 +398,10 @@ footer h3 {
   }
 }
 
+// 
+// Training courses page
+//
+
 .courses-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
@@ -435,4 +412,13 @@ footer h3 {
     padding-bottom: 0.3em;
     font-style: oblique;
   }
+}
+
+.trainingpage-layout {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 1em;
+  column-gap: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
 }

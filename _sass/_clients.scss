@@ -1,0 +1,31 @@
+//
+// Client quotes carousel
+//
+
+.quotes-icon {
+  color: #1abc9c;
+  font-size: 4em;
+  line-height: 1;
+  margin-bottom: 27px;
+  vertical-align: top;
+}
+
+.cl-client-carousel .client-carousel-item h4 {
+  font-style: italic;
+}
+
+.cl-client-carousel .client-carousel-item p {
+  line-height: 1.8em;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.cl-client-carousel.owl-theme .owl-controls .owl-page span {
+  display: block;
+  margin: 5px 7px;
+/*border-radius*/
+  -webkit-border-radius: 20px;
+     -moz-border-radius: 20px;
+          border-radius: 20px;
+  background: #fff;
+}

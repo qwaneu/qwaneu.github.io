@@ -34,3 +34,34 @@ footer p, footer a {
   margin-left: 0;
   padding-left: 1em;
 }
+
+
+.social-set {
+  width: 100%;
+  margin: 0 0 .5em;
+  padding: 0 0 1em 0;
+  text-align: center;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  i {
+    margin-right: 1em;
+  }
+}
+
+.social-set a {
+  font-size: 1.5em;
+  margin-right: .5em;
+  padding: 1em;
+}
+
+.copyright {
+  text-align: center;
+}
