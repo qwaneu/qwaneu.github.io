@@ -1,0 +1,36 @@
+//
+// Footer
+//
+
+footer {
+  background:#2C2D31;
+}
+
+footer .grid {
+  padding-top: 6em;
+}
+
+footer h3 {
+  color: #fff;
+}
+
+footer p, footer a {
+  color: #f4f4f4;
+}
+
+.footer-widget li {
+  position: relative;
+  padding: .1em 0;
+  color: lightgray;
+  list-style-type: disc;
+}
+
+.footer-widget li:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.footer-widget ul {
+  margin-left: 0;
+  padding-left: 1em;
+}

@@ -1,0 +1,57 @@
+//
+// Parallax
+//
+
+.parallax-section {
+  z-index: -1;
+  clear: both;
+  background-image: url('/images/qwan/post-its.jpg');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.parallax2 {
+  background-image: url('/images/retrohero2.jpg');
+}
+
+.parallax-section .content, .top-slider .content-header, .home-slider {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.parallax-section .content-header, .home-slider .content-header {
+  padding: 145px 0 250px;
+}
+
+.parallax2 .content {
+  padding: 100px 0;
+}
+
+.top-slider .content-header {
+  padding: 130px 0;
+}
+
+.parallax-section .content h2,
+.content-header h2,
+.parallax-section .content h3,
+.content-header h3 {
+  color: #fff;
+}
+
+.parallax-section h2 > span,
+.parallax-section h3 > span,
+.content-header h2 > span,
+.content-header h3 > span {
+  background: #fff;
+}
+
+.parallax-section .content h2, .content-header h2 {
+  font-size: 2.5em;
+}
+
+.parallax-section .content p, .top-slider .content-header p, .home-slider .content p {
+  width: 70%;
+  margin: 0 auto 30px auto;
+  color: #fff;
+}
