@@ -44,7 +44,7 @@ a:hover {
   color: #16a085;
 }
 
-img, .overlay, input, textarea, .plan-wrap p { //}, .filters .filter {
+img, .overlay, input, textarea, .plan-wrap p {
 /*transition*/
   -webkit-transition: all .12s linear;
      -moz-transition: all .12s linear;
@@ -63,7 +63,7 @@ body, input, textarea {
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6, .navigation a, .btn { //}, .filters .filter {
+h1,h2,h3,h4,h5,h6, .navigation a, .btn {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 }
 
@@ -116,6 +116,10 @@ blockquote p {
 .pright-25 {
   padding-right: 25px;
 }
+
+/* *********************************************************
+  Curves
+********************************************************* */
 
 .curveUpColor, .curveDownColor {
   fill: #fff;
@@ -209,7 +213,7 @@ blockquote p {
   Services Section
 ********************************************************* */
 
-.services, .service-box {
+.service-box {
   text-align: center;
 }
 
