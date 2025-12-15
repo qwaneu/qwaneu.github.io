@@ -18,16 +18,6 @@
   overflow: visible;
 }
 
-.logo {
-  display: block;
-  float: left;
-  width: 600px;
-  height: 71px;
-  text-indent: -9999px;
-  background: url(/images/logo.png) no-repeat;
-  background-size: 600px 71px;
-}
-
 .header-default {
   background: #2C2D31;
 }
@@ -46,4 +36,19 @@
 
 .slider {
   height: 100%;
+}
+
+nav.mainmenu-plain  {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5em, max-content));
+  column-gap: 1em;
+  row-gap: 0.1em;
+  margin-bottom: 0em;
+  padding-left: 0em;
+
+  a {
+    padding-top: 0.3em;
+    font-size: 120%;
+  }
 }
