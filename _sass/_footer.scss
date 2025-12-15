@@ -7,11 +7,12 @@ footer {
 }
 
 footer .grid {
-  padding-top: 6em;
+  padding-top: 1em;
 }
 
 footer h3 {
   color: #fff;
+  margin: 0.5em 0;
 }
 
 footer p, footer a {
@@ -45,6 +46,9 @@ footer p, footer a {
   a {
     color: white;
     text-decoration: none;
+    font-size: 1.5em;
+    margin-right: .5em;
+    padding: 1em;
   }
 
   a:hover {
@@ -54,12 +58,6 @@ footer p, footer a {
   i {
     margin-right: 1em;
   }
-}
-
-.social-set a {
-  font-size: 1.5em;
-  margin-right: .5em;
-  padding: 1em;
 }
 
 .copyright {
