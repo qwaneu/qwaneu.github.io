@@ -13,16 +13,18 @@ $visited-colour: #eee ;// off-white
 .ribbon {
   display: grid;
   font-size: 1em;
-  background-color: $triangle-colour; // lighten($c0,65%);
+  background-color: $triangle-colour;
   grid-gap: 1px;
-  grid-template-columns: 8em 16em 24em 1em; // repeat(3, 1fr) 1em;
+  grid-template-columns: 8em 16em auto auto;
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
   width: 100%;
+  overflow: hidden;
 }
 
 .ribbon__element {
+  white-space: nowrap;
   background-color: $c1;
   color: $breadcrumb-text;
   font-size: 1em;
