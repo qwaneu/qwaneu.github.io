@@ -210,58 +210,6 @@ blockquote p {
 
 
 /* *********************************************************
-  Services Section
-********************************************************* */
-
-.service-box {
-  text-align: center;
-}
-
-.service-icon {
-  margin-top: 20px;
-  padding-top: 1em;
-}
-
-.circle-icon {
-  display: inline-block;
-  font-size: 2em;
-  padding: 1.1em 1.15em;
-  color: #484f58;
-/*border-radius*/
-  -webkit-border-radius: 10%;
-     -moz-border-radius: 10%;
-          border-radius: 10%;
-  background: transparent;
-/*box-shadow*/
-  -webkit-box-shadow: 0 0 0 2px #484f58;
-     -moz-box-shadow: 0 0 0 2px #484f58;
-          box-shadow: 0 0 0 2px #484f58;
-/*transition*/
-  -webkit-transition: all .15s linear;
-     -moz-transition: all .15s linear;
-       -o-transition: all .15s linear;
-          transition: all .15s linear;
-}
-
-.service-box:hover .circle-icon {
-    /*box-shadow*/
-  -webkit-transform: scale(1.1);
-     -moz-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-       -o-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.service-entry {
-  margin-top: 70px;
-  padding: 0 .5em;
-}
-
-.service-entry p {
-  margin-bottom: 10px;
-}
-
-/* *********************************************************
   Clients Logos Section
 ********************************************************* */
 
@@ -402,19 +350,6 @@ h3.plain {
       text-decoration: underline;
       color: auto;
     }
-}
-
-// https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element
-.blog-summary-img {
-  align-items: center;
-  justify-content: center;
-  display: grid;
-}
-.blog-summary-img img {
-  max-width: 90%;
-  max-height: 10em;
-  width: 90%;
-  margin-bottom: 1em;
 }
 
 .anaddress {
@@ -619,15 +554,6 @@ input:not([type=submit]):not([type=file]):focus, textarea:focus {
     padding: 15px 20px;
   }
 
-  #price-tables #plans .plan {
-    width: 49%;
-    margin: 0 2% 20px 0;
-  }
-
-  #price-tables #plans > li:nth-child(2n) {
-    margin-right: 0!important;
-  }
-
   .team-social {
     height: 30px;
   }
@@ -728,29 +654,12 @@ input:not([type=submit]):not([type=file]):focus, textarea:focus {
     width: 100%;
   }
 
-  .isotope-item {
-    width: 100%;
-  }
-
   .single {
     width: 100%
   }
 
-  .overlay i {
-    padding: 145px 0;
-  }
-
   .parallax-section .content h2, .content-header h2  {
     font-size: 2em;
-  }
-
-  #price-tables #plans .plan {
-    width: 100%;
-    margin: 0 2% 20px 0;
-  }
-
-  #price-tables #plans > li:nth-child(2n) {
-    margin-right: 0;
   }
 }
 
@@ -776,7 +685,7 @@ input:not([type=submit]):not([type=file]):focus, textarea:focus {
     padding: 0 !important;
   }
 
-  #page-sidebar-no-sidebar .post-wrap .post {
+  .post-wrap .post {
     padding: 1em !important;
   }
 
@@ -798,7 +707,7 @@ input:not([type=submit]):not([type=file]):focus, textarea:focus {
     margin: 0;
   }
 
-  #page-sidebar-no-sidebar .post-wrap {
+  .post-wrap {
     width: 100%;
   }
 
@@ -841,7 +750,8 @@ input:not([type=submit]):not([type=file]):focus, textarea:focus {
 @import "footer";
 @import "team";
 @import "clients";
+@import "services";
 @import "icomoon";
-@import "breadcrumbs" ;
-@import "syntax-highlighting-qwan" ;
-@import "qwan-overrides" ;
+@import "breadcrumbs";
+@import "syntax-highlighting-qwan";
+@import "qwan-overrides";

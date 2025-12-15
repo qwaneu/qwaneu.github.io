@@ -130,3 +130,22 @@
   font-size: 1.2em;
   margin-top: 1em;
 }
+
+//
+// Blog summary image styling
+//
+
+
+// https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element
+.blog-summary-img {
+  align-items: center;
+  justify-content: center;
+  display: grid;
+}
+
+.blog-summary-img img {
+  max-width: 90%;
+  max-height: 10em;
+  width: 90%;
+  margin-bottom: 1em;
+}

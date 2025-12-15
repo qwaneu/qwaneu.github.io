@@ -268,8 +268,16 @@ $phone: "screen and (max-width: 768px)";
   }
 }
 
+//
+// General styling
+//
+
 .wrap {
   padding: 3.5em 0.5em 0.5em 0.5em;
+}
+
+.services-wrap {
+  text-align: center;
 }
 
 // .no-line-numbers {
