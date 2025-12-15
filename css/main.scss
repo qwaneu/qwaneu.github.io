@@ -869,7 +869,7 @@ input:not([type=submit]):not([type=file]):focus, textarea:focus {
     width: 100%;
   }
 
-  .parallax-section .content p, .top-slider .content-header p {
+  .parallax-section .content p {
     width: 100%;
   }
 
@@ -881,7 +881,7 @@ input:not([type=submit]):not([type=file]):focus, textarea:focus {
     font-size: 1.2em;
   }
 
-  .parallax-section .content p, .top-slider .content-header p, .home-slider .content p {
+  .parallax-section .content p, .home-slider .content p {
     font-size: 0.8em;
     margin: 0 auto 10px auto;
     line-height: 18px;

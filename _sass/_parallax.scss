@@ -15,7 +15,7 @@
   background-image: url('/images/retrohero2.jpg');
 }
 
-.parallax-section .content, .top-slider .content-header, .home-slider {
+.parallax-section .content, .home-slider {
   margin: 0 auto;
   text-align: center;
 }
@@ -26,10 +26,6 @@
 
 .parallax2 .content {
   padding: 100px 0;
-}
-
-.top-slider .content-header {
-  padding: 130px 0;
 }
 
 .parallax-section .content h2,
@@ -50,7 +46,7 @@
   font-size: 2.5em;
 }
 
-.parallax-section .content p, .top-slider .content-header p, .home-slider .content p {
+.parallax-section .content p, .home-slider .content p {
   width: 70%;
   margin: 0 auto 30px auto;
   color: #fff;
