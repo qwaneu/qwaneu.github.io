@@ -30,13 +30,13 @@ The Rules of Simple design state that the design of our code should satisfy thes
 4. has fewest elements
 ```
 
-**Passes all tests** &mdash  we only refactor on green tests, so if a test is failing, we first fix it.
+**Passes all tests** &mdash; we only refactor on green tests, so if a test is failing, we first fix it.
 
-**Reveals intention** &mdash  our code is not just a solution for now, but also a means of communication with other developers (including future you). Being understandable is key to sustainable delivery. We want our code to express all intentions explicitly, by using the constructs that our programming languages offers us (classes, methods, functions, types, variables). Often, we only really understand our problem once we have written the solution, so refactoring is essential for putting everything we learned in the code.
+**Reveals intention** &mdash; our code is not just a solution for now, but also a means of communication with other developers (including future you). Being understandable is key to sustainable delivery. We want our code to express all intentions explicitly, by using the constructs that our programming languages offers us (classes, methods, functions, types, variables). Often, we only really understand our problem once we have written the solution, so refactoring is essential for putting everything we learned in the code.
 
-**Contains no duplication** &mdash duplication means that the same concept is expressed in multiple places. This introduces coupling between these parts - if we change one, the others should be changed as well. Especially if the coupling is implicit, it will introduce defects sooner or later. This rule is not about literal duplication, but about (implicit, hidden) coupling. Make sure that every relevant concept has a single place in the code. 
+**Contains no duplication** &mdash;duplication means that the same concept is expressed in multiple places. This introduces coupling between these parts - if we change one, the others should be changed as well. Especially if the coupling is implicit, it will introduce defects sooner or later. This rule is not about literal duplication, but about (implicit, hidden) coupling. Make sure that every relevant concept has a single place in the code. 
 
-**Has fewest elements** &mdash  once the tests are passing, we have expressed all relevant intentions and there is no duplication, we try to minimize the elements &mdash classes, functions, methods, types.
+**Has fewest elements** &mdash; once the tests are passing, we have expressed all relevant intentions and there is no duplication, we try to minimize the elements &mdash; classes, functions, methods, types.
 
 ## Something special about rule 2 & 3
 
