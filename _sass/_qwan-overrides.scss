@@ -262,9 +262,16 @@ $phone: "screen and (max-width: 768px)";
 }
 
 .post-bottom-navigation {
-  span {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+  grid-template-columns: 0.33fr 0.33fr 0.33fr;
+  display: grid;
+
+  .previous-link {
+    display: flex;
+    justify-content: left;
+  }
+  .next-link {
+    display: flex;
+    justify-content: right;
   }
 }
 
