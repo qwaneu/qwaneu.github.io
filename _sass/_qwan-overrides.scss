@@ -2,7 +2,7 @@
 $phone: "screen and (max-width: 768px)";
 
 //
-// blog
+// blog page layout
 //
 
 .blogpage-layout {
@@ -10,12 +10,13 @@ $phone: "screen and (max-width: 768px)";
   grid-template-columns: auto 14em;
   row-gap: 1em;
   column-gap: 1em;
-  padding-left: 1em;
-  padding-right: 2em;
+  //padding-left: 1em;
+  padding-right: 1em;
 }
+
 .cat-column {
   .cat-column-content {
-    position: sticky;
+    position: sticky; // TODO: does not work as expected
   }
   h3 {
     margin: 1em 0 0.8rem;
@@ -26,19 +27,34 @@ $phone: "screen and (max-width: 768px)";
   }
 }
 
+// put categories below entries on small screen:
+@media (max-width: 767px) {
+  .blogpage-layout { 
+    grid-template-columns: auto;
+  }
+  .cat-column {
+    padding-left: 1em; 
+    padding-right: 1em;
+  }
+}
+
 //
-// Blog: summary & posts
+// Blog summary
 //
 
 .blogsummary-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30em, max-content));
+  grid-template-columns: repeat(auto-fit, minmax(25em, max-content));
   row-gap: 2em;
   column-gap: 2em;
   padding-left: 2em;
   padding-right: 2em;
   justify-content: center;
 }
+
+//
+// Blog posts
+//
 
 .post-summary-wrap {
   background-color: #fbfbfb;
