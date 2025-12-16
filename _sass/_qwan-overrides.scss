@@ -64,27 +64,78 @@ $phone: "screen and (max-width: 768px)";
 }
 
 .post-wrap {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto 2em auto;
+  border-bottom: 2px solid #dee3e4;
+/*border-radius*/
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+          background: #fff;
   max-width: 60rem;
+  
+  .post-header {
+     margin-left: 2em;
+  }
+
   h1 {
     font-size: 2.1em;
     line-height: 1.2em;
     margin-top: 1.1em;
     margin-bottom: 0.6em;
   }
+
   img {
+    width: auto;
+    max-width: 100%;
     margin: 0 0.5em;
   }
+
+  .post-meta {
+    margin-bottom: 1.5em;
+  }
+
+  .post-meta li {
+    display: inline-block;
+  }
+
+  .post-meta li a {
+    margin: 0 20px 0 4px;
+  }
+
+  .post-meta li:last-child a {
+    margin-right: 0;
+  }
+
+  .post-meta i {
+    color:#1abc9c;
+  }
+
+  .entry-title {
+     margin: 1em 0 .5em;
+  }
+
+  p {
+    text-align: left;
+    line-height: 2em;
+  }
+
   .post {
     font-size: 120%;
+    padding: .2em 2em;
+
     ul {
       margin-bottom: 0.7em;
       padding-left: 2em;
       list-style: disc;
     }
+
     li {
       list-style-position: outside;
       color: #525252;
     }
+
     ol {
       list-style: decimal;
       // text-indent: 1em;
@@ -94,8 +145,13 @@ $phone: "screen and (max-width: 768px)";
         color: #525252;
       }
     }
+
     p {
       color: #525252;
+      text-align: left;
+      line-height: 1.5em;
+      margin-bottom: .7em;
+
       a {
         text-decoration-line: underline;
         text-decoration-style: solid;
@@ -104,6 +160,7 @@ $phone: "screen and (max-width: 768px)";
         font-weight: bold;
       }    
     }
+
     h1 {
       text-transform: none;  
       font-size: 1.6em;
@@ -111,6 +168,7 @@ $phone: "screen and (max-width: 768px)";
       margin-top: 1.1em;
       margin-bottom: 0.6em;
     }
+
     h2 {
       text-transform: none;
       font-size: 1.4em;
@@ -274,6 +332,8 @@ $phone: "screen and (max-width: 768px)";
   .feed-icon {
     vertical-align: top;
     margin-bottom: 0.3em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
   }
 }
 
