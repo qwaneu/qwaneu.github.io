@@ -363,11 +363,11 @@ $phone: "screen and (max-width: 768px)";
   text-align: center;
 }
 
-// .no-line-numbers {
-//   td:first-of-type {
-//     display: none;
-//   }
-// }
+.no-line-numbers {
+  td:first-of-type {
+    display: none;
+  }
+}
 
 //
 // privacy stuff
