@@ -21,7 +21,7 @@ Parameters (for ribbon):
     <a href="/#team">Team</a>
     <a href="/contact">Contact</a>
   </nav>
-  <nav class="ribbon ribbon--alpha" role="navigation" aria-label="breadcrumbs">
+  <nav class="ribbon ribbon--alpha {% if include.home %}ribbon--home{% endif %}" role="navigation" aria-label="breadcrumbs">
     <a class="ribbon__element" href="/">Home</a>
     {% if include.parent %} 
     <a class="ribbon__element" href="{{ include.parenturl }}">{{ include.parent }}</a>

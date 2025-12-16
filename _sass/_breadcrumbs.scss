@@ -8,6 +8,7 @@ $c3: lighten($c0, 40%);
 $triangle-colour: #d1d1d2;
 $breadcrumb-text: white;
 $visited-colour: #eee ;// off-white
+$frontpage-background: #6d6764;
 
 // Ribbon
 .ribbon {
@@ -21,6 +22,10 @@ $visited-colour: #eee ;// off-white
   margin-top: auto;
   width: 100%;
   overflow: hidden;
+}
+
+.ribbon--home {
+  background-color: $frontpage-background;
 }
 
 .ribbon__element {
