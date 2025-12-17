@@ -117,7 +117,9 @@ Programming exercises are available in Java, C#, C++, Scala, Ruby, Python, JavaS
     </article>
   </div>
 
-  <img src="/images/agile_engineering_wordle.png" style="width: 100%"> 
+  <div style="text-align: center;">
+    <img src="/images/agile_engineering_wordle.png" style="max-width: 50%;"> 
+  </div>
 
   </div>
 </div>
