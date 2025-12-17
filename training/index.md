@@ -9,7 +9,6 @@ layout: accessibletwo
   <article class="post-wrap">
    <div class="post">
     <h1 style="margin-bottom: 0em;">{{page.title}}</h1>
-    <div>
 
 <p>Our training courses are intensive and hands-on. We work with small groups up to 14 participants to ensure an optimal learning experience. We offer both open enrolment courses and customized in-company courses, on-site and remote. </p>
 
@@ -18,7 +17,6 @@ Programming exercises are available in Java, C#, C++, Scala, Ruby, Python, JavaS
 
 <p>If you have a need that is not covered by an existing course, <a href="/contact">we are happy to make a new one for you</a>. Our best courses got started by specific requests from our customers!</p>
 
-    </div>
    </div>
   </article>
 </div>
