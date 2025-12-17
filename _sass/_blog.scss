@@ -346,6 +346,22 @@ $phone: "screen and (max-width: 768px)";
   }
 }
 
+@media handheld, only screen and (max-width: 480px) {
+  .post-wrap .post {
+    padding: 1em !important;
+  }
+
+  .post-wrap .post-meta li a {
+    margin: 0;
+    width: 100%;
+    padding: 6px;
+  }
+
+  .post-wrap {
+    width: 100%;
+  }
+}
+
 /* Blog Grid */
 
 .blog-grid {

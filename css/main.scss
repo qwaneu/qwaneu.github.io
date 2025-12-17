@@ -63,7 +63,7 @@ body, input, textarea {
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6, .navigation a, .btn {
+h1,h2,h3,h4,h5,h6, .btn {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 }
 
@@ -571,72 +571,6 @@ input:not([type=submit]):not([type=file]):focus, textarea:focus {
     margin: 0;
   }
 
-  .navigation ul {
-    display: none;
-    height: 100%;
-
-  }
-
-  .navigation {
-    float: none;
-  }
-
-  .navigation li {
-    width: 100%;
-  }
-
-  .navigation a {
-    margin-left: 0;
-    width: 100% !important;
-    display: block;
-  }
-
-  .navigation label {
-    position: absolute;
-    display: block;
-    right: 0;
-    top: 7px;
-    color: #fff;
-    min-height: 2.25em;
-    padding: .45em;
-    font-size: 1.1em;
-    margin: 0;
-  }
-
-  .navigation label:after {
-    position: absolute;
-    right: .25em;
-    top: 0;
-    content: "\2261";
-    font-size: 1.8em;
-  }
-
-  .navigation input[type=checkbox]:checked ~ label:after {
-    color: #fff;
-  }
-
-  .navigation input[type=checkbox]:checked ~ ul {
-    display: block;
-  }
-
-  .navigation input[type=checkbox]:checked ~ ul > li {
-    width: 100%;
-    text-align: left;
-    padding: .8em 0;
-  }
-
-  .navigation .sub-menu {
-    position: relative;
-    top: 0;
-    left: 0;
-    visibility: visible;
-    opacity: 1;
-    display: block;
-    border: none;
-    box-shadow: none;
-    width: 100%;
-  }
-
   .service-entry {
     margin-bottom: 2.5em;
   }
@@ -667,23 +601,12 @@ input:not([type=submit]):not([type=file]):focus, textarea:focus {
 }
 
 @media handheld, only screen and (max-width: 480px) {
-
   .header-carousel {
     height: 620px;
   }
 
   .social-set a {
     padding: 0 !important;
-  }
-
-  .post-wrap .post {
-    padding: 1em !important;
-  }
-
-  .post-wrap .post-meta li a {
-    margin: 0;
-    width: 100%;
-    padding: 6px;
   }
 
   .comments, #leave-comment {
@@ -696,10 +619,6 @@ input:not([type=submit]):not([type=file]):focus, textarea:focus {
 
   ul.nested-comments ul li {
     margin: 0;
-  }
-
-  .post-wrap {
-    width: 100%;
   }
 
   .parallax-section .content p {
