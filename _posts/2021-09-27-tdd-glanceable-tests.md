@@ -21,7 +21,7 @@ test is about will help future us, and others, keep our tests habitable.
 {: class="post-image" }
 
 In the [Test Driven Development
-cycle](http://localhost:8082/2021/06/24/tdd-still-relevant-in-2021.html), we
+cycle](/2021/06/24/tdd-still-relevant-in-2021.html), we
 take time for refactoring the code in the last step of the cycle. In this step,
 we also take time to look at our test code and refactor it when and where
 necessary. One thing we strive for is *glanceable tests*.
@@ -67,7 +67,7 @@ make this more, and in some places less, glanceable.
 ## Some tests don't require an action
 
 Heuristics are flexible, and made for quick decisions. We make use of that
-flexibility here, by quickly going against the grain of a heuristice we
+flexibility here, by quickly going against the grain of a heuristic we
 described earlier: [Test name describes action and expected
 result](/2021/07/27/tdd-naming-tests.html).
 

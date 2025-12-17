@@ -42,7 +42,7 @@ Server running at http://localhost:1234
 
 As the prompt suggests, this will run a server on http://localhost:1234 .
 
-Any rebuilt file ends up in `output` and parcel will reload the file for you. I let `psc-ide` rebuild the source when I edit with  spacemacs. You could run `psc-ide-server` from the command line instead, or a bit easier, put `pulp -w watch` in package.json.
+Any rebuilt file ends up in `output` and parcel will reload the file for you. I let `psc-ide` rebuild the source when I edit with spacemacs. You could run `psc-ide-server` from the command line instead, or a bit easier, put `pulp -w watch` in package.json.
 
 The script for `npm run parcel:watch` in `package.json` is brief:
 ```
@@ -51,7 +51,7 @@ parcel index.html
 
 Just like webpack hot-reloading (included in the template as well), it requires an `entry.js` file to figure out where the main is. On top of that, it needs an html file of some kind. I gave it a separate name to let it stand out from the one in `/dist`.
 
-There is one gotcha though. Every time you rebuild, you'll get a copy of the UI below the previouw one. Unless you remove the old one.
+There is one gotcha though. Every time you rebuild, you'll get a copy of the UI below the previous one. Unless you remove the old one.
 
 It appears I had got it working by accident, and when cleaning it up for this blog post, by starting from scratch, things fell apart. Justin Woo helped me out, it appears that besides hooking in to `module.hot` to detect hot-loading, we also need two different entrypoints in `Main`. One for the first time the app loads, and one for each time it reloads
 
