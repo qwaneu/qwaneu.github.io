@@ -84,3 +84,26 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+@media handheld, only screen and (max-width: 1200px) {
+  .team-social {
+    height: 30px;
+  }
+
+  .team-social a i {
+    font-size: 1em;
+    padding: 3px;
+  }
+}
+
+@media handheld, only screen and (max-width: 480px) {
+  .team-social {
+    height: 50px;
+    opacity: 1;
+  }
+
+  .team-social a i {
+    font-size: 1.5em;
+    padding: 8px;
+  }
+}
