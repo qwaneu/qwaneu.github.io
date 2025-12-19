@@ -40,7 +40,7 @@ Programming exercises are available in Java, C#, C++, Scala, Ruby, Python, JavaS
     Hands on & interactive
     </div>
     <p>
-    TDD in once sentence: <em>write a failing test, make it pass, refactor and repeat</em> - easier said than done. Take a deep dive in growing your test driven development skills.
+    Test driven development in once sentence: <em>write a failing test, make it pass, refactor and repeat</em> - easier said than done. Take a deep dive in growing your test driven development skills.
     </p>
     <a class="btn read-more" href="/training/test-driven-development">Read More</a>
   </article>

@@ -1,7 +1,8 @@
 ---
 title: Map your Delivery Value Stream for Fun and Profit
 layout: training-description
-summary: 'Map the delivery value stream, from concept to cash; find friction and waste in your whole delivery process and find ways to deliver better software faster'
+tagline: "Reduce waste and friction by taking a systems view"
+summary: "In this hands-on workshop, you will visualize your whole delivery process, from concept to cash. By doing so, you will discover sources of friction and waste that is slowing you down. You will also discover the impact of large work batches and long feedback loops and how these eat away your valuable time. You will get a feel for what the bottlenecks are in your way of working."
 tags: [CI/CD, continuous integration, continuous delivery, lean software development, friction, retrospectives, systems thinking, sensemaking, organizational change, engineering culture]
 ---
 
