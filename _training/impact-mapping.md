@@ -1,9 +1,9 @@
 ---
 title: Impact Mapping
 layout: training-description
+hide_in_index: true
 tagline: ""
 summary: ""
-published: false
 tags: [refinement, agile planning, user specification by example, behaviour driven development, BDD, predictability, business value, systems thinking]
 ---
 
