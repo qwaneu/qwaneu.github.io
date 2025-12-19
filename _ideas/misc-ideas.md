@@ -26,14 +26,6 @@ Forms:
 
 - test connections rather than things (source: Geepaw Hill)
 
-# 4 Rules of Simple Design + 1
-
-https://martinfowler.com/bliki/BeckDesignRules.html
-QWAN: Rule 5: code should be at a level the whole team can understand
-
-Habitability of code (Richard Gabriel)
-http://debasishg.blogspot.com/2006/02/habitability-and-piecemeal-growth.html 
-
 # QWAN take on the Testing Quadrants
 
 
@@ -116,12 +108,3 @@ etc. So less complexity (also organizational), and being more in control.
 # NDVEA: Niet Denken Voor Een Ander
 
 i.m. Hans Walkate
-
-# Language Matters
-
-"words mean things" - Geert Bossuyt
-- improve -> grow
-- assessment -> diagnostic
-- help -> ?
-- problem/solution -> forces/tension, resolve/reinforce/dampen
-- causal -> dispositional

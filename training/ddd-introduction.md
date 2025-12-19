@@ -1,6 +1,6 @@
 ---
 title: Introduction to Domain Driven Design
-layout: other
+layout: training-description
 summary: 'tackling software complexity'
 tags: [modelling, domain driven design, architecture, event storming]
 ---

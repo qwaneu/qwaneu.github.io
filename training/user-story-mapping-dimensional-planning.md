@@ -1,6 +1,6 @@
 ---
 title: User Story Mapping & Dimensional Planning
-layout: other
+layout: training-description
 summary: 'Making more effective product decisions'
 tags: [refinement, agile planning, user stories, specification by example, behaviour driven development, BDD, predictability]
 ---

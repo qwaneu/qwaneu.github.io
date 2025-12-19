@@ -1,8 +1,8 @@
 ---
 title:  Test Driven Development
-layout: other
+layout: training-description
 summary: 'TDD in once sentence: write a failing test, make it pass, refactor and repeat - easier said than done. Take a deep dive in growing your test driven development skills.'
-tags: [agile engineering, extreme programming, XP, TDD, test driven development,ports and adapters, hexagonal architecture, clean architecture, scrum developer, CI/CD, continuous integration, continuous delivery]
+tags: agile engineering, extreme programming, XP, TDD, test driven development,ports and adapters, hexagonal architecture, clean architecture, scrum developer, CI/CD, continuous integration, continuous delivery
 ---
 
 In this in depth practical course, you will learn Test Driven Development and
@@ -53,7 +53,6 @@ The course consists of a mix of short presentations, live programming demonstrat
 
 Although we think we provide something special with this training, we're not the only supplier. Here's a list of our colleagues in the Netherlands:
 
-* [Test driven development at DevOn](https://www.devon.nl/training/?eventtitle=certified-agile-test-driven-development){:target="_blank"}
 * [Test driven development at Alten](https://www.alten.nl/en/training-test-driven-development-tdd/){:target="_blank"}
-* [Test driven development at Improve](https://www.improveqs.nl/training/test-driven-development-tdd/){:target="_blank"}
-* [Test driven development at Xebia](https://training.xebia.com/quality-test-automation/test-driven-development-tdd){:target="_blank"}
+* [Test driven development at Xebia Academy](https://academy.xebia.com/nl/training/test-driven-development-tdd/){:target="_blank"}
+* [Test driven development at DevOn](https://www.devon.nl/training/?eventtitle=certified-agile-test-driven-development){:target="_blank"}

@@ -14,7 +14,7 @@ A couple of days ago, Jamie Dobson and Simon Wardley did a back to back presenta
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hlPEeDWHy34" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-This is a rich vein, it triggers a lot. So in the spirit of glorious [Dirt Roads](http://localhost:8082/2020/09/02/dimensional-planning.html), I'm going to limit myself to writing the things that resonated with me, amended with a few connections it triggered.
+This is a rich vein, it triggers a lot. So in the spirit of glorious [Dirt Roads](/2020/09/02/dimensional-planning.html), I'm going to limit myself to writing the things that resonated with me, amended with a few connections it triggered.
 
 Jamie prepared the presentation with a [blog post about Cloud native and Wishful thinking, or how to avoid buying Coconut Headphones](https://blog.container-solutions.com/cloud-native-transformation-and-wishful-thinking).
 
@@ -24,11 +24,11 @@ After doing a short introduction on Wardley Maps, Simon talked about "No one siz
 
 ## Cargo cults
 
-[Brittanica starts its definition of a Cargo Cult as such:](https://www.britannica.com/topic/cargo-cult)
+[Britannica starts its definition of a Cargo Cult as such:](https://www.britannica.com/topic/cargo-cult)
 
 > Cargo cult, any of the religious movements chiefly, but not solely, in Melanesia that exhibit belief in the imminence of a new age of blessing, to be initiated by the arrival of a special “cargo” of goods from supernatural sources—based on the observation by local residents of the delivery of supplies to colonial officials
 
-![Drawing of an imitation propellor warplane and three boxes](/attachments/blogposts/2020/202009-cargo-cult-plane.png)
+![Drawing of an imitation propeller warplane and three boxes](/attachments/blogposts/2020/202009-cargo-cult-plane.png)
 
 Richard Feynman translated this to science in 1974:
 
@@ -114,7 +114,7 @@ on lots of components, otherwise it would not be possible.
 3. "they think they are busy people."
 4. Do you see any companies anticipate serverless (I built the world first
 serverless environment in 2005). Big consultants killed it. You need to get the
-timing right. Amazon, like the chinese government are good at finding the right
+timing right. Amazon, like the Chinese government are good at finding the right
 time to industrialize.
 5. Jamie: who is going to change serverless into a racket. Who is going to
    benefit? Boring serverless. How are providers of the functions going to make
@@ -149,7 +149,7 @@ Jamie prepared the presentation with a [blog post about Cargo Cults and Coconut 
 
 [Steve McConnell applied Cargo Cults to Software Engineering in 2000.](https://stevemcconnell.com/articles/cargo-cult-software-engineering/)
 
-Ad Men made us think about the work of writer Willem Elsschot, who was an Ad Men himself. In particular the novels "Lijmen" (Glueing) and "Het Been" (The Leg), which revolves around a kind of advertising scam set in the 1930s that is still around today. There doesn't seem to be an english translation, but [Wikipedia has a reasonable enlish summary of the movie](https://en.wikipedia.org/wiki/Lijmen/Het_Been).
+Ad Men made us think about the work of writer Willem Elsschot, who was an Ad Men himself. In particular the novels "Lijmen" (Glueing) and "Het Been" (The Leg), which revolves around a kind of advertising scam set in the 1930s that is still around today. There doesn't seem to be an English translation, but [Wikipedia has a reasonable English summary of the movie](https://en.wikipedia.org/wiki/Lijmen/Het_Been).
 
 Credits: Marc Evers for editing, and also thinking of Willem Elsschot.
 

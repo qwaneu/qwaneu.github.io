@@ -52,6 +52,4 @@ We have included [Hexagonal Architecture](/training/hexagonal-architecture) in t
   </div>
 </div>
 
-
-
 If you have a need that is not covered by an existing course, [we are happy to make new ones for you](/contact). Our best courses got started by specific requests from our customers!

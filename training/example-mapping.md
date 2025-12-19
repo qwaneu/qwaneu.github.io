@@ -1,6 +1,6 @@
 ---
 title: Example Mapping Workshop
-layout: other
+layout: training-description
 summary: 'Spice up your refinement sessions.'
 tags: [refinement, agile planning, user stories, specification by example, behaviour driven development, BDD]
 ---

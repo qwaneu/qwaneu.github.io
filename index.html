@@ -1,8 +1,24 @@
 ---
 title: QWAN - Quality Without a Name
-layout: default
+layout: accessibletwo
 ---
-{% include header_home.html %}
+
+<!-- CSS specific for front page -->
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/js/owl-carousel/owl.carousel.css" />
+<link rel="stylesheet" href="/js/owl-carousel/owl.theme.css" />
+<link rel="stylesheet" href="/js/owl-carousel/owl.transitions.css" />
+<!-- CSS main -->
+<link rel="stylesheet" href="/css/simplegrid.css">
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- JS specific for front page -->
+<script src="/js/jquery.js"></script>
+<script src="/js/owl-carousel/owl.carousel.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/codescroll.js"></script>
+
+{% include header_clean.html home=true %}
 
 <!-- Parallax Section -->
 <div class="parallax-section parallax1">
@@ -23,8 +39,8 @@ layout: default
 {% include curveup.html %}
 
 <!-- Services Section -->
-<div class="wrap services-wrap" id="services">
-  <section class="grid grid-pad services">
+<div class="wrap services-wrap">
+  <section class="grid grid-pad">
     <h2>Our Services</h2>
     <div class="col-1-3 service-box service-1" >
       <div class="content">
@@ -74,8 +90,6 @@ layout: default
 <!-- End Services Section -->
 
 {% include curvedown.html %}
-
-<!-- include work-section.html -->
 
 <!-- include curveup.html -->
 
@@ -205,17 +219,17 @@ layout: default
       <h2>Our Team</h2>
       <div class="col-1-3" >
         <div class="content staff-content">
-          <div class="recent-work staff-img">
+          <div class="staff-img">
             <div class="img-wrap staff-img">
               <img src="images/qwan/marc-2019.jpg" alt="Marc Evers">
               <div class="team-social">
-                <a class="sl-fb" href="https://www.piecemealgrowth.nl"><i class="icon-home2"></i></a>
-                <a class="sl-tw" href="https://twitter.com/marcevers"><i class="icon-twitter"></i></a>
-                <a class="sl-ln" href="https://nl.linkedin.com/in/marcevers"><i class="icon-linkedin"></i></a>
+                <a href="https://www.piecemealgrowth.nl"><i class="icon-home2"></i></a>
+                <a href="https://mstdn.social/@marcevers"><i><img src="attachments/mastodon-logo.svg" height="28"/></i></a>
+                <a href="https://nl.linkedin.com/in/marcevers"><i class="icon-linkedin"></i></a>
               </div>
             </div>
             <div class="work-info staff-info">
-              <h5>Marc Evers</h5>
+              <h4>Marc Evers</h4>
               <span>consulting developer</span>
             </div>
           </div>
@@ -223,17 +237,16 @@ layout: default
       </div>
       <div class="col-1-3" >
         <div class="content staff-content">
-          <div class="recent-work staff-img">
+          <div class="staff-img">
             <div class="img-wrap staff-img">
               <img src="images/qwan/willem-new.png" alt="Willem van den Ende">
               <div class="team-social">
-                <!--<a class="sl-fb" href="#"><i class="icon-skype"></i></a>-->
-                <a class="sl-tw" href="https://twitter.com/mostalive"><i class="icon-twitter"></i></a>
-                <a class="sl-ln" href="https://www.linkedin.com/in/willemvandenende"><i class="icon-linkedin"></i></a>
+                <a href="https://mastodon.social/@mostalive"><i><img src="attachments/mastodon-logo.svg" height="28"/></i></a>
+                <a href="https://www.linkedin.com/in/willemvandenende"><i class="icon-linkedin"></i></a>
               </div>
             </div>
             <div class="work-info staff-info">
-              <h5>Willem van den Ende</h5>
+              <h4>Willem van den Ende</h4>
               <span>developing consultant</span>
             </div>
           </div>
@@ -242,16 +255,16 @@ layout: default
       </div>
       <div class="col-1-3" >
         <div class="content staff-content">
-          <div class="recent-work staff-img">
+          <div class="staff-img">
             <div class="img-wrap staff-img">
               <img src="images/qwan/rob.jpg" alt="Rob Westgeest">
               <div class="team-social">
-                <a class="sl-tw" href="https://twitter.com/westghost"><i class="icon-twitter"></i></a>
-                <a class="sl-ln" href="https://nl.linkedin.com/in/rob-westgeest-a401b6"><i class="icon-linkedin"></i></a>
+                <a href="https://mstdn.social/@westghost"><i><img src="attachments/mastodon-logo.svg" height="28"/></i></a>
+                <a href="https://nl.linkedin.com/in/rob-westgeest-a401b6"><i class="icon-linkedin"></i></a>
               </div>
             </div>
             <div class="work-info staff-info">
-              <h5>Rob Westgeest</h5>
+              <h4>Rob Westgeest</h4>
               <span>developing developers</span>
             </div>
           </div>
@@ -406,8 +419,3 @@ layout: default
     </div>
 </div>
 <!-- End Contact Section -->
-
-{% include curvedown.html %}
-
-<!-- Footer -->
-{% include footer.html %}

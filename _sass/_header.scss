@@ -1,0 +1,50 @@
+/* *********************************************************
+  Header
+********************************************************* */
+
+#top-header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  padding: 23px 0;
+/*transition*/
+  -webkit-transition: all .15s linear;
+     -moz-transition: all .15s linear;
+       -o-transition: all .15s linear;
+          transition: all .15s linear;
+}
+
+#top-header .grid {
+  overflow: visible;
+}
+
+.header-default {
+  background: #2C2D31;
+}
+
+.header-home {
+  background: transparent;
+/*box-shadow*/
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+
+.slider {
+  height: 100%;
+}
+
+nav.mainmenu-plain  {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5em, max-content));
+  column-gap: 1em;
+  row-gap: 0.1em;
+  margin-bottom: 0em;
+  padding-left: 0em;
+
+  a {
+    padding-top: 0.3em;
+    font-size: 120%;
+  }
+}

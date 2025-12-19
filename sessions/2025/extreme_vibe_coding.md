@@ -40,8 +40,6 @@ Build out as much functionality as you can in a short set of iterations, without
 After the first  rounds, we put in some checks (on functionality, on quality), or even do those manually.   
 Add a number of iterations where you build the checks into the prompts: either by (letting the LLM do the) refactoring, or by throwing away and starting over. What do you keep from the functionality built? Can you let the LLM generate a context from your current state? Create a Domain language? Tests/scenarios/examples that capture the functionality? How do you plug those into the next prompts to generate a new iteration of the product, with the right constraints in place to ensure better quality and adherence to the wished functionality?
 
-Q: How are we going to do  reflection during the session? I'm "afraid" there is a lot of learning going to come out of each round, and if we have a packed room (think 40 people or so) this is going to take time. I do want participants to take as much explicit learning with them as they can. For the session to run, we need at each round: 1: some plan(s) 2\. some breakage(s) 3: which prompts will you refine / reuse 
-
 | Start | Heading                         | Notes                                                                                                                                                                                                                                                         |
 |:------|:--------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 0     | Introduction                    | Learning goals, approach, setup of environments                                                                                                                                                                                                               |
@@ -55,10 +53,8 @@ Q: How are we going to do  reflection during the session? I'm "afraid" there is 
 
 ## Comments for the programme committee
 
-Looking half a year into the future of LAC (LLM Assisted Coding) and the impact of craft requires a crystal ball. Today's wardley maps are out of date tomorrow, because the terrain of feedback loops has shifted. 
+Looking half a year into the future of LAC (LLM Assisted Coding) and the impact of craft requires a crystal ball. Today's Wardley maps are out of date tomorrow, because the terrain of feedback loops has shifted. 
 
 We could run this workshop today with the tools we have. We aim for people working in pairs, the fallback positions are ensemble programming / coding dojo or prepared kata's. 
 
 We intend to run the exercise for ourselves several times, and try it out with small groups online. Filling 90 minutes is not the problem, the challenge is scoping it just right. We have eXtreme vibe coded a number of cases (now, probably more by november), e.g. a session review system (of course :-) ), voice-to-blog to turn dictation into blog posts with summarised key points, sticky notes board that can be driven from an LLM, small utility scripts for the day to day etc. We'll probably choose something relatively small so it is easier to see for all attendees what is going on, and we can (hopefully) keep the variation in prompt outcomes within bounds, so that we have a bounded number of outcomes each round.
-
-

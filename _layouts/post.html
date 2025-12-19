@@ -1,7 +1,7 @@
 ---
 layout: accessibletwo
 ---
-{% include header_post.html baseurl="/" %}
+{% include header_clean.html parent="Reflections - Blog" parenturl="/blog" %}
 
 <div class="wrap">
   <article class="post-wrap" itemscope itemtype="http://schema.org/BlogPosting">
@@ -39,29 +39,24 @@ layout: accessibletwo
     </div>
   </article>
 
-  <div class="post-bottom-navigation">
+  <div class="post-wrap post-bottom-navigation">
+    <div class="previous-link">
     {% if page.previous %}
-    <span class="previous-link">
       <a rel="prev" href="{{ page.previous.url }}"><i class="icon-previous2"></i> Previous Entry</a>
-    </span>
     {% endif %}
+    </div>
 
-    {% if page.next %}
-    <span class="next-link">
-      <a rel="next" href="{{ page.next.url }}">Next Entry <i class="icon-next2"></i></a>
-    </span>
-    {% endif %}
-
-    <p>
-      <span>
+    <div>
         <a href="/feed.xml">
-          <img class="feed-icon" src="/images/feed-icon-32x32.png" alt="">
+          <img class="feed-icon" src="/images/feed-icon-32x32.png" alt="RSS feed icon">
           Subscribe to our RSS feed
         </a>
-      </span>
-    </p>
+      </div>
+
+    <div class="next-link">
+    {% if page.next %}
+      <a rel="next" href="{{ page.next.url }}">Next Entry <i class="icon-next2"></i></a>
+    {% endif %}
+    </div>
   </div>
 </div>
-
-{% include curvedown.html %}
-{% include footer.html %}

@@ -2,7 +2,6 @@
 title: QWAN
 ---
 <!doctype html>
-<!-- start from scratch, and see what the minimum is we need to make it appear like the rest. -->
 <html>
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -19,10 +18,10 @@ title: QWAN
       gtag('js', new Date());
       gtag('config', 'G-3KRFSQDFHN');
     </script>
-
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
 
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>{{page.title}}</title>
 
     {% if page.summary %}
@@ -36,17 +35,21 @@ title: QWAN
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
     <!-- CSS -->
+    <link rel="stylesheet" href="/css/simplegrid.css">
     <link rel="stylesheet" href="/css/main.css">
 
-    <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- Bunny fonts (EU/GDPR compliant replacement for Google Fonts) -->
+    <link href='https://fonts.bunny.net/css?family=Source+Sans+Pro:300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.bunny.net/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
     <!-- Cookie consent - https://www.osano.com/cookieconsent/download/ --> 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
   </head>
   <body class="plain">
     {{ content }}
+
+    {% include curvedown.html %}
+    {% include footer.html %}
 
     <!-- Cookie consent - https://www.osano.com/cookieconsent/download/ --> 
     <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
@@ -66,7 +69,7 @@ title: QWAN
         "href": "/privacy"
       }
     });
-   </script>
-</body>
+    </script>
+  </body>
 
 </html>

@@ -1,6 +1,6 @@
 ---
 title: Agile Engineering
-layout: other
+layout: training-description
 summary: Agile/Scrum provides great focus on delivering in short cycles. To keep on delivering quality software with confidence, you need to master agile engineering principles & practices.
 tags: [agile engineering, extreme programming, XP, TDD, test driven development, refactoring, unit testing, scrum developer, CI/CD, continuous integration, continuous delivery]
 redirect_from: "/agile-engineering"
@@ -49,4 +49,4 @@ agile architecture &amp; incremental design; responsibility driven design and CR
 
 ## Register
 
-Please see [Agile Engineering on Springest](https://www.springest.nl/qwan/agile-engineering){:target="_blank"} for course schedules and registration or [contact us directly](/#contact).
+Please [contact us](/#contact).

@@ -1,7 +1,8 @@
 ---
-layout: other
+layout: other-accessible
 title: About QWAN
 ---
+
 Whether we train, coach or develop, we’ll sit with you, analyze your situation and find a solution tailored to your context. We prefer techniques from agile and lean software development like Scrum, Kanban, eXtreme Programming, and test driven development, and we always keep an eye on the goal: delivering value-adding software.
 
 ### Benefits of our approach
@@ -71,7 +72,7 @@ VAT: GB 179749243
 
 ### Press kit / Logos
 
-![qwan logo](/images/logos/qwan_logo_small.png)
+![QWAN logo](/images/logos/qwan_logo_small.png)
 
 [vector format](/images/logos/logo.eps) (EPS) --
 [small](/images/logos/qwan_logo_small.png) (PNG, 218×100) --
@@ -79,7 +80,7 @@ VAT: GB 179749243
 
 ---
 
-![qwan logo](/images/logos/qwan_only_logo.png)
+![QWAN logo](/images/logos/qwan_only_logo.png)
 
 [QWAN only, small](/images/logos/qwan_only_logo.png) (PNG, 260×59) --
 [QWAN only, large](/images/logos/qwan_only_logo_large.png) (PNG, 1428×370)
