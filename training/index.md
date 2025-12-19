@@ -22,105 +22,119 @@ Programming exercises are available in Java, C#, C++, Scala, Ruby, Python, JavaS
 </div>
 
 <div class="trainingpage-layout">
-  <div>
-    <div class="courses-grid">
+  <h2>Training courses (1 or more days)</h2>
+  <div class="courses-grid">
 
-    <article class="post-summary-wrap">
-      <h3 class="entry-title"><a href="/training/agile-engineering">Agile Engineering</a></h3>
-      <div class="post-meta">Deliver software with confidence & joy</div>
-      <p>
-      Agile, Lean and Scrum provide great focus on delivering in short cycles. To keep on delivering quality software with confidence, you need to master agile engineering principles & practices.
-      </p>
-      <a class="btn read-more" href="/training/agile-engineering">Read More</a>
-    </article>
+  <article class="post-summary-wrap">
+    <h3 class="entry-title"><a href="/training/agile-engineering">Agile Engineering</a></h3>
+    <div class="post-meta">Deliver software with confidence & joy</div>
+    <p>
+    Agile, Lean and Scrum provide great focus on delivering in short cycles. To keep on delivering quality software with confidence, you need to master agile engineering principles & practices.
+    </p>
+    <a class="btn read-more" href="/training/agile-engineering">Read More</a>
+  </article>
 
-    <article class="post-summary-wrap">
-      <h3 class="entry-title"><a href="/training/test-driven-development">Test Driven Development</a></h3>
-      <div class="post-meta">
-      Hands on & interactive
-      </div>
-      <p>
-      TDD in once sentence: <em>write a failing test, make it pass, refactor and repeat</em> - easier said than done. Take a deep dive in growing your test driven development skills.
-      </p>
-      <a class="btn read-more" href="/training/test-driven-development">Read More</a>
-    </article>
+  <article class="post-summary-wrap">
+    <h3 class="entry-title"><a href="/training/test-driven-development">Test Driven Development</a></h3>
+    <div class="post-meta">
+    Hands on & interactive
+    </div>
+    <p>
+    TDD in once sentence: <em>write a failing test, make it pass, refactor and repeat</em> - easier said than done. Take a deep dive in growing your test driven development skills.
+    </p>
+    <a class="btn read-more" href="/training/test-driven-development">Read More</a>
+  </article>
 
-    <article class="post-summary-wrap">
-      <h3 class="entry-title"><a href="/training/mastering-legacy-code">Mastering Legacy Code</a></h3>
-      <div class="post-meta">
-      Build confidence with legacy code
-      </div>
-      <p>
-      We all know 'em: those areas in your code base that need quite some courage to work on. Join us & learn techniques to make changes in these areas with confidence. 
-      </p>
-      <a class="btn read-more" href="/training/mastering-legacy-code">Read More</a>
-    </article>
+  <article class="post-summary-wrap">
+    <h3 class="entry-title"><a href="/training/mastering-legacy-code">Mastering Legacy Code</a></h3>
+    <div class="post-meta">
+    Build confidence with legacy code
+    </div>
+    <p>
+    We all know 'em: those areas in your code base that need quite some courage to work on. Join us & learn techniques to make changes in these areas with confidence. 
+    </p>
+    <a class="btn read-more" href="/training/mastering-legacy-code">Read More</a>
+  </article>
 
-    <article class="post-summary-wrap">
-      <h3 class="entry-title"><a href="/training/systems-thinking">Systems Thinking</a></h3>
-      <div class="post-meta">
-      Deep insights for sustainable delivery
-      </div>
-      <p>
-      Issues in teams and organisations are often tough to tackle. In retrospectives we tend to focus on symptoms. Learn techniques to explore systems behind symptoms and to act effectively. 
-      </p>
-      <a class="btn read-more" href="/training/systems-thinking">Read More</a>
-    </article>
+  <article class="post-summary-wrap">
+    <h3 class="entry-title"><a href="/training/systems-thinking">Systems Thinking</a></h3>
+    <div class="post-meta">
+    Deep insights for sustainable delivery
+    </div>
+    <p>
+    Issues in teams and organisations are often tough to tackle. In retrospectives we tend to focus on symptoms. Learn techniques to explore systems behind symptoms and to act effectively. 
+    </p>
+    <a class="btn read-more" href="/training/systems-thinking">Read More</a>
+  </article>
 
-    <article class="post-summary-wrap">
-      <h3 class="entry-title"><a href="/training/ddd-introduction">Introduction to Domain Driven Design</a></h3>
-      <div class="post-meta">
-      Making sense of software complexity
-      </div>
-      <p>Domain-driven design is an approach to software development for complex needs by connecting the architecture and implementation to an evolving model of the problem domain. It enables an agile approach to complex software development by putting the domain model central.
-      </p>
-      <a class="btn read-more" href="/training/ddd-introduction">Read More</a>
-    </article>
+  <article class="post-summary-wrap">
+    <h3 class="entry-title"><a href="/training/ddd-introduction">Introduction to Domain Driven Design</a></h3>
+    <div class="post-meta">
+    Making sense of software complexity
+    </div>
+    <p>Domain-driven design is an approach to software development for complex needs by connecting the architecture and implementation to an evolving model of the problem domain. It enables an agile approach to complex software development by putting the domain model central.
+    </p>
+    <a class="btn read-more" href="/training/ddd-introduction">Read More</a>
+  </article>
 
-    <article class="post-summary-wrap">
-      <h3 class="entry-title"><a href="/training/implementing-ddd">Implementing Domain Driven Design</a></h3>
-      <div class="post-meta">
-      Domain modelling all the way, from post-it to working code
-      </div>
-      <p>Domain-driven design is an approach to software development for complex needs by connecting the architecture and implementation to an evolving model of the problem domain. Working from your domain facilitates higher quality software products that will be better maintainable.
-      </p>
-      <a class="btn read-more" href="/training/implementing-ddd">Read More</a>
-    </article>
+  <article class="post-summary-wrap">
+    <h3 class="entry-title"><a href="/training/implementing-ddd">Implementing Domain Driven Design</a></h3>
+    <div class="post-meta">
+    Domain modelling all the way, from post-it to working code
+    </div>
+    <p>Domain-driven design is an approach to software development for complex needs by connecting the architecture and implementation to an evolving model of the problem domain. Working from your domain facilitates higher quality software products that will be better maintainable.
+    </p>
+    <a class="btn read-more" href="/training/implementing-ddd">Read More</a>
+  </article>
 
-    <article class="post-summary-wrap">
-      <h3 class="entry-title"><a href="/training/hexagonal-architecture">Hexagonal Architecture Hands On</a></h3>
-      <div class="post-meta">
-      Malleable software
-      </div>
-      <p>Our software should be about the business we’re in, about the problem domain we are working in. It should speak domain language, not technicalities. Hexagonal Architecture puts the domain logic front and centre.</p>
-      <a class="btn read-more" href="/training/hexagonal-architecture">Read More</a>
-    </article>
-
-    <article class="post-summary-wrap">
-      <h3 class="entry-title"><a href="/training/user-story-mapping-dimensional-planning">User Story Mapping & Dimensional Planning</a></h3>
-      <div class="post-meta">
-      More effective product decisions
-      </div>
-      <p>Managing your product backlog as an ordered list of user stories is a challenge. Your customer wants it all, but it takes too long!
-      User Story Mapping and Dimensional Planning are two pragmatic product management techniques for realizing more value sooner.</p>
-      <a class="btn read-more" href="/training/user-story-mapping-dimensional-planning">Read More</a>
-    </article>
-
-    <article class="post-summary-wrap">
-      <h3 class="entry-title"><a href="/training/example-mapping">Example Mapping Workshop</a></h3>
-      <div class="post-meta">
-      Spice up your refinement sessions
-      </div>
-      <p>Do you have long, boring refinement sessions? Do you still run into surprises and lack of shared understanding when building the software? In this hands-on workshop, you will experience Example Mapping, a simple pen-and-paper technique to spice up your refinements.
-      </p>
-      <a class="btn read-more" href="/training/example-mapping">Read More</a>
-    </article>
+  <article class="post-summary-wrap">
+    <h3 class="entry-title"><a href="/training/hexagonal-architecture">Hexagonal Architecture Hands On</a></h3>
+    <div class="post-meta">
+    Malleable software
+    </div>
+    <p>Our software should be about the business we’re in, about the problem domain we are working in. It should speak domain language, not technicalities. Hexagonal Architecture puts the domain logic front and centre.</p>
+    <a class="btn read-more" href="/training/hexagonal-architecture">Read More</a>
+  </article>
   </div>
 
-  <div style="text-align: center;">
+  <h2>Workshops (1/2 day)</h2>
+  <div class="courses-grid">
+
+  <article class="post-summary-wrap">
+    <h3 class="entry-title"><a href="/training/user-story-mapping-dimensional-planning">User Story Mapping & Dimensional Planning</a></h3>
+    <div class="post-meta">
+    More effective product decisions
+    </div>
+    <p>Managing your product backlog as an ordered list of user stories is a challenge. Your customer wants it all, but it takes too long!
+    User Story Mapping and Dimensional Planning are two pragmatic product management techniques for realizing more value sooner.</p>
+    <a class="btn read-more" href="/training/user-story-mapping-dimensional-planning">Read More</a>
+  </article>
+
+  <article class="post-summary-wrap">
+    <h3 class="entry-title"><a href="/training/example-mapping">Example Mapping</a></h3>
+    <div class="post-meta">
+    Spice up your refinement sessions
+    </div>
+    <p>Do you have long, boring refinement sessions? Do you still run into surprises and lack of shared understanding when building the software? In this hands-on workshop, you will experience Example Mapping, a simple pen-and-paper technique to spice up your refinements.
+    </p>
+    <a class="btn read-more" href="/training/example-mapping">Read More</a>
+  </article>
+
+  <article class="post-summary-wrap">
+    <h3 class="entry-title"><a href="/training/value-stream-mapping">Map your Delivery Value Stream for Fun and Profit</a></h3>
+    <div class="post-meta">
+    Reduce waste and friction by taking a systems view
+    </div>
+    <p>In this hands-on workshop, you will visualize your whole delivery process, from concept to cash. By doing so, you will discover sources of friction and waste that is slowing you down. You will also discover the impact of large work batches and long feedback loops and how these eat away your valuable time. You will get a feel for what the bottlenecks are in your way of working.
+    </p>
+    <a class="btn read-more" href="/training/value-stream-mapping">Read More</a>
+  </article>
+
+  </div>
+
+  <!-- <div style="text-align: center;">
     <img src="/images/agile_engineering_wordle.png" style="max-width: 50%;"> 
-  </div>
+  </div> -->
 
-  </div>
 </div>
 
