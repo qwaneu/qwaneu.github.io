@@ -67,8 +67,8 @@ kramdown:
         block:
             line_numbers: true
 
-# collections:
-#   - trainingcourses:
-#     output: true
-#   - workshops:
-#     output: true
+collections:
+  training:
+    output: true
+  workshops:
+    output: true
