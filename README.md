@@ -1,8 +1,8 @@
-# How to run locally:
+# How to run locally
 
 ```
 cd ~/Documents/qwan/sites/qwaneu.github.io
-docker-compose up
+docker compose up
 ```
 
 Renders the site. Uses [premade docker-compose file and images](https://github.com/BretFisher/jekyll-serve).
@@ -27,21 +27,16 @@ Main.scss already has media queries. This might get messy.
 Q: how do we bundle javascript?
 A: not known yet - we push to github and the rest is magic at the moment.
 
-
-
 # TODO
 
-- Pagina van individuele blog entry accessible maken
-
-- #blog pagina accessible maken (zie ook 'grid' to do)
-- CSS Grid uitzoeken/inzetten voor cursus 'grid' (en blog entry grid)
-Waarom? (Grid is leuk, en er is vast een probleem dat het oplost, maar ik weet niet meer wat het is.)
-- 2 extra trainingen met eigen page toevoegen; Example Mapping & Hexagonal Architecture?
+- [ ] Pagina van individuele blog entry accessible maken
+- [ ] #blog pagina accessible maken (zie ook 'grid' to do)
 - 'specials' toevoegen aan trainingspagina (workshops e.d.)
-- Springest widgets toevoegen (zinnig zodra we wat reviews hebben)
-- analytics toevoegen (heeft implicaties voor cookie melding/toestemming)
-- trainingen-grid genereren uit training pages?
-- eventueel: expliciet landen benoemen waar we actief zijn
+- [ ] analytics toevoegen (heeft implicaties voor cookie melding/toestemming)
+- [ ] trainingen-grid genereren uit training pages?
+- [ ] eventueel: expliciet landen benoemen waar we actief zijn
+- [ ] ribbon op mobile (smal) aanpassen; nu valt het blog titel deel buiten beeld
+- [ ] 
 
 # Done
 
