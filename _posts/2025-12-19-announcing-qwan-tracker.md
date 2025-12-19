@@ -5,13 +5,21 @@ tags:
 - moldable development
 - dimensional planning
 author: Willem van den Ende
-image: 
+image: /attachments/blogposts/2025/only-release-when-you-are-able-to-iterate.png
 ---
 
 [QWAN Tracker](https://qtracker.apps.sustainabledelivery.com) is task tracker for small, fast moving teams. For people who do the work, by people who do the work.
 It lets you quickly jot down things you think need doing as you are working, so you can stay focused on the task at hand. Keyboard navigation, and live sync so your partners stay in the loop.
 
-I don't build web applications for myself usually. But qwan tracker is both fun and useful - for me. I like tools to be responsive, and get out of the way. This doesn't have to be for everyone. If it works for me, there might be more people who like it. Who knows.
+I don't build web applications for myself usually. But qwan tracker is both fun and useful - for me, and then for me and Stephan Eggermont. I like tools to be responsive, and get out of the way. This doesn't have to be for everyone. If it works for me, there might be more people who like it. Who knows.
+
+![Overview of qwan tracker. 4 lanes with cards, a pop up for editing a card, titled release qtracker in to the wild. Description: X: If you aren't embarrased to by your first release, you left it too late. Me: Only do this when you are able to iterate. "](/attachments/blogposts/2025/only-release-when-you-are-able-to-iterate.png)
+
+This is an early release, see below for details. Stephan and I have been using this for two weeks, to steer our work, and we are enjoying it. We hope you might too.
+
+> X: If you aren't embarrased to by your first release, you left it too late. 
+> Me: Only do this when you are able to iterate. 
+
 
 
 Target audience
