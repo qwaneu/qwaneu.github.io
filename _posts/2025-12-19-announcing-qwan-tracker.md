@@ -50,7 +50,7 @@ Things that we might build, but don't commit to
 - Change categories - code smells and refactorings don't work for everything ;-)
 - Board dashboard, so you can collect all your boards (this will probably be a paid option, we are thinking of ways to sell boards in an affordable way and with as little commitment as possible)
 - Ways to link to and from other mediums (e.g. opportunity solution trees, event storms, user story maps ). 
- 
+- Digital Sovereignty Edition. Self hosting for data privacy, formerly known as Enterprise Edition. Probably comes with some kind of DevOps capability assesment beforehand. Only latest version supported. 
 
 You can't always build what you want,
 ---
