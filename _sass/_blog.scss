@@ -41,7 +41,7 @@ $phone: "screen and (max-width: 768px)";
 
 .blogsummary-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25em, max-content));
+  grid-template-columns: repeat(auto-fit, minmax(22em, max-content));
   row-gap: 2em;
   column-gap: 2em;
   padding-left: 2em;
