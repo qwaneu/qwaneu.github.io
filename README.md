@@ -5,11 +5,10 @@ cd ~/Documents/qwan/sites/qwaneu.github.io
 docker compose up
 ```
 
-Renders the site. Uses [premade docker-compose file and images](https://github.com/BretFisher/jekyll-serve).
+Renders the site. Uses [pre-made docker-compose file and images](https://github.com/BretFisher/jekyll-serve).
 
 Q: How to build?
 A: current directory is mounted as `./site` so it should be all good.
-
 
 # IN PROGRESS
 
@@ -33,12 +32,10 @@ A: not known yet - we push to github and the rest is magic at the moment.
 - [ ] #blog pagina accessible maken (zie ook 'grid' to do)
 - 'specials' toevoegen aan trainingspagina (workshops e.d.)
 - [ ] analytics toevoegen (heeft implicaties voor cookie melding/toestemming)
-- [ ] trainingen-grid genereren uit training pages?
+- [ ] trainingen-grid genereren uit training pages? Definieer trainingen en workshops als collections (met eigen folders)
 - [ ] eventueel: expliciet landen benoemen waar we actief zijn
 - [ ] ribbon op mobile (smal) aanpassen; nu valt het blog titel deel buiten beeld
-- [ ] 
-
-# Done
-
-- run jekyll locally, with docker
-- make SVG curve up and curve down pass firefox accesibility checker
+- [ ] consulting vraag-gedreven opzetten misschien ook met tiles? Pagina is nu vooral aanbod/methode gedreven
+- [ ] impact mapping workshop toevoegen
+- [ ] story mapping + dimensional planning + example mapping als 1 dag training
+- [ ] zet code rendering line numbers uit in _config.yml ipv via css - of gebruiken we line numbers ergens?
