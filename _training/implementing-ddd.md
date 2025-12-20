@@ -1,6 +1,7 @@
 ---
 title: Implementing Domain Driven Design
 layout: training-description
+date: 2025-06-01
 tagline: "Domain modelling all the way, from post-it to working code"
 summary: "Domain-driven design is an approach to software development for complex needs by connecting the architecture and implementation to an evolving model of the problem domain. Working from your domain facilitates higher quality software products that will be better maintainable."
 tags: [modelling, domain driven design, architecture, event storming, hexagonal architecture]

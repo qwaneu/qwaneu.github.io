@@ -49,13 +49,18 @@
 
 .courses-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(23em, 0.33fr));
   row-gap: 0.5em;
   column-gap: 1em;
+  justify-content: center;
 
   .post-meta {
     padding-bottom: 0.3em;
     font-style: oblique;
+  }
+
+  h3 {
+    margin: 0.8em 0 1em;
   }
 }
 

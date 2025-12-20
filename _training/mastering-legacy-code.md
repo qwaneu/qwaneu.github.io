@@ -1,6 +1,7 @@
 ---
 title:  Mastering Legacy Code
 layout: training-description
+date: 2025-03-01
 tagline: 'Build confidence with legacy code'
 summary: 'We all know ''em: those areas in your code base that need quite some courage to work on. Join us & learn techniques to make changes in these areas with confidence.'
 tags: [legacy code, working effectively with legacy code, agile engineering, extreme programming, test driven development, refactoring, code smells, unit testing]
