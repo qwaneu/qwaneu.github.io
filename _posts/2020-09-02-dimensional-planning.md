@@ -80,7 +80,7 @@ How great should it be? How far do you want to go? What should be in the Highway
     <img src="/attachments/blogposts/2020/highway-sketch.png" alt="highway">
   </div>
   <div>
-    <p>Cobblestone Road guiding question:<br>
+    <p>Highway guiding question:<br>
     <strong>What do we still want to pay for?</strong></p>
   </div>
 </div>

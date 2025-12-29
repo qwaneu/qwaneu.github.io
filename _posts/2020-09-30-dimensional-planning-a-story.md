@@ -31,7 +31,7 @@ Rather than to live with the scope and date, Magnus, Wilbert and I decided to to
 ![dim-plan-story-estimate](/attachments/blogposts/2020/dim-plan-story-estimate-2.jpg) 
 {: class="post-image" }
 
-We compared a few of the stories with what we had done in the past two weeks, extrapolated the numbers and concluded: June is definitely not feasible. August is more likely. Then I proposed to add [dimensions](http://localhost:8082/2020/09/02/dimensional-planning.html) to the story. Although quite some interaction designs where already done by Jelle, I proposed to set a goal: have the functionality barely working at the end of June. We could get feedback from some beta customers and use their feedback for planning the second release. 
+We compared a few of the stories with what we had done in the past two weeks, extrapolated the numbers and concluded: June is definitely not feasible. August is more likely. Then I proposed to add [dimensions](/2020/09/02/dimensional-planning.html) to the story. Although quite some interaction designs where already done by Jelle, I proposed to set a goal: have the functionality barely working at the end of June. We could get feedback from some beta customers and use their feedback for planning the second release. 
 
 > For this company, we co-created their own version of the Dirt Road/Cobblestone Road/Highway metaphor: __Paper Cup__, __Coffee Mug__, __Silver Chalice__. So the exact metaphor does not matter, as long as it aids shared understanding between development, business and customers.
 

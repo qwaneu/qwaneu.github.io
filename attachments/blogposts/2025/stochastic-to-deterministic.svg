@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad6" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#0d1421"/>
+      <stop offset="100%" style="stop-color:#1a2332"/>
+    </linearGradient>
+    
+    <!-- Wide distribution gradient (Trial & Error) -->
+    <linearGradient id="wideGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef5350;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#ef5350;stop-opacity:0.2"/>
+    </linearGradient>
+    
+    <!-- Medium distribution gradient (Extracted Knowledge) -->
+    <linearGradient id="medGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ab47bc;stop-opacity:0.7"/>
+      <stop offset="100%" style="stop-color:#ab47bc;stop-opacity:0.15"/>
+    </linearGradient>
+    
+    <!-- Spike gradient (Reliable Tools) -->
+    <linearGradient id="spikeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4fc3f7"/>
+      <stop offset="100%" style="stop-color:#0288d1"/>
+    </linearGradient>
+    
+    <!-- Glow filter -->
+    <filter id="glow6">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Blur for uncertainty -->
+    <filter id="uncertain">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+    </filter>
+    
+    <!-- Arrow markers -->
+    <marker id="arrowRight" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 L 2 4 Z" fill="#ffffff" opacity="0.5"/>
+    </marker>
+    <marker id="arrowLeft" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto">
+      <path d="M 8 0 L 0 4 L 8 8 L 6 4 Z" fill="#ffffff" opacity="0.35"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#bgGrad6)"/>
+  
+  <!-- Grid lines -->
+  <g stroke="#ffffff" stroke-width="0.5" opacity="0.08">
+    <!-- Horizontal -->
+    <line x1="0" y1="340" x2="800" y2="340"/>
+    <line x1="0" y1="270" x2="800" y2="270"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="130" x2="800" y2="130"/>
+    <line x1="0" y1="60" x2="800" y2="60"/>
+    <!-- Vertical -->
+    <line x1="133" y1="40" x2="133" y2="340"/>
+    <line x1="266" y1="40" x2="266" y2="340"/>
+    <line x1="400" y1="40" x2="400" y2="340"/>
+    <line x1="533" y1="40" x2="533" y2="340"/>
+    <line x1="666" y1="40" x2="666" y2="340"/>
+  </g>
+  
+  <!-- X-axis -->
+  <line x1="40" y1="340" x2="760" y2="340" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+  
+  <!-- FIRST CURVE: Wide distribution (Trial & Error) -->
+  <g filter="url(#uncertain)">
+    <path d="M 40 340 
+             Q 50 335, 70 310 
+             Q 100 260, 130 170
+             Q 155 100, 180 170
+             Q 220 280, 270 320
+             Q 300 340, 320 340" 
+          fill="url(#wideGrad)" 
+          stroke="#ef5350" 
+          stroke-width="2"/>
+    
+    <!-- Scattered points around first curve (showing variability) -->
+    <circle cx="80" cy="290" r="3" fill="#ef5350" opacity="0.6"/>
+    <circle cx="110" cy="220" r="2.5" fill="#ef5350" opacity="0.5"/>
+    <circle cx="155" cy="150" r="3" fill="#ef5350" opacity="0.6"/>
+    <circle cx="200" cy="200" r="2.5" fill="#ef5350" opacity="0.5"/>
+    <circle cx="240" cy="280" r="2" fill="#ef5350" opacity="0.4"/>
+    <circle cx="95" cy="250" r="2" fill="#ef5350" opacity="0.4"/>
+    <circle cx="175" cy="180" r="2.5" fill="#ef5350" opacity="0.5"/>
+    <circle cx="130" cy="200" r="2" fill="#ef5350" opacity="0.4"/>
+    <circle cx="220" cy="240" r="2" fill="#ef5350" opacity="0.45"/>
+  </g>
+  
+  <!-- SECOND CURVE: Medium distribution (Extracted Knowledge) -->
+  <g>
+    <path d="M 340 340 
+             Q 360 335, 390 300 
+             Q 420 240, 450 120
+             Q 470 70, 490 120
+             Q 530 260, 560 310
+             Q 585 340, 600 340" 
+          fill="url(#medGrad)" 
+          stroke="#ab47bc" 
+          stroke-width="2"/>
+    
+    <!-- Fewer scattered points (more predictable) -->
+    <circle cx="410" cy="260" r="2" fill="#ab47bc" opacity="0.5"/>
+    <circle cx="470" cy="140" r="2" fill="#ab47bc" opacity="0.6"/>
+    <circle cx="520" cy="220" r="2" fill="#ab47bc" opacity="0.5"/>
+  </g>
+  
+  <!-- THIRD: Deterministic spike (Reliable Tools) -->
+  <g filter="url(#glow6)">
+    <path d="M 660 340 
+             L 680 330
+             L 700 80
+             L 720 330
+             L 740 340" 
+          fill="url(#spikeGrad)" 
+          stroke="#4fc3f7" 
+          stroke-width="2"/>
+    
+    <!-- Peak indicator -->
+    <circle cx="700" cy="70" r="5" fill="#ffffff" opacity="0.9"/>
+  </g>
+  
+  <!-- FEEDBACK LOOP ARROWS -->
+  <!-- Forward arrows (top, going right) -->
+  <g fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.4">
+    <!-- Trial & Error -> Extracted Knowledge (top) -->
+    <path d="M 180 55 Q 280 35, 440 55" marker-end="url(#arrowRight)"/>
+    
+    <!-- Extracted Knowledge -> Reliable Tools (top) -->
+    <path d="M 500 55 Q 580 35, 680 55" marker-end="url(#arrowRight)"/>
+  </g>
+  
+  <!-- Backward arrows (bottom of the loop area, going left) -->
+  <g fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.25">
+    <!-- Extracted Knowledge -> Trial & Error (feedback) -->
+    <path d="M 440 75 Q 310 95, 180 75" marker-end="url(#arrowLeft)"/>
+    
+    <!-- Reliable Tools -> Extracted Knowledge (feedback) -->
+    <path d="M 680 75 Q 590 95, 500 75" marker-end="url(#arrowLeft)"/>
+  </g>
+  
+  <!-- Long feedback: Reliable Tools back to Trial & Error (outer arc) -->
+  <g fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.2">
+    <path d="M 700 50 Q 440 -5, 155 50" marker-end="url(#arrowLeft)"/>
+  </g>
+  
+  <!-- Labels -->
+  <text x="155" y="375" fill="#ef5350" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">Trial &amp; Error</text>
+  <text x="470" y="375" fill="#ab47bc" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">Extracted Knowledge</text>
+  <text x="700" y="375" fill="#4fc3f7" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">Reliable Tools</text>
+</svg>

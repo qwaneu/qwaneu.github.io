@@ -5,6 +5,7 @@ tags:
   - test driven development
   - feedback
   - eXtreme Programming
+  - heuristics
 author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: /attachments/blogposts/2021/tdd/Think-about-design.png
 ---
@@ -88,7 +89,7 @@ along the way.
 
 By expressing your design decisions precisely in code, your test will already
 provide feedback about these decisions: e.g. names, parameters, results,
-errors, call semantics, data strucure, interfaces and composition - how the
+errors, call semantics, data structure, interfaces and composition - how the
 parts fit together.
 
 So take your time to think your test through. Then observe the test code once
@@ -119,7 +120,7 @@ tests, we are happy. We won't settle for anything less.
 > That is why test-driven development is a big win. Writing tests first forces
 > you to focus on thinking about the interface before you design and code it.
 > Making those tests work becomes a relentless way of getting observable
-> behavior to work rather than letting crufty untested code pile up.  
+> behaviour to work rather than letting crufty untested code pile up.  
 > -- [Little things add up](http://wirfs-brock.com/blog/2005/09/05/little-things-add-up/), Rebecca Wirfs-Brock
 
 - Kent Beck, [Test Driven Development, By

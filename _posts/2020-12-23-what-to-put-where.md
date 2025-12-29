@@ -187,7 +187,7 @@ moved the language logic from the UI components to the Language Store.
 ## Things that help in deciding what to put where
 
 - **Use Hexagonal Architecture as a lens** - [Hexagonal
-  Architecture](http://localhost:8082/2020/08/20/hexagonal-architecture.html) provides a frame of reference to designate
+  Architecture](/2020/08/20/hexagonal-architecture.html) provides a frame of reference to designate
   different concerns in a system as ports, adapters, or domain logic, and it
   helps with structuring dependencies.
 - **Introduce a name for the 'thing'**. We can do this either by design or

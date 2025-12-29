@@ -5,6 +5,7 @@ tags:
   - test driven development
   - feedback
   - eXtreme Programming
+  - heuristics
 author: Marc Evers, Willem van den Ende, Rob Westgeest
 image: /attachments/blogposts/2022/ronan-furuta--Zjf67HKrls-unsplash.jpg
 ---
@@ -97,7 +98,7 @@ has a `license_valid_until` date property that we check.
 
 We would like to change the signature of the `extend_license` function to have a
 `days` parameter, representing the number of days to extend the license. This
-could also be months or an absolute date, but this doens't matter for now.
+could also be months or an absolute date, but this doesn't matter for now.
 
 Just making the change would break all existing tests that use `extend_license`,
 and possibly other tests that indirectly touch this function. What other options
@@ -122,7 +123,7 @@ do we have here?
 The main effect of applying this heuristic is being more in control. When there
 is just one test failing, you know the state of the code and you know how close
 you are to working software. You are always either in a state to commit & share
-your changes or one step away from commitable code.
+your changes or one step away from committable code.
 
 A single failure provides fast, specific, actionable feedback. You know what to
 do next. Multiple failures produce noise, leaving you in a state of confusion.

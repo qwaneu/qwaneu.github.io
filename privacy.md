@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: other-accessible
 title: Our privacy policy
 ---
 
@@ -41,7 +41,7 @@ The personal information we collect is used by the [partners in QWAN](/about) - 
 - enabling you to use the Online Agile Fluency Diagnostic software;
 - keeping you up to date about what we're up to - if you have granted us permission.
 
-Data we (possibly) need from you for the purposes stated above, consists of: name, affiliation, e-mail address, phone number, address, Twitter handle, bank account data
+Data we (possibly) need from you for the purposes stated above, consists of: name, affiliation, e-mail address, phone number, address, bank account data
 
 We will not use your personal information for any other purpose than the ones stated above; we will not sell or transfer your personal information to any other third parties.
 

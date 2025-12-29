@@ -43,11 +43,11 @@ generate conversations with clients. The feedback loops we will describe are clo
 
 In software development, we see three feedback loops at play:
 
-- Technical Excellence
-- Working Together, Getting Things Done
-- Product
+- **Development - Technical Excellence**, on a timescale of minutes to days
+- **Team - Working Together, Getting Things Done**, on a timescale of days to weeks
+- **Product**, on a timescale of weeks to months
 
-![three loops partially overlapping](/attachments/blogposts/2023/3-loops.jpg)
+![three loops - revisited version, nested loops: dev, team, product, with time scales](/attachments/blogposts/2025/3-loops-2025.jpg)
 
 > Note: there are different perspectives on software development and there are other feedback loops as well, for example at the strategy level. The perspective we are introducing here is not intended to be a complete model of software development, but rather a partial and useful one.
 
@@ -75,7 +75,7 @@ being all about how we work together in a focused way to deliver the most
 valuable thing first.
 
 Stuff that can happen here:
-- Sprints, iterations, daily stand-ups, weekly plannings
+- Sprints, iterations, daily stand-ups, weekly planning sessions
 - Team dynamics & team coaching
 - Retrospectives
 - Kanban, continuous flow, work-in-progress limits
@@ -177,12 +177,22 @@ The perspective also helps to see why most agile transformations miss out the hu
 We find that just the act of stepping away from the keyboard and reflecting with
 a group of developers leads to improved productivity, almost regardless of
 content. Some of the effects of stepping away are permanent like faster builds,
-others are temporary - practicing working in small steps, refactoring general
+others are temporary - practising working in small steps, refactoring general
 skills, but they tend to atrophy under pressure.
 
 The three loops perspective also helps to show development teams that improving their work alone is not enough.
 
 > The magic often happens in the gaps - things that could be done, but are actually picked up by no one.
+
+# Further reading
+
+- [Extreme Programming feedback loops](https://en.wikipedia.org/wiki/Extreme_programming)
+- Martin Fowler, [Is High Quality Software Worth the Cost?](https://www.martinfowler.com/articles/is-quality-worth-cost.html)
+- Willem-Jan Ageling, [Scrum Has Three Learning Cycles — Are These Devaluing Your Learning Through Empiricism?](https://medium.com/serious-scrum/scrum-has-three-learning-cycles-are-these-devaluating-your-learning-through-empiricism-d8090c94f44e)
+
+*Updated on 5 December 2025:*
+- *replaced picture of overlapping loops by nested loops with time scales*
+- *added references*
 
 <aside>
 <h3>Feedback coffee</h3>

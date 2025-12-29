@@ -6,6 +6,7 @@ tags:
   - feedback
   - eXtreme Programming
   - refactoring
+  - heuristics
 author: Willem van den Ende, Marc Evers, Rob Westgeest
 image: /attachments/blogposts/2021/tdd/xeyes-1.png
 ---
@@ -20,7 +21,7 @@ test is about will help future us, and others, keep our tests habitable.
 {: class="post-image" }
 
 In the [Test Driven Development
-cycle](http://localhost:8082/2021/06/24/tdd-still-relevant-in-2021.html), we
+cycle](/2021/06/24/tdd-still-relevant-in-2021.html), we
 take time for refactoring the code in the last step of the cycle. In this step,
 we also take time to look at our test code and refactor it when and where
 necessary. One thing we strive for is *glanceable tests*.
@@ -66,14 +67,14 @@ make this more, and in some places less, glanceable.
 ## Some tests don't require an action
 
 Heuristics are flexible, and made for quick decisions. We make use of that
-flexibility here, by quickly going against the grain of a heuristice we
+flexibility here, by quickly going against the grain of a heuristic we
 described earlier: [Test name describes action and expected
 result](/2021/07/27/tdd-naming-tests.html).
 
 Look at the "it is never empty" test. There is no action and expected outcome,
 but a relation that always holds. We call this the _invariant heuristic_.
-Apologies for the easter egg of a heurstic-in-a-heuristic, we may write about
-the invarariant heuristic properly at some point.
+Apologies for the easter egg of a heuristic-in-a-heuristic, we may write about
+the invariant heuristic properly at some point.
 
 `noEmptyFields` is an example of a test that is so glanceable that the test name does not add much. 
 
@@ -268,7 +269,7 @@ Enough code already.
 # Effects
 
 Glanceability of tests supports us when a test fails: we will quickly
-understand the test's intent, so that we can fix it rightaway.
+understand the test's intent, so that we can fix it right away.
 
 Glanceable tests are a form of [living
 documentation](https://www.goodreads.com/book/show/34927405-living-documentation):
