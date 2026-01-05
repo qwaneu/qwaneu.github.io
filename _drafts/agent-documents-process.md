@@ -4,12 +4,15 @@ title: Can an "agent" document your development process?
 tags:
 - LLM
 author: Willem van den Ende
-image: 
+image: /attachments/blogposts/2025/hammock-driven-development.svg
 ---
 
-One of the questions on my Stochastic to Deterministic post, and the [meta post on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7404850582819348480) about what was left out, boiled down to: "can't you ask the coding agent to document the process"? (The actual question was more detailed, read on to find out).
+One of the questions on my [Stochastic to Deterministic post](/2025/12/11/stochastic-to-deterministic.html), and the [meta post on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7404850582819348480) about what was left out, boiled down to: "can't you ask the coding agent to document the process"? (The actual question was more detailed, read on to find out).
 
 Yes, that is possible. I didn't publish it immediately, because the order of the writing and the graphics suggests a much more up-front documentation process than how it works. For instance, the size and order of the images suggests a flow that is not as it feels like when working on qwan tracker.
+
+Legibility
+----
 
 One reason for this, is that the process is not entirely legible for the agent. Admittedly, more of my process is now in written form, or can be derived from it, but what precedes the prompts in the agent, and what happens around it, is invisible to the agent. That means that you get documentation for the part of the process that is in writing.
 
@@ -21,11 +24,21 @@ Some of that can be retrieved from the chat history, but it is less explicit tha
 
 (quoted, as suggested by qwen3-thinking, see bonus content below)
 
+My actual process, as I see it at the moment 
+---
+
+![Stick figure, lying horizontally. A thinking bubble saying: "Hammock Driven Development"](/attachments/blogposts/2025/hammock-driven-development.svg)
+
+
 So the average process, as I perceive it, is mull over a problem, than at some point have a chat with a model on my phone to sketch out an idea. Sometimes that leads to a scaffold with code, other times a text file with a rough description of what it should do. Then I go over to a coding agent (claude code in my case). I think if I need more stored prompts. Sometimes I 'just' scaffold a new site using the Phoenix Liveview scaffolding tools, and then let the coding agent do a small bit of work to merge the files I had generated, or quickly generate code based on the initial description. This is very much like the 'spike solution' of eXtreme Programming. I want to see the idea running, and play around with it.
 
 Then I decide if I want to continue. At that point I might pull in stored prompts from another project that is close enough. I will tell the coding agent that I added stored prompts from another project, and how I think they should be adapted to this prototype. This is also often the point I will add tests for what is there, and then work test-first from then on. Or, occasionally, if the code is too messy, start over test-first, with the stored prompts I have to work in iterations. The iterations process is more accurate, but relatively slow. 
 
 I am learning to sometimes stop shortly after that, for personal tools. Having gotten the 80% of the value that is 20% of the time, it is not always valuable to do the remaining 900% of work for the remaining 20% of the value.
+
+
+Reasons to be careful
+-----
 
 Another reason to be careful is, that as Simon Wardley indicated, the agent is probably about 60% right, and 40% wrong, and it is up to you to figure out what are the right and the wrong bits. I think maybe with the recent versions of Claude Code and the Opus 4.5 model, it is more, but you can never be sure.
 
@@ -37,6 +50,8 @@ Generated diagrams
 Looking back, I asked Claude Code for diagrams of the process. The stored prompts are plenty of text, and a picture tells a thousand words. You can [look at the markdown, with the diagrams in text]() or browse the [html] or [pdf] that I generated from it.
 , I intentionally posted the last image, containing the json files and the markdown generated from it. The data is saying a lot about the process, and I could quickly see that it was accurate.
 
+Orginal question for this post
+----
 
 The original question was from Hugh Greene:
 
