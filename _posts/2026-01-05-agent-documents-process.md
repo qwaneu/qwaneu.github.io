@@ -9,14 +9,14 @@ image: /attachments/blogposts/2025/hammock-driven-development.svg
 
 One of the questions on my [Stochastic to Deterministic post](/2025/12/11/stochastic-to-deterministic.html), and the [meta post on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7404850582819348480) about what was left out, boiled down to: "can't you ask the coding agent to document the process"? (The actual question was more detailed, read on to find out).
 
-Yes, that is possible. I didn't publish it immediately, because the order of the writing and the graphics suggests a much more up-front documentation process than how it works. For instance, the size and order of the images suggests a flow that is not as it feels like when working on qwan tracker.
+Yes, that is possible. I didn't publish it immediately, because the order of the writing and the graphics suggests a much more up-front documentation process than how it works. For instance, the size and order of the images suggests a flow that is not as it feels like when working on QWAN Tracker.
 
 Legibility
 ----
 
 One reason for this, is that the process is not entirely legible for the agent. Admittedly, more of my process is now in written form, or can be derived from it, but what precedes the prompts in the agent, and what happens around it, is invisible to the agent. That means that you get documentation for the part of the process that is in writing.
 
-Some examples of things that are not (yet) legible: The walking, the day dreams (hammock driven development), the chats with claude desktop sketching ideas and code without running it, and iterating on that before committing to actually generating and running code, adding tests, copying and modifiying stored prompts from other projects, generating more stored prompts.
+Some examples of things that are not (yet) legible: The walking, the day dreams (hammock driven development), the chats with Claude desktop sketching ideas and code without running it, and iterating on that before committing to actually generating and running code, adding tests, copying and modifying stored prompts from other projects, generating more stored prompts.
 
 Some of that can be retrieved from the chat history, but it is less explicit than the process encoded in the 'plan iterations', 'prepare iteration', 'start iteration' and 'check iteration' stored prompts.
 
@@ -30,7 +30,7 @@ My actual process, as I see it at the moment
 ![Stick figure, lying horizontally. A thinking bubble saying: "Hammock Driven Development"](/attachments/blogposts/2025/hammock-driven-development.svg)
 
 
-So the average process, as I perceive it, is mull over a problem, than at some point have a chat with a model on my phone to sketch out an idea. Sometimes that leads to a scaffold with code, other times a text file with a rough description of what it should do. Then I go over to a coding agent (claude code in my case). I think if I need more stored prompts. Sometimes I 'just' scaffold a new site using the Phoenix Liveview scaffolding tools, and then let the coding agent do a small bit of work to merge the files I had generated, or quickly generate code based on the initial description. This is very much like the 'spike solution' of eXtreme Programming. I want to see the idea running, and play around with it.
+So the average process, as I perceive it, is mull over a problem, than at some point have a chat with a model on my phone to sketch out an idea. Sometimes that leads to a scaffold with code, other times a text file with a rough description of what it should do. Then I go over to a coding agent (Claude code in my case). I think if I need more stored prompts. Sometimes I 'just' scaffold a new site using the Phoenix LiveView scaffolding tools, and then let the coding agent do a small bit of work to merge the files I had generated, or quickly generate code based on the initial description. This is very much like the 'spike solution' of eXtreme Programming. I want to see the idea running, and play around with it.
 
 Then I decide if I want to continue. At that point I might pull in stored prompts from another project that is close enough. I will tell the coding agent that I added stored prompts from another project, and how I think they should be adapted to this prototype. This is also often the point I will add tests for what is there, and then work test-first from then on. Or, occasionally, if the code is too messy, start over test-first, with the stored prompts I have to work in iterations. The iterations process is more accurate, but relatively slow. 
 
@@ -51,7 +51,7 @@ Looking back, I asked Claude Code for diagrams of the process. The stored prompt
 
 On LinkedIn, I intentionally posted the last image, containing the json files and the markdown generated from it. The data is saying a lot about the process, and I could quickly see that it was accurate.
 
-Orginal question for this post
+Original question for this post
 ----
 
 The original question was from Hugh Greene:
@@ -60,7 +60,7 @@ The original question was from Hugh Greene:
 
  my response, three weeks ago:
 
-> I should try that again. I have used that in the past to improve stored prompts, or create new ones. I did start this morning with having Claude Code generate a document explaining 'our' process. But you'd have to read that bottom to top, otherwise the reader might think we execute precise specifications from the beginning. It had strong vibes' of Royces' paper, with feedback loops that readers would ignore, because of how the document flows. That is where the image in the post comes from.
+> I should try that again. I have used that in the past to improve stored prompts, or create new ones. I did start this morning with having Claude Code generate a document explaining 'our' process. But you'd have to read that bottom to top, otherwise the reader might think we execute precise specifications from the beginning. It had strong vibes' of Royce's paper, with feedback loops that readers would ignore, because of how the document flows. That is where the image in the post comes from.
 
 What do you think?
 
@@ -82,7 +82,7 @@ I haven't done much with language models to support my writing yet, so I though 
 
 The text above is now different of course, as I incorporated some of the recommendations. Not all. Notice in the bold text that qwen got the order of Pareto wrong. That was because I wrote it down in the wrong order. In that sense this is a bit like some cases of TDD or double entry bookkeeping: seeing the same mistake twice, but worded differently makes it obvious.
 
-I was thinking of making a youtube short about this process, but as Matteo Vaccari said, posts only have value when they are in front of the reader. Same goes for videos, and I don't have time for that now.
+I was thinking of making a YouTube short about this process, but as Matteo Vaccari said, posts only have value when they are in front of the reader. Same goes for videos, and I don't have time for that now.
 
 Question and answer
 ----
@@ -92,11 +92,11 @@ Yes, the text answers the question. It clearly states:
 > "I should try that again... I have used that in the past to improve stored prompts... had Claude Code generate a document explaining 'our' process."  
 
 **Clarity for senior devs/engineering managers**:  
-- ✅ Strong on *practicality* (agent's 60% accuracy, "spike solutions", value/effort tradeoffs).  
+- ✅ Strong on *practicality* (agent's 60% accuracy, "spike solutions", value/effort trade-offs).  
 - ✅ Uses relevant terms (*spike solution*, *Wardley mapping*, *stored prompts*).  
 - ❌ **"80% of work that is 20% of time"** is confusing → *rewrite as*: **"80% of the work delivers 20% of the value"** (classic Pareto).  
 
-(I have fixed this now, so won't work for youtube)
+(I have fixed this now, so won't work for YouTube)
 
 **Key fixes**:  
 1. Replace:  
