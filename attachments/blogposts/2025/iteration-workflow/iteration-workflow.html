@@ -1,0 +1,65 @@
+<h1 id="iteration-workflow">Iteration Workflow</h1>
+<h2 id="overview-diagram">Overview Diagram</h2>
+<p><img src="diagram-379696.svg" title="Mermaid diagram" /></p>
+<h2 id="detailed-flow">Detailed Flow</h2>
+<p><img src="diagram-529322.svg" title="Mermaid diagram" /></p>
+<h2 id="test-feedback-loop">Test Feedback Loop</h2>
+<p><img src="diagram-552910.svg" title="Mermaid diagram" /></p>
+<h2 id="file-flow">File Flow</h2>
+<p><img src="diagram-317854.svg" title="Mermaid diagram" /></p>
+<h2 id="key-concepts">Key Concepts</h2>
+<h3 id="json-primary-output">JSON-Primary Output</h3>
+<ul>
+<li><code>features.json</code> is the source of truth for project
+structure</li>
+<li><code>progress.json</code> tracks historical completion data</li>
+<li>Markdown files are generated summaries for human readability</li>
+</ul>
+<h3 id="test-feedback-loop-1">Test Feedback Loop</h3>
+<ol type="1">
+<li><strong>Iteration N</strong>: Test coverage analyzer finds gaps
+(P1-P4)</li>
+<li><strong>Fix Phase</strong>: P1/P2 gaps are fixed immediately
+(blocking)</li>
+<li><strong>Learning Phase</strong>: <code>test-guidance-updater</code>
+analyzes patterns</li>
+<li><strong>Iteration N+1</strong>: Testing guidance prevents recurring
+gaps</li>
+</ol>
+<h3 id="status-transitions">Status Transitions</h3>
+<pre><code>pending → in_progress → complete
+   ↑                        |
+   └────────────────────────┘
+         (next iteration)</code></pre>
+<h3 id="priority-levels">Priority Levels</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Priority</th>
+<th>Type</th>
+<th>Blocking?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P1</td>
+<td>Core functionality</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>P2</td>
+<td>Error handling</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>P3</td>
+<td>Edge cases</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>P4</td>
+<td>Domain-specific</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>

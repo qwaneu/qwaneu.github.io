@@ -47,7 +47,7 @@ I probably should have published it with these caveats, suggestion of more struc
 Generated diagrams
 ----
 
-Looking back, I asked Claude Code for diagrams of the process. The stored prompts are plenty of text, and a picture tells a thousand words. You can [look at the markdown, with the diagrams in text]() or browse the [html] or [pdf] that I generated from it.
+Looking back, I asked Claude Code for diagrams of the process. The stored prompts are plenty of text, and a picture tells a thousand words. You can [look at the markdown, with the diagrams in text](/attachments/blogposts/2025/iteration-workflow/iteration-workflow.md) or browse the [pdf](/attachments/blogposts/2025/iteration-workflow/iteration-workflow.md) that I generated from it.
 , I intentionally posted the last image, containing the json files and the markdown generated from it. The data is saying a lot about the process, and I could quickly see that it was accurate.
 
 Orginal question for this post
@@ -62,6 +62,15 @@ The original question was from Hugh Greene:
 > I should try that again. I have used that in the past to improve stored prompts, or create new ones. I did start this morning with having Claude Code generate a document explaining 'our' process. But you'd have to read that bottom to top, otherwise the reader might think we execute precise specifications from the beginning. It had strong vibes' of Royces' paper, with feedback loops that readers would ignore, because of how the document flows. That is where the image in the post comes from.
 
 What do you think?
+
+<aside>
+  <p>
+Practices are evolving. We are figuring things out, as are you. We are considering rebooting our newsletter, if there is interest. If you'd like to subscribe, drop us a line, and we will add you to the list, so that we can figure things out together. We're also up for free 30 mins chats.
+  </p>
+  <p><div>
+    <a href="/contact">Fill in the contact form to subscribe!</a>
+  </div></p>
+</aside>
 
 Bonus content - the prompt and response used to improve this post
 ===
