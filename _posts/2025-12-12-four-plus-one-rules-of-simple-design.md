@@ -73,6 +73,10 @@ The discourse that follows this quote is worth (re-)reading. As sense of ownersh
 - A [discussion about Once And Only Once on the C2 Wiki](https://c2.com/xp/OnceAndOnlyOnce.html).
 - Debasish Ghosh, [Habitability and Piecemeal Growth](https://debasishg.blogspot.com/2006/02/habitability-and-piecemeal-growth.html), ruminations on Richard Gabriel's concept of habitability of software
 - [Care about habitable code, and how to achieve it](https://bluefruit.co.uk/quality/care-about-habitable-code-how-achieve/) in embedded software, by Emily. No reference to Richard Gabriel, but does include some specific suggestions.
+- Mathias Verraes wrote a post about duplication and the "Don't Repeat Yourself" (DRY) principle: [DRY is about Knowledge. Code duplication is not the issue](https://verraes.net/2014/08/dry-is-about-knowledge/)
+
+*Updated on 5 January 2026:*
+- *added a link to Mathias Verraes's post on DRY*
 
 <aside>
 <h3>Let's keep things simple</h3>
