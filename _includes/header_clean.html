@@ -6,7 +6,7 @@ Parameters (for ribbon):
 - parenturl: url of parent page
 
 {% endcomment %}
-  <header class="content header-plain">
+<header class="content header-plain">
   <div class="name-plain" >
     <a href="/" >
       <img src="/images/qwan_logo_only_white.svg" alt="QWAN logo" />
@@ -14,14 +14,14 @@ Parameters (for ribbon):
   </div>
   <nav class="mainmenu-plain" role="navigation" aria-label="menu">
     <a href="/consulting">Consulting</a>
-    <a href="/training/">Training</a>
+    <a href="/training">Training</a>
     <a href="/blog">Blog</a>
     <a href="/clients">Clients</a>
     <a href="/partners">Partners</a>
     <a href="/#team">Team</a>
     <a href="/contact">Contact</a>
   </nav>
-  <nav class="ribbon ribbon--alpha" role="navigation" aria-label="breadcrumbs">
+  <nav class="ribbon ribbon--alpha {% if include.home %}ribbon--home{% endif %}" role="navigation" aria-label="breadcrumbs">
     <a class="ribbon__element" href="/">Home</a>
     {% if include.parent %} 
     <a class="ribbon__element" href="{{ include.parenturl }}">{{ include.parent }}</a>

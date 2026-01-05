@@ -4,7 +4,7 @@ layout: other-accessible
 ---
 
 
-**This registration form is for participants from the EU or EEA. If you are from outside the EU/EEA, please use our [UK registration form](/training/register-uk).**
+**This registration form is for participants from the EU or EEA. If you are from outside the EU/EEA, please use our [UK registration form](/register-uk).**
 
 **Terms & Conditions:**
 

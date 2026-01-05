@@ -1,7 +1,9 @@
 ---
 title: Introduction to Domain Driven Design
 layout: training-description
-summary: 'tackling software complexity'
+date: 2025-05-01
+tagline: "Making sense of software complexity"
+summary: "Domain-driven design is an approach to software development for complex needs by connecting the architecture and implementation to an evolving model of the problem domain. It enables an agile approach to complex software development by putting the domain model central."
 tags: [modelling, domain driven design, architecture, event storming]
 ---
 

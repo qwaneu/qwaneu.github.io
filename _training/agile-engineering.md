@@ -1,7 +1,9 @@
 ---
 title: Agile Engineering
 layout: training-description
-summary: Agile/Scrum provides great focus on delivering in short cycles. To keep on delivering quality software with confidence, you need to master agile engineering principles & practices.
+date: 2025-01-01
+tagline: "Deliver software with confidence & joy"
+summary: "Agile, Lean and Scrum provide great focus on delivering in short cycles. To keep on delivering quality software with confidence, you need to master agile engineering principles & practices."
 tags: [agile engineering, extreme programming, XP, TDD, test driven development, refactoring, unit testing, scrum developer, CI/CD, continuous integration, continuous delivery]
 redirect_from: "/agile-engineering"
 ---

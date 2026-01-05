@@ -1,6 +1,7 @@
 ---
 title: Domain Driven Design courses
 layout: other-accessible
+hide_in_index: true
 ---
 
 Our DDD courses are intensive and hands-on. We offer customized in-company courses, on-site and remote. We work with small groups up to 14 participants to ensure an optimal learning experience.

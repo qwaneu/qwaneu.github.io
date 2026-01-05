@@ -1,7 +1,8 @@
 ---
 title: Example Mapping Workshop
 layout: training-description
-summary: 'Spice up your refinement sessions.'
+tagline: "Spice up your refinement sessions"
+summary: "Do you have long, boring refinement sessions? Do you still run into surprises and lack of shared understanding when building the software? In this hands-on workshop, you will experience Example Mapping, a simple pen-and-paper technique to spice up your refinements."
 tags: [refinement, agile planning, user stories, specification by example, behaviour driven development, BDD]
 ---
 

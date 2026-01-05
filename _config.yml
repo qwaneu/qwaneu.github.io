@@ -66,3 +66,9 @@ kramdown:
     syntax_highlighter_opts:
         block:
             line_numbers: true
+
+collections:
+  training:
+    output: true
+  workshops:
+    output: true
