@@ -74,9 +74,10 @@ The discourse that follows this quote is worth (re-)reading. As sense of ownersh
 - Debasish Ghosh, [Habitability and Piecemeal Growth](https://debasishg.blogspot.com/2006/02/habitability-and-piecemeal-growth.html), ruminations on Richard Gabriel's concept of habitability of software
 - [Care about habitable code, and how to achieve it](https://bluefruit.co.uk/quality/care-about-habitable-code-how-achieve/) in embedded software, by Emily. No reference to Richard Gabriel, but does include some specific suggestions.
 - Mathias Verraes wrote a post about duplication and the "Don't Repeat Yourself" (DRY) principle: [DRY is about Knowledge. Code duplication is not the issue](https://verraes.net/2014/08/dry-is-about-knowledge/)
-
+- [The wet codebase](https://www.deconstructconf.com/2019/dan-abramov-the-wet-codebase) by Dan Abramov (of React); he talks about the benefits and costs of abstraction: *"It is hard to explain all the trade-offs to then next generation, they don't have the context to decide when it is a bad idea. (...) When we teach something to the next generation we should explain what are the benefits, and what we are trading away."*
+  
 *Updated on 5 January 2026:*
-- *added a link to Mathias Verraes's post on DRY*
+- *added references, a link to Mathias Verraes's post on DRY and a link to Dan Abramov's post on Wet codebase*
 
 <aside>
 <h3>Let's keep things simple</h3>
