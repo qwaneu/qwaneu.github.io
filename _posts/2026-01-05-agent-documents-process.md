@@ -47,8 +47,9 @@ I probably should have published it with these caveats, suggestion of more struc
 Generated diagrams
 ----
 
-Looking back, I asked Claude Code for diagrams of the process. The stored prompts are plenty of text, and a picture tells a thousand words. You can [look at the markdown, with the diagrams in text](/attachments/blogposts/2025/iteration-workflow/iteration-workflow.md) or browse the [pdf](/attachments/blogposts/2025/iteration-workflow/iteration-workflow.md) that I generated from it.
-, I intentionally posted the last image, containing the json files and the markdown generated from it. The data is saying a lot about the process, and I could quickly see that it was accurate.
+Looking back, I asked Claude Code for diagrams of the process. The stored prompts are plenty of text, and a picture tells a thousand words. So [browse the pdf of the iteration workflow](/attachments/blogposts/2025/iteration-workflow/iteration-workflow.pdf) or [read the markdown](/attachments/blogposts/2025/iteration-workflow/iteration-workflow.md), with the diagrams in text.
+
+On LinkedIn, I intentionally posted the last image, containing the json files and the markdown generated from it. The data is saying a lot about the process, and I could quickly see that it was accurate.
 
 Orginal question for this post
 ----
