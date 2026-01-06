@@ -9,38 +9,42 @@ author: Marc Evers
 image: 
 ---
 
-In any complex systems, there is no neutral position. One cannot take a neutral stance in a group, team, with a partner, ... When I am
+In any complex systems, there is no neutral position. We cannot take a neutral stance in a complex system like a team, group, organisation, or with a partner.When I am
 part of a system, I will have influence on this system, whether I intend it or
-not. Moving myself 'outside' the system, standing on the sidelines, "just
-watching", not wanting to be part of it, does not remove me from the system.
-Instead taking this stance will often have unintended consequences.
+not. Even if I try to place myself 'outside' the system, or stand on the sidelines, or "just watch", I'm still part of the system. "Standing on the sideline" will influence the others, usually with [unintended consequences](/2025/11/08/unintended-consequences).
 
-This also means that as a consultant, I might think I'm standing on the sidelines, observing the team, now and then prodding them to bring about change. In practice I am part of this, I need to be part of this to have influence. I'm in the system, even if I'm pretending to be standing outside. So when taking the 'outside' stance, I will influence the team even when I'm not prodding.
+## Doing nothing is doing something
 
-The system will also influence me! I'm part of the system, influencing is mutual. Again, Weinberg wrote about this in Secrets of Consulting, as *"Prescott's Pickle Principle"* - seeing consultants as cucumbers in an organization jar of brine ;) 
+As I wrote in [The subtle art of non-intervention](/2025/12/08/art-of-non-intervention), not acting can also be an intervention. So deciding to do nothing will have consequences, whether we intend it or not.
 
-> "Cucumbers get more pickled than brine gets cucumbered. A small system that tries to change a big system through long and continued contact is more likely to be changed itself."
+As a consultant or facilitator, I might think I'm standing on the sidelines, observing the team, now and then prodding them to bring about change. In practice I become part of this system. I need to be part of a system to have influence. So I'm in, even if I'm pretending to be standing on the outside. So when I think I'm "just observing", I am already changing the system dynamics.
 
-"Change is for other people" we sometimes joke as consultants, sometimes we think we're independent and it's just the organization needing to change. But we know that change is as much for us consultants as well.
+We have impact on a (complex) system by engaging with it, and only by engaging. We will become a part of that whole, for some time. Being too much on the sideline means we will not have lasting impact.
 
-The system touches us; whatever is happening, it will affect us; we will feel this. This can be exhausting (drowning in other people's problems) but if you learn to regulate this, it can provide a lot of information.
+## Influence is reciprocal
 
-We have impact on a (complex) system by engaging with it, and only by engaging. We will become a part of that whole, for some time. Too much on the sideline means we will not have lasting impact.
+The system will also influence me! The influencing is mutual. Gerald M. Weinberg wrote about this in [Secrets of Consulting](https://geraldmweinberg.com/Site/Consulting_Secrets.html), as *"Prescott's Pickle Principle"* - consultants are like cucumbers in a jar of organizational brine ;)
 
-Some more quotes (as cited by Abeba Birhane in her ["In defence of uncertainty" presentation](https://www.youtube.com/watch?v=YAkPbjx-gNc)):
+> Cucumbers get more pickled than brine gets cucumbered. A small system that tries to change a big system through long and continued contact is more likely to be changed itself.
+
+"Change is for other people" we sometimes joke as consultants, pretending we're independent and it's just the organization that needs to change. But we know that change is as much for us consultants as well.
+
+The system touches us. Whatever is happening, it will affect us. We will feel this. It can be exhausting (drowning in other people's problems), but if you learn to regulate this, it can provide a lot of information.
+
+To close, two more quotes (cited by Abeba Birhane in her [In defence of uncertainty](https://www.youtube.com/watch?v=YAkPbjx-gNc) presentation):
 
 > Objectivity is a subject's delusion that observing can be done without him. Invoking objectivity is abrogating responsibility &mdash; hence its popularity.  
-> --Heinz von Foerster
+> -- *Heinz von Foerster*
 
 > Without the observer, there is nothing.  
-> --Humberto Maturana
+> -- *Humberto Maturana*
 
 
 <aside>
-<h3>TBD</h3>
-<p>TBD
+<h3>We're in it together</h3>
+<p>We don't inflict change on others, but we collaborate, focusing on outcomes that fit your situation.
 </p>
 <div>
-<a href="/contact">Talk to us</a>
+<a href="/contact">Let's have a chat</a>
 </div>
 </aside>
