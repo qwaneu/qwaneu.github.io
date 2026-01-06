@@ -6,7 +6,7 @@ tags:
   - systems thinking
   - facilitation
 author: Marc Evers
-image: 
+image: /attachments/blogposts/2026/ananth-pai-rUlbvGtJLj8-unsplash.jpg
 ---
 
 In any complex systems, there is no neutral position. We cannot take a neutral stance in a complex system like a team, group, organisation, or with a partner.When I am
@@ -20,6 +20,9 @@ As I wrote in [The subtle art of non-intervention](/2025/12/08/art-of-non-interv
 As a consultant or facilitator, I might think I'm standing on the sidelines, observing the team, now and then prodding them to bring about change. In practice I become part of this system. I need to be part of a system to have influence. So I'm in, even if I'm pretending to be standing on the outside. So when I think I'm "just observing", I am already changing the system dynamics.
 
 We have impact on a (complex) system by engaging with it, and only by engaging. We will become a part of that whole, for some time. Being too much on the sideline means we will not have lasting impact.
+
+![Close-up of pickled sliced cucumbers in a jar](/attachments/blogposts/2026/ananth-pai-rUlbvGtJLj8-unsplash.jpg)
+{: class="post-image post-image-30" }
 
 ## Influence is reciprocal
 
@@ -39,6 +42,7 @@ To close, two more quotes (cited by Abeba Birhane in her [In defence of uncertai
 > Without the observer, there is nothing.  
 > -- *Humberto Maturana*
 
+*Credits: Photo © 2017 Ananth Pai - [sliced cucumber and green leafy vegetables in container with moist](https://unsplash.com/photos/sliced-cucumber-and-green-leafy-vegetables-in-container-with-moist-rUlbvGtJLj8)*
 
 <aside>
 <h3>We're in it together</h3>
