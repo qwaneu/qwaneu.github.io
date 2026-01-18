@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Step away from the prompt to sustain your pace
-tags:
-- LLM Heuristics 
+tags: 
+- LLM 
+- Heuristics 
 author: Willem van den Ende
 image: /attachments/blogposts/2025/step-away-from-prompt.svg 
 ---
@@ -26,8 +27,20 @@ I have better, incremental and iterative tooling, but still, having an opinion a
 
 While wrapping up editing for this post, I found [Armin Ronacher on a similar note](https://lucumr.pocoo.org/2026/1/18/agent-psychosis/). Armin Ronacher writes: "Maybe the answer is that we need better tools — better ways to signal quality, better ways to share context, better ways to make the AI’s involvement visible and reviewable". This is what we are working on through [Moldable development](/blog-by-tag#tag-moldable-development). Armin also mentions stepping away.
 
-This post has been a long time coming. I saw people in spring last year complaining of informational overload, and a kind of mental whiplash. "What just happened?". And not being able to stop was a common theme on the Claude Code Reddit. (I am not on there at the moment, I cut back on social media).
+I want to post more about recent experiments, and getting to what I feel is a good place with what Kent Beck calls 'whishcraft' - AI augmented development. I need a few more of what I call 'anchor posts' like this to not come across unmoored. Rob Bowley's post on [techno realists] (https://blog.robbowley.net/2025/05/12/we-need-a-rise-in-the-voices-of-techno-realists/) is good reading while I write the other ones. Working with coding assistants can accelerate. Accelerate positively _and_ negatively.
+
+Afterword
+---
+
+This post has been a long time coming. I saw people in spring last year complaining of informational overload, and a kind of mental whiplash. "What just happened?". And not being able to stop was a common theme on the Claude Code Reddit. (I am not on there at the moment, I cut back on social media). And I wrote this post, because I need to remind myself of this. I got hooked on programming early, and burnt out early, in secondary school. I have occasionally learnt how to manage my energy better.
 
 We need better tools, certainly. But as they say on Reddit: Touch grass. A clear head will get you the situational awareness you need. 
 
 
+<aside>
+  <h3>Deliver sustainably</h3>
+  <p>Do you find it hard to stop developing software? Take some time to have a coffee with us, and talk about the good and bad things</p>
+  <p><div>
+    <a href="/contact">Lets' chat</a>
+  </div></p>
+</aside>
