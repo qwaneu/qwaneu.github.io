@@ -16,7 +16,7 @@ They/We tend to be like [Bob the Builder](https://en.wikipedia.org/wiki/Bob_the_
 
 This tends to make our stakeholders happy, at least initially. In our drive to build and fix stuff and make others happy, we skip over the questions if the thing needs fixing at all. Is the thing asked actually solving the problem? What is the problem behind the problem and should we be focusing on that?
 
-We don't questions assumptions but rush to the goal.
+We don't questions assumptions enough, instead we rush to the goal - let's fix it.
 
 So instead of replying "yes we can!" (in words or deeds), it is often more useful to start asking questions:
 - what value will it bring to you/our users/our customers/... if we build this?
