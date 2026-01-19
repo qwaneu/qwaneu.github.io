@@ -27,7 +27,8 @@ I have better, incremental and iterative tooling, but still, having an opinion a
 
 While wrapping up editing for this post, I found [Armin Ronacher on a similar note](https://lucumr.pocoo.org/2026/1/18/agent-psychosis/). Armin Ronacher writes: "Maybe the answer is that we need better tools — better ways to signal quality, better ways to share context, better ways to make the AI’s involvement visible and reviewable". This is what we are working on through [Moldable development](/blog-by-tag#tag-moldable-development). Armin also mentions stepping away.
 
-I want to post more about recent experiments, and getting to what I feel is a good place with what Kent Beck calls 'whishcraft' - AI augmented development. I need a few more of what I call 'anchor posts' like this to not come across unmoored. Rob Bowley's post on [techno realists] (https://blog.robbowley.net/2025/05/12/we-need-a-rise-in-the-voices-of-techno-realists/) is good reading while I write the other ones. Working with coding assistants can accelerate. Accelerate positively _and_ negatively.
+I want to post more about recent experiments, and getting to what I feel is a good place with what Kent Beck calls 'whishcraft' - AI augmented development. I need a few more of what I call 'anchor posts' like this to not come across unmoored. Rob Bowley's post on 
+[techno realists](https://blog.robbowley.net/2025/05/12/we-need-a-rise-in-the-voices-of-techno-realists/) is good reading while I write the other ones. Working with coding assistants can accelerate. Accelerate positively _and_ negatively.
 
 Afterword
 ---
