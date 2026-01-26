@@ -347,10 +347,6 @@ $phone: "screen and (max-width: 768px)";
 }
 
 @media handheld, only screen and (max-width: 480px) {
-  .post-wrap .post {
-    padding: 1em !important;
-  }
-
   .post-wrap .post-meta li a {
     margin: 0;
     width: 100%;
@@ -398,6 +394,5 @@ $phone: "screen and (max-width: 768px)";
 .blog-summary-img img {
   max-width: 90%;
   max-height: 10em;
-  width: 90%;
   margin-bottom: 1em;
 }
