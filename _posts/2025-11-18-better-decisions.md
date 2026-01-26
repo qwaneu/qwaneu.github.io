@@ -27,7 +27,7 @@ Below is a view we made last week, that I'll also discuss on Thursday in more de
 
 ![Thumbnails of files, longer chunks indicate longer files](/attachments/blogposts/2025/moving-bunnies-microprint-src.png)
 
-What I like about this view, is that it shows the forest *and* the trees. Or some of it. I can click on a square and jump straight through to the source. I showed this view to Wouter, and we looked at one of the larger test files, the refactorings were quite obvious - introduce some builders, and see the tests become more glanceable.
+What I like about this view, is that it shows the forest *and* the trees. Or some of it. I can click on a square and jump straight through to the source. I showed this view to Wouter, and we looked at one of the larger test files, the refactorings were quite obvious - introduce some builders, and see the [tests become more glanceable](https://www.qwan.eu/2021/09/27/tdd-glanceable-tests.html).
 
 This is at a point where the codebase is still relatively small, but when development is fast, you may easily miss things.
 
@@ -41,13 +41,22 @@ I have run this on some other codebases since I started writing this post on Fri
 
 For Thursday's session we also made some dependency views - both what you'd expect with boxes and arrows, and others that I will go through. Hopefully we can get some participants up and running with glamorous toolkit, and they can code along. 
 
-I love places like Swindon Developers Meetup and XP Days that make space for experimental sessions. So I hope you join me this Thursday at 6:30PM in Swindon, or next week at [XP Days Benelux](/2025/09/01/extreme-vibe-coding.html).
 
-What's next
+Further reading and viewing
+----
+
+[Glanceable tests](https://www.qwan.eu/2021/09/27/tdd-glanceable-tests.html) is one of our favourite [TDD Heuristics](/blog-by-tag#tag-test-driven-development). Microprints are a good way to see where tests might not be clanceable, and intervene.
+
+[Microprints, the movie](/2025/11/27/microprints-the-movie.html) Stephan Eggermont and I used microprints to investigate one of my exercise rounds for eXtreme Vibecoding.
+
+
+What was  next
 -----
  
-[Register for the session of course](https://www.meetup.com/swindon-software/events/311751879/). 
- Or if you can't make it, leave me a message here or on LinkedIn and I'll record a video separately.
+I love places like Swindon Developers Meetup and XP Days that make space for experimental sessions. We had a good turnout there, online and at [XP Days Benelux eXtreme vibe Coding](/2025/09/01/extreme-vibe-coding.html).
+
+[Meetup page here](https://www.meetup.com/swindon-software/events/311751879/). 
+
 
 
 

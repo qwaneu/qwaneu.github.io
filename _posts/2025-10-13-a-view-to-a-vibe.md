@@ -145,8 +145,12 @@ After an initial investment, I believe that [moldable development](https://molda
 
 # Further reading 
 
+- [Know where to Stop](/2025-10-22-know-when-to-stop.md) - a follow up post we made on determining when we have enough tools and insight to continue in a sustainable way.
+
 - Tudor Girba - [Developers spend most of their time figuring the system out](https://lepiter.io/feenk/developers-spend-most-of-their-time-figuri-9q25taswlbzjc5rsufndeu0py/)
 - Tudor Girba, Simon Wardley - [Moldable Development](https://moldabledevelopment.com/)
+
+
 
 # Credits
 
