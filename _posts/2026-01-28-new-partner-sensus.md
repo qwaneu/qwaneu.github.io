@@ -1,6 +1,6 @@
 ---
 layout: post
-title: New partner: Sensus
+title: New partner - Sensus
 tags:
 - moldable development
 author: Willem van den Ende
