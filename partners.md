@@ -23,6 +23,19 @@ title: Partners
       <a href="https://buffadoo.nl" target="_blank">Read more about Buffadoo</a></p>
   </div>
 
+
+  <div>
+    <p><img src="/images/partners/sensus-logo.png"/></p>
+  </div>
+  <div>
+    <p>Sensus makes sense of software development, by doing it, and helps others do it. Sensus does consulting and development of moldable tools and assessments.</p>
+    <p>
+    Sensus partners with us on architecture review, moldable development, legacy code reengineering, and lean startup with AI Augmented Development.
+    </p>
+    <p>
+      <a href="https://sensus.nl/architecture-reviews" target="_blank">Read more about Sensus</a></p>
+  </div>
+
   <div>
     <p><img src="/images/partners/iota.digital.png"/></p>
   </div>
