@@ -33,7 +33,7 @@ title: Partners
     Sensus partners with us on architecture review, moldable development, legacy code reengineering, and lean startup with AI Augmented Development.
     </p>
     <p>
-      <a href="https://sensus.nl/architecture-reviews" target="_blank">Read more about Sensus</a></p>
+      <a href="https://domeinmodel.nl/architecture-review/" target="_blank">Read more about Sensus</a></p>
   </div>
 
   <div>
