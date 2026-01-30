@@ -7,13 +7,11 @@ author: Willem van den Ende, Marc Evers
 image: /attachments/blogposts/2023//img_3321.jpeg 
 ---
 
-We found this draft while shuttding down `stigmergy.blog`. This workshop happened in November 2023. It got stuck in the draft box, because of perfectionism. Stigmergy is something that we take with us as we co-create systems of software and of work, but have not found other conferences or user groups to run the workshop at. A micro site for stigmergy was an experiment, it seems more productive to continue with Stigmergy here.
+We found this draft while shutting down `stigmergy.blog`. This workshop happened in November 2023. It got stuck in the draft box, because of perfectionism. Stigmergy is something that we take with us as we co-create systems of software and of work, but have not found other conferences or user groups to run the workshop at. A micro site for stigmergy was an experiment, it seems more productive to continue with Stigmergy here.
 
 On perfectionism: we would have liked to add more notes per story, but because we were so busy facilitating could not remember enough details when we got around to do the writing. Very much a luxury problem. We are grateful for all the contributions, and if you were there, and want to add details, we are happy to co-edit a follow up post with that particular story.
 
 Marc Evers and Willem van den Ende ran a oversubscribed stigmergy workshop at XP Days Benelux last week. They turned people back at the door. They had seven tables, and seven stories, with some were easier fits for stigmergy than others.
-
-![workshop participants discussing around tables](/attachments/blogposts/2023//image.jpg)
 
 Groups had lively discussions. They focused on facilitation, making sure everyone got their say. There was a good range of backgrounds, roles, and topics in the room.
 
