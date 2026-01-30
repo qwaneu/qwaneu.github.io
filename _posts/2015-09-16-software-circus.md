@@ -18,7 +18,7 @@ the picture).
 
 And some interesting sessions, in chronological order.
 
-### Prometheues - metrics that scale down and up
+### Prometheus - metrics that scale down and up
 
 I've used or tried to use several metrics solutions, most of them seem
 fine if you scale up (i.e. you can have someone maintain them), and most
@@ -28,7 +28,7 @@ showing it, which is separate from collecting it. That is great once you
 know what you're doing, but for getting started, not so much.
  
 [Robert Jacob](http://softwarecircus.io/robert-jacob/) ran a workshop on
-wednesday introducing [Prometheus](https://github.com/prometheus). That (wonder!) worked out of the box,
+Wednesday introducing [Prometheus](https://github.com/prometheus). That (wonder!) worked out of the box,
 I had it set up monitoring my freshly baked haskell web service in an
 hour or so. Prometheus has support for efficiently pushing data from a
 server or service when there is a lot of it, but also supports getting
@@ -39,7 +39,7 @@ nginx](https://github.com/discordianfish/nginx_exporter) or a host
 machine.
 
 If you want to have a look, [this
-prometheus review](http://rancher.com/docker-monitoring-continued-prometheus-and-sysdig/)
+Prometheus review](http://rancher.com/docker-monitoring-continued-prometheus-and-sysdig/)
 looks like a reasonable introduction.
 
 ### No slides, no process, no projects, no premises.
@@ -55,7 +55,7 @@ with it yet.
 [Arnoud Vermeer](http://softwarecircus.io/arnoud-vermeer/) gave some
 brutally honest insights in what goes on in running, and trying to
 automate, dispersed data centres with a varied infrastructure. Not directly
-appliccable to what we do on a day-to-day basis, but interesting to see
+applicable to what we do on a day-to-day basis, but interesting to see
 what goes in the kind of infrastructure that all of us use on a daily
 basis. 
 
@@ -82,7 +82,7 @@ heard about unikernels before, this made it a lot more concrete.
 
 Unikernels allow you to build tiny virtual machines that only contain
 the minimal kernel and OS support that an application needs. This means
-you can e.g. build a VM in just 24MB, I don't expect to find a linux distribution
+you can e.g. build a VM in just 24MB, I don't expect to find a Linux distribution
 of that size. If your service doesn't require a file system, let it use
 a kernel without file system support, and an OS without the 'ls' command
 etc.
@@ -94,7 +94,7 @@ back to a single git repository, e.g. on a developers' laptop.
  
 ### Rediscovering the command line
 
-The more I use unix, the more I appreciate its' tools and how they fit
+The more I use unix, the more I appreciate it's tools and how they fit
 together. Unix allows you to treat the internet (or github) as a giant
 scrapheap, and assemble solutions made from what ever programming
 language the developers who made the tool feel like. Think about it:  [Command-line tools can be 235x
@@ -104,7 +104,7 @@ cluster](http://aadrake.com/command-line-tools-can-be-235x-faster-than-your-hado
 [Steve Freeman](http://softwarecircus.io/steve-freeman/) ranted
 enthusiastically about how they built a system to index and filter a
 large set of PDF documents from unix pipes and filters instead of e.g.
-hadoop, and how the resulting solution was much smaller and simpler than
+Hadoop, and how the resulting solution was much smaller and simpler than
 what they had planned initially.
 
 I find that Docker encourages command line tools even more. If you want
@@ -117,11 +117,11 @@ Python and Ruby).
 
 Steve also made the argument, that a lot of unix tools were written at a
 time when computers had significantly fewer resources, and are therefore
-much more highly optimized than e.g. hadoop. 
+much more highly optimized than e.g. Hadoop. 
 
 Sometimes I think spinning up virtual machines is just too easy these days. If money isn't an object, at least take into consideration the amount of power and water (for cooling) data centres consume. Then look at `xargs` and friends, and consider how satisfying it can be to get a result quickly.
 
-### Barbeque and nibbles
+### Barbecue and nibbles
 
 Not a session per se, but deserves a mention. Catering for 200+ people
 is not easy, and my expectations for food at conferences is sufficiently

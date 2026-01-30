@@ -32,7 +32,7 @@ necessary. One thing we strive for is *glanceable tests*.
 > 
 > From: [Dictionary.com](https://www.dictionary.com/browse/glanceable)
 
-In this installment of our [Series on TDD
+In this instalment of our [Series on TDD
 heuristics](/blog-by-tag#tag-test-driven-development), we'll discuss some of the
 micro trade-offs that go into making tests glanceable.
 
@@ -45,7 +45,7 @@ PureScript.
 ```haskell
 placeSpec = do
  describe "A Place" do
-   it "implements Eq on all its' fields" $
+   it "implements Eq on all it's fields" $
      quickCheck \(r :: Place) -> r === r
    describe "converts itself into human readable text" do
      it "is never empty" do
@@ -321,7 +321,7 @@ _This is a post in our [series on Test Driven Development](/blog-by-tag#tag-test
 
 <aside> <p>Writing glanceable tests is a skill that becomes better with
   practice. Join us in one of our Test Driven Development course to learn by
-  doing. </p> <p><div> <a href="/training/test-driven-development">Check
-  availability</a> </div></p> </aside>
+  doing. </p> <p> <a href="/training/test-driven-development">Check
+  availability</a> </p> </aside>
 
 ![xeyes screenshot](/attachments/blogposts/2021/tdd/xeyes-2.png)

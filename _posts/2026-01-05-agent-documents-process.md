@@ -76,7 +76,7 @@ Practices are evolving. We are figuring things out, as are you. We are consideri
 Bonus content - the prompt and response used to improve this post
 ===
 
-There was a TODO at the bottom of the post, to add an image, plus Hugh Greene's question and my initial response on LinkedIn. I run qwen3-thinking transparently in my writing environment, locally. it will take the last part of the text as a prompt, and write its' answer, by default, in the text below the question. 
+There was a TODO at the bottom of the post, to add an image, plus Hugh Greene's question and my initial response on LinkedIn. I run qwen3-thinking transparently in my writing environment, locally. it will take the last part of the text as a prompt, and write it's answer, by default, in the text below the question. 
 
 I haven't done much with language models to support my writing yet, so I though you might find this interesting.
 

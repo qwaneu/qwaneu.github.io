@@ -38,7 +38,7 @@ As a consequence, my drawing sucks less. It is good enough to be accepted by col
 
 ![a simple cartoon person. the sloppily unclosed circle suggests a flop of hair](/attachments/blogposts/2023/shade_circle.svg)
 
-Not closing circles perfectly sometimes works as its' own effect.
+Not closing circles perfectly sometimes works as it's own effect.
 
 ## What I learnt about warmups in general 
 
@@ -49,8 +49,7 @@ What do you do for warmups? What do you get out of it?
 <aside>
 <h3>Come see us at XP Days Benelux this week</h3>
 <p>Attend our warmups workshop and share your warmup with us! There are still tickets for XP Days, there is a great line up of sessions and attendees.</p>
-<p></p>
-<div> 
+<p> 
 <a href="https://www.propile.xpdaysbenelux.org/public/session/view/9dlCQJPzPzfHIvn4SDxQ">Join the workshop</a>
-</div>
+</p>
 </aside>
