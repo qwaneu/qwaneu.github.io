@@ -48,7 +48,7 @@ To close, two more quotes (cited by Abeba Birhane in her [In defence of uncertai
 <h3>We're in it together</h3>
 <p>We don't inflict change on others, but we collaborate, focusing on outcomes that fit your situation.
 </p>
-<div>
+<p>
 <a href="/contact">Let's have a chat</a>
-</div>
+</p>
 </aside>

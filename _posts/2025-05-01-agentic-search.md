@@ -118,9 +118,9 @@ Increase the power of the model as needed. Start with a small one, pick the next
 
 Example:
 
-**Search** For this post I accidentally started out with qwen 3 0.6B, a tiny model. The results were funny, but if and when it produced links, they were all to [example.com](example.com), although some of the paths after it looked plausble ish. So for real results I mostly used [hf.co/unsloth/Qwen3-30B-A3B-GGUF:Q5_K_M](https://huggingface.co/unsloth/Qwen3-30B-A3B-GGUF). A mixture of experts model that, while big in data, only uses one 3B part of the model at a time. This runs on my Macbook with apple Max 3 system on a chip without running the fans, and it is fast enough.
+**Search** For this post I accidentally started out with qwen 3 0.6B, a tiny model. The results were funny, but if and when it produced links, they were all to [example.com](example.com), although some of the paths after it looked plausible ish. So for real results I mostly used [hf.co/unsloth/Qwen3-30B-A3B-GGUF:Q5_K_M](https://huggingface.co/unsloth/Qwen3-30B-A3B-GGUF). A mixture of experts model that, while big in data, only uses one 3B part of the model at a time. This runs on my MacBook with apple Max 3 system on a chip without running the fans, and it is fast enough.
 
-The last search I did was about Kagi search, and for some reason the 30B-A3B model kept coming back with answers in chinese. So I switched to qwen3:32b, which is a dense model. It is slower, spins up the fans, but produced results in English.
+The last search I did was about Kagi search, and for some reason the 30B-A3B model kept coming back with answers in Chinese. So I switched to qwen3:32b, which is a dense model. It is slower, spins up the fans, but produced results in English.
 
 **Programming questions** As mentioned in the introduction, I have used the qwen2-coder models a lot since last fall, on a vintage coding project. They have largely replaced search queries for details like 'How do I do <X> with Kafka in CSharp'. I generally started with the 7B model - that runs comfortably in the GPU of my framework laptop, or on my mac, and then increased to 14B or 32B. The 32B made the fans spin and I could go tidy up around the house while I did it. Qwen3 smaller models seem good, and the mixture of experts model also runs quite fast, so I will be playing with those.
 

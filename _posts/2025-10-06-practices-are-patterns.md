@@ -124,7 +124,7 @@ https://www.researchgate.net/publication/2464945_SCRUM_An_extension_pattern_lang
   <p>
 What practices fit your situation? Let's discover this together.
   </p>
-  <p><div>
+  <p>
     <a href="/contact">Contact us when you're interested!</a>
-  </div></p>
+  </p>
 </aside>

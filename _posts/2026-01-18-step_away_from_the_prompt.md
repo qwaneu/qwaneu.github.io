@@ -41,7 +41,7 @@ We need better tools, certainly. But as they say on Reddit: Touch grass. A clear
 <aside>
   <h3>Deliver sustainably</h3>
   <p>Do you find it hard to stop developing software? Take some time to have a coffee with us, and talk about the good and bad things</p>
-  <p><div>
-    <a href="/contact">Lets' chat</a>
-  </div></p>
+  <p>
+    <a href="/contact">Let's chat</a>
+  </p>
 </aside>

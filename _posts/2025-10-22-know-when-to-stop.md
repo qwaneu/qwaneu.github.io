@@ -56,7 +56,7 @@ Refactoring can be fast and light work, but it is often difficult to step away f
   <p>
 Do you have legacy or vibed code that could benefit from a fresh perspective in small steps?
   </p>
-  <p><div>
+  <p>
     <a href="/contact">Contact us for a chat over (virtual) coffee</a>
-  </div></p>
+  </p>
 </aside>

@@ -162,7 +162,7 @@ After an initial investment, I believe that [moldable development](https://molda
   <p>
 Do you have legacy or vibed code that could benefit from a fact-based birds-eye view?
   </p>
-  <p><div>
+  <p>
     <a href="/contact">Contact us for a chat over (virtual) coffee</a>
-  </div></p>
+  </p>
 </aside>

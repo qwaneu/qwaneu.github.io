@@ -78,7 +78,7 @@ As a side benefit of not intervening, you will get more time and peace. This is 
 <h3>Stop intervening! </h3>
 <p>Let's sit back and spend some time together; have a cup coffee and a chat, and find out how you can make lasting impact.
 </p>
-<div>
+<p>
 <a href="/contact">Talk to us</a>
-</div>
+</p>
 </aside>

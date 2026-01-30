@@ -67,7 +67,7 @@ Some guidelines when picking up a new practice:
   <p>
 What practices fit your situation? Let's discover this together, e.g. by running a Cynefin based workshop.
   </p>
-  <p><div>
+  <p>
     <a href="/contact">Contact us when you're interested!</a>
-  </div></p>
+  </p>
 </aside>

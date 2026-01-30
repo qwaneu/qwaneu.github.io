@@ -83,7 +83,7 @@ The discourse that follows this quote is worth (re-)reading. As sense of ownersh
 <h3>Let's keep things simple</h3>
 <p>Let's explore together how you can apply Simple Design in your code base, for instance through a coding dojo, hands-on course or us working with you on your system.
 </p>
-<div>
+<p>
 <a href="/contact">Talk to us</a>
-</div>
+</p>
 </aside>

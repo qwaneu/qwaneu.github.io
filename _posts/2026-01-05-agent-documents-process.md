@@ -68,9 +68,9 @@ What do you think?
   <p>
 Practices are evolving. We are figuring things out, as are you. We are considering rebooting our newsletter, if there is interest. If you'd like to subscribe, drop us a line, and we will add you to the list, so that we can figure things out together. We're also up for free 30 mins chats.
   </p>
-  <p><div>
+  <p>
     <a href="/contact">Fill in the contact form to subscribe!</a>
-  </div></p>
+  </p>
 </aside>
 
 Bonus content - the prompt and response used to improve this post
