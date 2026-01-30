@@ -10,7 +10,7 @@ author: Marc Evers
 image: /attachments/blogposts/2026/hex-arch-incremental.jpg
 ---
 
-Without coupling there is no working software, but how do we keep coupling manageable? In this post we will look at Hexagonal Architecture from a coupling perspective. In Hexagonal Architecture we decouple domain logic from frameworks and the outside world - but what does decoupling actually mean here?
+We wrote in [our previous post on coupling](/2026/01/23/on-coupling): without coupling there is no working software, but how do we keep coupling manageable? In this post we will look at Hexagonal Architecture from a coupling perspective. In Hexagonal Architecture we decouple domain logic from frameworks and the outside world - but what does decoupling actually mean here?
 
 ## Hexagonal Architecture recap
 
@@ -22,6 +22,8 @@ Ports can be driving (incoming) or driven (outgoing). For driven ports, the adap
 
 ![Hexagonal Architecture overview, showing driving and driven ports, with adapters and libraries being used](/attachments/blogposts/2020/hex-main.jpg)
 {: class="post-image post-image-70" }
+
+See our [earlier posts](/blog-by-tag#tag-ports-and-adapters) to learn more (*or [book a course](/training/hexagonal-architecture.html)* 😁)
 
 ## Hexagonal Architecture in practice
 
@@ -83,7 +85,7 @@ Hexagonal Architecture was introduced over 30 years ago. There is a more recent 
 
 - We have written a [series of posts about Hexagonal Architecture](/blog-by-tag#tag-ports-and-adapters)
 - [How Buildings Learn - What happens after they're built](https://archive.org/details/howbuildingslear00bran) by Stewart Brand; there is also a [BBC series of 6 episodes](https://www.youtube.com/playlist?list=PLxFD-wxU4CoNb-gCM0-P9fjJchwUIfkep)
-- Paul Dyson wrote 3 posts about [Shearing Layers in software delivery](https://pauldyson.wordpress.com/2010/04/06/shearing-layers-in-software-delivery-part-1-recognising-rates-of-change/)
+- Paul Dyson wrote three posts about [Shearing Layers in software delivery](https://pauldyson.wordpress.com/2010/04/06/shearing-layers-in-software-delivery-part-1-recognising-rates-of-change/)
 - Mark Dalgarno explores Shearing Layers in [Shearing layers in Organisational Transformation — half an idea](https://markdalgarno.medium.com/shearing-layers-in-organisational-transformation-half-an-idea-9ea85eff57cc)
 - Chad Fowler is writing a [series of posts on regenerative software](https://aicoding.leaflet.pub/), using the idea of Shearing Layers (or pace layering as it is called in his posts)
 
