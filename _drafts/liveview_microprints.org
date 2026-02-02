@@ -1,0 +1,90 @@
+* How does the human stay in the loop, while developing on their phone?
+
+Working with LLMs to create prototype web applications from my phone can be very satisfying. Having only a tiny terminal window can feel like painting my living room through the letterbox. Code scrolls by quickly, and I look at a few lines at a time, but loose sight of the whole quickly. So after half an hour of prototyping, I have to find time and space to sit at my desk with a microprint.
+
+I decided to port the microprint library made with Stephan Eggermont to inside a web application. So that I can keep an eye on the code as it develops.
+
+** "What am I seeing here?"
+
+This is a microprint, a shrunken view on a source file, living right in a web application I am working on. Mobile first. It shows the ten most recently changed files, and I can tap on a microprint to see details. This not only enables me to stay close to the code, it draws me in.
+
+Iterative work and short feedback cycles remain valuable, if not more so, with AI Augmented development.
+
+I can write instructions for a coding agent on my phone, using a terminal app, and I use a browser on the phone to do exploratory testing. Great for mobile first development. But there is a delay between prompting and inspecting the code.
+
+Stephan and I ain't afraid of no legacy code. But we'd rather keep our code well factored. This makes it easier for us to reason about (and presumably for agents as well, we need to do some more experiments to validate this). We don't believe you can review quality in, for things we develop beyond prototypes we invest heavily in static analysis and automated tests. 
+
+
+
+* Make the code glanceable, with syntax highlighting
+
+
+
+
+
+[[file:..//attachments/blogposts/2026/phoenix-microprints/syntax-highlighting.png]]
+
+
+
+* TODO inverse pyramid, explain what, then so what and now what
+
+Microprints on recent changes inside the web application as it develops makes changed code:
+
+- ready to hand
+- glanceable (and feedback on glanceable at line level)
+- (able to spot) patterns
+
+The microprints were the motivation. As I was working this out, quickly seeing what files just changed, at a glance, was valueable, as was seeing the source code.
+
+In between, adding microprints helps:
+
+- Seeing the size of files is surprising. Is it broken? Why is that test file so small. Oh, there are very few tests here. Work to do.
+- Deep nesting: "oh, that component has several concerns. There is markup mixed with code. Which might be ok for a small component, but this generates images and we need more tests because it does not yet work as expected. time to extract it and make some tests".
+
+
+We have microprints in Glamorous Toolkit, which is nice when we have the patience and time to sit down at a computer, and reflect on our code. I often have ideas when I am on the move, or lounging. With our current setup I can sometimes turn around a prototype for a visual communication tool in an hour or two, but then I don't look at the code. Well, I look at it later.
+
+This is not a massive problem. Stephan and I are a used to working with legacy code
+
+
+* Complete picture - title needed
+
+A month ago I set up a private network connection between my phone and a development VM at Hetzner. The VM was there to act as a sandbox, so I could run coding agents (for lack of a better name, for me they are feedback-through-code-as-a-medium tools) with less risk. 
+
+Before I could run a terminal on my phone, but could not see the application as it ran. Generating code is great, getting fast feedback is much greater. This did still leave a gap: viewing files in a terminal on a phone is less than ideal. So I did not look at the code very frequently. And we know what happens with delays.
+
+For our code that is moving towards production, Stephan and I are slowly gaining confidence in the checks and balances we have. Some checks run automatically, and fairly continuously - static analysers for code, unit and property based tests. We work in more controlled steps (often) when we know there might be race conditions, and practice TSTCPPW. We know we can do 'cool' things, and how to do them, but also that we need to do them carefully. So we focus on conversations and building just enough (of good quality - production ready prototypes) to have those conversations, and to take away from a conversation on our way to the next one.
+
+One thing that helps keeps us at balance while moving with some speed is microprints [TODO link]. We do these in l
+
+This screenshot I took when I was done. It shows some of the microprints code in phoenix liveview.
+
+This helps to keep in touch with the code. Here we have the component that does microprints. The deep nesting jumps out - turns out this is a very large function with html and svg markup mixed with elixir. The test file is right below.
+
+I thought the microprint rendering was broken. It might well be - there are very few tests. So the rendering is correct (up to a point - some things  I didn't detail out and I can see assumptions made in the code that I can drive out with tests).
+
+
+
+* where do images go?
+
+
+* Step 0: recently modfied files 
+
+Having the files by recency is nice, gives me longer view than commits without the noise of diffs. This lets me zoom out.
+
+[[file:..//attachments/blogposts/2026/phoenix-microprints/syntax-highlighting.png]]
+
+[[file:..//attachments/blogposts/2026/phoenix-microprints/file-size-and-main-symbol-color.png]]
+
+[[file:..//attachments/blogposts/2026/phoenix-microprints/left-indent.png]]
+
+[[file:..//attachments/blogposts/2026/phoenix-microprints/recent-files-but-not-refreshed.png]]
+
+
+
+[[file:..//attachments/blogposts/2026/phoenix-microprints/recent-files-live-reload.png]]
+
+[[file:..//attachments/blogposts/2026/phoenix-microprints/Screenshot 2026-01-31 at 10.30.47.png]]
+
+[[file:..//attachments/blogposts/2026/phoenix-microprints/source-code-viewer-and-deep-nesting.png]]
+
