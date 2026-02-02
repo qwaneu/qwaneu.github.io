@@ -57,6 +57,10 @@ body {
   line-height: 1.7em;
   color: #1c1c1c;
   font-weight: normal;
+
+  strong {
+    font-weight: bolder;
+  }
 }
 
 body, input, textarea {

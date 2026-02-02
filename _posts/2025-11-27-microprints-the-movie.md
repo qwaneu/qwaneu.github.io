@@ -8,7 +8,7 @@ author: Willem van den Ende
 image: /attachments/blogposts/2025/gt-microprints/microprints-the-movie.png
 ---
 
-We've finally launched our youtube channel! This was only on the to-do list for a decade or so. 
+We've finally launched our YouTube channel! This was only on the to-do list for a decade or so. 
 
 The first movie is [a brief demo of MicroPrints](https://www.youtube.com/watch?v=e66meXx2b3w). The first five minutes or so are us looking at code Willem made with Claude Code, as part of the Secret Santa exercise experiments for XP Days Benelux with Wouter Lagerweij. The second part is investigating some of the parsers available in Glamorous Toolkit through [MicroPrints](/2025/11/18/better-decisions.html). 
 

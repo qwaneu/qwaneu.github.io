@@ -83,7 +83,7 @@ User story mapping brings a number of benefits:
   <p><strong>Would you like to learn more?</strong></p>
   <p>We can guide you in applying user story mapping for your products, e.g. by facilitating a user story mapping workshop for your product. Our <em>User Story Mapping & Dimensional Planning workshop</em> lets your team experiment hands-on with story mapping.</p>
 
-  <p><div>
+  <p>
     <a href="/contact">Contact us when you're interested!</a>
-  </div></p>
+  </p>
 </aside>

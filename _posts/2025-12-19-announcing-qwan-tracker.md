@@ -64,11 +64,7 @@ So sometimes, you build what you need. I didn't plan to build yet another task t
   <p>
 Try a board. Become an early adopter. Have fun. Get things done.
   </p>
-  <p><div>
+  <p>
     <a href="https://qtracker.apps.sustainabledelivery.com/">Explore QWAN tracker</a>
-  </div></p>
+  </p>
 </aside>
-
-
-
-

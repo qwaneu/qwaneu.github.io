@@ -275,6 +275,12 @@ $phone: "screen and (max-width: 768px)";
         background-color: #16a085;
       }
     }
+      
+    @media  #{$phone} {
+      aside {
+        margin: 1em 0.2em 1em 0.2em;   
+      }
+    }
 
     table {
       width: 100%;

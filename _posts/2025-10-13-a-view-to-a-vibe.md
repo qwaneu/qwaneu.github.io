@@ -30,7 +30,7 @@ LLMs helped me go back and forth on my ideas. LLM Augmented Development, or LL-M
 
 The bottlenecks then shifts to assessing the output. We need exploratory testing to assess the output works. Putting on a product manager's hat and looking at the cycle time works, as long as we can go in one move from one stable state to another. A stable state is roughly: are the tests green, do the exploratory tests pass, are the tests of satisfactory quality? 
 
-If the assessment ends its' work in an unstable state, how do we know? And how many tries does it take to get back to a stable state? 
+If the assessment ends it's work in an unstable state, how do we know? And how many tries does it take to get back to a stable state? 
 
 We can e.g. read the code, discuss with the assistant, but it is slow going. We made two graphic web front-ends (each over 600 tests, 5000 and 30000 lines of production Javascript code as measured by [Cloc](https://github.com/AlDanial/cloc)). They each validated some of our assumptions. The larger one had some annoying defects. The smaller one could not evolve further. 
 
@@ -162,7 +162,7 @@ After an initial investment, I believe that [moldable development](https://molda
   <p>
 Do you have legacy or vibed code that could benefit from a fact-based birds-eye view?
   </p>
-  <p><div>
+  <p>
     <a href="/contact">Contact us for a chat over (virtual) coffee</a>
-  </div></p>
+  </p>
 </aside>

@@ -21,7 +21,7 @@ More predictable results
 
 Prompt adherence, the extent to which a large language model executes what was asked, is improving. But the larger and more complicated the prompt, the lower the chance that what you intend actually happens. Reducing the size of prompts by using tools, and only letting the language model deal with summaries of tools' output makes for smaller, faster and more efficient contexts. This leads to more predictable results.
 
-![Three bell curves, wide and low left, narrow and tall right. Labels: trial and error, extracted knowledge, reliable ools. Arrows above each bell curve indicates there is feed forward and feed back learning.](/attachments/blogposts/2025/stochastic-to-deterministic.svg)
+![Three bell curves, wide and low left, narrow and tall right. Labels: trial and error, extracted knowledge, reliable tools. Arrows above each bell curve indicates there is feed forward and feed back learning.](/attachments/blogposts/2025/stochastic-to-deterministic.svg)
 
 This comes at the cost of a lot of trial and error. [QWAN Tracker](https://qtracker.apps.sustainabledelivery.com/) feels like the first application where this works. But I carefully chose a solution that I guessed was in the training data (a task board) and a stack that I know could work well (Phoenix Liveview with Elixir). And then it felt like 90% process improvement, 5% Product and 5% Development.
 
@@ -64,7 +64,8 @@ Further reading
 <aside>
   <h3>Discovery call for TDD with AI</h3>
 <p>We are developing a "TDD with AI" course, and would love to do a discovery call with you, if you are a technical leader or software developer. <p></p>We want to learn more about your needs, pain points, trials and successes. All of our workshops and courses are made from customer needs, and seem to work well to meet them. Let's chat over a virtual coffee, so you can influence the next one to meet your needs? 
-  </p>  <p><div>
+  </p>  
+  <p>
     <a href="/consulting">Book a discovery call.</a>
-  </div></p>
+  </p>
 </aside>

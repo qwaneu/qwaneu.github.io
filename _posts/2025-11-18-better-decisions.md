@@ -45,7 +45,7 @@ For Thursday's session we also made some dependency views - both what you'd expe
 Further reading and viewing
 ----
 
-[Glanceable tests](https://www.qwan.eu/2021/09/27/tdd-glanceable-tests.html) is one of our favourite [TDD Heuristics](/blog-by-tag#tag-test-driven-development). Microprints are a good way to see where tests might not be clanceable, and intervene.
+[Glanceable tests](https://www.qwan.eu/2021/09/27/tdd-glanceable-tests.html) is one of our favourite [TDD Heuristics](/blog-by-tag#tag-test-driven-development). Microprints are a good way to see where tests might not be glanceable, and intervene.
 
 [Microprints, the movie](/2025/11/27/microprints-the-movie.html) Stephan Eggermont and I used microprints to investigate one of my exercise rounds for eXtreme Vibecoding.
 

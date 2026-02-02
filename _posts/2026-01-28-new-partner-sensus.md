@@ -17,9 +17,8 @@ Especially now that Sensus' is a QWAN partner. Marc suggested to invite Sensus, 
 Having active visuals like this, where you can zoom in, zoom out, click through to see details is very valuable to determine next steps for a software system. Sensus makes these for code, as well as for data. To us they may be interchangeable, to stakeholders a picture tells more than a thousand data points. 
 
 <aside>
-  <h3>Call us for sustainable delivery</h3>
+<h3>Call us for sustainable delivery</h3>
 <p>With Sensus as partner for moldable development and static analysis, and Buffadoo for Engineering Leadership and Innovation Amplifiers, we can quickly put together strong teams to move software systems forward, large and small. Book a discovery call to find out how we do this. We tend to hit the ground running with our experience and common sense, you gain insight as we go, and we can support you on an ongoing basis as well.
-</p>  <p><div>
-    <a href="/consulting">Book a discovery call.</a>
-  </div></p>
+</p>
+<p><a href="/consulting">Book a discovery call.</a></p>
 </aside>

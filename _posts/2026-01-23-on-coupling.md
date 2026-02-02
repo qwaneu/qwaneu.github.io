@@ -3,6 +3,7 @@ layout: post
 title: On coupling and cohesion
 tags:
   - architecture
+  - coupling
   - design
 author: Marc Evers
 image: /attachments/blogposts/2026/dan-dennis-9ycXTLGNMro-unsplash.jpg
@@ -28,7 +29,7 @@ So what do we mean by coupling? We like the idea of [connascence](https://en.wik
 >
 > **for some change, both would be required to change to maintain the overall correctness of the system**
 
-![Schematic visualization of software components (systems, modules, functions/types) and red lines visualizing coupling between them](/attachments/blogposts/2026/connascence-visualised.jpg)
+![Schematic visualization of software components (systems, modules, functions/types) and red lines visualizing coupling between them](/attachments/blogposts/2026/connascence-visualised-2.jpg)
 
 Roughly speaking, we want to put things that change together close to each other in a component or module, and separate things that change independently. In this way our components/modules become highly cohesive (closely coupled) while their dependencies with other parts are loosely coupled.
 
@@ -107,19 +108,15 @@ We might sound somewhat critical of decoupling attempts, but we're not saying de
 - [I Still Feel the Urge to Reuse Code (Even Though I Know It's Wrong)](https://www.linkedin.com/pulse/i-still-feel-urge-reuse-code-even-though-know-its-wrong-dilger-yphie/) by Martin Dilger
 - Another good read from this year is [Cohesion, Modules, and Hierarchies](https://ewolff.com/2026/01/08/cohesion-modules-hierachies.html) by Eberhard Wolff
 * Meilir Page-Jones, Fundamentals of OO Design in UML (1999)
-* Meilir Page-Jones, [Comparing Techniques by Means of Encapsulation and Connascence](www.researchgate.net/publication/220424550_Comparing_Techniques_by_Means_of_Encapsulation_and_Connascence), in Communications of the ACM Sept 1992 
-* Jim Weirich, [The Grand Unified Theory of Software Design](www.youtube.com/watch?v=NLT7Qcn_PmI), at the Acts as Conference 2009  
+* Meilir Page-Jones, [Comparing Techniques by Means of Encapsulation and Connascence](https://www.researchgate.net/publication/220424550_Comparing_Techniques_by_Means_of_Encapsulation_and_Connascence), in Communications of the ACM Sept 1992 
+* Jim Weirich, [The Grand Unified Theory of Software Design](https://www.youtube.com/watch?v=NLT7Qcn_PmI), at the Acts as Conference 2009  
 * [Connascence.io](https://connascence.io)
 * Vlad Khononov wrote a book on [Balancing Coupling in Software Design](https://vladikk.com/page/books/). We haven't read it yet, but it's on our list.
 
-<em>Credits: photo © 2020 by <a href="https://unsplash.com/@cameramandan83?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dan Dennis</a> on <a href="https://unsplash.com/photos/brown-rope-on-blue-wooden-table-9ycXTLGNMro?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></em>
-      
+<em>Photo "brown rope on blue wooden table" © 2020 by <a href="https://unsplash.com/@cameramandan83?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dan Dennis</a> on <a href="https://unsplash.com/photos/brown-rope-on-blue-wooden-table-9ycXTLGNMro?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></em>
 
 <aside>
 <h3>Decouple more deliberately!</h3>
-<p>We offer workshops in this area, e.g. explore coupling and cohesion through a hands-on workshop, based on connascence, or a hands-on workshop about the SOLID design principles.
-</p>
-<div>
-<a href="/contact">Let's have a chat</a>
-</div>
+<p>We offer workshops in this area, e.g. explore coupling and cohesion through a hands-on workshop, based on connascence, or a hands-on workshop about the SOLID design principles.</p>
+<p><a href="/contact">Let's have a chat</a></p>
 </aside>

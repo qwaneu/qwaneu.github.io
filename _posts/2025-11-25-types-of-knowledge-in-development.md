@@ -130,7 +130,7 @@ Thanks Willem, [Arien Kock](https://www.linkedin.com/in/arienkock), and [Patrick
   <p>
 Would you like to map the different types of knowledge in your organisation? Or are you interested in upskilling your teams? 
   </p>
-  <p><div>
+  <p>
     <a href="/contact">Contact us when you're interested!</a>
-  </div></p>
+  </p>
 </aside>

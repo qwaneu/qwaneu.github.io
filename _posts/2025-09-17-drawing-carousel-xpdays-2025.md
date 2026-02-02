@@ -8,7 +8,7 @@ author: Willem van den Ende
 image: /attachments/blogposts/2025/drawing-carousel.svg
 ---
 
-Rob Westgeest and Vera Peeters' Drawing Carousel workshop has been accepted for XP days benelux. It runs before close on Friday 28 November in Kapellerput, Heeze, NL. QWAN's sessions are [bookending the programme](https://xpdaysbenelux.org/programme-2025/), [eXtreme Vibe coding](2025/09/01/extreme-vibe-coding.html) is scheduled in the opening slot on Thursday.
+Rob Westgeest and Vera Peeters' Drawing Carousel workshop has been accepted for XP days Benelux. It runs before close on Friday 28 November in Kapellerput, Heeze, NL. QWAN's sessions are [bookending the programme](https://xpdaysbenelux.org/programme-2025/), [eXtreme Vibe coding](2025/09/01/extreme-vibe-coding.html) is scheduled in the opening slot on Thursday.
 
 ![Two cartoon characters, smiling, with a large pencil in the middle. Around it a circle and arrows indicating that the pencil and the chat rotates between the characters. The image hopes to evoke the impression of a drawing carousel.](/attachments/blogposts/2025/drawing-carousel.svg)
 
