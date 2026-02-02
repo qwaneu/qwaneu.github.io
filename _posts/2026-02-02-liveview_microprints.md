@@ -27,6 +27,8 @@ I can contract the source code view, to see several at once on my phone. This gi
 
 # The forest and the trees
 
+I already had the web frontends in our development environment set up in a Virtual Machine, accessible on my phone through a private network. This meant that, after some initial setup from a laptop, I could work with a coding agent on developing this tool.
+
 Having build this, partially while out and about on my phone, I like that I can see the forest (the ten most recent files), and the trees (individual source files). Since this is in the browser, we can re-use libraries to do source code highlighting, and hook into the runtime under Phoenix Liveview to process source code, detect change files etc.
 
 A nice touch I found to be able to select a part of the microprint, and have the source view scroll to the corresponding part. It also works the other way around - I can scroll in the source, and the highlight in the microprint moves with it. Forests are fractal, after all.
