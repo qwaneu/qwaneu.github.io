@@ -31,4 +31,3 @@ Using a bad name can also help to detach from a vague and possibly misleading in
 - We wrote about [naming tests](/2021/07/27/tdd-naming-tests.html).
 - [System of Names on the C2 Wiki](https://wiki.c2.com/?SystemOfNames) describes a pattern about naming: *"people often make assumptions based on the object names alone"* and *"revise the names of your objects to reflect their ultimate roles"*
 - Domain Driven Design's [Ubiquitous Language](https://www.jamesshore.com/v2/books/aoad1/ubiquitous_language) is broader than good names alone, but it starts with having good, unambiguous, shared names, for events, commands, domain objects, subdomains, bounded contexts.
-- The example sentence of this definition of prose provide pause for thought:
