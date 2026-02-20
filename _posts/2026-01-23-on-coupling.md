@@ -29,7 +29,7 @@ So what do we mean by coupling? We like the idea of [connascence](https://en.wik
 >
 > **for some change, both would be required to change to maintain the overall correctness of the system**
 
-![Schematic visualization of software components (systems, modules, functions/types) and red lines visualizing coupling between them](/attachments/blogposts/2026/connascence-visualised-2.jpg)
+![Schematic visualization of software components (systems, modules, functions/types) and red lines visualizing coupling between them](/attachments/blogposts/2026/connascence/connascence-visualised-2.jpg)
 
 Roughly speaking, we want to put things that change together close to each other in a component or module, and separate things that change independently. In this way our components/modules become highly cohesive (closely coupled) while their dependencies with other parts are loosely coupled.
 
