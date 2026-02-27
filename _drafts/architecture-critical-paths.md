@@ -8,7 +8,7 @@ tags:
   - quality attributes
   - ports and adapters
 author: Marc Evers
-image: 
+image: /attachments/blogposts/2026/criticalpaths-2.jpg
 ---
 
 A useful perspective in systems & software architecture is looking at what the critical capabilities and critical paths - how those capabilities are realized in the system architecture. This perspective helps to ask important questions e.g. about risks, quality requirements, and identify useful measures to guarantee critical capabilities.
