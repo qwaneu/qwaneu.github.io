@@ -1,6 +1,9 @@
 * How does the human stay in the loop, while developing on their phone?
 
-Working with LLMs to create prototype web applications from my phone can be very satisfying. Having only a tiny terminal window can feel like painting my living room through the letterbox. Code scrolls by quickly, and I look at a few lines at a time, but loose sight of the whole quickly. So after half an hour of prototyping, I have to find time and space to sit at my desk with a microprint.
+
+
+
+Working with LLMs to create prototype web applications from my phone can be very satisfying. Having only a tiny terminal window with a coding agent can feel like painting my living room through the letterbox. Code scrolls by quickly, and I look at a few lines at a time, but lose sight of the whole quickly. So after half an hour of prototyping, I have to find time and space to sit at my desk with a microprint.
 
 I decided to port the microprint library made with Stephan Eggermont to inside a web application. So that I can keep an eye on the code as it develops.
 
