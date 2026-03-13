@@ -11,7 +11,7 @@ author: Marc Evers
 image: /attachments/blogposts/2026/criticalpaths-2.jpg
 ---
 
-A useful perspective in systems & software architecture is looking at what the critical capabilities and critical paths - how those capabilities are realized in the system architecture. This perspective helps to ask important questions e.g. about risks, quality requirements, and identify useful measures to guarantee critical capabilities.
+A useful perspective in systems & software architecture is looking at the critical capabilities and critical paths, and how those capabilities are realized in the system architecture. This perspective helps to ask important questions about e.g.g risks, or quality requirements. This lets us identify measures to guarantee critical capabilities.
 
 # Architecture (bit of broader context)
 
@@ -27,7 +27,7 @@ needs consist of functions (what. 'use cases') + qualities (how well, e.g. how a
 
 Critical paths = critical capabilities that the systems offers and how these map onto the systems architecture
 
-critical capabilities are tied to user needs. Systems offer different capabilities, but these are not all as important. 
+Critical capabilities are tied to user needs. Systems offer different capabilities, but these are not all as important. 
 is about both functions and qualities - how well the system supports those functions
 e.g. what needs to be always available? or always consistent / correct (or: where the consequences of inconsistency, incorrectness, unavailability would be problematic)
 @@concrete voorbeelden zou handig zijn; 
@@ -72,10 +72,12 @@ A critical path usually touches frontend, backend and database, as depicted belo
 
 # What questions does this view help to ask?
 
-- correctness: what data mappings and transformations take place? how do you guard correctness? e.g. with a mix of automated tests
-- (example 1) the services call each other directly, synchronously; the availability of the capability as a whole is a function of the availabilities of the different parts involved; without additional stuff, the availability of the critical path will be less than the lowest availability of the involved parts
-- using async buses or queues changes the trade-offs, e.g. quicker responses vs longer inconsistency windows
-- what fallback options are available? (example 1) if the 2nd service is down, service 1 could use a cached value or a default value (trading availability for consistency); this degrades quality of the capabilities; what is still acceptable?
+- Correctness: what data mappings and transformations take place? how do you guard correctness? e.g. with a mix of automated tests
+- (example 1) the services call each other directly, synchronously; the availability of the capability as a whole is a function of the availabilities of the different parts involved; without additional *stuff* (TODO SMURF), the availability of the critical path will be less than the lowest availability of the involved parts
+- Using async buses or queues changes the trade-offs, e.g. quicker responses vs longer inconsistency windows
+
+(note: async buses also require higher capability of staff - need to understand more about risks in distributed systems and trade-offs. Many devs believe the cloud is just a bigger version of their computer.)
+- What fallback options are available? (example 1) if the 2nd service is down, service 1 could use a cached value or a default value (trading availability for consistency); this degrades quality of the capabilities; what is still acceptable?
 - (example 2) the 'intake' of data is decoupled from availability of the processing part; what if the processing part is (temporarily) unable to keep up with the data? this affects the critical path - what is still acceptable? (put queue monitoring in place for early detection); we can scale out the processing part if necessary
 - 'auditability' - if correctness is critical, how can we proof what happened at each step / part?
 - Are the different parts that are involved owned by a single team or multiple teams? Guaranteeing critical capabilities across team boundaries can become more difficult, especially when teams have different goals.
