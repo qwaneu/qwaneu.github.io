@@ -142,14 +142,14 @@ A team at another client maintained a single legacy system that generated all of
 the revenue for the client. The client set up a separate team to develop a
 replacement system from a clean sheet design. Eventually one of us guided the
 new team in making small improvements. The original team saw this, and started
-allocating fourty percent of their time to improvements. After half a year, the
+allocating forty percent of their time to improvements. After half a year, the
 original team was going so fast, that the company kept the 'legacy' product and
 repurposed the new development for another market.
 
 ## Further reading & watching
 
 When we sourced the Gandalf quote, there was a lively discussion on twitter
-around Ursula Le Guinn's take on male magicians like Gandalf: 
+around 's take on male magicians like Gandalf: 
 
 > The Gandalf model of wizardly power – the idea, dumbly replicated by J.K. Rowling’s Dumbledore, that asexual male mages hold the world in balance – was never compatible with Le Guin’s deep unease about overt expressions of power.  
 > -- as quoted in [It's not Jung, it's mine](https://www.lrb.co.uk/the-paper/v43/n02/colin-burrow/it-s-not-jung-s-it-s-mine)
