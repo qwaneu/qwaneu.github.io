@@ -5,13 +5,17 @@ tags:
   - systems thinking
   - productivity
   - learning
+  - knowledge management
 author: Marc Evers
-image: 
+image: /attachments/blogposts/2026/bruno-nascimento-PHIgYUGQPvU-unsplash.jpg
 ---
 
 "Practice makes perfect" - you become good at things you repeatedly do - . In fact, everything what we do is a form of practice. By doing, we reinforce and entrain patterns - patterns of thought, patterns of movement. This happens always, whether we are conscious about it or not, whether we want it or not.
 
 Why is this relevant? We think this perspective opens up opportunities and exposes some risks, for instance in software delivery. Seeing every activity as a practice and learning opportunity can accelerate skills growth. On the other hand, if every activity is a form of practice, it also means that developers are practising their skills on production software whether we like it or not - we'd better provide direction and safeguards. 
+
+![picture showing the legs of a person wearing orange and gray Nike shoes walking on gray concrete stairs](/attachments/blogposts/2026/bruno-nascimento-PHIgYUGQPvU-unsplash.jpg)
+{: class="post-image post-image-50" }
 
 ## Reflective practice
 
@@ -82,3 +86,6 @@ So you need both:
 
 - "Software development is a cooperative game of invention and communication" (from [Alistair Cockburn's book Agile Software Development](https://alistaircockburn.com/)); we are continuously creating knowledge (including skills/know-how).
 - Donald Schön, [The Reflective Practitioner](https://openlibrary.org/books/OL3511128M/The_reflective_practitioner) (1983) - about [reflective practice](https://en.wikipedia.org/wiki/Reflective_practice)
+- [Paula Kolthoff, Embodied Learning](https://embodiedlearning.nl/)
+
+<em>Photo "person wearing orange and gray Nike shoes walking on gray concrete stairs" © 2016 by <a href="https://unsplash.com/@bruno_nascimento">Bruno Nascimento</a> on <a href="https://unsplash.com/photos/person-wearing-orange-and-gray-nike-shoes-walking-on-gray-concrete-stairs-PHIgYUGQPvU">Unsplash</a></em>
