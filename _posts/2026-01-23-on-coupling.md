@@ -113,7 +113,7 @@ We might sound somewhat critical of decoupling attempts, but we're not saying de
 * [Connascence.io](https://connascence.io)
 * Vlad Khononov wrote a book on [Balancing Coupling in Software Design](https://vladikk.com/page/books/). We haven't read it yet, but it's on our list.
 
-<em>Photo "brown rope on blue wooden table" © 2020 by <a href="https://unsplash.com/@cameramandan83?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dan Dennis</a> on <a href="https://unsplash.com/photos/brown-rope-on-blue-wooden-table-9ycXTLGNMro?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></em>
+<em>Photo "brown rope on blue wooden table" © 2020 by <a href="https://unsplash.com/@cameramandan83">Dan Dennis</a> on <a href="https://unsplash.com/photos/brown-rope-on-blue-wooden-table-9ycXTLGNMro">Unsplash</a></em>
 
 <aside>
 <h3>Decouple more deliberately!</h3>
