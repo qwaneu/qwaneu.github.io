@@ -16,10 +16,15 @@
 
 .staff-info {
   padding: 0 10px;
-}
 
-.staff-info span {
-  color:#1abc9c;
+  p {
+    text-align: left;
+    font-size: 120%;
+  }
+
+  span {
+    color:#1abc9c;
+  }
 }
 
 .staff-img {
@@ -27,11 +32,6 @@
   display: table;
   margin: 0 auto;
   background: #fff;
-}
-
-.staff-img {
-  position: relative;
-  display: table;
   width: 100%;
 }
 
