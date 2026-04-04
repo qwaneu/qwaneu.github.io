@@ -22,9 +22,7 @@ This perspective helps us to ask better questions about system qualities, risks,
 
 > Architecture represents the significant design decisions that shape a system, where significant is measured by cost of change.
 
-The other thing that is relevant here is that (software) systems provide both functions (use cases) and qualities (how well the functions are provided). The quality of what the system provides makes a difference for its users - how fast, reliable, correct, consistent, error-prone. 
-
-If you want to know more, we refer you to [Ruth Malan's article on software architecture](https://www.bredemeyer.com/whatis.htm).
+The other thing that is relevant here is that (software) systems provide both functions (use cases, what the system does) and qualities (how well the functions are provided). The quality of what the system provides makes a difference for its users - how fast, reliable, available, correct, consistent, error-prone.
 
 ## Critical capabilities
 
@@ -55,41 +53,51 @@ This means that usually a critical path consists of multiple components working 
 
 We like to visualize critical paths. Below we provide a few (abstract) examples of how that looks like.
 
-Example 1: a system with a frontend application, a backend service 1 that calls backend service 2; backend service 2 stores its data in a database. All dependencies between services are synchronous.
+*Example 1:* a system that consists of a frontend application, a backend service (1) that calls another backend service (2). Backend service 2 stores its data in a database. All dependencies between services are synchronous.
 
 ![simple application landscape with a user, a frontend, a backend service that uses another backend service, and a database](/attachments/blogposts/2026/criticalpaths-1.jpg)
+{: class="post-image post-image-85" }
 
-We can depict a critical path by drawing a (red) line through the services that are involved in realizing the critical path. In this example, the critical path goes from frontend through both services and the database.
+We can visualize a critical path by drawing a line through the services that are involved in realizing the critical capability. In this example, the critical path passes through the frontend, both backend services and the database.
 
 ![visualization of a critical path as a red line that crosses the different services](/attachments/blogposts/2026/criticalpaths-2.jpg)
+{: class="post-image post-image-85" }
 
-Example 2: a system with an intake part, consisting of a frontend and a backend system, which puts data on a message bus (asynchronously). The processing part consumes the data from the bus and presents it via the second frontend.
+*Example 2:* a system that is split up into intake and processing. Intake consists of a frontend and a backend system (1) tha puts data on a message bus asynchronously. Backend service 2 consumes data from the bus, processes it, and presents it via the second frontend.
 
 ![application landscape with a user, a frontend, an intake backend service that uses a bus to exchange data with a processing backend service, and a second frontend](/attachments/blogposts/2026/criticalpaths-3.jpg)
 
-If the critical path is about end-to-end latency (making processed data available within limited time bounds), we can visualize this:
+If end-to-end latency of processed data becoming available is critical, the critical path crosses the intake frontend, intake backend, the message bus, the processing backend and the second frontend. We can visualize it like this:
 
 ![visualization of a critical path as a red line that crosses the different services](/attachments/blogposts/2026/criticalpaths-4.jpg)
 
-Example 3: we can also zoom in a bit on how things flow through services, in particular to see what mappings and transformations take place. The picture below shows a simple application landscape with a frontend, a backend that is structured according to [Hexagonal Architecture](/2020/08/20/hexagonal-architecture.html), and a database.
+*Example 3:* let's zoom in on how things flow through services, to investigate what data and transformations take place. The picture below shows an application landscape with a frontend, a backend service structured according to [Hexagonal Architecture](/2020/08/20/hexagonal-architecture.html), and a database.
 
 ![application architecture with a frontend, backend and database, where the backend is structured according to hexagonal architecture](/attachments/blogposts/2026/criticalpaths-hex-1.jpg)
+{: class="post-image post-image-70" }
 
-A critical path usually touches frontend, backend and database, as depicted below. We can also make the points where data is transformed / mapped explicit (here shown by the double arrows). These points are relevant e.g. from a data correctness perspective.
+A critical path usually touches frontend, backend and database, as visualized below. We can make the data transformations and data mappings explicit on the critical path, shown by the double arrows below. These are relevant e.g. from a data correctness perspective.
 
 ![visualization of a critical path as a red line that crosses the different services, with symbols indicating where data is mapped](/attachments/blogposts/2026/criticalpaths-hex-2.jpg)
+{: class="post-image post-image-70" }
 
 ## Value of critical capability & critical path analysis
 
 Once we have visualized a critical path, we can start asking question and investigating the impact of how the critical path realizes the capability:
 
-- Correctness: what data mappings and transformations take place? How do you guard correctness? What mix of automated tests is in place to provide feedback and confidence about this?
-- In example 1 above, the services call each other directly, synchronously. The availability of the capability is a function of the availabilities of the different parts involved. Without additional measures, the availability of the critical path will be less than the lowest availability of the parts.
-- Using asynchronous buses or queues (example 2) changes the trade-offs. It can provide quicker responses, e.g. a more responses intake service vs longer inconsistency windows. Reliable, exactly-once delivery of messages through a bus or queue is also expensive, so we need to deal with e.g. at-least-once delivery of messages.
-- What fallback options are available? If in example 1 backend service 2 is down, backend service 1 could use a cached value or a default value - trading availability for consistency. Tis will degrade the quality of the capability, what level of quality is still acceptable?
-- In example 2, the intake of data is decoupled from availability of the processing part. What if the processing part is (temporarily) unable to keep up with the data? This affects the critical path and will decrease data consistency - what is still acceptable? If this is a problem, we can decide on additional measures, like adding queue monitoring for early detection or scaling out the processing part.
-- Are the different parts owned by a single team or by multiple teams? Guaranteeing critical capabilities across team boundaries can become more difficult, especially when teams have different goals. This becomes even harder when multiple systems from multiple vendors are involved.
-- Auditability: in systems where correctness is critical, auditability can also be critical - in case of incorrect data, how can we proof what has happened at each part? Can we show e.g. that the source of incorrectness is an external system that we do not have under control?
+**Data correctness**: what data mappings and transformations take place? How do you guard correctness? What mix of automated tests is in place to provide feedback and confidence about this?
+
+**Synchronous dependencies will reduce availability**: in example 1 above, the services call each other directly, synchronously. The availability of the capability is a function of the availabilities of the different parts involved. Without additional measures, the availability of the critical path will be less than the lowest availability of the parts.
+
+**Using asynchronous buses or queues changes trade-offs**. Using an asynchronous bus like in example 2 can provide quicker responses, e.g. a more responses intake service vs longer inconsistency windows. Reliable, exactly-once delivery of messages through a bus or queue is also expensive, so we need to deal with e.g. at-least-once delivery of messages.
+
+What **fallback options** are available? If in example 1 backend service 2 is down, backend service 1 could use a cached value or a default value - trading availability for consistency. Tis will degrade the quality of the capability, what level of quality is still acceptable?
+
+In example 2, the intake of data is decoupled from availability of the processing part. What if the processing part is (temporarily) unable to keep up with the data? This affects the critical path and will decrease data consistency - **what level of quality is still acceptable?** If this is a problem, we can decide on additional measures, like adding queue monitoring for early detection or scaling out the processing part.
+
+Are the different parts owned by a single team or by multiple teams? **Guaranteeing critical capabilities across team boundaries is more difficult**, especially when teams have different goals. This becomes even harder when systems from multiple vendors are involved.
+
+**Auditability**: in systems where correctness is critical, auditability can also be critical - in case of incorrect data, how can we proof what has happened at each part? Can we show e.g. that the source of incorrectness is an external system that we do not have under control?
 
 ## Further reading
 
