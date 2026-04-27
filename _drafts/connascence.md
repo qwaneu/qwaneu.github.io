@@ -511,6 +511,20 @@ Remember that coupling is about things that need to change together. So if thing
 
 As an example, the `sprintf` in C is widely used so there is a very high degree of connascence. The function is also stable, so the risk is very low.
 
+### Managing connascence with automated testing
+
+We can try to reduce stronger forms of connascence as much as possible, but sometimes we are left with some dynamic connascence across codebases and across systems that will bite us sooner or later.
+
+Automated testing can help. If we have specific values across the system landscape, we can capture this in some end-to-end test or in local, faster tests that document the value and fail whenever we change the value.
+
+### Detecting connascence
+
+We mentioned earlier that the static forms of connascence (name, type, meaning, position, algorithm) can often be detected using a compiler or static analysis tools. 
+
+Dynamic connascence is harder to catch, but version control systems can provide insights. We can analyse the git history of the code to see what parts are often changed together, a strong hint these might be coupled somehow. 
+
+Analysing git history can also provide insights in what parts of our code are changing a lot and what parts are stable, to know where to focus on.
+
 ### Example 1
 
 *If we put a queue between two components, have we 'decoupled' them?*
@@ -523,6 +537,9 @@ We have reduced **Connascence of Timing**, but we still have **Connascence of Al
 
 We still have **Connascence of Meaning**, but the coupled elements are not
 localized. We risk achieving the opposite of what we intend: even stronger coupling!
+
+### Detecting connascence
+
 
 ## Summary
 
