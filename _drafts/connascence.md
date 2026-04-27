@@ -9,18 +9,22 @@ author: Marc Evers
 image: /attachments/blogposts/2026/connascence-visualised-2.jpg
 ---
 
-(summary) In this post, we will describe connascence, a model that describes coupling and cohesion in multiple dimensions.
+(summary) In this post, we will describe connascence, a model that describes coupling and cohesion in multiple dimensions. It gives you an energy label to determine how energy efficient your coupling is.
 
-(benefits) The connascence model provides a more fine-grained model to reason about different forms and degrees of coupling. This provides more options to reduce coupling and improve cohesion. It is not the only way of looking at coupling, but it is a useful one.
+Coupling is unavoidable. But you have to choose what kind of coupling is a good fit where.
 
-It is not about removing all coupling. As we stated in the [previous post about coupling](/2026/01/23/on-coupling):
+(benefits) The connascence model provides a more fine-grained model to reason about different forms and degrees of coupling. This provides more options to reduce coupling and improve cohesion. 
+
+We find this perspective on coupling useful, in addition to to other ones. It is not about removing all coupling. As we stated in the [previous post about coupling](/2026/01/23/on-coupling):
 
 > Without coupling, we don't have working software.
 
-We accept coupling and focus on keeping coupling explicit and manageable. 
+We accept coupling, and explicitly decide the trade-offs. We focus on keeping coupling explicit and manageable. 
 Parts that are tightly coupled by nature we keep closely together, in other words, increasing cohesion.
 
-We will first give a definition of connascence, and then elaborate its three dimensions. We will also discuss how this can help in managing coupling and how it helps in knowing where to refactor to.
+*TODO* What about the other parts?
+
+This is a longer post, we have not (yet) managed to make it shorter. So what lies ahead? We will first give a definition of Connascence, and then elaborate its' three dimensions. We will also discuss how this can help in managing coupling and how it helps in knowing where to refactor to.
 
 ## Connascence defined 
 
@@ -400,6 +404,8 @@ We can sometimes be less strict in agreeing on timing, and settle for data being
 Whether or not eventual consistency can be used is a business decision: often, having an inconsistent state for a short amount of time is good enough and it is not worth adding the complexity of tightening consistency constraints. If I transfer money with my banking app, I often see the old balance for a second in the app until the transfer is processed, which is good enough.
 
 ![single producer, only one consumer reads at a time](/attachments/blogposts/2026/connascence/eventual-consistency.jpg)
+
+There are trade-off here. For example, eventual consistency makes it more complicated to detect that something did _not_ happen. Explicit queries at some time are needed for instance, whereas a timeout, optionally with a back-off algorithm is _relatively_ simple.
 
 ## Connascence by Value
 
