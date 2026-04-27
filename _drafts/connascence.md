@@ -42,7 +42,7 @@ or
 
 This is illustrated below. We have two components, both components are organized in smaller parts (e.g. classes and functions):
 
-![Schematic visualization of two software components and their parts (modules, classes, functions, types)](/attachments/blogposts/2026/connascence-visualised-1.jpg)
+![Schematic visualization of two software components and their parts (modules, classes, functions, types)](/attachments/blogposts/2026/connascence/connascence-visualised-1.jpg)
 
 We can visualize parts (classes, functions, lines of code) that need to change together by connecting them using red lines:
 
@@ -56,20 +56,29 @@ The connascence model uses three dimensions to reason about coupling and cohesio
 2. **Locality** - the distance between two coupled components;
 3. **Degree** - the number of components that are coupled.
 
-The connascence types are (in order of increasing strength): Name, Type, Meaning, Position, ALgorithm, Execution, Timing, Value, Identity.
-(todo: make list + anchor links?)
+The types of connascence are, in order of increasing strength:
+
+1. **Connascence by Name** - two elements need to agree on the same name;
+2. **Connascence by Type** - two elements need to agree on the same type;
+3. **Connascence by Meaning**  - two elements need to agree on the meaning of particular values;
+4. **Connascence by Position** - two elements need to agree on the order of values;
+5. **Connascence by Algorithm** - two elements need to agree on a shared algorithm or protocol;
+6. **Connascence by Execution Order** - two elements need to agree on the order in which steps are executed;
+7. **Connascence by Timing** - two elements need to agree on timing;
+8. **Connascence by Value** - two elements need to agree on a specific value;
+9. **Connascence by Identity** - two elements need to agree on the identity of something, i.e. they need to make sure they use the same thing.
 
 ![connascence in three dimensions](/attachments/blogposts/2026/connascence/slide-19-degree.png)
 
-We will discuss the connascence types and elaborate the two other dimensions along the way.
-
-@@short overview + definition of the types
-
 The first five types are called *static* connascence, because these can be detected using the compiler or static code checks. The other types are called *dynamic* &mdash; they are related to the dynamic behaviour of the code.
+
+![9 types of connascence with 5 static and 4 dynamic](/attachments/blogposts/2026/connascence/slide-16-dynamics.png)
 
 ## Connascence by Name and by Type
 
 Two components are connascent by Name or Type if they must agree on the same name or type. If a function is called `foo`, the calling code must use the same name. Renaming the function means changing the calling code. The same holds for types. Code using a type (e.g. class) must change if the type changes.
+
+![connascence by name and type](/attachments/blogposts/2026/connascence/slide-6-type-example.png)
 
 Connascence by Name or Type is very explicit. The compiler or interpreter will provide feedback if we forget a change somewhere. Automated refactoring tooling makes this kind of coupling often easy to manage.
 
@@ -93,6 +102,8 @@ If the distance between two coupled parts is higher, e.g. a class `Customer` wit
 ## Connascence by Meaning
 
 Connascence by Meaning (also known as Connascence by Convention) means that multiple components must agree on the meaning of particular values.
+
+![connascence by meaning](/attachments/blogposts/2026/connascence/slide-8-meaning.png)
 
 In the example below, apparently the return value `null` means invalid data. AS a result, the calling code depends on the meaning that `validateAndConvert` assigns to `null`.
 
@@ -185,6 +196,8 @@ public class VehicleMessageDecoder : MessageDecoder
 
 Connascence by Position means that two components need to agree on the order of values. 
 
+![connascence by position](/attachments/blogposts/2026/connascence/slide-9-position.png)
+
 An example is positional parameters. In the code below, the code that instantiates a Person needs to keep the correct order as defined by the constructor signature. There will be no compiler feedback in case of a mistake.
 
 ```java
@@ -231,9 +244,11 @@ We reduce the connascence to type and encapsulate the details inside the Name an
 
 Connascence by Algorithm means two elements are coupled because they need to agree on a shared algorithm or protocol.
 
-~[picture showing a producer and a consumer that are coupled via a shared protocol](/attachments/blogposts/2026/connascence/algorithm.png)
+![connascence by algorithm](/attachments/blogposts/2026/connascence/slide-10-1-algorithm-example.png)
 
 We see Connascence by Algorithm whenever two services need to exchange data, e.g. over the network. To consume an API, you need to know how the API works, what data in what format is returned. This also holds for file exports/imports
+
+![picture showing a producer and a consumer that are coupled via a shared protocol](/attachments/blogposts/2026/connascence/algorithm.png)
 
 The Producer code below encodes information in a byte array. which gets sent over the network.
 
@@ -283,6 +298,8 @@ An alternative is creating a shared library that encapsulates the protocol. Both
 ## Connascence by Execution Order
 
 Connascence by Execution Order means that two elements are coupled because they need to agree on the order in which steps are executed.
+
+![connascence by execution order](/attachments/blogposts/2026/connascence/slide-12-execution.png)
 
 In a way, imperative programming is all about execution order. We're used to things like the code below, where first need to create a TCP client, then set up a writer, and only then we can start sending data.
 
@@ -354,6 +371,8 @@ Sometimes the set of statements in a specific order is repeated in multiple plac
 
 Connascence by Timing means that two elements are coupled because they need to agree on timing.
 
+![connascence by timing](/attachments/blogposts/2026/connascence/slide-13-timing.png)
+
 An example: a producer produces data, a consumer processes the data, both work concurrently and asynchronously. This can be multiple threads or separate services. How do we ensure each produced value is consumer once and only once?
 
 ![a producer and consumer that exchange a value asynchronously](/attachments/blogposts/2026/connascence/producer-value-consumer.jpg)
@@ -386,13 +405,15 @@ Whether or not eventual consistency can be used is a business decision: often, h
 
 Connascence by Value means two elements are coupled because they need to agree on a specific value. Several values in different parts of the code or in different systems need to change together, otherwise the correctness of the system will break. 
 
+![connascence by value](/attachments/blogposts/2026/connascence/slide-14-value.png)
+
 If the Organization Management service sets the type of an organization to a specific number, e.g. 22, other services that use organizations will know and use this specific value as well, e.g. in an if statement in the picture below.
 
 ![one service sets the value 22, the data passes through other services, and some other service checks if the value is 22](/attachments/blogposts/2026/connascence/cov-org-type.jpg)
 
 Connascence by Value is somewhat similar to Connascence by Meaning, but the latter is more about meaning, conventions, usage, interpretation of values, while the Connascence by Value is about specific values. It can be more tricky, especially if the values are used in different systems and codebases, e.g. a hard coded '22' in Java code and a value 22 somewhere in a database column.
 
-### Tackling Connascence of Execution Order
+### Tackling Connascence by Value
 
 If the elements are close enough (in the same codebase), we have a few options to reduce the pain:
 - We can extract the special value into constant. This reduces the connascence to Connascence by Name. If the connascence is between different code bases using the same language, we can investigate moving the value references in a shared library.
@@ -403,6 +424,8 @@ If the elements are close enough (in the same codebase), we have a few options t
 
 Connascence by Identity means that two elements need to agree on the identity of something, i.e. they need to make sure they are using the exact same thing or instance.
 
+![connascence by identity](/attachments/blogposts/2026/connascence/slide-15-identity.png)
+
 Creating a new object instance and then using that object introduces Connascence by Identity - code like shown below knows exactly which instance it is using, namely the one it has created itself.
 
 ```java
@@ -411,26 +434,105 @@ p.doSomething();
 return p;
 ```
 
-Another (trivial) example: the `this` or `self` reference in instance methods always refers to the object the method was invoked on. 
+Another example: the `this` or `self` reference in instance methods always refers to the object the method was invoked on. This coupling to identity is inevitable in this case, but also quite harmless because it is local - all contained within the same class.
 
-These two forms of Connascence by Identity are not problematic.
+### Singletons
 
-However, most of our code however does not care (or should not care) about what specific instances it is using. 
+Connascence by Identity gets more tricky if it extends beyond these cases. Over-usage of the Singleton pattern is one example. The underlying concern is that there should be a single instance of an object. So we should focus on the creation of this object and make creating multiple instances difficult or impossible. 
 
-@@singletons
+However, most of our code however does not care (or should not care) about what specific instances it is using. The code using a Singleton object should not know about it being a singular object instance. 
 
-@@hex arch: creation of dependencies in one place, inject everywhere
+In practice, the calling code uses the singleton construct directly, like the example below shows for the TrackingCache instance. The code is not so much using singletons to guard against multiple instances, but also as a convenient global variable.
 
-## Discussion
+```csharp
+public class VehicleMessageDecoder : MessageDecoder
+{
+  public void handleMessage(byte identification, byte[] message, int length)
+  {
+    switch (decodingState) {
+      case WAITING_FOR_INITIALFRAME:
+        if (message[Protocol.FrameTypeIndex] == Protocol.FullFrame) {
+          currentEntry = TrackingCache.getInstance().createCacheEntry(decoderId);
+          // ... 
+        }
+        break;
+    }
+  }
+}
+```
 
+This introduces unnecessary coupling, specifically it increases the *degree* of coupling on the singleton instance. Code that does not care about the specific instance gets burdened with this knowledge. This makes the code hard to test for example.
 
-* types not always clear; sometimes some discussion what exactly it is; try to focus on the impact instead and if/how we can make it better manageable
+### Managing Connascence by Identity
 
+To reduce connascence by identity in a component, we apply dependency injection. This works well e.g. with Hexagonal Architecture. Instantiating services and adapters takes place in one place, in a `main` function or some Spring configuration code. These are injected into the rest of the code, which takes these as explicit dependencies. This reduces the identity coupling to a single place in the code, reducing the degree.
 
+We also recommend keeping connascence by identity local, confined to a class or a function.
 
+## How the connascence model helps with managing coupling and cohesion
 
+How can Connascence with its 3 dimensions help us in refactoring towards loosely coupled, highly cohesive code? Jim Weirich provided some rules of thumb to guide refactoring towards less coupling:
 
+- Rule of Strength
+- Rule of Locality
+- Rule of Degree
+- Rule of Stability
 
+### Rule of Strength
+
+The Rule of Strength states: try to create weakest possible connascence. 
+
+Convert strong forms of connascence to weak forms wherever possible. Try to refactor towards static rather than dynamic connascence. Encapsulate for example connascence by identity and by value as much as possible in a module, so that the rest of the code base has connascence by type.
+
+### Rule of Locality
+
+As the distance between software elements increases, use weaker forms of connascence. If things are close together, stronger connascence is ok. 
+
+So if you cannot reduce strong connascence to a weaker form, try bringing the elements as close together as possible.
+
+### Rule of Degree
+
+Elements with a high degree of connascence are more difficult to understand and to change. So investigate:
+- Why is the degree high?  
+- Are we missing an abstraction?  
+- Would an extra level of indirection be helpful here?
+
+### Rule of Stability
+
+If two element have a strong form, low locality and high degree of connascence, then they should not change. In other words, those elements should be stable.
+
+Remember that coupling is about things that need to change together. So if things don't need to change, we won't be affected. 
+
+As an example, the `sprintf` in C is widely used so there is a very high degree of connascence. The function is also stable, so the risk is very low.
+
+### Example 1
+
+*If we put a queue between two components, have we 'decoupled' them?*
+
+We have reduced **Connascence of Timing**, but we still have **Connascence of Algorithm** & **Meaning**
+
+### Example 2
+
+*Do we avoid coupling by duplicating some code instead of introducing a shared abstraction?*
+
+We still have **Connascence of Meaning**, but the coupled elements are not
+localized. We risk achieving the opposite of what we intend: even stronger coupling!
+
+## Summary
+
+We want 'loose coupling'. But without coupling, there is no working software. Managing coupling is an important part of our work. 
+
+Connascence offers a language to talk about coupling and cohesion. It is not bound to a specific paradigm and applies equally to object oriented programming, functional programming, SQL, stored procedures.
+
+Coupling is not binary! The connascence model offers three dimensions to reason about coupling: **strength**, **locality**, **degree**. 
+
+We want to isolate strong coupling as much as possible in one place, and use weaker forms of coupling when the distance and/or degree is high.
+
+The connascence model is not perfect. The distinction between the types is not always clear. The distinction between connascence by meaning and connascence by value is sometimes a bit diffuse. The ranking of the different types (the strength) is not always that strict in practice.
+
+This model is still quite useful in practice, because:
+- It gives a rich vocabulary to reason about forms, degrees and locality of coupling.
+- It recognises that the goal is not getting rid of coupling, but rather keeping coupling explicit, limited, and manageable.
 
 ## Further reading 
 
@@ -441,7 +543,6 @@ However, most of our code however does not care (or should not care) about what 
 * Jim Weirich, [The Grand Unified Theory of Software Design](www.youtube.com/watch?v=NLT7Qcn_PmI), at the Acts as Conference 2009  
 * [Connascence.io](https://connascence.io)
 * Vlad Khononov wrote a book on [Balancing Coupling in Software Design](https://vladikk.com/page/books/). We haven't read it yet, but it's on our list.
-
 
 
 
