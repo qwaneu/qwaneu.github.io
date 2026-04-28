@@ -9,22 +9,21 @@ author: Marc Evers
 image: /attachments/blogposts/2026/connascence-visualised-2.jpg
 ---
 
-(summary) In this post, we will describe connascence, a model that describes coupling and cohesion in multiple dimensions. It gives you an energy label to determine how energy efficient your coupling is.
+In this post, we will describe connascence, a model that describes coupling and cohesion in multiple dimensions. It gives you an energy label to determine how energy efficient your coupling is.
 
 Coupling is unavoidable. But you have to choose what kind of coupling is a good fit where.
 
-(benefits) The connascence model provides a more fine-grained model to reason about different forms and degrees of coupling. This provides more options to reduce coupling and improve cohesion. 
-
-We find this perspective on coupling useful, in addition to to other ones. It is not about removing all coupling. As we stated in the [previous post about coupling](/2026/01/23/on-coupling):
+The connascence model provides a fine-grained model to reason about different forms and degrees of coupling. This provides options to reduce coupling and improve cohesion. We find this a useful perspective on coupling, in addition to to other ones. It is not about removing all coupling. As we stated in the [previous post about coupling](/2026/01/23/on-coupling):
 
 > Without coupling, we don't have working software.
 
-We accept coupling, and explicitly decide the trade-offs. We focus on keeping coupling explicit and manageable. 
-Parts that are tightly coupled by nature we keep closely together, in other words, increasing cohesion.
+We accept coupling, and we explicitly decide the trade-offs. We focus on keeping it explicit and manageable. We keep parts that are tightly coupled by nature closely together, in other words, increasing cohesion.
 
-*TODO* What about the other parts?
+Other parts that are coupled but less tightly, we make sure the coupling is as explicit as possible, aided by tooling and automated tests.
 
-This is a longer post, we have not (yet) managed to make it shorter. So what lies ahead? We will first give a definition of Connascence, and then elaborate its' three dimensions. We will also discuss how this can help in managing coupling and how it helps in knowing where to refactor to.
+In this post, we will introduce the connascence model, starting with its definition, then elaborating the three dimensions. After this, we will provide some guidelines and considerations on how to reduce coupling and increase cohesion using the model.
+
+@@This is a longer post, we have not (yet) managed to make it shorter. So what lies ahead? We will first give a definition of Connascence, and then elaborate its' three dimensions. We will also discuss how this can help in managing coupling and how it helps in knowing where to refactor to.
 
 ## Connascence defined 
 
@@ -52,15 +51,18 @@ We can visualize parts (classes, functions, lines of code) that need to change t
 
 ![Schematic visualization of coupling between different parts of two software components using red lines to connect parts that are coupled](/attachments/blogposts/2026/connascence/connascence-visualised-2.jpg)
 
+This definition of coupling is already helpful
+@@refer to duplication
+
 ## Dimensions of Connascence
 
-The connascence model uses three dimensions to reason about coupling and cohesion:
+The connascence model introduces three dimensions to reason about coupling and cohesion:
 
 1. **Type** - also called 'strength'; this is an indicator of how easy or difficult it is to detect coupling and manage changes in coupled components;
 2. **Locality** - the distance between two coupled components;
 3. **Degree** - the number of components that are coupled.
 
-The types of connascence are, in order of increasing strength:
+The 9 types of connascence are, in order of increasing strength:
 
 1. **Connascence by Name** - two elements need to agree on the same name;
 2. **Connascence by Type** - two elements need to agree on the same type;
@@ -74,9 +76,11 @@ The types of connascence are, in order of increasing strength:
 
 ![connascence in three dimensions](/attachments/blogposts/2026/connascence/slide-19-degree.png)
 
-The first five types are called *static* connascence, because these can be detected using the compiler or static code checks. The other types are called *dynamic* &mdash; they are related to the dynamic behaviour of the code.
+The first five are called *static* connascence, because these can be detected using a compiler or static code checks. The other types are called *dynamic* &mdash; they are related to the dynamic behaviour of the code.
 
 ![9 types of connascence with 5 static and 4 dynamic](/attachments/blogposts/2026/connascence/slide-16-dynamics.png)
+
+We will elaborate the 9 types of connascence with examples and we will provide some guidelines on how to refactor these.
 
 ## Connascence by Name and by Type
 
@@ -475,9 +479,11 @@ To reduce connascence by identity in a component, we apply dependency injection.
 
 We also recommend keeping connascence by identity local, confined to a class or a function.
 
-## How the connascence model helps with managing coupling and cohesion
+## Managing coupling and cohesion with the connascence model
 
-How can Connascence with its 3 dimensions help us in refactoring towards loosely coupled, highly cohesive code? Jim Weirich provided some rules of thumb to guide refactoring towards less coupling:
+How can the connascence model help us in refactoring towards loosely coupled, highly cohesive code? In this section, we will discuss a set of refactoring guidelines based on the three dimensions of connascence.
+
+Jim Weirich provided some rules of thumb to guide refactoring towards less coupling:
 
 - Rule of Strength
 - Rule of Locality
@@ -537,9 +543,6 @@ We have reduced **Connascence of Timing**, but we still have **Connascence of Al
 
 We still have **Connascence of Meaning**, but the coupled elements are not
 localized. We risk achieving the opposite of what we intend: even stronger coupling!
-
-### Detecting connascence
-
 
 ## Summary
 
