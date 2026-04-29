@@ -41,7 +41,7 @@ Many capabilities turn out not to be critical in practice. The user can proceed 
 Some examples of critical capabilities:
 - In The Netherlands, a general practitioner meets 10-15 minutes with a patient. All relevant health record data for the patient should be available for *reading* in that timeslot. *Updating* is less critical: the general practitioner could update the health records later that day, although this will waste some time and possibly introduce mistakes.
 - When a repair crew starts the day, they need to know which addresses to visit, at what times. The availability of agenda information at the start of the work day is critical for them, otherwise no repairs will take place. Planning the work for the repair crews normally happens days or weeks before, and is less critical.
-- For a conference management system, submitting sessions of is critical in particular on the day of the submission deadline, as a lot of people submit on the last possible moment. Availability of submitted sessions is critical right before the program committee meeting take place. 
+- For a conference management system, submitting sessions is critical in particular on the day of the submission deadline, as a lot of people submit on the last possible moment. Availability of submitted sessions is critical right before the program committee meeting take place. 
 
 ## Critical paths
 
