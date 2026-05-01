@@ -5,29 +5,29 @@ tags:
   - architecture
   - coupling
   - design
-author: Marc Evers
+author: Marc Evers, Rob Westgeest, Willem van den Ende
 image: /attachments/blogposts/2026/connascence-visualised-2.jpg
 ---
 
-In this post, we will describe connascence, a model that describes coupling and cohesion in multiple dimensions. It gives you an energy label to determine how energy efficient your coupling is.
+In this post, we will describe connascence, a model that describes coupling and cohesion in multiple dimensions. This model gives you an energy label to determine how energy efficient your coupling is.
 
 Coupling is unavoidable. But you have to choose what kind of coupling is a good fit where.
 
-The connascence model provides a fine-grained model to reason about different forms and degrees of coupling. This provides options to reduce coupling and improve cohesion. We find this a useful perspective on coupling, in addition to to other ones. It is not about removing all coupling. As we stated in the [previous post about coupling](/2026/01/23/on-coupling):
+The connascence model provides a fine-grained model to reason about different forms and degrees of coupling. It provides options to reduce coupling and improve cohesion. We find it a useful perspective on coupling, in addition to to other ones. It is not about removing all coupling. As we stated in the [previous post about coupling](/2026/01/23/on-coupling):
 
-> Without coupling, we don't have working software.
+> Without coupling, there is no working software.
 
-We accept coupling, and we explicitly decide the trade-offs. We focus on keeping it explicit and manageable. We keep parts that are tightly coupled by nature closely together, in other words, increasing cohesion.
+We accept coupling and deliberately decide the trade-offs. We focus on keeping it explicit and manageable. We keep parts that are tightly coupled by nature closely together, increasing cohesion.
 
-Other parts that are coupled but less tightly, we make sure the coupling is as explicit as possible, aided by tooling and automated tests.
+For parts that are coupled but less tightly, we make sure the coupling is as explicit as possible, aided by tooling and automated tests.
 
-In this post, we will introduce the connascence model, starting with its definition, then elaborating the three dimensions. After this, we will provide some guidelines and considerations on how to reduce coupling and increase cohesion using the model.
+In this post, we will introduce the connascence model, starting with its definition, then elaborating the three dimensions. After this, we will provide guidelines and considerations on how to reduce coupling and increase cohesion using the model.
 
 @@This is a longer post, we have not (yet) managed to make it shorter. So what lies ahead? We will first give a definition of Connascence, and then elaborate its' three dimensions. We will also discuss how this can help in managing coupling and how it helps in knowing where to refactor to.
 
 ## Connascence defined 
 
-The concept of Connascence was introduced by Meilir Page-Jones in his work on object-oriented design. He observed that coupling and cohesion are closely related and tried to catch this by introducing a new term.
+The concept of Connascence was introduced by Meilir Page-Jones in his work on object-oriented design in the 1990s. He observed that coupling and cohesion are closely related and tried to catch them both using a new term.
 
 > I chose the word "connascence" from the Latin roots meaning "born together." It is etymologically close to the French "connaissance" meaning knowledge, awareness or consciousness.
 > 
@@ -35,7 +35,7 @@ The concept of Connascence was introduced by Meilir Page-Jones in his work on ob
 >
 > -- Meilir Page-Jones
 
-Two software components are connascent if:
+Two software elements are connascent if:
 
 *a change in one would require the other to be modified to maintain the overall correctness of the system*
 
@@ -43,24 +43,29 @@ or
 
 *for some change, both would be required to change to maintain the overall correctness of the system*
 
-This is illustrated below. We have two components, both components are organized in smaller parts (e.g. classes and functions):
+A software element can be a function, a class,  database tabel or schema, a package, a component, an application, a (micro)service, a subsystem. 
 
-![Schematic visualization of two software components and their parts (modules, classes, functions, types)](/attachments/blogposts/2026/connascence/connascence-visualised-1.jpg)
+The picture below illustrates the definition of connascence. It shows two elements, both of them consisting of smaller parts (e.g. classes and functions):
 
-We can visualize parts (classes, functions, lines of code) that need to change together by connecting them using red lines:
+![Schematic visualization of two software elements and their parts (modules, classes, functions, types)](/attachments/blogposts/2026/connascence/connascence-visualised-1.jpg)
 
-![Schematic visualization of coupling between different parts of two software components using red lines to connect parts that are coupled](/attachments/blogposts/2026/connascence/connascence-visualised-2.jpg)
+We can visualize different parts that need to change together by connecting them with red lines:
 
-This definition of coupling is already helpful
-@@refer to duplication
+![Schematic visualization of coupling between different parts of two software elements using red lines to connect parts that are coupled](/attachments/blogposts/2026/connascence/connascence-visualised-2.jpg)
+
+This definition of connascence (and coupling) is already useful on its own. It shifts our focus from dependencies to what parts need to be kept consistent with each other. This also helps to make conversations about duplication more pragmatic. Removing duplication is not about extracting identical or similar pieces of code, but rather about putting things together that need to change together. Code similarity is an indicator for possible coupling, not something that always has to be refactored.
 
 ## Dimensions of Connascence
 
 The connascence model introduces three dimensions to reason about coupling and cohesion:
 
-1. **Type** - also called 'strength'; this is an indicator of how easy or difficult it is to detect coupling and manage changes in coupled components;
-2. **Locality** - the distance between two coupled components;
-3. **Degree** - the number of components that are coupled.
+1. **Strength** or type - how easy or difficult it is to detect coupling and manage changes in coupled elements;
+2. **Locality** - the distance between two coupled elements;
+3. **Degree** - the number of elements that are coupled.
+
+We will define the three dimensions and then elaborate the 9 types of connascence with examples.
+
+### Strength
 
 The 9 types of connascence are, in order of increasing strength:
 
@@ -74,17 +79,33 @@ The 9 types of connascence are, in order of increasing strength:
 8. **Connascence by Value** - two elements need to agree on a specific value;
 9. **Connascence by Identity** - two elements need to agree on the identity of something, i.e. they need to make sure they use the same thing.
 
-![connascence in three dimensions](/attachments/blogposts/2026/connascence/slide-19-degree.png)
+We can visualize this from green to red, as a kind of energy label for coupling:
+
+![connascence in three dimensions, from green to red](/attachments/blogposts/2026/connascence/slide-19-degree.png)
 
 The first five are called *static* connascence, because these can be detected using a compiler or static code checks. The other types are called *dynamic* &mdash; they are related to the dynamic behaviour of the code.
 
 ![9 types of connascence with 5 static and 4 dynamic](/attachments/blogposts/2026/connascence/slide-16-dynamics.png)
 
-We will elaborate the 9 types of connascence with examples and we will provide some guidelines on how to refactor these.
+The static types of connascence, and especially Name, Type and Meaning, are explicit forms of coupling. The stronger types of connascence become more implicit.
+
+### Locality
+
+The Locality dimension of connascence refers to the distance between two coupled elements. The higher the distance, the more difficult it is to detect the coupling. Especially when the elements are in different applications, code bases or systems, the coupling becomes quite implicit and hard to manage.
+
+In Vlad Khononov's Balanced Coupling model, he mentions "socio-technical distance", which is a useful addition. If two elements are not only far apart but are also owned by different teams, he impact of coupling will be higher. If the teams are part of different organisations, it will be even worse.
+
+### Degree
+
+The Degree dimension of Connascence refers to the number of elements that are coupled, i.e. the number of elements that are affected by a specific change. More elements means more work, and a higher chance of missing one element when updating.
+
+Adding a layer of indirection by introducing a stable abstraction helps to reduce the impact of changes, by isolating the part that changes and making the rest more stable.
+
+![left part showing 5 elements having 'bad' coupling with red lines, right part having a new element in between, decoupling the stable part from the volatile part](/attachments/blogposts/2026/connascence/managing-degree-with-abstraction.jpg)
 
 ## Connascence by Name and by Type
 
-Two components are connascent by Name or Type if they must agree on the same name or type. If a function is called `foo`, the calling code must use the same name. Renaming the function means changing the calling code. The same holds for types. Code using a type (e.g. class) must change if the type changes.
+Two elements are connascent by Name or Type if they must agree on the same name or type. If a function is called `foo`, the calling code must use the same name. Renaming the function means changing the calling code. The same holds for types. Code using a type (e.g. class) must change if the type changes.
 
 ![connascence by name and type](/attachments/blogposts/2026/connascence/slide-6-type-example.png)
 
@@ -99,7 +120,7 @@ var bar = new Bar();
 bar.foo();
 ```
 
-The *locality* of coupling impacts the effort and risk in managing coupling. If the components are all in the same code base, our tooling will do most of the work, and the risk will be minimal. 
+The *locality* of coupling impacts the effort and risk in managing coupling. If the elements are all in the same code base, our tooling will do most of the work, and the risk will be minimal. 
 
 If the distance between two coupled parts is higher, e.g. a class `Customer` with attributes `name` and `address` in our code which should match our database table `Customer` with columns `Name` and `Address`. Extra tool support can help her, e.g. using an adapter integration test that covers the database integration.
 
@@ -109,7 +130,7 @@ If the distance between two coupled parts is higher, e.g. a class `Customer` wit
 
 ## Connascence by Meaning
 
-Connascence by Meaning (also known as Connascence by Convention) means that multiple components must agree on the meaning of particular values.
+Connascence by Meaning (also known as Connascence by Convention) means that multiple elements must agree on the meaning of particular values.
 
 ![connascence by meaning](/attachments/blogposts/2026/connascence/slide-8-meaning.png)
 
@@ -125,7 +146,7 @@ Some other examples are:
 - using strings to represent international phone numbers
 - returning null, None or Optional.empty - what does null or None mean?
 
-Different components need to know what the numbers mean, how to use them, what valid and invalid values are. We probably don't want negative numbers if an `int` is representing prices; and what does the int then specifically mean? Cents, Euros, Dollars?
+Different elements need to know what the numbers mean, how to use them, what valid and invalid values are. We probably don't want negative numbers if an `int` is representing prices; and what does the int then specifically mean? Cents, Euros, Dollars?
 
 We will always have some connascence by meaning somewhere. Eventually we will use primitives to build higher order concepts. So connascence by meaning is not bad perse. Instead, we can refactor the code that is coupled by meaning, so that everything is explicit and close together. We can e.g. encapsulate Money or Price in a type of its own, hiding the way it is represented through integers or other types from the rest of the code.
 
@@ -202,7 +223,7 @@ public class VehicleMessageDecoder : MessageDecoder
 
 ## Connascence by Position
 
-Connascence by Position means that two components need to agree on the order of values. 
+Connascence by Position means that two elements need to agree on the order of values. 
 
 ![connascence by position](/attachments/blogposts/2026/connascence/slide-9-position.png)
 
@@ -517,11 +538,16 @@ Remember that coupling is about things that need to change together. So if thing
 
 As an example, the `sprintf` in C is widely used so there is a very high degree of connascence. The function is also stable, so the risk is very low.
 
-### Managing connascence with automated testing
+### Managing connascence with testing, automation and tools
 
 We can try to reduce stronger forms of connascence as much as possible, but sometimes we are left with some dynamic connascence across codebases and across systems that will bite us sooner or later.
 
 Automated testing can help. If we have specific values across the system landscape, we can capture this in some end-to-end test or in local, faster tests that document the value and fail whenever we change the value.
+
+@@ +contract testing
+
+@@test = creates more explicit (weaker strength) coupling to the two dependent elements; [add triangle picture]
+test is a piece of explicit knowledge
 
 ### Detecting connascence
 
@@ -560,6 +586,18 @@ This model is still quite useful in practice, because:
 - It gives a rich vocabulary to reason about forms, degrees and locality of coupling.
 - It recognises that the goal is not getting rid of coupling, but rather keeping coupling explicit, limited, and manageable.
 
+## Related work
+
+[Coupling](https://en.wikipedia.org/wiki/Coupling_(computer_programming)) and [cohesion](https://en.wikipedia.org/wiki/Coupling_(computer_programming)) are very old concepts in software development since the beginning. The concepts were introduced by Larry Constantine in the 1960s, and several people have tried to refine them and make them measurable.
+
+The Connascence model dates back to the 1990s and we still find it useful. It brings together coupling and cohesion as basically the same thing.
+
+A recent addition is Vlad Khononov's Balanced Coupling model, described in his [book](https://coupling.dev/posts/learning-resources/) and on the [Balanced Coupling website](https://coupling.dev/). Khononov's model has some overlap with connascence. He defines three slightly different dimensions of coupling:
+
+1. **Integration Strength** - comparable but with a slightly different angle than connascence strength
+2. **Distance** - methods, objects, packages, services, systems
+3. **Volatility** - how stable or volatile are the different coupled elements; volatility/stability is referenced in the Connascence model but not recognised as a dimension. It is a useful dimension that we've also mentioned in the guidelines.
+
 ## Further reading 
 
 - [I Still Feel the Urge to Reuse Code (Even Though I Know It's Wrong)](https://www.linkedin.com/pulse/i-still-feel-urge-reuse-code-even-though-know-its-wrong-dilger-yphie/) by Martin Dilger
@@ -568,8 +606,7 @@ This model is still quite useful in practice, because:
 * Meilir Page-Jones, [Comparing Techniques by Means of Encapsulation and Connascence](www.researchgate.net/publication/220424550_Comparing_Techniques_by_Means_of_Encapsulation_and_Connascence), in Communications of the ACM Sept 1992 
 * Jim Weirich, [The Grand Unified Theory of Software Design](www.youtube.com/watch?v=NLT7Qcn_PmI), at the Acts as Conference 2009  
 * [Connascence.io](https://connascence.io)
-* Vlad Khononov wrote a book on [Balancing Coupling in Software Design](https://vladikk.com/page/books/). We haven't read it yet, but it's on our list.
-
+* Vlad Khononov, [Balancing Coupling in Software Design](https://vladikk.com/page/books/).
 
 
 <aside>
