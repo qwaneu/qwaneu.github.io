@@ -126,7 +126,11 @@ If the distance between two coupled parts is higher, e.g. a class `Customer` wit
 
 ![a representation of a database table CUSTOMERS with columns NAME and ADDRESS with should correspond to a class Customer with properties Name and Address](/attachments/blogposts/2026/connascence/name-table.png)
 
-@@ Refactor to? What to do about it? not much; bring stuff closer together if you can (move towards more cohesion); use automated tests to capture coupled elements with distance
+### Refactoring Connascence by Name and Type
+
+Connascence by Name and Type are explicit. If the distance between the coupled elements is not too high (e.g. in the same codebase), the compiler or interpreter will help us catch mistakes. We want to keep it like it is.
+
+For elements further apart, we can try to move them closer together. For name coupling between code and database, our ORM library or automated integration point tests can help out.
 
 ## Connascence by Meaning
 
@@ -388,7 +392,7 @@ public class VehicleMessageDecoder : MessageDecoder
 }
 ```
 
-We also used a [fluent interface](@@reference!), which can also help enforcing specific ordering via the compiler.
+We also used a [fluent interface](https://martinfowler.com/bliki/FluentInterface.html), which can also help enforcing specific ordering via the compiler.
 
 Sometimes the set of statements in a specific order is repeated in multiple places in the code. The higher the degree of this connascence, the more painful it gets. We can reduce the degree by extracting the statements and ordering in a function and calling the functions wherever it is needed. Note that we still have Connascence by Execution within that function.
 
