@@ -9,21 +9,17 @@ author: Marc Evers, Rob Westgeest, Willem van den Ende
 image: /attachments/blogposts/2026/connascence-visualised-2.jpg
 ---
 
-In this post, we will describe connascence, a model that describes coupling and cohesion in multiple dimensions. This model gives you an energy label to determine how energy efficient your coupling is.
+In this post, we will introduce Connascence, a model that describes coupling and cohesion in multiple dimensions. This model gives you an energy label to determine how energy efficient your coupling is.
 
-Coupling is unavoidable. But you have to choose what kind of coupling is a good fit where.
+Coupling is unavoidable. But you have to choose what kind of coupling is a good fit where. Connascence provides a fine-grained model to reason about different forms and degrees of coupling. It provides options to reduce coupling and improve cohesion. We find it provides a useful perspective on coupling, in addition to other ones. 
 
-The connascence model provides a fine-grained model to reason about different forms and degrees of coupling. It provides options to reduce coupling and improve cohesion. We find it a useful perspective on coupling, in addition to to other ones. It is not about removing all coupling. As we stated in the [previous post about coupling](/2026/01/23/on-coupling):
+It does not make sense to just remove all coupling. As we stated in the [previous post about coupling](/2026/01/23/on-coupling):
 
 > Without coupling, there is no working software.
 
-We accept coupling and deliberately decide the trade-offs. We focus on keeping it explicit and manageable. We keep parts that are tightly coupled by nature closely together, increasing cohesion.
+We accept coupling and deliberately decide the trade-offs. We make it explicit and manageable. We keep parts that are tightly coupled by nature closely together, increasing cohesion. For parts that are coupled but less tightly, we make sure coupling is as explicit as possible, aided by tooling and automated tests.
 
-For parts that are coupled but less tightly, we make sure the coupling is as explicit as possible, aided by tooling and automated tests.
-
-In this post, we will introduce the connascence model, starting with its definition, then elaborating the three dimensions. After this, we will provide guidelines and considerations on how to reduce coupling and increase cohesion using the model.
-
-@@This is a longer post, we have not (yet) managed to make it shorter. So what lies ahead? We will first give a definition of Connascence, and then elaborate its' three dimensions. We will also discuss how this can help in managing coupling and how it helps in knowing where to refactor to.
+So what lies ahead? We will first introduce the connascence model and give an overview of its three dimensions. Then, we will elaborate the different types of connascence. Finally, we will discuss how this can help in managing coupling and how it helps in knowing where to refactor to.
 
 ## Connascence defined 
 
