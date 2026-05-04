@@ -123,7 +123,7 @@ A recent addition is Vlad Khononov's Balanced Coupling model, described in his [
 2. **Distance** - methods, objects, packages, services, systems
 3. **Volatility** - how stable or volatile are the different coupled elements; volatility/stability is referenced in the Connascence model but not recognised as a dimension. It is a useful dimension that we've also mentioned in the guidelines.
 
-## Other parts 
+## All parts in this series 
 
 - Part 1 - Introduction
 - Part 2 - Connascence by Name and Type
@@ -148,7 +148,7 @@ A recent addition is Vlad Khononov's Balanced Coupling model, described in his [
 
 <aside>
 <h3>Decouple more deliberately!</h3>
-<p>We offer workshops in this area, e.g. explore coupling and cohesion through a hands-on workshop.
+<p>We offer hands-on workshops on refactoring and exploring coupling and cohesion.
 </p>
 <div>
 <a href="/contact">Let's have a chat</a>
