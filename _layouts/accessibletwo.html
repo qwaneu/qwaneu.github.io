@@ -34,14 +34,19 @@ title: QWAN
     <meta property="og:title" content="{{ page.title }}"/>
     {% if page.image %}
     <meta property="og:image" content="{{ page.image | prepend: site.baseurl | prepend: site.url }}"/>
-    {% endif %}
     <!-- <meta property="og:image:width" content="900">
     <meta property="og:image:height" content="450"> -->
+    {% else %}
+    <meta property="og:image" content="{{ "/images/logos/qwan_logo_transparant.png" | prepend: site.baseurl | prepend: site.url }}"/>
+    <meta property="og:image:width" content="856">
+    <meta property="og:image:height" content="393">
+    {% endif %}
     <meta property="og:site_name" content="QWAN - Quality Without a Name">
     {% if page.excerpt %}
     <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 160 }}"/>
     <meta property="og:type" content="article" />
     {% else %}
+    <meta property="og:description" content="We are QWAN - Quality Without A Name, an initiative of pragmatic practitioners. We train and mentor teams, coach individuals and carry out bespoke development projects. We specialize in agile and lean software development."/>
     <meta property="og:type" content="website" />
     {% endif %}
 
