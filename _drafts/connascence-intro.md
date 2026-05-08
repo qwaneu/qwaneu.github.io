@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Connascence: a model for reasoning about coupling (part 1)"
+title: "Connascence: (de)coupling more effectively (part 1)"
 tags:
   - architecture
   - coupling
