@@ -150,6 +150,8 @@ Different elements need to know what the numbers mean, how to use them, what val
 
 We will always have some connascence by meaning somewhere. Eventually we will use primitives to build higher order concepts. So connascence by meaning is not bad perse. Instead, we can refactor the code that is coupled by meaning, so that everything is explicit and close together. We can e.g. encapsulate Money or Price in a type of its own, hiding the way it is represented through integers or other types from the rest of the code.
 
++this is cohesion (met een mooi plaatje erbij?)
+
 ### Refactoring Connascence by Meaning
 
 Code smells that are indicators of connascence by meaning are Magic Numbers and Primitive Obsession.

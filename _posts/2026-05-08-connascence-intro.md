@@ -138,7 +138,7 @@ The volatility (or stability) of elements is referenced in the Connascence model
 
 This post is a first of a series about Connascence and coupling.
 
-- Part 1 - Introduction
+- *Part 1 - Introduction*
 - Part 2 - Connascence by Name and Type
 - Part 3 - Connascence by Meaning
 - Part 4 - Connascence by Position
