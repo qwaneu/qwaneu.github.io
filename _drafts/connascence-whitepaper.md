@@ -6,7 +6,7 @@ tags:
   - coupling
   - design
 author: Marc Evers, Rob Westgeest, Willem van den Ende
-image: /attachments/blogposts/2026/connascence-visualised-2.jpg
+image: /attachments/blogposts/2026/connascence/connascence-visualised-2.jpg
 ---
 
 In this post, we will introduce Connascence, a model that describes coupling and cohesion in multiple dimensions. This model gives you an energy label to determine how energy efficient your coupling is.
