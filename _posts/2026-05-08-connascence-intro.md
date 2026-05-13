@@ -133,13 +133,12 @@ The volatility (or stability) of elements is referenced in the Connascence model
 * [Connascence.io](https://connascence.io)
 * Vlad Khononov, [Balancing Coupling in Software Design](https://vladikk.com/page/books/) (2024)
 
+## What's next
 
-## All parts in this series 
-
-This post is a first of a series about Connascence and coupling.
+This post is a first of a series about connascence and coupling. The next post will focus on Connascence by Name and by Type, the two weakest, most explicit forms of connascence.
 
 - *Part 1 - Introduction*
-- Part 2 - Connascence by Name and Type
+- [Part 2 - Connascence by Name and Type](/2026/05/13/connascence-name-type)
 - Part 3 - Connascence by Meaning
 - Part 4 - Connascence by Position
 - Part 5 - Connascence by Algorithm
