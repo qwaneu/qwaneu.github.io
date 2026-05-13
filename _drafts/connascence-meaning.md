@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Connascence: Meaning (part 2)"
+title: "Connascence: Meaning (part 3)"
 tags:
   - architecture
   - coupling
