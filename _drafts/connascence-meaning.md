@@ -9,7 +9,7 @@ author: Marc Evers, Rob Westgeest, Willem van den Ende
 image: /attachments/blogposts/2026/connascence/slide-8-meaning.png
 ---
 
-In the previous posts, we [introduced the Connascence model as a model of coupling](/2026/05/08/connascence-intro) and elaborated on the two most explicit forms of connascence: [name and type](). In this post, we will discuss Connascence by Meaning, which is as much about cohesion as it is about coupling.
+In the previous posts, we [introduced the Connascence model as a model of coupling](/2026/05/08/connascence-intro) and elaborated on the two most explicit forms of connascence: [name and type](/2026/05/13/connascence-name-type). In this post, we will discuss Connascence by Meaning, which is as much about cohesion as it is about coupling.
 
 Connascence defines three dimensions of coupling: strength, degree and distance, as the picture below shows. 
 
@@ -170,7 +170,7 @@ This post is part of a series on connascence and coupling. In the next post, we 
 
 - [Part 1 - Introduction](/2026/05/08/connascence-intro)
 - [Part 2 - Connascence by Name and Type](/2026/05/13/connascence-name-type)
-- Part 3 - *Connascence by Meaning*
+- *Part 3 - Connascence by Meaning*
 - Part 4 - Connascence by Position
 - Part 5 - Connascence by Algorithm
 - Part 6 - Connascence by Execution Order
