@@ -23,7 +23,7 @@ Connascence by Meaning (also known as Connascence by Convention) means that mult
 ![connascence by meaning](/attachments/blogposts/2026/connascence/slide-8-meaning.png)
 {: class="post-image post-image-50" }
 
-An example of connascence by meaning is the use of integers to represent monetary amounts. Every piece of code that uses those integers must know how to interpret the values - Eurocents or Euros? Euros or Dollars? Is the value allowed to be negative? What operations are valid on these numbers? We can add to monetary amounts, we can multiply a monetary amount by a scalar value. It does not make sense to multiply two monetary amounts.
+An example of connascence by meaning is the use of integers to represent monetary amounts. Every piece of code that uses those integers must know how to interpret the values - Euro cents or whole Euros? Euros or Dollars? Is the value allowed to be negative? What operations are valid on these numbers? We can add to monetary amounts, we can multiply a monetary amount by a scalar value. It does not make sense to multiply two monetary amounts.
 
 In the example below, apparently the return value `null` of function `validateAndConvert` means invalid data. The calling code depends on the meaning that `validateAndConvert` assigns to `null`.
 
@@ -32,11 +32,11 @@ person = validateAndConvert(data)
 if (person == null) throw new InvalidDataException();
 ```
 
-Some other examples are:
+Some other examples:
 - using integers to port numbers, which should be in the range from 0 to 65535 with 0-1023 being system ports;
-- using strings to represent email addresses, which are defined in RFCs [5322](https://www.rfc-editor.org/rfc/rfc5322) and [6854](https://www.rfc-editor.org/rfc/rfc6854);
+- using strings to represent email addresses, where RFCs [5322](https://www.rfc-editor.org/rfc/rfc5322) and [6854](https://www.rfc-editor.org/rfc/rfc6854) define what valid email addresses are;
 - using strings to represent international phone numbers;
-- returning null, None or Optional.empty to signal no results found, or some exceptional situation - what does null or None actually mean?
+- returning `null`, `None` or `Optional.empty` to signal no results found, or some exceptional situation - what does the `null` or `None` value actually mean?
 
 Different elements need to know what the numbers mean, how to use them, what valid and invalid values are. We will always have connascence by meaning somewhere in our code. We use primitives to build higher order concepts, introducing assumptions about how these concepts are represented using strings or integers. 
 
@@ -117,7 +117,52 @@ public class VehicleMessageDecoder : MessageDecoder
 }
 ```
 
-@@iets over feature envy?
+Let's look at another example. The code below shows a piece of shopping cart logic, computing the total including taxes using Money and Item data classes. The shopping cart code has intimate knowledge about how money works: it knows how to add amounts and apply tax rates.
+
+```kotlin
+data class Money(val amount: BigDecimal)
+
+data class Item(val name: String, val price: Money)
+
+class ShoppingCart {
+    ...
+    fun calculateTotalWithTax(taxRate: BigDecimal): Money {
+        var totalAmount = BigDecimal.ZERO
+        for (item in items) {
+            totalAmount = totalAmount.add(item.price.amount)
+        }
+        val taxMultiplier = BigDecimal.ONE.add(taxRate)
+        val finalAmount = totalAmount.multiply(taxMultiplier)
+        return Money(finalAmount)
+    }
+}
+```
+
+We can refactor this by extracting `add` and `withTax` functions and moving these to Money, so that Money encapsulates the meaning around the BigDecimal value:
+
+```kotlin
+data class Money(val amount: BigDecimal = BigDecimal.ZERO) {
+    fun add(other: Money): Money = Money(amount.add(other.amount))
+
+    fun withTax(taxRate: BigDecimal): Money {
+        val taxMultiplier = BigDecimal.ONE.add(taxRate)
+        return Money(amount.multiply(taxMultiplier))
+    }
+}
+
+data class Item(val name: String, val price: Money)
+
+class ShoppingCart {
+    ...
+    fun calculateTotalWithTax(taxRate: BigDecimal): Money {
+        var totalAmount = Money()
+        for (item in items) {
+            totalAmount = totalAmount.add(item.price)
+        }
+        return totalAmount.withTax(taxRate) 
+    }
+}
+```
 
 ## What's next
 
