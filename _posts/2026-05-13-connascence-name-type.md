@@ -54,9 +54,9 @@ For elements further apart, we can try to move them closer together. For name co
 
 This post is part of a series on connascence and coupling. In the next post, we will focus on Connascence by Meaning, where two or more elements need to agree on the meaning of particular values.
 
-- Part 1 - [Introduction](/2026/05/08/connascence-intro)
+- [Part 1 - Introduction](/2026/05/08/connascence-intro)
 - Part 2 - *Connascence by Name and Type*
-- Part 3 - Connascence by Meaning
+- [Part 3 - Connascence by Meaning](/2026/05/21/connascence-meaning)
 - Part 4 - Connascence by Position
 - Part 5 - Connascence by Algorithm
 - Part 6 - Connascence by Execution Order
