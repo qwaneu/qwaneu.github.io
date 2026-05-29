@@ -11,7 +11,7 @@ image: /attachments/blogposts/2026/connascence/algorithm-thumbnail.png
 
 In the previous posts, we [introduced the Connascence model as a model of coupling](/2026/05/08/connascence-intro) and elaborated connascence by name, type, meaning and position. In this post, we will discuss Connascence by Algorithm.
 
-Connascence defines three dimensions of coupling: strength, degree and distance, as the picture below shows. 
+Connascence is a model for reasoning about coupling and defines three dimensions of coupling: strength, degree and distance, as the picture below shows.
 
 ![connascence in three dimensions, from green to red](/attachments/blogposts/2026/connascence/slide-19-degree.png)
 {: class="post-image post-image-50" }
@@ -23,12 +23,12 @@ Connascence by Algorithm means two elements are coupled because they need to agr
 ![connascence by algorithm](/attachments/blogposts/2026/connascence/slide-10-1-algorithm-example.png)
 {: class="post-image post-image-50" }
 
-Connascence by Algorithm occurs whenever two services need to exchange data, e.g. over the network. To consume an API, you need to know how the API works, what data in what format is returned. File exports/imports is another example of Connascence by Algorithm.
+Connascence by Algorithm occurs when two services need to exchange data, e.g. over the network. To consume an API, we need to know how the API works, what data in what format is returned. File exports/imports is another example of Connascence by Algorithm.
 
 ![picture showing a producer and a consumer that are coupled via a shared protocol](/attachments/blogposts/2026/connascence/algorithm.png)
 {: class="post-image post-image-70" }
 
-The `Producer` code below encodes information in a byte array. which gets sent over the network.
+The `Producer` code below encodes information in a byte array, which gets sent over the network.
 
 ```java
 class Producer {
@@ -53,7 +53,7 @@ The `Consumer` needs to know the order and meaning of the incoming bytes.
 ```java
 class Consumer {
   public void handleMessage(byte identification, byte[] message, int length) {
-    switch(decoderState) //.....
+    switch(decoderState) {
       case WAITING_FOR_INITIALFRAME:
         currentEntry.setTimestamp(CodecUtils.decodeInt32(message, Protocol.TimeStampIndex));
         currentEntry.setXPos(CodecUtils.decodeInt16(message, Protocol.XPosIndex));
@@ -62,20 +62,20 @@ class Consumer {
 }
 ```
 
-Connascence by Algorithm is trickier to manage, because it often crosses system boundaries. It describes coupling between systems that have a different lifecycle and often a different owner. In other words, it usually refers to coupling at a high *distance*. Consumers evolve at their own pace, something we need to take care of when the algorithm or protocol evolves.
+Connascence by Algorithm is trickier to manage than the weaker forms of connascence like Name or Type, because it often crosses system boundaries. It concerns coupling between systems that have a different lifecycle and often different owners. So it usually concerns coupling with a high *distance*. 
 
-The *degree* of Connascence by Algorithm can make it worse. If a producer has many consumers, it becomes even more difficult for the algorithm to evolve.
+This is made worse by consumers and producers that evolve at their own pace, something we need to take care of when the algorithm or protocol evolves. The *degree* of connascence can make it worse. If a producer has many consumers, it becomes even more difficult for the algorithm to evolve.
 
 ## Refactoring Connascence by Algorithm
 
-What can you do to keep Connascence by Algorithm manageable? Sometimes, We could merge producer and consumer services into a single service, reducing it to Connascence by Name and Type, but usually this is not possible. So we have to deal with it. We can make our lives a bit easier however:
+What can we do to keep Connascence by Algorithm manageable? Sometimes, we can merge producer and consumer into a single service, reducing it to Connascence by Name and Type. Often this is not possible, so we have to deal with it. We can make our lives a bit easier however:
 
-- Use **open & industry standard formats**. The more stable a format is, the less consumers & producers need to change, and the less impactful coupling is.
-- Use language independent **schemas** like JSON schema, [AVRO](https://avro.apache.org/), or [Protocol Buffers](https://protobuf.dev/)). This allows for schema versioning and sharing schemas through a schema registry. This does not remove the impact of changes, but it makes it more explicit. It allows us to evolve a protocol in steps with lower risk of breaking something.
+- Use **open formats** and **industry standard formats**. The more stable a format is, the less consumers & producers need to change, and the less impactful coupling is.
+- Use language independent **schemas** like JSON schema, [AVRO](https://avro.apache.org/), or [Protocol Buffers](https://protobuf.dev/). This allows for schema versioning and sharing through a schema registry. This does not remove the impact of changes, but it makes it more explicit. It allows us to evolve a protocol in steps with a lower risk of breaking something.
 - **[Contract testing](https://pactflow.io/blog/what-is-contract-testing/)** provides early feedback about producer and consumer changes. 
-- Keep APIs **backward compatible** if possible, so that consumers are not affected by producer changes.
-- Perform explicit **lifecycle management**, through agreements with consumers, e.g. requiring consumers to upgrade to a new API version within 6 months of a change.
-- Create a **shared library** that encapsulates the protocol. Both consumer and producer use the shared library. This moves the producing and consumer code together, increasing the locality of connascence. This is not always possible and comes at the price of managing an extra dependency across multiple services.
+- Keep APIs **backward compatible**, so that consumers are not affected by producer changes.
+- Perform explicit **lifecycle management** on APIs, through agreements with consumers, e.g. requiring consumers to upgrade to a new API version within 6 months of a change.
+- Create a **shared library** that encapsulates the protocol and have both consumer and producer use it. This moves the producing and consumer code together, increasing the locality of connascence. This is not always possible and comes at the price of managing an extra dependency across multiple services.
 
 ## What's next
 
@@ -84,7 +84,7 @@ This post is part of a series on connascence and coupling. In the next post, we 
 - [Part 1 - Introduction](/2026/05/08/connascence-intro)
 - [Part 2 - Connascence by Name and Type](/2026/05/13/connascence-name-type)
 - [Part 3 - Connascence by Meaning](/2026/05/21/connascence-meaning)
-- [Part 4 - Connascence by Position]()
+- [Part 4 - Connascence by Position](/2026/05/29/connascence-position)
 - *Part 5 - Connascence by Algorithm*
 - Part 6 - Connascence by Execution Order
 - Part 7 - Connascence by Timing
