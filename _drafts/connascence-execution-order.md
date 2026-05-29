@@ -16,27 +16,26 @@ Connascence is a model for reasoning about coupling and defines three dimensions
 ![connascence in three dimensions, from green to red](/attachments/blogposts/2026/connascence/slide-19-degree.png)
 {: class="post-image post-image-50" }
 
-
 ## Connascence by Execution Order
 
 Connascence by Execution Order means that two elements are coupled because they need to agree on the order in which steps are executed.
 
 ![connascence by execution order](/attachments/blogposts/2026/connascence/slide-12-execution.png)
+{: class="post-image post-image-50" }
 
-In a way, imperative programming is all about execution order. We're used to things like the code below, where first need to create a TCP client, then set up a writer, and only then we can start sending data.
+Imperative programming is all about execution order. We're used to things like the code below, where first need to create a TCP client, then set up a writer, and only then we can start sending data.
 
 ```java
-private BinaryWriter output()
-{
-  if (_output != null)
-    return _output;
+BinaryWriter output() {
+  if (output != null)
+      return output;
   TcpClient client = new TcpClient(host, port);
-  _output = new BinaryWriter(client.GetStream());
-  return _output;
+  output = new BinaryWriter(client.GetStream());
+  return output;
 }
 ```
 
-But this can get quite bad, as the next example shows. This is an excerpt from our Dirty Jobs legacy code exercise. The HandleMessage method processes frame data it receives over the network. It first creates a cache entry, and then stores the received data in that entry. At the end, it calls commit. There should be no further calls on the entry after the commit, but nothing will keep you from doing so. Any data stored after the commit will get lost however. This is a mistake waiting to happen.
+But this can get quite bad, as the next example shows. This is an excerpt from our [Dirty Jobs legacy code exercise](/training/mastering-legacy-code). The `HandleMessage` method processes frame data received over the network. It first creates a cache entry, and then stores the received data in that cache entry. At the end, it calls `commit` to make the changes definitive. There should be no further calls on the entry after `commit`, but nothing will keep you from doing so. Any data stored after calling `commit` will get lost however. This is a mistake waiting to happen.
 
 ```csharp
 public class VehicleMessageDecoder : MessageDecoder
@@ -48,7 +47,7 @@ public class VehicleMessageDecoder : MessageDecoder
         if (message[Protocol.FrameTypeIndex] == Protocol.FullFrame) {
           currentEntry = TrackingCache.getInstance().createCacheEntry(decoderId);
           currentEntry.setTimestamp(CodecUtils.decodeInt32(message, Protocol.TimeStampIndex));
-          // ... more stuff done to current entry
+          // ... more stuff done to currentEntry
           currentEntry.commit();
           // ... updates done here will get lost
         }
@@ -58,14 +57,33 @@ public class VehicleMessageDecoder : MessageDecoder
 }
 ```
 
+Connascence by Execution Order is often inevitable. It is hard to detect from static analysis, because the ordering constraints follow from the semantics of the code.
+
+Another example of Connascence by Execution Order is the [OpenID Connect protocol](https://openid.net/developers/how-connect-works/). OpenID Connect protocol orchestrates authentication and authorization between multiple servers. The high level description on the OpenID site describes this order:
+
+> 1. End user navigates to a website or web application via a browser.
+> 2. End user clicks sign-in and types their username and password.
+> 3. The RP (Client) sends a request to the OpenID Provider (OP).
+> 4. The OP authenticates the User and obtains authorization.
+> 5. The OP responds with an Identity Token and usually an Access Token.
+> 6. The RP can send a request with the Access Token to the User device.
+> 7. The UserInfo Endpoint returns Claims about the End-User.
+>
+> *source: OpenID Connect*
+
+When using OpenID Connect, we have to deal with this specific execution order constraints. OpenID Connect is an open standard and the protocol is pretty stable. This limits the actual impact of the execution order constraints.
+
 ## Tackling Connascence of Execution Order
 
-What can we do about it? In this example, we can move the knowledge about the order of set and commit calls to the TrackingRepository. In this way, we make sure the HandleMessage code does not need to know about committing, it just calls a method on the repository. We have increased the *locality* of connascence here.
+What can we do about it? In the example shown above, we can extract and move the knowledge about the order of `set...` and `commit` calls to a more appropriate abstraction. 
+
+In this case, we introduce a `TrackingRepository`, a small abstraction that manages the constraints on ordering and saving. In this way, `HandleMessage` does not need to know about committing at the right point in time, it just calls `saveFullFrame` method on the repository. This increases the *locality* of connascence a bit, by moving code that is coupled by ordering constraints together in a single place.
 
 ```csharp
 public class VehicleMessageDecoder : MessageDecoder
 {
   TrackingRepository _trackingRepository;
+
   public void HandleMessage(byte identification, byte[] message, int length)
   {
     switch (decodingState) {
@@ -81,14 +99,20 @@ public class VehicleMessageDecoder : MessageDecoder
 }
 ```
 
-We also used a [fluent interface](https://martinfowler.com/bliki/FluentInterface.html), which can also help enforcing specific ordering via the compiler.
+We are also using a [fluent interface](https://martinfowler.com/bliki/FluentInterface.html) here, which enforcing specific ordering using typing. This unburdens developers of knowing what to call in which order and reduces possible mistakes.
 
-Sometimes the set of statements in a specific order is repeated in multiple places in the code. The higher the degree of this connascence, the more painful it gets. We can reduce the degree by extracting the statements and ordering in a function and calling the functions wherever it is needed. Note that we still have Connascence by Execution within that function.
+Sometimes the set of statements in a specific order is repeated in multiple places in the code. The higher the *degree* of this connascence, the more painful it gets. We can reduce the degree by extracting the set of statements in a function and calling that function wherever it is needed. Note that we still have Connascence by Execution within that function.
 
-@@ Hexagonal Architecture
+### Hexagonal Architecture
 
-@@ Another example: The OpenID Connect protocol. The OpenID Connect protocol uses a specific way of orchestrating authentication/authorization between multiple servers. When using OpenID Connect, you have to deal with this strong execution order coupling, but the protocol is pretty stable which limits the actual impact. @@need to check/elaborate a bit more
+[Hexagonal Architecture]() (or Ports & Adapters) helps in managing execution order coupling. Hexagonal Architecture puts domain logic in the center and inverts dependencies so that storage, web and other services depend on domain logic and not the other way around.
 
+![Ports and Adapters overview, with a database connected to the domain via a Repository interface and an Adapter](/attachments/blogposts/2026/connascence/ports-and-adapters.png)
+{: class="post-image post-image-70" }
+
+Interacting with databases or other services often involves execution order constraints. We need to start a transaction, do updates, and then commit (or rollback) the transaction. If we let these execution order constraints seep into our domain logic, we mix extra complexity with the inherent complexity of our domain. This can result in code where transaction boundaries are unclear and updates failing because of that.
+
+We want to keep our domain code free from execution order coupling caused by databases and other external services we use. Following the Hexagonal Architecture pattern, we introduce an interface (e.g. a Repository) in the domain that talks domain language and encapsulate execution order knowledge in adapters.
 
 ## What's next
 
