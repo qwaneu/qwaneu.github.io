@@ -72,3 +72,5 @@ collections:
     output: true
   workshops:
     output: true
+  consulting:
+    output: true
