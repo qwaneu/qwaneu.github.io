@@ -9,10 +9,9 @@ author: Marc Evers, Rob Westgeest, Willem van den Ende
 image: /attachments/blogposts/2026/connascence/position-example.png
 ---
 
-
 In the previous posts, we [introduced the Connascence model as a model of coupling](/2026/05/08/connascence-intro) and elaborated connascence by name, type and meaning. In this post, we will discuss Connascence by Position.
 
-Connascence defines three dimensions of coupling: strength, degree and distance, as the picture below shows. 
+Connascence is a model for reasoning about coupling and defines three dimensions of coupling: strength, degree and distance, as the picture below shows. 
 
 ![connascence in three dimensions, from green to red](/attachments/blogposts/2026/connascence/slide-19-degree.png)
 {: class="post-image post-image-50" }
@@ -24,7 +23,7 @@ Connascence by Position means that two elements need to agree on the order of va
 ![connascence by position](/attachments/blogposts/2026/connascence/slide-9-position.png)
 {: class="post-image post-image-50" }
 
-Positional parameters are an example of Connascence by Position. In the code below, the line calling the Person constructor needs to keep the correct order as defined by the constructor signature. There will be no compiler feedback in case of a mistake.
+Positional parameters are an example of Connascence by Position. In the code below, the line calling the `Person` constructor needs to keep the correct order as defined by the constructor signature. The compiler will not complain in case of a mistake.
 
 ```java
 class Person {
@@ -57,14 +56,15 @@ class Person {
 new Person({ name: 'Jan', surname: 'Janssen', town: 'Utrecht' })
 ``` 
 
-Do a subset (or all) of the parameters form a **Data Clump**? Then we can extract a new type or class to encapsulate those, as the code fragment below shows.
+It is useful to check if a subset (or all) of the parameters form a **Data Clump** Then we can extract a new type or class to encapsulate those, as the code fragment below shows.
 
 > A **Data Clump** is a set of variables that belong together and travel together throughout the code.
 
 ```java
 // from:
 class Person {
-  void Person(String name, String surname, String street, String postalCode, String town) { ... }
+  void Person(String name, String surname, String street, 
+              String postalCode, String town) { ... }
 }
 
 // to:
@@ -76,7 +76,7 @@ class Person {
 }
 ```
 
-This reduces the Connascence by Position to Connascence by Type and encapsulates the details in the Name and Address types.
+This reduces the Connascence by Position to Connascence by Type and encapsulates the details in the `Name` and `Address` types. We probably want to refactor this further, as we still have come positional coupling in `Name` and `Address`.
 
 ## What's next
 
