@@ -176,7 +176,7 @@ This post is part of a series on connascence and coupling. In the next post, we 
 - [Part 2 - Connascence by Name and Type](/2026/05/13/connascence-name-type)
 - *Part 3 - Connascence by Meaning*
 - [Part 4 - Connascence by Position](/2026/05/29/connascence-position)
-- Part 5 - Connascence by Algorithm
+- [Part 5 - Connascence by Algorithm](/2026/06/03/connascence-algorithm)
 - Part 6 - Connascence by Execution Order
 - Part 7 - Connascence by Timing
 - Part 8 - Connascence by Value
