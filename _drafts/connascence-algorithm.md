@@ -9,6 +9,7 @@ author: Marc Evers, Rob Westgeest, Willem van den Ende
 image: /attachments/blogposts/2026/connascence/algorithm-thumbnail.png
 ---
 
+
 In the previous posts, we [introduced the Connascence model as a model of coupling](/2026/05/08/connascence-intro) and elaborated connascence by name, type, meaning and position. In this post, we will discuss Connascence by Algorithm.
 
 Connascence is a model for reasoning about coupling and defines three dimensions of coupling: strength, degree and distance, as the picture below shows.
@@ -23,10 +24,10 @@ Connascence by Algorithm means two elements are coupled because they need to agr
 ![connascence by algorithm](/attachments/blogposts/2026/connascence/slide-10-1-algorithm-example.png)
 {: class="post-image post-image-50" }
 
-Connascence by Algorithm occurs when two services need to exchange data, e.g. over the network. To consume an API, we need to know how the API works, what data in what format is returned. File exports/imports is another example of Connascence by Algorithm.
+Connascence by Algorithm occurs when two services need to exchange data, e.g. over a network. We need to know how an API works if we want to consume that API. We need to know what data in what format is returned. File exports/imports is another example of Connascence by Algorithm.
 
 ![picture showing a producer and a consumer that are coupled via a shared protocol](/attachments/blogposts/2026/connascence/algorithm.png)
-{: class="post-image post-image-70" }
+{: class="post-image post-image-50" }
 
 The `Producer` code below encodes information in a byte array, which gets sent over the network.
 
@@ -62,20 +63,22 @@ class Consumer {
 }
 ```
 
-Connascence by Algorithm is trickier to manage than the weaker forms of connascence like Name or Type, because it often crosses system boundaries. It concerns coupling between systems that have a different lifecycle and often different owners. So it usually concerns coupling with a high *distance*. 
+Connascence by Algorithm is trickier to manage than the weaker forms of connascence like Name or Type, because it often crosses system boundaries. It concerns coupling between systems that have a different lifecycle and often different owners. It tends to come with a high *distance*. 
 
-This is made worse by consumers and producers that evolve at their own pace, something we need to take care of when the algorithm or protocol evolves. The *degree* of connascence can make it worse. If a producer has many consumers, it becomes even more difficult for the algorithm to evolve.
+This is made worse by consumers and producers evolving at their own pace. when When the algorithm or protocol evolves, producers and consumers needs to be kept in sync. The higher the *degree* of connascence, the worse it gets: if a producer has many consumers, it becomes even more difficult for the algorithm to evolve.
 
 ## Refactoring Connascence by Algorithm
 
-What can we do to keep Connascence by Algorithm manageable? Sometimes, we can merge producer and consumer into a single service, reducing it to Connascence by Name and Type. Often this is not possible, so we have to deal with it. We can make our lives a bit easier however:
+What can we do to keep Connascence by Algorithm manageable? Sometimes, we can merge producer and consumer into a single service, reducing it to Connascence by Name and Type. If multiple instances of that services are running, we still need to keep in mind that multiple versions of our protocol could be running alongside each other, e.g. during a deployment.
 
-- Use **open formats** and **industry standard formats**. The more stable a format is, the less consumers & producers need to change, and the less impactful coupling is.
+Often it is not possible to merge producer and consumer, so we have to deal with it. We can make our lives a bit easier however:
+
+- Create a **shared library** that encapsulates the protocol and have both consumer and producer use it. This moves the producing and consumer code together, increasing the locality of connascence. This is not always possible and comes at the price of managing an extra dependency across multiple services.
+- Use **open formats** and **industry standards**. The more stable a format is, the less consumers & producers need to change, and the less impactful coupling is.
 - Use language independent **schemas** like JSON schema, [AVRO](https://avro.apache.org/), or [Protocol Buffers](https://protobuf.dev/). This allows for schema versioning and sharing through a schema registry. This does not remove the impact of changes, but it makes it more explicit. It allows us to evolve a protocol in steps with a lower risk of breaking something.
-- **[Contract testing](https://pactflow.io/blog/what-is-contract-testing/)** provides early feedback about producer and consumer changes. 
+- Add **[contract tests](https://pactflow.io/blog/what-is-contract-testing/)** that provide early feedback about producer and consumer changes. 
 - Keep APIs **backward compatible**, so that consumers are not affected by producer changes.
 - Perform explicit **lifecycle management** on APIs, through agreements with consumers, e.g. requiring consumers to upgrade to a new API version within 6 months of a change.
-- Create a **shared library** that encapsulates the protocol and have both consumer and producer use it. This moves the producing and consumer code together, increasing the locality of connascence. This is not always possible and comes at the price of managing an extra dependency across multiple services.
 
 ## What's next
 
