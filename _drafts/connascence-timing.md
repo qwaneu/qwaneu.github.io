@@ -6,10 +6,11 @@ tags:
   - coupling
   - design
 author: Marc Evers, Rob Westgeest, Willem van den Ende
-image: 
+image: /attachments/blogposts/2026/connascence/watch.jpg
 ---
 
-In the previous posts, we [introduced the Connascence model as a model of coupling](/2026/05/08/connascence-intro) and elaborated connascence by name, type, meaning, position, algorithm, and execution order. In this post, we will discuss Connascence by Execution Order.
+
+In the previous posts, we [introduced the Connascence model as a model of coupling](/2026/05/08/connascence-intro) and elaborated connascence by name, type, meaning, position, algorithm, and execution order. In this post, we will discuss Connascence by Timing.
 
 Connascence is a model for reasoning about coupling and defines three dimensions of coupling: strength, degree and distance, as the picture below shows.
 
@@ -21,10 +22,12 @@ Connascence is a model for reasoning about coupling and defines three dimensions
 Connascence by Timing means that two elements are coupled because they need to agree on timing.
 
 ![connascence by timing](/attachments/blogposts/2026/connascence/slide-13-timing.png)
+{: class="post-image post-image-50" }
 
 An example: a producer produces data, a consumer processes the data, both work concurrently and asynchronously. This can be multiple threads or separate services. How do we ensure each produced value is consumer once and only once?
 
 ![a producer and consumer that exchange a value asynchronously](/attachments/blogposts/2026/connascence/producer-value-consumer.jpg)
+{: class="post-image post-image-70" }
 
 There are different patterns and mechanisms to handle a timing dependency like this. We can use probes, semaphores, locks, promises, observables.
 
@@ -33,10 +36,12 @@ Alternatively, we can relax the exactly once constraint to at least once and red
 What if there is a single producer and multiple consumers, and we need to make sure each value is read exactly once, by exactly one consumer?
 
 ![single producer, multiple consumers](/attachments/blogposts/2026/connascence/queue-overtaking-2.png)
+{: class="post-image post-image-70" }
 
 When a consumer starts reading a value, it can create a lock to ensure it is the only one reading at that moment.
 
 ![single producer, only one consumer reads at a time](/attachments/blogposts/2026/connascence/queue-overtaking-3.png)
+{: class="post-image post-image-70" }
 
 @@Alternatively, we can partition the data, so each consumer has its own part of the data to consume. 
 
@@ -49,6 +54,7 @@ We can sometimes be less strict in agreeing on timing, and settle for data being
 Whether or not eventual consistency can be used is a business decision: often, having an inconsistent state for a short amount of time is good enough and it is not worth adding the complexity of tightening consistency constraints. If I transfer money with my banking app, I often see the old balance for a second in the app until the transfer is processed, which is good enough.
 
 ![single producer, only one consumer reads at a time](/attachments/blogposts/2026/connascence/eventual-consistency.jpg)
+{: class="post-image post-image-70" }
 
 There are trade-off here. For example, eventual consistency makes it more complicated to detect that something did _not_ happen. Explicit queries at some time are needed for instance, whereas a timeout, optionally with a back-off algorithm is _relatively_ simple.
 
@@ -66,6 +72,8 @@ This post is part of a series on connascence and coupling. In the next post, we 
 - Part 8 - Connascence by Value
 - Part 9 - Connascence by Identity
 - Part 10 - Heuristics for managing coupling
+
+<em>Credits: watch thumbnail photo by <a href="https://unsplash.com/@agebarros?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Agê Barros</a> on <a href="https://unsplash.com/photos/a-close-up-of-a-silver-watch-face-rBPOfVqROzY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></em>
 
 <aside>
 <h3>Decouple more deliberately!</h3>
