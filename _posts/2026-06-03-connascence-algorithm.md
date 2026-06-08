@@ -89,7 +89,7 @@ This post is part of a series on connascence and coupling. In the next post, we 
 - [Part 3 - Connascence by Meaning](/2026/05/21/connascence-meaning)
 - [Part 4 - Connascence by Position](/2026/05/29/connascence-position)
 - *Part 5 - Connascence by Algorithm*
-- Part 6 - Connascence by Execution Order
+- [Part 6 - Connascence by Execution Order](/2026/06/08/connascence-execution-order)
 - Part 7 - Connascence by Timing
 - Part 8 - Connascence by Value
 - Part 9 - Connascence by Identity
