@@ -23,7 +23,7 @@ Connascence by Execution Order means that two elements are coupled because they 
 ![connascence by execution order](/attachments/blogposts/2026/connascence/slide-12-execution.png)
 {: class="post-image post-image-50" }
 
-Imperative programming is all about execution order. We are used to things like the code below, where we first need to create a TCP client, then set up a writer, and only then we can start sending data.
+What we know as imperative programming is all about execution order. We are used to things like the code below, where we first need to create a TCP client, then set up a writer, and only then we can start sending data.
 
 ```java
 BinaryWriter output() {
@@ -58,7 +58,7 @@ public class VehicleMessageDecoder : MessageDecoder
 }
 ```
 
-Another example of Connascence by Execution Order is the [OpenID Connect protocol](https://openid.net/developers/how-connect-works/). OpenID Connect orchestrates authentication and authorization between multiple servers. The high level description on the OpenID site describes this order:
+Another example of Connascence by Execution Order is the [OpenID Connect protocol](https://openid.net/developers/how-connect-works/). OpenID Connect orchestrates authentication and authorization between multiple servers in a number of steps:
 
 > 1. End user navigates to a website or web application via a browser.
 > 2. End user clicks sign-in and types their username and password.
@@ -70,7 +70,7 @@ Another example of Connascence by Execution Order is the [OpenID Connect protoco
 >
 > *source: [OpenID Connect](https://openid.net/developers/how-connect-works/)*
 
-When using OpenID Connect, we have to deal with this specific order of execution. OpenID Connect is an open standard and the protocol is pretty stable. This limits the actual impact of the execution order constraints.
+When using OpenID Connect, we have to deal with this specific ordering of execution. OpenID Connect is an open standard and the protocol is pretty stable. This limits the actual impact of the execution order constraints.
 
 ## Tackling Connascence of Execution Order
 
@@ -106,14 +106,12 @@ Sometimes a set of statements in a specific order is duplicated in multiple plac
 
 ### Hexagonal Architecture
 
-[Hexagonal Architecture](/2020/08/20/hexagonal-architecture) (also known as **Ports & Adapters**) helps in managing execution order coupling. Hexagonal Architecture puts domain logic in the center and inverts dependencies so that storage, web and other services depend on domain logic and not the other way around.
+[Hexagonal Architecture](/2020/08/20/hexagonal-architecture) (also known as **Ports & Adapters**) helps to reduce the impact of execution order coupling. Hexagonal Architecture puts domain logic in the center and inverts dependencies, so that storage, web and other services depend on domain logic instead of the other way around.
 
 ![Ports and Adapters overview, with a database connected to the domain via a Repository interface and an Adapter](/attachments/blogposts/2026/connascence/ports-and-adapters.png)
 {: class="post-image post-image-70" }
 
-Interacting with databases or other services often involves execution order constraints. We need to start a transaction, do updates, and then commit (or rollback) the transaction. If we let these execution order constraints seep into our domain logic, we add an extra layer of complexity to the inherent complexity of our domain. This can make transaction boundaries are unclear for example, with  updates failing because of that.
-
-We want to keep our domain code free from execution order coupling caused by databases and other external services. Following the Hexagonal Architecture pattern, we decouple using an interface (e.g. a Repository) in the domain that talks domain language and encapsulates execution order knowledge in adapters.
+Interacting with databases or other services often involves execution order constraints. We need to start a transaction, do updates, and then commit (or rollback) the transaction. If we let these execution order constraints seep into our domain logic, we add extra complexity to the inherent complexity of our domain. This can for example obfuscate transaction boundaries, with  failing updates as a result.
 
 ## What's next
 
