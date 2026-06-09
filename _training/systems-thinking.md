@@ -54,7 +54,7 @@ This course is meant for managers, project leaders, IT customers, scrum masters,
 
 ## Practical information
 
-* Duration: 1 day
+* Duration: 1 or 2 days
 * No laptops required
 * This training is available as open enrolment and in-house.
 

@@ -41,7 +41,7 @@ The course consists of a mix of short presentations, live programming demonstrat
 
 ## Practical information
 
-* Duration: 2 days
+* Duration: 2 or 3 days
 * Training infrastructure (including laptops) will be taken care of
 * Basic programming skills required
 * This training is available as open enrolment and in-house.

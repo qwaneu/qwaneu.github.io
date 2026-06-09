@@ -42,7 +42,7 @@ agile architecture &amp; incremental design; responsibility driven design and CR
 
 ## Practical information
 
-* Duration: 3 days (or 2 when skipping the mini project)
+* Duration: 3-5 days
 * Training infrastructure (including laptops) will be taken care of
 * Basic programming skills required
 * This training is available as open enrolment and in-house.

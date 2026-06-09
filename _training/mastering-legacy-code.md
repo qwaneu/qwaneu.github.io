@@ -74,7 +74,7 @@ recommended. Basic programming skills are required.
 
 ## Practical information
 
-* Duration: 2 days
+* Duration: 2 or 3 days
 * Shared development environment will be taken care of. Participants only need a current web browser on their machine to participate.
 * This training is currently only available in-house. 
 * This training is available as half day follow up on our [test driven development training](/training/test-driven-development).

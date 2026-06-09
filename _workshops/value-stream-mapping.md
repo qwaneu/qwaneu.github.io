@@ -27,7 +27,7 @@ This workshop can be run at the team level, involving all team members, but valu
 
 ## Practical information
 
-* Duration: ½-1 day
+* Duration: ½ or 1 day
 * This workshop is delivered in-house
 
 [Please contact us for registration](/contact)

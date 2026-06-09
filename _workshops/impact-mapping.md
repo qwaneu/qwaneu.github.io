@@ -8,3 +8,16 @@ tags: [refinement, agile planning, user specification by example, behaviour driv
 ---
 
 Impact Mapping; in deze workshop leer je inzicht krijgen in wat nu echt waardevol is voor je gebruikers en andere stakeholders en hoe je dat kan meten. Deze inzichten helpen om betere prioriteiten te stellen en productkeuzes te maken. De resultaten van impact mapping kunnen bijvoorbeeld input zijn voor een story map.
+
+## Benefits
+
+
+## Audience & prerequisites
+
+This workshop is for ...
+
+## Practical information
+
+* Duration: ½ or 1 day
+* No laptops required
+* This training is available in-house only.
