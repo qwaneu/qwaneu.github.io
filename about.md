@@ -7,7 +7,7 @@ title: About QWAN
 
 **QWAN - Quality Without a Name** is a partnership of independent consultants. We take a systemic approach to help software development organizations become better at what they do and more fun places to work for.
 
-Whether we train, coach or develop, we’ll sit with you, understand your situation and find what works for your context. Our approach is grounded in systems thinking, agile and lean software development approaches like Scrum, Kanban, eXtreme Programming, and test driven development. We always keep an eye on the goal: delivering valuable software better, faster, with more joy.
+Whether we train, coach or develop, we’ll sit with you, understand your situation and find what works in your context. Our approach is grounded in systems thinking, Domain Driven Design, DevOps, agile and lean approaches like eXtreme Programming, Kanban, Scrum, and test driven development. We always keep an eye on the goal: delivering valuable software better, faster, with more joy.
 
 ## Benefits of our approach
 
@@ -17,7 +17,7 @@ Whenever customers get software that ‘just works’ they become happier, compl
 Combined with a shorter time to market this means a better return on your investments. 
 You can use that money to reward employees, tax payers, or investors, and find even better ways to develop software, so that the virtuous cycle continues.
 
-*[Let's explore together](/contact) to uncover better ways of software delivery that fit your situation.*
+*[Let's explore together](/contact) and uncover better ways of software delivery that fit your situation.*
 
 ## Why the name QWAN?
 
