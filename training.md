@@ -22,7 +22,7 @@ Programming exercises are available in Java, C#, C++, Scala, Ruby, Python, JavaS
 </div>
 
 <div class="trainingpage-layout">
-  <h2>Training courses (1 or more days)</h2>
+  <h2>Training courses</h2>
 
   <div class="courses-grid">
   {% for course in site.training %}
@@ -39,7 +39,7 @@ Programming exercises are available in Java, C#, C++, Scala, Ruby, Python, JavaS
   {% endfor %}
   </div>
 
-  <h2>Workshops (1/2 day)</h2>
+  <h2>Workshops</h2>
 
   <div class="courses-grid">
   {% for course in site.workshops %}

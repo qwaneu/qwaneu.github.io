@@ -2,7 +2,7 @@
 title: User Story Mapping & Dimensional Planning
 layout: training-description
 date: 2025-08-01
-tagline: "More effective product decisions"
+tagline: "More effective product decisions (1 day)"
 summary: "Managing your product backlog as an ordered list of user stories is a challenge. Your customer wants it all, but it takes too long!
     User Story Mapping and Dimensional Planning are two pragmatic product management techniques for realizing more value sooner."
 tags: [refinement, agile planning, user stories, specification by example, behaviour driven development, BDD, predictability]

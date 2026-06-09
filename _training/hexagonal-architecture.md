@@ -2,7 +2,7 @@
 title:  Hexagonal Architecture Hands-on
 layout: training-description
 date: 2025-07-01
-tagline: "Malleable software"
+tagline: "Malleable software (1 day)"
 summary: "Our software should be about the business we’re in, about the problem domain we are working in. It should speak domain language, not technicalities. Hexagonal Architecture puts the domain logic front and centre."
 tags: [agile engineering, extreme programming, XP, TDD, test driven development,ports and adapters, hexagonal architecture, clean architecture, scrum developer, CI/CD, continuous integration, continuous delivery]
 ---
