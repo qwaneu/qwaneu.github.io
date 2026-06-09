@@ -39,6 +39,6 @@ Some experience working in an agile team is required.
 
 ## Practical information
 
-* Duration: 1/2 day
+* Duration: &half; - 1 day
 * No laptops required
 * This training is available in-house only.
