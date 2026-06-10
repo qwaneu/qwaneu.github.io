@@ -108,10 +108,12 @@ Sometimes a set of statements in a specific order is duplicated in multiple plac
 
 [Hexagonal Architecture](/2020/08/20/hexagonal-architecture) (also known as **Ports & Adapters**) helps to reduce the impact of execution order coupling. Hexagonal Architecture puts domain logic in the center and inverts dependencies, so that storage, web and other services depend on domain logic instead of the other way around.
 
-![Ports and Adapters overview, with a database connected to the domain via a Repository interface and an Adapter](/attachments/blogposts/2026/connascence/ports-and-adapters.png)
+![Ports and Adapters overview, with a database connected to the domain via a Repository interface (Port) and an Adapter](/attachments/blogposts/2026/connascence/ports-and-adapters.png)
 {: class="post-image post-image-70" }
 
 Interacting with databases or other services often involves execution order constraints. We need to start a transaction, do updates, and then commit (or rollback) the transaction. If we let these execution order constraints seep into our domain logic, we add extra complexity to the inherent complexity of our domain. This can for example obfuscate transaction boundaries, with  failing updates as a result.
+
+In Hexagonal Architecture, a *port* provides an abstraction in domain terms of the external systems (e.g. through a Repository interface). *Adapters* contain the mapping from domain abstractions to external systems and can encapsulate execution order constraints.
 
 ## What's next
 
@@ -129,7 +131,9 @@ This post is part of a series on connascence and coupling. In the next post, we 
 - Part 10 - Heuristics for managing coupling
 
 <em>Credits: Flowchart thumbnail Photo by <a href="https://unsplash.com/@wocintechchat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Christina @ wocintechchat.com M</a> on <a href="https://unsplash.com/photos/person-writing-on-dry-erase-board-tYVkjjMYFBo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></em>
-      
+
+*Updated 10-6-2026: added a paragraph about ports and adapters*
+
 <aside>
 <h3>Decouple more deliberately!</h3>
 <p>We offer hands-on workshops about connascence and refactoring towards loosely coupled, highly cohesive systems.
