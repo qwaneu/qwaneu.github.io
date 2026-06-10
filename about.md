@@ -5,7 +5,7 @@ title: About QWAN
 
 *Systemic thinking for sustainable software development*
 
-**QWAN - Quality Without a Name** is a partnership of independent consultants. We take a systemic approach to help software development organizations become better at what they do and more fun places to work for.
+**QWAN - Quality Without a Name** is a partnership of independent consultants. We take a systemic approach to support software development organizations become better at what they do and more fun places to work for.
 
 Whether we train, coach or develop, we’ll sit with you, understand your situation and find what works in your context. Our approach is grounded in systems thinking, Domain Driven Design, DevOps, agile and lean approaches like eXtreme Programming, Kanban, Scrum, and test driven development. We always keep an eye on the goal: delivering valuable software better, faster, with more joy.
 
