@@ -1,7 +1,7 @@
 ---
-title: Example Mapping Workshop
+title: Spice up your refinements with Example Mapping
 layout: training-description
-tagline: "Spice up your refinement sessions (&half; - 1 day)"
+tagline: "Make your refinements more effective and more fun (&half; - 1 day)"
 summary: "Do you have long, boring refinement sessions? Do you still run into surprises and lack of shared understanding when building the software? In this hands-on workshop, you will experience Example Mapping, a simple pen-and-paper technique to spice up your refinements."
 tags: [refinement, agile planning, user stories, specification by example, behaviour driven development, BDD]
 ---
@@ -15,15 +15,19 @@ more enjoyable.
 
 Example Mapping is a simple, pen-and-paper technique invented by Matt Wynne (of
 Cucumber fame), which helps to have a more focused, structured conversation
-about your user stories.
+about your user stories. It is a collaborative workshop format that helps teams to build a shared understanding of scope and requirements quickly.
 
-## Goal
+## Learning objectives
 
-Learn Example Mapping as a whole-team refinement technique
+After participating in this workshop, you are able to:
+- facilitate Example Mapping in refinement sessions;
+- define user stories that are clearly scoped;
+- split user stories more effectively;
+- find test scenarios quickly for important business rules.
 
 ## Means
 
-We start out with a little bit of theory and then quickly get to a hands-on
+We start out with a bit of theory and then get to a hands-on
 group exercise, applying Example Mapping to a case we bring in. There is
 sufficient room for reflection, discussion and questions.
 
@@ -33,12 +37,14 @@ transformed into automated tests.
 ## Audience & prerequisites
 
 This workshop is for developers, product owners, scrum masters, agile coaches,
-testers
+testers. This workshop works best if the whole team participates.
 
-Some experience working in an agile team is required.
+Participants should have some experience with working in an agile way (e.g. Scrum) and user stories.
 
 ## Practical information
 
 * Duration: ½ or 1 day
-* No laptops required
-* This training is available in-house only.
+* No laptop required
+* This is an in-house workshop
+
+[Please contact us if you are interested](/contact)

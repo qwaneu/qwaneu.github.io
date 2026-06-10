@@ -12,14 +12,13 @@ You can run this workshop focused on a specific product. We recommend bringing i
 
 It is also possible to run this workshop across multiple teams, especially when your propositions involve multiple teams. The workshop helps you to zoom out and see friction, waste and bottlenecks that emerge from the collaboration.
 
-## Benefits
+## Learning objectives
 
-By participating in this workshop, you will:
+After participating in this workshop, you will be able to:
 
-* learn how to run a value stream mapping workshop
-* know the 7 wastes in development and how to recognise them
-* be able to visualize feedback loops in the delivery process and explain what their impact is
-*... and have fun!* – we take pride in creating a fun and effective learning environment, mixing presentations with exercises and hands-on development.
+* facilitate a value stream mapping workshop;
+* explain the 7 wastes in development and how to recognise them;
+* visualize feedback loops in the delivery process and explain what their impact is.
 
 ## Audience & prerequisites
 
@@ -28,6 +27,7 @@ This workshop can be run at the team level, involving all team members, but valu
 ## Practical information
 
 * Duration: ½ or 1 day
-* This workshop is delivered in-house
+* No laptop required
+* This is an in-house workshop
 
-[Please contact us for registration](/contact)
+[Please contact us if you are interested](/contact)
