@@ -1,41 +1,41 @@
 ---
 title: Event Storming Workshop
 layout: training-description
-hide_in_index: true
 tagline: "Growing a shared understanding through collaborative modelling (1 day)"
-summary: "In this hands-on domain modelling workshop, "
+summary: "Having a thorough, shared understanding of the domain you are working in is key to delivering software products that make a difference."
 tags: [modelling, analysis, design, architecture, systems thinking, sensemaking, organizational change, engineering culture]
 ---
 
-In this hands-on workshop, ...
+In this hands-on workshop, you will learn how to build a shared domain model of a complex domain, using a technique called Event Storming. Event Storming is a collaborative brainstorming workshop to visualize a domain based on domain events - things that happen in that domain. 
 
+Event Storming helps in building a shared, high level understanding of a domain and its subdomains. It will provide insights in dynamics, friction, opportunities and sources of complexity. It informs strategic decisions on what to focus on and how to structure a system's architecture.
 
+This workshop is mostly hands-on, learning by doing. We start with a short introduction of what event storming is and where it comes from (Domain Driven Design). Most of the time, you will be working in small groups and do event storming on the case we bring in. Along the way we will reflect and share guidelines and heuristics for modelling your domain.
 
-We beginnen met een overzicht van wat Domain Driven Design nu eigenlijk is.
-Vervolgens gaan we aan de slag met Event Storming rondom de casus waarbij we
-alle gebeurtenissen in de tijd uitzetten. 
+In the half day version of this workshop, we will focus on creating a shared big picture. In the full day version, you will also create a first architecture sketch informed by the event storming results and you will practice applying guidelines for system boundaries.
 
-We zoomen daarbij eerst uit om inzicht te krijgen in de bredere context waarin
-het systeem ingebed is. Daarna verfijnen we het model met Users, External
-Systems, Commands en Read models. 
+We will discuss how Event Storming fits in your software development process and how it relates to practices like [user story mapping](/2025/10/24/user-story-mapping.html) and [dimensional planning](/2020/09/02/dimensional-planning.html).
 
+Alternatively, we can work on your domain instead of using our own case.
 
 ## Benefits
 
-By participating in this workshop, you will:
+After participating in this workshop, you will be able:
 
-* learn how to run a value stream mapping workshop
-* know the 7 wastes in development and how to recognise them
-* be able to visualize feedback loops in the delivery process and explain what their impact is
-*... and have fun!* – we take pride in creating a fun and effective learning environment, mixing presentations with exercises and hands-on development.
+* run an event storming workshop with your team;
+* evaluate architecture (system boundaries) using guidelines;
+* explain what value event storming brings and how it fits with other practices.
 
 ## Audience & prerequisites
 
-This workshop can be run at the team level, involving all team members, but value stream mapping is much more powerful at the organizational level, to visualize how value flows (or is not flowing) over different teams including sales, product, development and support.
+Event storming works best if all the different roles involved are in the room - developers, testers, product owner, product managers, support, sales. Every role has their own perspective, which adds to the shared understanding.
+
+No technical knowledge is required.
 
 ## Practical information
 
 * Duration: ½ or 1 day
-* This workshop is delivered in-house
+* No laptop required
+* This is an in-house workshop
 
-[Please contact us for registration](/contact)
+[Please contact us if you are interested](/contact)
