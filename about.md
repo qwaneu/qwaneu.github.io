@@ -1,11 +1,11 @@
 ---
 layout: other-accessible
-title: About QWAN
+title: About QWAN - Quality Without a Name
 ---
 
 *Systemic thinking for sustainable software development*
 
-**QWAN - Quality Without a Name** is a partnership of independent consultants. We take a systemic approach to support software development organizations become better at what they do and more fun places to work for.
+We take a systemic approach to support software development organizations become better at what they do and more fun places to work for.
 
 Whether we train, coach or develop, we’ll sit with you, understand your situation and find what works in your context. Our approach is grounded in systems thinking, Domain Driven Design, DevOps, agile and lean approaches like eXtreme Programming, Kanban, Scrum, and test driven development. We always keep an eye on the goal: delivering valuable software better, faster, with more joy.
 
@@ -28,7 +28,7 @@ This names fits us, because we focus on improving ourselves and our profession c
 
 ## Who we are
 
-We are [Marc Evers, Willem van den Ende & Rob Westgeest](/contact) - partners in QWAN.
+QWAN is a partnership of independent consultants: [Marc Evers, Willem van den Ende & Rob Westgeest](/contact).
 
 ### QWAN Partners company information
 
