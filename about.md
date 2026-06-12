@@ -1,6 +1,6 @@
 ---
 layout: other-accessible
-title: About QWAN - Quality Without a Name
+title: About QWAN
 ---
 
 *Systemic thinking for sustainable software development*
