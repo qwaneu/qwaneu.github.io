@@ -16,7 +16,17 @@ link to [productivity is systemic]()
 not an individual thing; not about producing code faster
 "being productive" is about flow, from concept to cash (from Poppendieck)
 
-who to involve?
+## who to involve & scope
+
+Ideally, concept to cash (Poppendieck)
+
+Need to have everyone involved in the room, including business, product management, UX, ...
+
+Still can be useful to map the flow for a narrower part, e.g. with just the development team. On one hand suboptimal (bottleneck could be somewhere else); other hand: focus on what is within control of the team
+And: doing small improvements to make delivery more smooth improves the 'inner loop', which does have an impact on the overall flow.
+
+
+## agile sucks
 
 agile/scrum/SAFe tends to create stricter team boundaries, e.g. work is mediated by a product owner. This risks more local optimization. 
 Doing VSM with product management/business involved helps everyone see the whole. Enables developers to better understand what is valuable.
@@ -62,6 +72,8 @@ https://www.jrothman.com/mpd/2026/03/how-to-use-value-stream-maps-to-reinforce-a
 https://www.jrothman.com/mpd/2026/04/how-to-use-value-stream-maps-to-reinforce-agility-effectiveness-part-2-cooperative-teams/
 https://www.jrothman.com/mpd/2026/04/how-to-use-value-stream-maps-to-reinforce-agility-effectiveness-part-3-collaborative-teams/
 https://www.jrothman.com/mpd/2026/04/how-value-stream-maps-prompt-us-to-ask-more-questions-part-4/
+
+https://www.jrothman.com/mpd/2026/06/how-to-use-value-stream-maps-to-see-where-ai-creates-bottlenecks-part-1/
 
 Poppendieck, Lean Software Development
 
