@@ -27,7 +27,9 @@ Let's look at an example, shown in the picture below. The Organization Managemen
 
 ![one service sets the value 22, the data passes through other services, and some other service checks if the value is 22](/attachments/blogposts/2026/connascence/cov-org-type.jpg)
 
-Connascence by Value looks somewhat similar to Connascence by Meaning, but the latter concerns coupling based on meaning, conventions, usage, interpretation of values, while the Connascence by Value concerns coupling on a specific value. This can be more tricky, especially if the values are used in different systems and codebases, e.g. a hard coded '22' in Java code and a value 22 somewhere in a database column.
+Connascence by Value looks somewhat similar to Connascence by Meaning, but the latter concerns coupling based on meaning, conventions, usage, interpretation of values, while the Connascence by Value concerns coupling on a specific value. 
+
+Connascence by Value can be tricky, especially if the values are used in different systems and codebases, e.g. a hard coded '22' in Java code and a value 22 somewhere in a database column. When different systems are deployed at different rates, changing a specific value means we will have to deal with the old and new values co-existing for some time.
 
 ## Tackling Connascence by Value
 
@@ -35,6 +37,8 @@ If the coupled elements are close enough to each other (in the same codebase), t
 - We can extract the special value into **constant** and use the constant everywhere. This reduces it to Connascence by Name. If the connascence is between different code bases using the same language, we can investigate moving the value to a shared library.
 - Sometimes we can generalize the code using the value and **inject the value** instead of hard-coding it. This reduces it to Connascence by Type or Meaning.
 - We can bring all code that knows the special value close together, e.g. by **encapsulating** it in a single class, reducing it to Connascence by Meaning.
+
+We could resort to end-to-end tests to cover values that are coupled across different systems, but these tests tend to be slow and fragile. Striving to keep the values **stable** is probably the least risky option. Instead of changing a specific value, we can e.g. add a new one and deprecate the old one.
 
 ## What's next
 
