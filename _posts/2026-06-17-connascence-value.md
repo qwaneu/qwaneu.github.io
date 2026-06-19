@@ -9,7 +9,7 @@ author: Marc Evers, Rob Westgeest, Willem van den Ende
 image: /attachments/blogposts/2026/connascence/akinori-uemura--T6vP7ZGz0Q-unsplash.jpg
 ---
 
-In the previous posts, we [introduced the Connascence model as a model of coupling](/2026/05/08/connascence-intro) and elaborated connascence by name, type, meaning, position, algorithm, and execution order. In this post, we will discuss Connascence by Value.
+In the previous posts, we [introduced the Connascence model as a model of coupling](/2026/05/08/connascence-intro) and elaborated connascence by name, type, meaning, position, algorithm, execution order, and timing. In this post, we will discuss Connascence by Value.
 
 Connascence is a model for reasoning about coupling and defines three dimensions of coupling: strength, degree and distance, as the picture below shows.
 

@@ -9,7 +9,7 @@ author: Marc Evers, Rob Westgeest, Willem van den Ende
 image: /attachments/blogposts/2026/connascence/george-rosema-yg8pLPTAY8M-unsplash.jpg
 ---
 
-In the previous posts, we [introduced the Connascence model as a model of coupling](/2026/05/08/connascence-intro) and elaborated connascence by name, type, meaning, position and algorithm. In this post, we will discuss Connascence by Identity.
+In the previous posts, we [introduced the Connascence model as a model of coupling](/2026/05/08/connascence-intro) and elaborated connascence by name, type, meaning, position, algorithm, execution order, timing, and value. In this post, we will discuss Connascence by Identity.
 
 Connascence is a model for reasoning about coupling and defines three dimensions of coupling: strength, degree and distance, as the picture below shows.
 
