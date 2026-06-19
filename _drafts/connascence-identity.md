@@ -16,7 +16,6 @@ Connascence is a model for reasoning about coupling and defines three dimensions
 ![connascence in three dimensions, from green to red](/attachments/blogposts/2026/connascence/slide-19-degree.png)
 {: class="post-image post-image-50" }
 
-
 ## Connascence by Identity
 
 Connascence by Identity means that two elements need to agree on the identity of something, i.e. they need to make sure they are using the exact same thing or instance.
@@ -34,15 +33,15 @@ return p;
 
 Another example: the `this` or `self` reference in instance methods always refers to the object the method was invoked on. This coupling to identity is inevitable in this case, but also quite harmless because it is local - all contained within the same class.
 
-These examples show that to some extent, there will be Connascence by Identity in our code. If the lines coupled by identity are close to each other, as they are in both examples, it is not problematic. We should make sure that we don't introduce more identity coupling in our code than the bare minimum needed.
+These examples show that to some extent, there will be Connascence by Identity in our code: within the scope of a variable, the identity of that variable is known, so within that scope, there is Connascence by Identity. If we keep the scope small, the impact is low and the connascence is well manageable. The larger the scope, the nastier it gets. This makes global variables for example problematic from a coupling point of view.
 
 ## Singletons
 
-Over-usage of the Singleton pattern is an example where Connascence by Identity gets tricky. The underlying concern is that there should be a single instance of an object. So we should focus on the creation of this object and make creating multiple instances difficult or impossible. 
+Over-usage of the [Singleton design pattern](https://en.wikipedia.org/wiki/Singleton_pattern) is an example where Connascence by Identity gets tricky. The intent of this pattern is that there should be a single instance of a specific object. The pattern ensures this by making it difficult or impossible to create multiple instances. 
 
-In practice, singletons are accessed all over the place, introducing a lot of unnecessary coupling on identity. Most of our code does not care about what specific instance it is using. It just wants to do its thing on whatever instance it receives.
+Most of the code using the instance does not care about what specific instance it is using. It just wants to do its thing on whatever instance it receives. It should not know about creation of the instances and the singleton requirement. In practice, we see that singletons are accessed all over the place, introducing a lot of unnecessary identity coupling.
 
-Calling code often uses the singleton construct directly, like the example below shows for the `TrackingCache` instance. The code is not really using singletons to guard against multiple instances, but more as a convenient global variable.
+The example below shows code using the singleton construct directly, because it needs a `TrackingCache` instance. It uses the singleton as a global variable, not having to think about how dependencies are injected.
 
 ```csharp
 public class VehicleMessageDecoder : MessageDecoder
@@ -61,7 +60,7 @@ public class VehicleMessageDecoder : MessageDecoder
 }
 ```
 
-This introduces unnecessary coupling, specifically increasing the *degree* of coupling on the singleton instance. Code that does not care about the specific instance gets burdened with this knowledge, making it hard to test.
+This introduces unnecessary, tight coupling, specifically increasing the *degree* of coupling on the singleton instance. Code that does not care about the specific instance gets burdened with this knowledge, making it hard to test.
 
 ## Managing Connascence by Identity
 
@@ -69,7 +68,7 @@ To reduce Connascence by Identity in a component, we apply **dependency injectio
 
 This works well e.g. with **[Hexagonal Architecture](/2020/08/20/hexagonal-architecture)**. Instantiating services and adapters takes place in one place, in a `main` function or some Spring configuration code. These are injected into the rest of the code, which takes these as explicit dependencies. This reduces the identity coupling to a single place in the code.
 
-Whenever Connascence by Identity is unavoidable, we want to **keep it local**, within a class or function.
+Whenever Connascence by Identity is unavoidable, we try to **reduce scope** and **keep it local**, within a module, class or function.
 
 ## What's next
 
@@ -85,7 +84,6 @@ This post is part of a series on connascence and coupling. In the next post, we 
 - [Part 8 - Connascence by Value](/2026/06/17/connascence-value)
 - *Part 9 - Connascence by Identity*
 - Part 10 - Heuristics for managing coupling
-
 
 <em>Credits: spiderweb thumbnail Photo by <a href="https://unsplash.com/@georgerosema?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">George Rosema</a> on <a href="https://unsplash.com/photos/water-droplets-on-spider-web-in-close-up-photography-yg8pLPTAY8M?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></em>      
       
