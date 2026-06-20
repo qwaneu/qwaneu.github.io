@@ -1,34 +1,69 @@
 ---
-title: Event Storming Workshop
+title: Collaborative Domain Modelling with Event Storming
 layout: training-description
-tagline: "Growing a shared understanding through collaborative modelling (1 day)"
-summary: "Having a thorough, shared understanding of the domain you are working in is key to delivering software products that make a difference."
+tagline: "Creating shared domain understanding through collaborative modelling (1 day)"
+summary: "A practical workshop for aligning business, product and tech around a complex domain, 
+making hidden assumptions visible, and enabling better decisions about product, features, and architecture."
 tags: [modelling, analysis, design, architecture, systems thinking, sensemaking, organizational change, engineering culture]
 ---
 
-In this hands-on workshop, you will learn how to build a shared domain model of a complex domain, using a technique called Event Storming. Event Storming is a collaborative brainstorming workshop to visualize a domain based on domain events - things that happen in that domain. 
+_A practical workshop for aligning business, product, and tech around a complex domain,
+making hidden assumptions visible, and enabling better decisions about product, features, and architecture._
 
-Event Storming helps in building a shared, high level understanding of a domain and its subdomains. It will provide insights in dynamics, friction, opportunities and sources of complexity. It informs strategic decisions on what to focus on and how to structure a system's architecture.
+In this hands-on workshop, you will learn how to build a shared domain model of a complex domain, using a technique
+called Event Storming. Event Storming is a collaborative brainstorming workshop to visualize a domain based on domain
+events – things that happen in that domain. 
 
-This workshop is mostly hands-on, learning by doing. We start with a short introduction of what event storming is and where it comes from (Domain Driven Design). Most of the time, you will be working in small groups and do event storming on the case we bring in. Along the way we will reflect and share guidelines and heuristics for modelling your domain.
+Event Storming helps build a shared, high-level understanding of a domain and the user's perspective. It starts 
+where you currently are, visualizing what is and generating insights in opportunities, friction, and 
+sources of complexity. It informs strategic decisions on what to focus on and how to structure the system's architecture.
 
-In the half day version of this workshop, we will focus on creating a shared big picture. In the full day version, you will also create a first architecture sketch informed by the event storming results and you will practice applying guidelines for system boundaries.
+> Having a shared understanding of your domain is key to delivering software products that make a
+difference.
 
-We will discuss how Event Storming fits in your software development process and how it relates to practices like [user story mapping](/2025/10/24/user-story-mapping.html) and [dimensional planning](/2020/09/02/dimensional-planning.html).
+This workshop is hands-on, learning by doing. We will introduce Event Storming and
+where it comes from (Domain Driven Design). You will work in small groups practicing Event Storming
+on a complex domain. We will reflect frequently and share several modelling guidelines.
+We bring in practical experience in Domain Driven Design, software architecture, and doing collaborative modelling.
 
-Alternatively, we can work on your domain instead of using our own case.
+We will discuss how Event Storming fits in your software development process and how it relates to practices
+like [user story mapping](/2025/10/24/user-story-mapping.html)
+and [dimensional planning](/2020/09/02/dimensional-planning.html).
+
+We can run this workshop as a half-day or a full-day session. In a half-day session, we will focus on creating a 
+shared big picture of the domain. In a full-day session, we will be able to cover more modelling guidelines and also 
+create a first architecture sketch.
+
+> We can run this workshop in two ways:
+> - A **training session**, where participants learn Event Storming and collaborative modelling using a prepared case.
+> - A **facilitated domain workshop**, where we work together on your domain, learning Event Storming along the way; 
+> the outcomes then include a shared visual model of your domain; insights in opportunities, risks, and 
+> disagreements; an architecture sketch including candidate system boundaries.
 
 ## Benefits
 
-After participating in this workshop, you will be able:
+For your organization, this workshop helps to:
 
-* run an event storming workshop with your team;
-* evaluate architecture (system boundaries) using guidelines;
-* explain what value event storming brings and how it fits with other practices.
+* increase shared understanding of the domain across business, product and development;
+* create better alignment between tech and business;
+* develop a shared language between stakeholders and reduce misunderstanding;
+* make hidden assumptions explicit;
+* improve the quality of architecture decisions. 
+
+## Learning objectives
+
+After participating in this workshop, attendees will be able to:
+
+* explain why and when to use event storming and collaborative modelling;
+* participate effectively in an event storming workshop;
+* run an event storming workshop with their team;
+* make domain-informed architecture decisions about system boundaries;
+* explain how event storming brings fits with other practices.
 
 ## Audience & prerequisites
 
-Event storming works best if all the different roles involved are in the room - developers, testers, product owner, product managers, support, sales. Every role has their own perspective, which adds to the shared understanding.
+Event storming works best if all the different roles involved are in the room – developers, testers, product owners,
+product managers, support, sales. Every role has its own perspective, which adds to the shared understanding.
 
 No technical knowledge is required.
 
@@ -38,4 +73,11 @@ No technical knowledge is required.
 * No laptop required
 * This is an in-house workshop
 
-[Please contact us if you are interested](/contact)
+<aside>
+<p>Would you like to explore how Event Storming can improve alignment and increase shared understanding in 
+your organization?
+</p>
+<div>
+<a href="/contact">Let's have a chat</a>
+</div>
+</aside>
