@@ -72,7 +72,7 @@ This post is part of a series on connascence and coupling. In the next post, we 
 - [Part 6 - Connascence by Execution Order](/2026/06/08/connascence-execution-order)
 - *Part 7 - Connascence by Timing*
 - [Part 8 - Connascence by Value](/2026/06/17/connascence-value)
-- Part 9 - Connascence by Identity
+- [Part 9 - Connascence by Identity](/2026/06/24/connascence-identity)
 - Part 10 - Heuristics for managing coupling
 
 <em>Credits: watch thumbnail photo by <a href="https://unsplash.com/@agebarros?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Agê Barros</a> on <a href="https://unsplash.com/photos/a-close-up-of-a-silver-watch-face-rBPOfVqROzY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></em>

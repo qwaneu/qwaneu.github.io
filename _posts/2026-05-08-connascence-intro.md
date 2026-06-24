@@ -145,7 +145,7 @@ This post is a first of a series about connascence and coupling. The next post w
 - [Part 6 - Connascence by Execution Order](/2026/06/08/connascence-execution-order)
 - [Part 8 - Connascence by Value](/2026/06/17/connascence-value)
 - [Part 8 - Connascence by Value](/2026/06/17/connascence-value)
-- Part 9 - Connascence by Identity
+- [Part 9 - Connascence by Identity](/2026/06/24/connascence-identity)
 - Part 10 - Heuristics for managing coupling
 
 <aside>
