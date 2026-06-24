@@ -58,6 +58,11 @@ VSM is a way of zooming out; helps participants to look at the whole, not just t
 VSM is a helps starting conversations about: optimize delivery of value; prevent local optimization; work more collaboratively
 
 
+variations
+- mix in event storming - model events  - more concrete, more outcome focused
+
+
+
 # considerations
 
 - objectives
@@ -74,10 +79,13 @@ https://www.jrothman.com/mpd/2026/04/how-to-use-value-stream-maps-to-reinforce-a
 https://www.jrothman.com/mpd/2026/04/how-value-stream-maps-prompt-us-to-ask-more-questions-part-4/
 
 https://www.jrothman.com/mpd/2026/06/how-to-use-value-stream-maps-to-see-where-ai-creates-bottlenecks-part-1/
+https://www.jrothman.com/mpd/agile/2026/06/how-to-diagnose-the-bottlenecks-in-your-team-to-reduce-cycle-time-part-2/
 
 Poppendieck, Lean Software Development
 
 https://andrewmurphy.io/blog/if-you-thought-the-speed-of-writing-code-was-your-problem-you-have-bigger-problems
 
 https://substack.jurgenappelo.com/p/value-stream-examples
+
+Chris Matts, Value Streams and the Failureship https://theitriskmanager.com/2024/11/09/value-streams-and-the-failureship/
 
