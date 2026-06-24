@@ -33,11 +33,11 @@ return p;
 
 Another example: the `this` or `self` reference in instance methods always refers to the object the method was invoked on. This coupling to identity is inevitable in this case, but also quite harmless because it is local - all contained within the same class.
 
-These examples show that to some extent, there will be Connascence by Identity in our code: within the scope of a variable, the identity of that variable is known, so within that scope, there is Connascence by Identity. If we keep the scope small, the impact is low and the connascence is well manageable. The larger the scope, the nastier it gets. This makes global variables for example problematic from a coupling point of view.
+These examples show that there will always be some Connascence by Identity in our code: the identity of a variable is known within its scope. If we keep the scope small, the impact is low and the connascence is well manageable. The larger the scope, the nastier it gets. This makes global variables for example problematic from a coupling point of view.
 
 ## Singletons
 
-Over-usage of the [Singleton design pattern](https://en.wikipedia.org/wiki/Singleton_pattern) is an example where Connascence by Identity gets tricky. The intent of this pattern is that there should be a single instance of a specific object. The pattern ensures this by making it difficult or impossible to create multiple instances. 
+Over-usage of the [Singleton design pattern](https://en.wikipedia.org/wiki/Singleton_pattern) is an example of Connascence by Identity getting tricky. The intent of this pattern is to ensure there is only a single instance of a specific object. The solution is to make it difficult or impossible to create multiple instances.
 
 Most of the code using the instance does not care about what specific instance it is using. It just wants to do its thing on whatever instance it receives. It should not know about creation of the instances and the singleton requirement. In practice, we see that singletons are accessed all over the place, introducing a lot of unnecessary identity coupling.
 
