@@ -22,3 +22,8 @@ and open it in vscode. Code will build and attach to a dev container.
 
 That's all, see you tomorrow.
 
+## Miro board
+
+This miro board will be used in the workshop:
+
+<a href="https://miro.com/app/board/uXjVHDRsA1A=/?share_link_id=200692867385" target="_blank">The miro board</a>
