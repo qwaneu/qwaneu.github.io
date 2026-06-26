@@ -129,7 +129,7 @@ The volatility (or stability) of elements is referenced in the Connascence model
 - Another good read from this year is [Cohesion, Modules, and Hierarchies](https://ewolff.com/2026/01/08/cohesion-modules-hierachies.html) by Eberhard Wolff
 * Meilir Page-Jones, Fundamentals of OO Design in UML (1999)
 * Meilir Page-Jones, [Comparing Techniques by Means of Encapsulation and Connascence](https://dl.acm.org/doi/10.1145/130994.131004), in Communications of the ACM Sept 1992 
-* Jim Weirich, [The Grand Unified Theory of Software Design](www.youtube.com/watch?v=NLT7Qcn_PmI), at the Acts as Conference 2009  
+* Jim Weirich, [The Grand Unified Theory of Software Design](https://www.youtube.com/watch?v=NLT7Qcn_PmI), at the Acts as Conference 2009  
 * [Connascence.io](https://connascence.io)
 * Vlad Khononov, [Balancing Coupling in Software Design](https://vladikk.com/page/books/) (2024)
 
