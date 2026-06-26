@@ -59,6 +59,19 @@
     font-style: oblique;
   }
 
+  .post-summary-wrap {
+    flex-direction: column;
+    display: flex;
+  }
+
+  .read-more {
+    margin: auto auto 1em auto;
+  }
+
+  p {
+    flex-grow: 1;
+  }
+
   h3 {
     margin: 0.8em 0 1em;
   }
