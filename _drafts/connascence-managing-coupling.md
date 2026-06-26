@@ -58,18 +58,17 @@ Dynamic connascence is harder to detect, but version control systems can provide
 
 Analysing git history can also provide insights in what parts of our code are changing a lot and what parts are stable, to know where to focus on.
 
-## Example 1
+## Examples
 
-*If we put a queue between two components, have we 'decoupled' them?*
+*If we put a queue or message bus between two services, have we decoupled them?*
 
-We have reduced **Connascence of Timing**, but we still have **Connascence of Algorithm** & **Meaning**
+Yes, but only to some extent. We have reduced **Connascence by Timing**, but we still have **Connascence by Algorithm** (producer and consumer need to agree on the format of the data) and **Meaning** (producer and consumer need to agree on how to interpret the data).
 
-## Example 2
+*Can we avoid coupling by duplicating some code instead of introducing a shared abstraction?*
 
-*Do we avoid coupling by duplicating some code instead of introducing a shared abstraction?*
+It depends. If the two pieces of code look similar, but they are actually different things, they do not need to change together. A shared abstraction will introduce accidental coupling, which can make things worse. 
 
-We still have **Connascence of Meaning**, but the coupled elements are not
-localized. We risk achieving the opposite of what we intend: even stronger coupling!
+The basic test that we should apply comes from the definition of connascence: **if one changes, do we need to change the other as well to guarantee correctness**? If so, the two pieces of code are connascent. Even if we duplicate, the pieces of code are still coupled, but in a more implicit way. We still have Connascence by Meaning, but spread across the code base. Instead of avoiding coupling, we risk introducing even stronger coupling! 
 
 ## Summary
 
