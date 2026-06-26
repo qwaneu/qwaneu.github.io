@@ -10,17 +10,15 @@ title: Consulting & Mentoring
    <div class="post">
     <h1 style="margin-bottom: 0em;">{{page.title}}</h1>
 
-<p>We do not believe in seagull consulting. We deliver pragmatic, hands on consulting services.</p>
+<p>We deliver <strong>pragmatic</strong>, <strong>hands on</strong> consulting services. What works well for an organization is highly <strong>situational</strong>. We don't "install" standard methods or frameworks, but we tailor our approach to what fits your organization. Our approach is <strong>participative</strong> - we work with you to discover what is valuable and what is feasible.</p>
 
-<p>Our consulting engagements typically last from a few weeks to several months. We practice what we preach: continuously adding value and learning how to do better. Therefore we frequently inspect and adapt our approach and the value it adds to your organisation. You have the opportunity to conclude or extend the engagement at any time.</p>
+<p>Our consulting engagements typically last from a few weeks to several months. We practice what we preach: continuously adding value and learning how to do better, frequently inspect and adapt our approach and the value it adds to your organisation. You have the opportunity to conclude or extend the engagement at any time.</p>
 
    </div>
   </article>
 </div>
 
 <div class="trainingpage-layout">
-  <h2>Services</h2>
-
   <div class="courses-grid">
   {% for service in site.consulting %}
     {% unless service.hide_in_index %}
