@@ -28,14 +28,33 @@ A: not known yet - we push to github and the rest is magic at the moment.
 
 # TODO
 
+- [ ] "AI Scan" toevoegen (hoe zit dit als traject er uit?)
+- [ ] bij diensten: ook heel 'traject' als dienst toevoegen; nu vooral componenten; in de vorm van 3 opties (ipv dat 
+  klant zelf wat bij elkaar moet zoeken)
 - [ ] Pagina van individuele blog entry accessible maken
 - [ ] #blog pagina accessible maken (zie ook 'grid' to do)
-- 'specials' toevoegen aan trainingspagina (workshops e.d.)
+- [ ] 'specials' toevoegen aan trainingspagina (workshops e.d.)
 - [ ] analytics toevoegen (heeft implicaties voor cookie melding/toestemming)
-- [ ] trainingen-grid genereren uit training pages? Definieer trainingen en workshops als collections (met eigen folders)
-- [ ] eventueel: expliciet landen benoemen waar we actief zijn
 - [ ] ribbon op mobile (smal) aanpassen; nu valt het blog titel deel buiten beeld
-- [ ] consulting vraag-gedreven opzetten misschien ook met tiles? Pagina is nu vooral aanbod/methode gedreven
-- [ ] impact mapping workshop toevoegen
-- [ ] story mapping + dimensional planning + example mapping als 1 dag training
 - [ ] zet code rendering line numbers uit in _config.yml ipv via css - of gebruiken we line numbers ergens?
+- [ ] client quotes uitbreiden + enkele logo's toevoegen (Sky, Qwoater?, 
+
+Optional:
+
+- [ ] eventueel: expliciet landen benoemen waar we actief zijn
+- [ ] training agenda
+- [ ] upcoming appearances (conferenties, cursussen, ...)
+- [ ] pasfoto's vernieuwen
+
+# Verwerken
+
+Wat maakt ons bijzonder?
+- Bomen en het bos
+- denken + doen
+- eerst luisteren en waardering voor wat werkt (er werkt altijd al wat!), niet zozeer zenden (zoals Xebia meer doet)
+- voor de lange termijn
+
+"Snelheid van begrip" (zeker in context van AI)
+
+Friction: accidental vs intentional
+Weten wanneer te stoppen
