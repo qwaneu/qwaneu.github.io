@@ -83,7 +83,7 @@ This post is part of a series on connascence and coupling. In the next post, we 
 - [Part 7 - Connascence by Timing](/2026/06/12/connascence-timing)
 - [Part 8 - Connascence by Value](/2026/06/17/connascence-value)
 - *Part 9 - Connascence by Identity*
-- Part 10 - Heuristics for managing coupling
+- [Part 10 - Heuristics for managing coupling](/2026/06/29/connascence-managing-coupling)
 
 <em>Credits: spiderweb thumbnail Photo by <a href="https://unsplash.com/@georgerosema?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">George Rosema</a> on <a href="https://unsplash.com/photos/water-droplets-on-spider-web-in-close-up-photography-yg8pLPTAY8M?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></em>      
       

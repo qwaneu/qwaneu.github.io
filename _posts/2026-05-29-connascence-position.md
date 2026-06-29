@@ -91,7 +91,7 @@ This post is part of a series on connascence and coupling. In the next post, we 
 - [Part 7 - Connascence by Timing](/2026/06/12/connascence-timing)
 - [Part 8 - Connascence by Value](/2026/06/17/connascence-value)
 - [Part 9 - Connascence by Identity](/2026/06/24/connascence-identity)
-- Part 10 - Heuristics for managing coupling
+- [Part 10 - Heuristics for managing coupling](/2026/06/29/connascence-managing-coupling)
 
 <aside>
 <h3>Decouple more deliberately!</h3>

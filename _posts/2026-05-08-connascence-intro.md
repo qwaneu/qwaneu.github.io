@@ -57,7 +57,7 @@ It makes conversations about duplication more pragmatic: removing duplication is
 
 Connascence introduces three dimensions to reason about coupling and cohesion:
 
-1. **Strength** - how easy or difficult is it to detect coupling and manage changes in coupled elements;
+1. **Strength** - how easy or difficult it is to detect coupling and manage changes in coupled elements;
 2. **Locality** - the distance between two coupled elements;
 3. **Degree** - the number of elements that are coupled.
 
@@ -146,7 +146,7 @@ This post is a first of a series about connascence and coupling. The next post w
 - [Part 8 - Connascence by Value](/2026/06/17/connascence-value)
 - [Part 8 - Connascence by Value](/2026/06/17/connascence-value)
 - [Part 9 - Connascence by Identity](/2026/06/24/connascence-identity)
-- Part 10 - Heuristics for managing coupling
+- [Part 10 - Heuristics for managing coupling](/2026/06/29/connascence-managing-coupling)
 
 <aside>
 <h3>Decouple more deliberately!</h3>

@@ -12,7 +12,8 @@ image: /attachments/blogposts/2026/connascence/algorithm-thumbnail.png
 
 In the previous posts, we [introduced the Connascence model as a model of coupling](/2026/05/08/connascence-intro) and elaborated connascence by name, type, meaning and position. In this post, we will discuss Connascence by Algorithm.
 
-Connascence is a model for reasoning about coupling and defines three dimensions of coupling: strength, degree and distance, as the picture below shows.
+Connascence is a model for reasoning about coupling and defines three dimensions of coupling: strength, degree, and 
+distance, as the picture below shows.
 
 ![connascence in three dimensions, from green to red](/attachments/blogposts/2026/connascence/slide-19-degree.png)
 {: class="post-image post-image-50" }
@@ -65,11 +66,11 @@ class Consumer {
 
 Connascence by Algorithm is trickier to manage than the weaker forms of connascence like Name or Type, because it often crosses system boundaries. It concerns coupling between systems that have a different lifecycle and often different owners. It tends to come with a high *distance*. 
 
-This is made worse by consumers and producers evolving at their own pace. when When the algorithm or protocol evolves, producers and consumers needs to be kept in sync. The higher the *degree* of connascence, the worse it gets: if a producer has many consumers, it becomes even more difficult for the algorithm to evolve.
+This is made worse by consumers and producers evolving at their own pace. When the algorithm or protocol evolves, producers and consumers needs to be kept in sync. The higher the *degree* of connascence, the worse it gets: if a producer has many consumers, it becomes even more difficult for the algorithm to evolve.
 
 ## Refactoring Connascence by Algorithm
 
-What can we do to keep Connascence by Algorithm manageable? Sometimes, we can merge producer and consumer into a single service, reducing it to Connascence by Name and Type. If multiple instances of that services are running, we still need to keep in mind that multiple versions of our protocol could be running alongside each other, e.g. during a deployment.
+What can we do to keep Connascence by Algorithm manageable? Sometimes, we can merge producer and consumer into a single service, reducing it to Connascence by Name and Type. If multiple instances of that service are running, we still need to keep in mind that multiple versions of our protocol could be running alongside each other, e.g. during a deployment.
 
 Often it is not possible to merge producer and consumer, so we have to deal with it. We can make our lives a bit easier however:
 
@@ -93,7 +94,7 @@ This post is part of a series on connascence and coupling. In the next post, we 
 - [Part 7 - Connascence by Timing](/2026/06/12/connascence-timing)
 - [Part 8 - Connascence by Value](/2026/06/17/connascence-value)
 - [Part 9 - Connascence by Identity](/2026/06/24/connascence-identity)
-- Part 10 - Heuristics for managing coupling
+- [Part 10 - Heuristics for managing coupling](/2026/06/29/connascence-managing-coupling)
 
 <aside>
 <h3>Decouple more deliberately!</h3>

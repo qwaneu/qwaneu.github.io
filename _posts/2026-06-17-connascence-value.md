@@ -53,7 +53,7 @@ This post is part of a series on connascence and coupling. In the next post, we 
 - [Part 7 - Connascence by Timing](/2026/06/12/connascence-timing)
 - *Part 8 - Connascence by Value*
 - [Part 9 - Connascence by Identity](/2026/06/24/connascence-identity)
-- Part 10 - Heuristics for managing coupling
+- [Part 10 - Heuristics for managing coupling](/2026/06/29/connascence-managing-coupling)
 
 *Credits: chains thumbnail photo by <a href="https://unsplash.com/@a_uem?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Akinori UEMURA</a> on <a href="https://unsplash.com/photos/silver-chain-link-with-black-background--T6vP7ZGz0Q?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*
 

@@ -30,7 +30,7 @@ An example of Connascence by Timing is a producer and consumer exchanging data, 
 
 Different patterns and mechanisms are available to handle a timing dependency like this, by adding some form of synchronization. Examples are probes, semaphores, locks, futures, promises, and observables.
 
-In some cases we can relax the consistency constraints somewhat. If we relax the *exactly once* constraint to *at least once*, we reduce timing coupling. This makes synchronisation less complicated, in particular for failure scenarios. It puts a higher burden on the consumer, which should allow for duplicate values. Message idempotency helps.
+In some cases we can relax the consistency constraints somewhat. If we relax the *exact once* constraint to *at least once*, we reduce timing coupling. This makes synchronisation less complicated, in particular for failure scenarios. It puts a higher burden on the consumer, which should allow for duplicate values. Message idempotency helps.
 
 What if there is a single producer and multiple consumer workers, and we need to make sure each value is read exactly once by exactly one consumer?
 
@@ -42,7 +42,7 @@ When a consumer starts reading a value, it can create a lock to ensure it is the
 ![single producer, only one consumer reads at a time](/attachments/blogposts/2026/connascence/queue-overtaking-3.png)
 {: class="post-image post-image-70" }
 
-If we can *partition* the data and have each consumer process its own part of the data, the resulting throughput will be higher. We do need to find a good way to partition the data evenly, otherwise some consumers will be very busy, limiting how much we can scale the consumers for better throughput.
+If we can *partition* the data and have each consumer process its own part of the data, the resulting throughput will be higher. We do need to find a good way to partition the data evenly; otherwise some consumers will be very busy, limiting how much we can scale the consumers for better throughput.
 
 Automated end-to-end testing is another area where we have to deal with Connascence by Timing, in particular with browser-based tests. It takes time for the system under test to process changes and make these visible. Frontend applications add extra asynchronous behaviour. Probes are helpful and they are used by end-to-end testing frameworks like [Playwright](https://playwright.dev/) to handle timing and asynchronous behaviour.
 
@@ -73,7 +73,7 @@ This post is part of a series on connascence and coupling. In the next post, we 
 - *Part 7 - Connascence by Timing*
 - [Part 8 - Connascence by Value](/2026/06/17/connascence-value)
 - [Part 9 - Connascence by Identity](/2026/06/24/connascence-identity)
-- Part 10 - Heuristics for managing coupling
+- [Part 10 - Heuristics for managing coupling](/2026/06/29/connascence-managing-coupling)
 
 <em>Credits: watch thumbnail photo by <a href="https://unsplash.com/@agebarros?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Agê Barros</a> on <a href="https://unsplash.com/photos/a-close-up-of-a-silver-watch-face-rBPOfVqROzY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></em>
 
