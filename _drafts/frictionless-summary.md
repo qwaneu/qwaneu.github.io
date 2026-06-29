@@ -42,3 +42,6 @@ Selling it to the business:
 
 The rest of the book describes a step-by-step approach to work on improving DevEx/reducing friction in your organisation, with a research based/"data driven" approach (both qualitative and quantitative).
 
+TODO: create our own version of this image
+
+![image from book](frictionless.png)
