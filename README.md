@@ -58,3 +58,19 @@ Wat maakt ons bijzonder?
 
 Friction: accidental vs intentional
 Weten wanneer te stoppen
+
+# Prompts
+
+Evaluate workshop description:
+- The current file describes a workshop we offer; evaluate it from the perspective of a potential client (development
+  manager, CTO, engineering manager): does it speak to them? are the benefits for them clear? what is
+  missing?
+
+Evaluate workshop title:
+- The workshop described in the current file is called "Event Storming Workshop"; technically this is correct, but this
+  speaks mostly to potential buyers and participants that are already familiar with this concept. What would be a more
+  enticing name, also taking into account the previous feedback about the description?
+
+Misc:
+- How can this call to action become more effective in context of the current file?
+
