@@ -28,16 +28,22 @@ A: not known yet - we push to github and the rest is magic at the moment.
 
 # TODO
 
+Diensten & marketing:
+
 - [ ] "AI Scan" toevoegen (hoe zit dit als traject er uit?)
 - [ ] bij diensten: ook heel 'traject' als dienst toevoegen; nu vooral componenten; in de vorm van 3 opties (ipv dat 
   klant zelf wat bij elkaar moet zoeken)
+- [ ] 'specials' toevoegen aan trainingspagina (workshops e.d.)
+- [ ] client quotes uitbreiden + enkele logo's toevoegen (Sky, Qwoater?, 
+- [ ] Idee: Training concept tot cash in a Day (experience agile 2nd ed)
+
+Styling:
+
 - [ ] Pagina van individuele blog entry accessible maken
 - [ ] #blog pagina accessible maken (zie ook 'grid' to do)
-- [ ] 'specials' toevoegen aan trainingspagina (workshops e.d.)
 - [ ] analytics toevoegen (heeft implicaties voor cookie melding/toestemming)
 - [ ] ribbon op mobile (smal) aanpassen; nu valt het blog titel deel buiten beeld
 - [ ] zet code rendering line numbers uit in _config.yml ipv via css - of gebruiken we line numbers ergens?
-- [ ] client quotes uitbreiden + enkele logo's toevoegen (Sky, Qwoater?, 
 
 Optional:
 
