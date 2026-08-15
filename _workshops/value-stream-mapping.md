@@ -1,33 +1,79 @@
 ---
-title: Map your Delivery Value Stream for Fun and Profit
+title: Map your Delivery Value Stream for Better Flow
 layout: training-description
 tagline: "Reduce waste and friction by taking a systems view (&half; - 1 day)"
-summary: "In this hands-on workshop, you will visualize your whole delivery process, from concept to cash. By doing so, you will discover sources of friction and waste that is slowing you down. You will also discover the impact of large work batches and long feedback loops and how these eat away your valuable time. You will get a feel for what the bottlenecks are in your way of working."
+summary: "Are features taking too long from idea to production? Do improvements have little impact? 
+In this hands-on workshop, you will visualize your delivery process from concept to cash. 
+You will discover sources of friction and waste that are slowing you down. You will also discover how the 
+large work batches and long feedback loops eat away valuable time. You will find the actual bottlenecks in your way of working."
 tags: [CI/CD, continuous integration, continuous delivery, lean software development, friction, retrospectives, systems thinking, sensemaking, organizational change, engineering culture]
 ---
 
-In this hands-on workshop, you will visualize your whole delivery process, from concept to cash. By doing so, you will discover sources of friction and waste that is slowing you down. You will also discover the impact of large work batches and long feedback loops and how these eat away your valuable time. You will get a feel for what the bottlenecks are in your way of working.
+Are features taking too long from idea to production? Are your teams busy while struggling to deliver value? 
+Is work going back and forth within teams and between teams, with half-finished work waiting in queues?
+Is it hard to get insight into where time is lost and where the actual bottlenecks are? You have tried several 
+improvements,
+but they had little impact?
 
-You can run this workshop focused on a specific product. We recommend bringing in not just the development team, but also product management, product owners, UX, and support. When all involved roles join the value stream mapping workshop, we often find effective improvements beyond the development part.
+Issues like these cannot be solved by just working harder, adding more people to the teams, or putting 
+more focus on coordination. 
+This will actually make things worse because these issues are systemic. 
 
-It is also possible to run this workshop across multiple teams, especially when your propositions involve multiple teams. The workshop helps you to zoom out and see friction, waste and bottlenecks that emerge from the collaboration.
+In this hands-on workshop, you will visualize your whole delivery process, from concept to cash – from a product idea or customer 
+request to having this idea implemented and running in production.
+By doing so, you will discover sources of friction and waste that slow you down, and bottlenecks to focus on. 
+You will also discover the impact of large work batches and long feedback loops and how these eat away valuable time. 
+
+## Scope
+
+You can run this workshop focused on a specific product and a specific team. Value Stream Mapping is most effective 
+when done with developers,
+product owners, product management, UX, and support present. Many improvements fail because they focus only on the development team. 
+This workshop helps you zoom out to the whole system, often finding improvements beyond development.
+
+It is also possible to run this workshop across multiple teams. This is especially valuable when your propositions 
+involve multiple teams. The workshop helps you to zoom out and see friction, waste, and bottlenecks that emerge from 
+the collaboration.
+
+## Benefits
+
+This workshop will help you zoom out and find impactful improvements:
+
+* reduce the lead time from idea to production;
+* reduce rework, waiting time, and time lost on handovers and context switching;
+* improve predictability;
+* align teams, product, and management around the actual flow of value;
+* redirect focus and effort away from local optimizations;
+* prioritize improvements based on the end-to-end impact on value.
 
 ## Learning objectives
 
-After participating in this workshop, you will be able to:
+After attending this workshop, participants will be able to:
 
-* facilitate a value stream mapping workshop;
-* explain the 7 wastes in development and how to recognise them;
-* visualize feedback loops in the delivery process and explain what their impact is.
+* explain the end-to-end flow of value in the organization;
+* explain the seven wastes in development and how to recognize them;
+* identify sources of friction and waste in the delivery process;
+* visualize feedback loops in the delivery process and explain what their impact is;
+* facilitate a value stream mapping workshop.
 
 ## Audience & prerequisites
 
-This workshop can be run at the team level, involving all team members, but value stream mapping is much more powerful at the organizational level, to visualize how value flows (or is not flowing) over different teams including sales, product, development and support.
+Value Stream Mapping works best if all disciplines involved in end-to-end value delivery are represented – developers, 
+testers, product owners, product managers, support, sales. Every role brings their own perspective, which adds to 
+shared understanding.
+
+No technical knowledge is required.
 
 ## Practical information
 
-* Duration: ½ or 1 day
+* Duration: ½ or 1 day; for mapping the value stream across multiple teams, we recommend a full day
 * No laptop required
 * This is an in-house workshop
 
-[Please contact us if you are interested](/contact)
+<aside>
+<p>Would you like to discover where value delivery slows down in your organization and find improvement opportunities that make a difference?
+</p>
+<div>
+<a href="/contact">Please contact us if you are interested</a>
+</div>
+</aside>

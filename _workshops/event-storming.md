@@ -1,7 +1,7 @@
 ---
 title: Collaborative Domain Modelling with Event Storming
 layout: training-description
-tagline: "Creating shared domain understanding through collaborative modelling (1 day)"
+tagline: "Shared domain understanding through collaborative modelling (1 day)"
 summary: "A practical workshop for aligning business, product and tech around a complex domain, 
 making hidden assumptions visible, and enabling better decisions about product, features, and architecture."
 tags: [modelling, analysis, design, architecture, systems thinking, sensemaking, organizational change, engineering culture]
