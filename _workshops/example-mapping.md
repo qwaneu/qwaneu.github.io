@@ -34,7 +34,7 @@ Example Mapping is particularly useful when:
 
 ## Benefits
 
-This workshop will help you zoom out and find impactful improvements:
+This workshop will bring the following benefits for your organisation:
 
 - better collaboration between developers, testers, and product;
 - surface unknowns and ambiguities earlier, leading to lower risk and fewer misunderstandings;
@@ -60,6 +60,7 @@ allowing participants to apply the techniques to their own work.
 ## Learning objectives
 
 After attending this workshop, participants will be able to:
+
 - use Example Mapping to make refinement sessions focused and more enjoyable;
 - define clearly scoped user stories;
 - split user stories more effectively;
