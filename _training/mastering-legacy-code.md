@@ -51,7 +51,7 @@ If you participate in this course, you will:
 
 The first day is introductory, working hands-on with refactorings, code
  smells, and how to break dependencies by finding seams in the code. We
- will do this through a mix of presentations, demonstrations and small
+ will do this through a mix of presentations, demonstrations, and small
  exercises. We use our refactoring cards **TODO image and link**
  You will also learn about the systemic causes and effects of
  design debt and how refactoring in small steps can help you break out of
@@ -77,7 +77,7 @@ recommended. Basic programming skills are required.
 * Duration: 2 or 3 days
 * Shared development environment will be taken care of. Participants only need a current web browser on their machine to participate.
 * This training is currently only available in-house. 
-* This training is available as half day follow up on our [test driven development training](/training/test-driven-development).
+* This training is available as half-day follow-up on our [test driven development training](/training/test-driven-development).
 
 ## Booking
 

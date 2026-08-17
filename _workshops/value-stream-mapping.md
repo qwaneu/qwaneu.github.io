@@ -74,6 +74,6 @@ No technical knowledge is required.
 <p>Would you like to discover where value delivery slows down in your organization and find improvement opportunities that make a difference?
 </p>
 <div>
-<a href="/contact">Please contact us if you are interested</a>
+<a href="/contact">Let's have a chat</a>
 </div>
 </aside>

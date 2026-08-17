@@ -28,7 +28,7 @@ leading to less rework, faster flow, and more enjoyable collaboration.
 Example Mapping is particularly useful when:
 - refinement sessions take a long time, and teams often discuss user stories over and over again;
 - teams discover new acceptance criteria, business rules, or edge cases late in the development cycle;
-- user stories "explode" – they become bigger and bigger while a team is working on them;
+- user stories tend to "explode" – they become bigger and bigger while a team is working on them;
 - misunderstandings between developers, product owners, and stakeholders only become visible when a feature is 
   almost done.
 
@@ -86,6 +86,6 @@ and with user stories.
 Would you like your refinements to be more focused, more effective, and more enjoyable?
 </p>
 <div>
-<a href="/contact">Let's discuss an Example Mapping workshop for your team</a>
+<a href="/contact">Let's have a chat</a>
 </div>
 </aside>
