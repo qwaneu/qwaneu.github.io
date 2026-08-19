@@ -3,7 +3,9 @@ title:  Test Driven Development
 layout: training-description
 date: 2025-02-01
 tagline: "Hands on & interactive (2-3 days)"
-summary: "Test driven development in once sentence: <em>write a failing test, make it pass, refactor and repeat</em> - easier said than done. Take a deep dive in growing your test driven development skills."
+summary: "Test driven development in once sentence: <em>write a failing test, make it pass, refactor and repeat</em> - 
+easier said than done. Take a deep dive in growing your test driven development skills.
+<br><strong>Available for Java, Kotlin, C#, C++, Python, TypeScript, Ruby, and more</strong>"
 tags: agile engineering, extreme programming, XP, TDD, test driven development,ports and adapters, hexagonal architecture, clean architecture, scrum developer, CI/CD, continuous integration, continuous delivery
 ---
 
