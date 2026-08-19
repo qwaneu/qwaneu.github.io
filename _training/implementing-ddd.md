@@ -43,7 +43,7 @@ The [Introduction to Domain Driven Design course](/training/ddd-introduction) or
 ## Practical information
 
 * Duration: 1 or 2 days
-* Laptops required
+* We will provide the training infrastructure; participants need to bring a laptop with a current web browser
 * This training is available as in-house training only.
 
 [Please contact us for registration](/contact)

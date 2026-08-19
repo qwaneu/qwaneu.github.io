@@ -7,7 +7,7 @@ summary: "Test driven development in once sentence: <em>write a failing test, ma
 tags: agile engineering, extreme programming, XP, TDD, test driven development,ports and adapters, hexagonal architecture, clean architecture, scrum developer, CI/CD, continuous integration, continuous delivery
 ---
 
-In this in depth practical course, you will learn Test Driven Development and
+In this in-depth practical course, you will learn Test Driven Development and
 master different unit testing techniques, like mocking.
 
 The focus of this course is on improving your unit testing skills, getting a
@@ -31,10 +31,10 @@ By participating in this course, you will:
 
 The course consists of a mix of short presentations, live programming demonstrations, and lots of programming exercises.
 
-* Why Unit Testing? – short and long term systemic effects
+* Why Unit Testing? – short and long-term systemic effects
 * Test Driven Development
 * Responsibility Driven Design with mocking
-* Interaction based vs. state based testing
+* Interaction-based vs. state-based testing
 * Mocking Styles – when to use mocks, stubs, fakes, and dummies
 * Hexagonal Architecture - a fresh perspective on software dependencies and test architecture
 * Code Smells & Refactorings
@@ -42,7 +42,7 @@ The course consists of a mix of short presentations, live programming demonstrat
 ## Practical information
 
 * Duration: 2 or 3 days
-* Training infrastructure (including laptops) will be taken care of
+* We will provide the training infrastructure; participants need to bring a laptop with a current web browser
 * Basic programming skills required
 * This training is available as open enrolment and in-house.
 * Programming languages: Java, C#, C++, Python, Ruby, JavaScript, TypeScript, Scala, Kotlin
@@ -50,11 +50,3 @@ The course consists of a mix of short presentations, live programming demonstrat
 [Please contact us for registration](/contact)
 
 {% include upcoming.md %}
-
-## Our colleagues
-
-Although we think we provide something special with this training, we're not the only supplier. Here's a list of our colleagues in the Netherlands:
-
-* [Test driven development at Alten](https://www.alten.nl/en/training-test-driven-development-tdd/){:target="_blank"}
-* [Test driven development at Xebia Academy](https://academy.xebia.com/nl/training/test-driven-development-tdd/){:target="_blank"}
-* [Test driven development at DevOn](https://www.devon.nl/training/?eventtitle=certified-agile-test-driven-development){:target="_blank"}
