@@ -31,9 +31,8 @@ when done with developers,
 product owners, product management, UX, and support present. Many improvements fail because they focus only on the development team. 
 This workshop helps you zoom out to the whole system, often finding improvements beyond development.
 
-It is also possible to run this workshop across multiple teams. This is especially valuable when your propositions 
-involve multiple teams. The workshop helps you to zoom out and see friction, waste, and bottlenecks that emerge from 
-the collaboration.
+It is also possible to run this workshop with multiple teams to discover friction, waste, and bottlenecks that emerge 
+from the collaboration and coordination across teams.
 
 ## Benefits
 
