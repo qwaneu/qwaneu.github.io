@@ -28,6 +28,20 @@ A: not known yet - we push to github and the rest is magic at the moment.
 
 # TODO
 
+Verbeteringen:
+
+- [X] DDD intro training verbeteren
+- [ ] Systems thinking training verbeteren
+- [ ] Example Mapping workshop: 'quote' toevoegen ("Example Mapping combines just enough up-front thinking with 
+  working from concrete examples, which allows for smooth development and testing of user stories")
+- [ ] Nieuwe diensten page uitwerken
+  - [ ] Architecture reviews
+  - [ ] coaching/mentoring
+  - [ ] process audits
+  - [ ] Proficiency scan
+- [ ] Specials toevoegen?
+  - [ ] toevoegen: knowledge workshop; TDD-AI; 
+
 Diensten & marketing:
 
 - [ ] "AI Scan" toevoegen (hoe zit dit als traject er uit?)
@@ -36,6 +50,8 @@ Diensten & marketing:
 - [ ] 'specials' toevoegen aan trainingspagina (workshops e.d.)
 - [ ] client quotes uitbreiden + enkele logo's toevoegen (Sky, Qwoater?, 
 - [ ] Idee: Training concept tot cash in a Day (experience agile 2nd ed)
+- [ ] Idee: https://www.hyperact.co.uk/services opdeling "where we can help", "How we work with you", "Where to start"
+- Inspiratie: https://daverooney.dev/services
 
 Styling:
 
@@ -54,11 +70,19 @@ Optional:
 
 # Verwerken
 
+## Positionering & meerwaarde van QWAN
+
 Wat maakt ons bijzonder?
 - Bomen en het bos
 - denken + doen
 - eerst luisteren en waardering voor wat werkt (er werkt altijd al wat!), niet zozeer zenden (zoals Xebia meer doet)
 - voor de lange termijn
+
+Link AI en good engineering practices (XP?):
+https://www.hyperact.co.uk/blog/methods-of-software-delivery-in-the-era-of-agentic-engineering
+
+
+## Overig
 
 "Snelheid van begrip" (zeker in context van AI)
 
