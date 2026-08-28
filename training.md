@@ -10,12 +10,15 @@ layout: accessibletwo
    <div class="post">
     <h1 style="margin-bottom: 0em;">{{page.title}}</h1>
 
-<p>Our training courses are intensive and hands-on. We work with small groups up to 14 participants to ensure an optimal learning experience. We offer both open enrolment courses and customized in-company courses, on-site and remote. </p>
+<p>Our training courses are intensive and hands-on. We work with small groups of up to 14 participants to ensure 
+an optimal learning experience. We offer both customized in-company courses, on-site and remote. </p>
 
-<p>We deliver our courses in English, Dutch, German or French (together with our German and French partners).
-Programming exercises are available in Java, C#, C++, Scala, Ruby, Python, JavaScript, and TypeScript.</p>
+<p>If you have a need that is not covered by an existing course, <a href="/contact">we are happy to make a new one for you</a>. 
+Our best courses originate from specific requests from our customers!</p>
 
-<p>If you have a need that is not covered by an existing course, <a href="/contact">we are happy to make a new one for you</a>. Our best courses got started by specific requests from our customers!</p>
+<p><em>We can deliver our courses in English, Dutch, German, or French.
+Programming exercises are available in Java, C#, C++, Scala, Ruby, Python, JavaScript, and TypeScript.</em></p>
+
 
    </div>
   </article>

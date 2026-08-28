@@ -7,15 +7,15 @@ title: About QWAN
 
 We take a systemic approach to support software development organizations become better at what they do and more fun places to work for.
 
-Whether we train, coach or develop, we’ll sit with you, understand your situation and find what works in your context. Our approach is grounded in systems thinking, Domain Driven Design, DevOps, agile and lean approaches like eXtreme Programming, Kanban, Scrum, and test driven development. We always keep an eye on the goal: delivering valuable software better, faster, with more joy.
+Whether we train, coach, or develop, we’ll sit with you, understand your situation and find what works in your context. Our approach is grounded in systems thinking, Domain Driven Design, DevOps, agile and lean approaches like eXtreme Programming, Kanban, Scrum, and test driven development. We always keep an eye on the goal: delivering valuable software better, faster, with more joy.
 
 ## Benefits of our approach
 
-By working with us, our customers have reduced their time to market, while improving software quality. 
+By working with us, our customers have reduced their time to market while improving software quality. 
 This may seem like a paradox, but we have found that by improving quality we can keep costs down and at the same time deliver faster. 
-Whenever customers get software that ‘just works’ they become happier, complain less and tell their friends. 
-Combined with a shorter time to market this means a better return on your investments. 
-You can use that money to reward employees, tax payers, or investors, and find even better ways to develop software, so that the virtuous cycle continues.
+Whenever customers get software that ‘just works', they become happier, complain less and tell their friends. 
+Combined with a shorter time to market, this means a better return on your investments. 
+You can use that money to reward employees, taxpayers, or investors and find even better ways to develop software so that the virtuous cycle continues.
 
 *[Let's explore together](/contact) and uncover better ways of software delivery that fit your situation.*
 
@@ -24,7 +24,7 @@ You can use that money to reward employees, tax payers, or investors, and find e
 The concept of Quality Without a Name is based on the work of the architect 
 [Christopher Alexander](http://www.patternlanguage.com), which also inspired (design) patterns in software development. 
 "Quality Without a Name" means that good quality is something you can feel, recognise, but it is hard to describe in words: you know it when you see it. 
-This names fits us, because we focus on improving ourselves and our profession continuously, and strive to deliver more value to our customers.
+This names fits us because we focus on improving ourselves and our profession continuously and strive to deliver more value to our customers.
 
 ## Who we are
 

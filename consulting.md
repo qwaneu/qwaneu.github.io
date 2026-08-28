@@ -23,10 +23,10 @@ If you having one of the following questions as a development manager, CTO or CI
 - Do you have teams that are struggling to find ways to improve?
 - Have you given teams complete freedom to embrace agile and find their way, but it is not working out as expected?
 - Do you have teams that you think can do better, while they think everything is working fine?
-- Do you notice that teams are doing less and less retrospectives, and when asked, they struggle to find subjects to talk about?
+- Do you notice that teams are doing fewer and fewer retrospectives, and when asked, they struggle to find subjects to talk about?
 
 ...then we can work with you and your teams. We offer a diagnostic tool to gain profound
-insights in team growth and potential, and find direction for focused
+insights in team growth and potential and find direction for focused
 improvement. It will help your teams to find specific areas for growth
 and what they can do themselves to become more fluent at software delivery. We will provide systemic insights in your development organization
 that will help you to create a context in which your teams can flourish.
@@ -38,7 +38,7 @@ that will help you to create a context in which your teams can flourish.
   <div>
     <p style="font-size: smaller;">
     We are <a href="https://www.agilefluency.org/diagnostic.php">licensed Agile Fluency® Facilitators</a> which means we can run
-fluency diagnostic workshops with your teams, to provide both the teams and
+fluency diagnostic workshops with your teams to provide both the teams and
 management with detailed feedback and a concrete path for growth. If you haven't
 already, it's worthwhile to visit the <a href="https://www.agilefluency.org">Agile Fluency Project site</a> and watch the short introduction video.
     </p>
@@ -67,17 +67,17 @@ code quality.
 
 Would you like to gain insight in your way of working? Would you like to do a
 health check of your development process? Are you looking for the next step of
-agile development but you are not sure which direction to go?
+agile development, but you are not sure which direction to go?
 
 In a limited amount of time (a few days), we can give you insight in and
-feedback about your development process, and recommendations for the next steps
-to take. We do this by interviewing and observing your teams, e.g. stand up
+feedback about your development process and recommendations for the next steps
+to take. We do this by interviewing and observing your teams, e.g. standup
 meetings, retrospectives, planning meetings.
 
 <aside>
   <h3>Want to find out how we can support you?</h3>
   <p>We enjoy having a conversation about what moves you, no strings attached.</p>
-  <p><div>
+  <div>
     <a href="/contact">Talk to us</a>
-  </div></p>
+  </div>
 </aside>
