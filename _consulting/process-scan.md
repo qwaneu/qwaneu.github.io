@@ -4,6 +4,7 @@ layout: service-description
 date: 2025-05-01
 tagline: ""
 summary: ""
+hide_in_index: true
 tags: [delivery process review, process audit, lean software development]
 ---
 

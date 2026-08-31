@@ -1,9 +1,9 @@
 ---
-title: Delivery Team Coaching & Mentoring
+title: Delivery Team Mentoring
 layout: service-description
 date: 2025-05-01
-tagline: "Proficient teams enable software delivery excellence."
-summary: "Teams need to practice to become more effective. Mentoring and coaching provides the scaffolding they need
+tagline: "Software delivery excellence through guided practice."
+summary: "Teams need to practice to become more effective. Mentoring and coaching provide the scaffolding they need
 to become proficient."
 tags: [teams, team skills, team maturity, engineering practices, team proficiency]
 ---
@@ -33,4 +33,14 @@ If you are unsure what support your teams need and what you can do to help them 
 doing a [team proficiency scan](/consulting/team-scan). This will provide a clear direction of what is most valuable 
 to do first.
 
-CTA
+## Benefits
+
+## Approach
+
+<aside>
+<p>TBD
+</p>
+<div>
+<a href="/contact">Let's have a chat</a>
+</div>
+</aside>
