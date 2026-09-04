@@ -10,6 +10,11 @@ Renders the site. Uses [pre-made docker-compose file and images](https://github.
 Q: How to build?
 A: current directory is mounted as `./site` so it should be all good.
 
+# Useful links
+
+Where to get free, human-made, royalty-free images:  
+https://humancode.us/2026/08/28/royalty-free-images
+
 # IN PROGRESS
 
 ## Pagina van lijst van blog entries accessible maken
@@ -100,6 +105,11 @@ Evaluate workshop title:
 - The workshop described in the current file is called "Event Storming Workshop"; technically this is correct, but this
   speaks mostly to potential buyers and participants that are already familiar with this concept. What would be a more
   enticing name, also taking into account the previous feedback about the description?
+
+Evaluate service:
+- The current file describes a consulting service we offer; evaluate it from the perspective of a potential client 
+  (development manager, CTO, engineering manager): does it speak to them? are the benefits for them clear? what is
+  missing? What is a good call-to-action? Keep it concise but not too short.
 
 Misc:
 - How can this call to action become more effective in context of the current file?

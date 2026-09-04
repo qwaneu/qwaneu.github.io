@@ -15,9 +15,8 @@ What works well for an organization is highly <strong>situational</strong>.
 We don't "install" standard methods or frameworks, but we tailor our approach to what fits your organization. 
 Our approach is <strong>participative</strong> – we work with you to discover what is valuable and what is possible.</p>
 
-<p>Our consulting engagements typically last from a few weeks to several months. 
-We practice what we preach: we frequently inspect and adapt our approach and the value it adds to your organisation. 
-You have the opportunity to conclude or extend the engagement at any time.</p>
+<p>Our consulting engagements typically last from a few weeks to several months. We frequently inspect and adapt our 
+approach and the value it adds to your organisation. You have the opportunity to conclude or extend the engagement at any time.</p>
 
    </div>
   </article>
