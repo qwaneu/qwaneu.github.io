@@ -21,7 +21,7 @@ To make sure new practices and new skills get embedded effectively in developers
 essential. Mentoring allows the team to practice new skills on actual, relevant problems under guidance and become 
 proficient. 
 
-> Team mentoring helps to make good development practices stick.
+> Proficient teams enable software delivery excellence.
 
 We support teams getting started with good engineering practices or taking their next step.
 We guide teams to become proficient through team practice sessions and mentoring through pair programming.
@@ -37,7 +37,8 @@ their trade. Over the last 20 years, we have worked with teams at several client
   safety-sensitive environment.
 - TBD
 
-> Proficient teams enable software delivery excellence.
+> We help your teams become proficient at good engineering practices by practicing on real work
+until they are able to continue without us.
 
 ## Benefits
 
