@@ -3,7 +3,8 @@ title: Architecture Review
 layout: service-description
 date: 2025-05-01
 tagline: "Gain insight into architecture quality and risk"
-summary: "Make better decisions on technical risks and  architecture investments."
+summary: "We provide actionable insights and recommendations that you and your team can start working on right away. 
+We enable better decisions on technical risks and architecture investments."
 tags: [modelling, domain driven design, architecture, architecture review]
 ---
 
@@ -21,22 +22,19 @@ How do you decide on rebuilding vs. incremental redesign?
 What interventions can you do from a leadership position?
 How do you balance architecture investments with feature pressure?
 
+## Why us
+
 We can provide an **objective assessment of the systems architecture and code quality**. 
 As external reviewers with extensive experience across several domains, we are able to see 
 signals and patterns that are hard to spot for internal employees. 
 
-An architecture review will provide insight into:
-
-- the main quality attributes and how well the architecture realizes them;
-- the technical risks and what parts of the architecture carry the highest risks;
-- improvement options for the risks found;
-- the end-to-end paths through software and hardware that are critical to the business; 
-- how well the architecture is aligned with business and product goals;
-- the impact of legacy modules and frameworks on quality and delivery speed;
-- a language to explain architecture risks to other stakeholders.
+An architecture review will provide insight into e.g. technical risks, improvement opportunities, 
+alignment of architecture with business and product goals.
 
 The architecture review outcomes will enable you to make better decisions on what risks to address and 
 what investments to make.
+
+## Why us
 
 We are hands-on software practitioners with tens of years of experience in
  analysis, design, and implementation of software in environments ranging from
@@ -49,11 +47,14 @@ including healthcare, transport, finance, government, non-profit, embedded, and 
 
 The outcomes of an architecture review will help you:
 
+- identify the main quality attributes and how well the architecture realizes them;
+- find end-to-end paths through software and hardware that are critical to the business;
 - address the biggest risks first;
 - decide where to focus improvement efforts;
 - achieve a better balance between feature work and architecture work;
 - achieve better alignment of the architecture with business strategy and product;
-- make better decisions on rewrites, migration projects, and modernization initiatives.
+- make better decisions on rewrites, migration projects, and modernization initiatives;
+- find a language to explain architecture risks to other stakeholders.
 
 ## Approach
 
@@ -81,7 +82,7 @@ We report our findings back to you. Based on our findings, we propose how we can
 for example, with hands-on [mentoring](/consulting/mentoring), one-on-one coaching, 
 or [additional training](/training).
 
-It can be useful to **broaden the review scope and include a [team skills scan](/consulting/team-scan)**.
+It can be useful to **broaden the review scope and include a [team proficiency scan](/consulting/team-scan)**.
 This will give you a more complete picture of both teams and software.
 
 <aside>

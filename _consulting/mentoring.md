@@ -23,21 +23,25 @@ proficient.
 
 > Proficient teams enable software delivery excellence.
 
+## What we offer
+
 We support teams getting started with good engineering practices or taking their next step.
 We guide teams to become proficient through team practice sessions and mentoring through pair programming.
 Teams will learn how to apply new practices in their situation and their own code. Mentoring provides the 
 scaffolding that allows teams to safely practice, experiment, and learn while working on actual, relevant problems.  
 
+## Why us
+
 Being software practitioners ourselves, we have extensive experience teaching and guiding teams to become better at 
 their trade. Over the last 20 years, we have worked with teams at several clients:
 
 - guiding teams towards DevOps and continuous deployment, going from painful bi-weekly releases with a lot of rework 
-  to multiple, high-quality deployments per day.
+  to multiple, high-quality deployments per day;
 - mentoring teams in test-driven development, pair programming, and refactoring, to deliver high-quality software in a 
-  safety-sensitive environment.
-- TBD
+  safety-sensitive environment;
+- guiding teams in using AI effectively to improve their engineering skills;
 
-> We help your teams become proficient at good engineering practices by practicing on real work
+> We support your teams in becoming proficient at good engineering practices by practicing on real work
 until they are able to continue without us.
 
 ## Benefits
@@ -49,7 +53,8 @@ Mentoring enables development teams to become more proficient. This has multiple
 - improved delivery confidence through better tests and maintainable code,
 - a shared perspective on what good looks like, reducing dependency on individual experts;
 - more motivated developers;
-- lasting change and training investment that actually pays off.
+- lasting change;
+- training investments that actually pay off.
 
 > Get lasting capability, safer delivery, and better return on training investment.
 
@@ -65,11 +70,13 @@ team coaching trajectory, the team should be able to apply the new practices on 
 To make sure a team keeps practicing and learning, we recommend that they regularly organize short learning 
 workshops. We will help them get started with this so that they can continue this themselves. 
 
+### Alternative options
+
 If a team has not yet followed a training course on development skills, we recommend starting with 
 a [training course](/training) to practice new skills in a safe environment and to get everyone on the same page.
 
 If you are unsure what support your teams need to become more effective, we recommend
-doing a [team proficiency scan](/consulting/team-scan). This will provide a clear direction of what is most valuable
+doing a [team profiency scan](/consulting/team-scan). This will provide a clear direction of what is most valuable
 to do first.
 
 <aside>

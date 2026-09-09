@@ -10,7 +10,7 @@ title: Consulting & Mentoring
    <div class="post">
     <h1 style="margin-bottom: 0em;">{{page.title}}</h1>
 
-<p>We are <strong>pragmatic</strong> and <strong>hands-on</strong>. 
+<p>We are <strong>practitioners</strong>: <strong>pragmatic</strong> and <strong>hands-on</strong>. 
 What works well for an organization is highly <strong>situational</strong>.
 We don't "install" methods or frameworks, but we tailor our approach to fit your organization. 
 Our approach is <strong>participative</strong> – we work with you to discover what is valuable and what is possible.</p>
