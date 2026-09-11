@@ -5,7 +5,7 @@ date: 2025-07-01
 tagline: "Malleable software (1 or 2 days)"
 summary: "Applying Hexagonal Architecture helps teams to achieve loosely coupled design 
 that speaks your domain language. It facilitates controlled evolution of domain logic, business rules, APIs, databases, and external dependencies.
-<br><strong>Available for Java, C#, C++, Python</strong>"
+<br><em>Available for Java, C#, C++, Python</em>"
 tags: [agile engineering, extreme programming, XP, TDD, test driven development, ports and adapters, 
   hexagonal architecture, clean architecture, scrum developer, CI/CD, continuous integration, 
   continuous delivery, coupling]
