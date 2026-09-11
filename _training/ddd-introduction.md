@@ -23,7 +23,8 @@ needs that connects architecture and implementation to an evolving model of
 the business domain. It embraces essential complexity rather than hiding it and allows for an iterative and incremental 
 approach to software development.
 
-> **Software development is much about learning and speaking the same (domain) language.** 
+Software development is about learning and speaking the same (domain) language.
+
 > Domain Driven Design will help you develop higher quality software products that will be better maintainable in the long run. 
 > Quality follows from good boundaries, ownership, and aligning all disciplines and stakeholders.
 
@@ -35,13 +36,6 @@ In this introduction course, you will get an overview of Domain Driven Design an
 patterns, and practices like subdomains, bounded contexts, aggregates, context mapping, and event storming. This 
 course is not just for developers. To create a shared language, the other disciplines are also necessary: 
 architecture, product, UX, support, and sales.
-
-We offer this workshop in two variants:
-
-1. We bring our own case to work on ([EdiTrain](/2025/06/02/ddd-case)), where we focus on learning DDD 
-   patterns, practices, and heuristics.
-2. We will make the workshop more tailored to your organisation, by working on your business domain. This also works well
-   for fast onboarding of new employees in the domain.
 
 ## Benefits
 
@@ -64,6 +58,13 @@ For your organization, this course will help to:
 We will guide participants through the different techniques and patterns
 with a bit of theory and a lot of lively, hands-on collaborative modelling exercises. During the exercises we will 
 share many modelling heuristics and guidelines.
+
+We offer this workshop in two variants:
+
+1. We bring our own case to work on ([EdiTrain](/2025/06/02/ddd-case)), where we focus on learning DDD
+   patterns, practices, and heuristics.
+2. We will make the workshop more tailored to your organisation, by working on your business domain. This also works well
+   for fast onboarding of new employees in the domain.
 
 This workshop focuses on modelling a domain and doing architecture. Implementation and
 coding aspects are covered by our [Implementing Domain Driven Design workshop](/training/implementing-ddd).
