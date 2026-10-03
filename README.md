@@ -39,11 +39,8 @@ Verbeteringen:
 - [ ] Systems thinking training verbeteren
 - [ ] Example Mapping workshop: 'quote' toevoegen ("Example Mapping combines just enough up-front thinking with 
   working from concrete examples, which allows for smooth development and testing of user stories")
-- [ ] Nieuwe diensten page uitwerken
-  - [ ] Architecture reviews
-  - [ ] coaching/mentoring
-  - [ ] process audits
-  - [ ] Proficiency scan
+- [ ] Diensten: 
+  - [ ] Special projects uitwerken
 - [ ] Specials toevoegen?
   - [ ] toevoegen: knowledge workshop; TDD-AI; 
 
@@ -60,6 +57,7 @@ Diensten & marketing:
 
 Styling:
 
+- [ ] mobile weergave diensten pagina: grid met diensten valt buiten beeld
 - [ ] Pagina van individuele blog entry accessible maken
 - [ ] #blog pagina accessible maken (zie ook 'grid' to do)
 - [ ] analytics toevoegen (heeft implicaties voor cookie melding/toestemming)
