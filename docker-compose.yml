@@ -2,10 +2,11 @@ version: '2'
 
 services:
   jekyll:
-    image: bretfisher/jekyll-serve:stable-20220916052939
+    build: .
+    image: qwan-site:local
     volumes:
       - .:/site
     ports:
       - '4000:4000'
       - '35729:35729'
-    command: bundle exec jekyll s --drafts --force-polling -H 0.0.0.0 -P 4000 --livereload
+    command: bundle _2.4.22_ exec jekyll s --drafts --force-polling -H 0.0.0.0 -P 4000 --livereload
