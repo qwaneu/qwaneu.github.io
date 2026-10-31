@@ -16,7 +16,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://qwan.eu" # the base hostname & protocol for your site
 github_username:  qwaneu
 
-exclude: [README.md, vendor]
+exclude: [README.md, vendor, docs, AGENTS.md]
 assets:
   source_maps: true
   destination: "/assets"
