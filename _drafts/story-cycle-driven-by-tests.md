@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Story Cycle Driven By Tests"
-tags: [test driven development, acceptance test driven development]
+tags: [test driven development, acceptance test driven development, behaviour driven development]
 author: "Willem van den Ende, Marc Evers, Rob Westgeest"
 image: /attachments/blogposts/2026/story-cycle.png
 ---
@@ -128,9 +128,19 @@ I&rsquo;d rather ship piecemeal](/2018/04/18/feature-toggle-no-thank-you-ship-pi
 
 Ron Jeffries&rsquo; blog post [Card, Conversation, Confirmation](https://ronjeffries.com/xprog/articles/expcardconversationconfirmation/) goes into more detail on the conversation.
 
-Our earlier post [Three feedback loops in software product development](/2023/02/01/development-feedback-loops), where the left side interacts with the 
-product loop, everything in the story cycle fits in the &rsquo;working together getting things done&rsquo;, and working in small, reversible steps more in the &rsquo;Technical Excellence loop&rsquo;, enabling the other loops to be more agile.
+Our earlier post [Three feedback loops in software product development](/2023/02/01/development-feedback-loops) 
+introduces a feedback loop based perspective. We can map the story cycle on the three feedback 
+loops: 
+- the left side interacts with the product loop; 
+- everything in the story cycle fits in the &rsquo;working together getting things done&rsquo; loop; 
+- working in small, reversible steps fits in the technical excellence loop, enabling the other loops to 
+  be more agile.
 
-## Call to action:
-
-TDD is simple, but not easy. We can support you and your team(s) to walk, and then run, with TDD. Be it classical or AI augmented. We&rsquo;d love to hear what is going on in your organisation. These practices are all patterns and need adjustment for the context they are applied in. We love doing that. The first conversation is free. <call>
+<aside>
+<h3>TDD is simple, but not easy</h3>
+<p>We can support you and your team(s) to walk, and then run, with TDD. Be it classical or AI augmented. We&rsquo;d love to hear what is going on in your organisation. These practices are all patterns and need adjustment for the context they are applied in. We love doing that. The first conversation is free.
+</p>
+<div>
+<a href="/contact">Let's have a chat</a>
+</div>
+</aside>
