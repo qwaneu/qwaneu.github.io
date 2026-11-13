@@ -1,14 +1,29 @@
 # How to run locally
 
 ```
-cd ~/Documents/qwan/sites/qwaneu.github.io
-docker compose up
+cd ~/qwan/sites/qwaneu.github.io
+docker compose up          # serve on http://localhost:4000, drafts included
 ```
 
-Renders the site. Uses [pre-made docker-compose file and images](https://github.com/BretFisher/jekyll-serve).
+The image is built from the `Dockerfile` in this repo: the `github-pages` gem set
+on a pinned Ruby base image. That container is the **build of record** — see
+[AGENTS.md](AGENTS.md) and [docs/findings.md](docs/findings.md). Do not build on
+the host; the host Ruby and the gem set will drift apart.
 
-Q: How to build?
-A: current directory is mounted as `./site` so it should be all good.
+One-shot build, same container, same environment as GitHub Pages
+(`JEKYLL_ENV=production`):
+
+```
+docker compose run --rm jekyll bundle _2.4.22_ exec jekyll build
+```
+
+The current directory is mounted as `/site`, so source changes are picked up
+without a rebuild. Rebuild the image (`docker compose build`) when `Gemfile` or
+`Gemfile.lock` change.
+
+Known local-only noise: `GitHub Metadata: No GitHub API authentication could be
+found` — the `github-pages` gem set loads `jekyll-github-metadata`; it needs a
+token only to fill in `site.github`, which this site does not use.
 
 # Useful links
 
