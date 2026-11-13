@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Story Cycle Driven By Tests"
+title: "Story Cycle, Driven By Tests"
 tags: [test driven development, acceptance test driven development, behaviour driven development]
 author: "Willem van den Ende, Marc Evers, Rob Westgeest"
 image: /attachments/blogposts/2026/story-cycle.png
@@ -88,7 +88,7 @@ You may be familiar with this loop as Behaviour Driven Development (BDD) or Acce
 
 This loop is still best learnt by doing, so we will keep it brief here. In our training 
 courses we explain the loop briefly, and as we practice through a series of exercises, we share [TDD 
-Heuristics](/blog-by-tag#tag-test-driven-development) and rules of thumb based on what we and the 
+Heuristics](/blog-by-tag#tag-test-driven-development): rules of thumb based on what we and the 
 participants observe.
 
 ### Write a test
@@ -112,7 +112,7 @@ to the test list, and move on.
 
 ### Refactor
 
-We improve naming, remove duplication. We also extract common setups and 
+We improve naming, remove duplication. We also extract common setups and ensure the names of the set of tests read a bit like a specification. 
 
 ## Further reading
 
