@@ -7,7 +7,7 @@ image: /attachments/blogposts/2026/story-cycle.png
 ---
 
 We often use the diagram below to explain how the small loops in TDD (Test 
-Driven Development) fit into our overall way of working. The diagram is a variation on a diagram from  Lasse 
+Driven Development) fit into our overall way of working, [when we write code by hand](On-writing-code-by-hand). The diagram is a variation on a diagram from  Lasse 
 Koskela&rsquo;s book "Test Driven". 
 Apart from the book, we could not find an online version of 
 this diagram, so we are putting it here, with a brief explanation as we would do this in our [Test Driven Development 
@@ -112,7 +112,16 @@ to the test list, and move on.
 
 ### Refactor
 
-We improve naming, remove duplication. We also extract common setups and ensure the names of the set of tests read a bit like a specification. 
+We improve naming, remove duplication. We also extract common setups and ensure the names of the set of tests together read a bit like a specification. 
+
+## On writing code by hand
+
+We wanted to keep the intro short and to the point. [Practices are patterns that work in a context](https://www.qwan.eu/2025/10/06/practices-are-patterns.html) The context in which this cycle works is when we write code by hand. The inner loop works differently when working with AI augmented tools.
+
+We regularly practice hands-off augmented development. We write code by hand to keep ourselves sharp, to push designs where models will not yet go, and when we do our classic TDD course. 
+
+Engineering managers buy these courses when they find that their people need to be able to walk, before they can run, and in environments where the use of AI is not allowed (e.g. government agencies in several countries). The outside loop with fast acceptance tests against a well-designed domain is still very similar, but Large Language Models so far appear to work better writing more tests and code in one go, and doing refactoring separately, guided by experience and deterministic tooling. This could be a whole post, but we hope you get the drift.
+
 
 ## Further reading
 
