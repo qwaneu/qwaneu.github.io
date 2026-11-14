@@ -18,8 +18,8 @@ course](/training/test-driven-development.html).
 We use this diagram in our courses to set the stage for TDD. While we focus on the test-fail-pass-refactor cycles on 
 the right, having intent developed in close collaboration with stakeholders is not optional.
 
-Let&rsquo;s go through the loop from left to right. In a sense, there is an Outer loop, comprised of collaborating with 
-customers, which includes the Inner loop, where developers move the code forward to the point where they can have a 
+Let&rsquo;s go through the loop from left to right. In a sense, there is [an outer loop](#the-outer-loop), comprised of intense collaboration between developers and 
+customers, which includes[the inner loop](#the-inner-loop), where developers move the code forward to the point where they can have a 
 conversation with stakeholders and ship it. Or in a high-trust environment, developers ship it and have the conversation later.
 
 Nothing stops us from having conversations with the stakeholders all the time. Small, controlled steps help developers be more responsive to users&rsquo; needs. Customer acceptance at the end of the loop is a form of *MVC - Minimum Viable Communication*.
@@ -58,8 +58,8 @@ failing test at a time](/2022/04/13/tdd-one-failing-test-at-a-time).
 
 ### Inner loop
 
-Going through the inner loop multiple times, developers create working, sustainable software, one failing test at a time.
-We will describe the inner loop details below.
+Going through [the inner loop](#the-inner-loop) multiple times. Developers create working, sustainable software, one failing test at a time.
+We will describe [the inner loop](#the-inner-loop) in detail below.
 
 ### Passing acceptance test
 
