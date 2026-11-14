@@ -116,7 +116,7 @@ We improve naming, remove duplication. We also extract common setups and ensure 
 
 ## On writing code by hand
 
-We wanted to keep the intro short and to the point. [Practices are patterns that work in a context](https://www.qwan.eu/2025/10/06/practices-are-patterns.html) The context in which this cycle works is when we write code by hand. The inner loop works differently when working with AI augmented tools.
+We wanted to keep the intro short and to the point. [Practices are patterns, that work in a context](https://www.qwan.eu/2025/10/06/practices-are-patterns.html). The context in which this cycle works is when we write code by hand. The inner loop works differently when working with AI augmented tools.
 
 We regularly practice hands-off augmented development. We write code by hand to keep ourselves sharp, to push designs where models will not yet go, and when we do our classic TDD course. 
 
