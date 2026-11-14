@@ -7,7 +7,7 @@ image: /attachments/blogposts/2026/story-cycle.png
 ---
 
 We often use the diagram below to explain how the small loops in TDD (Test 
-Driven Development) fit into our overall way of working, [when we write code by hand](On-writing-code-by-hand). The diagram is a variation on a diagram from  Lasse 
+Driven Development) fit into our overall way of working, [when we write code by hand](#On-writing-code-by-hand). The diagram is a variation on a diagram from  Lasse 
 Koskela&rsquo;s book "Test Driven". 
 Apart from the book, we could not find an online version of 
 this diagram, so we are putting it here, with a brief explanation as we would do this in our [Test Driven Development 
