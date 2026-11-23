@@ -7,7 +7,7 @@ author: Marc Evers
 image: 
 ---
 
-# what is value stream mapping
+## what is value stream mapping
 
 + why / what value does it bring?
 (zoom out / take systems view)
@@ -71,6 +71,9 @@ variations
   - time lost in 'meetings' (reduced focus/flow time)
 
 cumulative flow diagrams can help 
+
+https://ferd.ca/software-acceleration-and-desynchronization.html
+VSM; systems thinking; gaat over relaties/connecties
 
 
 https://www.jrothman.com/mpd/2026/03/how-to-use-value-stream-maps-to-reinforce-agility-effectiveness-part-1/
