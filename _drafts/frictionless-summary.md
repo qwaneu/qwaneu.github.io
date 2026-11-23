@@ -1,3 +1,14 @@
+---
+layout: post
+title: Frictionless - summary
+tags:
+  - systems thinking
+  - productivity
+  - developer experience
+author: Marc Evers
+image: /attachments/blogposts/2026/bruno-nascimento-PHIgYUGQPvU-unsplash.jpg
+---
+
 Summary of: Nicole Forsgren & Abi Noda, Frictionless - 7 steps to remove barriers, unlock value and outpace your competition in the AI era.
 
 https://developerexperiencebook.com/ (includes a workbook)
@@ -45,3 +56,13 @@ The rest of the book describes a step-by-step approach to work on improving DevE
 TODO: create our own version of this image
 
 ![image from book](frictionless.png)
+
+<aside>
+<h3>something </h3>
+<p>
+something more
+</p>
+<div>
+<a href="/contact">Let's have a chat</a>
+</div>
+</aside>
