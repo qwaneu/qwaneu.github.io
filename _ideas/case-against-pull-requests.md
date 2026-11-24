@@ -53,4 +53,6 @@ You also need mentoring/training "in-the-moment"
 
 [Principles for managing knowledge](https://cynefin.io/wiki/Principles_for_managing_knowledge)
 
+https://a4al6a.substack.com/p/stop-using-pull-requests?r=av250&utm_campaign=post&utm_medium=web&triedRedirect=true
+
 + some references about skills learning research
