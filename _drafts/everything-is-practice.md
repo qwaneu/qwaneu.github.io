@@ -161,10 +161,10 @@ missing out on many learning opportunities.
 <em>Photo "person wearing orange and gray Nike shoes walking on gray concrete stairs" © 2016 by <a href="https://unsplash.com/@bruno_nascimento">Bruno Nascimento</a> on <a href="https://unsplash.com/photos/person-wearing-orange-and-gray-nike-shoes-walking-on-gray-concrete-stairs-PHIgYUGQPvU">Unsplash</a></em>
 
 <aside>
-<h3>Get some practice</h3>
+<h3>Practise learning</h3>
 <p>Are you wondering how you can steer learning in your organisation? 
-Let's have a chat about the skills and knowledge your organisation needs and what forms of learning will 
-supprot that.
+Let's discuss the skills and knowledge your organisation needs and what forms of learning will 
+support that.
 </p>
 <div>
 <a href="/contact">Contact us</a>
