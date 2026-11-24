@@ -11,14 +11,14 @@ image: /attachments/blogposts/2026/bruno-nascimento-PHIgYUGQPvU-unsplash.jpg
 ---
 
 "Practice makes perfect" - you become good at things you repeatedly do.
-We reinforce and entrain patterns by doing - patterns of thought, patterns of movement. 
+We reinforce and entrain patterns by doing, patterns of thought, patterns of movement. 
 This always happens, whether we are conscious about it or not, whether we want it or not.
 **So, everything we do is a form of practice.**
 
 This perspective opens up opportunities and exposes risks. 
 Seeing every activity as practice means we have a lot of learning opportunities. 
 We can practice our skills and accelerate growth all the time, everywhere!
-It also means for example that woftware developers are practising their skills on production software, whether we 
+It also means for example that software developers are practising their skills on production software, whether we 
 like it or not.
 
 ![picture showing the legs of a person wearing orange and gray Nike shoes walking on gray concrete stairs](/attachments/blogposts/2026/bruno-nascimento-PHIgYUGQPvU-unsplash.jpg)
@@ -26,8 +26,8 @@ like it or not.
 
 ## Reflective practice
 
-learning does not only take place in formal classroom settings, but also (even more!) in our daily activities.
-Work (and all other activities!) provides us ample learning materials.
+Learning does not only take place in formal classroom settings, but also (even more!) in our daily activities.
+Work and other activities provide us ample learning materials.
 Adding reflection to our daily activities will help us learn and grow continuously.
 It enables situated, experiential, embodied learning, linking practice and theory together.  
 
@@ -70,7 +70,7 @@ Instead, see them as rich learning material - *prepare to be surprised!*
 
 ## Consequences
 
-Once we realise that everything we do is practice, there are some consequences to take into account.
+What are the consequences of everything being practice?
 
 **We have so much material at our hands to learn from.** 
 When all our activities are practice, we are opening up a huge amount of learning material.
@@ -80,7 +80,7 @@ we did and what happened.
 **Practise where you want to go.** 
 You become good at what you practise.
 If people always find you for solving tricky bugs or fixing their printer, and you say yes everytime, you will become 
-the tricky bug solver or the printer fixer. 
+the expert tricky bug solver or the master printer fixer. 
 If you find yourself becoming the expert in something you don't like, then do less of that and more of what you do like.
 
 This holds for individuals and also for teams. 
@@ -91,8 +91,8 @@ Otherwise, they will just become better at what they have always been doing.
 
 **Practise on production code.**
 Developers will practise on production code - you cannot prevent that. 
-Usually this happens unconsciously and the impact can be high. 
-This leads to production incidents and increased rework on the short term nand technical debt and hard-to-maintain 
+When this happens unconsciously, the impact can be high. 
+This leads to production incidents and increased rework on the short term and technical debt and hard-to-maintain 
 software in the long term.
 
 Recognising developer activity explicitly as practice is useful. 
@@ -100,22 +100,23 @@ Add moments of reflection to the activities - don't wait for the bi-weekly retro
 Optimise for learning through pair-programming, collective code-walkthroughs, collaborative design sessions.
 Run coding dojos to practise on real problems in a safe space.
 
-Pull Request reviews can also focus more on learning, although they are not well suited this.
+Pull request reviews can also focus more on learning, although they are not well suited this.
 They have been separated in time from the actual practice and focus mostly on explicit reading and writing rather dan 
 social and experiential learning.
 
 **Shorten feedback loops.**
 We need short, high quality feedback loops that are fast enough.
-Feedback enables learning and can provide a safety net, which creates a safe space for experimenting.
-Feedback loops can be e.g. automated tests, feedback from team members, the continuous conversation in pair 
+Feedback enables learning and can provide a safety net, creating a safe space for experimenting.
+Feedback loops include automated tests, feedback from team members, the continuous conversation in pair 
 programming, heuristics that evaluate quality. 
 
-One of the [principles of the Agile Manifesto](https://agilemanifesto.org/principles.html) is: *at regular 
+One of the [principles of the Agile Manifesto](https://agilemanifesto.org/principles.html) state: *at regular 
 intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.*
 In the early days of eXtreme Programming (early 2000s), there was a small company who took this principle to the 
 extreme.
 They added a reflection moment to *every* activity they did, planning sessions, daily standups, pair programming 
-sessions. This is a huge boost for learning.
+sessions. 
+This is a huge learning booster.
 
 **Falling in the trap of pattern entrainment.**
 Once we have learned something, and we reinforce it by doing it over and over again, it becomes harder and harder to 
@@ -128,23 +129,21 @@ problems](https://www.chriscorrigan.com/parkinglot/pattern-entrainment-is-one-of
 > “pattern entrainment” is probably our achilles heel as a species.  Pattern entrainment is the idea that once our brains learn something, it is very difficult to break that knowledge.  And while we may be able to change our knowledge of facts fairly easily – such as admitting a mistake of a factual nature “you’re right, there is no 7:30 ferry after all!” – changing the way we make sense of facts is surprisingly hard.
 
 **You need other forms of learning too.**
-@@In software development, we see limited investment in classroom learning and other learning activities. 
-Developers go to conferences or meetups (often in their spare time) and pick up new ideas there.
-Occasionally they attend a course if budget and time allow. 
-Most of their actual learning will take place in their daily activities, on production code. 
+Even though a lot of our learning happens in practice, in our work, there is still a place for classroom learning. 
+A classroom setting provides a safe, low-distraction environment to introduce people to new concepts and have them 
+experiment.
 
-This is a good thing, especially if we take the "everything is practice" stance and appropriate measures. 
-
-Most organisations we see do not address learning in practice well.
-
-There is still a place for classroom learning. 
-A classroom setting provides a safe, low-distraction environment where people can be introduced to new 
-concepts and experiment with them.
 A classroom training will need proper guidance afterwards, otherwise it will have limited impact. 
 
-So you need both:
-- classroom setting to introduce new ideas, build a shared perspective, and practice safely;
-- learning, by doing, in daily activities, with proper guidance and support.
+**We need to take learning seriously.**
+Many software organisations do not address learning well.
+We see limited investment in classroom learning and other learning activities.
+Developers go to conferences or meetups and pick up some new ideas there.
+Occasionally they attend a course if budget and time allow.
+Often, they need to take care of learning on their own time.
+
+This creates a context where people believe learning and their daily work are separated, 
+missing out on many learning opportunities.
 
 ## Further reading 
 
@@ -158,9 +157,6 @@ So you need both:
   organisation](/specials/knowledge-workshop). 
   This 
   workshop will give you insight into the knowledge and skills you have and what you can do to manage this effectively.
-
-_This blog post has been waiting as a draft for a long time. 
-- [Paula Kolthoff, Embodied Learning](https://embodiedlearning.nl/) @@ say something_
 
 <em>Photo "person wearing orange and gray Nike shoes walking on gray concrete stairs" © 2016 by <a href="https://unsplash.com/@bruno_nascimento">Bruno Nascimento</a> on <a href="https://unsplash.com/photos/person-wearing-orange-and-gray-nike-shoes-walking-on-gray-concrete-stairs-PHIgYUGQPvU">Unsplash</a></em>
 
