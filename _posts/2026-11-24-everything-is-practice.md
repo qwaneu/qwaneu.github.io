@@ -66,7 +66,7 @@ In his book *The Reflective Practitioner*, Donald Schön described this as *refl
 [Unintended consequences](/2025/11/08/unintended-consequences) of our activities are another source of 
 learning.
 We tend to ignore them or push them away as undesired. 
-Instead, see them as rich learning material - *prepare to be surprised!* 
+We can also see them as rich learning material - *prepare to be surprised!* 
 
 ## Consequences
 
